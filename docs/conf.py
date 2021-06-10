@@ -12,7 +12,7 @@ project = 'PC-Python'
 copyright = '2021-2, GMC'
 author = 'GMC'
 
-# init_theme()
+init_theme()
 
 sys.path.insert(0, os.path.abspath('../../'))
 package_path = os.path.abspath('../..')
