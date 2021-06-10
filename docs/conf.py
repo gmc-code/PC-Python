@@ -2,7 +2,8 @@
 # see https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 # -- Project information -----------------------------------------------------
-
+import os
+import sys
 import sphinx_rtd_theme
 project = 'PC-Python'
 copyright = '2021-2, GMC'
