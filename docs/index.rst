@@ -27,9 +27,10 @@ If you are using a trackpad, navigate to various sections and pages by clicking 
     :caption: Python
     :numbered:
 
+    python/data_types.rst
+    python/operators.rst
     python/variables.rst
     python/selection.rst
-    python/functions.rst
     python/jupyter_test.rst
-
-
+    python/iteration.rst
+    python/functions.rst
