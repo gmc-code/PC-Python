@@ -97,7 +97,7 @@ Tasks
 
     #. Convert ``AGE`` to snake case.
     #. Convert ``MyName`` to snake case.
-    #. Convert ``My-FirstName-LastName`` to snake case.
+    #. Convert ``MyFirstNameLastName`` to snake case.
     #. Convert ``rectangleArea`` to snake case.
     #. Convert ``cm_in_an_inch = 2.14`` to ALL_CAPS.
     #. Convert ``lbs_in_a_kg = 2.2`` to ALL_CAPS.
@@ -105,6 +105,7 @@ Tasks
     #. A program uses a person's first name and last name. What would be a good variable name to use for their last name: ``x``, ``variable1``, ``SURNAME``, ``last_name``, ``Name``?
     #. A program calculates the area of a rectangle. What would be two good variable names to use for the length and width of the rectangle: ``x``, ``y``, ``LENGTH``, ``length``, ``Width``, ``width``?
 
+----
 
 .. thebe-button:: Activate Jupyter Thebelab
 
@@ -112,10 +113,12 @@ Tasks
 
 .. jupyter-execute::
 
-    def name_age_greeting2(name="John", age=99):
-        age += 1
-        return "Hi " + name + ", you are " + str(age) + " years old"
 
-    print(name_age_greeting2())
+    AGE = 14
+    MyName = 'John'
+    MyFirstNameLastName = 'Speedy Gonzales'
+    rectangleArea = 24
+    m_in_an_inch = 2.14
+    lbs_in_a_kg = 2.2
 
 
