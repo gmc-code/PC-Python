@@ -106,14 +106,16 @@ Tasks
     #. A program calculates the area of a rectangle. What would be two good variable names to use for the length and width of the rectangle: ``x``, ``y``, ``LENGTH``, ``length``, ``Width``, ``width``?
 
 
-.. thebe-button:: Activate Jupyter
+.. thebe-button:: Activate Jupyter Thebelab
+
+----
 
 .. jupyter-execute::
 
-    AGE = 14
-    MyName = 'John'
-    My-FirstName-LastName = 'Speedy Gonzales'
-    rectangleArea = 24
-    m_in_an_inch = 2.14
-    lbs_in_a_kg = 2.2
+    def name_age_greeting2(name="John", age=99):
+        age += 1
+        return "Hi " + name + ", you are " + str(age) + " years old"
+
+    print(name_age_greeting2())
+
 
