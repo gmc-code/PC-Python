@@ -105,17 +105,3 @@ Tasks
     #. A program uses a person's first name and last name. What would be a good variable name to use for their last name: ``x``, ``variable1``, ``SURNAME``, ``last_name``, ``Name``?
     #. A program calculates the area of a rectangle. What would be two good variable names to use for the length and width of the rectangle: ``x``, ``y``, ``LENGTH``, ``length``, ``Width``, ``width``?
 
-.. thebe-button:: Activate Jupyter
-
-.. jupyter-execute::
-
-    AGE = 14
-    MyName = 'John'
-    My-FirstName-LastName = 'Speedy Gonzales'
-    rectangleArea = 24
-    m_in_an_inch = 2.14
-    lbs_in_a_kg = 2.2
-
-
-
-
