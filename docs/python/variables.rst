@@ -26,7 +26,7 @@ The list of reserved words is:
     and, as, assert, async, await, break, class, continue, def, del, elif, else, except, False, finally, for, from, global, if, import, in, is, lambda, None, nonlocal, not, or, pass, raise, return, True, try, while, with, yield, 
 
 A list of keywords can be shown by typing ``help("keywords")`` to the Python interpreter or using ``print(help("keywords"))``.
-A second method for lsit ekywords usesthe keyword library.
+A second method for listing keywords uses the keyword library. (see: https://docs.python.org/3/library/keyword.html)
 
 
 .. code-block:: python
@@ -115,6 +115,6 @@ Tasks
     rectangleArea = 24
     m_in_an_inch = 2.14
     lbs_in_a_kg = 2.2
-    
+
 
 
