@@ -16,6 +16,19 @@ Rules for Python variable names:
 
 ----
 
+Python Reserved Words
+--------------------------
+
+Reserved Words are keywords that have a set meaning and can't be used for other purposes such as for variable names. Reserved words are case-sensitive and must be used exactly as shown. They are all entirely lowercase, except for False, None, and True.
+
+The list of reserved words is:
+
+    and, as, assert, async, await, break, class, continue, def, del, elif, else, except, False, finally, for, from, global, if, import, in, is, lambda, None, nonlocal, not, or, pass, raise, return, True, try, while, with, yield, 
+
+A list of keywords can be shown by typing ``help("keywords")`` to the Python interpreter or using ``print(help("keywords"))``.
+
+----
+
 Python conventions
 --------------------------
 

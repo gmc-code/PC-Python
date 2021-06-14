@@ -27,6 +27,7 @@ If you are using a trackpad, navigate to various sections and pages by clicking 
     :caption: Python
     :numbered:
 
+    python/python_intro.rst
     python/data_types.rst
     python/operators.rst
     python/variables.rst
