@@ -101,9 +101,9 @@ Tasks
     #. Write ``rectangleArea`` in snake case.
     #. Write ``cm_in_an_inch = 2.14`` as ALL_CAPS.
     #. Write ``lbs_in_a_kg = 2.2`` as ALL_CAPS.
-    #. A program asks for a person's age and stores it. What would be a good variable name to use: ``x``, ``variable1``, ``AGE``, ``age``, ``Years_Old``?
-    #. A program uses a person's first name and last name. What would be a good variable name to use for their last name: ``x``, ``variable1``, ``SURNAME``, ``last_name``, ``Name``?
-    #. A program calculates the area of a rectangle. What would be two good variable names to use for the length and width of the rectangle: ``x``, ``y``, ``LENGTH``, ``length``, ``Width``, ``width``?
+    #. A program asks for a person's age and stores it. What would be a good variable to use: ``x``, ``variable1``, ``AGE``, ``age``, ``Years_Old``?
+    #. A program uses a person's first name and last name. What would be a good variable to use for their last name: ``x``, ``variable1``, ``SURNAME``, ``last_name``, ``Name``?
+    #. A program calculates the area of a rectangle. What would be two good variables to use for the length and width of the rectangle: ``x``, ``y``, ``LENGTH``, ``length``, ``Width``, ``width``?
 
 
 
