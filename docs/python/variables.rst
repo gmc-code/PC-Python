@@ -26,6 +26,14 @@ The list of reserved words is:
     and, as, assert, async, await, break, class, continue, def, del, elif, else, except, False, finally, for, from, global, if, import, in, is, lambda, None, nonlocal, not, or, pass, raise, return, True, try, while, with, yield, 
 
 A list of keywords can be shown by typing ``help("keywords")`` to the Python interpreter or using ``print(help("keywords"))``.
+A second method for lsit ekywords usesthe keyword library.
+
+
+.. code-block:: python
+
+    import keyword
+
+    print(keyword.kwlist)
 
 ----
 
@@ -65,46 +73,20 @@ KebabCase
 Sample code
 --------------------------
 
-| In the code below, a counter variable is increased by one every time the A button is pressed. 
-| Snake case with underscores is used in the name of the variable, ``a_count``.
-| The variable must be assigned a value so it an be used.
-| Assigning an initial value to a variable is called initializing the variable.
+| The print statement below can be generalised using a variable for the team name and a variable for the number of premierships. This is good preactice since it separates the data from the output.
 
 .. code-block:: python
 
-    from microbit import *
+    print('Richmond has won 11 premiership.')
 
-    a_count = 0
-
-    while True:
-        if button_a.is_pressed():
-            a_count = a_count + 1
-            display.scroll(a_count, delay=80)
-
-----
-
-| In the code below, the distance in miles from 1 to 10 is converted to metres.
-| ALL_CAPS are used for the constant: ``MILES_TO_METRES``
-| The function name uses snake case: ``convert_miles_to_metres``.
-| The function parameter uses snake case: ``distance_miles``.
-| The variables use snake case: ``dist_miles`` and ``dist_metres``.
+Generalised to:
 
 .. code-block:: python
 
-    from microbit import *
+    team_name = 'Richmond'
+    premierships = '11'
+    print(team_name + ' has won ' + premierships + ' premierships.')
 
-    MILES_TO_METRES = 1609
-
-    def convert_miles_to_metres(distance_miles):
-        return distance_miles * MILES_TO_METRES
-
-    while True:
-        for dist_miles in range(1, 11):
-            dist_metres = convert_miles_to_metres(dist_miles)
-            display.scroll(dist_miles, delay=80)
-            display.scroll('=', delay=80)
-            display.scroll(dist_metres, delay=80)
-        sleep(500)
 
 ----
 
@@ -122,5 +104,17 @@ Tasks
     #. A program asks for a person's age and stores it. What would be a good variable name to use: ``x``, ``variable1``, ``AGE``, ``age``, ``Years_Old``?
     #. A program uses a person's first name and last name. What would be a good variable name to use for their last name: ``x``, ``variable1``, ``SURNAME``, ``last_name``, ``Name``?
     #. A program calculates the area of a rectangle. What would be two good variable names to use for the length and width of the rectangle: ``x``, ``y``, ``LENGTH``, ``length``, ``Width``, ``width``?
+
+.. thebe-button:: Activate Jupyter
+
+.. jupyter-execute::
+
+    AGE = 14
+    MyName = 'John'
+    My-FirstName-LastName = 'Speedy Gonzales'
+    rectangleArea = 24
+    m_in_an_inch = 2.14
+    lbs_in_a_kg = 2.2
+    
 
 
