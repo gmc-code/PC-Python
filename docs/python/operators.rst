@@ -8,33 +8,33 @@ Arithmetic operators
 Arithmetic operators are used with numbers to perform common mathematical operations
 
 .. list-table::
-	:widths: 20 60 20
-	:header-rows: 1
+    :widths: 20 60 20
+    :header-rows: 1
 
-	*   - **Operator** 
-	    - **Description**  
-	    - **Example**
-	*	- \+
-		- Addition	
-		- x + y
-	*	- \-
-		- Subtraction	
-		- x - y
-	*	- \*	
-		- Multiplication	
-		- x * y
-	*	- /	
-		- Division	
-		- x / y
-	*	- %	
-		- Modulus	
-		- x % y
-	*	- \**	
-		- Exponentiation	
-		- x ** y
-	*	- //	
-		- Floor division	
-		- x // y
+    *   - **Operator** 
+        - **Description**  
+        - **Example**
+    *    - \+
+        - Addition    
+        - x + y
+    *    - \-
+        - Subtraction    
+        - x - y
+    *    - \*    
+        - Multiplication    
+        - x * y
+    *    - /    
+        - Division    
+        - x / y
+    *    - %    
+        - Modulus    
+        - x % y
+    *    - \**    
+        - Exponentiation    
+        - x ** y
+    *    - //    
+        - Floor division    
+        - x // y
 
 
 | Modulus gives the remainder from a division.
@@ -72,17 +72,17 @@ print('Exponent (power) : a ** b =', a ** b)
 Basic arithmetic operators: ``+,-,*,/`` are used in the same way as you would with a calculator. 
 Let's look at an example using arithmetic operators the temperature read by the microbit in Celsius to Fahrenheit::
 
-	celsiusTemp = temperature()
-	fahrenheitTemp = celsiusTemp * 9 / 5 + 32  
+    celsiusTemp = temperature()
+    fahrenheitTemp = celsiusTemp * 9 / 5 + 32  
 
 .. warning:: Python recognises two division operators: ``/`` and ``//``. First one outputs the result you'd expect, but the second one does integer division: the 
-	return value is actually the floor of the result. This means that the return value is always rounded down.
+    return value is actually the floor of the result. This means that the return value is always rounded down.
 
 Operator ``%``, called ``mod`` is used to calculate the remainder when one value is divided by another. For example: maybe you'd like to know whether a number is odd or 
 even, you could try dividing it by 2, if it's even, then there will be no remainder::
 
-	number = 3
-	if number % 2 == 1:
+    number = 3
+    if number % 2 == 1:
         print("The number is odd")
     else:
         print("The number is even")
@@ -96,20 +96,20 @@ Strings
 As stated above, strings (``str`` type in Python) are sequences of characters, with a length limited only by the memory of your machine. A useful fact to note is 
 that they can be concatenated using a ``+`` symbol::
 
-	name = "Hayley"
+    name = "Hayley"
 
-	message = "Well done " + name + ". You are victorious!"
+    message = "Well done " + name + ". You are victorious!"
 
 This will concatenate the items on the right hand side of ``=`` and put the result in the variable called ``message``.
 
 To join numbers and strings together, you must first convert the number to a string using the ``str()`` function if you want to do that::
 
-	x = temperature
-	if temperature < 6:
+    x = temperature
+    if temperature < 6:
         display.scroll("Cold" + str(temperature))
 
 .. note:: Python natively provides a lot of methods_, which makes using strings much easier and saves lot of time (although implementing them on your own initially 
-	might be a good programming exercise). 
+    might be a good programming exercise). 
 
 .. _methods: https://www.programiz.com/python-programming/methods/string
 
@@ -124,8 +124,8 @@ Comparison
 Comparison operations are useful to test variable values in conditional statements or loops. Here are some examples of 
 comparisons written in English::
 
-	score is greater than 100
-	name equals "Harry"
+    score is greater than 100
+    name equals "Harry"
     x acceleration is not equal to 0
 
 Python has a set of comparison operators that allow us to write comparisons easily:
@@ -146,8 +146,8 @@ Python has a set of comparison operators that allow us to write comparisons easi
 
 Rewriting the comparisons above in Python would be::
 
-	score > 100
-	name ==  "Harry"
+    score > 100
+    name ==  "Harry"
     acceleration  != 0
 
 Logical operations
@@ -164,7 +164,7 @@ Logical operators test the truth value of their operands.
 +--------------+---------------------------------+-------------------+
 | not          |  Operand is false               | ``not False``     |
 +--------------+---------------------------------+-------------------+
-	
+    
 
 Membership operations
 ---------------------------
@@ -185,19 +185,19 @@ Using Boolean operations
 You may have already used some examples that do this. In this example, the micro:bit will 
 show an arrow changing in direction according to acceleration:: 
 
-	from microbit import *
-	
-	while True:
+    from microbit import *
+    
+    while True:
         x_bearing = accelerometer.get_x()
 
         if (x_bearing <= 100) and (x_acceleration >= 50):
-		display.show(Image.ARROW_N)
+        display.show(Image.ARROW_N)
 
         elif x_bearing > 100:
             display.show(Image.ARROW_E) 
-	
+    
         elif  x_bearing < 50:
             display.show(Image.ARROW_W) 
 
         else:
-            display.show(Image.ARROW_S)	 
+            display.show(Image.ARROW_S)     

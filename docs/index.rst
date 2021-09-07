@@ -32,6 +32,13 @@ If you are using a trackpad, navigate to various sections and pages by clicking 
     python/operators.rst
     python/variables.rst
     python/selection.rst
-    python/jupyter_test.rst
     python/iteration.rst
     python/functions.rst
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Jupyter
+    :numbered:
+
+    jupyter/jupyter_test.rst
+    jupyter/Strings
