@@ -17,12 +17,13 @@ os.environ['PYTHONPATH'] = ':'.join((package_path, os.environ.get('PYTHONPATH', 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-# 'jupyter_sphinx',
+# 
 extensions = [
     'sphinx_rtd_theme',
     'sphinx_copybutton',
     'sphinx.ext.todo',
     'sphinx.ext.autodoc',
+    'jupyter_sphinx',
     'nbsphinx',
 ]
 
