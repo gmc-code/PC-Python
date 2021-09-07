@@ -4,4 +4,4 @@ sphinx-copybutton==0.4.0
 notebook==6.4.2
 jupyter-sphinx==0.3.2
 nbsphinx>=0.8.7
-ipython>=7.27.0
+ipykernel>=6.3.1
