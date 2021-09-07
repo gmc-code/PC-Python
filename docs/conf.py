@@ -24,7 +24,6 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.autodoc',
     'jupyter_sphinx',
-    'jupyter_sphinx.execute',
     'nbsphinx',
 ]
 
