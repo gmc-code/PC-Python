@@ -24,7 +24,6 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.autodoc',
     'jupyter_sphinx',
-    'nbsphinx',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
