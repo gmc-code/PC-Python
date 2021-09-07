@@ -1,6 +1,5 @@
-sphinx==4.0.2
+sphinx==4.1.2
 sphinx_rtd_theme==0.5.2
-sphinx-copybutton==0.3.1
+sphinx-copybutton==0.4.0
+notebook==6.4.2
 jupyter-sphinx==0.3.2
-notebook==6.4.0
-

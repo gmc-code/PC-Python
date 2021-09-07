@@ -28,7 +28,6 @@ The list of reserved words is:
 A list of keywords can be shown by typing ``help("keywords")`` to the Python interpreter or using ``print(help("keywords"))``.
 A second method for listing keywords uses the keyword library. (see: https://docs.python.org/3/library/keyword.html)
 
-
 .. code-block:: python
 
     import keyword
@@ -86,7 +85,6 @@ Generalised to:
     team_name = 'Richmond'
     premierships = '11'
     print(team_name + ' has won ' + premierships + ' premierships.')
-
 
 ----
 

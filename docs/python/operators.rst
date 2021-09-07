@@ -70,7 +70,7 @@ print('Exponent (power) : a ** b =', a ** b)
 
 
 Basic arithmetic operators: ``+,-,*,/`` are used in the same way as you would with a calculator. 
-Let's look at an example using arithmetic operators the temperature read by the micro:bit in Celsius to Fahrenheit::
+Let's look at an example using arithmetic operators the temperature read by the microbit in Celsius to Fahrenheit::
 
 	celsiusTemp = temperature()
 	fahrenheitTemp = celsiusTemp * 9 / 5 + 32  
