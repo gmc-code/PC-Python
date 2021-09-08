@@ -12,9 +12,9 @@ If you are using a trackpad, navigate to various sections and pages by clicking 
 Home pages:
 ---------------------
 
-https://pc-microbit-micropython.readthedocs.io/en/latest/index.html
-https://pc-microbit-extension.readthedocs.io/en/latest/index.html
-https://pc-python.readthedocs.io/en/latest/index.html
+| https://pc-microbit-micropython.readthedocs.io/en/latest/index.html
+| https://pc-microbit-extension.readthedocs.io/en/latest/index.html
+| https://pc-python.readthedocs.io/en/latest/index.html
 
 ----
 

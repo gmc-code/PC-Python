@@ -7,11 +7,17 @@ PC-Python documentation!
 If you are using a trackpad, navigate to various sections and pages by clicking on a heading and then using the arrow keys.
 
 
-| Home page:
-| https://pc-python.readthedocs.io/en/latest/#
+Home pages:
+---------------------
 
-| Key references:
-| https://www.w3schools.com/python/
+| https://pc-microbit-micropython.readthedocs.io/en/latest/index.html
+| https://pc-microbit-extension.readthedocs.io/en/latest/index.html
+| https://pc-python.readthedocs.io/en/latest/index.html
+
+----
+
+Key references:
+https://www.w3schools.com/python/
 
 ----
 
