@@ -9,7 +9,7 @@ Anything that can be done with a for loop can be done as a comprehension.
 ----
 
 ==========================
-Lists comprehension 1
+Lists comprehension 1 
 ==========================
 
 Syntax:
@@ -131,14 +131,14 @@ Syntax:
 
 .. py:function:: newlist = [expression for item in iterable if condition == True]
 
-    | :paramstr expression: expression could be the item variable only (e.g. x) or any expression such as one that uses the item variable (e.g. x*x, x.upper()).
-    | :param item: item is a variable.
-    | :param iterable: iterable can be objects like strings, lists, dictionaries, range function and others.
-    | :param condition: condition is any condition.
+    :paramstr expression: expression could be the item variable only (e.g. x) or any expression such as one that uses the item variable (e.g. x*x, x.upper()).
+    :param item: item is a variable.
+    :param iterable: iterable can be objects like strings, lists, dictionaries, range function and others.
+    :param condition: condition is any condition.
 
     
 
-List Example 1
+List Example
 -------------------
 
 | In the code below, a for-loop is used to get a list of event numbers from a list.
@@ -157,7 +157,7 @@ List Example 1
     print(my_list)
 
 
- | The list comprehension, ``my_list_comprehension = [n * n for n in nums]``, does this in one line.
+ | The list comprehension, ``my_list_comprehension = [n for n in nums if num % 2 == 0]``, does this in one line.
 
 .. code-block:: python
     
@@ -166,4 +166,34 @@ List Example 1
     my_list_comprehension = [n for n in nums if num % 2 == 0]
     print(my_list_comprehension)
 
-nested+
+----
+
+List Example
+-------------------
+
+| In the code below, a for-loop is used to get a list of event numbers from a list.
+| Using the modulus, ``num % 2`` gives 0 for even numbers.
+
+
+.. code-block:: python
+
+
+    nums = [1, 3, 6, 10, 15, 21, 28]
+
+    # I want n for each n in nums if n is even 
+    my_list = []
+    for n in nums:
+        my_list.append(n * n)
+    print(my_list)
+
+
+ | The list comprehension, ``my_list_comprehension = [n for n in nums if num % 2 == 0]``, does this in one line.
+
+.. code-block:: python
+    
+
+    # I want n for each n in nums if n is even 
+    my_list_comprehension = [n for n in nums if num % 2 == 0]
+    print(my_list_comprehension)
+
+
