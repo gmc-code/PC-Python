@@ -12,16 +12,16 @@ They can create a subsequence of those elements that satisfy a certain condition
 
 ----
 
-==========================
-Lists comprehension 1 
-==========================
+=====================================
+Lists comprehension 
+=====================================
 
 Syntax:
 
 .. py:data:: newlist = [expression for item in iterable]
 
     :param expression: the item variable only (e.g. x) or any expression such as one that uses the item variable (e.g. x*x, x.upper()).
-    :param item:  variable.
+    :param item:  a variable.
     :param iterable: iterable objects like strings, lists, dictionaries, range function and others.
  
 | A list comprehension consists of brackets containing an expression followed by a for clause. 
@@ -33,7 +33,7 @@ Syntax:
 The first 2 examples illustrate simple list comprehensions without doing anything with the values.
 
 
-Lists Example 1: list
+Lists Example: list
 -------------------------   
 
 | In the code below, a for-loop is used to get each value from an original list then append it to a new list, my_list.
@@ -59,11 +59,12 @@ Lists Example 1: list
     my_list_comprehension = [n for n in nums]
     print(my_list_comprehension)
 
-
+.. image:: images/list_comprehension_colours.png
+    :scale: 100 %
 
 ----
 
-Lists Example 2: range
+Lists Example: range
 -------------------------   
 
 | In the code below, a for-loop is used to get each value from the range function then append it to a new list, my_list.
@@ -90,8 +91,8 @@ Lists Example 2: range
 
 ----
 
-List Example 3
--------------------
+List Example: n * n
+-----------------------
 
 | In the code below, a for-loop is used to get each value from an original list then append a calculated value to a new list, my_list.
 
@@ -129,9 +130,9 @@ Practice Questions
    
 ----
 
-==========================
-Lists comprehension 2
-==========================
+=====================================
+Lists comprehension: conditions
+=====================================
 
 Syntax:
 
@@ -147,11 +148,11 @@ Syntax:
 | e.g newlist = [2 * n for n in range(5) if n % 2 = 0]
 
 
-List Example
--------------------
+List Example: Modulo
+------------------------
 
 | In the code below, a for-loop is used to get a list of event numbers from a list.
-| Using the modulus, ``num % 2`` gives 0 for even numbers.
+| The modulo, ``n % 2``, returns 0 for even numbers.
 
 
 .. code-block:: python
@@ -162,47 +163,63 @@ List Example
     # I want n for each n in nums if n is even 
     my_list = []
     for n in nums:
-        my_list.append(n * n)
+        if n % 2 == 0:
+            my_list.append(n)
     print(my_list)
 
 
- | The list comprehension, ``my_list_comprehension = [n for n in nums if num % 2 == 0]``, does this in one line.
+ | The list comprehension, ``my_list_comprehension = [n for n in nums if n % 2 == 0]``, does this in one line.
 
 .. code-block:: python
     
+    nums = [1, 3, 6, 10, 15, 21, 28]
 
     # I want n for each n in nums if n is even 
-    my_list_comprehension = [n for n in nums if num % 2 == 0]
+    my_list_comprehension = [n for n in nums if n % 2 == 0]
     print(my_list_comprehension)
 
 ----
 
-List Example
--------------------
+=====================================
+Lists comprehension: nested
+=====================================
 
-| In the code below, a for-loop is used to get a list of event numbers from a list.
-| Using the modulus, ``num % 2`` gives 0 for even numbers.
+
+Syntax:
+
+.. py:function:: newlist = [expression for item1 in iterable1 for item2 in iterable2]
+
+    :param expression: an expression using item1 and item2.
+    :param item2:  variable for iterable1.
+    :param iterable1: iterable objects like strings, lists, dictionaries, range function and others.
+    :param item2:  variable for iterable2.
+    :param iterable2: a second iterable objects like strings, lists, dictionaries, range function and others.
+ 
+
+List Example: grid coordinates
+-----------------------------------
+
+| In the code below, a nested for-loop is used to get a list of grid coordinates.
 
 
 .. code-block:: python
 
 
-    nums = [1, 3, 6, 10, 15, 21, 28]
-
-    # I want n for each n in nums if n is even 
+    # I want a (letter, num) pair for each letter in 'ABCD' and each number in '1234'
     my_list = []
-    for n in nums:
-        my_list.append(n * n)
+    for letter in "ABCD":
+        for num in range(1, 5):
+            my_list.append((letter, num))
     print(my_list)
 
 
- | The list comprehension, ``my_list_comprehension = [n for n in nums if num % 2 == 0]``, does this in one line.
+
+ | The list comprehension does the nested for loop in one line.
 
 .. code-block:: python
     
 
     # I want n for each n in nums if n is even 
-    my_list_comprehension = [n for n in nums if num % 2 == 0]
+    my_list_comprehension = [(letter, num) for letter in "ABCD" for num in range(1, 5)]
     print(my_list_comprehension)
-
 
