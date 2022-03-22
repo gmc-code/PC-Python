@@ -7,9 +7,6 @@ See ref video at: https://www.youtube.com/watch?v=3dt4OGnU5sM
 
 
 | Anything that can be done with a for loop can be done as a comprehension.
-| List comprehensions provide a concise way to create lists.
-| They are used to make new lists where each element is the result of some operations applied to each member of another sequence or iterable.
-| They can create a subsequence of those elements that satisfy a certain condition.
 
 ----
 
@@ -17,16 +14,20 @@ See ref video at: https://www.youtube.com/watch?v=3dt4OGnU5sM
 Lists comprehension
 =====================================
 
+| List comprehensions provide a concise way to create lists.
+| They are used to make new lists where each element is the result of some operations applied to each member of another sequence or iterable.
+| They can create a subsequence of those elements that satisfy a certain condition.
+
 Syntax:
 
 .. py:function:: newlist = [expression for item in iterable]
 
-    :param expression: the item variable only (e.g. x) or any expression such as one that uses the item variable (e.g. x*x, x.upper()).
+    :param expression: the item variable only (e.g. x) or any expression such as one that uses the item variable (e.g. x * x).
     :param item:  a variable.
     :param iterable: iterable objects like strings, lists, dictionaries, range function and others.
 
 | A list comprehension consists of brackets containing an expression followed by a for clause.
-| The result will be a new list resulting from evaluating the expression in the context of the for and if clauses which follow it.
+| The result will be a new list created by evaluating the expression in the context of the for and if clauses which follow it.
 | e.g newlist = [2 * n for n in range(5)]
 
 ----
@@ -61,6 +62,7 @@ Lists Example: list
     my_list_comprehension = [n for n in nums]
     print(my_list_comprehension)
 
+| The diagram has colouring to compare the use of for-loops with comprehensions.
 
 .. image:: images/list_comprehension_colours1.png
     :scale: 60%
@@ -82,6 +84,7 @@ Lists Example: range
         my_list.append(n)
     print(my_list)
 
+| The printed list is: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 | The list comprehension, ``my_list_comprehension = [n for n in range(1, 11)]``, does this in one line.
 
 .. code-block:: python
@@ -97,7 +100,7 @@ Lists Example: range
 List Example: n * n
 -----------------------
 
-| In the code below, a for-loop is used to get each value from an original list then append a calculated value to a new list, my_list.
+| In the code below, a for-loop is used to get each value from an original list then append a calculated valu, n * n, to a new list, my_list.
 
 
 .. code-block:: python
@@ -111,7 +114,7 @@ List Example: n * n
         my_list.append(n * n)
     print(my_list)
 
-
+| The printed list is: [1, 9, 36, 100, 225, 441, 784]
 | The list comprehension, ``my_list_comprehension = [n * n for n in nums]``, does this in one line.
 
 .. code-block:: python
@@ -125,6 +128,7 @@ List Example: n * n
 .. image:: images/list_comprehension_colours2.png
     :scale: 60%
 
+----
 
 Practice Questions
 --------------------
@@ -153,6 +157,7 @@ Syntax:
 | The result will be a new list resulting from evaluating the expression in the context of the for and if clauses which follow it.
 | e.g newlist = [2 * n for n in range(5) if n % 2 = 0]
 
+----
 
 List Example: Modulo
 ------------------------
@@ -217,6 +222,7 @@ List Example: grid coordinates
 .. image:: images/grid.png
     :scale: 60%
 
+| 
 | The output will be: [('A', 1), ('A', 2), ('A', 3), ('A', 4), ('B', 1), ('B', 2), ('B', 3), ('B', 4), ('C', 1), ('C', 2), ('C', 3), ('C', 4), ('D', 1), ('D', 2), ('D', 3), ('D', 4)]
 
 
@@ -241,7 +247,7 @@ List Example: grid coordinates
     my_list_comprehension = [(letter, num) for letter in "ABCD" for num in range(1, 5)]
     print(my_list_comprehension)
 
-| The diagram has colouring to compare using for loops with comprehensions.
+| The diagram has colouring to compare the use of for-loops with comprehensions.
 
 .. image:: images/list_comprehension_colours_nested.png
     :scale: 60%
