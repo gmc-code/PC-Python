@@ -2,9 +2,13 @@
 Comprehensions
 ==========================
 
+See docs at: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
 See ref video at: https://www.youtube.com/watch?v=3dt4OGnU5sM
 
 Anything that can be done with a for loop can be done as a comprehension.
+List comprehensions provide a concise way to create lists. 
+They are used to make new lists where each element is the result of some operations applied to each member of another sequence or iterable.
+They can create a subsequence of those elements that satisfy a certain condition.
 
 ----
 
@@ -16,11 +20,13 @@ Syntax:
 
 .. py:data:: newlist = [expression for item in iterable]
 
-    | expression could be the item variable only (e.g. x) or any expression such as one that uses the item variable (e.g. x*x, x.upper()).
-    | item is a variable
-    | iterable can be objects like strings, lists, dictionaries, range function and others.
-
-e.g newlist = [n for n in range(5)]
+    :param expression: the item variable only (e.g. x) or any expression such as one that uses the item variable (e.g. x*x, x.upper()).
+    :param item:  variable.
+    :param iterable: iterable objects like strings, lists, dictionaries, range function and others.
+ 
+| A list comprehension consists of brackets containing an expression followed by a for clause. 
+| The result will be a new list resulting from evaluating the expression in the context of the for and if clauses which follow it. 
+| e.g newlist = [2 * n for n in range(5)]
 
 ----
 
@@ -131,12 +137,15 @@ Syntax:
 
 .. py:function:: newlist = [expression for item in iterable if condition == True]
 
-    :paramstr expression: expression could be the item variable only (e.g. x) or any expression such as one that uses the item variable (e.g. x*x, x.upper()).
-    :param item: item is a variable.
-    :param iterable: iterable can be objects like strings, lists, dictionaries, range function and others.
-    :param condition: condition is any condition.
+    :param expression: the item variable only (e.g. x) or any expression such as one that uses the item variable (e.g. x*x, x.upper()).
+    :param item:  variable.
+    :param iterable: iterable objects like strings, lists, dictionaries, range function and others.
+    :param condition: any condition.
 
-    
+| A list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for or if clauses. 
+| The result will be a new list resulting from evaluating the expression in the context of the for and if clauses which follow it. 
+| e.g newlist = [2 * n for n in range(5) if n % 2 = 0]
+
 
 List Example
 -------------------
