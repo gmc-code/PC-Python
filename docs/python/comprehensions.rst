@@ -166,3 +166,4 @@ List Example 1
     my_list_comprehension = [n for n in nums if num % 2 == 0]
     print(my_list_comprehension)
 
+nested+
