@@ -8,8 +8,9 @@ Anything that can be done with a for loop can be done as a comprehension.
 
 ----
 
-Lists comprehension
--------------------------
+==========================
+Lists comprehension 1
+==========================
 
 Syntax:
 
@@ -122,12 +123,46 @@ Practice Questions
    
 ----
 
-Lists comprehension
--------------------
+==========================
+Lists comprehension 2
+==========================
 
 Syntax:
 
 .. py:function:: newlist = [expression for item in iterable if condition == True]
 
-    | Scrolls ``value`` horizontally on the display. 
+    | expression could be the item variable only (e.g. x) or any expression such as one that uses the item variable (e.g. x*x, x.upper()).
+    | item is a variable.
+    | iterable can be objects like strings, lists, dictionaries, range function and others.
+    | condition is any condition.
+
     
+
+List Example 3
+-------------------
+
+| In the code below, a for-loop is used to get a list of event numbers from a list.
+| Using the modulus, ``num % 2`` gives 0 for even numbers.
+
+
+.. code-block:: python
+
+
+    nums = [1, 3, 6, 10, 15, 21, 28]
+
+    # I want n for each n in nums if n is even 
+    my_list = []
+    for n in nums:
+        my_list.append(n * n)
+    print(my_list)
+
+
+ | The list comprehension, ``my_list_comprehension = [n * n for n in nums]``, does this in one line.
+
+.. code-block:: python
+    
+
+    # I want n for each n in nums if n is even 
+    my_list_comprehension = [n for n in nums if num % 2 == 0]
+    print(my_list_comprehension)
+
