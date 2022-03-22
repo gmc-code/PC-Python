@@ -6,7 +6,7 @@ See docs at: https://docs.python.org/3/tutorial/datastructures.html#list-compreh
 See ref video at: https://www.youtube.com/watch?v=3dt4OGnU5sM
 
 | Anything that can be done with a for loop can be done as a comprehension.
-| List comprehensions provide a concise way to create lists. 
+| List comprehensions provide a concise way to create lists.
 | They are used to make new lists where each element is the result of some operations applied to each member of another sequence or iterable.
 | They can create a subsequence of those elements that satisfy a certain condition.
 
@@ -24,8 +24,8 @@ Syntax:
     :param item:  a variable.
     :param iterable: iterable objects like strings, lists, dictionaries, range function and others.
 
-| A list comprehension consists of brackets containing an expression followed by a for clause. 
-| The result will be a new list resulting from evaluating the expression in the context of the for and if clauses which follow it. 
+| A list comprehension consists of brackets containing an expression followed by a for clause.
+| The result will be a new list resulting from evaluating the expression in the context of the for and if clauses which follow it.
 | e.g newlist = [2 * n for n in range(5)]
 
 ----
@@ -34,7 +34,7 @@ The first 2 examples illustrate simple list comprehensions without doing anythin
 
 
 Lists Example: list
--------------------------   
+-------------------------
 
 | In the code below, a for-loop is used to get each value from an original list then append it to a new list, my_list.
 
@@ -44,14 +44,14 @@ Lists Example: list
 
     nums = [1, 3, 6, 10, 15, 21, 28]
 
-    # I want 'n' for each 'n' in nums
+    # I want 'n' for each 'n' in nucd docsms
     my_list = []
     for n in nums:
         my_list.append(n)
     print(my_list)
 
 
- | The list comprehension, ``my_list_comprehension = [n for n in nums]``, does this in one line.
+| The list comprehension, ``my_list_comprehension = [n for n in nums]``, does this in one line.
 
 .. code-block:: python
 
@@ -60,6 +60,9 @@ Lists Example: list
     my_list_comprehension = [n for n in nums]
     print(my_list_comprehension)
 
+
+.. image:: images/list_comprehension_colours1.png
+    :scale: 75%
 
 ----
 
@@ -108,7 +111,7 @@ List Example: n * n
     print(my_list)
 
 
- | The list comprehension, ``my_list_comprehension = [n * n for n in nums]``, does this in one line.
+| The list comprehension, ``my_list_comprehension = [n * n for n in nums]``, does this in one line.
 
 .. code-block:: python
 
@@ -118,8 +121,8 @@ List Example: n * n
     print(my_list_comprehension)
 
 
-.. image:: images/list_comprehension_colours.png
-    :scale: 100 %
+.. image:: images/list_comprehension_colours2.png
+    :scale: 75%
 
 
 Practice Questions
@@ -145,8 +148,8 @@ Syntax:
     :param iterable: iterable objects like strings, lists, dictionaries, range function and others.
     :param condition: any condition.
 
-| A list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for or if clauses. 
-| The result will be a new list resulting from evaluating the expression in the context of the for and if clauses which follow it. 
+| A list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for or if clauses.
+| The result will be a new list resulting from evaluating the expression in the context of the for and if clauses which follow it.
 | e.g newlist = [2 * n for n in range(5) if n % 2 = 0]
 
 
@@ -162,7 +165,7 @@ List Example: Modulo
 
     nums = [1, 3, 6, 10, 15, 21, 28]
 
-    # I want n for each n in nums if n is even 
+    # I want n for each n in nums if n is even
     my_list = []
     for n in nums:
         if n % 2 == 0:
@@ -170,20 +173,20 @@ List Example: Modulo
     print(my_list)
 
 
- | The list comprehension, ``my_list_comprehension = [n for n in nums if n % 2 == 0]``, does this in one line.
+| The list comprehension, ``my_list_comprehension = [n for n in nums if n % 2 == 0]``, does this in one line.
 
 .. code-block:: python
 
     nums = [1, 3, 6, 10, 15, 21, 28]
 
-    # I want n for each n in nums if n is even 
+    # I want n for each n in nums if n is even
     my_list_comprehension = [n for n in nums if n % 2 == 0]
     print(my_list_comprehension)
 
 
 
 .. image:: images/list_comprehension_colours_conditional.png
-    :scale: 100 %
+    :scale: 75%
 
 
 ----
@@ -222,16 +225,16 @@ List Example: grid coordinates
 
 
 
- | The list comprehension does the nested for loop in one line.
+| The list comprehension does the nested for loop in one line.
 
 .. code-block:: python
 
 
-    # I want n for each n in nums if n is even 
+    # I want n for each n in nums if n is even
     my_list_comprehension = [(letter, num) for letter in "ABCD" for num in range(1, 5)]
     print(my_list_comprehension)
 
 
 .. image:: images/list_comprehension_colours_nested.png
-    :scale: 100 %
+    :scale: 75%
 
