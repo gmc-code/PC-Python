@@ -33,6 +33,7 @@ Key references:
 
     introduction/introduction.rst
 
+
 .. toctree::
     :maxdepth: 2
     :caption: Python
@@ -45,6 +46,14 @@ Key references:
     python/selection.rst
     python/iteration.rst
     python/functions.rst
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Advanced Python
+    :numbered:
+    python/comprehensions.rst
+
 
 .. toctree::
     :maxdepth: 2
