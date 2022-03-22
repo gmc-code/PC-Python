@@ -14,7 +14,7 @@ Lists comprehension 1
 
 Syntax:
 
-.. py:function:: newlist = [expression for item in iterable]
+.. py:data:: newlist = [expression for item in iterable]
 
     | expression could be the item variable only (e.g. x) or any expression such as one that uses the item variable (e.g. x*x, x.upper()).
     | item is a variable
@@ -131,14 +131,14 @@ Syntax:
 
 .. py:function:: newlist = [expression for item in iterable if condition == True]
 
-    | expression could be the item variable only (e.g. x) or any expression such as one that uses the item variable (e.g. x*x, x.upper()).
-    | item is a variable.
-    | iterable can be objects like strings, lists, dictionaries, range function and others.
-    | condition is any condition.
+    | :paramstr expression: expression could be the item variable only (e.g. x) or any expression such as one that uses the item variable (e.g. x*x, x.upper()).
+    | :param item: item is a variable.
+    | :param iterable: iterable can be objects like strings, lists, dictionaries, range function and others.
+    | :param condition: condition is any condition.
 
     
 
-List Example 3
+List Example 1
 -------------------
 
 | In the code below, a for-loop is used to get a list of event numbers from a list.
