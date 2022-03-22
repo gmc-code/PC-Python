@@ -5,6 +5,7 @@ Comprehensions
 See docs at: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
 See ref video at: https://www.youtube.com/watch?v=3dt4OGnU5sM
 
+
 | Anything that can be done with a for loop can be done as a comprehension.
 | List comprehensions provide a concise way to create lists.
 | They are used to make new lists where each element is the result of some operations applied to each member of another sequence or iterable.
@@ -18,7 +19,7 @@ Lists comprehension
 
 Syntax:
 
-.. py:data:: newlist = [expression for item in iterable]
+.. py:function:: newlist = [expression for item in iterable]
 
     :param expression: the item variable only (e.g. x) or any expression such as one that uses the item variable (e.g. x*x, x.upper()).
     :param item:  a variable.
@@ -62,7 +63,7 @@ Lists Example: list
 
 
 .. image:: images/list_comprehension_colours1.png
-    :scale: 75%
+    :scale: 50%
 
 ----
 
@@ -122,7 +123,7 @@ List Example: n * n
 
 
 .. image:: images/list_comprehension_colours2.png
-    :scale: 75%
+    :scale: 50%
 
 
 Practice Questions
@@ -186,7 +187,7 @@ List Example: Modulo
 
 
 .. image:: images/list_comprehension_colours_conditional.png
-    :scale: 75%
+    :scale: 50%
 
 
 ----
@@ -236,5 +237,5 @@ List Example: grid coordinates
 
 
 .. image:: images/list_comprehension_colours_nested.png
-    :scale: 75%
+    :scale: 50%
 
