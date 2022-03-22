@@ -43,22 +43,21 @@ Lists Example: list
 
 .. code-block:: python
 
-
     nums = [1, 3, 6, 10, 15, 21, 28]
 
-    # I want 'n' for each 'n' in nucd docsms
+    # I want 'n' for each 'n' in nums
     my_list = []
     for n in nums:
         my_list.append(n)
     print(my_list)
 
-
+| The printed list is: [1, 3, 6, 10, 15, 21, 28]
 | The list comprehension, ``my_list_comprehension = [n for n in nums]``, does this in one line.
 
 .. code-block:: python
 
-
-    # I want 'n' for each 'n' in nums
+    nums = [1, 3, 6, 10, 15, 21, 28]
+    
     my_list_comprehension = [n for n in nums]
     print(my_list_comprehension)
 
@@ -77,7 +76,6 @@ Lists Example: range
 
 .. code-block:: python
 
-
     # I want 'n' for each 'n' from 1 to 10
     my_list = []
     for n in range(1, 11):
@@ -89,8 +87,6 @@ Lists Example: range
 
 .. code-block:: python
 
-
-    # I want 'n' for each 'n' in range(1, 11)
     my_list_comprehension = [n for n in range(1, 11)]
     print(my_list_comprehension)
 
@@ -105,7 +101,6 @@ List Example: n * n
 
 .. code-block:: python
 
-
     nums = [1, 3, 6, 10, 15, 21, 28]
 
     # I want 'n*n' for each 'n' in nums
@@ -119,11 +114,10 @@ List Example: n * n
 
 .. code-block:: python
 
+    nums = [1, 3, 6, 10, 15, 21, 28]
 
-    # I want 'n*n' for each 'n' in nums
     my_list_comprehension = [n * n for n in nums]
     print(my_list_comprehension)
-
 
 .. image:: images/list_comprehension_colours2.png
     :scale: 60%
@@ -136,7 +130,8 @@ Practice Questions
 .. admonition:: Tasks
 
     1. Use a list comprehension to create a list of 2 * n for each n in [0, 1, 1, 2, 3, 5, 8].
-    2. Use a list comprehension to create a list of 2 * n - 1  for each n in [2, 3, 5, 6, 7, 8, 10].
+    2. Use a list comprehension to create a list of 2 * n - 1  for each n in [2, 4, 6, 8, 10].
+    3. Use a list comprehension to create a list of n ** 3  for each n in [1, 2, 3, 4].
 
 ----
 
@@ -168,7 +163,6 @@ List Example: Modulo
 
 .. code-block:: python
 
-
     nums = [1, 3, 6, 10, 15, 21, 28]
 
     # I want n for each n in nums if n is even
@@ -178,7 +172,7 @@ List Example: Modulo
             my_list.append(n)
     print(my_list)
 
-
+| The printed list is: [6, 10, 28]
 | The list comprehension, ``my_list_comprehension = [n for n in nums if n % 2 == 0]``, does this in one line.
 
 .. code-block:: python
@@ -188,7 +182,6 @@ List Example: Modulo
     # I want n for each n in nums if n is even
     my_list_comprehension = [n for n in nums if n % 2 == 0]
     print(my_list_comprehension)
-
 
 
 .. image:: images/list_comprehension_colours_conditional.png
