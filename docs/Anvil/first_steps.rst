@@ -20,7 +20,7 @@ Become familiar with the docs
 
 ----
 
-As you use componenets:
+As you use components:
 ------------------------------
 
-| See the index to components in teh anvil module: https://anvil.works/docs/api/anvil
+| See the index to components in the anvil module: https://anvil.works/docs/api/anvil
