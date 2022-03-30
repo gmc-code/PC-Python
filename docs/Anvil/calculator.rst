@@ -5,13 +5,16 @@ Calculator
 This builds a simple calculator using code to add the buttons.
 It is based on the the iphone grid of 5 rows and 4 columns.
 
+.. image:: images/calculator.png
+    :scale: 60%
+
 References
 ------------------------------
 
 #. Youtube guide for using code to create the components: https://www.youtube.com/watch?v=NiQdsK3H57Y
-#. Try-except: https://www.w3schools.com/python/python_try_except.asp
-#. eval: https://www.w3schools.com/python/ref_func_eval.asp
-#. enumerate: https://www.w3schools.com/python/ref_func_enumerate.asp
+#. Python try-except: https://www.w3schools.com/python/python_try_except.asp
+#. Python eval: https://www.w3schools.com/python/ref_func_eval.asp
+#. Python enumerate: https://www.w3schools.com/python/ref_func_enumerate.asp
 #. Colour hex values: https://www.w3schools.com/colors/colors_picker.asp?colorhex=85b185
 #. Calculator icon: https://icons.iconarchive.com/icons/tristan-edwards/sevenesque/256/Calculator-icon.png
 
