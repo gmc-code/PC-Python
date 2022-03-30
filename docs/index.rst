@@ -65,7 +65,7 @@ Key references:
     :numbered:
 
     Anvil/introduction.rst
-    Anvil/first_use_tutorial.rst
+    Anvil/first_steps.rst
     Anvil/calculator.rst
     Anvil/temperature_converter.rst
 
