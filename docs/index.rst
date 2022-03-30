@@ -59,10 +59,9 @@ Key references:
     python/generator_comprehensions
 
 
-
 .. toctree::
     :maxdepth: 2
-    :caption: Jupyter
+    :caption: Anvil
     :numbered:
 
     Anvil/introduction.rst
