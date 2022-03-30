@@ -53,7 +53,22 @@ Key references:
     :caption: Advanced Python
     :numbered:
     
-    python/comprehensions.rst
+    python/list_comprehensions.rst
+    python/dict_comprehensions.rst
+    python/set_comprehensions.rst
+    python/generator_comprehensions
+
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Jupyter
+    :numbered:
+
+    Anvil/introduction.rst
+    Anvil/first_use_tutorial.rst
+    Anvil/calculator.rst
+    Anvil/temperature_converter.rst
 
 
 .. toctree::
