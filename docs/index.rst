@@ -66,9 +66,10 @@ Key references:
 
     Anvil/introduction.rst
     Anvil/first_steps.rst
-    Anvil/calculator.rst
     Anvil/temperature_converter.rst
-
+    Anvil/temperature_converter2.rst
+    Anvil/days_calculator.rst
+    Anvil/iphone_calculator.rst
 
 .. toctree::
     :maxdepth: 2
