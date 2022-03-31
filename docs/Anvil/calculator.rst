@@ -163,7 +163,8 @@ Code for buttons step 2
 Code for buttons step 3
 ------------------------------
 
-| Replace the default values for the button colours with those based on the text value, ``i enumerate(chars)``.
+| Replace the default values for the button colours with those 
+| based on the text value, ``i in enumerate(chars)``.
 | See Colour hex values: https://www.w3schools.com/colors/colors_picker.asp?colorhex=85b185
 
 .. code-block:: python
