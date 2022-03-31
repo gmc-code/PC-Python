@@ -221,7 +221,7 @@ Code for buttons click method
 | The ``tag.name`` property will be set to the text of teh button in coded to be added later in step 5 below.
 
 | Get the button text using: ``val = event_args['sender'].tag.name``
-| To add the buttons text to the end of the text box use: ``self.text_box_1.text += val``.
+| To add the button text to the end of the text box use: ``self.text_box_1.text += val``.
 | If the AC button, all clear, is pressed, clear the text box with: ``self.text_box_1.text = ""``.
 | If the C button, clear last entry, is pressed, clear the last character of the text box with: ``self.text_box_1.text = self.text_box_1.text[:-1]``.
 | When the ``=`` button is pressed, use the ``eval`` function to convert the expression in the text box to a value.
@@ -251,8 +251,8 @@ Code for buttons click method
 Code for buttons step 5
 ------------------------------
 
-| Now that the button click method has been coded, each button needs to have this added to their properties.
-| Set the tag.name property to teh button text using: ``self.btn[i].tag.name = i``.
+| Now that the button click method has been coded, each button needs to have the event handler added to their properties.
+| Set the button tag.name property to the button text using: ``self.btn[i].tag.name = i``.
 | Add the click event to the button properties using: ``self.btn[i].set_event_handler('click', self.click)``
 
 
