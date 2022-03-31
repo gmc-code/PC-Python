@@ -56,6 +56,24 @@ Use placeholder text and type
 | In the properties panel: text section, set the placeholder text to ``20`` and the text to empty.
 | In the properties panel: text section, set the type to ``number`` so only numbers can be entered.
 
+-----
+
+Adjust Code for placeholder
+------------------------------
+
+| Adjust the code so that the placeholder text is used if no entry is made.
+| With the text box set to the number type, text property returns None when no numbers have been entered.
+| Test for empty string or None type using: ``if fahrenheit == '' or fahrenheit == None``
+
+.. code-block:: python
+
+        def button_1_click(self, **event_args):
+            fahrenheit = self.text_box_1.text
+            if fahrenheit == '' or fahrenheit == None:
+                fahrenheit = self.text_box_1.placeholder
+            fahrenheit = float(fahrenheit)
+            celcius = (fahrenheit - 32) / 1.8
+            self.text_box_2.text = celcius
 ----
 
 Format to 1 dp
@@ -68,23 +86,8 @@ Format to 1 dp
 .. code-block:: python
 
         def button_1_click(self, **event_args):
-            fahrenheit = float(self.text_box_1.text)
-            celcius = (fahrenheit - 32) / 1.8
-            self.text_box_2.text = celcius
-            self.text_box_2.text = f'{celcius:.1f}'
-
------
-
-Adjust Code for placeholder
-------------------------------
-
-| Adjust the code so that the placeholder text is used if no entry is made.
-
-.. code-block:: python
-
-        def button_1_click(self, **event_args):
             fahrenheit = self.text_box_1.text
-            if fahrenheit == '':
+            if fahrenheit == '' or fahrenheit == None:
                 fahrenheit = self.text_box_1.placeholder
             fahrenheit = float(fahrenheit)
             celcius = (fahrenheit - 32) / 1.8
@@ -119,7 +122,7 @@ Refactor code to calculate F to C
 
     def calculateFtoC(self):
         fahrenheit = self.text_box_1.text
-        if fahrenheit == '':
+        if fahrenheit == '' or fahrenheit == None:
             fahrenheit = self.text_box_1.placeholder
         fahrenheit = float(fahrenheit)
         celcius = (fahrenheit - 32) / 1.8
@@ -162,7 +165,7 @@ Create code to calculate C to F
 
     def calculateCtoF(self):
         celcius = self.text_box_2.text
-        if celcius == '':
+        if celcius == '' or celcius == None:
             celcius = self.text_box_2.placeholder
         celcius = float(celcius)
         fahrenheit = (celcius * 1.8) + 32
@@ -233,7 +236,7 @@ Final code
 
     def calculateFtoC(self):
         fahrenheit = self.text_box_1.text
-        if fahrenheit == '':
+        if fahrenheit == '' or fahrenheit == None:
             fahrenheit = self.text_box_1.placeholder
         fahrenheit = float(fahrenheit)
         celcius = (fahrenheit - 32) / 1.8
@@ -241,7 +244,7 @@ Final code
 
     def calculateCtoF(self):
         celcius = self.text_box_2.text
-        if celcius == '':
+        if celcius == '' or celcius == None:
             celcius = self.text_box_2.placeholder
         celcius = float(celcius)
         fahrenheit = (celcius * 1.8) + 32
