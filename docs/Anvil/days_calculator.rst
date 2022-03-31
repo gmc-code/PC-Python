@@ -2,7 +2,7 @@
 Days Calculator
 ====================================================
 
-This builds a simple calculator to find teh difference in days between 2 dates.
+This builds a simple calculator to find the difference in days between 2 dates.
 
 .. image:: images/days_calculator.png
     :scale: 60%
