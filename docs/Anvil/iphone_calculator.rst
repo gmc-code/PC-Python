@@ -356,4 +356,4 @@ Final code
 
     #. The keyboard can also be used instead of the buttons. Try it out. 
     #. Try adding some maths function buttons in another row. e.g. x^2 which squares the text box. e.g. sqrt which takes the square root.
-    #. Try adding some maths function buttons in another row by importing the matchs library. See: https://docs.python.org/3/library/math.html
+    #. Try adding some maths function buttons in another row by importing the maths library. See: https://docs.python.org/3/library/math.html
