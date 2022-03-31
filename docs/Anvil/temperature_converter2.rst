@@ -2,10 +2,19 @@
 Temperature converter2
 ====================================================
 
-This adds to temperature converter.
+This enhances the temperature converter.
 
 .. image:: images/Temperature_converter2_layout.png
     :scale: 60%
+
+----
+
+References
+------------------------------
+
+#. Python f-strings: https://docs.python.org/3/tutorial/inputoutput.html#tut-f-strings
+#. Python f-string number formatting: https://docs.python.org/3/library/string.html#formatspec
+
 
 ----
 
