@@ -101,7 +101,7 @@ Code
 | ``self.text_box_2.text = celcius`` can be used to place the calculated value.
 
 .. image:: images/Temperature_converter_button_click.png
-    :scale: 60%
+    :scale: 100%
 
 
 .. code-block:: python
@@ -123,7 +123,7 @@ Code
 .. admonition:: Tasks
 
     #. Add some colour to the buttons and text and form.
-    #. Add try except to the button_1_click function so that non numerical entries are handled. See the ue of this in the calculator code.
+    #. Add try except to the button_1_click function so that non numerical entries are handled. See the use of this in the calculator code.
     #. Add Kelvin as a another temperature to be displayed.
     #. Try making a distance converter such as miles to km or inches to cm.
     #. Try making a mass converter such as lbs to kg.
