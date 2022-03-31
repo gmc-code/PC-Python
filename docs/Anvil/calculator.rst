@@ -100,7 +100,7 @@ Code for buttons step 1
 | Use ``gp = GridPanel()`` to set up an empty Grid panel to which the buttons will be added. 
 | Use ``enumerate(chars)`` to turn the list into a dictionary like object where each button has a key starting from 0, and the button text is the dictionary value.
 | Loop through the enumerate object using: ``for idx,i in enumerate(chars):``, where ``idx`` is the key and ``i`` is the button text.
-| Set some default values for the button variables to be adjusted later: row, background colour bgcol, foreground colour fgcol, and button width bthwidth
+| Set some default values for the button variables to be adjusted later: ``row``, background colour ``bgcol``, foreground colour ``fgcol``, and button width ``bthwidth``.
 | Create each button ``self.btn[i]``. The self prefix is required since this is an object in a class, ``Form1``.
 | Add each button to the Grid panel using: ``gp.add_component()``.
 | Add the Grid panel to the form using ``self.add_component(gp)``.
