@@ -84,7 +84,7 @@ Add code for buttons
 
 ----
 
-Add code for buttons
+Code for buttons step 1
 ------------------------------
 
 | Add code to the end of the init method to create buttons.
@@ -92,52 +92,173 @@ Add code for buttons
 | The grid panel has rows specified by letters: A, B, C...
 | The grid panel has 12 columns specified by numbers: 0, 1, 2, ....11
 | See Button syntax: https://anvil.works/docs/api/anvil#Button
+
+| Use ``self.btn = {}`` to set up the button dictionary which will store each button object with the button text as the key.
+| Use ``gp = GridPanel()`` to set up an empty Grid panel to which the buttons will be added. 
+| Use ``enumerate(chars)`` to turn the list into a dictionary like obeject where each button has a key starting from 0, and the button text is the dictionary value.
+| Loop through the enumerate object using: ``for idx,i in enumerate(chars):``, where ``idx`` is the key and ``i`` is the button text.
 | Set some default values for the button variables to be adjusted later: row, background colour bgcol, foreground colour fgcol, and button width bthwidth
+| Create each button ``self.btn[i]``. The self prefix is required since this is an object in a class, ``Form1``.
+| Add each button to the Grid panel using: ``gp.add_component()``.
+| Add the Grid panel to the form using ``self.add_component(gp)``.
+| Add a spacer at the bottom of the form to fill the screen. 
+| Specify teh spacer height first using ``self.space = Spacer(height=500)``. 
+| Then add it to the form using ``self.add_component(self.space)``.
+
 
 .. code-block:: python
 
         self.btn = {}
         gp = GridPanel()
 
-        row = 'A'
-        bgcol = "#999999"
-        fgcol = "#000000"
-        btnwidth = 1
+        for idx,i in enumerate(chars):
 
-        #create btns
-        self.btn[i] = Button(align="full", text=i, font="Consolas", font_size=32, bold=False, foreground=fgcol,background=bgcol)
-        gp.add_component(self.btn[i], row=row, col_xs=3, width_xs=btnwidth)
+            #temporary values to be replaced with button specific values
+            row = 'A'
+            bgcol = "#999999"
+            fgcol = "#000000"
+            btnwidth = 1
 
-        # display grid panel
-        self.add_component(gp)
-        # add a spacer after grid panle to fill the bottom of the screen
-        self.space = Spacer(height=500)
-        self.add_component(self.space)
+            #create btns
+            self.btn[i] = Button(align="full", text=i, font="Consolas", font_size=32, bold=False, foreground=fgcol,background=bgcol)
+            gp.add_component(self.btn[i], row=row, col_xs=3, width_xs=btnwidth)
+
+            # display grid panel
+            self.add_component(gp)
+            # add a spacer after grid panle to fill the bottom of the screen
+            self.space = Spacer(height=500)
+            self.add_component(self.space)
 
 ----
 
+Code for buttons step 2
+------------------------------
+
+| Replace the default value for the button row based on the enumerate index, ``idx``.
+| The ``chars`` list has been set out as it will appear on screen, with 3, 4, 4, 4, 3 butotns per row.
+| Thesse values are ued to create the if, elif, else block in which the rows are specified from A to E. 
+
+.. code-block:: python
+
+        # enumerate buttons
+        for idx,i in enumerate(chars):
+
+            #btn row
+            if idx < 3:
+                row = 'A'
+            elif 3 <= idx < 7:
+                row = 'B'
+            elif 7 <= idx < 11:
+                row = 'C'
+            elif 11 <= idx < 15:
+                row = 'D'
+            else:
+                row = 'E'
+
+----
+
+Code for buttons step 3
+------------------------------
+
+| Replace the default values for the button colours with those based on the text value, ``i enumerate(chars)``.
+| See Colour hex values: https://www.w3schools.com/colors/colors_picker.asp?colorhex=85b185
+
+.. code-block:: python
+
+        # enumerate buttons
+        for idx,i in enumerate(chars):
+  
+            #btn colour
+            if i in ["AC", "C"]:
+                bgcol = "#999999"
+                fgcol = "#000000"
+            elif i in ["=", "+", "-", "*", "/"]:
+                bgcol = "#f6aa51"
+                fgcol = "#FFFFFF"
+            else:
+                bgcol = "#444444"
+                fgcol = "#FFFFFF"
+            
+
+----
+
+Code for buttons step 4
+------------------------------
+
+| Replace the default values for the button width with those based on the text value, ``i enumerate(chars)``.
+| The width value is the number of columns for the button to be spred out across.
+| All the buttons are to take up only 1 column, except for the ``AC`` and ``0`` buttons which will take up 2 columns.
+
+.. code-block:: python
+
+        # enumerate buttons
+        for idx,i in enumerate(chars):
+            
+            #btn width
+            if i in ["AC", "0"]:
+                btnwidth = 2
+            else:
+                btnwidth = 1  
 
 
+----
+
+Code for buttons click method
+------------------------------
+
+| Define a click method to determine what happens to the calculator text box.
+| Use the aguments be: ``(self, **event_args)``.
+| ``event_args`` has an index ``['sender']`` from which the button text can be found using the tab.name property.
+| These steps are not well documented. For advanced users, to discover this these print statements can be used in the click method:
+| Find the keys of the event_args: ``print(event_args.keys())``
+| Find out the properties of the sender key: ``print(dir(event_args['sender']))``
+| Find out the properties of the sender tag: ``print(dir(event_args['sender'].tag))``
+| The ``tag.name`` prpoerty will be set to the text of teh button in coded to be added later in step 5 below.
+| Get the button text using: ``val = event_args['sender'].tag.name``
+| To add the buttons text to the end of the text box use: ``self.text_box_1.text += val``.
+| If the AC button, all clear, is pressed, clear the text box with: ``self.text_box_1.text = ""``.
+| If the C button, clear last entry, is pressed, clear the last character of the text box with: ``self.text_box_1.text = self.text_box_1.text[:-1]``.
+| When the ``=`` button is pressed, use the ``eval`` function to convert the expression in the text box to a value.
+| This needs to be placed in a try except block to handle cases in which the maths string can't be evaluated. e.g "4+/*3" 
 
 
+.. code-block:: python
+
+    # click method for btns
+    def click(self, **event_args):
+        val = event_args['sender'].tag.name
+        if val == "=":
+            try:
+                self.text_box_1.text = eval(self.text_box_1.text)
+            except:
+                self.text_box_1.text  += " error"
+        elif val == "AC":
+            self.text_box_1.text = ""
+        elif val == "C":
+            self.text_box_1.text = self.text_box_1.text[:-1]
+        else:
+            self.text_box_1.text += val
 
 
+----
+
+Code for buttons step 5
+------------------------------
+
+| Now that the button click method has been coded, each button needs to have this added to their properties.
+| Set the tag.name property to teh button text using: ``self.btn[i].tag.name = i``.
+| Add the click event to the button properties using: ``self.btn[i].set_event_handler('click', self.click)``
 
 
+.. code-block:: python
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    #create btns
+    self.btn[i] = Button(align="full", text=i, font="Consolas", font_size=32, bold=False, foreground=fgcol,background=bgcol)
+    # to collect the tag name when clicked
+    self.btn[i].tag.name = i
+    # handle the click event and attach the click method to the event
+    self.btn[i].set_event_handler('click', self.click)
+    gp.add_component(self.btn[i], row=row, col_xs=3, width_xs=btnwidth)
 
 
 ----
@@ -165,61 +286,68 @@ Final code
 
         # enumerate buttons
         for idx,i in enumerate(chars):
-        #btn row
-        if idx < 3:
-            row = 'A'
-        elif 3 <= idx < 7:
-            row = 'B'
-        elif 7 <= idx < 11:
-            row = 'C'
-        elif 11 <= idx < 15:
-            row = 'D'
-        else:
-            row = 'E'
+            #btn row
+            if idx < 3:
+                row = 'A'
+            elif 3 <= idx < 7:
+                row = 'B'
+            elif 7 <= idx < 11:
+                row = 'C'
+            elif 11 <= idx < 15:
+                row = 'D'
+            else:
+                row = 'E'
+                
+            #btn colour
+            if i in ["AC", "C"]:
+                bgcol = "#999999"
+                fgcol = "#000000"
+            elif i in ["=", "+", "-", "*", "/"]:
+                bgcol = "#f6aa51"
+                fgcol = "#FFFFFF"
+            else:
+                bgcol = "#444444"
+                fgcol = "#FFFFFF"
+                
+            #btn width
+            if i in ["AC", "0"]:
+                btnwidth = 2
+            else:
+                btnwidth = 1  
             
-        #btn colour
-        if i in ["AC", "C"]:
-            bgcol = "#999999"
-            fgcol = "#000000"
-        elif i in ["=", "+", "-", "*", "/"]:
-            bgcol = "#f6aa51"
-            fgcol = "#FFFFFF"
-        else:
-            bgcol = "#444444"
-            fgcol = "#FFFFFF"
-            
-        #btn width
-        if i in ["AC", "0"]:
-            btnwidth = 2
-        else:
-            btnwidth = 1  
-            
-        #create btns
-        self.btn[i] = Button(align="full", text=i, font="Consolas", font_size=32, bold=False, foreground=fgcol,background=bgcol)
-        # to collect the tag name when clicked
-        self.btn[i].tag.name = i
-        # handle the click event and attach the click method to the event
-        self.btn[i].set_event_handler('click', self.click)
-        gp.add_component(self.btn[i], row=row, col_xs=3, width_xs=btnwidth)
+            #create btns
+            self.btn[i] = Button(align="full", text=i, font="Consolas", font_size=32, bold=False, foreground=fgcol,background=bgcol)
+            # to collect the tag name when clicked
+            self.btn[i].tag.name = i
+            # handle the click event and attach the click method to the event
+            self.btn[i].set_event_handler('click', self.click)
+            gp.add_component(self.btn[i], row=row, col_xs=3, width_xs=btnwidth)
 
-        # display grid panel
-        self.add_component(gp)
-        # add a spacer after grid panle to fill the bottom of the screen
-        self.space = Spacer(height=500)
-        self.add_component(self.space)
+            # display grid panel
+            self.add_component(gp)
+            # add a spacer after grid panle to fill the bottom of the screen
+            self.space = Spacer(height=500)
+            self.add_component(self.space)
         
     # click method for btns
     def click(self, **event_args):
         val = event_args['sender'].tag.name
         if val == "=":
-        try:
-            self.text_box_1.text = eval(self.text_box_1.text)
-        except:
-            self.text_box_1.text  += " error"
+            try:
+                self.text_box_1.text = eval(self.text_box_1.text)
+            except:
+                self.text_box_1.text  += " error"
         elif val == "AC":
-        self.text_box_1.text = ""
+            self.text_box_1.text = ""
         elif val == "C":
-        self.text_box_1.text = self.text_box_1.text[:-1]
+            self.text_box_1.text = self.text_box_1.text[:-1]
         else:
-        self.text_box_1.text += val
+            self.text_box_1.text += val
 
+----
+
+.. admonition:: Tasks
+
+    #. The keyboard can also be used instead of the buttons. Try it out.
+    #. Try adding some maths function buttons in another row. e.g. x^2 which squares the text box. e.g. sqrt which takes the square root.
+    #. Try adding some maths function buttons in another row by importing the matchs library. See: https://docs.python.org/3/library/math.html
