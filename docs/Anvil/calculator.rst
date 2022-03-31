@@ -98,7 +98,7 @@ Code for buttons step 1
 
 | Use ``self.btn = {}`` to set up the button dictionary which will store each button object with the button text as the key.
 | Use ``gp = GridPanel()`` to set up an empty Grid panel to which the buttons will be added. 
-| Use ``enumerate(chars)`` to turn the list into a dictionary like obeject where each button has a key starting from 0, and the button text is the dictionary value.
+| Use ``enumerate(chars)`` to turn the list into a dictionary like object where each button has a key starting from 0, and the button text is the dictionary value.
 | Loop through the enumerate object using: ``for idx,i in enumerate(chars):``, where ``idx`` is the key and ``i`` is the button text.
 | Set some default values for the button variables to be adjusted later: row, background colour bgcol, foreground colour fgcol, and button width bthwidth
 | Create each button ``self.btn[i]``. The self prefix is required since this is an object in a class, ``Form1``.
