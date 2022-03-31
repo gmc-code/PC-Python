@@ -275,80 +275,80 @@ Final code
 .. code-block:: python
 
     class Form1(Form1Template):
-    def __init__(self, **properties):
-        # Set Form properties and Data Bindings.
-        self.init_components(**properties)
+        def __init__(self, **properties):
+            # Set Form properties and Data Bindings.
+            self.init_components(**properties)
 
-        # Any code you write here will run when the form opens.
-        # add btn text list
-        chars = ["AC", "C", "/",
-                "7", "8", "9", "*",
-                "4", "5", "6", "-",
-                "1", "2", "3", "+",
-                "0",".", "="]
+            # Any code you write here will run when the form opens.
+            # add btn text list
+            chars = ["AC", "C", "/",
+                    "7", "8", "9", "*",
+                    "4", "5", "6", "-",
+                    "1", "2", "3", "+",
+                    "0",".", "="]
 
-        self.btn = {}
-        gp = GridPanel()
+            self.btn = {}
+            gp = GridPanel()
 
-        # enumerate buttons
-        for idx,i in enumerate(chars):
-            #btn row
-            if idx < 3:
-                row = 'A'
-            elif 3 <= idx < 7:
-                row = 'B'
-            elif 7 <= idx < 11:
-                row = 'C'
-            elif 11 <= idx < 15:
-                row = 'D'
-            else:
-                row = 'E'
+            # enumerate buttons
+            for idx,i in enumerate(chars):
+                #btn row
+                if idx < 3:
+                    row = 'A'
+                elif 3 <= idx < 7:
+                    row = 'B'
+                elif 7 <= idx < 11:
+                    row = 'C'
+                elif 11 <= idx < 15:
+                    row = 'D'
+                else:
+                    row = 'E'
+                    
+                #btn colour
+                if i in ["AC", "C"]:
+                    bgcol = "#999999"
+                    fgcol = "#000000"
+                elif i in ["=", "+", "-", "*", "/"]:
+                    bgcol = "#f6aa51"
+                    fgcol = "#FFFFFF"
+                else:
+                    bgcol = "#444444"
+                    fgcol = "#FFFFFF"
+                    
+                #btn width
+                if i in ["AC", "0"]:
+                    btnwidth = 2
+                else:
+                    btnwidth = 1  
                 
-            #btn colour
-            if i in ["AC", "C"]:
-                bgcol = "#999999"
-                fgcol = "#000000"
-            elif i in ["=", "+", "-", "*", "/"]:
-                bgcol = "#f6aa51"
-                fgcol = "#FFFFFF"
-            else:
-                bgcol = "#444444"
-                fgcol = "#FFFFFF"
-                
-            #btn width
-            if i in ["AC", "0"]:
-                btnwidth = 2
-            else:
-                btnwidth = 1  
+                #create btns
+                self.btn[i] = Button(align="full", text=i, font="Consolas", font_size=32, bold=False, foreground=fgcol,background=bgcol)
+                # to collect the tag name when clicked
+                self.btn[i].tag.name = i
+                # handle the click event and attach the click method to the event
+                self.btn[i].set_event_handler('click', self.click)
+                gp.add_component(self.btn[i], row=row, col_xs=3, width_xs=btnwidth)
+
+                # display grid panel
+                self.add_component(gp)
+                # add a spacer after grid panle to fill the bottom of the screen
+                self.space = Spacer(height=500)
+                self.add_component(self.space)
             
-            #create btns
-            self.btn[i] = Button(align="full", text=i, font="Consolas", font_size=32, bold=False, foreground=fgcol,background=bgcol)
-            # to collect the tag name when clicked
-            self.btn[i].tag.name = i
-            # handle the click event and attach the click method to the event
-            self.btn[i].set_event_handler('click', self.click)
-            gp.add_component(self.btn[i], row=row, col_xs=3, width_xs=btnwidth)
-
-            # display grid panel
-            self.add_component(gp)
-            # add a spacer after grid panle to fill the bottom of the screen
-            self.space = Spacer(height=500)
-            self.add_component(self.space)
-        
-    # click method for btns
-    def click(self, **event_args):
-        val = event_args['sender'].tag.name
-        if val == "=":
-            try:
-                self.text_box_1.text = eval(self.text_box_1.text)
-            except:
-                self.text_box_1.text  += " error"
-        elif val == "AC":
-            self.text_box_1.text = ""
-        elif val == "C":
-            self.text_box_1.text = self.text_box_1.text[:-1]
-        else:
-            self.text_box_1.text += val
+        # click method for btns
+        def click(self, **event_args):
+            val = event_args['sender'].tag.name
+            if val == "=":
+                try:
+                    self.text_box_1.text = eval(self.text_box_1.text)
+                except:
+                    self.text_box_1.text  += " error"
+            elif val == "AC":
+                self.text_box_1.text = ""
+            elif val == "C":
+                self.text_box_1.text = self.text_box_1.text[:-1]
+            else:
+                self.text_box_1.text += val
 
 ----
 
