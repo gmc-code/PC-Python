@@ -105,7 +105,7 @@ Code for buttons step 1
 | Add each button to the Grid panel using: ``gp.add_component()``.
 | Add the Grid panel to the form using ``self.add_component(gp)``.
 | Add a spacer at the bottom of the form to fill the screen. 
-| Specify teh spacer height first using ``self.space = Spacer(height=500)``. 
+| Specify the spacer height first using ``self.space = Spacer(height=500)``. 
 | Then add it to the form using ``self.add_component(self.space)``.
 
 
