@@ -45,14 +45,16 @@ Centre the temperature fields
 
 ----
 
-Use placeholder text
+Use placeholder text and type
 ------------------------------
 
 | Click the Fahrenheit text box. 
 | In the properties panel: text section, set the placeholder text to ``68`` and the text to empty.
+| In the properties panel: text section, set the type to ``number`` so only numbers can be entered.
 
 | Click the Celcius text box. 
 | In the properties panel: text section, set the placeholder text to ``20`` and the text to empty.
+| In the properties panel: text section, set the type to ``number`` so only numbers can be entered.
 
 ----
 
