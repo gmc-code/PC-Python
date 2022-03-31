@@ -24,7 +24,7 @@ Settings
 | Enter the settings for app.
 
 .. image:: images/Temperature_converter_settings.png
-    :scale: 20%
+    :scale: 60%
 
 #. Click on the cog icon to show the settings tab.
 #. Enter an App name. Temperature converter
@@ -35,7 +35,7 @@ Settings
 #. Close the settings tab.
 
 .. image:: images/Fahrenheit_Celsius_scales.png
-    :scale: 60%
+    :scale: 15%
 
 ----
 
