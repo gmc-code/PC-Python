@@ -12,6 +12,7 @@ References
 ------------------------------
 
 #. Youtube guide for using code to create the components: https://www.youtube.com/watch?v=NiQdsK3H57Y
+#. Anvil events: https://anvil.works/docs/client/components
 #. Python try-except: https://www.w3schools.com/python/python_try_except.asp
 #. Python eval: https://www.w3schools.com/python/ref_func_eval.asp
 #. Python enumerate: https://www.w3schools.com/python/ref_func_enumerate.asp
@@ -210,16 +211,11 @@ Code for buttons step 4
 Code for buttons click method
 ------------------------------
 
+| See: https://anvil.works/docs/client/components
 | Define a click method to determine what happens to the calculator text box.
 | Use the aguments be: ``(self, **event_args)``.
 | ``event_args`` has an index ``['sender']`` from which the button text can be found using the tab.name property, which is set when the button was created.
-
-| These steps are not well documented. For advanced users, to discover this these print statements can be used in the click method:
-| Find the keys of the event_args: ``print(event_args.keys())``
-| Find out the properties of the sender key: ``print(dir(event_args['sender']))``
-| Find out the properties of the sender tag: ``print(dir(event_args['sender'].tag))``
-| The ``tag.name`` property will be set to the text of teh button in coded to be added later in step 5 below.
-
+| The ``tag.name`` property will be set to the text of the button in code to be added later in step 5 below.
 | Get the button text using: ``val = event_args['sender'].tag.name``
 | To add the button text to the end of the text box use: ``self.text_box_1.text += val``.
 | If the AC button, all clear, is pressed, clear the text box with: ``self.text_box_1.text = ""``.
