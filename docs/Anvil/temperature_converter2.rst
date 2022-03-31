@@ -4,7 +4,7 @@ Temperature converter2
 
 This adds to temperature converter.
 
-.. image:: images/Temperature_converter_layout.png
+.. image:: images/Temperature_converter2_layout.png
     :scale: 60%
 
 ----
@@ -247,8 +247,6 @@ Final code
 
     def text_box_2_pressed_enter(self, **event_args):
         self.calculateCtoF()
-
-
 
 
 ----
