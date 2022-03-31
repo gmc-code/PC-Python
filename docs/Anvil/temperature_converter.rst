@@ -4,18 +4,7 @@ Temperature converter
 
 This builds a simple temperature converter.
 
-.. image:: images/calculator.png
-    :scale: 60%
-
-References
-------------------------------
-
-#. Python try-except: https://www.w3schools.com/python/python_try_except.asp
-#. Python eval: https://www.w3schools.com/python/ref_func_eval.asp
-
-
- 
-.. image:: images/Calculator-icon.png
+.. image:: images/Temperature_converter_layout.png
     :scale: 60%
 
 ----
@@ -32,16 +21,23 @@ Get started
 Settings
 ------------------------------
 
+| Enter the settings for app.
+
+.. image:: images/Temperature_converter_settings.png
+    :scale: 60%
+
 #. Click on the cog icon to show the settings tab.
 #. Enter an App name. Temperature converter
 #. Enter an App title. Temperature converter
 #. Enter an App description. Converts temperatures
 #. Get a thermometer icon to upload such as: https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Fahrenheit_Celsius_scales.svg/240px-Fahrenheit_Celsius_scales.svg.png
+
+.. image:: images/Fahrenheit_Celsius_scales.png
+    :scale: 60%
+    
 #. Click Change Image to upload an App logo.
 #. Close the settings tab.
 
-.. image:: images/Temperature_converter_settings.png
-    :scale: 60%
 
 ----
 
