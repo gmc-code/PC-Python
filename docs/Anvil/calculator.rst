@@ -190,7 +190,7 @@ Code for buttons step 4
 ------------------------------
 
 | Replace the default values for the button width with those based on the text value, ``i enumerate(chars)``.
-| The width value is the number of columns for the button to be spred out across.
+| The width value is the number of columns for the button to be spread out across.
 | All the buttons are to take up only 1 column, except for the ``AC`` and ``0`` buttons which will take up 2 columns.
 
 .. code-block:: python
@@ -212,12 +212,14 @@ Code for buttons click method
 
 | Define a click method to determine what happens to the calculator text box.
 | Use the aguments be: ``(self, **event_args)``.
-| ``event_args`` has an index ``['sender']`` from which the button text can be found using the tab.name property.
+| ``event_args`` has an index ``['sender']`` from which the button text can be found using the tab.name property, which is set when the button was created.
+
 | These steps are not well documented. For advanced users, to discover this these print statements can be used in the click method:
 | Find the keys of the event_args: ``print(event_args.keys())``
 | Find out the properties of the sender key: ``print(dir(event_args['sender']))``
 | Find out the properties of the sender tag: ``print(dir(event_args['sender'].tag))``
-| The ``tag.name`` prpoerty will be set to the text of teh button in coded to be added later in step 5 below.
+| The ``tag.name`` property will be set to the text of teh button in coded to be added later in step 5 below.
+
 | Get the button text using: ``val = event_args['sender'].tag.name``
 | To add the buttons text to the end of the text box use: ``self.text_box_1.text += val``.
 | If the AC button, all clear, is pressed, clear the text box with: ``self.text_box_1.text = ""``.
