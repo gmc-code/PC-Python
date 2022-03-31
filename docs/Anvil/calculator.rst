@@ -56,7 +56,10 @@ Build first part of interface
 #. Drag and drop the *textbox* component from the right toolbox onto Form1 below the image.
 #. In the properties panel: text section, set the align to ``left``, the font to ``Consolas`` and the font_size to ``32``.
 #. Click below on the form itself.
-#. In the properties panel: appearance section, set the background to ``#eee``.
+#. In the properties panel: appearance section, set the background to grey: ``#eee``.
+
+.. image:: images/Calculator_interface1.png
+    :scale: 60%
 
 ----
 
