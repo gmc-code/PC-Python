@@ -42,7 +42,7 @@ Settings
 Build first part of interface
 ------------------------------
 
-| Build the following interface by dragging and dropping componenets and setting their properties.
+| Build the following interface by dragging and dropping components and setting their properties.
 
 .. image:: images/Temperature_converter_layout.png
     :scale: 60%
