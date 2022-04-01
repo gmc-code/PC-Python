@@ -5,7 +5,7 @@ Feedback Form
 This builds a feedback form that uses full stack: client side and server side code in python.
 
 .. image:: images/Feedback_Form.png
-    :scale: 60%
+    :scale: 50%
 
 References
 ------------------------------
@@ -53,7 +53,7 @@ Build first part of interface
 | Drag and drop three *label* components onto card_1 below the Feedback Form label, one below the other. 
 
 .. image:: images/Feedback_Form_Add_label_below.png
-    :scale: 80%
+    :scale: 60%
 
 | A horizontal blue line will indicate that you are in the right place to drop it.
 | In the properties panel: set their text to ``Name:``, ``Email:`` and ``Feedback:``.
@@ -64,22 +64,71 @@ Build first part of interface
 
 .. image:: images/Feedback_Form_add_text_box.png
     :scale: 80%
-    
-| In the properties panel: set their placeholder to ``Name here``.
+
+| In the properties panel: set the placeholder to ``Name here``.
 
 | Drag and drop a *text box* component onto card_1 to the right of the Email label. 
-| In the properties panel: set their placeholder to ``Email here``.
+| In the properties panel: set the placeholder to ``Email here``.
 
 | Drag and drop a *text area* component onto card_1 below the Feedback label. 
-| In the properties panel: set their placeholder to ``Feedback here``.
+| In the properties panel: set the placeholder to ``Feedback here``.
 
 | Drag and drop a *button* component onto card_1 below the Feedback text area. 
-| In the properties panel: set their text to ``Submit``.
-| In the properties panel: set their name to ``submit_button``.
-| In the properties panel: set their role to ``primary-colour``.
+| In the properties panel: set the text to ``Submit``.
+| In the properties panel: set the name to ``submit_button``.
+| In the properties panel: set the role to ``primary-colour``.
 
 .. image:: images/Feedback_Form.png
     :scale: 80%
 
+----
+
+Build Data Table
+------------------------------
+
+| In the left sidebar, click on the data icon.
+| Under default database, click ``Add Table``.
+
+.. image:: images/Feedback_Form_add_data_table.png
+    :scale: 80%
+
+| On the top right, name the table ``feeedback``.
+
+.. image:: images/Feedback_Form_Data_Table_Name.png
+    :scale: 80%
+
+| Click on the ``+ New Column`` button.
+
+.. image:: images/Feedback_Form_Data_Table_Add_Column.png
+    :scale: 80%
+
+| Choose ``Add Text Column``.
+| Change the column name from Column0 to ``name``.
+
+| Click on the ``+`` button.
+| Choose ``Add Text Column``.
+| Change the column name from Column1 to ``email``.
+
+| Click on the ``+`` button.
+| Choose ``Add Text Column``.
+| Change the column name from Column2 to ``feedback``.
+
+| Click on the ``+`` button.
+| Choose ``Add date and Time Column``.
+| Change the column name from Column3 to ``created on``.
+
+.. image:: images/Feedback_Form_Data_Table_columns.png
+    :scale: 80%
 
 ----
+
+Build the Server Code
+------------------------------
+
+| In the left sidebar, click on the top app icon.
+| Under Server Code, click ``Add Server Module``.
+
+.. image:: images/Feedback_Form_Add_Server_Module.png
+    :scale: 80%
+
+

@@ -56,7 +56,7 @@ Build first part of interface
 | A vertical blue line will indicate that you are in the right place to drop it.
 | In the properties panel: set the text to ``212`` and the font_size to ``32``.
 
-.. image:: images/Add_textbox_to_right.png
+.. image:: images/Temperature_converter_Add_textbox_to_right.png
     :scale: 60%
 
 
@@ -64,7 +64,7 @@ Build first part of interface
 | A horizontal blue line will indicate that you are in the right place to drop it.
 | In the properties panel: text section, set the text to ``Celcius`` and the font_size to ``32``.
 
-.. image:: images/Add_label_below.png
+.. image:: images/Temperature_converter_Add_label_below.png
     :scale: 60%
 
 | Drag and drop the *textbox* component onto card_1 to the right of the Celcius label.

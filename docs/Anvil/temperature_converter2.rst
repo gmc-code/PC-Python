@@ -27,7 +27,7 @@ Add image to left
 | In the properties panel: text section, set the display_mode to ``shrink_to_fit`` and set the height to ``500``.
 
 
-.. image:: images/Add_image_to_left.png
+.. image:: images/Temperature_converter_Add_image_to_left.png
     :scale: 60%
 
 ----
@@ -40,7 +40,7 @@ Centre the temperature fields
 | A vertical blue line will indicate that you are in the right place to drop it.
 | In the properties panel: set the height to ``150``.
 
-.. image:: images/Add_spacer_above.png
+.. image:: images/Temperature_converter_Add_spacer_above.png
     :scale: 60%
 
 ----
@@ -180,7 +180,7 @@ Change Convert button to an icon button
 | Click on the Convert button.
 | In the properties panel: icon section, click the ``i`` select an icon button. Search for arrow. Scroll and choose a down arrow.
 
-.. image:: images/icon_selection.png
+.. image:: images/Temperature_converter_icon_selection.png
     :scale: 100%
     
 | In the properties panel: text section, set the align to left.
