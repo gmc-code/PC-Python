@@ -30,7 +30,7 @@ Settings
 #. Enter an App name. Feedback_Form
 #. Enter an App title. Feedback_Form
 #. Enter an App description. Feedback_Form using server side code and a PGSQL database.
-#. Get a calculator icon to upload such as: https://pics.freeicons.io/uploads/icons/png/121888721582994865-512.png
+#. Get a feedback icon to upload such as: https://pics.freeicons.io/uploads/icons/png/121888721582994865-512.png
 #. Click Change Image to upload an App logo.
 #. Close the settings tab.
 
@@ -49,17 +49,22 @@ Build first part of interface
 | In the properties panel: appearance section, set the role to ``Headline``.
 
 
+
+| Drag and drop three *label* components onto card_1 below the Feedback Form label, one below the other. 
+
 .. image:: images/Feedback_Form_Add_label_below.png
     :scale: 80%
 
-| Drag and drop three *label* components onto card_1 below the Feedback Form label, one below the other. 
-| A vertical blue line will indicate that you are in the right place to drop it.
+| A horizontal blue line will indicate that you are in the right place to drop it.
 | In the properties panel: set their text to ``Name:``, ``Email:`` and ``Feedback:``.
+
+
+
+| Drag and drop a *text box* component onto card_1 to the right of the Name label. 
 
 .. image:: images/Feedback_Form_add_text_box.png
     :scale: 80%
-
-| Drag and drop a *text box* component onto card_1 to the right of the Name label. 
+    
 | In the properties panel: set their placeholder to ``Name here``.
 
 | Drag and drop a *text box* component onto card_1 to the right of the Email label. 
