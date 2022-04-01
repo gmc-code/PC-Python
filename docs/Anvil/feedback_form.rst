@@ -4,7 +4,7 @@ Feedback Form
 
 This builds a feedback form that uses full stack: client side and server side code in python.
 
-.. image:: images/days_calculator.png
+.. image:: images/Feedback_Form.png
     :scale: 60%
 
 References
