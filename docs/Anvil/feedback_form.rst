@@ -2,7 +2,8 @@
 Feedback Form
 ====================================================
 
-This builds a feedback form that uses full stack: client side and server side code in python.
+| This builds a feedback form that uses full stack: client side and server side code in python.
+| The refernces add email capability but email ihas quotas, so we will not create autoamted emails.
 
 .. image:: images/Feedback_Form.png
     :scale: 50%
@@ -11,6 +12,7 @@ References
 ------------------------------
 
 #. Youtube guide to create the app: https://www.youtube.com/watch?v=liZThmkIwys
+#. Ofcial Anvil guide with screenshots and animated gifs: https://anvil.works/learn/tutorials/feedback-form
 
 ----
 
@@ -41,14 +43,11 @@ Build first part of interface
 
 | Build the following interface by dragging and dropping components and setting their properties.
 
-
 | Drag and drop the *card* component from the right toolbox onto Form1.
 
 | Drag and drop the *label* component onto card_1.
 | In the properties panel: text section, set the text to ``Feedback Form``.
 | In the properties panel: appearance section, set the role to ``Headline``.
-
-
 
 | Drag and drop three *label* components onto card_1 below the Feedback Form label, one below the other. 
 
@@ -58,19 +57,20 @@ Build first part of interface
 | A horizontal blue line will indicate that you are in the right place to drop it.
 | In the properties panel: set their text to ``Name:``, ``Email:`` and ``Feedback:``.
 
-
-
 | Drag and drop a *text box* component onto card_1 to the right of the Name label. 
 
 .. image:: images/Feedback_Form_add_text_box.png
     :scale: 80%
 
+| In the properties panel: set the name to ``name_box``.
 | In the properties panel: set the placeholder to ``Name here``.
 
 | Drag and drop a *text box* component onto card_1 to the right of the Email label. 
+| In the properties panel: set the name to ``email_box``.
 | In the properties panel: set the placeholder to ``Email here``.
 
 | Drag and drop a *text area* component onto card_1 below the Feedback label. 
+| In the properties panel: set the name to ``feedback_box``.
 | In the properties panel: set the placeholder to ``Feedback here``.
 
 | Drag and drop a *button* component onto card_1 below the Feedback text area. 
@@ -115,7 +115,7 @@ Build Data Table
 
 | Click on the ``+`` button.
 | Choose ``Add date and Time Column``.
-| Change the column name from Column3 to ``created on``.
+| Change the column name from Column3 to ``created_on``.
 
 .. image:: images/Feedback_Form_Data_Table_columns.png
     :scale: 80%
@@ -131,4 +131,37 @@ Build the Server Code
 .. image:: images/Feedback_Form_Add_Server_Module.png
     :scale: 80%
 
+| Enter the code to add a data table row.
+| Import the datetime module so the created_on value can be gotten.
+| ``@anvil.server.callable`` is a decorator. Placing it before the following definition modifes it so it is callable from the client form.
+| ``add_feedback`` will pass in name, email, and feedback values from the form to add them to the data table.
+| ``datetime.now()`` will get the fate and time. e.g. 2022-04-01 20:30:11.532646
 
+.. code-block:: python
+
+    import anvil.tables as tables
+    import anvil.tables.query as q
+    from anvil.tables import app_tables
+    import anvil.server
+
+    from datetime import datetime
+
+    @anvil.server.callable
+    def add_feedback(name, email, feedback):
+        app_tables.feedback.add_row(name=name, 
+                                    email=email, 
+                                    feedback=feedback,
+                                    created_on=datetime.now())
+
+----
+
+Build the Submit Code
+------------------------------
+
+| Click on the Form1 tab.
+| Double click the Submit button. This add default code for it.
+
+
+.. code-block:: python
+
+    

@@ -42,6 +42,11 @@ Settings
 Build first part of interface
 ------------------------------
 
+| Add a Title at the top in the blue header.
+| Drag and drop the *label* component onto ``Drop titel here``.
+| In the properties panel: text section, set the text to ``Temperature_convertere``.
+
+
 | Build the following interface by dragging and dropping components and setting their properties.
 
 .. image:: images/Temperature_converter_layout.png

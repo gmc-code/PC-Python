@@ -269,4 +269,4 @@ Final code
 
     #. Add some colour to the buttons and the text and the form.
     #. Add try except to calculation functions so that non numerical entries are handled. See the use of this in the calculator code.
-    #. Replace Fahrenheit with Kelvin and adjust to the display and code to work.
+    #. Replace Fahrenheit with Kelvin and adjust the display and the code to work.
