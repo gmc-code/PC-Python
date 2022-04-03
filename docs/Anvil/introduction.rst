@@ -29,4 +29,3 @@ Key references:
 | docs: https://anvil.works/docs/overview
 | anvil module: https://anvil.works/docs/api/anvil
 | anvil components and events: https://anvil.works/docs/client/components
-

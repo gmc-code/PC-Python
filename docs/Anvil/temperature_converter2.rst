@@ -267,6 +267,17 @@ Final code
 
 .. admonition:: Tasks
 
-    #. Add some colour to the buttons and the text and the form.
     #. Add try except to calculation functions so that non numerical entries are handled. See the use of this in the calculator code.
     #. Replace Fahrenheit with Kelvin and adjust the display and the code to work.
+
+----
+
+Multi Temperature converter
+------------------------------
+ 
+| Make an new app that converts between F, C and K all at once.
+| See gif to see it in action.
+
+.. image:: images/multi_temp_in_action.gif
+    :scale: 100%
+
