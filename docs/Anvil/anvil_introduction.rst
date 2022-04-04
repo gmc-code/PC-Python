@@ -1,5 +1,5 @@
 ====================================================
-Introduction
+Anvil Introduction
 ====================================================
 
 Sign up
@@ -26,6 +26,9 @@ Go to: https://anvil.works/new-build
 Key references:
 ---------------------
 
-| docs: https://anvil.works/docs/overview
-| anvil module: https://anvil.works/docs/api/anvil
+| docs: https://anvil.works/beta-docs/overview
+| anvil module: https://anvil.works/beta-docs/api/anvil
+| quick start: https://anvil.works/docs/editor/new-editor-beta
+| user interface: https://anvil.works/beta-docs/client/ui
+| client side python: https://anvil.works/beta-docs/client/python
 | anvil components and events: https://anvil.works/docs/client/components

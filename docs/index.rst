@@ -64,7 +64,7 @@ Key references:
     :caption: Anvil
     :numbered:
 
-    Anvil/introduction.rst
+    Anvil/anvil_introduction.rst
     Anvil/first_steps.rst
     Anvil/temperature_converter.rst
     Anvil/temperature_converter2.rst
