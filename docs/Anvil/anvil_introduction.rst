@@ -28,7 +28,8 @@ Key references:
 
 | docs: https://anvil.works/beta-docs/overview
 | anvil module: https://anvil.works/beta-docs/api/anvil
-| quick start: https://anvil.works/docs/editor/new-editor-beta
+| quick start: https://anvil.works/beta-docs/client/quickstart
 | user interface: https://anvil.works/beta-docs/client/ui
 | client side python: https://anvil.works/beta-docs/client/python
-| anvil components and events: https://anvil.works/docs/client/components
+| anvil components and events: https://anvil.works/beta-docs/client/components
+
