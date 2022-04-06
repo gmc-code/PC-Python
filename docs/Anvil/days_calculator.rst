@@ -62,11 +62,10 @@ Settings
 
 -----
 
-Sidebar
---------------------
-
-| Place a column panel in the left sidebar.
-| Add 4 links.
+| Click on Client Code ...
+| Add a module.
+| Name it DateCalc.
+| Paste in the code below to be used for the calculations.
 
 
 DateCalc module code:
@@ -136,5 +135,13 @@ DateCalc module code:
             years -= 1
         return (years, months, days)
     
-    
-    
+
+----
+
+Sidebar
+--------------------
+
+| Place a column panel in the left sidebar.
+| Add 4 links.
+
+----
