@@ -2,10 +2,11 @@
 Days Calculator
 ====================================================
 
-This builds a simple calculator to find the difference in days between 2 dates.
+Full docs are coming in a few days, by Apr 10.
 
-.. image:: images/days_calculator.png
-    :scale: 60%
+This builds a days calculator to find the difference in days between 2 dates.
+
+----
 
 References
 ------------------------------
@@ -15,16 +16,29 @@ References
 #. Duration calculator: https://www.timeanddate.com/date/durationresult.html?d1=6&m1=4&y1=2018&d2=2&m2=4&y2=2022
 #. Future date calculator: https://www.timeanddate.com/date/dateadded.html?d1=8&m1=3&y1=2022&type=add&ay=&am=02&aw=&ad=3&rec=
 
-
 ----
 
 Design
 ---------
 
+| Use the sidebar to navigate to 4 panels for different calculations.
+| Here is the design for the 4 panels.
+
+.. image:: images/DC_duration.PNG
+    :scale: 60%
 
 
-.. image:: images/Temperature_converter_button_click.png
-    :scale: 100%
+.. image:: images/DC_age.PNG
+    :scale: 60%
+
+    
+.. image:: images/DC_birthday.PNG
+    :scale: 60%
+
+    
+.. image:: images/DC_future.PNG
+    :scale: 60%
+
 
 Get started
 ------------------------------
@@ -47,29 +61,6 @@ Settings
 #. Close the settings tab.
 
 -----
-
-Layout
---------------------
-
-| Use the sidebar to navigate to 4 panels for different calculations.
-| Here is the design for the 4 panels.
-
-.. image:: images/DC_duration.PNG
-    :scale: 80%
-
-
-.. image:: images/DC_age.PNG
-    :scale: 80%
-
-    
-.. image:: images/DC_birthday.PNG
-    :scale: 80%
-
-    
-.. image:: images/DC_future.PNG
-    :scale: 80%
-
-----
 
 Sidebar
 --------------------
