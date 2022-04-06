@@ -114,26 +114,26 @@ DateCalc module code:
 
     class DateCalc:
         
-    def calculate_years_months_days(self, d1, d2):
-        """d1 is the start date, d2 is the end date"""
-        if d1 > d2:
-            return (0, 0, 0)   # for convenience
+        def calculate_years_months_days(self, d1, d2):
+            """d1 is the start date, d2 is the end date"""
+            if d1 > d2:
+                return (0, 0, 0)   # for convenience
+                
+            d1_end_month = end_month(d1)
+            d2_start_month = start_month(d2)
             
-        d1_end_month = end_month(d1)
-        d2_start_month = start_month(d2)
-        
-        if d1.day > d2.day:
-            years = d2_start_month.year - d1_end_month.year
-            months = d2_start_month.month - d1_end_month.month - 1  # -1 since not full month
-            days = (d1_end_month.day - d1.day) + (d2.day - d2_start_month.day) + 1  #+1 due to using end of month instead of next day
-        else:
-            years = d2.year - d1.year
-            months = d2.month - d1.month
-            days = d2.day - d1.day
-        if months < 0:
-            months += 12
-            years -= 1
-        return (years, months, days)
+            if d1.day > d2.day:
+                years = d2_start_month.year - d1_end_month.year
+                months = d2_start_month.month - d1_end_month.month - 1  # -1 since not full month
+                days = (d1_end_month.day - d1.day) + (d2.day - d2_start_month.day) + 1  #+1 due to using end of month instead of next day
+            else:
+                years = d2.year - d1.year
+                months = d2.month - d1.month
+                days = d2.day - d1.day
+            if months < 0:
+                months += 12
+                years -= 1
+            return (years, months, days)
     
 
 ----
