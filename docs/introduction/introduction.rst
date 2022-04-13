@@ -14,9 +14,14 @@ If you are using a trackpad, navigate to various sections and pages by clicking 
 Home pages:
 ---------------------
 
+| https://pc-python.readthedocs.io/en/latest/index.html
+
+| https://pc-algorithms.readthedocs.io/en/latest/index.html
+| https://pc-app-development.readthedocs.io/en/latest/index.html
+
+
 | https://pc-microbit-micropython.readthedocs.io/en/latest/index.html
 | https://pc-microbit-extension.readthedocs.io/en/latest/index.html
-| https://pc-python.readthedocs.io/en/latest/index.html
 
 ----
 
@@ -24,5 +29,5 @@ Key references:
 ---------------------
 
 | python: https://www.w3schools.com/python/
-| microbit: https://microbit-micropython.readthedocs.io/en/v2-docs/index.html
+
 
