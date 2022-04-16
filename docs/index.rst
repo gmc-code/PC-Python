@@ -56,7 +56,8 @@ Key references:
     python/list_comprehensions.rst
     python/dict_comprehensions.rst
     python/set_comprehensions.rst
-    python/generator_comprehensions
+    python/generators
+    python/match_case.rst
 
 
 .. toctree::
