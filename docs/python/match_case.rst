@@ -441,7 +441,7 @@ Matching tuples for coordinates
 Matching sets
 --------------------------------
 
-| THe code below matches the length of the set.
+| The code below matches the length of the set.
 
 
 .. code-block:: python
@@ -469,8 +469,8 @@ Matching dictionaries
 --------------------------------
 
 | Dictionaries can be matched.
-| The two cases below only differ in the first key: whether it is a pizza or a main.
-|
+| The two cases below only differ in the first key: whether it is a pizza or a main meal.
+
 
 
 .. code-block:: python
@@ -494,7 +494,7 @@ Matching dictionaries
 
     1. The above example has been redesigned to have a separate prices list, ``prices``, which is passed into the order_cost function.
     This makes it easier to alter the prices list and helps make it independent from the rest of the code.
-    Extend the cases to include entrees. Add two entrees to the prices list. Make an order with an entrees. 
+    Extend the cases to include entrees. Add two entrees to the prices list. Make an order with an entree. 
     Sample entrees might be.g Focaccia $16, Aranchini $17.
 
         .. code-block:: python
@@ -518,7 +518,7 @@ Checking Types in Python Match-Case Statements
 ---------------------------------------------------
 
 | Python match-case statements can be used to check the **types** of something being passed in.
-| In the code below, lists, tuples and sets are distinguished.
+| In the code below, lists ``[ ]``, tuples ``( )`` and sets ``{ }`` are distinguished.
 
 
 .. code-block:: python
