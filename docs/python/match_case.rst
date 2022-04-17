@@ -359,10 +359,11 @@ Structure Matching lists or tuples
 
 .. admonition:: Tasks
 
-    1. A silly maths function does different things wiht a list of values depending in the number of elements in the list. \n
-    Complete the code below by filling in the square brackets and the curvy brackets. \n
-    Here are the silly rules: for 1 element in the list, square it. For 2 elements raise a to the power of b using the inbuilt pow function.\n
-    For 3 elements, mutilpy the first two then use floor division with the third. \n
+    1. A silly maths function does different things with a list of values depending in the number of elements in the list. 
+    Complete the code below by filling in the square brackets and the curvy brackets. Some parts are done already. 
+    Here are the silly rules: for 1 element in the list, square it. 
+    For 2 elements raise a to the power of b using the inbuilt pow function. 
+    For 3 elements, multilpy the first two then use floor division with the third. 
     For more than 3 elements, add the first 3 then subtract the sum of the rest.
 
         .. code-block:: python
