@@ -9,8 +9,12 @@ Match - Case
 | See: https://www.youtube.com/watch?v=-79HGfWmH_w
 | See: https://github.com/mCodingLLC/VideosSampleCode/blob/master/videos/039_the_hottest_new_feature_coming_in_python_310_structural_pattern_matching___match_statement/match_statement.py
 | See: https://peps.python.org/pep-0636/
+| See: https://datagy.io/python-switch-case/
+
+----
 
 | Match-case can be used to match all the simple data types: string, numbers, booleans, lists, tuples, sets, dictionaries.
+
 ----
 
 Match-case
@@ -277,6 +281,110 @@ Guard pattern: Combing a condition in a case
 
 ----
 
+Using the unpacking operator on a list
+--------------------------------------
+
+| Put the asterisk (*) in front of a variable name to pack the leftover elements into a list and assign it to a variable.
+| In the example below, ``a`` is assigned the value ``1`` and ``b`` the rest of the list.
+
+.. code-block:: python
+
+    nums = [1, 2, 3, 4, 5, 6, 7]
+    a, *b = nums
+    print(a)   # 1
+    print(b)   # [2, 3, 4, 5, 6, 7]
+
+| THis allows multiple weapons to be used in the example below.
+| From the string, ``"use dagger sword spear"``, a list of multiple weapons can be collected using ``*weapons``.
+| This list, ``["dagger", "sword", "spear"]``, can then then be iterated over to do something with each weapon.
+
+
+.. code-block:: python
+
+    def do_action(action):
+        match action.split():
+            case ["use", *weapons]:
+                for w in weapons:
+                    print(f"using {w}")
+            case ["use", weapon]:
+                print(f"using {weapon}")
+            case ["use", _]:
+                print(f"Can't use that weapon.")
+
+    do_action("use dagger sword spear")
+    do_action("use crossbow")
+
+----
+
+.. admonition:: Tasks
+
+    1. The code below has a case statement for ``"look north"``. Add a case statement for ``"look north south east"``.
+
+        .. code-block:: python
+
+            def do_action(action):
+                match action.split():
+                    case ["look", direction]:
+                        print(f"looking {direction}")
+
+            do_action("look north")
+            do_action("look north south east")
+
+----
+
+Structure Matching lists or tuples
+---------------------------------------
+
+| The length of a list or tuple can be used in the structure matching below. 
+
+.. code-block:: python
+
+    def list_match(values):
+        match values:
+            case [a]:
+                print(f'Only one item: {a}')
+            case [a, b]:
+                print(f'Two items: {a}, {b}')
+            case [a, b, c]:
+                print(f'Three items: {a}, {b}, and {c}')
+            case [a, b, c, *rest]:
+                print(f'More than three items: {a}, {b}, {c}, as well as: {rest}')
+
+    list_match([1])
+    list_match((2, 3))
+    list_match((4, 5, 6))
+    list_match((9, 8, 7, 6, 5, 4))
+
+----
+
+.. admonition:: Tasks
+
+    1. A silly maths function does different things wiht a list of values depending in the number of elements in the list. \n
+    Complete the code below by filling in the square brackets and the curvy brackets. \n
+    Here are the silly rules: for 1 element in the list, square it. For 2 elements raise a to the power of b using the inbuilt pow function.\n
+    For 3 elements, mutilpy the first two then use floor division with the third. \n
+    For more than 3 elements, add the first 3 then subtract the sum of the rest.
+
+        .. code-block:: python
+
+            def list_maths(values):
+                match values:
+                    case []:
+                        print(f'Only one item: {}')
+                    case []:
+                        print(f'Two items: {pow(a, b)}')
+                    case []:
+                        print(f'Three items: {}')
+                    case [a, b, c, *rest]:
+                        print(f'More than three items: { - sum(rest)}')
+
+            list_maths([3])
+            list_maths((2, 3))
+            list_maths((4, 5, 6))
+            list_maths((9, 8, 7, 6, 5, 4))
+
+----
+
 Matching tuples for coordinates
 --------------------------------
 
@@ -332,13 +440,26 @@ Matching tuples for coordinates
 Matching sets
 --------------------------------
 
-| Other objects, apart from strings can be matched. 
-| An example with a tuple is below.
+| THe code below matches the length of the set.
 
 
 .. code-block:: python
 
-    point = (2, 3)
+    def do_setlength(values):
+    match len(values):
+        case 1:
+            print(f'Only one item: {values}')
+        case 2:
+            print(f'Two items: {values}')
+        case 3:
+            print(f'Three items: {values}')
+        case 4:
+            print(f'More than three items: {values}')
+        case _:
+            print("error")
+
+    new_set = {2, 3}     
+    do_setlength(new_set)
 
 
 ----
@@ -353,3 +474,33 @@ Matching dictionaries
 .. code-block:: python
 
     point = (2, 3)
+
+
+
+
+
+Checking Types in Python Match-Case Statements
+---------------------------------------------------
+
+| Python match-case statements can be used to check the types of something being passed in. 
+# Checking types with 'as' in Python match-case statements
+
+def type_of(var):
+    match var:
+        case int() | float() as var:
+            return "Number"
+        case dict() as var:
+            return "Dictionary"
+        case list() | tuple() | set() as var:
+            return "List, tuple, or set"
+        case str() as var:
+            return "String"
+        case _:
+            return "Something else"
+
+print(type_of(3))
+print(type_of({1,2}))
+
+# Returns:
+# Number
+# List, tuple, or set
