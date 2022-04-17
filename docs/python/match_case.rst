@@ -468,40 +468,101 @@ Matching sets
 Matching dictionaries
 --------------------------------
 
-| Other objects, apart from strings can be matched. 
-| An example with a tuple is below.
+| Dictionaries can be matched.
+| The two cases below only differ in the first key: whether it is a pizza or a main.
+|
 
 
 .. code-block:: python
 
-    point = (2, 3)
+    def order_cost(order):
+        match order:
+            case {"pizza": type , "amount": amount, "per_item_cost": per_item_cost}:
+                print(f"{amount} {type} pizza ${amount * per_item_cost}")
+            case {"mains": type , "amount": amount, "per_item_cost": per_item_cost}:
+                print(f"{amount} {type} ${amount * per_item_cost}")
 
 
+    order_cost({"pizza": "Hawaiian", "amount": 2, "per_item_cost": 15})
+    order_cost({"mains": "Chicken Parma", "amount": 1, "per_item_cost": 26})
+    order_cost({"mains": "Chicken Saltimbocca", "amount": 1, "per_item_cost": 30})
 
 
+----
+
+.. admonition:: Tasks
+
+    1. The above example has been redesigned to have a separate prices list, ``prices``, which is passed into the order_cost function.
+    This makes it easier to alter the prices list and helps make it independent from the rest of the code.
+    Extend the cases to include entrees. Add two entrees to the prices list. Make an order with an entrees. 
+    Sample entrees might be.g Focaccia $16, Aranchini $17.
+
+        .. code-block:: python
+
+            def order_cost(order, prices):
+                match order:
+                    case {"pizza": type , "amount": amount}:
+                        print(f"{amount} {type} pizza ${amount * costs[type]}")
+                    case {"mains": type , "amount": amount}:
+                        print(f"{amount} {type} ${amount * costs[type]}")
+
+            prices = {"Hawaiian": 15, "Chicken Parma": 26, "Chicken Saltimbocca": 30 }
+
+            order_cost({"pizza": "Hawaiian", "amount": 2}, prices)
+            order_cost({"mains": "Chicken Parma", "amount": 1}, prices)
+            order_cost({"mains": "Chicken Saltimbocca", "amount": 1}, prices)
+
+----
 
 Checking Types in Python Match-Case Statements
 ---------------------------------------------------
 
-| Python match-case statements can be used to check the types of something being passed in. 
-# Checking types with 'as' in Python match-case statements
+| Python match-case statements can be used to check the **types** of something being passed in.
+| In the code below, lists, tuples and sets are distinguished.
 
-def type_of(var):
-    match var:
-        case int() | float() as var:
-            return "Number"
-        case dict() as var:
-            return "Dictionary"
-        case list() | tuple() | set() as var:
-            return "List, tuple, or set"
-        case str() as var:
-            return "String"
-        case _:
-            return "Something else"
 
-print(type_of(3))
-print(type_of({1,2}))
+.. code-block:: python
 
-# Returns:
-# Number
-# List, tuple, or set
+    def list_or_tuple_or_set(var):
+        match var:
+            case list(a):
+                return f"List, {a}"
+            case tuple(a):
+                return f"Tuple, {a}"
+            case set(a):
+                return f"Set, {a}"
+            case _:
+                return "Something else"
+
+    print(list_or_tuple_or_set([1, 2]))
+    print(list_or_tuple_or_set((3, 4)))
+    print(list_or_tuple_or_set({5, 6}))
+
+----
+
+| In the example below, lists and tuples are nested within each other and their pattern distinguished. 
+
+
+.. code-block:: python
+
+    def nested_lists_tuples(var):
+        match var:
+            case list((list(), list())) as x:
+                return f"List of 2 lists, {x}"
+            case list((tuple(), tuple())) as x:
+                return f"List of 2 tuples, {x}"
+            case tuple((list(), list())) as x:
+                return f"tuple of 2 lists, {x}"
+            case _:
+                return "Something else"
+
+    print(nested_lists_tuples([[1, 2], [3, 4]]))
+    print(nested_lists_tuples([(5, 6), (7, 8)]))
+    print(nested_lists_tuples(([1, 4], [5, 2])))
+
+----
+
+.. admonition:: Tasks
+
+    1. Run the 2 codes above and check the output.
+    2. Create a nested_lists function with cases for a list, a list of 2 lists, a list of 3 lists and a list of 4 lists.
