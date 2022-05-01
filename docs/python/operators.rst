@@ -141,6 +141,49 @@ Strings
     quote = "'And what is the use of a book,' thought " + name + ", 'without pictures or conversation?'"
     print(quote)
 
+String and Sequence Operators:
+
+.. list-table:: String and Sequence Operators
+    :widths: 200, 200
+    :header-rows: 1
+
+    *   - ``+`` (concatenation)
+        - Returns a concatenation of two sequences.
+    *   - ``*`` (multiple concatenation)	
+        - Returns a sequence self-concatenated specified amount of times.
+    *   - ``%`` (string formatting operator)	
+        - Formats the string according to the specified format.
+ 
+
+Sequence Assignment Operators:
+
+
+.. list-table:: Sequence Assignment Operators
+    :widths: 200, 200
+    :header-rows: 1
+
+    *   - ``+=`` (concatenation assignment)
+        - Concatenates the sequence with the right operand and assigns the result to that sequence.
+    *   - ``*=`` (multiple concatenation assignment)
+        - Multiple concatenates the sequence and assigns the result to that sequence.
+
+| To concatenate, or combine, two strings you can use the + operator.
+
+.. code-block:: python
+
+    msg = 'ho'
+    msg += 'hum'
+    print(msg)
+    # 'hohum'
+
+| To repeat a string use the * operator.
+
+.. code-block:: python
+
+    msg = 'ha'
+    print(msg * 3)  
+    # 'hahaha'
+
 ----
 
 Strings and numbers
