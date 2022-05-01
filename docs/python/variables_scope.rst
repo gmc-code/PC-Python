@@ -116,7 +116,7 @@ Nonlocal variables
 
 .. code-block:: python
 
-# variable scope 5
+    # variable scope 5
 
     from microbit import *
 
@@ -134,11 +134,6 @@ Nonlocal variables
 
     outer_func()
 
-
-
-
-    
-    
 
 
 

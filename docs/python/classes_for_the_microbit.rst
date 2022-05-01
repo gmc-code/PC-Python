@@ -79,12 +79,12 @@ Pixel Classes
         def move(self, x_delta, y_delta):
             self.x_position = min(4, max(0, self.x_position + x_delta))
             self.y_position = min(4, max(0, self.y_position + y_delta))
-                    
+
         def show(self):
             display.set_pixel(self.x_position, self.y_position, 9)
             sleep(50)
             display.set_pixel(self.x_position, self.y_position, 2)
-            
+
     def acc_x_change():
         sensitivity = 100
         accx = accelerometer.get_x()
@@ -95,7 +95,7 @@ Pixel Classes
         else:
             xd = 0
         return xd
-        
+
     def acc_y_change():
         sensitivity = 300
         accy = accelerometer.get_y()
@@ -134,7 +134,7 @@ Pixel animation using classes
         def __init__(self, x=2, y=2):
             self.x = x
             self.y = y
-        
+
         def intensity(self, varbrightness=9):
             display.set_pixel(self.x, self.y, varbrightness)
 
@@ -154,8 +154,8 @@ Pixel animation using classes
     sleep(500)
     led22.off()
     sleep(500)
-        
-        
+
+
     led_list = [led02, led12, led22, led32, led42]
     led_list_rev = led_list.copy()
     led_list_rev.reverse()

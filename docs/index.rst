@@ -46,6 +46,7 @@ Key references:
     python/selection.rst
     python/iteration.rst
     python/functions.rst
+    python/data_structures.rst
 
 
 .. toctree::
@@ -53,11 +54,12 @@ Key references:
     :caption: Advanced Python
     :numbered:
     
-    python/list_comprehensions.rst
-    python/dict_comprehensions.rst
-    python/set_comprehensions.rst
-    python/generators
-    python/match_case.rst
+    python_advanced/list_comprehensions.rst
+    python_advanced/dict_comprehensions.rst
+    python_advanced/set_comprehensions.rst
+    python_advanced/generators
+    python_advanced/enumerate
+    python_advanced/match_case.rst
 
 
 .. toctree::
