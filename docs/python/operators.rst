@@ -137,7 +137,7 @@ Strings
 String and Sequence Operators:
 
 .. list-table::
-    :widths: 300, 300
+    :widths: 200, 200
     :header-rows: 0
 
     *   - ``+`` (concatenation)
@@ -152,7 +152,7 @@ Sequence Assignment Operators:
 
 
 .. list-table::
-    :widths: 300, 300
+    :widths: 200, 200
     :header-rows: 0
 
     *   - ``+=`` (concatenation assignment)
