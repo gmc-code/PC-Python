@@ -2,8 +2,18 @@
 Operators
 ==========================
 
+| Assignment operators are used to assign values to variables.
+| The compound assignment operators consist of two operators as a shorthand.
+| Comparison operators are used to compare two values.
+| Membership operators are used to test if a sequence is presented in an object.
+| Identity operators are used to compare the objects, not if they are equal, but if they are actually the same object, with the same memory location.
+| Booleans represent one of two values: True or False.
+| Logical operators are used to combine conditional statements.
+
+----
+
 Arithmetic operators
------------------------
+--------------------------
 
 Arithmetic operators are used with numbers to perform common mathematical operations
 
@@ -29,12 +39,13 @@ Arithmetic operators are used with numbers to perform common mathematical operat
     *   - %    
         - Modulus    
         - x % y
-    *   - \**    
-        - Exponentiation    
-        - x ** y
     *   - //    
         - Floor division    
         - x // y
+    *   - \**    
+        - Exponentiation    
+        - x ** y
+
 
 
 | Modulus gives the remainder from a division.
@@ -46,109 +57,154 @@ Arithmetic operators are used with numbers to perform common mathematical operat
     a=9
     b=2
 
-    print('a =', a, ',', 'b =', b)
-    # a = 9 , b = 2
-
-    print('Addition : a + b =', a + b)
-    # Addition : a + b = 11
-
-    print('Subtraction : a - b =', a - b)
-    # Subtraction : a - b = 7
-
-    print('Multiplication : a * b =', a * b)
-    # Multiplication : a * b = 18
-
-    print('Division (float) : a / b =', a / b)
-    # Division (float) : a / b = 4.5
-
-    print('Division (floor) : a // b =', a // b)
-    # Division (floor) : a // b = 4
-
-    print('Modulus (remainder) : a % b =', a % b)
-    # Modulus (remainder) : a % b = 1
-
-    print('Exponent (power) : a ** b =', a ** b)
-    # Exponent (power) : a ** b = 81
+    print(f'a + b = {a} + {b} = {a + b}')  
+    # a + b = 9 + 2 = 11
+    print(f'a - b = {a} - {b} = {a - b}')  
+    # a - b = 9 - 2 = 7
+    print(f'a * b = {a} * {b} = {a * b}')  
+    # a / b = 9 / 2 = 4.5
+    print(f'a / b = {a} / {b} = {a / b}')  
+    # a / b = 9 / 2 = 4.5
+    print(f'a // b = {a} // {b} = {a // b}')  
+    # a / b = 9 / 2 = 4.5
+    print(f'a % b = {a} % {b} = {a % b}')  
+    # a / b = 9 / 2 = 4.5
+    print(f'a ** b = {a} ** {b} = {a ** b}')  
+    # a / b = 9 / 2 = 4.5
 
 
-| Basic arithmetic operators: ``+,-,*,/`` are used in the same way as you would with a calculator. 
-| Let's look at an example using arithmetic operators the temperature read by the microbit in Celsius to Fahrenheit.
+| Basic arithmetic operators: ``+, -, *, /`` are used in the same way as with a calculator. 
+| e.g. converting Celsius to Fahrenheit.
 
 .. code-block:: python
-    
-    celsiusTemp = temperature()
-    fahrenheitTemp = celsiusTemp * 9 / 5 + 32  
 
-.. warning:: 
-    
-    Python recognises two division operators: ``/`` and ``//``. First one outputs the result you'd expect, but the second one does integer division: the 
-    return value is actually the floor of the result. This means that the return value is always rounded down.
+    celsius_temp = 30
+    fahrenheit_temp = celsius_temp * 9 / 5 + 32
+    print(fahrenheit_temp)
+    # 86.0
 
-
-| Operator ``%``, called ``mod`` is used to calculate the remainder when one value is divided by another. 
-| For example: maybe you'd like to know whether a number is odd or even, you could try dividing it by 2, 
-if it's even, then there will be no remainder.
+| The ``%`` operator, called ``mod`` is used to calculate the remainder when one value is divided by another. 
+| For example: finding out if a number is odd or even, divide it by 2, and if the remainder is zero, then it was even.
+| When dividing an integer by 2, the remainder will be 1 for odd numbers and 0 for even numbers.
 
 .. code-block:: python
-   
+
     number = 3
     if number % 2 == 1:
-        print("The number is odd")
+        print(f"The number {number} is odd.")
     else:
-        print("The number is even")
+        print(f"The number {number} is even.")
 
-If the remainder is equal to ``1`` then this program will print ``The number is odd``, otherwise it will print ``The number is even``. 
-You might write this program in a different way. People think about problems in different ways and no two programs are likely to be the same. 
+----
 
+Compound_assignment
+--------------------------
+
+.. csv-table:: Compound_assignment
+    :file: Compound_assignment.csv
+    :widths: 80, 30, 90, 30
+    :header-rows: 1
+
+.. code-block:: python
+
+    a = 9
+    b = 2
+    a += b
+    print(a)
+
+    a = 9
+    b = 2
+    a -= b
+    print(a)
+
+    a = 9
+    b = 2
+    a *= b
+    print(a)
+
+    a = 9
+    b = 2
+    a /= b
+    print(a)
+
+----
 
 Strings
---------
-As stated above, strings (``str`` type in Python) are sequences of characters, with a length limited only by the memory of your machine. A useful fact to note is 
-that they can be concatenated using a ``+`` symbol.
+--------------------------
+
+| Strings (``str`` type in Python) are sequences of characters.
+| Strings can be concatenated or joined using a ``+`` symbol.
 
 .. code-block:: python
-   
-    name = "Hayley"
 
-    message = "Well done " + name + ". You are victorious!"
+    name = "Alice"
+    quote = "'And what is the use of a book,' thought " + name + ", 'without pictures or conversation?'"
+    print(quote)
 
-This will concatenate the items on the right hand side of ``=`` and put the result in the variable called ``message``.
+----
 
-To join numbers and strings together, you must first convert the number to a string using the ``str()`` function if you want to do that.
+Strings and numbers
+--------------------------
+
+| To join numbers and strings together, the number must be convereted to a string using the ``str()`` function.
 
 .. code-block:: python
-   
-    x = temperature
-    if temperature < 6:
-        display.scroll("Cold" + str(temperature))
 
-.. note:: 
-    
-    Python natively provides a lot of methods_, which makes using strings much easier and saves lot of time (although implementing them on your own initially 
-    might be a good programming exercise). 
+    temperature = 24
+    if temperature < 10:
+        print("A cold " + str(temperature))
+    else:
+        print("A warm " + str(temperature))
 
-.. _methods: https://www.programiz.com/python-programming/methods/string
 
 ----
 
 Booleans
 ---------
-A Boolean value is a value that is either ``True`` or ``False``, also represented by `1` and `0`. In Python, there is a number of operations that 
-allow you to manipulate boolean expressions.  
+| A Boolean value is a value that is either ``True`` or ``False``, also represented by `1` and `0`. 
+
+| Booleans represent one of two values: True or False.
+| Almost any value is evaluated to True if it has some sort of content.
+| Any string is True, except empty strings.
+| Any number is True, except 0.
+| Any list, tuple, set, and dictionary is True, except empty ones.
+
+.. code-block:: python
+
+    # True  evaluates to 1.
+    print(int(True))
+    # 1
+    print((1 + True))
+    # 2
+
+    # False evaluates to 0.
+    print(int(False))
+    # 0
+    print((1 + False))
+    # 1
+
+    # These all print # False
+    print(bool(False))  
+    print(bool(None))
+    print(bool(0))
+    print(bool(""))
+    print(bool(()))
+    print(bool([]))
+    print(bool({}))
+
+    These all print # True
+    print(bool(1))
+    print(bool(" "))
+    print(bool((1)))
+    print(bool([2]))
+    print(bool({3}))
 
 ----
 
 Comparison
---------------
+--------------------------
 
-Comparison operations are useful to test variable values in conditional statements or loops. Here are some examples of 
-comparisons written in English::
-
-    score is greater than 100
-    name equals "Harry"
-    x acceleration is not equal to 0
-
-Python has a set of comparison operators that allow us to write comparisons easily:
+| Comparison operations are useful to test variable values in conditional statements or loops. 
 
 .. tabularcolumns:: |L|l|
 
@@ -157,25 +213,54 @@ Python has a set of comparison operators that allow us to write comparisons easi
 +================================+========================================+
 | ==                             | Equal to                               |
 +--------------------------------+----------------------------------------+
-| <, <=                          | Less than, less than or equal to       |
+| <                              | Less than                              |
 +--------------------------------+----------------------------------------+
-| >, >=                          | Greater than, greater than or equal to |
+| <=                             | Less than or equal to                  |
++--------------------------------+----------------------------------------+
+| >                              | Greater than                           |
++--------------------------------+----------------------------------------+
+| >=                             | Greater than or equal to               |
 +--------------------------------+----------------------------------------+
 | !=                             | not equal to                           |
 +--------------------------------+----------------------------------------+
 
-Rewriting the comparisons above in Python would be:
+Examples of comparisons in Python:
 
 .. code-block:: python
-   
-    score > 100
-    name ==  "Harry"
-    acceleration  != 0
+
+    # score is greater than 10
+    score = 40
+    print(score > 10)
+
+    # name equals "Anne"
+    name = "Anne"
+    print(name ==  "Anne")
+
+    # speed is not equal to 0
+    speed = 2
+    print(speed != 0)
+
+.. code-block:: python
+
+    a = 7
+    b = 3
+    print(f'{a} == {b} is {a == b}')
+    # 7 == 3 is False
+    print(f'{a} != {b} is {a != b}')
+    # 7 != 3 is True
+    print(f'{a} > {b} is {a > b}')
+    # 7 > 3 is True
+    print(f'{a} < {b} is {a < b}')
+    # 7 < 3 is False
+    print(f'{a} >= {b} is {a >= b}')
+    # 7 >= 3 is True
+    print(f'{a} <= {b} is {a <= b}')
+    # 7 <= 3 is False
 
 ----
 
 Logical operations
--------------------------
+--------------------------
 
 Logical operators test the truth value of their operands.
 
@@ -188,43 +273,72 @@ Logical operators test the truth value of their operands.
 +--------------+---------------------------------+-------------------+
 | not          |  Operand is false               | ``not False``     |
 +--------------+---------------------------------+-------------------+
-    
+
+| Examples of logical operations in Python:
+
+.. code-block:: python
+
+    score = 40
+    user = "Anne"
+    level = 2
+
+    print(score > 10 and user == "Anne")
+    print(score > 10 or level == 3)
+    print(not(level == 1))
+
 ----
 
 Membership operations
----------------------------
+--------------------------
 
-Membership operators are useful to determine presence of an element in a sequence.
+| Membership operators are useful to determine the presence of an element in a sequence, such as a string or list.
 
 +--------------+----------------------------------------------------------+--------------------------+
 | **Operator** | **Evaluates to ``True`` if:**                            | **Example**              | 
 +==============+==========================================================+==========================+
-|   in         | A variable value is in the specified sequence            | ``x in [1, 2, 3, 4]``    |
+|   in         | A variable value is in a sequence                        | ``x in [1, 2, 3, 4]``    |
 +--------------+----------------------------------------------------------+--------------------------+
-| not in       | Does not find a variable value in the specified sequence | ``x not in [1, 2, 3, 4]``|
+| not in       | A variable value is not in a sequence                    | ``x not in [1, 2, 3, 4]``|
 +--------------+----------------------------------------------------+-----+--------------------------+
 
-Using Boolean operations
-----------------------------
-
-You may have already used some examples that do this. In this example, the micro:bit will 
-show an arrow changing in direction according to acceleration:
+| Example of membership operation in strings:
 
 .. code-block:: python
-   
-    from microbit import *
     
-    while True:
-        x_bearing = accelerometer.get_x()
+    a = 'o'
+    b = 'John'
+    print(f'{a} in {b} is {a in b}') # o in John is True
+    print(f'{a} not in {b} is {a not in b}') # o not in John is False
 
-        if (x_bearing <= 100) and (x_acceleration >= 50):
-        display.show(Image.ARROW_N)
+| Example of membership operation in lists:
 
-        elif x_bearing > 100:
-            display.show(Image.ARROW_E) 
-    
-        elif  x_bearing < 50:
-            display.show(Image.ARROW_W) 
+.. code-block:: python
 
+    x = 7
+    value_list = [1, 2, 3, 4]
+
+    print(x in value_list)
+    print(x not in value_list)
+
+
+----
+
+Using Boolean operations
+--------------------------
+
+| The code below uses 2 booleans with nested selection.
+
+.. code-block:: python
+
+    is_condition1 = True
+    is_condition2 = False
+    if is_condition1 or is_condition2:
+        if is_condition1 and is_condition2:
+            my_val = 1
+        elif is_condition1 and not is_condition2:
+            my_val = 2
         else:
-            display.show(Image.ARROW_S)     
+            my_val = 3
+    else:
+        my_val = 4
+    print(my_val)
