@@ -6,7 +6,7 @@ Variables
 | It can be thought of as a box that stores data. 
 | In Python, the same variable can be reused to store values of any type.
 | e.g In ``rectangle_length = 2.3``, the variable names is ``rectangle_length``, the type is ``float`` (decimal) and the value is ``2.3``.
-| e.g In ``user_name = GMC``, the variable names is ``user_name``, the type is ``str`` (string) and the value is ``GMC``.
+| e.g In ``user_name = Annie``, the variable names is ``user_name``, the type is ``str`` (string) and the value is ``Annie``.
 
 Rules for Python variable names:
     • A variable name must start with a letter or the underscore character
@@ -21,9 +21,9 @@ Python Reserved Words
 
 Reserved Words are keywords that have a set meaning and can't be used for other purposes such as for variable names. Reserved words are case-sensitive and must be used exactly as shown. They are all entirely lowercase, except for False, None, and True.
 
-The list of reserved words is:
+| The list of reserved words is:
 
-    and, as, assert, async, await, break, class, continue, def, del, elif, else, except, False, finally, for, from, global, if, import, in, is, lambda, None, nonlocal, not, or, pass, raise, return, True, try, while, with, yield, 
+| ['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
 
 A list of keywords can be shown by typing ``help("keywords")`` to the Python interpreter or using ``print(help("keywords"))``.
 A second method for listing keywords uses the keyword library. (see: https://docs.python.org/3/library/keyword.html)

@@ -190,3 +190,9 @@ a.copybtn > img {
     transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
     transition-delay: .5s;
 }
+
+
+/* override table width restrictions */ 
+.wy-table-responsive table td, .wy-table-responsive table th { 
+    white-space: wrap; 
+} 

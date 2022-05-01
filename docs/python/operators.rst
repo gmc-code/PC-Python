@@ -57,20 +57,13 @@ Arithmetic operators are used with numbers to perform common mathematical operat
     a=9
     b=2
 
-    print(f'a + b = {a} + {b} = {a + b}')  
-    # a + b = 9 + 2 = 11
-    print(f'a - b = {a} - {b} = {a - b}')  
-    # a - b = 9 - 2 = 7
-    print(f'a * b = {a} * {b} = {a * b}')  
-    # a / b = 9 / 2 = 4.5
-    print(f'a / b = {a} / {b} = {a / b}')  
-    # a / b = 9 / 2 = 4.5
-    print(f'a // b = {a} // {b} = {a // b}')  
-    # a / b = 9 / 2 = 4.5
-    print(f'a % b = {a} % {b} = {a % b}')  
-    # a / b = 9 / 2 = 4.5
-    print(f'a ** b = {a} ** {b} = {a ** b}')  
-    # a / b = 9 / 2 = 4.5
+    print(f'a + b = {a} + {b} = {a + b}')      # a + b = 9 + 2 = 11
+    print(f'a - b = {a} - {b} = {a - b}')      # a - b = 9 - 2 = 7
+    print(f'a * b = {a} * {b} = {a * b}')      # a / b = 9 / 2 = 4.5
+    print(f'a / b = {a} / {b} = {a / b}')      # a / b = 9 / 2 = 4.5
+    print(f'a // b = {a} // {b} = {a // b}')   # a / b = 9 / 2 = 4.5
+    print(f'a % b = {a} % {b} = {a % b}')      # a / b = 9 / 2 = 4.5
+    print(f'a ** b = {a} ** {b} = {a ** b}')   # a / b = 9 / 2 = 4.5
 
 
 | Basic arithmetic operators: ``+, -, *, /`` are used in the same way as with a calculator. 
@@ -100,7 +93,7 @@ Arithmetic operators are used with numbers to perform common mathematical operat
 Compound_assignment
 --------------------------
 
-.. csv-table:: Compound_assignment
+.. csv-table::
     :file: Compound_assignment.csv
     :widths: 80, 30, 90, 30
     :header-rows: 1
@@ -143,9 +136,9 @@ Strings
 
 String and Sequence Operators:
 
-.. list-table:: String and Sequence Operators
+.. list-table::
     :widths: 200, 200
-    :header-rows: 1
+    :header-rows: 0
 
     *   - ``+`` (concatenation)
         - Returns a concatenation of two sequences.
@@ -158,9 +151,9 @@ String and Sequence Operators:
 Sequence Assignment Operators:
 
 
-.. list-table:: Sequence Assignment Operators
-    :widths: 200, 200
-    :header-rows: 1
+.. list-table::
+    :widths: 230, 200
+    :header-rows: 0
 
     *   - ``+=`` (concatenation assignment)
         - Concatenates the sequence with the right operand and assigns the result to that sequence.
