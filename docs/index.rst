@@ -43,6 +43,7 @@ Key references:
     python/data_types.rst
     python/operators.rst
     python/variables.rst
+    python/variables_scope.rst
     python/selection.rst
     python/iteration.rst
     python/functions.rst
