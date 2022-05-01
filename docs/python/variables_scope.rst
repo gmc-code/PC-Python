@@ -20,8 +20,6 @@ The code below attempts to use a ``name_age_greeting()`` function and increment 
 
 .. code-block:: python
 
-    from microbit import *
-
     name = "Joe"
     age = 12
 
@@ -30,13 +28,13 @@ The code below attempts to use a ``name_age_greeting()`` function and increment 
         return "Hi " + name + ", you are " + str(age) + " years old"
 
 
-    display.scroll(name_age_greeting(), delay=70)
-    display.scroll(name_age_greeting(), delay=70)
-    display.scroll(name_age_greeting(), delay=70)
+    print(name_age_greeting())
+    print(name_age_greeting())
+    print(name_age_greeting())
 
 
-| When flashed the microbit displays the error message: ``Name Error: local variable referenced before assignment``.
-| This is because the variable ``age`` within the function is not the same as the variable ``age`` outside of the ``name_age_greeting()`` function and the variable within the function has not has a value assigned to it.
+| This results in an error message: ``local variable 'age' referenced before assignment``.
+| This is because the variable ``age`` within the function is not the same as the variable ``age`` outside of the ``name_age_greeting()`` function and the variable within the function has not yet had a value assigned to it.
 
 ----
 
@@ -47,9 +45,7 @@ Global  Variables
 | This will let Python know, that the age variable in the function is the same one in the global namespace.
 
 .. code-block:: python
-
-    from microbit import *
-
+ 
     name = "Joe"
     age = 12
 
@@ -58,12 +54,15 @@ Global  Variables
         age += 1
         return "Hi " + name + ", you are " + str(age) + " years old"
 
-    display.scroll(name_age_greeting(), delay=70)
-    display.scroll(name_age_greeting(), delay=70)
-    display.scroll(name_age_greeting(), delay=70)
+
+    print(name_age_greeting())  # Hi Joe, you are 13 years old
+    print(name_age_greeting())  # Hi Joe, you are 14 years old
+    print(name_age_greeting())  # Hi Joe, you are 15 years old
 
 
-.. warning:: Using global variables for functions like this is generally a bad practice and you should avoid it, since it makes the purpose of your functions less obvious and you can end up with messy code. A better way to do this is to pass variable ``age`` as one of the arguments of the function (example below).
+.. warning:: 
+    
+    Using global variables for functions like this is generally a bad practice and should be avoided, since it makes the purpose of your functions less obvious and you can end up with messy code. A better way to do this is to pass variable ``age`` as one of the arguments of the function (example below).
 
 ----
 
@@ -75,31 +74,27 @@ Use arguments instead of global variables
 
 .. code-block:: python
 
-    from microbit import *
-
     name = "Joe"
     age = 12
 
     def name_age_greeting(name, age):
         return "Hi " + name + ", you are " + str(age)
 
-    display.scroll(name_age_greeting(name, age), delay=50)
+    print(name_age_greeting(name, age))   # Hi Joe, you are 12
     age += 1
-    display.scroll(name_age_greeting(name, age), delay=50)
+    print(name_age_greeting(name, age))   # Hi Joe, you are 13
     age += 1
-    display.scroll(name_age_greeting(name, age), delay=50)
+    print(name_age_greeting(name, age))   # Hi Joe, you are 14
 
 
+----
 
-
-Nonlocal variables
--------------------
+Nonlocal variables in neested functions
+-----------------------------------------
 
 | The nested functions below has a variable ``x`` which if different to the ``x`` in the outer function:
 
 .. code-block:: python
-
-    from microbit imp4
 
     def outer_func():
         x = 3
@@ -115,7 +110,8 @@ Nonlocal variables
     outer_func()
 
 
-| Nested functsions can use the keyword: ``nonlocal``, to make the variable in the nested function the same variable as in the outer function:
+| Nested functions can use the keyword: ``nonlocal``, to make the variable in the nested function the same variable
+ as in the outer function:
 
 .. code-block:: python
 
