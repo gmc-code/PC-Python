@@ -5,10 +5,13 @@ Variables Scope
 Scope
 --------------
 
-| Scope is an 'area' in which a variable is defined, can be accessed and written to. 
+| Scope is an 'block of code' in which a variable is defined, can be accessed and written to. 
 | There are two types of variables: global and local. 
 | By default, all variables defined within a function are local - they cannot be accessed outside of the function. 
-| Since the scope within the function is different from the global one, a variable with the same name outside of the function is different to the variable within a function.
+| Since the scope within the function is different from the global one, 
+a variable with the same name outside of the function is different to the variable within a function.
+
+----
 
 Local Variables
 ---------------------------

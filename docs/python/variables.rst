@@ -23,10 +23,10 @@ Reserved Words are keywords that have a set meaning and can't be used for other 
 
 | The list of reserved words is:
 
-| ['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+| False, None, True, and, as, assert, async, await, break, class, continue, def, del, elif, else, except, finally, for, from, global, if, import, in, is, lambda, nonlocal, not, or, pass, raise, return, try, while, with, yield
 
-A list of keywords can be shown by typing ``help("keywords")`` to the Python interpreter or using ``print(help("keywords"))``.
-A second method for listing keywords uses the keyword library. (see: https://docs.python.org/3/library/keyword.html)
+| A list of keywords can be shown by using ``print(help("keywords"))``.
+| A second method for listing keywords uses the keyword library. (see: https://docs.python.org/3/library/keyword.html)
 
 .. code-block:: python
 
@@ -50,7 +50,7 @@ Snake case
 ALL_CAPS
 ---------------
 
-| ALL_CAPS are used for constants, such as ``PI = 3.14``, ``GRAVITY = 9.8``, ``MILE_TO_METRES = 1609``.
+| ALL_CAPS are used for constants, such as ``PI = 3.14``, ``GRAVITY = 9.8``, ``MILES_TO_METRES = 1609``.
 
 CapWords
 ---------------
@@ -72,7 +72,8 @@ KebabCase
 Sample code
 --------------------------
 
-| The print statement below can be generalised using a variable for the team name and a variable for the number of premierships. This is good preactice since it separates the data from the output.
+| The print statement below can be generalised using a variable for the team name and a variable for the number of premierships.
+| This is good practice since it separates the data from the output.
 
 .. code-block:: python
 
@@ -82,9 +83,9 @@ Generalised to:
 
 .. code-block:: python
 
-    team_name = 'Richmond'
-    premierships = '11'
-    print(team_name + ' has won ' + premierships + ' premierships.')
+    team_name = 'Richmond'
+    premierships = '11'
+    print(team_name + ' has won ' + premierships + ' premierships.')
 
 ----
 
