@@ -2,6 +2,8 @@
 Data Types
 ==========================
 
+See: https://www.w3schools.com/python/python_datatypes.asp
+
 .. Common data types:
     Data Type,Example,Description
     Integers,``4`` or ``0`` or ``-5``,Positive and negative whole numbers
@@ -14,15 +16,14 @@ Data Types
     :widths: 30, 30, 90
     :header-rows: 1
 
-Python has the following data types built-in by default, in these categories:
+Some common built-in data types are:
  
 | Text Type:    str
-| Numeric Types:    int, float, complex
+| Numeric Types:    int, float
 | Sequence Types:    list, tuple, range
 | Mapping Type:    dict
 | Set Types:    set, frozenset
 | Boolean Type:    bool
-| Binary Types:    bytes, bytearray
 
 ----
 
@@ -88,6 +89,8 @@ The type() function can be used to get the data type for a variable.
 Type casting
 --------------------------
 
+See: https://www.w3schools.com/python/python_casting.asp
+
 | Data types can't be mixed. 
 | They need to be converted so that they can be used together. 
 | The conversion of one type to another is called type casting.
@@ -122,7 +125,7 @@ str() converts a number to a string with a number in it
     j = str(3.01) # j will be "3.01"
 
 
-Examples: 
+Type casting Examples: 
 
 .. code-block:: python
 
