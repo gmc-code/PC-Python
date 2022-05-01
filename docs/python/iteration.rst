@@ -1,5 +1,5 @@
 ==========================
-Control Structures
+Iteration
 ==========================
 
 The three basic control structures are:
@@ -9,90 +9,156 @@ The three basic control structures are:
 #. Iteration (repetition or looping using ``while`` or ``for``)
 
 Loops
--------------
+------------------
 
-Loops are a very useful structure in case you want to repeat a certain block of code several times over.
-There are two types of loops: ``for`` loops, that keep count of the number of times a block of code is executed, and ``while`` loops which
-perform an action until a condition you've specified is no longer true. 
+| Loops are very useful structures which enable repeating of a certain block of code several times over.
+| There are two types of loops: 
+| ``for`` loops, that keep count of the number of times a block of code is executed, and 
+| ``while`` loops which perform an action until a specified condition is no longer true. 
 
 ----
 
-For loops
--------------
+For loops with the range function
+------------------------------------
 
-There are times when you want to do an action a specific number of times, or you need to keep track of how many times it was performed. For example you'd like 
-to turn on the LEDs on the uppermost horizontal and rightmost vertical side. You can use a ``for`` loop to change which LED lights up like this:
-
-.. code-block:: python
-
-    from microbit import *
-
-    for i in range (5):
-        # set the pixel in column 0, row i to 9 
-        display.set_pixel(0, i, 9) 
-
-        # set the pixel in column 4, row i to 9    
-        display.set_pixel(4, i, 9)     
-
-Here is another example.  You could use a ``for loop`` to turn on all the LEDs in sequence, one at a time:
+| Use the range() function to loop through a set of code a specified number of times.
+| The range() function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and ends at a specified number.
+| ``range(8)`` means the values 0 to 7 (8 not included).
 
 .. code-block:: python
 
-    from microbit import *
+    for number in range(8):
+        print(number, end = ' ')
+    # 0 1 2 3 4 5 6 7
 
-    display.clear()
-    for x in range(0, 5):
-        for y in range(0, 5):
-            display.set_pixel(x, y, 9)  
+| ``range(2, 8)`` means values from 2 to 8 but not including 8.
 
-The ``for loop`` lets you run a loop a specific number of times using a counter. The outer loop: ``for x in range(0,5):`` will execute the loop five times substituting ``x`` for consecutive values in the range ``0`` to ``4`` each time (in Python and most programming languages, we always start counting from ``0``). The loop will stop before it reaches 5, the final value in the range.
+.. code-block:: python
 
-The inner loop: ``for y in range(0,5):`` will run the loop five times substituting ``y`` for consecutive values in the range ``0`` to ``4`` each time. Again, the loop will stop before it reaches the final value in the range.
+    for number in range(2,8):
+        print(number, end = ' ')
+    # 2 3 4 5 6 7
+
+| The range() function defaults to increment the sequence by 1, however it is possible to specify the increment value by adding a third parameter.
+| range(1, 15, 3) means values from 1 up to but not including 15, in steps of 3.
+
+.. code-block:: python
+
+    for number in range(1, 15, 3):
+        print(number, end = ' ')
+    # 1 4 7 10 13
+
+----
+
+Nested For loops
+------------------------------------
+
+| In the example below, x and y are assigned the values by the range function:
+
+.. code-block:: python
+
+    for x in range(2, 5):
+        for y in range(3, 6):
+            print(x, y)
+
+----
+
+For loops with sequences
+------------------------------------
+
+| A for-loop can be used to iterate over a sequence that is either a string, a list, a tuple, , a set or a dictionary.
+| The for loop can execute a set of statements, once for each item in a sequence.
+
+.. code-block:: python
+
+    for letter in 'Common Operating Machine Particularly Used for Technical, Education and Research':
+        print(letter, end = '-')
+
+.. code-block:: python
+
+    for network in ['DNS','VPN','PoP','VoIP']:
+        print(network, end = ' ' )
+
+
+
+----
+
+While True loops
+------------------
+
+| One of the most common things you might want to do with a ``while`` loop is to do something forever. Here is an example of some code to repeat forever:
+
+.. code-block:: python
+
+    while True:
+        print("Hello..."")
+
+This code will repeatedly print the text ``Hello...``.
 
 ----
 
 While loops
 ------------------
 
-One of the most common things you might want to do with a ``while`` loop is to do something forever, that is until the micro:bit
-is turned off or reset. Maybe you have programmed your micro:bit with a game or perhaps it is collecting 
-temperature data. Here is an example of some code to repeat forever:
+| The while loop requires relevant variables to be ready, and incremented in the loop to avoid it running for ever.
+| In the example below, the variable num is increased by one each loop.
+| The loops stops when ``num`` gets to 5.
 
 .. code-block:: python
 
-    from microbit import *
+    num = 0
+    while num < 5:
+        num += 1
+        print(num)
 
-    while True:
-        display.scroll("Hello UCL)
-
-This code will repeatedly display the message ``Hello UCL``. You will likely have at least one ``while True:`` loop in your program
-to keep the micro:bit going.
-
-But what if you want to do an action only whilst something is happening? Perhaps you would like to display an image
-if the temperature on the micro:bit goes below a certain value so you'll need to test the temperature:
+| In the example below, the variable num is decreased by one each loop.
+| The loops stops when ``num`` gets to 0.
 
 .. code-block:: python
 
-    from microbit import *
+    num = 5
+    while num > 0:
+        print(num)
+        num -= 1
 
-    while (temperature() < 18):
-        display.scroll(Image.SAD)
-        sleep(1000)
+| In the example below, a final clock of code can run as part of the ``else`` statement.
+| The loops stops when ``num`` gets to 0, then the ``else`` block is run.
 
-    display.show(Image.HAPPY)
+.. code-block:: python
 
-----
+    num = 5
+    while num > 0:
+        print(num)
+        num -= 1
+    else:
+        print("Blastoff")
 
-Practice Questions
---------------------
 
-.. admonition:: Tasks
 
-    1. Display a different image depending on which side microbit is tilted in.
-    2. Program an LED 'sprite' that moves in the direction micro:bit is tilted in.
-    3. Program an LED sprite to run in a circle. Try to extend it to a snake by adding a tail of LEDs to the original sprite.
-    4. Do the same as in previous question, but this time make the sprite stop when a button is being pressed and restart if it's pressed again.
+| The break statement stops the loop even if the while condition is true:
+| Example. Exit the loop when i is 3:
 
+.. code-block:: python
+
+    i = 1
+    while i < 6:
+        print(i)
+        if i == 3:
+            break
+        i += 1
+
+
+| The continue statement stops the current iteration (the current run through the loop), and continues with the next iteration of the loop.
+| Example. Continue to the next iteration if i is 3:
+
+.. code-block:: python
+
+    i = 0
+    while i < 6:
+        i += 1
+        if i == 3:
+            continue
+        print(i)
 
 
 

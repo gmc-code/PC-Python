@@ -38,9 +38,7 @@ If, elif, else
 
 .. admonition:: Tasks
 
-    #. Add the variables ``teamA`` and ``teamB`` and set team names for them. 
-    Modify the code to print the team name instead of 'A' or 'B'. 
-    Hint: To join text use a plus symbol. e.g (myteam + " my text")
+    #. Add the variables ``teamA`` and ``teamB`` and set team names for them. Modify the code to print the team name instead of 'A' or 'B'. Hint: To join text use a plus symbol. e.g (myteam + " my text")
 
 ----
 
@@ -72,14 +70,6 @@ Nested if
 
 .. admonition:: Tasks
 
-    #. Add the variables ``teamA`` and ``teamB`` and set team names for them. 
-    Modify the code to print the team name instead of 'A' or 'B'. 
-    Hint: To join text use a plus symbol. e.g (myteam + " my text")
-    #. Modify the code to print the winning margins. 
-    Use ``str(number)`` to convert numbers to text for joining with other text. 
-    Add the variables ``teamAwinby`` and ``teamBwinby``. 
-    Calculate those variables using the scoreA and scoreB. 
-    e.g ``teamAwinby = scoreA - scoreB``. 
-    Replace "A won easily" with code to output "A won easily by 65". 
-    Do similar replacements for the other printed text.
+    #. Add the variables ``teamA`` and ``teamB`` and set team names for them. Modify the code to print the team name instead of 'A' or 'B'. Hint: To join text use a plus symbol. e.g (myteam + " my text")
+    #. Modify the code to print the winning margins. Use ``str(number)`` to convert numbers to text for joining with other text. Add the variables ``teamA_win_by`` and ``teamB_win_by``. Calculate those variables using scoreA and scoreB. e.g ``teamA_win_by = scoreA - scoreB``. Replace "A won easily" with code to output "A won easily by 65". Do similar replacements for the other printed text.
 
