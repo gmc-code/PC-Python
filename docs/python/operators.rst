@@ -281,18 +281,12 @@ Examples of comparisons in Python:
 
     a = 7
     b = 3
-    print(f'{a} == {b} is {a == b}')
-    # 7 == 3 is False
-    print(f'{a} != {b} is {a != b}')
-    # 7 != 3 is True
-    print(f'{a} > {b} is {a > b}')
-    # 7 > 3 is True
-    print(f'{a} < {b} is {a < b}')
-    # 7 < 3 is False
-    print(f'{a} >= {b} is {a >= b}')
-    # 7 >= 3 is True
-    print(f'{a} <= {b} is {a <= b}')
-    # 7 <= 3 is False
+    print(f'{a} == {b} is {a == b}')    # 7 == 3 is False
+    print(f'{a} != {b} is {a != b}')    # 7 != 3 is True
+    print(f'{a} > {b} is {a > b}')      # 7 > 3 is True
+    print(f'{a} < {b} is {a < b}')      # 7 < 3 is False
+    print(f'{a} >= {b} is {a >= b}')    # 7 >= 3 is True
+    print(f'{a} <= {b} is {a <= b}')    # 7 <= 3 is False
 
 ----
 
@@ -344,8 +338,8 @@ Membership operations
     
     a = 'o'
     b = 'John'
-    print(f'{a} in {b} is {a in b}') # o in John is True
-    print(f'{a} not in {b} is {a not in b}') # o not in John is False
+    print(f'{a} in {b} is {a in b}')          # o in John is True
+    print(f'{a} not in {b} is {a not in b}')  # o not in John is False
 
 | Example of membership operation in lists:
 
