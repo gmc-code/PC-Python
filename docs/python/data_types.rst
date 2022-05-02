@@ -4,7 +4,7 @@ Data Types
 
 See: https://www.w3schools.com/python/python_datatypes.asp
 
-.. csv-table:: Data_Types
+.. csv-table::
     :file: Date_types.csv
     :widths: 50, 120, 200
     :header-rows: 1
