@@ -133,4 +133,26 @@ Functions returning information
     #. Define a function ``area_square(length)`` that returns the area of a square.
     #. Write a function called ``random_greeting`` that returns a random greeting that is randomly chosen from a list of greetings: ``["Hi", "Hello", "G'day"]``. See: https://www.w3schools.com/python/ref_random_choice.asp
 
-    
+
+----
+
+``*args``
+----------------------------------------
+
+| ``*args`` allow a function to take any number of positional arguments (non keyword arguments).
+
+| ``*num`` allows a variable number of arguments to be passed in to be added in the ``multi_add`` function.
+| In the function, ``num`` is a tuple of the arguments.
+| For ``multi_add(2,5)``, num is the tuple`` (2, 5)``.
+| For ``multi_add(1, 3, 5, 7, 9)``, num is the tuple ``(1, 3, 5, 7, 9)``.
+
+.. code-block:: python
+
+    def multi_add(*num):
+        sum = 0
+        for n in num:
+            sum = sum + n
+        return sum
+
+    print(multi_add(2, 5))
+    print(multi_add(1, 3, 5, 7, 9))
