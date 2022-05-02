@@ -79,8 +79,6 @@ For loops with sequences
     for network in ['DNS','VPN','PoP','VoIP']:
         print(network, end = ' ' )
 
-
-
 ----
 
 While True loops
