@@ -6,7 +6,7 @@ See: https://www.w3schools.com/python/python_datatypes.asp
 
 .. csv-table::
     :file: Date_types.csv
-    :widths: 50, 120, 200
+    :widths: 70, 120, 200
     :header-rows: 1
 
 Some common built-in data types are:
