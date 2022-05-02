@@ -6,7 +6,7 @@ See: https://www.w3schools.com/python/python_datatypes.asp
 
 .. csv-table:: Data_Types
     :file: Date_types.csv
-    :widths: 30, 45, 90
+    :widths: 50, 100, 200
     :header-rows: 1
 
 Some common built-in data types are:
@@ -45,6 +45,11 @@ Strings
 
 | Escaping via \ can be used to force the quote to be used literally.
 | e.g. 'it\'s'
+
+| Triple quotes are used for documentation strings. Single of double quotes can be used.
+| Triple quotes can also be used for multi line strings.
+| e.g. '''n is a integer'''
+| e.g. """angle is a float from 0 to 90"""
 
 ----
 
