@@ -46,9 +46,9 @@ Strings
 | Escaping via \ can be used to force the quote to be used literally.
 | e.g. 'it\'s'
 
-| Triple quotes are used for documentation strings. Single of double quotes can be used.
+| Triple quotes are used for documentation strings. Triple single or triple double quotes can be used.
 | Triple quotes can also be used for multi line strings.
-| e.g. '''n is a integer'''
+| e.g. '''n is an integer'''
 | e.g. """angle is a float from 0 to 90"""
 
 ----
@@ -67,7 +67,7 @@ Numbers
 Booleans
 --------------------------
 
-Booleans have the value ``True`` or ``False``
+Booleans have the value ``True`` or ``False``.
 
 ----
 
@@ -109,7 +109,7 @@ Type casting
 See: https://www.w3schools.com/python/python_casting.asp
 
 | Data types can't be mixed. 
-| They need to be converted so that they can be used together. 
+| They need to be converted to the same type so that they can be used together. 
 | The conversion of one type to another is called type casting.
 
 | An integer can be converted to a string using the str() function.
@@ -120,8 +120,6 @@ See: https://www.w3schools.com/python/python_casting.asp
     team = 'Richmond'
     premierships = 11
     print(team + ' has won ' + str(premierships) + ' premierships.')
-
-To specify the data type, use the following constructor functions:
 
 int() converts a string consisting of an integer to an integer number
 

@@ -61,7 +61,7 @@ Global  Variables
 
 
 .. warning:: 
-    
+
     Using global variables for functions like this is generally a bad practice and should be avoided, since it makes the purpose of your functions less obvious and you can end up with messy code. A better way to do this is to pass variable ``age`` as one of the arguments of the function (example below).
 
 ----
@@ -114,10 +114,6 @@ Nonlocal variables in neested functions
  as in the outer function:
 
 .. code-block:: python
-
-    # variable scope 5
-
-    from microbit import *
 
     def outer_func():
         x = 3
