@@ -198,7 +198,7 @@ Strings and numbers
 Booleans
 --------------------------
 
-| A Boolean value is a value that is either ``True`` or ``False``, also represented by `1` and `0`. 
+| A Boolean value is a value that is either ``True`` or ``False``, also represented by ``1`` and ``0``. 
 
 | Booleans represent one of two values: True or False.
 | Almost any value is evaluated to True if it has some sort of content.

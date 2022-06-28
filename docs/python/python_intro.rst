@@ -28,25 +28,25 @@ Code examples showing indentation:
 
 .. code-block:: python
 
-    dice = "5"
-    if dice == "6":
-        print("Win")
-    elif dice == "1":
-        print("Loose")
+    dice = "5"
+    if dice == "6":
+        print("Win")
+    elif dice == "1":
+        print("Loose")
     else:
-        print("Roll again.")
+        print("Roll again.")
 
-    for x in "banana":
-        print(x)
+    for x in "banana":
+        print(x)
 
-    i = 10
-    while i > 0:
-        print(i)
-        i -= 1
-    print("Go.")   
+    i = 10
+    while i > 0:
+        print(i)
+        i -= 1
+    print("Go.")
 
-    def my_function():
-        print("Hello from a function")
+    def my_function():
+        print("Hello from a function")
 
 
 
@@ -62,7 +62,7 @@ Blocks of code nested within other blocks of code need to be indented to the sam
             print("Zero")
         else:
             print("Positive number")
-     
-    for x in "ABC":
-        for y in "123":
-            print(x, y)
+     
+    for x in "ABC":
+        for y in "123":
+            print(x, y)

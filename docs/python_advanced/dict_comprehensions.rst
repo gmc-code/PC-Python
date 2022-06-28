@@ -57,5 +57,4 @@ Practice Questions
     1. Use a list comprehension to create the liset: [('A', 'X'), ('A', 'Y'), ('B', 'X'), ('B', 'Y')].
     2. Use a list comprehension to create the liset: ['AvX', 'AvY', 'BvX', 'BvY'].
 
-----
 

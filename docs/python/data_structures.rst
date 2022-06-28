@@ -8,7 +8,9 @@ Lists
 List is a data structure used to store any data type in order. It's a data structure that you'll probably use most often. Let's say we want to store a player's scores. The pieces of data stored in a list are called `elements`. 
 
 
-To create a list, you specify its contents enclosed within brackets and delimited by commas: :: 
+To create a list, you specify its contents enclosed within brackets and delimited by commas: 
+
+.. code-block::
 
     from microbit import *
 
@@ -24,7 +26,9 @@ Here you can also see that particular elements in a list can be accessed by thei
 on the index. If you only want the first three, you can write ``high_scores[0:3]``, or, since we are starting at 0, we can shorten it to ``high_scores[:3]``. Mind that
 the right endpoint is alway excluded, so the 'slice' above refers to the mathematical interval ``[0,2]``.
 
-Not surprisingly, Python has features for working with lists. The code snippet below calculates the sum of all elements and then calculates the average high score. ::        
+Not surprisingly, Python has features for working with lists. The code snippet below calculates the sum of all elements and then calculates the average high score. 
+
+.. code-block:: python
 
     total_score = 0
 
@@ -33,13 +37,17 @@ Not surprisingly, Python has features for working with lists. The code snippet b
 
     average = total_score / len(high_scores)  # Use the len() function here to find the length of the array 
 
-The same can be done in one line using the ``sum`` function::
+The same can be done in one line using the ``sum`` function.
 
-    average_quick = sum(high_score) / len(high_score)     
+.. code-block:: python
+
+   average_quick = sum(high_score) / len(high_score)     
 
 
 Since you don't necessarily know what values in the list are going to be, or how large the list will be, it's useful to know the ``append`` function. 
-For example, you can use it to fill a list with temperature readings or accelerometer values:: 
+For example, you can use it to fill a list with temperature readings or accelerometer values
+
+.. code-block:: python
 
     from microbit import *
 
@@ -52,18 +60,24 @@ The ``for`` loop is executed 100 times and ``i`` will have values from 0 to 99. 
 to the end of the list. 
 
 
-Deleting items from a list is just as straightforward::
+Deleting items from a list is just as straightforward.
+
+.. code-block:: python
 
     high_scores.delete(24)
 
 This will delete the first element with the value 24.
-Alternatively, you might want to delete an element at a specific position, if you know it:: 
+Alternatively, you might want to delete an element at a specific position, if you know it:
+
+.. code-block:: python
 
     high_scores.pop(3)
 
-This will delete or 'pop' the element at the given position in the list. Note that::
+This will delete or 'pop' the element at the given position in the list. Note that:
 
-    high_scores.pop() 
+.. code-block:: python
+
+     high_scores.pop() 
 
 will delete the last element in the list.
 
@@ -78,15 +92,18 @@ will delete the last element in the list.
 Sorting
 ---------
 
-Often you'll find the need to have data in your list sorted, for example when implementing search algorithms. In Python, sorting lists is easy using the 
-``sort(key=, reverse=)`` method::
+Often you'll find the need to have data in your list sorted, for example when implementing search algorithms. In Python, sorting lists is easy using the ``sort(key=, reverse=)`` method:
 
-    high_scores = [25, 20, 10, 15, 30]
+.. code-block:: python
+
+     high_scores = [25, 20, 10, 15, 30]
     high_scores.sort()
 
 You don't only have to sort numbers - its optional key parameter allows you to specify your own    function for comparing elements in your list (for example, while 
 sorting a list of strings according to length, you can pass the len() function as the parameter). Passing false to reverse parameter allows you to sort in a descending 
-order. ::
+order. 
+
+.. code-block:: python
 
     list = ['longest', 'short', 'longer']
 
@@ -98,12 +115,16 @@ order. ::
 Tuples
 ----------
 
-Tuples are similar to lists in that they are used to store an ordered sequence of items, usually of varying datatype.::
+Tuples are similar to lists in that they are used to store an ordered sequence of items, usually of varying datatype.
+
+.. code-block:: python
 
     high_scores_immutable = (25, 20, 10, 15, 30)
 
 You can retrieve values in the same way as with lists, but the most important difference is that tuples are `immutable`. This means, that in the ``high_scores`` 
-list above, you can change the value of individual elements: ::
+list above, you can change the value of individual elements:
+
+.. code-block:: python
 
     high_scores[0] = 42
 
@@ -116,7 +137,9 @@ Sets
 ---------
 
 Unlike lists and tuples, sets hold an **unordered** collection of elements with no duplicates. This makes them suitable for testing membership or removing 
-duplicate elements. ::
+duplicate elements.
+
+.. code-block:: python
 
     set = {8, 12, 22}
 
@@ -134,7 +157,9 @@ duplicate elements. ::
 
 
 
-Since a set is an unordered collection of elements, indexing is not possible. Python supports typical set operation methods: ::
+Since a set is an unordered collection of elements, indexing is not possible. Python supports typical set operation methods:
+
+.. code-block:: python
 
     set_a = {1,2,3,4,5}
     set_b = {4,5,6,7}
@@ -162,7 +187,9 @@ Dictionaries
 Dictionary is an unordered set of ``key : value`` pairs. It's a rule that all keys are unique and have no duplicates. Unlike lists or tuples, which are indexed by numbers, 
 you can retrieve a value from a dictionary by using the key as an index.
 
-For example, you can store the highscores of all the players: ::
+For example, you can store the highscores of all the players:
+
+.. code-block:: python
 
     game_register = { 'googolplex': 100,
                     'terminat0r': 27,

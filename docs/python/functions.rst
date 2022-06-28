@@ -28,6 +28,7 @@ Functions without parameters
 
     show_welcome()
 
+
 ----
 
 .. admonition:: Note
