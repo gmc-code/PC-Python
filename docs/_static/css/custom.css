@@ -141,10 +141,6 @@ a.copybtn {
     user-select: none;
 }
 
-button.copybtn {
-    color: rgb(0, 0, 255);
- }
-
 div.highlight  {
     position: relative;
 }
