@@ -57,10 +57,6 @@ jupyter_sphinx_thebelab_config = {
     },
 }
 
-# see: https://sphinx-copybutton.readthedocs.io/en/latest/use.html
-# copy button options
-copybutton_selector = "div:not(.thebelab-code) > div.highlight > pre"
-
 # -- Options for HTML output -------------------------------
 
 # The theme to use for HTML and HTML Help pages.
