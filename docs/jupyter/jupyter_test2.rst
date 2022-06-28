@@ -4,8 +4,6 @@ Jupyter Tests2
 
 .. thebe-button:: Activate Jupyter Thebelab
 
-----
-
 .. jupyter-execute::
     :class: no-copybutton
 
@@ -15,11 +13,7 @@ Jupyter Tests2
 
     print(name_age_greeting("Joe", 12))
 
-
-----
-
 .. jupyter-execute::
-
     :class: no-copybutton
 
     def name_age_greeting2(name="John", age=99):
@@ -29,10 +23,7 @@ Jupyter Tests2
     print(name_age_greeting2())
     
 
-
-
 .. code-block:: python
-    
     :class: no-copybutton
 
     def name_age_greeting2(name="John", age=99):
