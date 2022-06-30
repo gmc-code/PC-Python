@@ -7,10 +7,10 @@ Jupyter Tests
 thebe-button
 --------------------
 
-```{thebe-button}
-```
+{thebe-button}
+
 .. thebe-button::
-    
+
 ----
 
 class: thebe
