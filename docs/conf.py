@@ -2,16 +2,16 @@
 # see https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 # -- Project information -----------------------------------------------------
-import os
-import sys
+# import os
+# import sys
 import sphinx_rtd_theme
 project = 'PC-Python'
 copyright = '2021-2, GMC'
 author = 'GMC'
 
-sys.path.insert(0, os.path.abspath('../../'))
-package_path = os.path.abspath('../..')
-os.environ['PYTHONPATH'] = ':'.join((package_path, os.environ.get('PYTHONPATH', '')))
+# sys.path.insert(0, os.path.abspath('../../'))
+# package_path = os.path.abspath('../..')
+# os.environ['PYTHONPATH'] = ':'.join((package_path, os.environ.get('PYTHONPATH', '')))
 
 # -- General configuration ---------------------------------
 # Add any Sphinx extension module names here, as strings. They can be
@@ -23,7 +23,6 @@ extensions = [
     'sphinx_copybutton',
     'sphinx.ext.todo',
     'sphinx.ext.autodoc',
-    'jupyter_sphinx',
     'sphinx_thebe',
 ]
 
@@ -51,12 +50,12 @@ todo_include_todos = True
 # for other styles see https://pygments.org/docs/lexers/#lexers-for-python-and-related-languages
 pygments_style = 'sphinx'
 
-jupyter_sphinx_thebelab_config = {
-    'requestKernel': True,
-    'binderOptions': {
-        'repo': "binder-examples/requirements",
-    },
-}
+# jupyter_sphinx_thebelab_config = {
+#     'requestKernel': True,
+#     'binderOptions': {
+#         'repo': "binder-examples/requirements",
+#     },
+# }
 
 # -- Options for HTML output -------------------------------
 
