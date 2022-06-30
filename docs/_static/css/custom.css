@@ -153,6 +153,11 @@ a.copybtn > img {
     position: absolute;
 }
 
+/* Make Copy button visible, not just on hover */
+button.copybtn {
+    opacity: 1;
+ }
+
 .highlight:hover .copybtn {
     opacity: 1;
 }
