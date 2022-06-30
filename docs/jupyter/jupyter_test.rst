@@ -2,12 +2,22 @@
 Jupyter Tests
 ==========================
 
-.. thebe-button:: Activate Jupyter Thebelab
+# .. thebe-button:: Activate Jupyter Thebelab
+
+thebe-button
+--------------------
+
+```{thebe-button}
+```
 
 ----
 
-.. jupyter-execute::
+class: thebe
+--------------------
 
+.. code-block:: python::
+    :class: thebe
+    
     def name_age_greeting(name, age):
         age += 1
         return "Hi " + name + ", you are " + str(age) + " years old"
@@ -16,6 +26,9 @@ Jupyter Tests
 
 
 ----
+
+jupyter-execute
+--------------------
 
 .. jupyter-execute::
 
