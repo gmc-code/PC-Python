@@ -52,4 +52,4 @@ If you are using a trackpad, navigate to various sections and pages by clicking 
 
     jupyter/jupyter_test.rst
     jupyter/jupyter_test2.rst
-    jupyter/Strings
+    jupyter/Strings.rst

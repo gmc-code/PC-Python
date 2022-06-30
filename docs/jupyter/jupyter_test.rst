@@ -1,5 +1,5 @@
 ==========================
-Jupyter Tests
+Jupyter Test
 ==========================
 
 .. thebe-button:: Activate Jupyter
@@ -18,19 +18,6 @@ class: thebe
 
     print(name_age_greeting("Joe", 12))
 
-
-----
-
-jupyter-execute
---------------------
-
-.. jupyter-execute::
-
-    def name_age_greeting2(name="John", age=99):
-        age += 1
-        return "Hi " + name + ", you are " + str(age) + " years old"
-
-    print(name_age_greeting2())
 
 ----
 
