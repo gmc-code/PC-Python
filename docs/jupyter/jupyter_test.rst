@@ -2,21 +2,14 @@
 Jupyter Tests
 ==========================
 
-.. thebe-button:: Activate Jupyter Thebelab
-
-thebe-button
---------------------
-
-{thebe-button}
-
-.. thebe-button::
+.. thebe-button:: Activate Jupyter
 
 ----
 
 class: thebe
 --------------------
 
-.. code-block:: python::
+.. code-block:: python
     :class: thebe
 
     def name_age_greeting(name, age):
