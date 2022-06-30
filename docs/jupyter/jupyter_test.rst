@@ -2,14 +2,15 @@
 Jupyter Tests
 ==========================
 
-# .. thebe-button:: Activate Jupyter Thebelab
+.. thebe-button:: Activate Jupyter Thebelab
 
 thebe-button
 --------------------
 
 ```{thebe-button}
 ```
-
+.. thebe-button::
+    
 ----
 
 class: thebe
@@ -17,7 +18,7 @@ class: thebe
 
 .. code-block:: python::
     :class: thebe
-    
+
     def name_age_greeting(name, age):
         age += 1
         return "Hi " + name + ", you are " + str(age) + " years old"
