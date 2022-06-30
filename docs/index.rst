@@ -6,24 +6,6 @@ PC-Python
 
 If you are using a trackpad, navigate to various sections and pages by clicking on a heading and then using the arrow keys.
 
-
-----
-
-Home pages:
----------------------
-
-| https://pc-microbit-micropython.readthedocs.io/en/latest/index.html
-| https://pc-microbit-extension.readthedocs.io/en/latest/index.html
-| https://pc-python.readthedocs.io/en/latest/index.html
-
-----
-
-Key references:
----------------------
-
-| python: https://www.w3schools.com/python/
-| microbit: https://microbit-micropython.readthedocs.io/en/v2-docs/index.html
-
 ----
 
 .. toctree::
