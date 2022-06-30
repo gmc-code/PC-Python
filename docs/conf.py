@@ -24,6 +24,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.autodoc',
     'jupyter_sphinx',
+    'sphinx_thebe',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -50,12 +51,12 @@ todo_include_todos = True
 # for other styles see https://pygments.org/docs/lexers/#lexers-for-python-and-related-languages
 pygments_style = 'sphinx'
 
-jupyter_sphinx_thebelab_config = {
-    'requestKernel': True,
-    'binderOptions': {
-        'repo': "binder-examples/requirements",
-    },
-}
+# jupyter_sphinx_thebelab_config = {
+#     'requestKernel': True,
+#     'binderOptions': {
+#         'repo': "binder-examples/requirements",
+#     },
+# }
 
 # -- Options for HTML output -------------------------------
 
