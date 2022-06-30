@@ -155,6 +155,7 @@ a.copybtn > img {
 
 /* Make Copy button visible, not just on hover */
 button.copybtn {
+    color: rgb(0, 217, 255);
     opacity: 1;
  }
 
