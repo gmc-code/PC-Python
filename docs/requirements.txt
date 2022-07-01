@@ -5,3 +5,4 @@ docutils<0.18  # must be between 0.14 and <0.18 for sphinx
 sphinx-thebe==0.1.2
 nbsphinx==0.8.9
 sphinx-design==0.2.0
+sphinxcontrib.jupyter
