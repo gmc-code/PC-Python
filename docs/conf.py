@@ -25,6 +25,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx_thebe',
     'nbsphinx',
+    'sphinxcontrib.jupyter',
 ]
 
 # Add any paths that contain templates here, relative to this directory.

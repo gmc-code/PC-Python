@@ -153,7 +153,7 @@ a.copybtn > img {
     position: absolute;
 }
 
-/* Make Copy button visible, not just on hover */
+/* Make Copy button visible and coloured, not just on hover */
 button.copybtn {
     color: blue;
     opacity: 1;
