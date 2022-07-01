@@ -51,5 +51,5 @@ If you are using a trackpad, navigate to various sections and pages by clicking 
     :numbered:
 
     jupyter/jupyter_test.rst
-    jupyter/strings.ipynb
+    jupyter/strings1.ipynb
     jupyter/functions.ipynb
