@@ -2,12 +2,9 @@
 Python Intro
 ==========================
 
-Python can be used for: web development (server-side), software development, mathematics, and system scripting.
+Python can be used for: AI and machine learning, Data analytics, Data visualisation, Programming applications, Game development, Web development and system scripting.
 
-Python has syntax that allows developers to write programs with fewer lines than some other programming languages.
-
-Python uses new lines to complete a command.
-Python relies on indentation to block code for selection and iteration and definition.
+Python has syntax that allows developers to write programs with fewer lines than most other programming languages.
 
 Mu editor is useful for microbit programming, as well as python, but lacks file management.
 Thonny, PyCharm and VSCode are popular IDEs (Integrated Development Environment) used to manage files.
@@ -16,7 +13,7 @@ Thonny, PyCharm and VSCode are popular IDEs (Integrated Development Environment)
 Python Indentation
 ----------------------
 
-| Python uses **indentation** to indicate a **block of code**.
+| Python uses **indentation** to indicate a **block of code** for selection and iteration and definition.
 | Indentation refers to the spaces at the beginning of a code line.
 | The number of spaces is flexible, but is usually 4 spaces for each indentation.
 | A tab press can be used instead of 4 spaces, with editors converting the tab to 4 spaces.

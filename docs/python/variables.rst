@@ -77,15 +77,15 @@ Sample code
 
 .. code-block:: python
 
-    print('Richmond has won 11 premiership.')
+    print('Federer has won 20 Grand Slams.')
 
 Generalised to:
 
 .. code-block:: python
 
-    team_name = 'Richmond'
-    premierships = '11'
-    print(team_name + ' has won ' + premierships + ' premierships.')
+    player_name = 'Federer'
+    wins = '20'
+    print(player_name + ' has won ' + wins + ' Grand Slams.')
 
 ----
 
@@ -103,3 +103,82 @@ Tasks
     #. A program asks for a person's age and stores it. What would be a good variable to use: ``x``, ``variable1``, ``AGE``, ``age``, ``Years_Old``?
     #. A program uses a person's first name and last name. What would be a good variable to use for their last name: ``x``, ``variable1``, ``SURNAME``, ``last_name``, ``Name``?
     #. A program calculates the area of a rectangle. What would be two good variables to use for the length and width of the rectangle: ``x``, ``y``, ``LENGTH``, ``length``, ``Width``, ``width``?
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+                
+                Write ``AGE`` in snake case.
+
+                .. code-block:: python
+
+                    age
+
+            .. tab-item:: Q2
+                
+                Write ``MyName`` in snake case.
+
+                .. code-block:: python
+
+                    my_name
+
+            .. tab-item:: Q3
+                
+                Write ``MyFirstNameLastName`` in snake case.
+
+                .. code-block:: python
+
+                    my_first_name_last_name
+
+            .. tab-item:: Q4
+                
+                Write ``rectangleArea`` in snake case.
+
+                .. code-block:: python
+
+                    rectangle_area
+
+            .. tab-item:: Q5
+                
+                Write ``cm_in_an_inch = 2.14`` as ALL_CAPS.
+
+                .. code-block:: python
+
+                    CM_IN_AN_INCH = 2.14
+
+            .. tab-item:: Q6
+                
+                Write ``lbs_in_a_kg = 2.2`` as ALL_CAPS.
+
+                .. code-block:: python
+
+                    LBS_IN_A_KG = 2.2
+
+            .. tab-item:: Q7
+                
+                A program asks for a person's age and stores it. What would be a good variable to use: ``x``, ``variable1``, ``AGE``, ``age``, ``Years_Old``?
+
+                .. code-block:: python
+
+                    age
+
+            .. tab-item:: Q8
+                
+                A program uses a person's first name and last name. What would be a good variable to use for their last name: ``x``, ``variable1``, ``SURNAME``, ``last_name``, ``Name``?
+
+                .. code-block:: python
+
+                    last_name                   
+
+            .. tab-item:: Q9
+                
+                A program calculates the area of a rectangle. What would be two good variables to use for the length and width of the rectangle: ``x``, ``y``, ``LENGTH``, ``length``, ``Width``, ``width``?
+
+                .. code-block:: python
+
+                    length, width

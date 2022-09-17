@@ -5,7 +5,7 @@ Variables Scope
 Scope
 --------------
 
-| Scope is an 'block of code' in which a variable is defined, can be accessed and written to. 
+| Scope is a section of code in which a variable is defined, can be accessed and written to. 
 | There are two types of variables: global and local. 
 | By default, all variables defined within a function are local - they cannot be accessed outside of the function. 
 | Since the scope within the function is different from the global one, 
@@ -89,7 +89,7 @@ Use arguments instead of global variables
 
 ----
 
-Nonlocal variables in neested functions
+Nonlocal variables in nested functions
 -----------------------------------------
 
 | The nested functions below has a variable ``x`` which if different to the ``x`` in the outer function:
@@ -98,14 +98,14 @@ Nonlocal variables in neested functions
 
     def outer_func():
         x = 3
-        display.scroll(x, delay=70)  # 3
+        print(x)  # 3
 
         def inner_func():
             x = 7
-            display.scroll(x, delay=70) # 7
+            print(x) # 7
 
         inner_func()
-        display.scroll(x, delay=70) # 3
+        print(x) # 3
 
     outer_func()
 
@@ -117,15 +117,15 @@ Nonlocal variables in neested functions
 
     def outer_func():
         x = 3
-        display.scroll(x, delay=70)  # 3
+        print(x)  # 3
 
         def inner_func():
             nonlocal x
             x = 7
-            display.scroll(x, delay=70) # 7
+            print(x) # 7
 
         inner_func()
-        display.scroll(x, delay=70) # 7
+        print(x) # 7
 
     outer_func()
 

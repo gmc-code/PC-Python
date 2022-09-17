@@ -2,14 +2,15 @@
 Operators
 ==========================
 
-| Assignment operators are used to assign values to variables.
-| The compound assignment operators consist of two operators as a shorthand.
-| Comparison operators are used to compare two values.
-| Membership operators are used to test if a sequence is presented in an object.
-| Identity operators are used to compare the objects, not if they are equal, but if they are actually the same object, with the same memory location.
-| Booleans represent one of two values: True or False.
-| Logical operators are used to combine conditional statements.
+| **Assignment** operators are used to assign values to variables.
+| The **compound assignment** operators consist of two operators as a shorthand.
+| **Comparison** operators are used to compare two values.
+| **Membership** operators are used to test if a sequence is presented in an object.
+| **Identity** operators are used to compare the objects, not if they are equal, but if they are actually the same object, with the same memory location.
+| **Booleans** represent one of two values: True or False.
+| **Logical** operators are used to combine conditional statements.
 
+| The **None** keyword is used to define a null value, or no value at all. None is not the same as 0, False, or an empty string. None is a data type of its own and only None can be None.
 ----
 
 Arithmetic operators
@@ -52,6 +53,9 @@ Arithmetic operators are used with numbers to perform common mathematical operat
 | Floor division rounds down the result from a division to the nearest integer.
 | Exponentiation raises to a power.
 
+
+| The f strings below show the use of each arithmetic operator.
+
 .. code-block:: python
 
     a=9
@@ -59,11 +63,11 @@ Arithmetic operators are used with numbers to perform common mathematical operat
 
     print(f'a + b = {a} + {b} = {a + b}')      # a + b = 9 + 2 = 11
     print(f'a - b = {a} - {b} = {a - b}')      # a - b = 9 - 2 = 7
-    print(f'a * b = {a} * {b} = {a * b}')      # a / b = 9 / 2 = 4.5
+    print(f'a * b = {a} * {b} = {a * b}')      # a * b = 9 * 2 = 4.5
     print(f'a / b = {a} / {b} = {a / b}')      # a / b = 9 / 2 = 4.5
-    print(f'a // b = {a} // {b} = {a // b}')   # a / b = 9 / 2 = 4.5
-    print(f'a % b = {a} % {b} = {a % b}')      # a / b = 9 / 2 = 4.5
-    print(f'a ** b = {a} ** {b} = {a ** b}')   # a / b = 9 / 2 = 4.5
+    print(f'a // b = {a} // {b} = {a // b}')   # a // b = 9 // 2 = 4.5
+    print(f'a % b = {a} % {b} = {a % b}')      # a % b = 9 % 2 = 4.5
+    print(f'a ** b = {a} ** {b} = {a ** b}')   # a ** b = 9 ** 2 = 4.5
 
 
 | Basic arithmetic operators: ``+, -, *, /`` are used in the same way as with a calculator. 
@@ -77,7 +81,7 @@ Arithmetic operators are used with numbers to perform common mathematical operat
     # 86.0
 
 | The ``%`` operator, called ``mod`` is used to calculate the remainder when one value is divided by another. 
-| For example: finding out if a number is odd or even, divide it by 2, and if the remainder is zero, then it was even.
+| For example: finding out if a number is odd or even.
 | When dividing an integer by 2, the remainder will be 1 for odd numbers and 0 for even numbers.
 
 .. code-block:: python
@@ -102,23 +106,22 @@ Compound_assignment
 
     a = 9
     b = 2
+    print(f"a starts as {a}")
+    print(f"b starts as {b}")
     a += b
-    print(a)
-
-    a = 9
-    b = 2
-    a -= b
-    print(a)
-
-    a = 9
-    b = 2
-    a *= b
-    print(a)
-
-    a = 9
-    b = 2
-    a /= b
-    print(a)
+    print(f"a += b gives {a}")
+    a = 9; a -= b
+    print(f"a -= b gives {a}")
+    a = 9; a *= b
+    print(f"a *= b gives {a}")
+    a = 9; a /= b
+    print(f"a /= b gives {a}")
+    a = 9; a //= b
+    print(f"a //= b gives {a}")
+    a = 9; a %= b
+    print(f"a %= b gives {a}")
+    a = 9; a **= b
+    print(f"a **= b gives {a}")
 
 ----
 
@@ -130,9 +133,9 @@ Strings
 
 .. code-block:: python
 
-    name = "Alice"
-    quote = "'And what is the use of a book,' thought " + name + ", 'without pictures or conversation?'"
-    print(quote)
+    name = "Max"
+    message = "Well done " + name + "."
+    print(message)
 
 String and Sequence Operators:
 
