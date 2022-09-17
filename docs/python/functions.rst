@@ -70,13 +70,13 @@ Functions with default parameters
 .. code-block:: python
 
 
-    def employee_info(name="New Guy", salary=80000):
+    def employee_info(name="N. U. Guy", salary=20000):
         print(f"{name} earns ${salary} per year")
 
 
     employee_info()
-    employee_info(name="A. Prentice", salary=60000)
-    employee_info("B. Ginner", 50000)
+    employee_info(name="Nu Guy", salary=25000)
+    employee_info("B. Ginner", 30000)
 
 ----
 

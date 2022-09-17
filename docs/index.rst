@@ -24,6 +24,13 @@ If you are using a trackpad, navigate to various sections and pages by clicking 
     python/python_intro.rst
     python/data_types.rst
     python/operators.rst
+    python/operators_arithmetic.rst
+    python/operators_compound_assignment.rst
+    python/operators_boolean.rst.
+    python/operators_comparison.rst   
+    python/operators_logical.rst  
+    python/operators_membership.rst
+    python/operators_identity.rst
     python/variables.rst
     python/variables_scope.rst
     python/selection.rst
