@@ -4,10 +4,6 @@
 PC-Python
 ====================================================
 
-If you are using a trackpad, navigate to various sections and pages by clicking on a heading and then using the arrow keys.
-
-----
-
 .. toctree::
     :maxdepth: 2
     :caption: Introduction
