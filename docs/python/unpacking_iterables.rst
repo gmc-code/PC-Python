@@ -2,74 +2,41 @@
 Unpacking iterables
 ==========================
 
+| The range function below can take two values, the start and stop values.
+| The **for-loop** code below would normally look like: **for x in range(0, 5)**.
+| The **/*** can be used to unpack the variable vals, so that the tuple (0, 5) is turned into 2 separate arguments, 0 and 5, insetad of staying as the single tuple (0, 5).
 
-
-Multiple Assignment
---------------------------
-
-| Assign multiple variables at teh same time time using commas.
-| The code below assigns 3 variables in one line resulting in: a = 1, b = 2, c = 3.
-| This can also be written as tuples: (a, b, c) = (1, 2, 3)
+| The code below runs as if the arguments to the range function were 0 and 5.
+| The code prints out: 0, 1, 2, 3, 4, 
 
 .. code-block:: python
 
-    a, b, c = 1, 2, 3
-    print(a, b, c)
+    vals = (0, 5)
+    for x in range(*vals):
+        print(x, end=", ")
 
-| This works with tuples fully written.
-
-.. code-block:: python
-
-    (a, b, c) = (4, 5, 6)
-    print(a, b, c)
-
-| This works with lists.
+| The code below runs as if the arguments to the range function were 0, 5 and 2.
+| The code prints out: 0, 2, 4, 
 
 .. code-block:: python
 
-    [a, b, c] = [7, 8, 9]
-    print(a, b, c)
+    vals = (0, 5, 2)
+    for x in range(*vals):
+        print(x, end=", ")
 
-| This works with strings.
 
-.. code-block:: python
+Unpacking with just one value
+-----------------------------------
 
-    a, b, c = "xyz"
-    print(a, b, c)
-
-----
-
-Swapping variable values
---------------------------
-
-| In the code below, a is assigned 7 and b is assigned 8.
-| ``a, b = b, a`` swaps those values so a is 8 and b is 7.
+| What about using just one value? e.g. vals = (5)
+| Python does't treat this as a tuple. 
+| For tuples with just one value, a trailing comma is required. e.g (5,)
+| The range function expects a tuple for unpacking via (*vals), so (5,) is needed.
+| The code prints out: 0, 1, 2, 3, 4, 
 
 .. code-block:: python
 
-    a, b = 7, 8
-    a, b = b, a
-    print(a, b)
+    vals = (5, )
+    for x in range(*vals):
+        print(x, end=", ")
 
-----
-
-Packing with *
---------------------------
-
-| In the code below, a is assigned 1 and b is assigned 2, and c is assigned the rest of the values packed as a list.
-
-
-.. code-block:: python
-
-    a, b, *c = 1, 2, 4, 5, 6, 7
-    print(a, b, c)
-
-Tasks
---------------------------
-
-.. admonition:: Questions
-
-    #. Write ``AGE`` in snake case.
-    #. Write ``MyName`` in snake case.
-
-----
