@@ -68,36 +68,47 @@ Using the python Virtual environment in VSCode
 
 ----
 
-Updating python packages 
+Updating pip
 ---------------------------------
 
-| After setting up a project, there may be a need to update the packages required.
+| After setting up a project, there may be a need to update the pip.
 
 .. code-block::
 
     python.exe -m pip install --upgrade pip
 
+----
 
-| From the command line change directory, ``cd`` to the folder with the ``requirements.txt`` file and use:
+Installing packages
+---------------------------------
 
-.. code-block::
-    
-    cd rtd_venv310
-    pip install --upgrade -r requirements.txt
-
-* ``-U`` can be used instead of ``--upgrade``
+* To install a package such as pillow, check the output from typing in the VSCode terminal:
 
 .. code-block::
 
-    pip install -U -r requirements.txt
+    pip install pillow
 
 
-* To check the installed version numbers and other info about a package, check the output from typing in the VSCode terminal:
+* To check the installed version numbers and other info about a package, such as pillow, check the output from typing in the VSCode terminal:
 
 .. code-block::
 
     pip show pillow
 
+----
+
+Updating packages
+---------------------------------
+
+* To update installed packages, such as pillow, to the latest version, run pip install with the --upgrade or -U option.
+
+.. code-block::
+    pip install --upgrade pillow
+
+----
+
+List installed packages
+------------------------------
 
 * To get all the installed version numbers, check the output from typing in the VSCode terminal:
 
@@ -111,28 +122,11 @@ Updating python packages
 
     pip list -o
 
-----
-
-Updating python packages
-------------------------------
-
-| This is not recommended, but is here for reference purposes. To update all packages in a Windows environment to the latest version available in the Python Package Index (PyPI), use pip in conjunction with Windows PowerShell.
-| Open a command shell by typing ``powershell`` in the Search Box of the Windows Task bar.
-| Enter:
-
-.. code-block::
-    
-    pip freeze | %{$_.split('==')[0]} | %{pip install --upgrade $_}
-
-----
-
-Uninstalling all python packages
-----------------------------------
-
-| This is not recommended, but is here for reference purposes. 
-| To remove all installed python packages, leaving just the built in modules, from the command line:
+* To list updates and those packages that don't need updates, check the output from typing in the VSCode terminal:
 
 .. code-block::
 
-    pip freeze | xargs pip uninstall -y
+    pip list --outdated
+
+
 
