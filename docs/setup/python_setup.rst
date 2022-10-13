@@ -19,14 +19,14 @@ Create a python Virtual environment
 ---------------------------------------
 
 | See: https://www.youtube.com/watch?v=APOPm01BVrk
-| Rather than installing the python packages in the system wide installation of python, a virtual environment can be created that only has the modules needed for sphinx and read the docs.
+| Rather than installing the python packages in the system wide installation of python, a virtual environment can be created that only has the modules needed for your project.
 | Virtual environments allow easy maintenance of the libraries needed for the project and avoid issues that can happen when multiple dependencies conflict across multiple projects.
 
-| Create a virtual environment for the packages needed for read the docs.
+| Create a virtual environment for the packages needed.
 | By default, these will be created in the users directory: ``C:\Users\username\``.
 | In examples below, the virtual environment folder will be called: ``rtd_venv310``, but any suitable name can be used.
 
-| Create a virtual environment with the default system python:
+| Create a virtual environment, called **rtd_venv310**, with the default system python:
 
 .. code-block::
 
@@ -40,6 +40,13 @@ Create a python Virtual environment
 .. code-block::
 
     "C:\Users\username\AppData\Local\Programs\Python\Python310\python.exe" -m venv rtd_venv310
+
+Activate a python Virtual environment
+---------------------------------------
+
+| Before you can start installing or using packages in your virtual environment you'll need to activate it.
+| Activating a virtual environment will put the virtual environment-specific python and pip executables into your shell's PATH.
+| Opening a terminal inside Visual Studio Code will automatically activate the selected virtual environment.
 
 | Activate the virtual environment:
 
@@ -61,44 +68,15 @@ Using the python Virtual environment in VSCode
 
 ----
 
-.. _Python requirements:
+Updating python packages 
+---------------------------------
 
-Install python packages via requirements.txt
------------------------------------------------
-
-| Place a file, called ``requirements.txt``, into the virtual environment folder.
-| Into the file, place the text below, containing the suggested python modules for working with sphinx.
-| There is no need to include the optional modules below unless they are going to be useful.
+| After setting up a project, there may be a need to update the packages required.
 
 .. code-block::
-    
-    # for sphinx to work
-    sphinx==5.0.2
-    sphinx_rtd_theme==1.0.0
-    sphinx-copybutton==0.5.0
-    docutils<0.18  # must be between 0.14 and <0.18 for sphinx
 
-    # for vscode
-    rstcheck==6.0.0.post1
-    esbonio==0.13.0
-    
-    # optional useful sphinx extensions
-    sphinx-design==0.2.0
-    sphinx-togglebutton==0.3.1
-    
+    python.exe -m pip install --upgrade pip
 
-| Install requirements using the full path to a requirements.txt file placed in the virtual environment:
-
-.. code-block::
-    
-    pip install -r "C:\Users\username\rtd_venv310\requirements.txt"
-
-----
-
-Updating python packages in a requirements file
-------------------------------------------------------------
-
-| After setting up a project, there may be a need to update the packages required that are listed in the ``requirements.txt`` file.
 
 | From the command line change directory, ``cd`` to the folder with the ``requirements.txt`` file and use:
 
@@ -118,10 +96,8 @@ Updating python packages in a requirements file
 
 .. code-block::
 
-    pip show sphinx
-    pip show sphinx_rtd_theme
-    pip show sphinx-copybutton
-    pip show docutils
+    pip show pillow
+
 
 * To get all the installed version numbers, check the output from typing in the VSCode terminal:
 
