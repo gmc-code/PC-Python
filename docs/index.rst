@@ -17,6 +17,22 @@ PC-Python
     :caption: Python
     :numbered:
 
+    setup/python_setup.rst
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Pillow
+    :numbered:
+
+    pillow/images_with_Pillow.rst
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Python
+    :numbered:
+
     python/python_intro.rst
     python/data_types.rst
     python/operators.rst
