@@ -6,8 +6,7 @@ Pillow Introduction
 | See: https://pypi.org/project/Pillow/
 | See documentation at: https://pillow.readthedocs.io/en/stable/
 | You can use the library to create thumbnails, convert between file formats, print images.
-| The library contains basic image processing functionality, including point operations, and colour space conversions.
-| The library also supports image resizing, rotation and transforms.
+| The library contains basic image processing, image resizing, rotation and transforms.
 
 ----
 
@@ -29,6 +28,7 @@ Install or update pillow
 * To update pillow, to the latest version, run pip install with the --upgrade or -U option.
 
 .. code-block::
+
     pip install --upgrade pillow
 
 
