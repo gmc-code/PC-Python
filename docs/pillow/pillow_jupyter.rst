@@ -12,9 +12,9 @@ class: thebe
 .. code-block:: python
     :class: thebe
 
-    from IPython import display
-    display.Image("images/arrows/Narrow.png")
-
+    from PIL import Image
+    with Image.open("images/arrows/Narrow.png") as im:
+        im.show()
 
 ----
 
