@@ -25,14 +25,13 @@ class: thebe
     Image.open("images/arrows/Narrow.png")
 
 ----
+
 .. code-block:: python
     :class: thebe
     
     from PIL import Image
     from urllib.request import urlopen
-
     url = "https://pc-python.readthedocs.io/en/latest/_images/Narrow.png"
-
     Image.open(urlopen(url))
     
 
