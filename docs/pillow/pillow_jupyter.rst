@@ -12,8 +12,9 @@ class: thebe
 .. code-block:: python
     :class: thebe
 
-    import pathlib
-    print(pathlib.Path().resolve())
+    import IPython
+    url = 'https://pc-python.readthedocs.io/en/latest/_images/Narrow.png'
+    IPython.display.Image(url, width = 250)
 
 ----
 
