@@ -13,6 +13,8 @@ class: thebe
     :class: thebe
 
     from PIL import Image
+    Image.open("images/arrows/Narrow.png")
+    
     with Image.open("images/arrows/Narrow.png") as im:
         im.show()
 
