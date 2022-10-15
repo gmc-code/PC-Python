@@ -15,8 +15,8 @@ Show an image
 
     from PIL import Image
 
-    with Image.open("Narrow.png") as img:
-        img.show()
+    with Image.open("Narrow.png") as im:
+        im.show()
          
 
         
