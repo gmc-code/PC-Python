@@ -38,7 +38,7 @@ Convert to black and white
 ----
 
 
-Convert to black and white
+Convert to RGB
 ----------------------------
 
 | Use the **convert(mode='RGB')** method to convert an image to RGB with transparent regions converted to white.
