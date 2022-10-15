@@ -25,8 +25,6 @@ Convert a folder to jpgs using pathlib
     from PIL import Image
     from pathlib import Path
 
-    # https://docs.python.org/3/library/pathlib.html
-
     im_dir = "shapes"
     im_new_dir = "shapes_jpgs"
     cwd = Path.cwd()

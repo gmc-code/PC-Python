@@ -30,12 +30,12 @@ PC-Python
     pillow/image_attributes.rst
     pillow/show_an_image.rst
     pillow/save_an_image.rst
+    pillow/convert_an_image.rst
     pillow/convert_a_folder.rst
     pillow/resize_an_image.rst
+    pillow/resize_image_folder.rst
     pillow/rotate_an_image.rst
-    pillow/pillow_jupyter.rst
    
-
 
 .. toctree::
     :maxdepth: 2
