@@ -13,7 +13,7 @@ class: thebe
     :class: thebe
 
     from IPython import display
-    display.Image("./images/arrows/Narrow.png")
+    display.Image("images/arrows/Narrow.png")
 
 
 ----
