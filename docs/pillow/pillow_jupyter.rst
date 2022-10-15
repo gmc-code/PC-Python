@@ -13,7 +13,12 @@ class: thebe
     :class: thebe
 
     import pathlib
-    pathlib.Path().resolve()
+    print(pathlib.Path().resolve())
+
+----
+
+.. code-block:: python
+    :class: thebe
 
     from PIL import Image
     Image.open("images/arrows/Narrow.png")
