@@ -25,7 +25,7 @@ PC-Python
     :caption: Pillow
     :numbered:
 
-    pillow/Pillow_intoduction.rst
+    pillow/Pillow_introduction.rst
     pillow/open_an_image.rst
     pillow/image_attributes.rst
     pillow/show_an_image.rst
