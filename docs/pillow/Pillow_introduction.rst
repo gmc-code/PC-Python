@@ -2,11 +2,13 @@
 Pillow Introduction
 ==========================
 
-| Pillow is a pyhton package to manipulate images.
-| See: https://pypi.org/project/Pillow/
-| See documentation at: https://pillow.readthedocs.io/en/stable/
+| Pillow is a python package to manipulate images.
 | You can use the library to create thumbnails, convert between file formats, print images.
 | The library contains basic image processing, image resizing, rotation and transforms.
+
+| See: https://pypi.org/project/Pillow/
+| See documentation at: https://pillow.readthedocs.io/en/stable/
+| See tutorial at: https://pillow.readthedocs.io/en/stable/handbook/tutorial.html
 
 | Some useful intor youtube videos are:
 | See: https://www.youtube.com/watch?v=5QR-dG68eNE

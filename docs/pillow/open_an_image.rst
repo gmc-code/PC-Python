@@ -4,6 +4,10 @@ Open an image
 
 | See: https://pillow.readthedocs.io/en/stable/reference/open_files.html#file-handling
 
+----
+
+Open file in same folder
+---------------------------
 
 | The code below opens an image and shows it.
 | Use **with** to automatically close the file resource.
@@ -16,7 +20,12 @@ Open an image
 
     with Image.open("Narrow.png") as im:
         im.show()
-         
+
+----
+
+Open file in subfolder
+---------------------------
+
 | The file below is in the "arrows" folder within the folder containing the python script.
 
 .. code-block:: python
@@ -25,4 +34,21 @@ Open an image
 
     with Image.open("arrows/Narrow.png") as im:
         im.show()
-        
+
+----
+
+Open file from url
+---------------------------
+
+| The code belwo uses the **urllib.request** library to help open an image url.
+
+.. code-block:: python
+
+    from PIL import Image
+    from urllib.request import urlopen
+
+    url = "https://pc-python.readthedocs.io/en/latest/_images/Narrow.png"
+
+    with Image.open(urlopen(url)) as im:
+        im.show()
+

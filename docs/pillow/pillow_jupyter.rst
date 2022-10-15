@@ -20,14 +20,6 @@ class: thebe
 
 .. code-block:: python
     :class: thebe
-
-    from PIL import Image
-    Image.open("images/arrows/Narrow.png")
-
-----
-
-.. code-block:: python
-    :class: thebe
     
     from PIL import Image
     from urllib.request import urlopen
