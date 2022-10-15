@@ -31,7 +31,8 @@ PC-Python
     pillow/show_an_image.rst
     pillow/save_an_image.rst
     pillow/resize_an_image.rst
-    pillow/show_an_image.rst
+    pillow/rotate_an_image.rst
+    pillow/pillow_jupyter.rst
    
 
 

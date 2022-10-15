@@ -16,9 +16,8 @@ Same file type
 
     from PIL import Image
 
-    with Image.open("shapes/box.png") as im:
-        im.save("shapes/box1.png")
-         
+    with Image.open("arrows/Narrow.png") as im:
+        im.save("arrows/arrow_0.png")     
 
 ----
 
@@ -32,7 +31,6 @@ Different file type
 .. code-block:: python
 
     from PIL import Image
-
 
     with Image.open("shapes/box.png") as im:
         new_im = im.convert('RGB')
