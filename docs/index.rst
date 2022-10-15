@@ -28,7 +28,10 @@ PC-Python
     pillow/Pillow_intoduction.rst
     pillow/open_an_image.rst
     pillow/image_attributes.rst
-    pillow/open_an_image.rst
+    pillow/show_an_image.rst
+    pillow/save_an_image.rst
+    pillow/resize_an_image.rst
+    pillow/show_an_image.rst
    
 
 

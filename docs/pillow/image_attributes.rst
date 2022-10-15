@@ -1,5 +1,5 @@
 ==========================
-Images attributes
+Image attributes
 ==========================
 
 | See: https://pillow.readthedocs.io/en/stable/reference/Image.html#image-attributes
@@ -20,5 +20,3 @@ Images attributes
 | The width is 500
 | The height is 500
 
-
-PNG (500, 500) RGBA 
