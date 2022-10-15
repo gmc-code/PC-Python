@@ -1,5 +1,5 @@
 ==========================
-Jupyter Test
+Pillow Jupyter
 ==========================
 
 .. thebe-button:: Activate Jupyter
