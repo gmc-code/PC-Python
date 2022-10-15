@@ -14,14 +14,11 @@ class: thebe
 
     from PIL import Image
     Image.open("images/arrows/Narrow.png")
-    
-    with Image.open("images/arrows/Narrow.png") as im:
-        im.show()
 
 ----
 
 .. image:: images/arrows/Narrow.png
-    :scale: 100%
+    :scale: 50%
 
 
 
