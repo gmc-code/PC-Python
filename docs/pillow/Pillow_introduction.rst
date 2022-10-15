@@ -8,6 +8,10 @@ Pillow Introduction
 | You can use the library to create thumbnails, convert between file formats, print images.
 | The library contains basic image processing, image resizing, rotation and transforms.
 
+| Some useful intor youtube videos are:
+| See: https://www.youtube.com/watch?v=5QR-dG68eNE
+| See: https://www.youtube.com/watch?v=6Qs3wObeWwc
+
 ----
 
 Install or update pillow

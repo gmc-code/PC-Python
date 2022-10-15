@@ -26,7 +26,10 @@ PC-Python
     :numbered:
 
     pillow/Pillow_intoduction.rst
-    pillow/images_with_Pillow.rst
+    pillow/open_an_image.rst
+    pillow/image_attributes.rst
+    pillow/open_an_image.rst
+   
 
 
 .. toctree::
