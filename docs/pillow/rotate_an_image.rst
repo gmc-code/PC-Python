@@ -20,7 +20,7 @@ Rotate to 90
         im2.save("arrows/arrow_90.png")
 
 .. image:: images/arrows2.png
-    :scale: 50%
+    :scale: 25%
     :align: center
     
 ----
@@ -41,7 +41,7 @@ Rotate to 90, 180, 270
             im2.save("arrows/arrow_" + str(ang) +".png")
 
 .. image:: images/arrows4.png
-    :scale: 50%
+    :scale: 25%
     :align: center
     
 ----
@@ -62,7 +62,7 @@ Rotate to 45, 135, 225, 315
             im2.save("arrows/arrow_" + str(ang) +".png")
 
 .. image:: images/arrows4x.png
-    :scale: 50%
+    :scale: 25%
     :align: center
 
 ----
@@ -83,5 +83,5 @@ Rotate and expand
             im2.save("rotations/egg_" + str(ang) +".png")
 
 .. image:: images/eggs4hor.png
-    :scale: 50%   
+    :scale: 25%   
     :align: center
