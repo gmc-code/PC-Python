@@ -32,6 +32,7 @@ Merge images
 
 .. image:: images/eggs2h.png
     :scale: 50%
+    :align: center
 
 ----
 
@@ -61,6 +62,7 @@ Merge images
 
 .. image:: images/eggs2v.png
     :scale: 50%
+    :align: center
 
 ----
 
@@ -92,8 +94,8 @@ Merge images
     im6.save("rotations/eggs4.png")
 
 .. image:: images/eggs4hor.png
-    :scale: 25%
-
+    :scale: 100%
+    :align: center
 
 ----
 
@@ -125,5 +127,5 @@ Merge images
     im5.save("rotations/eggs4.png")
 
 .. image:: images/eggs4.png
-    :scale: 25%
-
+    :scale: 100%
+    :align: center
