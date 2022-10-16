@@ -65,7 +65,7 @@ Stretch by a specific ratio
         im_new = im.resize((width, height))
         im_new.save("shapes/o_hor_stretch" + str(hor_stretch) + ".png")
 
-.. image:: images/o_hor_stretch.png
+.. image:: images/o_stretch_hor.png
     :scale: 50%
     :align: center
     
@@ -83,7 +83,7 @@ Stretch by a specific ratio
         im_new = im.resize((width, height))
         im_new.save("shapes/o_vert_stretch" + str(vert_stretch) + ".png")
 
-.. image:: images/o_vert_stretch.png
+.. image:: images/o_stretch_vert.png
     :scale: 50%
     :align: center
     
@@ -104,9 +104,9 @@ Resize a box area
         (width, height) = (im.width // 2, im.height // 2)
         box_to_resize = (0, 0, width, height)
         im_new = im.resize((curr_width, curr_height), box=box_to_resize)
-        im_new.save("shapes/o_section.png")
+        im_new.save("shapes/o_arc.png")
 
-.. image:: images/o_section.png
+.. image:: images/o_and_arc.png
     :scale: 50%
     :align: center
     
