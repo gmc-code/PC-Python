@@ -31,7 +31,7 @@ Merge images
     im3.save("rotations/eggs2h.png")
 
 .. image:: images/eggs2h.png
-    :scale: 50%
+    :scale: 75%
     :align: center
 
 ----
@@ -61,7 +61,7 @@ Merge images
     im3.save("rotations/eggs2v.png")
 
 .. image:: images/eggs2v.png
-    :scale: 50%
+    :scale: 75%
     :align: center
 
 ----
