@@ -23,7 +23,7 @@ Resize to a specific size
         im_new.save("shapes/rect_400_300.png")
 
 .. image:: images/box_rect.png
-    :scale: 100%
+    :scale: 50%
     :align: center
     
 ----
@@ -44,7 +44,7 @@ Resize to a specific ratio
         im_new.save("shapes/box_half.png")
 
 .. image:: images/box_half.png
-    :scale: 100%
+    :scale: 50%
     :align: center
     
 ----
@@ -66,7 +66,7 @@ Stretch by a specific ratio
         im_new.save("shapes/o_hor_stretch" + str(hor_stretch) + ".png")
 
 .. image:: images/o_hor_stretch.png
-    :scale: 100%
+    :scale: 50%
     :align: center
     
 
@@ -84,7 +84,7 @@ Stretch by a specific ratio
         im_new.save("shapes/o_vert_stretch" + str(vert_stretch) + ".png")
 
 .. image:: images/o_vert_stretch.png
-    :scale: 100%
+    :scale: 50%
     :align: center
     
 ----
@@ -107,7 +107,7 @@ Resize a box area
         im_new.save("shapes/o_section.png")
 
 .. image:: images/o_section.png
-    :scale: 100%
+    :scale: 50%
     :align: center
     
 
