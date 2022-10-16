@@ -56,3 +56,23 @@ Coloured new png
     :scale: 50%
     :align: center
 
+----
+
+Coloured new jpg
+------------------
+
+| The code below saves a green png of size (128, 128).
+
+.. code-block:: python
+
+    from PIL import Image
+
+    new_im = Image.new("RGB", (128, 128), (0, 255, 0))
+    new_im.save("new_images/green.jpg")
+
+
+.. image:: images/green.jpg
+    :scale: 50%
+    :align: center
+
+
