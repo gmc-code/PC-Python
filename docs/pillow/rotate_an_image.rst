@@ -79,5 +79,5 @@ Rotate and expand
             im2 = im.rotate(ang, expand=1)
             im2.save("rotations/egg_" + str(ang) +".png")
 
- .. image:: images/eggs4hor.png
+.. image:: images/eggs4hor.png
     :scale: 50%   

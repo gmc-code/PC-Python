@@ -20,6 +20,9 @@ Convert to greyscale
         new_im = im.convert(mode='L')
         new_im.save("shapes/box_grey.png")
 
+.. image:: images/box_grey.png
+    :scale: 50%
+
 ----
 
 Convert to black and white
@@ -35,8 +38,10 @@ Convert to black and white
         new_im = im.convert(mode='1')
         new_im.save("shapes/box_1.png")
 
-----
+.. image:: images/box_1.png
+    :scale: 50%
 
+----
 
 Convert to RGB
 ----------------------------
@@ -50,4 +55,7 @@ Convert to RGB
     with Image.open("shapes/box.png") as im:
         new_im = im.convert(mode='RGB')
         new_im.save("shapes/box_RGB.png")
+
+.. image:: images/box_RGB.png
+    :scale: 50%
 

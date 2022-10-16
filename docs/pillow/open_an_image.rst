@@ -18,22 +18,28 @@ Open file in same folder
 
     from PIL import Image
 
-    with Image.open("Narrow.png") as im:
+    with Image.open("box.png") as im:
         im.show()
+
+.. image:: images/box.png
+    :scale: 50%
 
 ----
 
 Open file in subfolder
 ---------------------------
 
-| The file below is in the "arrows" folder within the folder containing the python script.
+| The file below is in the "shapes" folder within the folder containing the python script.
 
 .. code-block:: python
 
     from PIL import Image
 
-    with Image.open("arrows/Narrow.png") as im:
+    with Image.open("shapes/tri.png") as im:
         im.show()
+
+.. image:: images/tri.png
+    :scale: 50%
 
 ----
 
@@ -47,8 +53,10 @@ Open file from url
     from PIL import Image
     from urllib.request import urlopen
 
-    url = "https://pc-python.readthedocs.io/en/latest/_images/Narrow.png"
+    url = "https://pc-python.readthedocs.io/en/latest/_images/box.png"
 
     with Image.open(urlopen(url)) as im:
         im.show()
 
+.. image:: images/box.png
+    :scale: 50%

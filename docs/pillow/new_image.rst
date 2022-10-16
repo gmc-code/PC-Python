@@ -31,3 +31,7 @@ White new png
     new_im = Image.new("RGBA", (256, 256), (255, 255, 255))
     new_im.save("new_images/white.png")
 
+
+.. image:: images/white.png
+    :scale: 50%
+

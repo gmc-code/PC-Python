@@ -10,17 +10,20 @@ Resize to a specific size
 ----------------------------
 
 | The code below resizes an image and saves it with another name.
-| The box image is has a width of 500 and height of 500.
-| The box image is resized to have a width of 500 and height of 300, and is saved as **rect.png**.
+| The box image is has a width of 256 and height of 256.
+| The box image is resized to have a width of 400 and height of 300, and is saved as **rect.png**.
 
 .. code-block:: python
 
     from PIL import Image
 
     with Image.open("shapes/box.png") as im:
-        newsize = (500, 300)
+        newsize = (400, 300)
         im_new = im.resize(newsize)
-        im_new.save("shapes/rect.png")
+        im_new.save("shapes/rect_400_300.png")
+
+.. image:: images/box_rect.png
+    :scale: 100%
 
 ----
 
@@ -38,6 +41,9 @@ Resize to a specific ratio
         (width, height) = (im.width // 2, im.height // 2)
         im_new = im.resize((width, height))
         im_new.save("shapes/box_half.png")
+
+.. image:: images/box_half.png
+    :scale: 100%
 
 ----
 
@@ -57,6 +63,9 @@ Stretch by a specific ratio
         im_new = im.resize((width, height))
         im_new.save("shapes/o_hor_stretch" + str(hor_stretch) + ".png")
 
+.. image:: images/o_hor_stretch.png
+    :scale: 100%
+
 
 | The code below stretches the image vertically.
 | The new saved file includes the stretch factor in its file name.
@@ -71,6 +80,8 @@ Stretch by a specific ratio
         im_new = im.resize((width, height))
         im_new.save("shapes/o_vert_stretch" + str(vert_stretch) + ".png")
 
+.. image:: images/o_vert_stretch.png
+    :scale: 100%
 
 ----
 
@@ -91,5 +102,7 @@ Resize a box area
         im_new = im.resize((curr_width, curr_height), box=box_to_resize)
         im_new.save("shapes/o_section.png")
 
+.. image:: images/o_section.png
+    :scale: 100%
 
 

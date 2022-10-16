@@ -38,7 +38,7 @@ PC-Python
     pillow/transpose_an_image.rst
     pillow/new_image.rst
     pillow/merge_images.rst
-    pillow/blur_an_image.rst
+    pillow/image_filters.rst
    
 
 .. toctree::
