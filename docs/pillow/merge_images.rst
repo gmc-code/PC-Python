@@ -99,7 +99,7 @@ Merge images
 
 ----
 
-4 images in a row
+4 images in 2 rows
 ---------------------------
 
 | The code below first places 2 images together, then another 2, then combines them in column.
