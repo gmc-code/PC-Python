@@ -10,13 +10,12 @@ Image attributes
 
     from PIL import Image
 
-    with Image.open("arrows/Narrow.png") as im:
-        print(im.filename, im.format, im.mode, im.size, im.width, im.height)
-        
-| The filename is arrows/Narrow.png 
-| The format is PNG
-| The mode is RGBA
-| The size is (500, 500)
-| The width is 500
-| The height is 500
+    with Image.open("test_images/Test.png") as im:
+        print(im.filename, im.format, im.mode, im.size, im.width, im.height, sep=";")
+
+    with Image.open("test_images/Test.jpg") as im:
+        print(im.filename, im.format, im.mode, im.size, im.width, im.height, sep=";")
+
+| The first printout is: test_images/Test.png;PNG;RGBA;(620, 472);620;472
+| The second printout is: test_images/Test.jpg;JPEG;RGB;(620, 472);620;472
 

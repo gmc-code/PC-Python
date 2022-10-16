@@ -35,6 +35,10 @@ PC-Python
     pillow/resize_an_image.rst
     pillow/resize_image_folder.rst
     pillow/rotate_an_image.rst
+    pillow/transpose_an_image.rst
+    pillow/new_image.rst
+    pillow/merge_images.rst
+    pillow/blur_an_image.rst
    
 
 .. toctree::

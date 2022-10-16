@@ -43,7 +43,7 @@ Save as PNG
     
 | The file extension in the new file name is used to specify the file type for saving.
 | PNGs need to have the alpha channel removed to save the image as a jpg.
-| compress_level is a number between 0 and 9: 1 gives best speed, 9 gives best compression, 0 gives no compression at all. Default is 6.
+| **compress_level** is a number between 0 and 9: 1 gives best speed, 9 gives best compression, 0 gives no compression at all. Default is 6.
 
 .. code-block:: python
 

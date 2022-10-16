@@ -15,8 +15,9 @@ Show an image
 
     from PIL import Image
 
-    with Image.open("Narrow.png") as im:
+    with Image.open("tri.png") as im:
         im.show()
          
-
+.. image:: images/tri.png
+    :scale: 50%
         
