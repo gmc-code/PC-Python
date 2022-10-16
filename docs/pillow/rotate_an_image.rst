@@ -83,5 +83,5 @@ Rotate and expand
             im2.save("rotations/egg_" + str(ang) +".png")
 
 .. image:: images/eggs4hor.png
-    :scale: 25%   
+    :scale: 50%   
     :align: center
