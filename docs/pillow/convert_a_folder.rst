@@ -2,6 +2,10 @@
 Convert a folder
 ==========================
 
+| For pathlib and os use See: https://csatlas.com/python-list-directory/
+
+----
+
 Convert a folder to jpgs using pathlib
 -------------------------------------------
 
@@ -39,6 +43,29 @@ Convert a folder to jpgs using pathlib
                 new_im = im.convert('RGB')
                 new_im.save(im_new_dir + "/" + f.stem + ".jpg")
 
+
+| Use the glob method to just get files with matching file extension.
+
+.. code-block:: python
+
+    from PIL import Image
+    from pathlib import Path
+
+    im_dir = "shapes"
+    im_new_dir = "shapes_jpgs"
+    imgs_path = Path.cwd() / im_dir
+    new_imgs_path = Path.cwd() / im_new_dir
+
+    if not(new_imgs_path.exists()):
+        new_imgs_path.mkdir()
+
+    for f in imgs_path.glob('*.png'):
+        with Image.open(f) as im:
+            save_path = new_imgs_path / (f.stem + '.jpg')
+            rgb_im2 = im.convert('RGB')
+            rgb_im2.save(save_path, quality=95)
+
+
 ----
 
 Convert a folder to jpgs using os
@@ -72,5 +99,3 @@ Convert a folder to jpgs using os
                 new_im = im.convert('RGB')
                 fn, fext = os.path.splitext(f)
                 new_im.save(im_new_dir + "/" + fn + ".jpg")
-
-
