@@ -41,5 +41,6 @@ Transpose variations
 | All 8 possible orientations are shown.
 
 .. image:: images/transforms.png
-    :scale: 25%
+    :scale: 50%
+    :align: center
 

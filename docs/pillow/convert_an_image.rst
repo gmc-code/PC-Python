@@ -22,7 +22,8 @@ Convert to greyscale
 
 .. image:: images/box_grey.png
     :scale: 50%
-
+    :align: center
+    
 ----
 
 Convert to black and white
@@ -40,7 +41,8 @@ Convert to black and white
 
 .. image:: images/box_1.png
     :scale: 50%
-
+    :align: center
+    
 ----
 
 Convert to RGB
@@ -58,4 +60,5 @@ Convert to RGB
 
 .. image:: images/box_RGB.png
     :scale: 50%
-
+    :align: center
+    

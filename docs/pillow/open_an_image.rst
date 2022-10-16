@@ -23,7 +23,8 @@ Open file in same folder
 
 .. image:: images/box.png
     :scale: 50%
-
+    :align: center
+    
 ----
 
 Open file in subfolder
@@ -40,7 +41,8 @@ Open file in subfolder
 
 .. image:: images/tri.png
     :scale: 50%
-
+    :align: center
+    
 ----
 
 Open file from url
@@ -60,3 +62,5 @@ Open file from url
 
 .. image:: images/box.png
     :scale: 50%
+    :align: center
+    

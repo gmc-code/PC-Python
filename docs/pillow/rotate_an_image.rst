@@ -21,7 +21,8 @@ Rotate to 90
 
 .. image:: images/arrows2.png
     :scale: 100%
-
+    :align: center
+    
 ----
 
 Rotate to 90, 180, 270
@@ -41,7 +42,8 @@ Rotate to 90, 180, 270
 
 .. image:: images/arrows4.png
     :scale: 50%
-
+    :align: center
+    
 ----
 
 Rotate to 45, 135, 225, 315
@@ -61,6 +63,7 @@ Rotate to 45, 135, 225, 315
 
 .. image:: images/arrows4x.png
     :scale: 50%
+    :align: center
 
 ----
 
@@ -81,3 +84,4 @@ Rotate and expand
 
 .. image:: images/eggs4hor.png
     :scale: 50%   
+    :align: center

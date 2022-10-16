@@ -23,7 +23,8 @@ Blur
 
 .. image:: images/blocks_blur.png
     :scale: 50%
-    
+    :align: center
+        
 ----
 
 Sharpen
@@ -42,4 +43,5 @@ Sharpen
 
 .. image:: images/blocks_sharp.png
     :scale: 50%
-
+    :align: center
+    

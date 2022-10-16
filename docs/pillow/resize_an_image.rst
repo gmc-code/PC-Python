@@ -24,7 +24,8 @@ Resize to a specific size
 
 .. image:: images/box_rect.png
     :scale: 100%
-
+    :align: center
+    
 ----
 
 Resize to a specific ratio
@@ -44,7 +45,8 @@ Resize to a specific ratio
 
 .. image:: images/box_half.png
     :scale: 100%
-
+    :align: center
+    
 ----
 
 Stretch by a specific ratio
@@ -65,7 +67,8 @@ Stretch by a specific ratio
 
 .. image:: images/o_hor_stretch.png
     :scale: 100%
-
+    :align: center
+    
 
 | The code below stretches the image vertically.
 | The new saved file includes the stretch factor in its file name.
@@ -82,7 +85,8 @@ Stretch by a specific ratio
 
 .. image:: images/o_vert_stretch.png
     :scale: 100%
-
+    :align: center
+    
 ----
 
 Resize a box area
@@ -104,5 +108,6 @@ Resize a box area
 
 .. image:: images/o_section.png
     :scale: 100%
-
+    :align: center
+    
 

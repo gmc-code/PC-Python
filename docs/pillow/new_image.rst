@@ -34,4 +34,5 @@ White new png
 
 .. image:: images/white.png
     :scale: 50%
-
+    :align: center
+    
