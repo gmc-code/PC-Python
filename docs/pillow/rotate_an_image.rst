@@ -20,7 +20,7 @@ Rotate to 90
         im2.save("arrows/arrow_90.png")
 
 .. image:: images/arrows2.png
-    :scale: 100%
+    :scale: 50%
     :align: center
     
 ----
@@ -76,7 +76,7 @@ Rotate and expand
 
     from PIL import Image
 
-    with Image.open("arrows/egg.png") as im:
+    with Image.open("rotations/egg.png") as im:
         angles = [0, 90, 180, 270]
         for ang in angles:
             im2 = im.rotate(ang, expand=1)
