@@ -22,7 +22,7 @@ PC-Python
 
 .. toctree::
     :maxdepth: 2
-    :caption: Pillow
+    :caption: Pillow image editing
     :numbered:
 
     pillow/Pillow_introduction.rst
