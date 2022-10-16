@@ -18,6 +18,7 @@ Blank new png
     new_im = Image.new("RGBA", (256, 256))
     new_im.save("new_images/blank.png")
 
+----
 
 White new png
 ----------------
@@ -35,4 +36,23 @@ White new png
 .. image:: images/white.png
     :scale: 50%
     :align: center
-    
+
+----
+
+Coloured new png
+------------------
+
+| The code below saves a light blue png of size (256, 256).
+
+.. code-block:: python
+
+    from PIL import Image
+
+    new_im = Image.new("RGBA", (256, 256), (204, 229, 255))
+    new_im.save("new_images/light_blue.png")
+
+
+.. image:: images/light_blue.png
+    :scale: 50%
+    :align: center
+
