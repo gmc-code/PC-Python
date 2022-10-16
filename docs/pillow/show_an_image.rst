@@ -15,9 +15,11 @@ Show an image
 
     from PIL import Image
 
-    with Image.open("tri.png") as im:
+    with Image.open("tri.jpg") as im:
         im.show()
          
-.. image:: images/tri.png
+.. image:: images/tri.jpg
     :scale: 50%
-        
+    :align: center
+    
+            
