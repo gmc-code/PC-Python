@@ -164,8 +164,6 @@ Paste random greyscale rectangles
 | Create a function, **paste_rect(rvals)** that takes a list of lengths in the range 1 to 255, gets a random greyscale integer, calculates a random rectangle and pastes the greyscal rect angle to the base image.
 | The code below places between 4 and 30 large rectangels first, then between 4 and 50 small rectangles.
 
-
-
 .. code-block:: python
 
     from PIL import Image
@@ -205,9 +203,70 @@ Paste random greyscale rectangles
 
     im.save("new_images/random_grey_rects.png")
 
+
 .. image:: images/random_grey_rects.png
     :scale: 50%
     :align: center
 
+----
 
+
+Paste random greyscale rectangles using offscreen area
+--------------------------------------------------------
+
+| Modify **paste_rect(rvals)** to create a new definition, **paste_rect_offscreen(rvals)**, that allows rectangles to be draws partially offscreen, so as to better use the edge areas.
+| In, paste_rect_offscreen, the top left position can be offscreen at -100, -100.
+
+.. code-block:: python
+
+    from PIL import Image
+    import random
+
+    def random_rgb(gvals):
+        gv = random.choice(gvals)
+        return gv
+
+    def paste_rect(rvals):
+        c = random_rgb(gvals)
+        # print(c, end="; ")
+        w = random.choice(rvals)
+        h = random.choice(rvals)
+        x1max = 256 - w
+        y1max = 256 - h
+        x1 = random.randint(0, x1max)
+        y1 = random.randint(0, y1max)
+        x2 = x1 + w
+        y2 = y1 + h
+        im.paste(c, (x1, y1, x2, y2))
+
+    def paste_rect_offscreen(rvals):
+        c = random_rgb(gvals)
+        # print(c, end="; ")
+        w = random.choice(rvals)
+        h = random.choice(rvals)
+        x1 = random.randint(-100, 245)
+        y1 = random.randint(-100, 245)
+        x2 = x1 + w
+        y2 = y1 + h
+        im.paste(c, (x1, y1, x2, y2))
+
+
+    im = Image.new("L", (256, 256), 255)
+    gvals = range(0,256)
+    rvals = [80, 100, 120]
+    large_num = random.randint(4, 30)
+    for i in range(large_num):
+        paste_rect_offscreen(rvals)
+
+    rvals = [10, 20, 30, 40, 50, 60]
+    small_num = random.randint(4, 50)
+    for i in range(small_num):
+        paste_rect(rvals)
+
+    im.save("new_images/random_grey_rects_offscreen.png")
+
+
+.. image:: images/random_grey_rect_offscreen.png
+    :scale: 50%
+    :align: center
 
