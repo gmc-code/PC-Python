@@ -9,7 +9,7 @@ Image draw
 
 ----
 
-Blur
+Rectangles
 ----------------------
 
 | Use the **.filter(ImageFilter.BLUR)** method to blur an image.
@@ -27,23 +27,3 @@ Blur
     :scale: 50%
     :align: center
         
-----
-
-Sharpen
-----------------------
-
-| Use the **.filter(ImageFilter.SHARPEN)** method to sharpen an image.
-
-.. code-block:: python
-
-    from PIL import Image, ImageFilter
-
-    with Image.open("test_images/alph_blocks.png") as im:
-        new_im = im.filter(ImageFilter.SHARPEN)
-        new_im.save("filters/sharpen.png")
-
-
-.. image:: images/blocks_sharp.png
-    :scale: 50%
-    :align: center
-    
