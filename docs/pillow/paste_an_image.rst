@@ -95,13 +95,14 @@ Paste method with RGB
 
 ----
 
-Paste random rectangles
----------------------------
+Paste random coloured rectangles
+----------------------------------
 
-| Use the paste method to place random rectangles in image 256 by 256.
-| Create a function, **random_rgb(cvals)**, that takes in a list of numbers in range 0 to 255, and returns random rgb tuples by ranodmly choosing from the list. Make sure that it doesn't return black (0, 0, 0) or white (255, 255, 255).
+| Use the paste method to place random rectangles in an image 256 by 256.
+| Create a function, **random_rgb(cvals)**, that takes in a list of numbers in range 0 to 255, and returns random rgb tuples by randomly choosing from the list. Make sure that it doesn't return black (0, 0, 0) or white (255, 255, 255). THe lsit used below is the standard websafe list: [0, 51, 102, 153, 204, 255].
 | Create a function, **paste_rect(rvals)** that takes a list of lengths in the range 1 to 255, gets a random rgb tuple, calculates a random rectangle and pastes the colour to the base image.
-
+| The random rectangle needs to fit, so once the width and height are chosen, the closet position to the bottom right is calculated so that the random top left positions can be chosen from the top left corner  to the calculated point.
+| The code below places between 4 and 30 large rectangels first, then between 4 and 50 small rectangles.
 
 .. code-block:: python
 
@@ -134,7 +135,8 @@ Paste random rectangles
 
 
     im = Image.new("RGBA", (256, 256), (255, 255, 255))
-    cvals = [0, 55, 80, 128, 175, 200, 255]
+    cvals = [0, 51, 102, 153, 204, 255]  # standard websafe values
+
     rvals = [80, 100, 120]
     large_num = random.randint(4, 30)
     for i in range(large_num):
@@ -151,3 +153,61 @@ Paste random rectangles
 .. image:: images/random_colour_rects.png
     :scale: 50%
     :align: center
+
+----
+
+Paste random greyscale rectangles
+----------------------------------
+
+| Use the paste method to place random rectangles in an image 256 by 256.
+| Create a function, **random_rgb(gvals)**, that takes in a list of numbers in range 0 to 255, and returns a random greyscale level value by randomly choosing from the list. THe rangle fucntion can be used for a full spectrum of possible values from 0 to 255.
+| Create a function, **paste_rect(rvals)** that takes a list of lengths in the range 1 to 255, gets a random greyscale integer, calculates a random rectangle and pastes the greyscal rect angle to the base image.
+| The code below places between 4 and 30 large rectangels first, then between 4 and 50 small rectangles.
+
+
+
+.. code-block:: python
+
+    from PIL import Image
+    import random
+
+
+    def random_rgb(gvals):
+        gv = random.choice(gvals)
+        return gv
+
+
+    def paste_rect(rvals):
+        c = random_rgb(gvals)
+        # print(c, end="; ")
+        w = random.choice(rvals)
+        h = random.choice(rvals)
+        x1max = 256 - w
+        y1max = 256 - h
+        x1 = random.randint(0, x1max)
+        y1 = random.randint(0, y1max)
+        x2 = x1 + w
+        y2 = y1 + h
+        im.paste(c, (x1, y1, x2, y2))
+
+
+    im = Image.new("L", (256, 256), 255)
+    gvals = range(0,256)
+    rvals = [80, 100, 120]
+    large_num = random.randint(4, 30)
+    for i in range(large_num):
+        paste_rect(rvals)
+
+    rvals = [10, 20, 30, 40, 50, 60]
+    small_num = random.randint(4, 50)
+    for i in range(small_num):
+        paste_rect(rvals)
+
+    im.save("new_images/random_grey_rects.png")
+
+.. image:: images/random_grey_rects.png
+    :scale: 50%
+    :align: center
+
+
+
