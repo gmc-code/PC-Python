@@ -55,7 +55,7 @@ Paste method with images
 
 
 
-.. image:: images/shapes.png
+.. image:: images/shapes_grid.png
     :scale: 50%
     :align: center
 
@@ -89,6 +89,9 @@ Paste method with RGB
 
     im.save("new_images/colour_squares.png")
 
+.. image:: images/colour_squares.png
+    :scale: 50%
+    :align: center
 
 ----
 
@@ -143,3 +146,8 @@ Paste random rectangles
         paste_rect(rvals)
 
     im.save("new_images/random_colour_rects.png")
+
+
+.. image:: images/random_colour_rects.png
+    :scale: 50%
+    :align: center
