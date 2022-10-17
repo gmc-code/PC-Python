@@ -39,6 +39,7 @@ PC-Python
     pillow/new_image.rst
     pillow/merge_images.rst
     pillow/image_filters.rst
+    pillow/paste_an_image.rst
    
 
 .. toctree::
