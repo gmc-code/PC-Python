@@ -90,7 +90,7 @@ Spectrum
 ---------------------------
 
 | The code below produces a 100 by 100 pixel square with 4 colours squares.
-| List comprehension is used to build a repeated sequence of pixel rgb vales.
+| List comprehension is used to build a repeated sequence of pixel rgb valwes.
 | The function passes in a list of colours. If the colours are not rgb tuples, they need to be converted first by ImageColor.getrgb(color).
 | See: https://pillow.readthedocs.io/en/stable/reference/ImageColor.html#PIL.ImageColor.getrgb
 

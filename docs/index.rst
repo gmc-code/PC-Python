@@ -24,7 +24,8 @@ PC-Python
     :maxdepth: 2
     :caption: Pillow image editing
     :numbered:
-
+    :titlesonly:
+    
     pillow/Pillow_introduction.rst
     pillow/open_an_image.rst
     pillow/image_attributes.rst

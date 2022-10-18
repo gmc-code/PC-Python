@@ -32,7 +32,7 @@ Draw
     
     im.save("new_images/draw_examples.jpg")
 
-.. image:: images/draw.png
+.. image:: images/draw_examples.png
     :scale: 50%
     :align: center
         
