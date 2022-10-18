@@ -40,6 +40,7 @@ PC-Python
     pillow/merge_images.rst
     pillow/image_filters.rst
     pillow/paste_an_image.rst
+    pillow/draw_an_image.rst
    
 
 .. toctree::

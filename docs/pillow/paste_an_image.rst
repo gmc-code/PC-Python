@@ -160,6 +160,7 @@ Paste random greyscale rectangles
 ----------------------------------
 
 | Use the paste method to place random rectangles in an image 256 by 256.
+| Use **Image.new("L", (256, 256), 255)** to make a greyscale image. "L" is the mode for greyscale. The last 255 fills it with white.
 | Create a function, **random_rgb(gvals)**, that takes in a list of numbers in range 0 to 255, and returns a random greyscale level value by randomly choosing from the list. THe rangle fucntion can be used for a full spectrum of possible values from 0 to 255.
 | Create a function, **paste_rect(rvals)** that takes a list of lengths in the range 1 to 255, gets a random greyscale integer, calculates a random rectangle and pastes the greyscal rect angle to the base image.
 | The code below places between 4 and 30 large rectangels first, then between 4 and 50 small rectangles.
@@ -266,7 +267,7 @@ Paste random greyscale rectangles using offscreen area
     im.save("new_images/random_grey_rects_offscreen.png")
 
 
-.. image:: images/random_grey_rect_offscreen.png
+.. image:: images/random_grey_rects_offscreen.png
     :scale: 50%
     :align: center
 
