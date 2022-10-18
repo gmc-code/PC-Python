@@ -141,7 +141,9 @@ Colour Palette
 | The code below produces a colour palette typically seen on websites on colour.
 | ``color_palette(colors, color_width=20, height=100)`` takes a list of colours as the argument and 2 optional arguments, then returns an image. The default width of each colour is 20. The default image height is 100.
 | ``for c in colors_rgb`` iterates through the list of colours.
-| ``for i in range(color_width)`` is used to add the colour 20 times (color_width).
+| ``[c] * color_width`` creates a list of the colour 20 times (color_width).
+| ``data.extend([c] * color_width)`` add the multiple copies of the same colour tuple to thte list.
+| ``data *= height`` replicates the first row of all the colours so it fills down for the full height.
 
 .. code-block:: python
 
@@ -155,10 +157,10 @@ Colour Palette
         width = len(colors_rgb) * color_width
         data = []
         for c in colors_rgb:
-            for i in range(color_width):
-                data.append(c)
+            data.extend([c] * color_width)
+        data *= height  
         im = Image.new("RGB", (width, height))
-        im.putdata(data * height)
+        im.putdata(data)
         return im
 
     colors = ["#ffccff", "#ccffff", "#99ffcc", "#cc99ff", "#ffcc99"]
