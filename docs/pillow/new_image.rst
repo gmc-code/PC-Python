@@ -9,7 +9,7 @@ New image
 Blank new png
 ----------------
 
-| The code below saves an blank png of size (256, 256).
+| The code below saves a blank png of size (256, 256).
 
 .. code-block:: python
 

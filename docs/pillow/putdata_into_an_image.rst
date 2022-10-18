@@ -71,11 +71,16 @@ Spectrum
     im2 = im.resize((128,128))
     im2.save("new_images/putdata_spectrum_128.png")
 
-.. image:: images/putdata_spectrum_128.png
+
+| The full width spectrum:
+
+.. image:: images/putdata_spectrum.png
     :scale: 100%
     :align: center
 
-.. image:: images/putdata_spectrum.png
+| The spectrum resized to 128, 128:
+
+.. image:: images/putdata_spectrum_128.png
     :scale: 100%
     :align: center
 
