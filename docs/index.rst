@@ -38,12 +38,13 @@ PC-Python
     pillow/rotate_an_image.rst
     pillow/transpose_an_image.rst
     pillow/new_image.rst
-    pillow/image_filter.rst
     pillow/paste_an_image.rst
     pillow/paste_images.rst
     pillow/multiply_an_image.rst
     pillow/invert_an_image.rst
     pillow/putdata_into_an_image.rst
+    pillow/image_filter.rst
+    pillow/image_enhance.rst
     pillow/draw_an_image.rst
    
 
