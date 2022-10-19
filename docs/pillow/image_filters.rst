@@ -44,3 +44,24 @@ Sharpen
     :scale: 50%
     :align: center
     
+----
+
+Edges
+------
+
+| Use the **.filter(ImageFilter.FIND_EDGES)** method to find the edges of parts of the image.
+
+.. code-block:: python
+
+    from PIL import Image, ImageFilter
+
+    im = Image.open("new_images/merged.png") 
+    im_rgb = im.convert(mode='RGB')
+    new_im = im_rgb.filter(ImageFilter.FIND_EDGES)
+    new_im.save("filters/merged_edges.png")
+
+
+.. image:: images/merged_with_edges.png
+    :scale: 50%
+    :align: center
+    
