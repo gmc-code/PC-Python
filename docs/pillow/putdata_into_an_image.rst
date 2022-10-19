@@ -78,11 +78,13 @@ Spectrum
     :scale: 100%
     :align: center
 
+|  
 | The spectrum resized to 128, 128:
 
 .. image:: images/putdata_spectrum_128.png
     :scale: 100%
     :align: center
+
 
 ----
 

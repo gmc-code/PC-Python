@@ -33,9 +33,9 @@ Multiply
 
     merged = ImageChops.multiply(imb, imo)
 
-    merged.save("new_images/merged_b_o.png")
+    merged.save("new_images/multiplied_b_o.png")
 
 
- .. image:: images/merged_b_o.png
+.. image:: images/multiplied_b_o.png
     :scale: 75%
     :align: center

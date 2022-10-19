@@ -41,8 +41,8 @@ PC-Python
     pillow/image_filters.rst
     pillow/paste_an_image.rst
     pillow/paste_images.rst
-    pillow/invert_an_image.rst
     pillow/multiply_an_image.rst
+    pillow/invert_an_image.rst
     pillow/putdata_into_an_image.rst
     pillow/draw_an_image.rst
    
