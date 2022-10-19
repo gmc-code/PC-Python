@@ -40,7 +40,7 @@ Load for pixel access
     im.save("new_images/merged_blackwhite.png")
 
 
- .. image:: images/merged_with_blackwhite.png
+.. image:: images/merged_with_blackwhite.png
     :scale: 75%
     :align: center
 
