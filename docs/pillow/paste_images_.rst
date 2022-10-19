@@ -4,6 +4,8 @@ Paste images
 
 | See: https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.Image.paste
 
+| Note: some pasting with images leads to unreliable results with some other operations such pixelaccess on using the laod method.
+
 ----
 
 2 images side by side

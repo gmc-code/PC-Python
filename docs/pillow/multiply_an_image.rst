@@ -9,7 +9,7 @@ Multiply an image
 Multiply
 ---------------------------
 
-| Use the ImageChops.multiply method to overlay 2 images of the same size.
+| Use the **ImageChops.multiply** method to overlay 2 images of the same size.
 | If an image is multiplied with an image with a solid black image, the result is black. 
 | If an image is multiplied with a solid white image, the image is unaffected.
 
