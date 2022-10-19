@@ -1,5 +1,5 @@
 ==========================
-Image filters
+Image filter
 ==========================
 
 | See: https://pillow.readthedocs.io/en/stable/reference/ImageFilter.html

@@ -29,7 +29,7 @@ Convert to greyscale
 Convert to black and white
 ----------------------------
 
-| Use the **convert(mode='1')** method to convert an image to greyscale.
+| Use the **convert(mode='1')** method to convert an image to greblack and white, but with poor results.
 
 .. code-block:: python
 

@@ -20,7 +20,7 @@ Load for pixel access
     | Returns an object with pixels indexed by [x, y]
     | Image is the image which will have its pixel data loaded.
 
-| The code below laods the pixel data for an image then converts the data using its pixel values to create a black and white image.
+| The code below loads the pixel data for an image then converts the data using its pixel values to create a black and white image.
 
 .. code-block:: python
 
