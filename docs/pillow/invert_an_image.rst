@@ -35,7 +35,7 @@ Invert
 
 
 
- .. image:: images/inverted_shapes.png
+.. image:: images/inverted_shapes.png
     :scale: 50%
     :align: center
 
