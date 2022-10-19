@@ -24,8 +24,7 @@ PC-Python
     :maxdepth: 2
     :caption: Pillow image editing
     :numbered:
-    :titlesonly:
-    
+
     pillow/Pillow_introduction.rst
     pillow/open_an_image.rst
     pillow/image_attributes.rst
@@ -38,9 +37,9 @@ PC-Python
     pillow/rotate_an_image.rst
     pillow/transpose_an_image.rst
     pillow/new_image.rst
-    pillow/merge_images.rst
     pillow/image_filters.rst
     pillow/paste_an_image.rst
+    pillow/paste_images.rst
     pillow/putdata_into_an_image.rst
     pillow/draw_an_image.rst
    

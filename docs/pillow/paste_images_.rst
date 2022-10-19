@@ -1,8 +1,8 @@
 ==========================
-Merge images
+Paste images
 ==========================
 
-| See: https://pillow.readthedocs.io/en/stable/handbook/tutorial.html#merging-images
+| See: https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.Image.paste
 
 ----
 
@@ -78,6 +78,14 @@ Merge images
 
     from PIL import Image
 
+    def merge2hor(im1, im2, gap=0, bgcol=(255, 255, 255)):
+        w = im1.size[0] + im2.size[0] + gap
+        h = max(im1.size[1], im2.size[1])
+        im = Image.new("RGBA", (w, h), bgcol)
+        im.paste(im1)
+        im.paste(im2, (im1.size[0]+ gap , 0))
+        return im
+
     def merge4hor(im1, im2, im3, im4, gap=0, bgcol=(255, 255, 255)):
         imh1= merge2hor(im1, im2, gap, bgcol)
         imh2= merge2hor(im3, im4, gap, bgcol)
@@ -90,8 +98,7 @@ Merge images
     im4 = Image.open("rotations/egg_270.png")
     im5= merge4hor(im1, im2, im3, im4, 2)
     im5.save("rotations/eggs4hor.png")
-    im6= merge4square(im1, im2, im3, im4, 2)
-    im6.save("rotations/eggs4.png")
+
 
 .. image:: images/eggs4hor.png
     :scale: 100%
@@ -111,6 +118,21 @@ Merge images
 
     from PIL import Image
 
+    def merge2hor(im1, im2, gap=0, bgcol=(255, 255, 255)):
+        w = im1.size[0] + im2.size[0] + gap
+        h = max(im1.size[1], im2.size[1])
+        im = Image.new("RGBA", (w, h), bgcol)
+        im.paste(im1)
+        im.paste(im2, (im1.size[0]+ gap , 0))
+        return im
+
+    def merge2vert(im1, im2, gap=0, bgcol=(255, 255, 255)):
+        w = max(im1.size[0], im2.size[0])
+        h = im1.size[1] + im2.size[1] + gap
+        im = Image.new("RGBA", (w, h), bgcol)
+        im.paste(im1)
+        im.paste(im2, (0 , im1.size[1]+ gap ))
+        return im
 
     def merge4square(im1, im2, im3, im4, gap=0, bgcol=(255, 255, 255)):
         # layout 1 and 2 in top row, 3 and 4 on bottom row
@@ -126,6 +148,8 @@ Merge images
     im5= merge4square(im1, im2, im3, im4, 2)
     im5.save("rotations/eggs4.png")
 
+
 .. image:: images/eggs4.png
     :scale: 100%
     :align: center
+
