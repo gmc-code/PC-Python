@@ -17,7 +17,7 @@ Invert
     | **image** is the image to invert.
 
 | The code below inverts an image.
-| The original png is in RGBA mode so when inverted a black and white image is returned.
+| The original png is in RGBA mode so when inverted unexpected results are seen.
 | After converting to RGB mode, the colours are inverted as expected.
 
 .. code-block:: python
