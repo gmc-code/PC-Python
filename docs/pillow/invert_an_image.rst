@@ -34,6 +34,7 @@ Invert
     im_rgb_inv.save("new_images/shapes_grid_rgb_inverted.png")
 
 
+
  .. image:: images/inverted_shapes.png
     :scale: 50%
     :align: center
