@@ -31,6 +31,7 @@ PC-Python
     pillow/show_an_image.rst
     pillow/save_an_image.rst
     pillow/convert_an_image.rst
+    pillow/load_an_image.rst
     pillow/convert_a_folder.rst
     pillow/resize_an_image.rst
     pillow/resize_image_folder.rst
@@ -40,6 +41,8 @@ PC-Python
     pillow/image_filters.rst
     pillow/paste_an_image.rst
     pillow/paste_images.rst
+    pillow/invert_an_image.rst
+    pillow/multiply_an_image.rst
     pillow/putdata_into_an_image.rst
     pillow/draw_an_image.rst
    

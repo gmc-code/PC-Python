@@ -1,8 +1,8 @@
 ==========================
-Merge an image
+Multiply an image
 ==========================
 
-| See: https://pillow.readthedocs.io/en/stable/handbook/tutorial.html#merging-images
+| See: https://pillow.readthedocs.io/en/stable/reference/ImageChops.html#PIL.ImageChops.multiply
 
 ----
 
@@ -13,11 +13,12 @@ Multiply
 | If an image is multiplied with an image with a solid black image, the result is black. 
 | If an image is multiplied with a solid white image, the image is unaffected.
 
-.. py:function:: ImageChops.multiply(im1, im2)
+.. py:function:: ImageChops.multiply(image1, image2)
 
-    | im1 and im2 are the images to multiply.
+    | image1 and image2 are the images to multiply.
 
 | The code below overlays a box with a circle.
+| The pngs are first converted to RGB mode for best results.
 
 .. code-block:: python
 
@@ -38,5 +39,3 @@ Multiply
  .. image:: images/merged_b_o.png
     :scale: 75%
     :align: center
-
-
