@@ -32,7 +32,7 @@ Draw
     
     im.save("new_images/draw_examples.jpg")
 
-.. image:: images/draw_examples.png
+.. image:: images/AtoZ_Color.gif
     :scale: 50%
     :align: center
         
