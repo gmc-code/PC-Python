@@ -286,3 +286,39 @@ Here, quadratic equation:
 
 transformed = {(2*x*x + 5*x + 10) for x in primes}
 print(transformed)
+
+----
+
+Making a 2D aray from a list
+------------------------------
+
+| A list will be split up into a lists of lists, simulating a 2D array.
+| In the code below, a list is organised into a 2d array with x elements in each row.
+| [1, 3, 5, 7, 9, 11] will become [[1, 3, 5], [7, 9, 11]].
+| The first loop, ``for i in range(0, len(nums), x)``, becomes ``for i in range(0, 6, 3)`` which has i values of 0 and 3.
+| The second loop, ``for j in range(i,i+x)``, becomes ``for j in range(0,3)`` when i is 0, and ``for j in range(3,6)`` when i is 3
+
+.. code-block:: python
+
+    nums = [1, 3, 5, 7, 9, 11]
+    x = 3
+
+    list_2d = []
+    for i in range(0, len(nums), x):
+        rowlist = []
+        for j in range(i,i+x):
+            rowlist.append(nums[j])
+        list_2d.append(rowlist)
+    print(list_2d)
+    # [[1, 3, 5], [7, 9, 11]]
+
+| The code below achieves the same result in a list comprehension.
+
+.. code-block:: python
+
+    nums = [1, 3, 5, 7, 9, 11]
+    x = 3
+    list_2d = [nums[i:i+x] for i in range(0, len(nums), x)]
+    print(list_2d)
+    # [[1, 3, 5], [7, 9, 11]]
+
