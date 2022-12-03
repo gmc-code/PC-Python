@@ -43,7 +43,7 @@ PC-Python
     python/data_structures.rst
     python/multiple_assignment.rst
     python/unpacking_iterables.rst
-
+    python/function_packing and_unpacking.rst
 
 .. toctree::
     :maxdepth: 2
