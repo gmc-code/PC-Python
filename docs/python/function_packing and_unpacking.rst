@@ -35,10 +35,35 @@ Unpacking for a function
     perimeter = tri_perimeter(*sides)
     print(perimeter)
 
+
 ----
 
-Unpacking with more than one value
------------------------------------
+Combining unpacking and packing for a function
+--------------------------------------------------
+
+| THe three lists are unpacked into a tuple and passed to the function.
+| A tuple is printed that contains the args and the result.
+| The output is: ((1, 2, 3, 4, 5, 6, 7, 8, 9), 45)
+
+.. code-block:: python
+
+    def sum_all(*args):
+        result = 0
+        for x in args:
+            result += x
+        return args, result
+
+    list1 = [1, 2, 3]
+    list2 = [4, 5]
+    list3 = [6, 7, 8, 9]
+
+    print(sum_all(*list1, *list2, *list3))
+
+
+----
+
+Built in functions: Unpacking with more than one value
+-------------------------------------------------------
 
 | The range function below can take two values, the start and stop values.
 | The **for-loop** code below would normally look like: **for x in range(0, 5)**.
@@ -64,8 +89,8 @@ Unpacking with more than one value
 
 ----
 
-Unpacking with just one value
------------------------------------
+Built in functions: Unpacking with just one value
+---------------------------------------------------
  
 | For tuples with just one value, a trailing comma is required. e.g (5,)
 | The range function expects a tuple for unpacking via (\*vals), so (5,) is needed.
