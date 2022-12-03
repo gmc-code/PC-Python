@@ -41,6 +41,8 @@ PC-Python
     python/iteration.rst
     python/functions.rst
     python/data_structures.rst
+    python/multiple_assignment.rst
+    python/unpacking_iterables.rst
 
 
 .. toctree::
