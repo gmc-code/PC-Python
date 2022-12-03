@@ -17,6 +17,7 @@ Packing arguments of a function
     perimeter = polygon_perimeter(3, 4, 5, 6)
     print(perimeter)
 
+
 ----
 
 Unpacking for a function
