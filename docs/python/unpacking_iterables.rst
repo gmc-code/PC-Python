@@ -45,10 +45,8 @@ Unpacking with just one value
 Unpacking for a function
 -----------------------------------
 
-| The function below requires 3 arguments.
-| The list, sides, can be passed to the function by unpacking the list using \*sides
-| The code prints out: 0, 1, 2, 3, 4, 
-
+| The function below, tri_perimeter, requires 3 arguments, (a, b, c).
+| The list, sides, can be passed to the function by unpacking the list using \*sides.
 
 .. code-block:: python
 
@@ -58,4 +56,33 @@ Unpacking for a function
         return a + b + c
 
     print(tri_perimeter(*sides))
+
+----
+
+Unpacking to merge tuples
+------------------------------
+
+| Tuple unpacking below can be used to merge tuples.
+
+.. code-block:: python
+ 
+    tuple1 = ("a", "b", "c")
+    tuple2 = (3, 2, 1)
+    merged_tuple = (*tuple1, *tuple2)
+    print(merged_tuple)
+
+----
+
+Unpacking to merge lists
+------------------------------
+
+| List unpacking below can be used to merge lists.
+
+.. code-block:: python
+ 
+    list1 = ["a", "b", "c"]
+    list2 = [3, 2, 1]
+    merged_list = [*list1, *list2]
+    print(merged_list)
+
 

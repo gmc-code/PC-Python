@@ -5,7 +5,7 @@ Multiple Assignment
 Multiple Assignment in Tuple, list, strings
 ---------------------------------------------
 
-| Assign multiple variables at teh same time time using commas.
+| Assign multiple variables at the same time time using commas.
 | The code below assigns 3 variables in one line resulting in: a = 1, b = 2, c = 3.
 | This can also be written as tuples: (a, b, c) = (1, 2, 3)
 
