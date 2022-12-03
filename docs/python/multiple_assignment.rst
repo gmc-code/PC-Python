@@ -41,6 +41,7 @@ Packing with * in multiple assignment
 ----------------------------------------
 
 | In the code below, a is assigned 1 and b is assigned 2, and c is assigned the rest of the values packed as a list.
+| Note that in the print output, c is a list.
 
 
 .. code-block:: python
