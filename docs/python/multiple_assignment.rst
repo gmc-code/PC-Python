@@ -5,7 +5,7 @@ Multiple Assignment
 Multiple Assignment in Tuple, list, strings
 ---------------------------------------------
 
-| Assign multiple variables at teh same time time using commas.
+| Assign multiple variables at the same time time using commas.
 | The code below assigns 3 variables in one line resulting in: a = 1, b = 2, c = 3.
 | This can also be written as tuples: (a, b, c) = (1, 2, 3)
 
@@ -41,6 +41,7 @@ Packing with * in multiple assignment
 ----------------------------------------
 
 | In the code below, a is assigned 1 and b is assigned 2, and c is assigned the rest of the values packed as a list.
+| Note that in the print output, c is a list.
 
 
 .. code-block:: python
