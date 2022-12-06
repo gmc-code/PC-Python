@@ -45,6 +45,7 @@ PC-Python
     python/unpacking_iterables.rst
     python/function_packing and_unpacking.rst
 
+
 .. toctree::
     :maxdepth: 2
     :caption: Advanced Python
@@ -60,9 +61,46 @@ PC-Python
 
 .. toctree::
     :maxdepth: 2
+    :caption: Classes
+    :numbered:
+
+    classes/Classes_as_objects.rst
+    classes/Creating_a_Class.rst
+    classes/Self.rst
+    classes/Instance_variables.rst
+    classes/The_init_method.rst
+    classes/Class_variables.rst
+    classes/Instance_Methods.rst
+    classes/Class_methods.rst
+    classes/Static_methods.rst
+    classes/Class_inheritance.rst
+    classes/Class_composition.rst
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Class exercises
+    :numbered:
+
+    class_examples/dog_class.rst
+    class_examples/polygon_class.rst
+    class_examples/restaurant_class.rst
+    class_examples/restaurant_inheritance.rst
+    class_examples/rectangle_inheritance.rst
+    class_examples/dice_inheritance.rst
+    class_examples/user_class.rst
+    class_examples/user_composition.rst
+    class_examples/car_class.rst
+    class_examples/car_inheritance.rst
+    class_examples/car_composition.rst
+    class_examples/employee_salary_composition.rst
+
+
+.. toctree::
+    :maxdepth: 2
     :caption: Jupyter
     :numbered:
 
-    jupyter/jupyter_test.rst
+..    jupyter/jupyter_test.rst
     jupyter/strings.ipynb
     jupyter/functions.ipynb
