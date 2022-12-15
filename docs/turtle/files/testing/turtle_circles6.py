@@ -2,8 +2,11 @@ import turtle
 import math
 import random
 
-wn = turtle.Screen()
-wn.bgcolor("black")
+s = turtle.Screen()
+s.bgcolor("black")
+s.tracer(10, 0)
+
+
 Albert = turtle.Turtle()
 Albert.speed(0)
 Albert.color("white")

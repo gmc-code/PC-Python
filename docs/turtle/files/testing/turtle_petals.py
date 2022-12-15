@@ -1,13 +1,14 @@
 import turtle as tur
 import colorsys as cs
 
-s = tur.Screen()
-s.tracer(1000, 0)
+sc = tur.Screen()
+sc.tracer(1000, 0)
 
 tur.setup(800, 800)
 tur.speed(0)
 tur.width(5)
 tur.bgcolor("black")
+tur.hideturtle()
 jval = 25
 ival = 15
 for j in range(jval):
@@ -19,5 +20,5 @@ for j in range(jval):
         tur.circle(200 - j * 4, 90)
         tur.right(180)
         tur.circle(50, 24)
-tur.hideturtle()
+
 tur.done()

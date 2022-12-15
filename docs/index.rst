@@ -102,8 +102,8 @@ PC-Python
     :numbered:
 
     turtle/turtle_introduction.rst
-
-
+    turtle/turtle_common.rst
+    turtle/turtle_screen.rst
 
 
 

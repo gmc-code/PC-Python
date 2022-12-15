@@ -18,6 +18,11 @@ Tutorial
 
 ----
 
+| Turtle uses tkinter for the underlying graphics.
+| Many of the methods have dual use. Passing arguments sets something or does something. Without arguments, they act as functions returning data.
+
+----
+
 Methods of TurtleScreen/Screen: Window control
 ------------------------------------------------
 
