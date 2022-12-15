@@ -38,14 +38,14 @@ Screen and turtles
 
     screen = turtle.Screen()
     turtle = turtle.Turtle()
-    
+
 ----
 
 | In the sample code, the **screen** object is shortened to **s**. ``s = turtle.Screen()``
 | In the sample code, the **turtle** object is shortened to **t**. ``t = turtle.Turtle()``
 | This makes method calls on these objects shorter to type and read.
 | e.g. ``s.bgcolor("black")`` instead of ``screen.bgcolor("black")``
-| e.g. ``t.pendown`` instead of ``turtle.pendown``
+| e.g. ``t.pendown()`` instead of ``turtle.pendown()``
 
 
 .. code-block:: python
