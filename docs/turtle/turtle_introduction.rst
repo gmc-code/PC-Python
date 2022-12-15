@@ -24,6 +24,17 @@ Tutorial
 
 ----
 
+Import turtle
+---------------
+
+| Import the turtle library.
+
+.. code-block:: python
+
+    import turtle
+
+----
+
 Screen and turtles
 -------------------------
 
