@@ -4,12 +4,28 @@ Turtle screen
 
 | The code below shows code for Window control.
 
+| 
+
+.. code-block:: python
+
+    import turtle
+
+
+    s = turtle.Screen()
+    s.bgcolor("black")
+    s.title("Turtle Screen")
+    s.setup (width=600, height=400, startx=0, starty=0)
+
+
+    turtle.done()
+
+
 ----
 
 Screen class
 --------------
 
-| Start by importing hte inbuilt turtle library.
+| Start by importing the inbuilt turtle library.
 | Then set up the screen for drawing on.
 
 See: https://docs.python.org/3/library/turtle.html#turtle.Screen
@@ -121,7 +137,7 @@ See: https://docs.python.org/3/library/turtle.html#turtle.setup
 .. py:function:: turtle.setup(width=0.5, height=0.75, startx=None, starty=None)
 
     | Set the size and position of the main window.
-    
+
 ----
 
 Using screen events
