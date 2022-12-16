@@ -55,7 +55,6 @@ Screen and turtles
 
     import turtle
 
-
     screen = turtle.Screen()
     turtle = turtle.Turtle()
 
@@ -71,7 +70,6 @@ Screen and turtles
 .. code-block:: python
 
     import turtle
-
 
     s = turtle.Screen()
     t = turtle.Turtle()
