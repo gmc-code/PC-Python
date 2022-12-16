@@ -2,6 +2,12 @@
 Introduction to turtle
 ====================================================
 
+| Turtles are objects that can be directed to move about on a screen.
+| The turtle can draw on the screen as it moves.
+| You can draw some pretty awesome images!
+
+----
+
 turtle documentation
 ----------------------------------------
 
