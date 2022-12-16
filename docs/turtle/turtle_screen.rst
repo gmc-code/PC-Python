@@ -15,6 +15,7 @@ Turtle screen
     s.title("Turtle Screen")
     s.setup (width=800, height=600, startx=0, starty=0)
 
+    # turtle drawing to go here
 
     turtle.done()
 
@@ -97,8 +98,8 @@ See: https://docs.python.org/3/library/turtle.html#turtle.title
 
 ----
 
-Screen setup
------------------
+Screen size and position
+----------------------------
 
 | Set the screen size and position.
 
@@ -145,7 +146,8 @@ Using screen events
 See: https://docs.python.org/3/library/turtle.html#turtle.mainloop
 
 
-| turtle.mainloop(), turtle.done() keeps the window open, Starts event loop - calling Tkinter's mainloop function. When used, it must be the last statement in the file.
+| Use turtle.mainloop() or turtle.done() to keep the window open.
+| When used, it must be the last statement in the file.
 
 .. code-block:: python
 
@@ -159,6 +161,7 @@ See: https://docs.python.org/3/library/turtle.html#turtle.mainloop
     s.setup (width=600, height=400, startx=0, starty=0)
     s.tracer(10, 0)
 
+    # turtle drawing to go here
 
     turtle.done()
 
