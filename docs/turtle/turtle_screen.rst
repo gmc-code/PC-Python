@@ -9,7 +9,6 @@ Turtle screen
 
     import turtle
 
-
     s = turtle.Screen()
     s.bgcolor("black")
     s.title("Turtle Screen")
@@ -36,7 +35,6 @@ See: https://docs.python.org/3/library/turtle.html#turtle.Screen
 .. code-block:: python
 
     import turtle
-
 
     s = turtle.Screen()
 
@@ -67,7 +65,6 @@ See: https://docs.python.org/3/library/turtle.html#turtle.colormode
 
     import turtle
 
-
     s = turtle.Screen()
     s.bgcolor("black")
 
@@ -90,7 +87,6 @@ See: https://docs.python.org/3/library/turtle.html#turtle.title
 .. code-block:: python
 
     import turtle
-
 
     s = turtle.Screen()
     s.bgcolor("black")
@@ -118,7 +114,6 @@ See: https://docs.python.org/3/library/turtle.html#turtle.setup
 .. code-block:: python
 
     import turtle
-
 
     s = turtle.Screen()
     s.bgcolor("black")
@@ -152,7 +147,6 @@ See: https://docs.python.org/3/library/turtle.html#turtle.mainloop
 .. code-block:: python
 
     import turtle
-
 
     s = turtle.Screen()
     # s.bgcolor("black")

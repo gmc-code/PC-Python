@@ -1,24 +1,25 @@
 import turtle
 
-
 s = turtle.Screen()
-s.bgcolor("black")
-# s.bgpic("docs/turtle/spiro_d.gif")
+s.bgpic("docs/turtle/images/mario.gif")
 s.title("Turtle Screen")
-s.setup(width=400, height=400, startx=None, starty=None)
-s.tracer(1, 0)
-s.delay(1)
-s.colormode(1)
-s.bgcolor(0.9,0.9,1)
-t = turtle.Turtle()
-t.speed(10)
-t.pd
-for _ in range(4):
-    t.fd(250); t.left(90)
-s.screensize(canvwidth=600, canvheight=600)
-for _ in range(4):
-    t.fd(100); t.left(60)
-s.setup(width=700, height=700, startx=None, starty=None)
-s.update()
-s.exitonclick()
+s.setup(width=800, height=600, startx=0, starty=0)
 
+# turtle drawing
+t = turtle.Turtle()
+t.shapesize(10, 10, 12)
+t.color("blue")
+t.pensize(10)
+t.penup(); t.setpos(-400, -250); t.pendown()
+t.fd(800)
+
+s.resetscreen()
+
+# same turtle - new drawing
+t.color("red")
+t.pensize(10)
+t.penup(); t.setpos(-400, -285); t.pendown()
+t.fd(800)
+
+
+turtle.done()
