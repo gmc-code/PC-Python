@@ -111,9 +111,7 @@ See: https://docs.python.org/3/library/turtle.html#turtle.resetscreen
     t.penup(); t.setpos(-400, -285); t.pendown()
     t.fd(800)
 
-
     turtle.done()
-
 
 ----
 
@@ -130,8 +128,8 @@ Reset screensize
     | **canvheight** - positive integer, new height of canvas in pixels
     | **bg** - colorstring or color-tuple, new background color
     | If no arguments are given, return current (canvaswidth, canvasheight). 
-    | Else resize the canvas the turtles are drawing on. Do not alter the drawing window. 
-    | To observe hidden parts of the canvas previously outside the canvas, use the scrollbars.
+    | Else, resize the canvas the turtles are drawing on wihtout altering the drawings. 
+    | Scrollbars are added, to observe hidden parts of the canvas previously outside the canvas.
 
 .. code-block:: python
 
@@ -157,7 +155,6 @@ Reset screensize
     t.pensize(10)
     t.penup(); t.setpos(-400, -285); t.pendown()
     t.fd(800)
-
 
     turtle.done()
 
