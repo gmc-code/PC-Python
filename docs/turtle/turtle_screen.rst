@@ -126,7 +126,7 @@ Using screen events
 See: https://docs.python.org/3/library/turtle.html#turtle.mainloop
 
 
-| Use turtle.mainloop() or turtle.done() to keep the window open.
+| Use turtle.**mainloop()** or turtle.**done()** to keep the window open.
 | When used, it must be the last statement in the file.
 
 .. code-block:: python
