@@ -158,5 +158,51 @@ Reset screensize
 
     turtle.done()
 
+----
+
+Exit on click
+-----------------------
+
+| Close the Turtle window when the mouse is clicked.
+| Use this instead of **turtle.done()**
+
+| See: https://docs.python.org/3/library/turtle.html#turtle.exitonclick
+
+.. py:function:: turtle.exitonclick()
+
+    | Also **turtle.bye()**
+    | Shut the turtle graphics window when the mouse clicks on the Screen.
+
+.. code-block:: python
+
+    import turtle
+
+    s = turtle.Screen()
+    # s.bgcolor("black")
+    s.bgpic("spiro_d.gif")
+    s.title("Turtle Screen")
+    s.setup (width=600, height=400, startx=0, starty=0)
+
+    # turtle drawing to go here
+
+    s.exitonclick()
+    # turtle.done()
+
+----
+
+Using screen events
+-----------------------
+
+| Several other screen events are available.
+
+| listen()
+| onkey(); onkeyrelease()
+| onkeypress()
+| onclick(); onscreenclick()
+| ontimer()
+
+| See: https://docs.python.org/3/library/turtle.html#using-screen-events
+
+
 
 

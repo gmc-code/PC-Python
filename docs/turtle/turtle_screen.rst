@@ -126,7 +126,7 @@ Using screen events
 See: https://docs.python.org/3/library/turtle.html#turtle.mainloop
 
 
-| Use turtle.**mainloop()** or turtle.**done()** to keep the window open.
+| Use **turtle.mainloop()** or **turtle.done()** to keep the window open.
 | When used, it must be the last statement in the file.
 
 .. code-block:: python
@@ -138,7 +138,6 @@ See: https://docs.python.org/3/library/turtle.html#turtle.mainloop
     s.bgpic("spiro_d.gif")
     s.title("Turtle Screen")
     s.setup (width=600, height=400, startx=0, starty=0)
-    s.tracer(10, 0)
 
     # turtle drawing to go here
 
