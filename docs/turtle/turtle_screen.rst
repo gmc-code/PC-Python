@@ -2,9 +2,8 @@
 Turtle screen
 ====================================================
 
-| The code below shows code for Window control.
-
-| 
+| The code below shows code to set up a window for a turtle to draw in.
+| The use of each line is detailed below.
 
 .. code-block:: python
 
@@ -14,7 +13,7 @@ Turtle screen
     s = turtle.Screen()
     s.bgcolor("black")
     s.title("Turtle Screen")
-    s.setup (width=600, height=400, startx=0, starty=0)
+    s.setup (width=800, height=600, startx=0, starty=0)
 
 
     turtle.done()
