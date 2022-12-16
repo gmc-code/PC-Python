@@ -24,8 +24,8 @@ Turtle screen
 Screen class
 --------------
 
+| Setup the screen for drawing on.
 | Start by importing the inbuilt turtle library.
-| Then set up the screen for drawing on.
 
 See: https://docs.python.org/3/library/turtle.html#turtle.Screen
 
