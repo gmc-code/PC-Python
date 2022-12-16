@@ -1,25 +1,6 @@
 ====================================================
-Turtle start
+Turtle drawing
 ====================================================
-
-| Watch: https://www.youtube.com/watch?v=N8SGEWSL3EI
-
-----
-
-Screen methods
-----------------------------------------
-
-s = turtle.Screen()
-s.bgcolor(color)
-s.title(text)
-----
-
-Keep screen open
-----------------------------------------
-
-| turtle.done() keeps the window open
-
-----
 
 Turtle methods
 ----------------------------------------
