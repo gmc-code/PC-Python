@@ -59,6 +59,17 @@ PC-Python
     python_advanced/match_case.rst
 
 
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Turtle
+    :numbered:
+
+    turtle/turtle_introduction.rst
+    turtle/turtle_screen.rst
+    turtle/turtle_screen_advanced.rst
+    turtle/turtle_drawing.rst
+
 .. toctree::
     :maxdepth: 2
     :caption: Classes
@@ -94,18 +105,6 @@ PC-Python
     class_examples/car_inheritance.rst
     class_examples/car_composition.rst
     class_examples/employee_salary_composition.rst
-
-
-.. toctree::
-    :maxdepth: 2
-    :caption: Turtle
-    :numbered:
-
-    turtle/turtle_introduction.rst
-    turtle/turtle_common.rst
-    turtle/turtle_screen.rst
-
-
 
 
 .. toctree::
