@@ -47,7 +47,7 @@ Import turtle
 Screen and turtles
 -------------------------
 
-| For standalone usage, not within a tkinter setup, there are 2 classes used to set up the screen and to set up a turtle to draw with.
+| For standalone usage, not within a tkinter based script, there are 2 classes used to set up the screen and to set up a turtle to draw with.
 | ``screen = turtle.Screen()`` sets up the window to draw in.
 | ``turtle = turtle.Turtle()`` sets up a turtle to draw with.
 
