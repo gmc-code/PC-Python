@@ -93,6 +93,6 @@ Code for Turtle race v1
 Code refactoring
 ------------------
 
-| Refactor the code to make a defintion to draw the finish line.
+| Refactor the code to make a definition to draw the finish line.
 
 
