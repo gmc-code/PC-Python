@@ -56,17 +56,17 @@ Turtle methods
 
 | t.dot(): Dot is left at the current position.
 | t.stamp(): Impression of turtle shape is left at the current position.
-| t.shape(name): Return or set shapes, “arrow”, “turtle”, “circle”, “square”, “triangle”, “classic”.
-
+| t.shape(name): Return or set turtle shape; "arrow", "turtle", "circle", "square", "triangle", "classic".
+| t.pen(): return or set turtle characteristics
 | t.write(str, move, align, font): write a message to the screen
 
 | t.clear(): Clear the turtle's drawing.
 | t.reset(): Clear the turtle's drawing, place it at home and return it to it's default settings.
 
-----
+**Turtle Visibility**
 
-t.hideturtle(), t.ht(): Make the turtle invisible to speed up the drawing.
-t.showturtle(), t.st(): Make the turtle visible.
-t.isvisible(): Return True if the Turtle is shown, False if it's hidden.
+| t.hideturtle(), t.ht(): Make the turtle invisible to speed up the drawing.
+| t.showturtle(), t.st(): Make the turtle visible.
+| t.isvisible(): Return True if the Turtle is shown, False if it's hidden.
 
 
