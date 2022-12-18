@@ -179,9 +179,9 @@ Exit on click
 
     s = turtle.Screen()
     # s.bgcolor("black")
-    s.bgpic("spiro_d.gif")
+    s.bgpic("mario.gif")
     s.title("Turtle Screen")
-    s.setup (width=600, height=400, startx=0, starty=0)
+    s.setup (width=800, height=600, startx=0, starty=0)
 
     # turtle drawing to go here
 

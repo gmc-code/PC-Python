@@ -1,11 +1,11 @@
 ====================================================
 Turtle drawing
-====================================================
+============t = turtle.Turtle()========================================
 
 Turtle methods
 ----------------------------------------
 
-| t = Turtle() create a new Turtle object and open its window
+| **t = turtle.Turtle()**: create a new Turtle object and open its window
 
 **Position**
 
@@ -78,7 +78,6 @@ Turtle methods
 
 
 **Appearance**
-
 
 | The turtle appeance can be controlled:
 | See: https://docs.python.org/3.11/library/turtle.html#appearance
