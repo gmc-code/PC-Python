@@ -14,22 +14,23 @@ Turtle methods
 | **t.setposition(x, y)**, **t.setpos(x, y)**, **t.goto(x, y)**: move to coordinates (x, y)
 | **t.xcor()**: Return the turtle's x coordinate.
 | **t.ycor()**: Return the turtle'sy coordinate.
-| **t.setx(n)**: set the turtle's x coordinate, leave y unchanged
-| **t.sety(n)**: set the turtle's y coordinate, leave x unchanged
+| **t.setx(x)**: set the turtle's x coordinate, leave y unchanged
+| **t.sety(y)**: set the turtle's y coordinate, leave x unchanged
 | **t.distance(x, y)**: Return the distance from the turtle to coordinates (x, y)
 
 **Direction**
 
-| **t.left(d)**, **t.lt(d)**: turn left, anticlockwise, d degrees
-| **t.right(d)**, **t.rt(d)**: turn right, clockwise, d degrees
-| **t.setheading(d)**, **t.seth(d)**: change heading to direction d
-| **t.heading()** return the current direction (angle)
+| **t.left(angle)**, **t.lt(angle)**: turn left, anticlockwise, angle degrees
+| **t.right(angle)**, **t.rt(angle)**: turn right, clockwise, angle degrees
+| **t.setheading(to_angle)**, **t.seth(to_angle)**: change heading to direction angle degrees
+| **t.heading()**: return the current direction angle
+| **t.towards(x, y)**: return the angle between the line from turtle position to position specified by (x,y), the vector or the other turtle. 
 
 **Movement**
 
-| **t.speed(n)**: how fast the turtle moves (0 to 10)
-| **t.forward(n)**, **t.fd()**: move in the current direction n pixels
-| **t.backward(n)**, **t.back(n)**, **t.bk(n)**: move in the reverse direction n pixels
+| **t.speed(n)**: how fast the turtle moves (n = 0 to 10); speed=0 means no animation
+| **t.forward(distance)**, **t.fd(distance)**: move in the current direction distance pixels
+| **t.backward(distance)**, **t.back(distance)**, **t.bk(distance)**: move in the reverse direction distance pixels
 
 ----
 
@@ -38,7 +39,17 @@ Turtle methods
 | **t.penup()**, **t.up()**, **t.pu()**: raise the pen, stoping drawing
 | **t.pendown()**, **t.down()**, **t.pd()**:  lower the pen for drawing 
 | **t.isdown()**: return True if the pen is down, False if up.
-| **t.pensize(w)**, **t.width(w)**: return or set linewidth to w pixels
+| **t.pensize(width)**, **t.width(width)**: return or set linewidth to width pixels
+| **t.pen()**: return or set turtle characteristics
+
+| **t.circle(radius, extent, steps)**: draw a circle with given radius, of arc angle extent. in a number of steps (for a poylgon).
+| **t.dot(size, color)**: draw a dot at the current position.
+| **t.stamp()**: draw the turtle shape at the current position and return a stamp_id for that stamp.
+| **t.clearstamp(stampid)**: delete stamp given by stamp_id.
+| **t.clearstamps(n)**: delete n stamps.
+| **t.shape(name)**: Return or set turtle shape; "arrow", "turtle", "circle", "square", "triangle", "classic".
+
+| **t.write(str, move, align, font)**: write a message to the screen
 
 **Drawing colour**
 
@@ -52,16 +63,12 @@ Turtle methods
 | **t.end_fill()**: Current fill color is filled after closing the polygon.
 | **t.filling()**: Return True if begin_fill has been called or False if not, or if end_fill has been called. 
 
-----
 
-| **t.dot()**: Dot is left at the current position.
-| **t.stamp()**: Impression of turtle shape is left at the current position.
-| **t.shape(name)**: Return or set turtle shape; "arrow", "turtle", "circle", "square", "triangle", "classic".
-| **t.pen()**: return or set turtle characteristics
-| **t.write(str, move, align, font)**: write a message to the screen
+**Clear drawing**
 
 | **t.clear()**: Clear the turtle's drawing.
 | **t.reset()**: Clear the turtle's drawing, place it at home and return it to it's default settings.
+| **t.undo()**: Undo repeatedly the last turtle actions
 
 **Turtle Visibility**
 
@@ -69,4 +76,20 @@ Turtle methods
 | **t.showturtle()**, **t.st()**: Make the turtle visible.
 | **t.isvisible()**: Return True if the Turtle is shown, False if it's hidden.
 
+
+**Appearance**
+
+
+| The turtle appeance can be controlled:
+| See: https://docs.python.org/3.11/library/turtle.html#appearance
+
+| shape()
+| resizemode()
+| shapesize();  turtlesize()
+| shearfactor()
+| settiltangle()
+| tiltangle()
+| tilt()
+| shapetransform()
+| get_shapepoly()
 
