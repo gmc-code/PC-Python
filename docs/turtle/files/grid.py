@@ -1,3 +1,5 @@
+"""draw axes and grid
+"""
 import turtle
 
 
@@ -73,9 +75,29 @@ s.tracer(10, 0)
 
 grid_turtle = turtle.Turtle()
 grid_turtle.speed(0)
-draw_grid(grid_turtle, 800, 600, 50, "black")
-draw_axes(grid_turtle, 800, 600, 8, "red")
+draw_grid(grid_turtle, 800, 600, 50, "green")
+draw_axes(grid_turtle, 800, 600, 4, "red")
 label_axes(grid_turtle, 800, 600, 100, "red")
+
+"""drawing code below"""
+t = turtle.Turtle()
+t.seth(90)
+t.width(2)
+t.pu()
+t.goto(50,50)
+t.pd()
+
+t.fd(50)
+t.rt(90)
+t.fd(50)
+t.rt(90)
+t.fd(50)
+t.rt(90)
+t.fd(50)
+t.rt(90)
+
+t.ht()
+"""drawing code above"""
 
 turtle.update()
 s.exitonclick()
