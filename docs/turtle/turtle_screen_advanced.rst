@@ -190,6 +190,60 @@ Exit on click
 
 ----
 
+Animation control
+-------------------------
+
+| See: https://docs.python.org/3/library/turtle.html#animation-control
+
+.. py:function:: turtle.tracer(n=None, delay=None)
+ 
+    | Turn turtle animation on/off and set delay for update drawings.
+    | n - nonnegative integer; higher is faster; 0 to turn off tracing
+    | delay - nonnegative integer
+    | If n is given, only each n-th regular screen update is really performed. When called without arguments, returns the currently stored value of n. Second argument sets delay value (see delay()).
+
+.. py:function:: turtle.delay(delay=None)
+ 
+    | Set or return the drawing delay in milliseconds. This is approximately the time interval between two consecutive canvas updates.
+    | delay - positive integer
+
+.. py:function:: turtle.update()
+ 
+    | Perform a TurtleScreen update. To be used when tracer is turned off.
+
+| The code below turns off turtle animation and produces the image rapidly.
+| Try changing the tracer to ``s.tracer(1, 100)`` to compare.
+
+.. code-block:: python
+
+    import turtle
+
+    s = turtle.Screen()
+    s.bgcolor("white")
+    s.title("Grid")
+    s.setup(width=800, height=600, startx=0, starty=0)
+    s.tracer(0, 0)
+
+    t = turtle.Turtle()
+    t.speed(0)
+
+
+    def square(t, l=50, x=0, y=0):
+        for _ in range(4):
+            t.fd(l)
+            t.rt(90)
+
+
+    for i in range(16):
+        square(t, l=100)
+        t.rt(6)
+
+    turtle.update()
+    s.exitonclick()
+
+
+----
+
 Using screen events
 -----------------------
 

@@ -97,6 +97,9 @@ Turtle square function
     | x - starting x position, default 0
     | y - starting y position, default 0
     
+| In the code below, ad efault square is drawn using ``square(t)``.
+| A second square is drawn at (x=200, y=100).
+| A third square is drawn at (x=-300, y=-200).
 
 .. code-block:: python
 
@@ -120,6 +123,7 @@ Turtle square function
             t.rt(90)
 
     square(t)
-    square(t, l=100, x=200, y=0)
-    square(t, l=100, x=0, y=100)
+    square(t, l=100, x=200, y=100)
+    square(t, l=100, x=-300, y=-200)
     s.exitonclick()
+
