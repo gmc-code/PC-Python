@@ -55,7 +55,8 @@ Turtle square using for loop
 ----------------------------------------
 
 | The code below draws a square of side length 50 at coordinates (50,50).
-| The fd(50) and rt(90) are placed in a for loop.
+| What code is repeated above? Each line is foolowed by a right angled turn.
+| The fd(50) and rt(90) are placed in a for loop with 4 repeats for the 4 sides.
 | The iterator used is "_". This is the standard choice in python whne the iterator is not used in the for loop block.
 
 .. code-block:: python
