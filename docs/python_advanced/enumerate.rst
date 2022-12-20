@@ -28,7 +28,7 @@ Syntax:
 
 ----
 
-| The enumerate object can be looped through using a for loop.
+| The enumerate object can be looped through using a for-loop.
 
 .. code-block:: python
     

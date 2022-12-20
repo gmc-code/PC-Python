@@ -6,7 +6,7 @@ See ref video at: https://www.youtube.com/watch?v=bD05uGo_sVI
 
 ----
 
-Generator via a for loop
+Generator via a for-loop
 =============================================
 
 | Python generators use the yield keyword.

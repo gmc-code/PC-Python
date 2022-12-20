@@ -5,7 +5,7 @@ Turtle rectangle progressions
 | The code progressions below draw a rectangle.
 | With each version, an improvement is made.
 | Firstly, only sequencing is used, with no iteration.
-| Iteration, using a for loop, reduces the code lines.
+| Iteration, using a for-loop, reduces the code lines.
 | Placing the code in a function allows for code reuse with the use of arguments.
 
 ----
@@ -51,13 +51,13 @@ Turtle rectangle in steps
 
 ----
 
-Turtle rectangle using for loop
+Turtle rectangle using for-loop
 ----------------------------------------
 
 | The code below draws a rectangle of side length 50 at coordinates (20, 20).
 | What code is repeated above? Each line is foolowed by a right angled turn.
-| The fd(50) and lt(90) are placed in a for loop with 4 repeats for the 4 sides.
-| The iterator used is "_". This is the standard choice in python whne the iterator is not used in the for loop block.
+| The fd(50) and lt(90) are placed in a for-loop with 4 repeats for the 4 sides.
+| The iterator used is "_". This is the standard choice in python whne the iterator is not used in the for-loop block.
 
 .. code-block:: python
 

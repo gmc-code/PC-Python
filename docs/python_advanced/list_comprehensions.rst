@@ -6,7 +6,7 @@ See docs at: https://docs.python.org/3/tutorial/datastructures.html#list-compreh
 See ref video at: https://www.youtube.com/watch?v=3dt4OGnU5sM
 
 
-| Anything that can be done with a for loop can be done as a comprehension.
+| Anything that can be done with a for-loop can be done as a comprehension.
 
 ----
 
@@ -237,7 +237,7 @@ List Example: grid coordinates
             my_list.append((letter, num))
     print(my_list)
 
-| The list comprehension does the nested for loop in one line.
+| The list comprehension does the nested for-loop in one line.
 
 .. code-block:: python
 

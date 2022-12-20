@@ -5,7 +5,7 @@ Turtle square progressions
 | The code progressions below draw a square.
 | With each version, an improvement is made.
 | Firstly, only sequencing is used, with no iteration.
-| Secondly, iteration, using a for loop, reduces code duplication.
+| Secondly, iteration, using a for-loop, reduces code duplication.
 | Thirdly, a definition block with parameters allows for code reuse with the use of arguments.
 
 ----
@@ -53,12 +53,12 @@ Sequencing: Turtle square in steps
 
 ----
 
-Iteration: Turtle square using for loop
+Iteration: Turtle square using for-loop
 ----------------------------------------
 
 | The code below uses iteration to reduce code duplciation that was present when only sequencing was used.
 | The code below draws a square of side length 50 at coordinates (20, 30).
-| The fd(50) and lt(90) are placed in a for loop with 4 repeats for the 4 sides.
+| The fd(50) and lt(90) are placed in a for-loop with 4 repeats for the 4 sides.
 | The iterator used is "_". This is the standard choice in python when the iterator is not referenced in the for-loop block.
 
 .. code-block:: python
@@ -91,9 +91,9 @@ Definitions: Turtle square def block
 
 | The code below uses a definition block to draw a square.
 | The function has parameters to specify the side length and the staring position of the bottom left vertex.
-| The function also requires the turtle to be passed as an argument so it can be refered to.
-| Before the for loop, the turtle is repositioned without drawing the movement.
-| The initial heading has been left out of the function, and can be set beofre using it.
+| The function also requires the turtle to be passed as an argument so it can be referred to.
+| Before the for-loop, the turtle is repositioned without drawing the movement; **penup** and **pendown** are needed for that.
+| The initial heading has been left out of the square function, but it can be set prior to using the square function.
 
 .. py:function:: square(t, l=50, x=0, y=0)
 

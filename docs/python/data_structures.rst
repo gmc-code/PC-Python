@@ -219,7 +219,7 @@ For example, you can store the highscores of all the players:
 Practice Questions
 -------------------------
 
-1. Use micro:bit list Image.ALL_CLOCKS and iterate over all items in the list with a for loop, showing them on the LED screen.
+1. Use micro:bit list Image.ALL_CLOCKS and iterate over all items in the list with a for-loop, showing them on the LED screen.
 
 2. Using the same item list, show only items with an index divisible by 3.
 

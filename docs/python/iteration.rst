@@ -67,7 +67,7 @@ For loops with sequences
 ------------------------------------
 
 | A for-loop can be used to iterate over a sequence that is either a string, a list, a tuple, , a set or a dictionary.
-| The for loop can execute a set of statements, once for each item in a sequence.
+| The for-loop can execute a set of statements, once for each item in a sequence.
 
 .. code-block:: python
 
