@@ -310,6 +310,36 @@ Adding pen colour and fill colour parameters
 
     s.exitonclick()
 
+----
+
+
+.. admonition:: Tasks
+
+    1. Modify ``square(t, length=50, x=0, y=0, penc="blue", fillc=None, penw=1)`` to draw a square of length 200 at (-300, -100) with red outline of thickness 5.
+    1. Modify ``square(t, length=50, x=0, y=0, penc="blue", fillc=None, penw=1)`` to draw a square of length 30 at (70, 100) with green outline of thickness 3 and a yellow fill.
+
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
+
+            .. tab-set::
+
+                .. tab-item:: Q1
+
+                    Modify ``square(t, length=50, x=0, y=0, penc="blue", fillc=None, penw=1)`` to draw a square of length 200 at (-300, -100) with red outline of thickness 5.
+
+                    .. code-block:: python
+
+                        square(t, length=200, x=-300, y=-100, penc="red", fillc=None, penw=5)
+
+                .. tab-item:: Q2
+
+                    Modify ``square(t, length=50, x=0, y=0, penc="blue", fillc=None, penw=1)`` to draw a square of length 30 at (70, 100) with green outline of thickness 3 and a yellow fill.
+
+                    .. code-block:: python
+
+                        square(t, length=30, x=70, y=100, penc="green", fillc="yellow", penw=3)
 
 ----
 
