@@ -5,20 +5,22 @@ Turtle square progressions
 | The code progressions below draw a square.
 | With each version, an improvement is made.
 | Firstly, only sequencing is used, with no iteration.
-| Iteration, using a for loop, reduces the code lines.
-| Placing the code in a function allows for code reuse with the use of arguments.
+| Secondly, iteration, using a for loop, reduces code duplication.
+| Thirdly, a definition block with parameters allows for code reuse with the use of arguments.
 
 ----
 
-Turtle square in steps
+Sequencing: Turtle square in steps
 ----------------------------------------
 
-| The code below draws a square of side length 50 at coordinates (20,30).
+| The code below uses sequencing only.
+| The code below draws a square of side length 50 at coordinates (20, 0).
 | The starting direction, eastwards, is set by: ``t.seth(0)``
-| The starting position, at (20, 30), is set by: ``t.goto(20,30)``. ``t.pu()`` and ``t.pd()`` are used either side of it to avoid line drawing by the turtle repositioning.
-| A line is drawn upwards by: ``t.fd(50)``.
+| The starting position, at (20, 30), is set by: ``t.goto(20, 30)``. 
+| ``t.pu()`` and ``t.pd()`` are used either side of it to avoid line drawing when repositioning the turtle.
+| A line is drawn forwards by: ``t.fd(50)``.
 | The turtle then turns to the left by: ``t.lt(90)``.
-| The fd(50) and rt(90) are then repeated 3 more times for the other three sides.
+| The fd(50) and lt(90) are then repeated 3 more times for the other three sides.
 
 
 .. code-block:: python
@@ -51,9 +53,10 @@ Turtle square in steps
 
 ----
 
-Turtle square using for loop
+Iteration: Turtle square using for loop
 ----------------------------------------
 
+| The code below uses iteration to reduce code duplciation that was present when only sequencing was used.
 | The code below draws a square of side length 50 at coordinates (20, 20).
 | What code is repeated above? Each line is followed by a right angled turn.
 | The fd(50) and lt(90) are placed in a for loop with 4 repeats for the 4 sides.

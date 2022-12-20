@@ -41,7 +41,7 @@ Unpacking for a function
 Combining unpacking and packing for a function
 --------------------------------------------------
 
-| THe three lists are unpacked into a tuple and passed to the function.
+| The three lists are unpacked into a tuple and passed to the function.
 | A tuple is printed that contains the args and the result.
 | The output is: ((1, 2, 3, 4, 5, 6, 7, 8, 9), 45)
 
