@@ -1,4 +1,4 @@
-"""draw square
+"""draw rectangle
 """
 import turtle
 
@@ -15,13 +15,13 @@ t.pu()
 t.goto(20, 30)
 t.pd()
 
-t.fd(50)
+t.fd(120)
 t.lt(90)
-t.fd(50)
+t.fd(40)
 t.lt(90)
-t.fd(50)
+t.fd(120)
 t.lt(90)
-t.fd(50)
+t.fd(40)
 t.lt(90)
 
 s.exitonclick()

@@ -1,8 +1,8 @@
 ====================================================
-Turtle square progressions
+Turtle rectangle progressions
 ====================================================
 
-| The code progressions below draw a square.
+| The code progressions below draw a rectangle.
 | With each version, an improvement is made.
 | Firstly, only sequencing is used, with no iteration.
 | Iteration, using a for loop, reduces the code lines.
@@ -10,15 +10,15 @@ Turtle square progressions
 
 ----
 
-Turtle square in steps
+Turtle rectangle in steps
 ----------------------------------------
 
-| The code below draws a square of side length 50 at coordinates (20,30).
+| The code below draws a rectangle of side lengths 120 and 40 at coordinates (20,30).
 | The starting direction, eastwards, is set by: ``t.seth(0)``
 | The starting position, at (20, 30), is set by: ``t.goto(20,30)``. ``t.pu()`` and ``t.pd()`` are used either side of it to avoid line drawing by the turtle repositioning.
-| A line is drawn upwards by: ``t.fd(50)``.
+| A line is drawn upwards by: ``t.fd(120)``.
 | The turtle then turns to the left by: ``t.lt(90)``.
-| The fd(50) and rt(90) are then repeated 3 more times for the other three sides.
+| Then the other 3 sides are added.
 
 
 .. code-block:: python
@@ -35,29 +35,29 @@ Turtle square in steps
 
     t.seth(0)
     t.pu()
-    t.goto(20, 30)
+    t.goto(50, 50)
     t.pd()
 
-    t.fd(50)
+    t.fd(120)
     t.lt(90)
-    t.fd(50)
+    t.fd(40)
     t.lt(90)
-    t.fd(50)
+    t.fd(120)
     t.lt(90)
-    t.fd(50)
+    t.fd(40)
     t.lt(90)
 
     s.exitonclick()
 
 ----
 
-Turtle square using for loop
+Turtle rectangle using for loop
 ----------------------------------------
 
-| The code below draws a square of side length 50 at coordinates (20, 20).
-| What code is repeated above? Each line is followed by a right angled turn.
+| The code below draws a rectangle of side length 50 at coordinates (20, 20).
+| What code is repeated above? Each line is foolowed by a right angled turn.
 | The fd(50) and lt(90) are placed in a for loop with 4 repeats for the 4 sides.
-| The iterator used is "_". This is the standard choice in python when the iterator is not used in the for loop block.
+| The iterator used is "_". This is the standard choice in python whne the iterator is not used in the for loop block.
 
 .. code-block:: python
 
@@ -84,24 +84,24 @@ Turtle square using for loop
 
 ----
 
-Turtle square function
+Turtle rectangle function
 ----------------------------------------
 
-| The square function draws a square.
+| The rectangle function draws a rectangle.
 | The function has parameters to specify the side length and the staring position of the bottom left vertex.
 | The function also requires the turtle to be passed as an argument.
 | The initial heading has been left out of the function.
 
-.. pyfunction:: square(t, l=50, x=0, y=0)
+.. pyfunction:: rectangle(t, l=50, x=0, y=0)
 
-    | t - the turtle object to draw the square
+    | t - the turtle object to draw the rectangle
     | l - side length, default 50
     | x - starting x position, default 0
     | y - starting y position, default 0
     
-| In the code below, a default square is drawn using ``square(t)``.
-| A second square of length 50 is drawn at (x=20, y=30).
-| A third square of length 250 is drawn at (x=-300, y=-200).
+| In the code below, a default rectangle is drawn using ``rectangle(t)``.
+| A second rectangle of length 100 is drawn at (x=200, y=100).
+| A third rectangle of length 250 is drawn at (x=-300, y=-200).
 
 .. code-block:: python
 
@@ -115,7 +115,7 @@ Turtle square function
     t = turtle.Turtle()
     t.speed(5)
 
-    def square(t, l=50, x=0, y=0):
+    def rectangle(t, l=50, x=0, y=0):
         t.pu()
         t.goto(x, y)
         t.pd()
@@ -124,9 +124,9 @@ Turtle square function
             t.lt(90)
 
     t.seth(0)
-    square(t)
-    square(t, l=50, x=20, y=30)
-    square(t, l=250, x=-300, y=-200)
+    rectangle(t)
+    rectangle(t, l=100, x=200, y=100)
+    rectangle(t, l=250, x=-300, y=-200)
     s.exitonclick()
 
 ----
@@ -136,9 +136,9 @@ Adding pen colour and fill colour parameters
 
 | The code adds parameters for pen and fill colours.
 
-.. pyfunction:: square(t, l=50, x=0, y=0, penc="blue", fillc=None, penw=1)
+.. pyfunction:: rectangle(t, l=50, x=0, y=0, penc="blue", fillc=None, penw=1)
 
-    | t - the turtle object to draw the square
+    | t - the turtle object to draw the rectangle
     | l - side length, default 50
     | x - starting x position, default 0
     | y - starting y position, default 0
@@ -146,7 +146,7 @@ Adding pen colour and fill colour parameters
     | fillc - fillcolor, default is None
     | penw - pensize, default 1
    
-| In the code below, a square of length 250 is drawn at (x=-100, y=-150) with a blue pencolor, a green fillcolor, with a pensize of 2.
+| In the code below, a rectangle of length 200 is drawn at (x=-100, y=-100) with a blue pencolor, a green fillcolor, with a pensize of 2.
 | The code needs to check the **fillc** argument since setting a fillcolor to **None** will throw an error.
 
 .. code-block:: python
@@ -161,7 +161,7 @@ Adding pen colour and fill colour parameters
     t = turtle.Turtle()
     t.speed(0)
 
-    def square(t, l=50, x=0, y=0, penc="blue", fillc="red", penw=1):
+    def rectangle(t, l=50, x=0, y=0, penc="blue", fillc="red", penw=1):
         t.pu()
         t.goto(x, y)
         t.pd()
@@ -176,7 +176,7 @@ Adding pen colour and fill colour parameters
         if fillc is not None:
             t.end_fill()
 
-    square(t, l=250, x=-100, y=-150, penc="blue", fillc="snow", penw=2)
+    rectangle(t, l=200, x=-100, y=-100, penc="blue", fillc="snow", penw=2)
 
     s.exitonclick()
 
