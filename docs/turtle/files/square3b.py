@@ -13,14 +13,14 @@ t = turtle.Turtle()
 t.speed(0)
 
 
-def square(t, l=50, x=0, y=0):
+def square(t, length=50, x=0, y=0):
     for _ in range(4):
-        t.fd(l)
+        t.fd(length)
         t.lt(90)
 
 
 for i in range(16):
-    square(t, l=100)
+    square(t, length=100)
     t.lt(6)
 
 turtle.update()

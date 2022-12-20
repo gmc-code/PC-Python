@@ -14,7 +14,7 @@ Sequencing: steps to draw a square
 ------------------------------------------
 
 | The code below uses sequencing only.
-| The code below draws a square of side length 50 at coordinates (20, 0).
+| The code below draws a square of side length 50 at coordinates (20, 30).
 | The starting direction, eastwards, is set by: ``t.seth(0)``
 | The starting position, at (20, 30), is set by: ``t.goto(20, 30)``. 
 | ``t.pu()`` and ``t.pd()`` are used either side of it to avoid line drawing when repositioning the turtle.
@@ -95,10 +95,10 @@ Definitions: using a def block to draw a square
 | Before the for-loop, the turtle is repositioned without drawing the movement; **penup** and **pendown** are needed for that.
 | The initial heading has been left out of the square function, but it can be set prior to using the square function.
 
-.. py:function:: square(t, l=50, x=0, y=0)
+.. py:function:: square(t, length=50, x=0, y=0)
 
     | t - the turtle object to draw the square
-    | l - side length, default 50
+    | length - side length, default 50
     | x - starting x position, default 0
     | y - starting y position, default 0
     
@@ -118,7 +118,7 @@ Definitions: using a def block to draw a square
     t = turtle.Turtle()
     t.speed(5)
 
-    def square(t, l=50, x=0, y=0):
+    def square(t, length=50, x=0, y=0):
         t.pu()
         t.goto(x, y)
         t.pd()
@@ -128,8 +128,8 @@ Definitions: using a def block to draw a square
 
     t.seth(0)
     square(t)
-    square(t, l=50, x=20, y=30)
-    square(t, l=250, x=-300, y=-200)
+    square(t, length=50, x=20, y=30)
+    square(t, length=250, x=-300, y=-200)
 
     s.exitonclick()
 
@@ -140,10 +140,10 @@ Adding pen colour and fill colour parameters
 
 | The code adds parameters for pen and fill colours.
 
-.. py:function:: square(t, l=50, x=0, y=0, penc="blue", fillc=None, penw=1)
+.. py:function:: square(t, length=50, x=0, y=0, penc="blue", fillc=None, penw=1)
 
     | t - the turtle object to draw the square
-    | l - side length, default 50
+    | length - side length, default 50
     | x - starting x position, default 0
     | y - starting y position, default 0
     | penc - pencolor, default is blue
@@ -175,12 +175,23 @@ Adding pen colour and fill colour parameters
             t.fillcolor(fillc)
             t.begin_fill()
         for _ in range(4):
-            t.fd(l)
+            t.fd(length)
             t.lt(90)
         if fillc is not None:
             t.end_fill()
 
-    square(t, l=250, x=-100, y=-150, penc="blue", fillc="snow", penw=2)
+    square(t, length=250, x=-100, y=-150, penc="blue", fillc="snow", penw=2)
 
     s.exitonclick()
 
+
+----
+
+Practice Questions
+--------------------
+
+.. admonition:: Tasks
+
+    1. Using sequencing only, draw a square of side length 500 at (-250, -250).
+    2. Using a repeat loop (without a function), draw a square of side length 50 at (-25, -25).
+    3. Use the definition provided above to draw a square of length 400 at (x=-200, y=-200) with a purple pencolor, a bisque fillcolor, with a pensize of 10.

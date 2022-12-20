@@ -11,17 +11,17 @@ t = turtle.Turtle()
 t.speed(5)
 
 
-def square(t, l=50, x=0, y=0):
+def square(t, length=50, x=0, y=0):
     t.pu()
     t.goto(x, y)
     t.pd()
     for _ in range(4):
-        t.fd(l)
+        t.fd(length)
         t.lt(90)
 
 
 t.seth(0)
 square(t)
-square(t, l=50, x=20, y=30)
-square(t, l=250, x=-300, y=-200)
+square(t, length=50, x=20, y=30)
+square(t, length=250, x=-300, y=-200)
 s.exitonclick()

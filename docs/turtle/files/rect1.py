@@ -17,11 +17,11 @@ t.pd()
 
 t.fd(120)
 t.lt(90)
-t.fd(40)
+t.fd(50)
 t.lt(90)
 t.fd(120)
 t.lt(90)
-t.fd(40)
+t.fd(50)
 t.lt(90)
 
 s.exitonclick()
