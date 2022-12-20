@@ -83,16 +83,10 @@ Sequencing: steps to draw a square
                         
                 .. tab-item:: Q2
 
-                    From the code above, list the lines that do the actual drawing. 
+                    From the 8 lines, list the simplest amount of code that is repeated.
 
                     .. code-block:: python
 
-                        t.fd(50)
-                        t.lt(90)
-                        t.fd(50)
-                        t.lt(90)
-                        t.fd(50)
-                        t.lt(90)
                         t.fd(50)
                         t.lt(90)
 
@@ -114,19 +108,20 @@ Sequencing: steps to draw a square
 
                         t.seth(0)
                         t.pu()
-                        t.goto(20, 30)
+                        t.goto(-250, -250)
                         t.pd()
 
-                        t.fd(50)
+                        t.fd(500)
                         t.lt(90)
-                        t.fd(50)
+                        t.fd(500)
                         t.lt(90)
-                        t.fd(50)
+                        t.fd(500)
                         t.lt(90)
-                        t.fd(50)
+                        t.fd(500)
                         t.lt(90)
 
                         s.exitonclick()
+
 
 ----
 
@@ -161,6 +156,30 @@ Iteration: using a for-loop to draw a square
 
     s.exitonclick()
 
+----
+
+.. admonition:: Tasks
+
+    1. Identify the lines of code that replaced the 8 steps: 
+    t.fd(50); t.lt(90); t.fd(50); t.lt(90); t.fd(50); t.lt(90); t.fd(50); t.lt(90)
+
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
+
+            .. tab-set::
+
+                .. tab-item:: Q1
+
+                    Identify the lines of code that replaced the 8 steps 
+
+                    .. code-block:: python
+
+                        for _ in range(4):
+                            t.fd(50)
+                            t.lt(90)
+                    
 ----
 
 Definitions: using a def block to draw a square
