@@ -57,10 +57,9 @@ Iteration: Turtle square using for loop
 ----------------------------------------
 
 | The code below uses iteration to reduce code duplciation that was present when only sequencing was used.
-| The code below draws a square of side length 50 at coordinates (20, 20).
-| What code is repeated above? Each line is followed by a right angled turn.
+| The code below draws a square of side length 50 at coordinates (20, 30).
 | The fd(50) and lt(90) are placed in a for loop with 4 repeats for the 4 sides.
-| The iterator used is "_". This is the standard choice in python when the iterator is not used in the for loop block.
+| The iterator used is "_". This is the standard choice in python when the iterator is not referenced in the for-loop block.
 
 .. code-block:: python
 
@@ -76,7 +75,7 @@ Iteration: Turtle square using for loop
 
     t.seth(0)
     t.pu()
-    t.goto(20, 20)
+    t.goto(20, 30)
     t.pd()
 
     for _ in range(4):
@@ -87,13 +86,14 @@ Iteration: Turtle square using for loop
 
 ----
 
-Turtle square function
+Definitions: Turtle square def block
 ----------------------------------------
 
-| The square function draws a square.
+| The code below uses a definition block to draw a square.
 | The function has parameters to specify the side length and the staring position of the bottom left vertex.
-| The function also requires the turtle to be passed as an argument.
-| The initial heading has been left out of the function.
+| The function also requires the turtle to be passed as an argument so it can be refered to.
+| Tbefore the for loop, the turtle is repositioned without drawing the movement.
+| The initial heading has been left out of the function, and can be set beofre using it.
 
 .. pyfunction:: square(t, l=50, x=0, y=0)
 
@@ -130,6 +130,7 @@ Turtle square function
     square(t)
     square(t, l=50, x=20, y=30)
     square(t, l=250, x=-300, y=-200)
+
     s.exitonclick()
 
 ----
