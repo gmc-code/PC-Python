@@ -92,10 +92,10 @@ Definitions: Turtle square def block
 | The code below uses a definition block to draw a square.
 | The function has parameters to specify the side length and the staring position of the bottom left vertex.
 | The function also requires the turtle to be passed as an argument so it can be refered to.
-| Tbefore the for loop, the turtle is repositioned without drawing the movement.
+| Before the for loop, the turtle is repositioned without drawing the movement.
 | The initial heading has been left out of the function, and can be set beofre using it.
 
-.. pyfunction:: square(t, l=50, x=0, y=0)
+.. py:function:: square(t, l=50, x=0, y=0)
 
     | t - the turtle object to draw the square
     | l - side length, default 50
@@ -140,7 +140,7 @@ Adding pen colour and fill colour parameters
 
 | The code adds parameters for pen and fill colours.
 
-.. pyfunction:: square(t, l=50, x=0, y=0, penc="blue", fillc=None, penw=1)
+.. py:function:: square(t, l=50, x=0, y=0, penc="blue", fillc=None, penw=1)
 
     | t - the turtle object to draw the square
     | l - side length, default 50
