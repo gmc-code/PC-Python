@@ -234,7 +234,7 @@ Definitions: using a def block to draw a square
 .. admonition:: Tasks
 
     1. Modify ``square(t, length=50, x=0, y=0)`` to draw a square of length 200 at (-300, -100).
-    1. Modify ``square(t, length=50, x=0, y=0)`` to draw a square of length 30 at (70, 100).
+    2. Modify ``square(t, length=50, x=0, y=0)`` to draw a square of length 30 at (70, 100).
 
     .. dropdown::
             :icon: codescan
@@ -312,11 +312,10 @@ Adding pen colour and fill colour parameters
 
 ----
 
-
 .. admonition:: Tasks
 
     1. Modify ``square(t, length=50, x=0, y=0, penc="blue", fillc=None, penw=1)`` to draw a square of length 200 at (-300, -100) with red outline of thickness 5.
-    1. Modify ``square(t, length=50, x=0, y=0, penc="blue", fillc=None, penw=1)`` to draw a square of length 30 at (70, 100) with green outline of thickness 3 and a yellow fill.
+    2. Modify ``square(t, length=50, x=0, y=0, penc="blue", fillc=None, penw=1)`` to draw a square of length 30 at (70, 100) with green outline of thickness 3 and a yellow fill.
 
     .. dropdown::
             :icon: codescan

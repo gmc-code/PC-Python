@@ -31,13 +31,17 @@ See: https://docs.python.org/3/library/turtle.html#turtle.Screen
 
 | The class *Screen()* defines graphics windows as a playground for the drawing turtles. 
 | This function should be used when turtle is used as a standalone tool for doing graphics.
-
+| The last line, ``turtle.done()``, has been included here so the window stays open.
 
 .. code-block:: python
 
     import turtle
 
     s = turtle.Screen()
+
+    # turtle drawing to go here
+
+    turtle.done()
 
 ----
 
@@ -69,6 +73,69 @@ Screen colours
     s = turtle.Screen()
     s.bgcolor("black")
 
+    # turtle drawing to go here
+
+    turtle.done()
+
+
+| Change the colormode to 255, so that the background can be set using the rgb tuple (50, 193, 143).
+
+.. code-block:: python
+
+    import turtle
+
+    s = turtle.Screen()
+    turtle.colormode(cmode=255)
+    s.bgcolor((50, 193, 143))
+
+    # turtle drawing to go here
+
+    turtle.done()
+
+----
+
+.. admonition:: Tasks
+
+    1. Modify the code above to draw a yellow background.
+    2. Draw a cyan background using rgb value of (0, 255, 255).
+
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
+
+            .. tab-set::
+
+                .. tab-item:: Q1
+
+                    Modify the code above to draw a yellow background.
+
+                    .. code-block:: python
+
+                        import turtle
+
+                        s = turtle.Screen()
+                        s.bgcolor("yellow")
+
+                        # turtle drawing to go here
+
+                        turtle.done()
+
+                .. tab-item:: Q2
+
+                    Draw a cyan background using rgb value of (0, 255, 255).
+
+                    .. code-block:: python
+
+                        import turtle
+
+                        s = turtle.Screen()
+                        turtle.colormode(cmode=255)
+                        s.bgcolor((0, 255, 255))
+
+                        # turtle drawing to go here
+
+                        turtle.done()
 ----
 
 Screen title
@@ -89,6 +156,39 @@ See: https://docs.python.org/3/library/turtle.html#turtle.title
     s = turtle.Screen()
     s.bgcolor("black")
     s.title("Turtle Screen")
+
+    # turtle drawing to go here
+
+    turtle.done()
+
+----
+
+.. admonition:: Tasks
+
+    1. Modify the code above to create the screen title "Turtle Race".
+
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
+
+            .. tab-set::
+
+                .. tab-item:: Q1
+
+                    Modify the code above to create the screen title "Turtle Race".
+
+                    .. code-block:: python
+
+                        import turtle
+
+                        s = turtle.Screen()
+                        s.bgcolor("black")
+                        s.title("Turtle Screen")
+
+                        # turtle drawing to go here
+
+                        turtle.done()
 
 ----
 
@@ -118,6 +218,40 @@ See: https://docs.python.org/3/library/turtle.html#turtle.setup
     s.title("Turtle Screen")
     s.setup(width=800, height=600, startx=None, starty=None)
 
+    # turtle drawing to go here
+
+    turtle.done()
+
+----
+
+.. admonition:: Tasks
+
+    1. Modify the code above to have a screen of 600 by 400, with the left edge 40 pixels from the screen edge and the top edge at the top of the screen.
+
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
+
+            .. tab-set::
+
+                .. tab-item:: Q1
+
+                    Modify the code above to have a screen of 600 by 400, with the left edge 40 pixels from the screen edge and the top edge at the top of the screen.
+
+                    .. code-block:: python
+
+                        import turtle
+
+                        s = turtle.Screen()
+                        s.bgcolor("black")
+                        s.title("Turtle Screen")
+                        s.setup(width=600, height=400, startx=40, starty=0)
+
+                        # turtle drawing to go here
+
+                        turtle.done()
+
 ----
 
 Using screen events
@@ -128,6 +262,7 @@ See: https://docs.python.org/3/library/turtle.html#turtle.mainloop
 
 | Use **turtle.mainloop()** or **turtle.done()** to keep the window open.
 | When used, it must be the last statement in the file.
+| The close icon must be clicked to close the window.
 
 .. code-block:: python
 
@@ -141,4 +276,35 @@ See: https://docs.python.org/3/library/turtle.html#turtle.mainloop
     # turtle drawing to go here
 
     turtle.done()
+
+----
+
+Exit on click
+-----------------------
+
+| Close the Turtle window when the mouse is clicked.
+| Use **turtle.exitonclick()** instead of **turtle.done()**
+
+| See: https://docs.python.org/3/library/turtle.html#turtle.exitonclick
+
+.. py:function:: turtle.exitonclick()
+
+    | Also **turtle.bye()**
+    | Shut the turtle graphics window when the mouse is clicked on the Screen.
+
+
+.. code-block:: python
+
+    import turtle
+
+    s = turtle.Screen()
+    s.bgcolor("black")
+    s.title("Turtle Screen")
+    s.setup (width=800, height=600, startx=0, starty=0)
+
+    # turtle drawing to go here
+
+    s.exitonclick()
+    # turtle.done()
+
 

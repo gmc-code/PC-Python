@@ -160,36 +160,6 @@ Reset screensize
 
 ----
 
-Exit on click
------------------------
-
-| Close the Turtle window when the mouse is clicked.
-| Use this instead of **turtle.done()**
-
-| See: https://docs.python.org/3/library/turtle.html#turtle.exitonclick
-
-.. py:function:: turtle.exitonclick()
-
-    | Also **turtle.bye()**
-    | Shut the turtle graphics window when the mouse clicks on the Screen.
-
-.. code-block:: python
-
-    import turtle
-
-    s = turtle.Screen()
-    # s.bgcolor("black")
-    s.bgpic("mario.gif")
-    s.title("Turtle Screen")
-    s.setup (width=800, height=600, startx=0, starty=0)
-
-    # turtle drawing to go here
-
-    s.exitonclick()
-    # turtle.done()
-
-----
-
 Animation control
 -------------------------
 
