@@ -10,8 +10,8 @@ Turtle square progressions
 
 ----
 
-Sequencing: Turtle square in steps
-----------------------------------------
+Sequencing: steps to draw a square
+------------------------------------------
 
 | The code below uses sequencing only.
 | The code below draws a square of side length 50 at coordinates (20, 0).
@@ -53,8 +53,8 @@ Sequencing: Turtle square in steps
 
 ----
 
-Iteration: Turtle square using for-loop
-----------------------------------------
+Iteration: using a for-loop to draw a square 
+----------------------------------------------
 
 | The code below uses iteration to reduce code duplciation that was present when only sequencing was used.
 | The code below draws a square of side length 50 at coordinates (20, 30).
@@ -86,8 +86,8 @@ Iteration: Turtle square using for-loop
 
 ----
 
-Definitions: Turtle square def block
-----------------------------------------
+Definitions: using a def block to draw a square
+----------------------------------------------------
 
 | The code below uses a definition block to draw a square.
 | The function has parameters to specify the side length and the staring position of the bottom left vertex.
@@ -102,10 +102,10 @@ Definitions: Turtle square def block
     | x - starting x position, default 0
     | y - starting y position, default 0
     
-| In the code below, a default square is drawn using ``square(t)``.
-| A second square of length 50 is drawn at (x=20, y=30).
-| A third square of length 250 is drawn at (x=-300, y=-200).
-
+| In the code below, ``square(t)`` draws a default square.
+| ``square(t, l=50, x=20, y=30)`` draws a square of length 50 at (x=20, y=30).
+| ``square(t, l=250, x=-300, y=-200)`` draws a square of length 250 at (x=-300, y=-200).
+    
 .. code-block:: python
 
     import turtle
