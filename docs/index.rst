@@ -71,6 +71,7 @@ PC-Python
     turtle/turtle_drawing.rst
     turtle/turtle_square_progressions.rst
     turtle/turtle_rectangle_progressions.rst   
+    turtle/turtle_triangle_progressions.rst   
 
 .. toctree::
     :maxdepth: 2

@@ -53,6 +53,83 @@ Sequencing: steps to draw a square
 
 ----
 
+.. admonition:: Tasks
+
+    1. From the code above, list the 8 lines that do the actual drawing.
+    2. From the 8 lines, list the simplest amount of code that is repeated.
+    3. Using sequencing only, draw a square of side length 500 at (-250, -250).
+
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
+
+            .. tab-set::
+
+                .. tab-item:: Q1
+
+                    From the code above, list the lines that do the actual drawing. 
+
+                    .. code-block:: python
+
+                        t.fd(50)
+                        t.lt(90)
+                        t.fd(50)
+                        t.lt(90)
+                        t.fd(50)
+                        t.lt(90)
+                        t.fd(50)
+                        t.lt(90)
+                        
+                .. tab-item:: Q2
+
+                    From the code above, list the lines that do the actual drawing. 
+
+                    .. code-block:: python
+
+                        t.fd(50)
+                        t.lt(90)
+                        t.fd(50)
+                        t.lt(90)
+                        t.fd(50)
+                        t.lt(90)
+                        t.fd(50)
+                        t.lt(90)
+
+                .. tab-item:: Q3
+
+                    Using sequencing only, draw a square of side length 500 at (-250, -250).
+
+                    .. code-block:: python
+
+                        import turtle
+
+                        s = turtle.Screen()
+                        s.bgcolor("white")
+                        s.title("Grid")
+                        s.setup(width=800, height=600, startx=0, starty=0)
+
+                        t = turtle.Turtle()
+                        t.speed(5)
+
+                        t.seth(0)
+                        t.pu()
+                        t.goto(20, 30)
+                        t.pd()
+
+                        t.fd(50)
+                        t.lt(90)
+                        t.fd(50)
+                        t.lt(90)
+                        t.fd(50)
+                        t.lt(90)
+                        t.fd(50)
+                        t.lt(90)
+
+                        s.exitonclick()
+
+----
+
 Iteration: using a for-loop to draw a square 
 ----------------------------------------------
 

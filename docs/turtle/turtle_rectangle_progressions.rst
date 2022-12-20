@@ -55,6 +55,45 @@ Sequencing: steps to draw a rectangle
 
 ----
 
+.. admonition:: Tasks
+
+    1. From the code above, list the 8 lines that do the actual drawing.
+    2. From the 8 lines, list the simplest amount of code that is repeated.
+
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
+
+            .. tab-set::
+
+                .. tab-item:: Q1
+
+                    From the code above, list the lines that do the actual drawing. 
+
+                    .. code-block:: python
+
+                        t.fd(120)
+                        t.lt(90)
+                        t.fd(50)
+                        t.lt(90)
+                        t.fd(120)
+                        t.lt(90)
+                        t.fd(50)
+                        t.lt(90)
+
+                .. tab-item:: Q2
+
+                    From the 8 lines, list the simplest amount of code that is repeated.
+
+                    .. code-block:: python
+
+                        t.fd(120)
+                        t.lt(90)
+
+
+----
+
 Iteration: using a for-loop to draw a rectangle 
 ------------------------------------------------
 
@@ -159,7 +198,7 @@ Adding pen colour and fill colour parameters
     | fillc - fillcolor, default is None
     | penw - pensize, default 1
    
-| In the code below, ``rectangle(t, length=400, width=300, x=-100, y=-150, penc="blue", fillc="green", penw=5)``draws a rectangle of 400 by 300 at (x=-100, y=-150) with a blue pencolor, a green fillcolor, with a pensize of 5.
+| In the code below, ``rectangle(t, length=400, width=300, x=-100, y=-150, penc="blue", fillc="green", penw=5)`` draws a rectangle of 400 by 300 at (x=-100, y=-150) with a blue pencolor, a green fillcolor, using a pensize of 5.
 | The code needs to check the **fillc** argument since setting a fillcolor to **None** will throw an error.
 
 .. code-block:: python
@@ -191,18 +230,30 @@ Adding pen colour and fill colour parameters
         if fillc is not None:
             t.end_fill()
 
-    rectangle(t, l=250, x=-100, y=-150, penc="blue", fillc="snow", penw=2)
+    rectangle(t, length=400, width=300, x=-100, y=-150, penc="blue", fillc="green", penw=5)
 
     s.exitonclick()
 
 
 ----
 
-Practice Questions
---------------------
-
 .. admonition:: Tasks
 
-    1. Using sequencing only, draw a rectangle of side length 500 at (-250, -250).
-    2. Using a repeat loop (without a function), draw a rectangle of side length 50 at (-25, -25).
-    3. Use the definition provided above to draw a rectangle of length 400 at (x=-200, y=-200) with a purple pencolor, a bisque fillcolor, with a pensize of 10.
+    1. Using sequencing only, draw a rectangle of side lengths 500 and 400 at (-250, -250).
+    2. Using a repeat loop (without a function), draw a rectangle of side lengths 50 and 40 at (-25, -25).
+    3. Use the definition provided above to draw a rectangle of side lengths 400 and 300 at (x=-300, y=-200) with a purple pencolor, a bisque fillcolor, with a pensize of 10.
+
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
+
+            .. tab-set::
+
+                .. tab-item:: Q1
+
+                    Write code so that pressing A turns on the green LED only and pressing B turns on the yellow LED for 3 seconds then turns on the red LED only. 
+
+                    .. code-block:: python
+
+                        from microbit import *
