@@ -199,8 +199,8 @@ Definitions: using a def block to draw a square
     | y - starting y position, default 0
     
 | In the code below, ``square(t)`` draws a default square.
-| ``square(t, l=50, x=20, y=30)`` draws a square of length 50 at (x=20, y=30).
-| ``square(t, l=250, x=-300, y=-200)`` draws a square of length 250 at (x=-300, y=-200).
+| ``square(t, length=50, x=20, y=30)`` draws a square of length 50 at (x=20, y=30).
+| ``square(t, length=250, x=-300, y=-200)`` draws a square of length 250 at (x=-300, y=-200).
     
 .. code-block:: python
 
@@ -219,7 +219,7 @@ Definitions: using a def block to draw a square
         t.goto(x, y)
         t.pd()
         for _ in range(4):
-            t.fd(l)
+            t.fd(length)
             t.lt(90)
 
     t.seth(0)
@@ -228,6 +228,36 @@ Definitions: using a def block to draw a square
     square(t, length=250, x=-300, y=-200)
 
     s.exitonclick()
+
+----
+
+.. admonition:: Tasks
+
+    1. Modify ``square(t, length=50, x=0, y=0)`` to draw a square of length 200 at (-300, -100).
+    1. Modify ``square(t, length=50, x=0, y=0)`` to draw a square of length 30 at (70, 100).
+
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
+
+            .. tab-set::
+
+                .. tab-item:: Q1
+
+                    Modify ``square(t, length=50, x=0, y=0)`` to draw a square of length 200 at (-300, -100).
+
+                    .. code-block:: python
+
+                        square(t, length=200, x=-300, y=-100)
+
+                .. tab-item:: Q2
+
+                    Modify ``square(t, length=50, x=0, y=0)`` to draw a square of length 30 at (70, 100).
+
+                    .. code-block:: python
+
+                        square(t, length=30, x=70, y=100)
 
 ----
 
