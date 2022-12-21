@@ -24,12 +24,12 @@ Turtle screen
 Screen class
 --------------
 
-| Setup the screen for drawing on.
+| Setup the screen for drawing in.
 | Start by importing the inbuilt turtle library.
 
 See: https://docs.python.org/3/library/turtle.html#turtle.Screen
 
-| The class *Screen()* defines graphics windows as a playground for the drawing turtles. 
+| The class **Screen()** defines graphics windows as a playground for the drawing turtles. 
 | This function should be used when turtle is used as a standalone tool for doing graphics.
 | The last line, ``turtle.done()``, has been included here so the window stays open.
 
@@ -48,7 +48,9 @@ See: https://docs.python.org/3/library/turtle.html#turtle.Screen
 Screen colours
 -----------------
 
-| Set the screen color.
+| Set the screen color mode.
+| If colormode is 1, a colour as a rgb tuple is written with values form 0 to 1, such as (0.2, 0.8, 0.55),
+| If colormode is 255, a colour as a rgb tuple is written with values form 0 to 255, such as (50, 193, 143)
 
 | See: https://docs.python.org/3/library/turtle.html#turtle.bgcolor
 | See: https://docs.python.org/3/library/turtle.html#turtle.colormode
@@ -58,6 +60,8 @@ Screen colours
     | **cmode** - one of the values 1.0 or 255.
     | The default config starts with a cmode of 1.0
 
+
+| Set the screen color.
 
 .. py:function:: turtle.bgcolor(*args)
 
