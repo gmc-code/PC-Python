@@ -2,6 +2,12 @@
 Turtle drawing
 ============t = turtle.Turtle()========================================
 
+| Turtles are like cursors used to indicate the position for drawing to the screen.
+| Turtles are used for drawing on the screen.
+| Most of the methods for controlling turtles are below.
+
+----
+
 Turtle methods
 ----------------------------------------
 

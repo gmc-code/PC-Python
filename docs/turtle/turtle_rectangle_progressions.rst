@@ -3,7 +3,7 @@ Turtle rectangle progressions
 ====================================================
 
 | The code progressions below draw a rectangle.
-| With each version, an improvement is made.
+| With each version, an improvement in code structure is made.
 | Firstly, only sequencing is used, with no iteration.
 | Secondly, iteration, using a for-loop, reduces code duplication.
 | Thirdly, a definition block with parameters allows for code reuse with the use of arguments.

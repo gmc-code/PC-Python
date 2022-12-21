@@ -3,7 +3,7 @@ Turtle square progressions
 ====================================================
 
 | The code progressions below draw a square.
-| With each version, an improvement is made.
+| With each version, an improvement in code structure is made.
 | Firstly, only sequencing is used, with no iteration.
 | Secondly, iteration, using a for-loop, reduces code duplication.
 | Thirdly, a definition block with parameters allows for code reuse with the use of arguments.
@@ -20,7 +20,7 @@ Sequencing: steps to draw a square
 | ``t.pu()`` and ``t.pd()`` are used either side of it to avoid line drawing when repositioning the turtle.
 | A line is drawn forwards by: ``t.fd(50)``.
 | The turtle then turns to the left by: ``t.lt(90)``.
-| The fd(50) and lt(90) are then repeated 3 more times for the other three sides.
+| The ``t.fd(50)`` and ``t.lt(90)`` are then repeated 3 more times for the other three sides.
 
 
 .. code-block:: python
@@ -130,7 +130,7 @@ Iteration: using a for-loop to draw a square
 
 | The code below uses iteration to reduce code duplciation that was present when only sequencing was used.
 | The code below draws a square of side length 50 at coordinates (20, 30).
-| The fd(50) and lt(90) are placed in a for-loop with 4 repeats for the 4 sides.
+| The ``t.fd(50)`` and ``t.lt(90)`` are placed in a for-loop with 4 repeats for the 4 sides.
 | The iterator used is "_". This is the standard choice in python when the iterator is not referenced in the for-loop block.
 
 .. code-block:: python
@@ -172,7 +172,7 @@ Iteration: using a for-loop to draw a square
 
                 .. tab-item:: Q1
 
-                    Identify the lines of code that replaced the 8 steps 
+                    Identify the lines of code that replaced the 8 steps. 
 
                     .. code-block:: python
 
@@ -193,10 +193,10 @@ Definitions: using a def block to draw a square
 
 .. py:function:: square(t, length=50, x=0, y=0)
 
-    | t - the turtle object to draw the square
-    | length - side length, default 50
-    | x - starting x position, default 0
-    | y - starting y position, default 0
+    | **t** - the turtle object to draw the square
+    | **length** - side length, default 50
+    | **x** - starting x position, default 0
+    | **y** - starting y position, default 0
     
 | In the code below, ``square(t)`` draws a default square.
 | ``square(t, length=50, x=20, y=30)`` draws a square of length 50 at (x=20, y=30).
@@ -268,13 +268,13 @@ Adding pen colour and fill colour parameters
 
 .. py:function:: square(t, length=50, x=0, y=0, penc="blue", fillc=None, penw=1)
 
-    | t - the turtle object to draw the square
-    | length - side length, default 50
-    | x - starting x position, default 0
-    | y - starting y position, default 0
-    | penc - pencolor, default is blue
-    | fillc - fillcolor, default is None
-    | penw - pensize, default 1
+    | **t** - the turtle object to draw the square
+    | **length** - side length, default 50
+    | **x** - starting x position, default 0
+    | **y** - starting y position, default 0
+    | **penc** - pencolor, default is blue
+    | **fillc** - fillcolor, default is None
+    | **penw** - pensize, default 1
    
 | In the code below, ``square(t, l=250, x=-100, y=-150, penc="blue", fillc="green", penw=2) ``draws a square of length 250 at (x=-100, y=-150) with a blue pencolor, a green fillcolor, with a pensize of 2.
 | The code needs to check the **fillc** argument since setting a fillcolor to **None** will throw an error.
