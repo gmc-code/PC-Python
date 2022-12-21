@@ -9,9 +9,9 @@ Turtle screen advanced
 Screen background gif
 -----------------------
 
-| Set a background image (gif file).
-
 | See: https://docs.python.org/3/library/turtle.html#turtle.bgpic
+
+| Set a background image (gif file).
 
 .. py:function:: turtle.bgpic(picname=None)
     
@@ -109,9 +109,9 @@ Screen background gif
 Clear screen
 -----------------------
 
-| Clear the screen.
-
 | See: https://docs.python.org/3/library/turtle.html#turtle.clearscreen
+
+| Clear the screen.
 
 .. py:function:: turtle.clearscreen()
 
@@ -161,9 +161,9 @@ Clear screen
 Reset screen
 -----------------------
 
-| Reset all turtles on the Screen.
+| See: https://docs.python.org/3/library/turtle.html#turtle.resetscreen
 
-See: https://docs.python.org/3/library/turtle.html#turtle.resetscreen
+| Reset all turtles on the Screen.
 
 .. py:function:: turtle.resetscreen()
 
@@ -278,9 +278,9 @@ See: https://docs.python.org/3/library/turtle.html#turtle.resetscreen
 Reset screensize
 -----------------------
 
-| Reset the screensize.
-
 | See: https://docs.python.org/3/library/turtle.html#turtle.screensize
+
+| Reset the screensize.
 
 .. py:function:: turtle.screensize(canvwidth=None, canvheight=None, bg=None)
 
@@ -346,17 +346,22 @@ Animation control
 
 | See: https://docs.python.org/3/library/turtle.html#animation-control
 
+| Turn turtle animation on/off and set the delay for update drawings.
+
 .. py:function:: turtle.tracer(n=None, delay=None)
  
-    | Turn turtle animation on/off and set delay for update drawings.
     | n - nonnegative integer; higher is faster; 0 to turn off tracing
     | delay - nonnegative integer
     | If n is given, only each n-th regular screen update is really performed. When called without arguments, returns the currently stored value of n. Second argument sets delay value (see delay()).
+
+| Set the delay for update drawings.
 
 .. py:function:: turtle.delay(delay=None)
  
     | Set or return the drawing delay in milliseconds. This is approximately the time interval between two consecutive canvas updates.
     | delay - positive integer
+
+| Update the screen. Use when tracing has been set to 0 to turn it off. 
 
 .. py:function:: turtle.update()
  
