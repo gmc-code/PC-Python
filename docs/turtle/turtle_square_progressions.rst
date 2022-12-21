@@ -349,4 +349,4 @@ Practice Questions
 
     1. Using sequencing only, draw a square of side length 500 at (-250, -250).
     2. Using a repeat loop (without a function), draw a square of side length 50 at (-25, -25).
-    3. Use the definition provided above to draw a square of length 400 at (x=-200, y=-200) with a purple pencolor, a bisque fillcolor, with a pensize of 10.
+    3. Use the definition provided above to draw a square of length 400 at (x=-200, y=-200) with a purple pencolor, a bisque fillcolor, and a pensize of 10.
