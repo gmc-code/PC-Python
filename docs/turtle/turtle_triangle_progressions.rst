@@ -65,11 +65,11 @@ Isosceles triangle
     :align: center
     :alt: isosceles
   
-| A triangle of sides a, b=c can be drawn, given the base and the height. 
-
+| A triangle of sides a, b, b can be drawn, given the base and the height. 
 
 | The code below uses sequencing only.
 | The code below uses the x and y positions and only works when the base is drawn horizontally.
+| The code draws an isosceles triangle of base 100 and height 50 at (20, 30).
 
 .. code-block:: python
 
@@ -83,13 +83,14 @@ Isosceles triangle
     t = turtle.Turtle()
     t.speed(5)
 
-    t.seth(0)
-    t.pu()
-    t.goto(20, 30)
-    t.pd()
-
     base = 100
     height = 50
+    start_pos = (20, 30)
+
+    t.seth(0)
+    t.pu()
+    t.goto(start_pos)
+    t.pd()
 
     start_x = t.xcor()
     start_y = t.ycor()
@@ -112,9 +113,6 @@ Isosceles triangle at any angle
 | An isocelses triangle can be drawn at a given angle, given the base and the height. 
 | The formuals above can be used to calculate the angle B, which the turtle needs to turn and the side length, b.
 
-| The code below uses sequencing only.
-| The code below uses the x and y positions and only works when the base is drawn horizontally.
-
 .. code-block:: python
 
     import turtle
@@ -127,16 +125,19 @@ Isosceles triangle at any angle
     t = turtle.Turtle()
     t.speed(5)
 
-    t.seth(30)
+    base = 100
+    height = 50
+    start_pos = (20, 30)
+    start_heading = 30
+
+    t.seth(start_heading)
     t.pu()
-    t.goto(-20, -100)
+    t.goto(start_pos)
     t.pd()
 
-    base = 200
-    height = 300
-    start_pos = t.pos()
     b = math.sqrt(height**2 + (base**2) / 4)
     angle_B = math.degrees(math.atan(2 * height / base))
+
     t.fd(base)
     t.lt(180 - angle_B)
     t.fd(b)
@@ -149,7 +150,7 @@ Isosceles triangle at any angle
 Iteration: equilateral triangles 
 ------------------------------------------------
 
-| The code below uses iteration to draw an equilateral triangle with angles of 60 degrees at (20,30).
+| The code below uses iteration to draw an equilateral triangle with angles of 60 degrees at (20,30), with the base at 30 degrees from the horizontal (start_heading = 30).
 | FOr an internal angle of 60 degrees when drawing anticlockwise, and angle of 120 degrees is need for the left turn.
 
 .. code-block:: python
@@ -164,14 +165,18 @@ Iteration: equilateral triangles
     t = turtle.Turtle()
     t.speed(5)
 
-    t.seth(0)
+    side = 100
+    start_pos = (20, 30)
+    start_heading = 30
+
+    t.seth(start_heading)
     t.pu()
-    t.goto(20, 30)
+    t.goto(start_pos)
     t.pd()
 
     start_pos = t.pos()
     for _ in range(3):
-        t.fd(100)
+        t.fd(side)
         t.lt(120)
 
     s.exitonclick()

@@ -9,16 +9,19 @@ s.setup(width=800, height=600, startx=0, starty=0)
 t = turtle.Turtle()
 t.speed(5)
 
-t.seth(30)
+base = 100
+height = 50
+start_pos = (20, 30)
+start_heading = 30
+
+t.seth(start_heading)
 t.pu()
-t.goto(-20, -100)
+t.goto(start_pos)
 t.pd()
 
-base = 200
-height = 300
-start_pos = t.pos()
 b = math.sqrt(height**2 + (base**2) / 4)
 angle_B = math.degrees(math.atan(2 * height / base))
+
 t.fd(base)
 t.lt(180 - angle_B)
 t.fd(b)
