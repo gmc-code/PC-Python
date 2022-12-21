@@ -1,7 +1,7 @@
 import turtle
 
 s = turtle.Screen()
-s.bgcolor("black")
+s.bgcolor("lightblue")
 s.title("Turtle Screen")
 s.setup()
 

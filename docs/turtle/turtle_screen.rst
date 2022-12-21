@@ -172,7 +172,7 @@ See: https://docs.python.org/3/library/turtle.html#turtle.title
 
 .. admonition:: Tasks
 
-    1. Modify the code above to create the screen title "Turtle Race".
+    1. Modify the code above to set the screen title to "Turtle Race".
 
     .. dropdown::
             :icon: codescan
@@ -313,5 +313,46 @@ Exit on click
 
     s.exitonclick()
     # turtle.done()
+
+----
+
+.. admonition:: Tasks
+
+    1. Modify the code to require a mouse click to close the turtle window.
+
+    .. code-block:: python
+
+        import turtle
+
+        s = turtle.Screen()
+        s.bgcolor(""lightblue")
+        s.title("Turtle Screen")
+
+        # turtle drawing to go here
+
+        turtle.done()
+
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
+
+            .. tab-set::
+
+                .. tab-item:: Q1
+
+                    Modify the code above to require a mouse click to close the turtle window.
+
+                    .. code-block:: python
+
+                        import turtle
+
+                        s = turtle.Screen()
+                        s.bgcolor(""lightblue")
+                        s.title("Turtle Screen")
+
+                        # turtle drawing to go here
+
+                        s.exitonclick()
 
 
