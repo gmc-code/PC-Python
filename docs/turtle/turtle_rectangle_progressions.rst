@@ -187,18 +187,18 @@ Definitions: using a def block to draw a rectangle
 Adding pen colour and fill colour parameters
 -----------------------------------------------
 
-| The code adds parameters for pen and fill colours.
+| The syntax below adds parameters for pen and fill colours.
 
 .. py:function:: rectangle(t, length=40, width=30, x=0, y=0, penc="blue", fillc=None, penw=1)
 
-    | t - the turtle object to draw the rectangle
-    | length - side length, default 40
-    | width - side width, default 30
-    | x - starting x position, default 0
-    | y - starting y position, default 0
-    | penc - pencolor, default is blue
-    | fillc - fillcolor, default is None
-    | penw - pensize, default 1
+    | **t** - the turtle object to draw the rectangle
+    | **length** - side length; default 40
+    | **width** - side width; default 30
+    | **x** - starting x position; default 0
+    | **y** - starting y position; default 0
+    | **penc** - pencolor; default is blue
+    | **fillc** - fillcolor; default is None
+    | **penw** - pensize; default 1
    
 | In the code below, ``rectangle(t, length=400, width=300, x=-100, y=-150, penc="blue", fillc="green", penw=5)`` draws a rectangle of 400 by 300 at (x=-100, y=-150) with a blue pencolor, a green fillcolor, using a pensize of 5.
 | The code needs to check the **fillc** argument since setting a fillcolor to **None** will throw an error.
