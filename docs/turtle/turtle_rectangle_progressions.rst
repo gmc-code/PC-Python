@@ -265,9 +265,7 @@ Definitions: using a def block to draw a rectangle
 
 
                         t.seth(0)
-                        rectangle(t)
-                        rectangle(t, length=120, width=50, x=50, y=30)
-                        rectangle(t, length=400, width=300, x=-300, y=-200)
+                        rectangle(t, length=80, width=150, x=-80, y=-150)
 
                         s.exitonclick()
 
@@ -325,14 +323,11 @@ Adding pen colour and fill colour parameters
 
     s.exitonclick()
 
-
 ----
 
 .. admonition:: Tasks
 
-    1. Using sequencing only, draw a rectangle of side lengths 500 and 400 at (-250, -250).
-    2. Using a repeat loop (without a function), draw a rectangle of side lengths 50 and 40 at (-25, -25).
-    3. Use the definition provided above to draw a rectangle of side lengths 400 and 300 at (x=-300, y=-200) with a purple pencolor, a bisque fillcolor, with a pensize of 10.
+    1. Use the definition provided above to draw a rectangle of side lengths 150 and 250 at (x=-150, y=-250) with a purple pencolor, a bisque fillcolor, with a pensize of 10.
 
     .. dropdown::
             :icon: codescan
@@ -343,8 +338,43 @@ Adding pen colour and fill colour parameters
 
                 .. tab-item:: Q1
 
-                    Write code so that pressing A turns on the green LED only and pressing B turns on the yellow LED for 3 seconds then turns on the red LED only. 
+                    Use the definition provided above to draw a rectangle of side lengths 150 and 250 at (x=-150, y=-250) with a purple pencolor, a bisque fillcolor, with a pensize of 10. 
 
                     .. code-block:: python
 
-                        from microbit import *
+                        import turtle
+
+                        s = turtle.Screen()
+                        s.bgcolor("white")
+                        s.title("Grid")
+                        s.setup(width=800, height=600, startx=0, starty=0)
+
+                        t = turtle.Turtle()
+                        t.speed(0)
+
+                        def rectangle(t, length=40, width=30, x=0, y=0, x=0, y=0, penc="blue", fillc="red", penw=1):
+                            t.pu()
+                            t.goto(x, y)
+                            t.pd()
+                            t.pensize(penw)
+                            t.pencolor(penc)
+                            if fillc is not None:
+                                t.fillcolor(fillc)
+                                t.begin_fill()
+                            for _ in range(2):
+                                t.fd(length)
+                                t.lt(90)
+                                t.fd(width)
+                                t.lt(90)
+                            if fillc is not None:
+                                t.end_fill()
+
+                        rectangle(t, length=150, width=250, x=-150, y=-250, penc="purple", fillc="bisque", penw=10)
+
+----
+
+.. admonition:: Tasks
+
+    1. Using sequencing only, draw a rectangle of side lengths 500 and 400 at (-250, -250).
+    2. Using a repeat loop (without a function), draw a rectangle of side lengths 50 and 40 at (-25, -25).
+    3. Use the definition provided above to draw a rectangle of side lengths 400 and 300 at (x=-300, y=-200) with a blue pencolor, a snow fillcolor, with a pensize of 6.
