@@ -191,7 +191,7 @@ See: https://docs.python.org/3/library/turtle.html#turtle.title
 
                         s = turtle.Screen()
                         s.bgcolor("white")
-                        s.title("Turtle Screen")
+                        s.title("Turtle Race")
 
                         # turtle drawing to go here
 

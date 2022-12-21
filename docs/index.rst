@@ -59,7 +59,6 @@ PC-Python
     python_advanced/match_case.rst
 
 
-
 .. toctree::
     :maxdepth: 2
     :caption: Turtle
