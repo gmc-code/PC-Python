@@ -10,18 +10,15 @@ t = turtle.Turtle()
 t.speed(10)
 t.color("blue", "red")
 t.pensize(10)
+t.pu()
+t.goto(110, -290)
+t.pd()
 t.begin_fill()
-t.circle(120)
+t.circle(200)
 t.end_fill()
 
-
-s.resetscreen()
-
-# same turtle - new drawing
-t.color("green", "yellow")
-t.pensize(5)
-t.begin_fill()
-t.circle(50)
-t.end_fill()
+img = s.bgpic(picname=None)
+print(img)
+s.bgpic("nopic")
 
 turtle.done()

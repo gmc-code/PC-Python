@@ -18,8 +18,10 @@ Screen background gif
     | **picname** - a string, name of a **gif**-file or "nopic", or None
     | Set background image or return the name of current background image.
     | If picname is a filename, set the corresponding image as background. 
-    | If picname is "nopic", delete background image, if present. 
+    | If picname is "nopic", delete background image, if present. e.g s.bgpic("nopic")
     | If picname is None, return the filename of the current background image.
+    | e.g print(s.bgpic(picname=None))
+
 
 | The code below sets the gackground image to a gif.
 
@@ -41,7 +43,67 @@ Screen background gif
 .. admonition:: Tasks
 
     1. Modify the code above to use a different gif of your own choice.
+    2. Modify the code to clear the gif while keeping the drawing.
 
+    .. code-block:: python
+
+        import turtle
+
+        s = turtle.Screen()
+        s.bgpic("docs/turtle/images/mario.gif")
+        s.title("Turtle Screen")
+        s.setup(width=800, height=600, startx=0, starty=0)
+
+        # turtle drawing
+        t = turtle.Turtle()
+        t.speed(10)
+        t.color("blue", "red")
+        t.pensize(10)
+        t.pu()
+        t.goto(110, -290)
+        t.pd()
+        t.begin_fill()
+        t.circle(200)
+        t.end_fill()
+
+        turtle.done()
+
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
+
+            .. tab-set::
+
+                .. tab-item:: Q2
+
+                    Modify the code to clear the gif while keeping the drawing.
+
+                    .. code-block:: python
+
+                        import turtle
+
+                        s = turtle.Screen()
+                        s.bgpic("docs/turtle/images/mario.gif")
+                        s.title("Turtle Screen")
+                        s.setup(width=800, height=600, startx=0, starty=0)
+
+                        # turtle drawing
+                        t = turtle.Turtle()
+                        t.speed(10)
+                        t.color("blue", "red")
+                        t.pensize(10)
+                        t.pu()
+                        t.goto(110, -290)
+                        t.pd()
+                        t.begin_fill()
+                        t.circle(200)
+                        t.end_fill()
+
+                        s.bgpic("nopic")
+
+                        turtle.done()
+                        
 ----
 
 Clear screen
