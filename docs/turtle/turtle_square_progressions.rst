@@ -264,7 +264,7 @@ Definitions: using a def block to draw a square
 Adding pen colour and fill colour parameters
 -----------------------------------------------
 
-| The code adds parameters for pen and fill colours.
+| The syntax below adds parameters for pen and fill colours and pen size.
 
 .. py:function:: square(t, length=50, x=0, y=0, penc="blue", fillc=None, penw=1)
 
@@ -276,7 +276,7 @@ Adding pen colour and fill colour parameters
     | **fillc** - fillcolor; default is None
     | **penw** - pensize; default 1
    
-| In the code below, ``square(t, l=250, x=-100, y=-150, penc="blue", fillc="green", penw=2) ``draws a square of length 250 at (x=-100, y=-150) with a blue pencolor, a green fillcolor, with a pensize of 2.
+| In the code below, ``square(t, l=250, x=-100, y=-150, penc="blue", fillc="green", penw=2)`` draws a square of length 250 at (x=-100, y=-150) with a blue pencolor, a green fillcolor, with a pensize of 2.
 | The code needs to check the **fillc** argument since setting a fillcolor to **None** will throw an error.
 
 .. code-block:: python
