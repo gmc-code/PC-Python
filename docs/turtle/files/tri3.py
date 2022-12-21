@@ -1,3 +1,5 @@
+"""draw triangle
+"""
 import turtle
 
 s = turtle.Screen()
@@ -13,13 +15,9 @@ t.pu()
 t.goto(20, 30)
 t.pd()
 
-base = 100
-height = 50
-
-start_x = t.xcor()
-start_y = t.ycor()
-t.fd(base)
-t.goto(start_x + base/2, start_y + height)
-t.goto(start_x, start_y)
+start_pos = t.pos()
+for _ in range(3):
+    t.fd(100)
+    t.lt(120)
 
 s.exitonclick()

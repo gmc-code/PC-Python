@@ -16,7 +16,7 @@ Sequencing: steps to draw a triangle
 | A triangle of sides a, b, c, has opposite angles of A, B, C. 
 
 .. image:: images/triangle_labels.png
-    :scale: 50 %
+    :scale: 30 %
     :align: center
     :alt: triangle_labels
     
@@ -51,6 +51,95 @@ Sequencing: steps to draw a triangle
     t.lt(180 - C)
     t.fd(b)
     t.lt(90)
+    t.goto(start_pos)
+
+    s.exitonclick()
+
+----
+
+Isosceles triangle
+------------------------------------------
+
+.. image:: images/isoceles.png
+    :scale: 30 %
+    :align: center
+    :alt: triangle_labels
+  
+| A triangle of sides a, b=c can be drawn, given the base and the height. 
+
+
+| The code below uses sequencing only.
+| The code below uses the x and y positions and only works when the base is drawn horizontally.
+
+.. code-block:: python
+
+    import turtle
+
+    s = turtle.Screen()
+    s.bgcolor("white")
+    s.title("Grid")
+    s.setup(width=800, height=600, startx=0, starty=0)
+
+    t = turtle.Turtle()
+    t.speed(5)
+
+    t.seth(0)
+    t.pu()
+    t.goto(20, 30)
+    t.pd()
+
+    base = 100
+    height = 50
+
+    start_x = t.xcor()
+    start_y = t.ycor()
+    t.fd(base)
+    t.goto(start_x + base/2, start_y + height)
+    t.goto(start_x, start_y)
+
+    s.exitonclick()
+
+----
+
+Isosceles triangle at any angle
+------------------------------------------
+
+.. image:: images/isosceles_formulas.png
+    :scale: 30 %
+    :align: center
+    :alt: triangle_labels
+  
+| An isocelses triangle can be drawn at a given angle, given the base and the height. 
+| The formuals above can be used to calculate the angle B, which the turtle needs to turn and the side length, b.
+
+| The code below uses sequencing only.
+| The code below uses the x and y positions and only works when the base is drawn horizontally.
+
+.. code-block:: python
+
+    import turtle
+
+    s = turtle.Screen()
+    s.bgcolor("white")
+    s.title("Grid")
+    s.setup(width=800, height=600, startx=0, starty=0)
+
+    t = turtle.Turtle()
+    t.speed(5)
+
+    t.seth(30)
+    t.pu()
+    t.goto(-20, -100)
+    t.pd()
+
+    base = 200
+    height = 300
+    start_pos = t.pos()
+    b = math.sqrt(height**2 + (base**2) / 4)
+    angle_B = math.degrees(math.atan(2 * height / base))
+    t.fd(base)
+    t.lt(180 - angle_B)
+    t.fd(b)
     t.goto(start_pos)
 
     s.exitonclick()
