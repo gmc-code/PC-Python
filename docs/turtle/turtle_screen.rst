@@ -325,7 +325,7 @@ Exit on click
         import turtle
 
         s = turtle.Screen()
-        s.bgcolor(""lightblue")
+        s.bgcolor("lightblue")
         s.title("Turtle Screen")
 
         # turtle drawing to go here
@@ -348,7 +348,7 @@ Exit on click
                         import turtle
 
                         s = turtle.Screen()
-                        s.bgcolor(""lightblue")
+                        s.bgcolor("lightblue")
                         s.title("Turtle Screen")
 
                         # turtle drawing to go here
