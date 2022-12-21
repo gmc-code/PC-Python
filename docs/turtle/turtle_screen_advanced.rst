@@ -154,7 +154,7 @@ Clear screen
 
                 .. tab-item:: Q1
 
-                    Clearing the screen between stages in a game that uses a different background and different turtles.
+                    ``s.clearscreen()`` could be used to clear the screen between stages in a game that uses a different background and different turtles.
 
 ----
 
@@ -203,7 +203,7 @@ Reset screen
 
 .. admonition:: Tasks
 
-    1. Adjust the code so only one circle is drawn on the screen at any time.
+    1. Adjust the code so that only one circle is drawn on the screen at any time.
 
     .. code-block:: python
 
@@ -242,7 +242,7 @@ Reset screen
 
                 .. tab-item:: Q1
 
-                    Adjust the code so only one circle is drawn on the screen at any time.
+                    Adjust the code so that only one circle is drawn on the screen at any time.
 
                     .. code-block:: python
 
@@ -401,7 +401,7 @@ Animation control
 
 .. admonition:: Tasks
 
-    1. Add 2 lines of code to display the drawing wihtout animation.
+    1. Add 2 lines of code to display the drawing without animation.
 
     .. code-block:: python
 
@@ -436,7 +436,7 @@ Animation control
 
                 .. tab-item:: Q1
 
-                    Add 2 lines of code to display the drawing wihtout animation.
+                    Add 2 lines of code to display the drawing without animation.
 
                     .. code-block:: python
 
