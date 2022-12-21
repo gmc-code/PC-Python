@@ -99,7 +99,7 @@ Sequencing: steps to draw a rectangle
 Iteration: using a for-loop to draw a rectangle 
 ------------------------------------------------
 
-| The code below uses iteration to reduce code duplciation that was present when only sequencing was used.
+| The code below uses iteration to reduce code duplication that was present when only sequencing was used.
 | The code below draws a rectangle of side side length 120 and width 50 at coordinates (20, 30).
 | Firstly, 2 sides are drawn, then this is repeated.
 | The iterator used is "_". This is the standard choice in python when the iterator is not referenced in the for-loop block.

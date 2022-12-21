@@ -128,7 +128,7 @@ Sequencing: steps to draw a square
 Iteration: using a for-loop to draw a square 
 ----------------------------------------------
 
-| The code below uses iteration to reduce code duplciation that was present when only sequencing was used.
+| The code below uses iteration to reduce code duplication that was present when only sequencing was used.
 | The code below draws a square of side length 50 at coordinates (20, 30).
 | The ``t.fd(50)`` and ``t.lt(90)`` are placed in a for-loop with 4 repeats for the 4 sides.
 | The iterator used is "_". This is the standard choice in python when the iterator is not referenced in the for-loop block.

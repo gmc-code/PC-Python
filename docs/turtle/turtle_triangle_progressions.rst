@@ -5,6 +5,7 @@ Turtle triangle progressions
 | The code progressions below draw a triangle.
 | With each version, an improvement in code structure is made.
 | Firstly, only sequencing is used.
+| Iteration can be used for an equilateral triangle.
 | Then a definition block with parameters allows for code reuse via the use of arguments.
 
 ----
@@ -15,7 +16,7 @@ Sequencing: steps to draw a triangle
 | A triangle of sides a, b, c, has opposite angles of A, B, C. 
 
 .. image:: images/triangle_labels.png
-    :scale: 100 %
+    :scale: 50 %
     :align: center
     :alt: triangle_labels
     
@@ -56,13 +57,11 @@ Sequencing: steps to draw a triangle
 
 ----
 
-Iteration: using a for-loop to draw a triangle 
-----------------------------------------------
+Iteration: equilateral triangles 
+------------------------------------------------
 
-| The code below uses iteration to reduce code duplciation that was present when only sequencing was used.
-| The code below draws a triangle of side length 50 at coordinates (20, 30).
-| The fd(50) and lt(90) are placed in a for-loop with 4 repeats for the 4 sides.
-| The iterator used is "_". This is the standard choice in python when the iterator is not referenced in the for-loop block.
+| The code below uses iteration to draw an equilateral triangle with angles of 60 degrees at (20,30).
+| FOr an internal angle of 60 degrees when drawing anticlockwise, and angle of 120 degrees is need for the left turn.
 
 .. code-block:: python
 
@@ -81,9 +80,10 @@ Iteration: using a for-loop to draw a triangle
     t.goto(20, 30)
     t.pd()
 
-    for _ in range(4):
-        t.fd(50)
-        t.lt(90)
+    start_pos = t.pos()
+    for _ in range(3):
+        t.fd(100)
+        t.lt(120)
 
     s.exitonclick()
 
