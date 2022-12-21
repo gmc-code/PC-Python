@@ -31,7 +31,7 @@ See: https://docs.python.org/3/library/turtle.html#turtle.Screen
 
 | The class **Screen()** defines graphics windows as a playground for the drawing turtles. 
 | This function should be used when turtle is used as a standalone tool for doing graphics.
-| The last line, ``turtle.done()``, has been included here so the window stays open.
+| The last line, ``turtle.done()``, has been included in the examples below so the window stays open.
 
 .. code-block:: python
 
