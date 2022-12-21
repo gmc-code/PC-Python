@@ -385,13 +385,81 @@ Animation control
             t.rt(90)
 
 
-    for i in range(16):
+    for i in range(32):
         square(t, l=100)
         t.rt(6)
 
     turtle.update()
     s.exitonclick()
 
+----
+
+.. admonition:: Tasks
+
+    1. Add 2 lines of code to display the drawing wihtout animation.
+
+    .. code-block:: python
+
+        import turtle
+
+        s = turtle.Screen()
+        s.bgcolor("white")
+        s.title("Grid")
+        s.setup(width=800, height=600, startx=0, starty=0)
+
+        t = turtle.Turtle()
+        t.pencolor("blue")
+        t.speed(0)
+
+        def square(t, side, x=0, y=0):
+            for _ in range(4):
+                t.fd(side)
+                t.rt(90)
+
+        for i in range(60):
+            square(t, side=200)
+            t.rt(6)
+
+        s.exitonclick()
+
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
+
+            .. tab-set::
+
+                .. tab-item:: Q1
+
+                    Add 2 lines of code to display the drawing wihtout animation.
+
+                    .. code-block:: python
+
+                        import turtle
+
+                        s = turtle.Screen()
+                        s.bgcolor("white")
+                        s.title("Grid")
+                        s.setup(width=800, height=600, startx=0, starty=0)
+                        s.tracer(0, 0)
+
+                        t = turtle.Turtle()
+                        t.pencolor("blue")
+                        t.speed(0)
+
+
+                        def square(t, side, x=0, y=0):
+                            for _ in range(4):
+                                t.fd(side)
+                                t.rt(90)
+
+
+                        for i in range(60):
+                            square(t, side=200)
+                            t.rt(6)
+
+                        turtle.update()
+                        s.exitonclick()
 
 ----
 
