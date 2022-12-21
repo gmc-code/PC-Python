@@ -5,7 +5,7 @@ Turtle triangle progressions
 | The code progressions below draw a triangle.
 | With each version, an improvement in code structure is made.
 | Firstly, only sequencing is used.
-| Then a definition block with parameters allows for code reuse with the use of arguments.
+| Then a definition block with parameters allows for code reuse via the use of arguments.
 
 ----
 

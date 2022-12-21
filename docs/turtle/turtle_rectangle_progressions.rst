@@ -6,7 +6,7 @@ Turtle rectangle progressions
 | With each version, an improvement in code structure is made.
 | Firstly, only sequencing is used, with no iteration.
 | Secondly, iteration, using a for-loop, reduces code duplication.
-| Thirdly, a definition block with parameters allows for code reuse with the use of arguments.
+| Thirdly, a definition block with parameters allows for code reuse via the use of arguments.
 
 ----
 
@@ -58,7 +58,7 @@ Sequencing: steps to draw a rectangle
 .. admonition:: Tasks
 
     1. From the code above, list the 8 lines that do the actual drawing.
-    2. From the 8 lines, list the simplest amount of code that is repeated.
+    2. From the 8 lines, list the simplest amount of code that is repeated to form a rectangle.
 
     .. dropdown::
             :icon: codescan
@@ -84,11 +84,13 @@ Sequencing: steps to draw a rectangle
 
                 .. tab-item:: Q2
 
-                    From the 8 lines, list the simplest amount of code that is repeated.
+                    From the 8 lines, list the simplest amount of code that is repeated to form a rectangle.
 
                     .. code-block:: python
 
                         t.fd(120)
+                        t.lt(90)
+                        t.fd(50)
                         t.lt(90)
 
 
@@ -140,11 +142,11 @@ Definitions: using a def block to draw a rectangle
 
 .. py:function:: rectangle(t, length=40, width=30, x=0, y=0)
 
-    | t - the turtle object to draw the rectangle
-    | length - side length, default 40
-    | width - side width, default 30
-    | x - starting x position, default 0
-    | y - starting y position, default 0
+    | **t** - the turtle object to draw the rectangle
+    | **length** - side length, default 40
+    | **width** - side width, default 30
+    | **x** - starting x position, default 0
+    | **y** - starting y position, default 0
     
 | In the code below, ``rectangle(t)`` draws a default rectangle.
 | ``rectangle(t, length=120, width=50, x=20, y=30)`` draws a rectangle of 120 by 50 at (x=20, y=30).

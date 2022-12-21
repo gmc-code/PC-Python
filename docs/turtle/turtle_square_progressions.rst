@@ -6,7 +6,7 @@ Turtle square progressions
 | With each version, an improvement in code structure is made.
 | Firstly, only sequencing is used, with no iteration.
 | Secondly, iteration, using a for-loop, reduces code duplication.
-| Thirdly, a definition block with parameters allows for code reuse with the use of arguments.
+| Thirdly, a definition block with parameters allows for code reuse via the use of arguments.
 
 ----
 
