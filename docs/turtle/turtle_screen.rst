@@ -65,7 +65,7 @@ Screen colours
 
 .. py:function:: turtle.bgcolor(*args)
 
-    | **args** - a color string or three numbers in the range 0 to colormode or a 3-tuple of such numbers.
+    | **args** - a color string or three numbers in the range 0 to 1 or 255 depending on the colormode or a 3-tuple of such numbers.
     | Color stings can be a named color such as "orange" or a hex color such as "#800080".
     | If colormode is 1, a colour is a rgb tuple such as (0.2, 0.8, 0.55),
     | If colormode is 255, a colour is a rgb tuple such as (50, 193, 143)
