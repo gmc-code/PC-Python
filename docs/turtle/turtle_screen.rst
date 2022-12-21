@@ -10,7 +10,7 @@ Turtle screen
     import turtle
 
     s = turtle.Screen()
-    s.bgcolor("black")
+    s.bgcolor("white")
     s.title("Turtle Screen")
     s.setup (width=800, height=600, startx=0, starty=0)
 
@@ -70,12 +70,15 @@ Screen colours
     | If colormode is 1, a colour is a rgb tuple such as (0.2, 0.8, 0.55),
     | If colormode is 255, a colour is a rgb tuple such as (50, 193, 143)
 
+
+| The code below sets the background to white.
+
 .. code-block:: python
 
     import turtle
 
     s = turtle.Screen()
-    s.bgcolor("black")
+    s.bgcolor("white")
 
     # turtle drawing to go here
 
@@ -158,7 +161,7 @@ See: https://docs.python.org/3/library/turtle.html#turtle.title
     import turtle
 
     s = turtle.Screen()
-    s.bgcolor("black")
+    s.bgcolor("white")
     s.title("Turtle Screen")
 
     # turtle drawing to go here
@@ -187,7 +190,7 @@ See: https://docs.python.org/3/library/turtle.html#turtle.title
                         import turtle
 
                         s = turtle.Screen()
-                        s.bgcolor("black")
+                        s.bgcolor("white")
                         s.title("Turtle Screen")
 
                         # turtle drawing to go here
@@ -218,7 +221,7 @@ See: https://docs.python.org/3/library/turtle.html#turtle.setup
     import turtle
 
     s = turtle.Screen()
-    s.bgcolor("black")
+    s.bgcolor("white")
     s.title("Turtle Screen")
     s.setup(width=800, height=600, startx=None, starty=None)
 
@@ -248,7 +251,7 @@ See: https://docs.python.org/3/library/turtle.html#turtle.setup
                         import turtle
 
                         s = turtle.Screen()
-                        s.bgcolor("black")
+                        s.bgcolor("white")
                         s.title("Turtle Screen")
                         s.setup(width=600, height=400, startx=40, starty=0)
 
@@ -273,7 +276,7 @@ See: https://docs.python.org/3/library/turtle.html#turtle.mainloop
     import turtle
 
     s = turtle.Screen()
-    s.bgcolor("black")
+    s.bgcolor("white")
     s.title("Turtle Screen")
     s.setup (width=800, height=600, startx=0, starty=0)
 
@@ -302,7 +305,7 @@ Exit on click
     import turtle
 
     s = turtle.Screen()
-    s.bgcolor("black")
+    s.bgcolor("white")
     s.title("Turtle Screen")
     s.setup (width=800, height=600, startx=0, starty=0)
 
