@@ -23,7 +23,7 @@ Sequencing: steps to draw a triangle
 | The code below uses sequencing only.
 | The code below draws a triangle of given Side, Angle, Side.
 | The code uses variables for side a, angle C, side b.
-| The code completes the triangle bt storing the start position and returning to it.
+| The code completes the triangle by storing the start position and returning to it.
 
 .. code-block:: python
 
