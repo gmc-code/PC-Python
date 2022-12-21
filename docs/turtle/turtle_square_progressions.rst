@@ -276,7 +276,7 @@ Adding pen colour and fill colour parameters
     | **fillc** - fillcolor; default is None
     | **penw** - pensize; default 1
    
-| In the code below, ``square(t, l=250, x=-100, y=-150, penc="blue", fillc="green", penw=2)`` draws a square of length 250 at (x=-100, y=-150) with a blue pencolor, a green fillcolor, with a pensize of 2.
+| In the code below, ``square(t, length=250, x=-100, y=-150, penc="blue", fillc="green", penw=2)`` draws a square of length 250 at (x=-100, y=-150) with a blue pencolor, a green fillcolor, with a pensize of 2.
 | The code needs to check the **fillc** argument since setting a fillcolor to **None** will throw an error.
 
 .. code-block:: python
@@ -291,7 +291,7 @@ Adding pen colour and fill colour parameters
     t = turtle.Turtle()
     t.speed(0)
 
-    def square(t, l=50, x=0, y=0, penc="blue", fillc="red", penw=1):
+    def square(t, length=50, x=0, y=0, penc="blue", fillc="red", penw=1):
         t.pu()
         t.goto(x, y)
         t.pd()
