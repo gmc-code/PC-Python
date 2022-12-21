@@ -4,7 +4,7 @@ Car Class
 
 | Write a **Car** class.  
 | Set the car's **make**, **model**, **year**, **colour** on calling the Car class.
-| Also set the **odometer** to 0.
+| Then set the **odometer** to 0.
 | e.g. ``my_car = Car('ford', 'territory', 2005, "tan")``
 | Write the methods, **get_info()** and **get_odometer()** to print a descriptive line, using f-strings.
 | Write a method to **update** the odometer to a specified amount and a method to **increment** the odometer by a specified amount.

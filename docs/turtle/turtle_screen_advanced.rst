@@ -115,7 +115,7 @@ Clear screen
 
 .. py:function:: turtle.clearscreen()
 
-    | Also **clear()**
+    | Also **turtle.clear()**
     | Delete all drawings and all turtles from the TurtleScreen.
     | Reset the now empty Screen to its initial state: white background, no background image, no event bindings and tracing on.
 
@@ -167,7 +167,7 @@ See: https://docs.python.org/3/library/turtle.html#turtle.resetscreen
 
 .. py:function:: turtle.resetscreen()
 
-    | Also **reset()**
+    | Also **turtle.reset()**
     | Reset all turtles on the Screen to their initial state, clearing their drawings.
 
 .. code-block:: python
@@ -288,8 +288,10 @@ Reset screensize
     | **canvheight** - positive integer, new height of canvas in pixels
     | **bg** - colorstring or color-tuple, new background color
     | If no arguments are given, return current (canvaswidth, canvasheight). 
-    | Else, resize the canvas the turtles are drawing on wihtout altering the drawings. 
+    | Else, resize the canvas the turtles are drawing on without altering the drawings. 
     | Scrollbars are added, to observe hidden parts of the canvas previously outside the canvas.
+
+| The code line below, ``turtle.screensize(canvwidth=1200, canvheight=800, bg="yellow")``, creates scrollbars and extends the canvas which is drawn in yellow around the background gif.
 
 .. code-block:: python
 
@@ -298,7 +300,7 @@ Reset screensize
     s = turtle.Screen()
     s.bgpic("docs/turtle/images/mario.gif")
     s.title("Turtle Screen")
-    s.setup(width=800, height=600, startx=0, starty=0)
+    s.setup(width=800, height=600, startx=40, starty=20)
 
     # turtle drawing
     t = turtle.Turtle()
@@ -308,7 +310,7 @@ Reset screensize
     t.penup(); t.setpos(-400, -250); t.pendown()
     t.fd(800)
 
-    s.resetscreen()
+    turtle.screensize(canvwidth=1200, canvheight=800, bg="yellow")
 
     # same turtle - new drawing
     t.color("red")
@@ -317,6 +319,25 @@ Reset screensize
     t.fd(800)
 
     turtle.done()
+
+----
+
+.. admonition:: Tasks
+
+    1. Replace the screensize line above with ``s.setup(width=1200, height=800, startx=0, starty=0)``. What happens instead?
+
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
+
+            .. tab-set::
+
+                .. tab-item:: Q1
+
+                    Replace the screensize line above with ``s.setup(width=1200, height=800, startx=0, starty=0)``. What happens instead?
+
+                    No scroll bars are required as the screen window resizes and repositions to the topleft of the screen.
 
 ----
 
