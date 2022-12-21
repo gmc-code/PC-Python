@@ -36,6 +36,11 @@ Screen background gif
 
     turtle.done()
 
+----
+
+.. admonition:: Tasks
+
+    1. Modify the code above to use a different gif of your own choice.
 
 ----
 
@@ -74,6 +79,23 @@ Clear screen
 
 ----
 
+.. admonition:: Tasks
+
+    1. Suggest a use case for ``s.clearscreen()``.
+
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
+
+            .. tab-set::
+
+                .. tab-item:: Q1
+
+                    Clearing the screen between stages in a game that uses a different background and different turtles.
+
+----
+
 Reset screen
 -----------------------
 
@@ -100,18 +122,94 @@ See: https://docs.python.org/3/library/turtle.html#turtle.resetscreen
     t.shapesize(10, 10, 12)
     t.color("blue")
     t.pensize(10)
-    t.penup(); t.setpos(-400, -250); t.pendown()
+    t.penup(); t.setpos(-400, -230); t.pendown()
     t.fd(800)
 
     s.resetscreen()
 
     # same turtle - new drawing
+    t.shapesize(5, 5, 6)
     t.color("red")
     t.pensize(10)
-    t.penup(); t.setpos(-400, -285); t.pendown()
+    t.penup(); t.setpos(-400, -255); t.pendown()
     t.fd(800)
 
     turtle.done()
+
+
+----
+
+.. admonition:: Tasks
+
+    1. Adjust the code so only one circle is drawn on the screen at any time.
+
+    .. code-block:: python
+
+        import turtle
+
+        s = turtle.Screen()
+        s.bgpic("docs/turtle/images/mario.gif")
+        s.title("Turtle Screen")
+        s.setup(width=800, height=600, startx=0, starty=0)
+
+        # turtle drawing
+        t = turtle.Turtle()
+        t.speed(10)
+        t.color("blue", "red")
+        t.pensize(10)
+        t.begin_fill()
+        t.circle(120)
+        t.end_fill()
+
+
+        # same turtle - new drawing
+        t.color("green", "yellow")
+        t.pensize(5)
+        t.begin_fill()
+        t.circle(50)
+        t.end_fill()
+
+        turtle.done()
+
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
+
+            .. tab-set::
+
+                .. tab-item:: Q1
+
+                    Adjust the code so only one circle is drawn on the screen at any time.
+
+                    .. code-block:: python
+
+                        import turtle
+
+                        s = turtle.Screen()
+                        s.bgpic("docs/turtle/images/mario.gif")
+                        s.title("Turtle Screen")
+                        s.setup(width=800, height=600, startx=0, starty=0)
+
+                        # turtle drawing
+                        t = turtle.Turtle()
+                        t.speed(10)
+                        t.color("blue", "red")
+                        t.pensize(10)
+                        t.begin_fill()
+                        t.circle(120)
+                        t.end_fill()
+
+                        s.resetscreen()
+
+                        # same turtle - new drawing
+                        t.color("green", "yellow")
+                        t.pensize(5)
+                        t.begin_fill()
+                        t.circle(50)
+                        t.end_fill()
+
+                        turtle.done()
 
 ----
 
