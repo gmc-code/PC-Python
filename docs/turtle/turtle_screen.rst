@@ -52,13 +52,14 @@ Screen colours
 | See: https://docs.python.org/3/library/turtle.html#turtle.colormode
 
 | Set the screen color mode.
-| If colormode is 1, a colour, as a rgb tuple, is written with values from 0 to 1, such as (0.2, 0.8, 0.55).
-| If colormode is 255, a colour, as a rgb tuple, is written with values from 0 to 255, such as (50, 193, 143).
 
 .. py:function:: turtle.colormode(cmode=None)
 
-    | **cmode** - one of the values 1.0 or 255.
-    | The default config starts with a cmode of 1.0
+    | **cmode** - set to one of the values 1.0 or 255.
+    | The default config has turtles starting with a cmode of 1.0
+    | If colormode is 1, a colour, as a rgb tuple, is written with values from 0 to 1, such as (0.2, 0.8, 0.55).
+    | If colormode is 255, a colour, as a rgb tuple, is written with values from 0 to 255, such as (50, 193, 143).
+    | If cmode=None, the cmode value is returned. 
 
 
 | Set the screen color.
@@ -183,7 +184,7 @@ Screen title
 
                 .. tab-item:: Q1
 
-                    Modify the code above to create the screen title "Turtle Race".
+                    Modify the code above to set the screen title to "Turtle Race".
 
                     .. code-block:: python
 
@@ -268,7 +269,7 @@ See: https://docs.python.org/3/library/turtle.html#turtle.mainloop
 
 | Use **turtle.mainloop()** or **turtle.done()** to keep the window open.
 | When used, it must be the last statement in the file.
-| The close icon must be clicked to close the window.
+| The window's close icon must be clicked to close the window.
 
 .. code-block:: python
 
