@@ -60,10 +60,10 @@ Sequencing: steps to draw a triangle
 Isosceles triangle
 ------------------------------------------
 
-.. image:: images/isoceles.png
+.. image:: images/isosceles.png
     :scale: 30 %
     :align: center
-    :alt: triangle_labels
+    :alt: isosceles
   
 | A triangle of sides a, b=c can be drawn, given the base and the height. 
 
