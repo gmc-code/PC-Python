@@ -43,7 +43,7 @@ Screen background gif
 .. admonition:: Tasks
 
     1. Modify the code above to use a different gif of your own choice.
-    2. Modify the code to clear the gif while keeping the drawing.
+    2. Modify the code below to clear the gif while keeping the drawing.
 
     .. code-block:: python
 
@@ -77,7 +77,7 @@ Screen background gif
 
                 .. tab-item:: Q2
 
-                    Modify the code to clear the gif while keeping the drawing.
+                    Modify the code below to clear the gif while keeping the drawing.
 
                     .. code-block:: python
 
