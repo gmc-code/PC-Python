@@ -200,7 +200,7 @@ Definitions: using a def block to draw a square
     
 | In the code below, ``square(t)`` draws a default square.
 | ``square(t, length=50, start_pos=(20, 30))`` draws a square of length 50 at (x=20, y=30).
-| ``square(t, length=250, start_pos=(-300, -200), start_h=20)`` draws a square of length 250 at (x=-300, y=-200) angled 30 degrees.
+| ``square(t, length=250, start_pos=(-300, -200), start_h=20)`` draws a square of length 250 at (x=-300, y=-200) angled 20 degrees.
     
 .. code-block:: python
 
@@ -294,7 +294,7 @@ Adding pen colour and fill colour parameters
     t.speed(0)
 
 
-    def square(t, length=50, start_pos=(0, 0), start_h=0, penc="blue", fillc="white", penw=1):
+    def square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
         t.pu()
         t.goto(start_pos)
         t.pd()
@@ -323,8 +323,8 @@ Adding pen colour and fill colour parameters
 
 .. admonition:: Tasks
 
-    1. Modify ``square(t, length=50, start_pos=(0, 0), start_h=0, penc="blue", fillc="white", penw=1)`` to draw a square of length 200 at (-300, -100) with red outline of thickness 5.
-    2. Modify ``square(t, length=50, start_pos=(0, 0), start_h=0, penc="blue", fillc="white", penw=1)`` to draw a square of length 30 at (70, 100) with green outline of thickness 3 and a yellow fill.
+    1. Modify ``square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)`` to draw a square of length 200 at (-300, -100) with red outline of thickness 5.
+    2. Modify ``square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)`` to draw a square of length 30 at (70, 100) with green outline of thickness 3 and a yellow fill.
 
     .. dropdown::
             :icon: codescan
@@ -335,21 +335,19 @@ Adding pen colour and fill colour parameters
 
                 .. tab-item:: Q1
 
-                    Modify ``square(t, length=50, start_pos=(0, 0), start_h=0, penc="blue", fillc="white", penw=1)`` to draw a square of length 200 at (-300, -100) with red outline of thickness 5.
+                    Modify ``square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)`` to draw a square of length 200 at (-300, -100) with red outline of thickness 5.
 
                     .. code-block:: python
 
-                        square(t, length=50, start_pos=(0, 0), start_h=0, penc="blue", fillc="white", penw=1)
-                        square(t, length=200, x=-300, y=-100, penc="red", fillc=None, penw=5)
+                        square(t, length=200, start_pos=(-300, -100), start_h=0, penw=5, penc="red", fillc=None)
 
                 .. tab-item:: Q2
 
-                    Modify ``square(t, length=50, start_pos=(0, 0), start_h=0, penc="blue", fillc="white", penw=1)`` to draw a square of length 30 at (70, 100) with green outline of thickness 3 and a yellow fill.
+                    Modify ``square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)`` to draw a square of length 30 at (70, 100) with green outline of thickness 3 and a yellow fill.
 
                     .. code-block:: python
 
-                        square(t, length=50, start_pos=(0, 0), start_h=0, penc="blue", fillc="white", penw=1)
-                        square(t, length=30, x=70, y=100, penc="green", fillc="yellow", penw=3)
+                        square(t, length=30, start_pos=(70, 100), start_h=0, penw=3, penc="green", fillc="yellow")
 
 ----
 
