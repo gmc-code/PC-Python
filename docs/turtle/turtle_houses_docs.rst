@@ -9,8 +9,40 @@ Turtle houses module
 
 ----
 
+Importing the module
+-----------------------
+
+| See: https://www.w3schools.com/python/ref_keyword_as.asp
+| The code below shows importing the house module as an alias.
+| This makes it shorter to refer to functions in the house module.
+| Instead of needing ``houses.rectangle``, only ``h.rectangle`` is needed.
+
+.. code-block:: python
+
+    import turtle
+    import houses as h
+
+    s = turtle.Screen()
+    s.bgcolor("white")
+    s.title("Grid")
+    s.setup(width=800, height=600, startx=200, starty=100)
+
+    t = turtle.Turtle()
+    h.rectangle(t, length=200, width=80, start_pos=(0,0), fillc="light green")
+
+    s.exitonclick()
+
+----
+
 Module functions
 -----------------------
+
+| The full syntax of the houses module is below.
+| In using this, there is no need to include all the parameters that have default values, since this makes them optional.
+| e.g. ``square(t, length=100, start_pos=(10, 20), fillc="light green")`` can be used in most cases 
+| rather than the full ``square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)``.
+
+----
 
 .. py:function:: square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)
 
@@ -69,8 +101,6 @@ Module functions
     | **penw** - pen size; default 1
     | **penc** - pen color; default is black
     | **fillc** - fill color; default is None
-
-
 
 ----
 

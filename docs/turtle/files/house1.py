@@ -1,5 +1,4 @@
 import turtle
-import math
 import houses as h
 
 s = turtle.Screen()

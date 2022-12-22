@@ -20,7 +20,7 @@ Simple houses
     :alt: simple_houses1
 
 
-.. py:function:: def simple_house(t, length=60, height=40, start_pos=(0, 0))
+.. py:function:: simple_house(t, length=60, height=40, start_pos=(0, 0))
 
     | **t** - the turtle object to draw the rectangle
     | **length** - the length of the house; default 60
@@ -32,7 +32,6 @@ Simple houses
 .. code-block:: python
 
     import turtle
-    import math
     import houses as h
 
     s = turtle.Screen()
@@ -70,4 +69,63 @@ Simple houses
     turtle.update()
     s.exitonclick()
 
+
+----
+
+Houses with windows
+---------------------
+
+| Write a definition, ``window(t, length=10, start_pos=(0, 0))``, that produces a 4 pane square window given the window length and start position.
+| Combine 4 squares to make the 4 pane square window.
+| Write a helper function, ``window_pos(start_pos, x_add, y_add)``, to get the bottom left coordinates of each square.
+| The module syntax is ``square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)``.
+| Some default arguments, ``start_h=0, penw=1, penc="black"``, can be left out for convenience in the code below.
+
+
+.. image:: images/window.png
+    :scale: 100 %
+    :align: center
+    :alt: window
+
+
+.. py:function:: window(t, length=10, start_pos=(0, 0))
+
+    | **t** - the turtle object to draw the rectangle
+    | **length** - the length of the house; default 60
+    | **start_pos** - start position in bottom left of the window; default (0, 0)
+
+
+| Starter code is provided with ``?`` where the code has to be completed.
+
+.. code-block:: python
+
+    import turtle
+    import houses as h
+
+    s = turtle.Screen()
+    s.bgcolor("white")
+    s.title("Grid")
+    s.setup(width=800, height=600, startx=200, starty=100)
+    s.tracer(0, 0)
+
+    t = turtle.Turtle()
+    t.speed(0)
+        
+    def window_pos(start_pos, x_add, y_add):
+        return (start_pos[0] + ?, start_pos[1] + ?)
+
+    def window(t, length=10, start_pos=(0, 0)):
+        h.square(t, length=length/2, start_pos=start_pos, fillc="light blue")
+        h.square(t, length=length/2, start_pos=window_pos(?), fillc="light blue")
+        h.square(t, length=length/2, start_pos=window_pos(?), fillc="light blue")
+        h.square(t, length=length/2, start_pos=window_pos(?), fillc="light blue")
+
+    t.ht()
+    turtle.update()
+    s.exitonclick()
+
+----
+
+Houses with windows
+---------------------
 
