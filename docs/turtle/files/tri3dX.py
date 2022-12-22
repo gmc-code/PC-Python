@@ -13,10 +13,12 @@ t.speed(5)
 
 # --begin triangle
 def equilateral(t, side, start_pos, start_h, penc="blue", fillc=None, penw=1):
-    t.seth(start_h)
+
     t.pu()
     t.goto(start_pos)
     t.pd()
+    t.seth(start_h)
+    
     t.pensize(pensize)
     t.pencolor(pencolor)
 

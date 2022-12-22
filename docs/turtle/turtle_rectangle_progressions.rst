@@ -211,6 +211,7 @@ Definitions: using a def block to draw a rectangle
         t.goto(start_pos)
         t.pd()
         t.seth(start_h)
+
         for _ in range(2):
             t.fd(length)
             t.lt(90)
@@ -258,6 +259,7 @@ Definitions: using a def block to draw a rectangle
                             t.goto(start_pos)
                             t.pd()
                             t.seth(start_h)
+
                             for _ in range(2):
                                 t.fd(length)
                                 t.lt(90)
@@ -310,6 +312,7 @@ Adding pen colour and fill colour parameters
         t.goto(start_pos)
         t.pd()
         t.seth(start_h)
+
         t.pensize(penw)
         t.pencolor(penc)
 
@@ -365,6 +368,7 @@ Adding pen colour and fill colour parameters
                             t.goto(start_pos)
                             t.pd()
                             t.seth(start_h)
+                            
                             t.pensize(penw)
                             t.pencolor(penc)
 

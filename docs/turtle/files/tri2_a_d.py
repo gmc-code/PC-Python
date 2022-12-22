@@ -11,10 +11,10 @@ t.speed(5)
 
 # --begin triangle
 def isosceles(t, base, height, start_pos, start_h):
-    t.seth(start_h)
     t.pu()
     t.goto(start_pos)
     t.pd()
+    t.seth(start_h)
 
     b = math.sqrt(height**2 + (base**2) / 4)
     angle_B = math.degrees(math.atan(2 * height / base))

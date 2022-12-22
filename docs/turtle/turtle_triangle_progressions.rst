@@ -39,13 +39,13 @@ Scalene triangle
     side_a = 100
     angle_C = 70
     side_b = 150
-    heading = 15
+    start_h = 15
     start_pos = (20, 30)
 
-    t.seth(heading)
     t.pu()
     t.goto(start_pos)
     t.pd()
+    t.seth(start_h)
 
     t.fd(side_a)
     t.lt(180 - angle_C)
@@ -85,11 +85,11 @@ Scalene triangle
                         t.speed(5)
 
 
-                        def scalene(t, side_a, angle_C, side_b, heading, start_pos):
-                            t.seth(heading)
+                        def scalene(t, side_a, angle_C, side_b, start_h, start_pos):
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
+                            t.seth(start_h)
 
                             t.fd(side_a)
                             t.lt(180 - angle_C)
@@ -97,7 +97,7 @@ Scalene triangle
                             t.goto(start_pos)
 
 
-                        scalene(t, side_a=100, angle_C=60, side_b=150, heading=15, start_pos=(20, 30))
+                        scalene(t, side_a=100, angle_C=60, side_b=150, start_h=15, start_pos=(20, 30))
 
                         s.exitonclick()
 
@@ -133,10 +133,11 @@ Isosceles triangle
     height = 50
     start_pos = (20, 30)
 
-    t.seth(0)
+
     t.pu()
     t.goto(start_pos)
     t.pd()
+    t.seth(0)
 
     start_x = start_pos[0]
     start_y = start_pos[1]
@@ -230,10 +231,10 @@ Isosceles triangle at any angle
     start_pos = (20, 30)
     start_h = 15
 
-    t.seth(start_h)
     t.pu()
     t.goto(start_pos)
     t.pd()
+    t.seth(start_h)
 
     b = math.sqrt(height**2 + (base**2) / 4)
     angle_B = math.degrees(math.atan(2 * height / base))
@@ -323,10 +324,10 @@ Equilateral triangles
     start_pos = (20, 30)
     start_h = 10
 
-    t.seth(start_h)
     t.pu()
     t.goto(start_pos)
     t.pd()
+    t.seth(start_h)
 
     start_pos = t.pos()
     for _ in range(3):
@@ -413,12 +414,13 @@ Adding pen colour and fill colour parameters
                         t.speed(5)
 
                         # --begin triangle
-                        def scalene(t, side_a, angle_C, side_b, heading, start_pos, 
+                        def scalene(t, side_a, angle_C, side_b, start_h, start_pos, 
                                     penc="blue", fillc=None, penw=1): 
-                            t.seth(heading)
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
+                            t.seth(start_h)
+
                             t.pensize(pensize)
                             t.pencolor(pencolor)
 
@@ -434,7 +436,7 @@ Adding pen colour and fill colour parameters
                             if fillcolor is not None:
                                 t.end_fill()
 
-                        scalene(t, side_a=100, angle_C=60, side_b=150, heading=15, start_pos=(20, 30),
+                        scalene(t, side_a=100, angle_C=60, side_b=150, start_h=15, start_pos=(20, 30),
                                 penc="blue", fillc="light green", penw=3)
                         # --end triangle  
                                                   
@@ -460,10 +462,11 @@ Adding pen colour and fill colour parameters
                         # --begin triangle
                         def isosceles(t, base, height, start_pos, start_h, 
                                         penc="blue", fillc=None, penw=1):
-                            t.seth(start_h)
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
+                            t.seth(start_h)
+
                             t.pensize(pensize)
                             t.pencolor(pencolor)
 
@@ -506,10 +509,11 @@ Adding pen colour and fill colour parameters
                         # --begin triangle
                         def equilateral(t, side, start_pos, start_h, 
                                             penc="blue", fillc=None, penw=1):
-                            t.seth(start_h)
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
+                            t.seth(start_h)
+
                             t.pensize(pensize)
                             t.pencolor(pencolor)
 

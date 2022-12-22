@@ -16,6 +16,7 @@ def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0):
     t.goto(start_pos)
     t.pd()
     t.seth(start_h)
+    
     for _ in range(2):
         t.fd(length)
         t.lt(90)

@@ -35,10 +35,10 @@ Sequencing: steps to draw a square
     t = turtle.Turtle()
     t.speed(5)
 
-    t.seth(0)
     t.pu()
     t.goto(20, 30)
     t.pd()
+    t.seth(0)
 
     t.fd(50)
     t.lt(90)
@@ -145,10 +145,10 @@ Iteration: using a for-loop to draw a square
     t = turtle.Turtle()
     t.speed(5)
 
-    t.seth(0)
     t.pu()
     t.goto(20, 30)
     t.pd()
+    t.seth(0)
 
     for _ in range(4):
         t.fd(50)
@@ -299,14 +299,18 @@ Adding pen colour and fill colour parameters
         t.goto(start_pos)
         t.pd()
         t.seth(start_h)
+
         t.pensize(penw)
         t.pencolor(penc)
+
         if fillc is not None:
             t.fillcolor(fillc)
             t.begin_fill()
+
         for _ in range(4):
             t.fd(length)
             t.lt(90)
+            
         if fillc is not None:
             t.end_fill()
 

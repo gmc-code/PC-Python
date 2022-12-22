@@ -10,11 +10,12 @@ t.speed(5)
 
 # --begin triangle
 def isosceles(t, base, height, start_pos):
-    t.seth(0)
+
     t.pu()
     t.goto(start_pos)
     t.pd()
-
+    t.seth(0)
+    
     start_x = start_pos[0]
     start_y = start_pos[1]
     t.fd(base)

@@ -9,12 +9,13 @@ s.setup(width = 800, height = 600, startx = 0, starty = 0)
 t = turtle.Turtle()
 t.speed(5)
 
-def scalene(t, side_a, angle_C, side_b, heading, start_pos, 
+def scalene(t, side_a, angle_C, side_b, start_h, start_pos, 
                 penc="blue", fillc=None, penw=1): 
-    t.seth(heading)
     t.pu()
     t.goto(start_pos)
     t.pd()
+    t.seth(start_h)
+    
     t.pensize(pensize)
     t.pencolor(pencolor)
 
@@ -30,7 +31,7 @@ def scalene(t, side_a, angle_C, side_b, heading, start_pos,
     if fillcolor is not None:
         t.end_fill()
 
-scalene(t, side_a=100, angle_C=60, side_b=150, heading=15, start_pos=(20, 30),
+scalene(t, side_a=100, angle_C=60, side_b=150, start_h=15, start_pos=(20, 30),
          penc="blue", fillc="light green", penw=3)
        
 s.exitonclick()

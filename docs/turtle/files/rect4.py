@@ -17,6 +17,7 @@ def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc=
     t.goto(start_pos)
     t.pd()
     t.seth(start_h)
+    
     t.pensize(penw)
     t.pencolor(penc)
 

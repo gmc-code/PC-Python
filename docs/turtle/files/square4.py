@@ -19,12 +19,15 @@ def square(t, length=50, start_pos=(0, 0), start_h=0, penc="blue", fillc="white"
     t.seth(start_h)
     t.pensize(penw)
     t.pencolor(penc)
+
     if fillc is not None:
         t.fillcolor(fillc)
         t.begin_fill()
+
     for _ in range(4):
         t.fd(length)
         t.lt(90)
+        
     if fillc is not None:
         t.end_fill()
 
