@@ -41,7 +41,7 @@ Documenting the module
     .. tab-set::
 
         .. tab-item:: Q1
-            
+
             1. Complete the doc string for the rectangle function using the template provided.
 
                 .. code-block:: python
@@ -59,60 +59,66 @@ Documenting the module
                             penc (str, optional): pencolor. Defaults to "blue".
                             fillc (str, optional): fillcolor. Defaults to None.
                         """
+                        
+        .. tab-item:: Q2
+            
+            2. Complete the doc string for the scalene triangle function using the template provided.
 
-    2. Complete the doc string for the scalene triangle function using the template provided.
+                .. code-block:: python
 
-        .. code-block:: python
+                    def scalene(t, side_a, angle_C, side_b, start_pos, start_h=0, penw=1, penc="blue", fillc=None):
+                        """_summary_
 
-            def scalene(t, side_a, angle_C, side_b, start_pos, start_h=0, penw=1, penc="blue", fillc=None):
-                """_summary_
+                        Args:
+                            t (_type_): _description_
+                            side_a (_type_): _description_
+                            angle_C (_type_): _description_
+                            side_b (_type_): _description_
+                            start_pos (_type_): _description_
+                            start_h (int, optional): _description_. Defaults to 0.
+                            penw (int, optional): _description_. Defaults to 1.
+                            penc (str, optional): _description_. Defaults to "blue".
+                            fillc (_type_, optional): _description_. Defaults to None.
+                        """
 
-                Args:
-                    t (_type_): _description_
-                    side_a (_type_): _description_
-                    angle_C (_type_): _description_
-                    side_b (_type_): _description_
-                    start_pos (_type_): _description_
-                    start_h (int, optional): _description_. Defaults to 0.
-                    penw (int, optional): _description_. Defaults to 1.
-                    penc (str, optional): _description_. Defaults to "blue".
-                    fillc (_type_, optional): _description_. Defaults to None.
-                """
+        .. tab-item:: Q3
+            
+            3. Complete the doc string for the isosceles triangle function using the template provided.
 
-    3. Complete the doc string for the isosceles triangle function using the template provided.
+                .. code-block:: python
 
-        .. code-block:: python
+                    def isosceles(t, base, height, start_pos, start_h=0, penw=1, penc="blue", fillc=None):
+                        """_summary_
 
-            def isosceles(t, base, height, start_pos, start_h=0, penw=1, penc="blue", fillc=None):
-                """_summary_
+                        Args:
+                            t (_type_): _description_
+                            base (_type_): _description_
+                            height (_type_): _description_
+                            start_pos (_type_): _description_
+                            start_h (int, optional): _description_. Defaults to 0.
+                            penw (int, optional): _description_. Defaults to 1.
+                            penc (str, optional): _description_. Defaults to "blue".
+                            fillc (_type_, optional): _description_. Defaults to None.
+                        """
 
-                Args:
-                    t (_type_): _description_
-                    base (_type_): _description_
-                    height (_type_): _description_
-                    start_pos (_type_): _description_
-                    start_h (int, optional): _description_. Defaults to 0.
-                    penw (int, optional): _description_. Defaults to 1.
-                    penc (str, optional): _description_. Defaults to "blue".
-                    fillc (_type_, optional): _description_. Defaults to None.
-                """
+        .. tab-item:: Q4
+                
+            4. Complete the doc string for the equilateral triangle function using the template provided.
 
-    4. Complete the doc string for the equilateral triangle function using the template provided.
+                .. code-block:: python
 
-        .. code-block:: python
+                    def equilateral(t, side, start_pos, start_h=0, penw=1, penc="blue", fillc=None):
+                        """_summary_
 
-            def equilateral(t, side, start_pos, start_h=0, penw=1, penc="blue", fillc=None):
-                """_summary_
-
-                Args:
-                    t (_type_): _description_
-                    side (_type_): _description_
-                    start_pos (_type_): _description_
-                    start_h (int, optional): _description_. Defaults to 0.
-                    penw (int, optional): _description_. Defaults to 1.
-                    penc (str, optional): _description_. Defaults to "blue".
-                    fillc (_type_, optional): _description_. Defaults to None.
-                """
+                        Args:
+                            t (_type_): _description_
+                            side (_type_): _description_
+                            start_pos (_type_): _description_
+                            start_h (int, optional): _description_. Defaults to 0.
+                            penw (int, optional): _description_. Defaults to 1.
+                            penc (str, optional): _description_. Defaults to "blue".
+                            fillc (_type_, optional): _description_. Defaults to None.
+                        """
 
     .. dropdown::
             :icon: codescan
