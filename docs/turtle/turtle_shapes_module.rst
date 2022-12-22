@@ -1,14 +1,14 @@
 ====================================================
-Turtle shapes and houses modules
+Turtle shapes module
 ====================================================
 
-| The houses will be built from squares, rectangles and triangles.
-| To reduce the code in the main file, separate modules will be created.
-| Definitions for the base shapes will be placed in a module, ``shapes.py``.
+| The shapes module is designed to be used for making turtle pictures of houses.
+| The houses are built from squares, rectangles and triangles.
+| To reduce the code in the main file, separate modules are used which group the code together.
+| Definitions for the base shapes are placed in a module, ``shapes.py``.
 | Definitions for house shapes will be placed in a module, ``houses.py``.
 
 | Download the python file :download:`shapes.py module <files/shapes.py>`
-| Create the module, ``houses.py``
 
 ----
 
@@ -16,9 +16,11 @@ Importing the module
 -----------------------
 
 | See: https://www.w3schools.com/python/ref_keyword_as.asp
-| The code below shows importing the house module as an alias via ``import shapes as sh``.
+| The code below shows importing the shapes module as an alias via ``import shapes as sh``.
 | This makes it shorter to refer to functions in the shapes module.
 | Instead of needing ``shapes.rectangle``, only ``sh.rectangle`` is needed.
+
+| The code below imports the shapes module, then draws a light green filled rectangle.
 
 .. code-block:: python
 
@@ -37,13 +39,13 @@ Importing the module
 
 ----
 
-Module shape functions
+Shape module functions
 -----------------------
 
 | The syntax of the basic shapes in the shapes module is below.
 
-| In using this, there is no need to include all the parameters that have default values, since this makes them optional.
-| e.g. ``square(t, length=100, start_pos=(10, 20), fillc="light green")`` can be used in most cases 
+| When using this, there is no need to include all the parameters that have default values, since this makes them optional.
+| e.g. ``square(t, length=100, start_pos=(10, 20), fillc="light green")`` can be used 
 | rather than the full ``square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)``.
 
 ----
