@@ -205,7 +205,7 @@ Isosceles triangle at any angle
     :align: center
     :alt: triangle_labels
   
-| An isoscelses triangle can be drawn at a given angle, given the base and the height. 
+| An isosceles triangle can be drawn at a given angle, given the base and the height. 
 | The formuals above can be used to calculate the angle B, which the turtle needs to turn and the side length, b.
 
 .. code-block:: python
@@ -387,5 +387,144 @@ Adding pen colour and fill colour parameters
 
 .. admonition:: Tasks
 
-    1. Modify the triangle definitions to include parameters for pencolor, fillcolor, pensize.
+    1. Modify the triangle definitions to include parameters for pencolor, fillcolor, pensize. Set default values for each parameter for pencolor, fillcolor, pensize so that they can be omitted as arguments when the funcitons are called, without breaking the code.
+    
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
+
+            .. tab-set::
+
+                .. tab-item:: Scalene
+
+                    .. code-block:: python
+
+                        import turtle
+
+                        s = turtle.Screen()
+                        s.bgcolor("white")
+                        s.title("Grid")
+                        s.setup(width = 800, height = 600, startx = 0, starty = 0)
+                        t = turtle.Turtle()
+                        t.speed(5)
+
+                        def scalene(t, side_a, angle_C, side_b, heading, start_pos, 
+                                        pencolor="blue", fillcolor =None, pensize=1): 
+                            t.seth(heading)
+                            t.pu()
+                            t.goto(start_pos)
+                            t.pd()
+                            t.pensize(pensize)
+                            t.pencolor(pencolor)
+
+                            if fillcolor is not None:
+                                t.fillcolor(fillcolor)
+                                t.begin_fill()
+
+                            t.fd(side_a)
+                            t.lt(180 - angle_C)
+                            t.fd(side_b)
+                            t.goto(start_pos)
+
+                            if fillcolor is not None:
+                                t.end_fill()
+
+                        scalene(t, side_a=100, angle_C=60, side_b=150, heading=15, start_pos=(20, 30),
+                                pencolor="blue", fillcolor="light green", pensize=3)
+                            
+                        s.exitonclick()
+
+
+
+                .. tab-item:: Isosceles
+
+                    .. code-block:: python
+
+                        import turtle
+                        import math
+
+                        s = turtle.Screen()
+                        s.bgcolor("white")
+                        s.title("Grid")
+                        s.setup(width=800, height=600, startx=0, starty=0)
+
+                        t = turtle.Turtle()
+                        t.speed(5)
+
+                        # --begin triangle
+                        def isosceles(t, base, height, start_pos, start_heading, 
+                                        pencolor="blue", fillcolor=None, pensize=1):
+                            t.seth(start_heading)
+                            t.pu()
+                            t.goto(start_pos)
+                            t.pd()
+                            t.pensize(pensize)
+                            t.pencolor(pencolor)
+
+                            b = math.sqrt(height**2 + (base**2) / 4)
+                            angle_B = math.degrees(math.atan(2 * height / base))
+
+                            if fillcolor is not None:
+                                t.fillcolor(fillcolor)
+                                t.begin_fill()
+                            
+                            t.fd(base)
+                            t.lt(180 - angle_B)
+                            t.fd(b)
+                            t.goto(start_pos)
+
+                            if fillcolor is not None:
+                                t.end_fill()
+
+                        isosceles(t, base=100, height=50, start_pos=(20, 30), start_heading=15, 
+                                        pencolor="blue", fillcolor="pink", pensize=2)
+                        # --end triangle
+
+                        s.exitonclick()
+
+                .. tab-item:: Equilateral
+
+                    .. code-block:: python
+
+                        import turtle
+
+                        s = turtle.Screen()
+                        s.bgcolor("white")
+                        s.title("Grid")
+                        s.setup(width=800, height=600, startx=0, starty=0)
+
+                        t = turtle.Turtle()
+                        t.speed(5)
+
+
+                        # --begin triangle
+                        def equilateral(t, side, start_pos, start_heading, 
+                                            pencolor="blue", fillcolor=None, pensize=1):
+                            t.seth(start_heading)
+                            t.pu()
+                            t.goto(start_pos)
+                            t.pd()
+                            t.pensize(pensize)
+                            t.pencolor(pencolor)
+
+                            if fillcolor is not None:
+                                t.fillcolor(fillcolor)
+                                t.begin_fill()
+                        
+                            start_pos = t.pos()
+                            for _ in range(3):
+                                t.fd(side)
+                                t.lt(120)
+
+                            if fillcolor is not None:
+                                t.end_fill()
+
+
+                        equilateral(t, side=100, start_pos=(20, 30), start_heading=10, 
+                                        pencolor="purple", fillcolor="light green", pensize=2)
+                        # --end triangle
+
+                        s.exitonclick()
+
 
