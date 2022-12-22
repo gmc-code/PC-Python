@@ -106,10 +106,10 @@ Sequencing: steps to draw a square
                         t = turtle.Turtle()
                         t.speed(5)
 
-                        t.seth(0)
                         t.pu()
                         t.goto(-250, -250)
                         t.pd()
+                        t.seth(0)
 
                         t.fd(500)
                         t.lt(90)
