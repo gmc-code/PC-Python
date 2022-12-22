@@ -1,22 +1,12 @@
 import turtle
 import math
 
-import turtle
-
-s = turtle.Screen()
-s.bgcolor("white")
-s.title("Grid")
-s.setup(width=800, height=600, startx=0, starty=0)
-
-t = turtle.Turtle()
-t.speed(0)
-
 
 def square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
-    """draw a square
+    """Draw a square given side length.
 
     Args:
-        t (turtle): turtle instance
+        t (class turtle.Turtle): turtle instance.
         length (int, optional): side length. Defaults to 50.
         start_pos (tuple, optional): start position. Defaults to (0, 0).
         start_h (int, optional): initial heading. Defaults to 0.
@@ -46,17 +36,17 @@ def square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc
 
 
 def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
-    """Draw a rectangle
+    """Draw a rectangle given side lengths.
 
     Args:
-        t (turtle): turtle instance
+        t (class turtle.Turtle): turtle instance.
         length (int, optional): side length. Defaults to 40.
         width (int, optional): side width. Defaults to 30.
-        start_pos (tuple, optional): start position. Defaults to (0, 0).
+        start_pos (tuple, optional): start position coordinates. Defaults to (0, 0).
         start_h (int, optional): initial heading. Defaults to 0.
-        penw (int, optional): pensize. Defaults to 1.
-        penc (str, optional): pencolor. Defaults to "blue".
-        fillc (_type_, optional): fillcolor. Defaults to None.
+        penw (int, optional): pen size. Defaults to 1.
+        penc (str, optional): pen color. Defaults to "blue".
+        fillc (_type_, optional): fill color. Defaults to None.
     """
 
     t.pu()
@@ -82,19 +72,19 @@ def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc=
 
 
 
-def scalene(t, side_a, angle_C, side_b, start_pos, start_h=0, penw=1, penc="blue", fillc=None):
-    """_summary_
+def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
+    """Draw a scalene triangle given SAS (side angle side).
 
     Args:
-        t (_type_): _description_
-        side_a (_type_): _description_
-        angle_C (_type_): _description_
-        side_b (_type_): _description_
-        start_pos (_type_): _description_
-        start_h (int, optional): _description_. Defaults to 0.
-        penw (int, optional): _description_. Defaults to 1.
-        penc (str, optional): _description_. Defaults to "blue".
-        fillc (_type_, optional): _description_. Defaults to None.
+        t (class turtle.Turtle): turtle instance.
+        side_a (int): side length before angle.
+        angle_C (int): angle between 2 sides.
+        side_b (int): side length after angle.
+        start_pos (tuple, optional): start position. Defaults to (0, 0).
+        start_h (int, optional): initial heading. Defaults to 0.
+        penw (int, optional): pen size. Defaults to 1.
+        penc (str, optional): pen color. Defaults to "blue".
+        fillc (str, optional): fill color. Defaults to None.
     """
     t.pu()
     t.goto(start_pos)
@@ -119,18 +109,18 @@ def scalene(t, side_a, angle_C, side_b, start_pos, start_h=0, penw=1, penc="blue
 
 
 
-def isosceles(t, base, height, start_pos, start_h=0, penw=1, penc="blue", fillc=None):
-    """_summary_
+def isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
+    """Draw an isosceles triangle given base and height.
 
     Args:
-        t (_type_): _description_
-        base (_type_): _description_
-        height (_type_): _description_
-        start_pos (_type_): _description_
-        start_h (int, optional): _description_. Defaults to 0.
-        penw (int, optional): _description_. Defaults to 1.
-        penc (str, optional): _description_. Defaults to "blue".
-        fillc (_type_, optional): _description_. Defaults to None.
+        t (class turtle.Turtle): turtle instance.
+        base (int): base of triangle.
+        height (int): height of triangle.
+        start_pos (tuple, optional): start position. Defaults to (0, 0).
+        start_h (int, optional): initial heading. Defaults to 0.
+        penw (int, optional): pen size. Defaults to 1.
+        penc (str, optional): pen color. Defaults to "blue".
+        fillc (str, optional): fill color. Defaults to None.
     """
     t.pu()
     t.goto(start_pos)
@@ -156,17 +146,17 @@ def isosceles(t, base, height, start_pos, start_h=0, penw=1, penc="blue", fillc=
         t.end_fill()
 
 
-def equilateral(t, side, start_pos, start_h=0, penw=1, penc="blue", fillc=None):
-    """_summary_
+def equilateral(t, side, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
+    """Draw an equilateral triangle
 
     Args:
-        t (_type_): _description_
-        side (_type_): _description_
-        start_pos (_type_): _description_
-        start_h (int, optional): _description_. Defaults to 0.
-        penw (int, optional): _description_. Defaults to 1.
-        penc (str, optional): _description_. Defaults to "blue".
-        fillc (_type_, optional): _description_. Defaults to None.
+        t (class turtle.Turtle): turtle instance.
+        side (int): side length.
+        start_pos (tuple, optional): start position. Defaults to (0, 0).
+        start_h (int, optional): initial heading. Defaults to 0.
+        penw (int, optional): pen size. Defaults to 1.
+        penc (str, optional): pen color. Defaults to "blue".
+        fillc (str, optional): fill color. Defaults to None.
     """
     t.pu()
     t.goto(start_pos)

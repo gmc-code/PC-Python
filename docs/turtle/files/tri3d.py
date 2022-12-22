@@ -11,7 +11,7 @@ t = turtle.Turtle()
 t.speed(5)
 
 # --begin triangle
-def equilateral(t, side, start_pos, start_h=0):
+def equilateral(t, side, start_pos=(0, 0), start_h=0):
     t.pu()
     t.goto(start_pos)
     t.pd()

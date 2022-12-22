@@ -10,7 +10,7 @@ t = turtle.Turtle()
 t.speed(5)
 
 # --begin triangle
-def isosceles(t, base, height, start_pos, start_h=0):
+def isosceles(t, base, height, start_pos=(0, 0), start_h=0):
     t.pu()
     t.goto(start_pos)
     t.pd()

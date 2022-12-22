@@ -12,7 +12,7 @@ t.speed(5)
 
 
 # --begin triangle
-def equilateral(t, side, start_pos, start_h=0, penw=1, penc="blue", fillc=None):
+def equilateral(t, side, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
     t.pu()
     t.goto(start_pos)
     t.pd()

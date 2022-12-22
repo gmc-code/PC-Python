@@ -66,7 +66,7 @@ Documenting the module
 
                 .. code-block:: python
 
-                    def scalene(t, side_a, angle_C, side_b, start_pos, start_h=0, penw=1, penc="blue", fillc=None):
+                    def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
                         """_summary_
 
                         Args:
@@ -74,7 +74,7 @@ Documenting the module
                             side_a (_type_): _description_
                             angle_C (_type_): _description_
                             side_b (_type_): _description_
-                            start_pos (_type_): _description_
+                            start_pos (_type_, optional): start position. Defaults to _value_.
                             start_h (int, optional): _description_. Defaults to 0.
                             penw (int, optional): _description_. Defaults to 1.
                             penc (str, optional): _description_. Defaults to "blue".
@@ -87,14 +87,14 @@ Documenting the module
 
                 .. code-block:: python
 
-                    def isosceles(t, base, height, start_pos, start_h=0, penw=1, penc="blue", fillc=None):
+                    def isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
                         """_summary_
 
                         Args:
                             t (_type_): _description_
                             base (_type_): _description_
                             height (_type_): _description_
-                            start_pos (_type_): _description_
+                            start_pos (_type_, optional): start position. Defaults to _value_.
                             start_h (int, optional): _description_. Defaults to 0.
                             penw (int, optional): _description_. Defaults to 1.
                             penc (str, optional): _description_. Defaults to "blue".
@@ -107,13 +107,13 @@ Documenting the module
 
                 .. code-block:: python
 
-                    def equilateral(t, side, start_pos, start_h=0, penw=1, penc="blue", fillc=None):
+                    def equilateral(t, side, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
                         """_summary_
 
                         Args:
                             t (_type_): _description_
                             side (_type_): _description_
-                            start_pos (_type_): _description_
+                            start_pos (_type_, optional): start position. Defaults to _value_.
                             start_h (int, optional): _description_. Defaults to 0.
                             penw (int, optional): _description_. Defaults to 1.
                             penc (str, optional): _description_. Defaults to "blue".
@@ -153,7 +153,7 @@ Documenting the module
 
                     .. code-block:: python
 
-                        def scalene(t, side_a, angle_C, side_b, start_pos, start_h=0, penw=1, penc="blue", fillc=None):
+                        def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
                             """_summary_
 
                             Args:
@@ -161,7 +161,7 @@ Documenting the module
                                 side_a (_type_): _description_
                                 angle_C (_type_): _description_
                                 side_b (_type_): _description_
-                                start_pos (_type_): _description_
+                                start_pos (_type_, optional): start position. Defaults to _value_.
                                 start_h (int, optional): _description_. Defaults to 0.
                                 penw (int, optional): _description_. Defaults to 1.
                                 penc (str, optional): _description_. Defaults to "blue".
@@ -174,14 +174,14 @@ Documenting the module
 
                     .. code-block:: python
 
-                        def isosceles(t, base, height, start_pos, start_h=0, penw=1, penc="blue", fillc=None):
+                        def isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
                             """_summary_
 
                             Args:
                                 t (_type_): _description_
                                 base (_type_): _description_
                                 height (_type_): _description_
-                                start_pos (_type_): _description_
+                                start_pos (_type_, optional): start position. Defaults to _value_.
                                 start_h (int, optional): _description_. Defaults to 0.
                                 penw (int, optional): _description_. Defaults to 1.
                                 penc (str, optional): _description_. Defaults to "blue".
@@ -194,13 +194,13 @@ Documenting the module
 
                     .. code-block:: python
 
-                        def equilateral(t, side, start_pos, start_h=0, penw=1, penc="blue", fillc=None):
+                        def equilateral(t, side, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
                             """_summary_
 
                             Args:
                                 t (_type_): _description_
                                 side (_type_): _description_
-                                start_pos (_type_): _description_
+                                start_pos (_type_, optional): start position. Defaults to _value_.
                                 start_h (int, optional): _description_. Defaults to 0.
                                 penw (int, optional): _description_. Defaults to 1.
                                 penc (str, optional): _description_. Defaults to "blue".
