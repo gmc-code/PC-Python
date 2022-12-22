@@ -202,9 +202,9 @@ Isosceles triangle at any angle
 ------------------------------------------
 
 .. image:: images/isosceles_formulas.png
-    :scale: 30 %
+    :scale: 20 %
     :align: center
-    :alt: triangle_labels
+    :alt: isosceles_formulas
   
 | An isosceles triangle can be drawn at a given angle, given the base and the height. 
 | The formuals above can be used to calculate the angle B, which the turtle needs to turn and the side length, b.
@@ -278,7 +278,7 @@ Isosceles triangle at any angle
                         t.speed(5)
 
                         # --begin triangle
-                        def isosceles(t, base, height, start_pos, start_h):
+                        def isosceles(t, base, height, start_pos, start_h=0):
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
@@ -367,7 +367,7 @@ Equilateral triangles
                         t.speed(5)
 
                         # --begin triangle
-                        def equilateral(t, side, start_pos, start_h):
+                        def equilateral(t, side, start_pos, start_h=0):
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
@@ -414,7 +414,7 @@ Adding pen colour and fill colour parameters
                         t.speed(5)
 
                         # --begin triangle
-                        def scalene(t, side_a, angle_C, side_b, start_pos, start_h, penw=1, 
+                        def scalene(t, side_a, angle_C, side_b, start_pos, start_h=0, penw=1, 
                                     penc="blue", fillc=None): 
                             t.pu()
                             t.goto(start_pos)
@@ -460,7 +460,7 @@ Adding pen colour and fill colour parameters
                         t.speed(5)
 
                         # --begin triangle
-                        def isosceles(t, base, height, start_pos, start_h, penw=1, 
+                        def isosceles(t, base, height, start_pos, start_h=0, penw=1, 
                                         penc="blue", fillc=None):
                             t.pu()
                             t.goto(start_pos)
@@ -507,7 +507,7 @@ Adding pen colour and fill colour parameters
 
 
                         # --begin triangle
-                        def equilateral(t, side, start_pos, start_h, penw=1, 
+                        def equilateral(t, side, start_pos, start_h=0, penw=1, 
                                             penc="blue", fillc=None):
                             t.pu()
                             t.goto(start_pos)
