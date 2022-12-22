@@ -141,21 +141,21 @@ Documenting the module
 
                     Complete the doc string for the scalene triangle function using the template provided.
 
-
                     .. code-block:: python
 
-                        def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
-                            """Draw a rectangle
+                        def scalene(t, side_a, angle_C, side_b, start_pos, start_h=0, penw=1, penc="blue", fillc=None):
+                            """_summary_
 
                             Args:
-                                t (turtle): turtle instance
-                                length (int, optional): side length. Defaults to 40.
-                                width (int, optional): side width. Defaults to 30.
-                                start_pos (tuple, optional): start position. Defaults to (0, 0).
-                                start_h (int, optional): initial heading. Defaults to 0.
-                                penw (int, optional): pensize. Defaults to 1.
-                                penc (str, optional): pencolor. Defaults to "blue".
-                                fillc (_type_, optional): fillcolor. Defaults to None.
+                                t (_type_): _description_
+                                side_a (_type_): _description_
+                                angle_C (_type_): _description_
+                                side_b (_type_): _description_
+                                start_pos (_type_): _description_
+                                start_h (int, optional): _description_. Defaults to 0.
+                                penw (int, optional): _description_. Defaults to 1.
+                                penc (str, optional): _description_. Defaults to "blue".
+                                fillc (_type_, optional): _description_. Defaults to None.
                             """
 
                 .. tab-item:: Q3
@@ -164,18 +164,18 @@ Documenting the module
 
                     .. code-block:: python
 
-                        def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
-                            """Draw a rectangle
+                        def isosceles(t, base, height, start_pos, start_h=0, penw=1, penc="blue", fillc=None):
+                            """_summary_
 
                             Args:
-                                t (turtle): turtle instance
-                                length (int, optional): side length. Defaults to 40.
-                                width (int, optional): side width. Defaults to 30.
-                                start_pos (tuple, optional): start position. Defaults to (0, 0).
-                                start_h (int, optional): initial heading. Defaults to 0.
-                                penw (int, optional): pensize. Defaults to 1.
-                                penc (str, optional): pencolor. Defaults to "blue".
-                                fillc (_type_, optional): fillcolor. Defaults to None.
+                                t (_type_): _description_
+                                base (_type_): _description_
+                                height (_type_): _description_
+                                start_pos (_type_): _description_
+                                start_h (int, optional): _description_. Defaults to 0.
+                                penw (int, optional): _description_. Defaults to 1.
+                                penc (str, optional): _description_. Defaults to "blue".
+                                fillc (_type_, optional): _description_. Defaults to None.
                             """
 
                 .. tab-item:: Q4
@@ -184,18 +184,17 @@ Documenting the module
 
                     .. code-block:: python
 
-                        def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
-                            """Draw a rectangle
+                        def equilateral(t, side, start_pos, start_h=0, penw=1, penc="blue", fillc=None):
+                            """_summary_
 
                             Args:
-                                t (turtle): turtle instance
-                                length (int, optional): side length. Defaults to 40.
-                                width (int, optional): side width. Defaults to 30.
-                                start_pos (tuple, optional): start position. Defaults to (0, 0).
-                                start_h (int, optional): initial heading. Defaults to 0.
-                                penw (int, optional): pensize. Defaults to 1.
-                                penc (str, optional): pencolor. Defaults to "blue".
-                                fillc (_type_, optional): fillcolor. Defaults to None.
+                                t (_type_): _description_
+                                side (_type_): _description_
+                                start_pos (_type_): _description_
+                                start_h (int, optional): _description_. Defaults to 0.
+                                penw (int, optional): _description_. Defaults to 1.
+                                penc (str, optional): _description_. Defaults to "blue".
+                                fillc (_type_, optional): _description_. Defaults to None.
                             """
 
 
