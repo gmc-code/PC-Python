@@ -1,4 +1,5 @@
 import turtle
+import math
 
 s = turtle.Screen()
 s.bgcolor("white")
@@ -12,17 +13,20 @@ t.speed(5)
 base = 100
 height = 50
 start_pos = (20, 30)
+start_heading = 15
 
-t.seth(0)
+t.seth(start_heading)
 t.pu()
 t.goto(start_pos)
 t.pd()
 
-start_x = start_pos[0]
-start_y = start_pos[1]
+b = math.sqrt(height**2 + (base**2) / 4)
+angle_B = math.degrees(math.atan(2 * height / base))
+
 t.fd(base)
-t.goto(start_x + base / 2, start_y + height)
-t.goto(start_x, start_y)
+t.lt(180 - angle_B)
+t.fd(b)
+t.goto(start_pos)
 # --end triangle
 
 s.exitonclick()

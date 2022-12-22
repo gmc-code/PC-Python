@@ -20,7 +20,8 @@ Scalene triangle
     
 | The code below draws a triangle of given Side, Angle, Side.
 | The code uses variables for side a, angle C, side b.
-| The code also amkes use of the heading and start position.
+| The code also makes use of the heading and start position.
+| The code draws a triangle of base 100, angle 70 and side 150 with a heading of 15 degrees, positioned at (20, 30).
 
 .. code-block:: python
 
@@ -37,7 +38,7 @@ Scalene triangle
     # --begin triangle
     side_a = 100
     angle_C = 70
-    side_b = 100
+    side_b = 150
     heading = 15
     start_pos = (20, 30)
 
@@ -69,7 +70,7 @@ Scalene triangle
 
                 .. tab-item:: Q1
 
-                    Identify the lines of code that replaced the 8 steps. 
+                    Write a defintion to replace the lines between the comments (begin triangle and end triangle) in the code above.
 
                     .. code-block:: python
 
@@ -83,7 +84,7 @@ Scalene triangle
                         t = turtle.Turtle()
                         t.speed(5)
 
-                        
+
                         def scalene(t, side_a, angle_C, side_b, heading, start_pos):
                             t.seth(heading)
                             t.pu()
@@ -96,7 +97,7 @@ Scalene triangle
                             t.goto(start_pos)
 
 
-                        scalene(t, side_a=100, angle_C=60, side_b=100, heading=15, start_pos=(20, 30))
+                        scalene(t, side_a=100, angle_C=60, side_b=150, heading=15, start_pos=(20, 30))
 
                         s.exitonclick()
 
@@ -112,8 +113,7 @@ Isosceles triangle
   
 | A triangle of sides a, b, b can be drawn, given the base and the height. 
 
-| The code below uses sequencing only.
-| The code below uses the x and y positions and only works when the base is drawn horizontally.
+| The code below uses the x and y positions and only works when the base is drawn horizontally with the intitial heading set to 0.
 | The code draws an isosceles triangle of base 100 and height 50 at (20, 30).
 
 .. code-block:: python
@@ -128,6 +128,7 @@ Isosceles triangle
     t = turtle.Turtle()
     t.speed(5)
 
+    # --begin triangle
     base = 100
     height = 50
     start_pos = (20, 30)
@@ -137,13 +138,62 @@ Isosceles triangle
     t.goto(start_pos)
     t.pd()
 
-    start_x = t.xcor()
-    start_y = t.ycor()
+    start_x = start_pos[0]
+    start_y = start_pos[1]
     t.fd(base)
     t.goto(start_x + base/2, start_y + height)
     t.goto(start_x, start_y)
+    # --end triangle
 
     s.exitonclick()
+
+----
+
+.. admonition:: Tasks
+
+    1. Write a defintion to replace the lines between the comments (begin triangle and end triangle) in the code above.
+
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
+
+            .. tab-set::
+
+                .. tab-item:: Q1
+
+                    Write a defintion to replace the lines between the comments (begin triangle and end triangle) in the code above.
+
+                    .. code-block:: python
+
+                        import turtle
+
+                        s = turtle.Screen()
+                        s.bgcolor("white")
+                        s.title("Grid")
+                        s.setup(width=800, height=600, startx=0, starty=0)
+
+                        t = turtle.Turtle()
+                        t.speed(5)
+
+                        # --begin triangle
+                        def isosceles(t, base, height, start_pos):
+                            t.seth(0)
+                            t.pu()
+                            t.goto(start_pos)
+                            t.pd()
+
+                            start_x = start_pos[0]
+                            start_y = start_pos[1]
+                            t.fd(base)
+                            t.goto(start_x + base / 2, start_y + height)
+                            t.goto(start_x, start_y)
+
+
+                        isosceles(t, base=100, height=50, start_pos=(20, 30))
+                        # --end triangle
+
+                        s.exitonclick()
 
 ----
 
@@ -155,12 +205,13 @@ Isosceles triangle at any angle
     :align: center
     :alt: triangle_labels
   
-| An isocelses triangle can be drawn at a given angle, given the base and the height. 
+| An isoscelses triangle can be drawn at a given angle, given the base and the height. 
 | The formuals above can be used to calculate the angle B, which the turtle needs to turn and the side length, b.
 
 .. code-block:: python
 
     import turtle
+    import math
 
     s = turtle.Screen()
     s.bgcolor("white")
@@ -170,10 +221,11 @@ Isosceles triangle at any angle
     t = turtle.Turtle()
     t.speed(5)
 
+    # --begin triangle
     base = 100
     height = 50
     start_pos = (20, 30)
-    start_heading = 30
+    start_heading = 15
 
     t.seth(start_heading)
     t.pu()
@@ -187,15 +239,68 @@ Isosceles triangle at any angle
     t.lt(180 - angle_B)
     t.fd(b)
     t.goto(start_pos)
+    # --end triangle
 
     s.exitonclick()
 
 ----
 
-Iteration: equilateral triangles 
+.. admonition:: Tasks
+
+    1. Write a defintion to replace the lines between the comments (begin triangle and end triangle) in the code above.
+
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
+
+            .. tab-set::
+
+                .. tab-item:: Q1
+
+                    Write a defintion to replace the lines between the comments (begin triangle and end triangle) in the code above.
+
+                    .. code-block:: python
+
+                        import turtle
+                        import math
+
+                        s = turtle.Screen()
+                        s.bgcolor("white")
+                        s.title("Grid")
+                        s.setup(width=800, height=600, startx=0, starty=0)
+
+                        t = turtle.Turtle()
+                        t.speed(5)
+
+                        # --begin triangle
+                        def isosceles(t, base, height, start_pos, start_heading):
+                            t.seth(start_heading)
+                            t.pu()
+                            t.goto(start_pos)
+                            t.pd()
+
+                            b = math.sqrt(height**2 + (base**2) / 4)
+                            angle_B = math.degrees(math.atan(2 * height / base))
+
+                            t.fd(base)
+                            t.lt(180 - angle_B)
+                            t.fd(b)
+                            t.goto(start_pos)
+
+
+                        isosceles(t, base=100, height=50, start_pos=(20, 30), start_heading=15)
+                        # --end triangle
+
+                        s.exitonclick()
+                                            
+
+----
+
+Equilateral triangles 
 ------------------------------------------------
 
-| The code below uses iteration to draw an equilateral triangle with angles of 60 degrees at (20,30), with the base at 30 degrees from the horizontal (start_heading = 30).
+| The code below uses iteration to draw an equilateral triangle with angles of 60 degrees at (20,30), with the base at 30 degrees from the horizontal (start_heading = 10).
 | FOr an internal angle of 60 degrees when drawing anticlockwise, and angle of 120 degrees is need for the left turn.
 
 .. code-block:: python
@@ -210,9 +315,10 @@ Iteration: equilateral triangles
     t = turtle.Turtle()
     t.speed(5)
 
+    # --begin triangle
     side = 100
     start_pos = (20, 30)
-    start_heading = 30
+    start_heading = 10
 
     t.seth(start_heading)
     t.pu()
@@ -223,107 +329,63 @@ Iteration: equilateral triangles
     for _ in range(3):
         t.fd(side)
         t.lt(120)
+    # --end triangle
 
     s.exitonclick()
 
 ----
 
-Definitions: using a def block to draw a triangle
-----------------------------------------------------
+.. admonition:: Tasks
 
-| The code below uses a definition block to draw a triangle.
-| The function has parameters to specify the side length and the staring position of the bottom left vertex.
-| The function also requires the turtle to be passed as an argument so it can be referred to.
-| Before the for-loop, the turtle is repositioned without drawing the movement; **penup** and **pendown** are needed for that.
-| The initial heading has been left out of the triangle function, but it can be set prior to using the triangle function.
+    1. Write a defintion to replace the lines between the comments (begin triangle and end triangle) in the code above.
 
-.. py:function:: triangle(t, length=50, x=0, y=0)
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
 
-    | t - the turtle object to draw the triangle
-    | length - side length, default 50
-    | x - starting x position, default 0
-    | y - starting y position, default 0
-    
-| In the code below, ``triangle(t)`` draws a default triangle.
-| ``triangle(t, l=50, x=20, y=30)`` draws a triangle of length 50 at (x=20, y=30).
-| ``triangle(t, l=250, x=-300, y=-200)`` draws a triangle of length 250 at (x=-300, y=-200).
-    
-.. code-block:: python
+            .. tab-set::
 
-    import turtle
+                .. tab-item:: Q1
 
-    s = turtle.Screen()
-    s.bgcolor("white")
-    s.title("Grid")
-    s.setup(width=800, height=600, startx=0, starty=0)
+                    Write a defintion to replace the lines between the comments (begin triangle and end triangle) in the code above.
 
-    t = turtle.Turtle()
-    t.speed(5)
+                    .. code-block:: python
 
-    def triangle(t, length=50, x=0, y=0):
-        t.pu()
-        t.goto(x, y)
-        t.pd()
-        for _ in range(4):
-            t.fd(l)
-            t.lt(90)
+                        import turtle
 
-    t.seth(0)
-    triangle(t)
-    triangle(t, length=50, x=20, y=30)
-    triangle(t, length=250, x=-300, y=-200)
+                        s = turtle.Screen()
+                        s.bgcolor("white")
+                        s.title("Grid")
+                        s.setup(width=800, height=600, startx=0, starty=0)
 
-    s.exitonclick()
+                        t = turtle.Turtle()
+                        t.speed(5)
+
+                        # --begin triangle
+                        def equilateral(t, side, start_pos, start_heading):
+                            t.seth(start_heading)
+                            t.pu()
+                            t.goto(start_pos)
+                            t.pd()
+
+                            start_pos = t.pos()
+                            for _ in range(3):
+                                t.fd(side)
+                                t.lt(120)
+
+
+                        equilateral(t, side=100, start_pos=(20, 30), start_heading=10)
+                        # --end triangle
+
+                        s.exitonclick()
 
 ----
 
 Adding pen colour and fill colour parameters
------------------------------------------------
+---------------------------------------------
 
-| The code adds parameters for pen and fill colours.
+.. admonition:: Tasks
 
-.. py:function:: triangle(t, length=50, x=0, y=0, penc="blue", fillc=None, penw=1)
-
-    | t - the turtle object to draw the triangle
-    | length - side length, default 50
-    | x - starting x position, default 0
-    | y - starting y position, default 0
-    | penc - pencolor, default is blue
-    | fillc - fillcolor, default is None
-    | penw - pensize, default 1
-   
-| In the code below, ``triangle(t, l=250, x=-100, y=-150, penc="blue", fillc="green", penw=2) ``draws a triangle of length 250 at (x=-100, y=-150) with a blue pencolor, a green fillcolor, with a pensize of 2.
-| The code needs to check the **fillc** argument since setting a fillcolor to **None** will throw an error.
-
-.. code-block:: python
-
-    import turtle
-
-    s = turtle.Screen()
-    s.bgcolor("white")
-    s.title("Grid")
-    s.setup(width=800, height=600, startx=0, starty=0)
-
-    t = turtle.Turtle()
-    t.speed(0)
-
-    def triangle(t, l=50, x=0, y=0, penc="blue", fillc="red", penw=1):
-        t.pu()
-        t.goto(x, y)
-        t.pd()
-        t.pensize(penw)
-        t.pencolor(penc)
-        if fillc is not None:
-            t.fillcolor(fillc)
-            t.begin_fill()
-        for _ in range(4):
-            t.fd(length)
-            t.lt(90)
-        if fillc is not None:
-            t.end_fill()
-
-    triangle(t, length=250, x=-100, y=-150, penc="blue", fillc="snow", penw=2)
-
-    s.exitonclick()
-
+    1. Modify the triangle definitions to include parameters for pencolor, fillcolor, pensize.
 

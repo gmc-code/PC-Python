@@ -11,7 +11,7 @@ t.speed(5)
 # --begin triangle
 side_a = 100
 angle_C = 70
-side_b = 100
+side_b = 150
 heading = 15
 start_pos = (20, 30)
 

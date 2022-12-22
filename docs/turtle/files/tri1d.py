@@ -23,6 +23,6 @@ def scalene(t, side_a, angle_C, side_b, heading, start_pos):
     t.goto(start_pos)
 
 
-scalene(t, side_a=100, angle_C=60, side_b=100, heading=15, start_pos=(20, 30))
+scalene(t, side_a=100, angle_C=60, side_b=150, heading=15, start_pos=(20, 30))
 
 s.exitonclick()
