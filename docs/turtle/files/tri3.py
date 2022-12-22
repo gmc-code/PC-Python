@@ -15,10 +15,10 @@ side = 100
 start_pos = (20, 30)
 start_h = 10
 
-t.seth(start_h)
 t.pu()
 t.goto(start_pos)
 t.pd()
+t.seth(start_h)
 
 start_pos = t.pos()
 for _ in range(3):

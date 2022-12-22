@@ -12,10 +12,10 @@ t.speed(5)
 
 # --begin triangle
 def equilateral(t, side, start_pos, start_h):
-    t.seth(start_h)
     t.pu()
     t.goto(start_pos)
     t.pd()
+    t.seth(start_h)
 
     start_pos = t.pos()
     for _ in range(3):

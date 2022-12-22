@@ -11,7 +11,7 @@ t = turtle.Turtle()
 t.speed(5)
 
 
-def scalene(t, side_a, angle_C, side_b, start_h, start_pos):
+def scalene(t, side_a, angle_C, side_b, start_pos, start_h):
     t.pu()
     t.goto(start_pos)
     t.pd()
@@ -23,6 +23,6 @@ def scalene(t, side_a, angle_C, side_b, start_h, start_pos):
     t.goto(start_pos)
 
 
-scalene(t, side_a=100, angle_C=60, side_b=150, start_h=15, start_pos=(20, 30))
+scalene(t, side_a=100, angle_C=60, side_b=150, start_pos=(20, 30), start_h=15)
 
 s.exitonclick()

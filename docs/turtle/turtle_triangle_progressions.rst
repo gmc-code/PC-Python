@@ -39,8 +39,8 @@ Scalene triangle
     side_a = 100
     angle_C = 70
     side_b = 150
-    start_h = 15
     start_pos = (20, 30)
+    start_h = 15
 
     t.pu()
     t.goto(start_pos)
@@ -85,7 +85,7 @@ Scalene triangle
                         t.speed(5)
 
 
-                        def scalene(t, side_a, angle_C, side_b, start_h, start_pos):
+                        def scalene(t, side_a, angle_C, side_b, start_pos, start_h):
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
@@ -97,7 +97,7 @@ Scalene triangle
                             t.goto(start_pos)
 
 
-                        scalene(t, side_a=100, angle_C=60, side_b=150, start_h=15, start_pos=(20, 30))
+                        scalene(t, side_a=100, angle_C=60, side_b=150, start_pos=(20, 30), start_h=15)
 
                         s.exitonclick()
 
@@ -179,10 +179,10 @@ Isosceles triangle
 
                         # --begin triangle
                         def isosceles(t, base, height, start_pos):
-                            t.seth(0)
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
+                            t.seth(0)
 
                             start_x = start_pos[0]
                             start_y = start_pos[1]
@@ -279,10 +279,10 @@ Isosceles triangle at any angle
 
                         # --begin triangle
                         def isosceles(t, base, height, start_pos, start_h):
-                            t.seth(start_h)
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
+                            t.seth(start_h)
 
                             b = math.sqrt(height**2 + (base**2) / 4)
                             angle_B = math.degrees(math.atan(2 * height / base))
@@ -368,10 +368,10 @@ Equilateral triangles
 
                         # --begin triangle
                         def equilateral(t, side, start_pos, start_h):
-                            t.seth(start_h)
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
+                            t.seth(start_h)
 
                             start_pos = t.pos()
                             for _ in range(3):
@@ -414,18 +414,18 @@ Adding pen colour and fill colour parameters
                         t.speed(5)
 
                         # --begin triangle
-                        def scalene(t, side_a, angle_C, side_b, start_h, start_pos, 
-                                    penc="blue", fillc=None, penw=1): 
+                        def scalene(t, side_a, angle_C, side_b, start_pos, start_h, penw=1, 
+                                    penc="blue", fillc=None): 
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
                             t.seth(start_h)
 
-                            t.pensize(pensize)
-                            t.pencolor(pencolor)
+                            t.pensize(penw)
+                            t.pencolor(penc)
 
-                            if fillcolor is not None:
-                                t.fillcolor(fillcolor)
+                            if fillc is not None:
+                                t.fillcolor(fillc)
                                 t.begin_fill()
 
                             t.fd(side_a)
@@ -433,11 +433,11 @@ Adding pen colour and fill colour parameters
                             t.fd(side_b)
                             t.goto(start_pos)
 
-                            if fillcolor is not None:
+                            if fillc is not None:
                                 t.end_fill()
 
-                        scalene(t, side_a=100, angle_C=60, side_b=150, start_h=15, start_pos=(20, 30),
-                                penc="blue", fillc="light green", penw=3)
+                        scalene(t, side_a=100, angle_C=60, side_b=150, start_pos=(20, 30), start_h=15,
+                                penw=3, penc="blue", fillc="light green")
                         # --end triangle  
                                                   
                         s.exitonclick()
@@ -460,21 +460,21 @@ Adding pen colour and fill colour parameters
                         t.speed(5)
 
                         # --begin triangle
-                        def isosceles(t, base, height, start_pos, start_h, 
-                                        penc="blue", fillc=None, penw=1):
+                        def isosceles(t, base, height, start_pos, start_h, penw=1, 
+                                        penc="blue", fillc=None):
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
                             t.seth(start_h)
 
-                            t.pensize(pensize)
-                            t.pencolor(pencolor)
+                            t.pensize(penw)
+                            t.pencolor(penc)
 
                             b = math.sqrt(height**2 + (base**2) / 4)
                             angle_B = math.degrees(math.atan(2 * height / base))
 
-                            if fillcolor is not None:
-                                t.fillcolor(fillcolor)
+                            if fillc is not None:
+                                t.fillcolor(fillc)
                                 t.begin_fill()
                             
                             t.fd(base)
@@ -482,11 +482,11 @@ Adding pen colour and fill colour parameters
                             t.fd(b)
                             t.goto(start_pos)
 
-                            if fillcolor is not None:
+                            if fillc is not None:
                                 t.end_fill()
 
-                        isosceles(t, base=100, height=50, start_pos=(20, 30), start_h=15, 
-                                        penc="blue", fillc="pink", penw=2)
+                        isosceles(t, base=100, height=50, start_pos=(20, 30), start_h=15, penw=2, 
+                                        penc="blue", fillc="pink")
                         # --end triangle
 
                         s.exitonclick()
@@ -507,18 +507,18 @@ Adding pen colour and fill colour parameters
 
 
                         # --begin triangle
-                        def equilateral(t, side, start_pos, start_h, 
-                                            penc="blue", fillc=None, penw=1):
+                        def equilateral(t, side, start_pos, start_h, penw=1, 
+                                            penc="blue", fillc=None):
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
                             t.seth(start_h)
 
-                            t.pensize(pensize)
-                            t.pencolor(pencolor)
+                            t.pensize(penw)
+                            t.pencolor(penc)
 
-                            if fillcolor is not None:
-                                t.fillcolor(fillcolor)
+                            if fillc is not None:
+                                t.fillcolor(fillc)
                                 t.begin_fill()
                         
                             start_pos = t.pos()
@@ -526,12 +526,12 @@ Adding pen colour and fill colour parameters
                                 t.fd(side)
                                 t.lt(120)
 
-                            if fillcolor is not None:
+                            if fillc is not None:
                                 t.end_fill()
 
 
-                        equilateral(t, side=100, start_pos=(20, 30), start_h=10, 
-                                        penc="purple", fillc="light green", penw=2)
+                        equilateral(t, side=100, start_pos=(20, 30), start_h=10, penw=2, 
+                                        penc="purple", fillc="light green")
                         # --end triangle
 
                         s.exitonclick()

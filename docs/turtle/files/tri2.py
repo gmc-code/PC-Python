@@ -13,10 +13,10 @@ base = 100
 height = 50
 start_pos = (20, 30)
 
-t.seth(0)
 t.pu()
 t.goto(start_pos)
 t.pd()
+t.seth(0)
 
 start_x = start_pos[0]
 start_y = start_pos[1]

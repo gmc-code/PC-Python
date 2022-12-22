@@ -12,8 +12,8 @@ t.speed(5)
 side_a = 100
 angle_C = 70
 side_b = 150
-start_h = 15
 start_pos = (20, 30)
+start_h = 15
 
 t.pu()
 t.goto(start_pos)

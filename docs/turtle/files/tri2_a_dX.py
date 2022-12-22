@@ -10,20 +10,20 @@ t = turtle.Turtle()
 t.speed(5)
 
 # --begin triangle
-def isosceles(t, base, height, start_pos, start_h, 
-                penc="blue", fillc=None, penw=1):
+def isosceles(t, base, height, start_pos, start_h, penw=1, 
+                penc="blue", fillc=None):
     t.seth(start_h)
     t.pu()
     t.goto(start_pos)
     t.pd()
-    t.pensize(pensize)
-    t.pencolor(pencolor)
+    t.pensize(penw)
+    t.pencolor(penc)
 
     b = math.sqrt(height**2 + (base**2) / 4)
     angle_B = math.degrees(math.atan(2 * height / base))
 
-    if fillcolor is not None:
-        t.fillcolor(fillcolor)
+    if fillc is not None:
+        t.fillcolor(fillc)
         t.begin_fill()
      
     t.fd(base)
@@ -31,11 +31,11 @@ def isosceles(t, base, height, start_pos, start_h,
     t.fd(b)
     t.goto(start_pos)
 
-    if fillcolor is not None:
+    if fillc is not None:
         t.end_fill()
 
-isosceles(t, base=100, height=50, start_pos=(20, 30), start_h=15, 
-                penc="blue", fillc="pink", penw=2)
+isosceles(t, base=100, height=50, start_pos=(20, 30), start_h=15, penw=2, 
+                penc="blue", fillc="pink")
 # --end triangle
 
 s.exitonclick()
