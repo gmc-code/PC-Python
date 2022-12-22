@@ -7,6 +7,18 @@ Turtle houses
 
 ----
 
- x
+Simple houses
+------------------
+
+| Write a def block that produces a house of given length, height and position.
+| Use the function to make several houses as shown below.
+
+.. image:: images/simple_houses1.png
+    :scale: 20 %
+    :align: center
+    :alt: simple_houses1
+
+
+
 
 
