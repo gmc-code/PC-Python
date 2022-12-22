@@ -1,5 +1,5 @@
 import turtle
-import houses as h
+import shapes as sh
 
 s = turtle.Screen()
 s.bgcolor("white")
@@ -15,10 +15,10 @@ def window_pos(start_pos, x_add, y_add):
     return (start_pos[0] + x_add, start_pos[1] + y_add)
 
 def window(t, length=10, start_pos=(0, 0)):
-    h.square(t, length=length/2, start_pos=start_pos, fillc="light blue")
-    h.square(t, length=length/2, start_pos=window_pos(start_pos, length/2, 0), fillc="light blue")
-    h.square(t, length=length/2, start_pos=window_pos(start_pos, 0, length/2), fillc="light blue")
-    h.square(t, length=length/2, start_pos=window_pos(start_pos, length/2, length/2), fillc="light blue")
+    sh.square(t, length=length/2, start_pos=start_pos, fillc="light blue")
+    sh.square(t, length=length/2, start_pos=window_pos(start_pos, length/2, 0), fillc="light blue")
+    sh.square(t, length=length/2, start_pos=window_pos(start_pos, 0, length/2), fillc="light blue")
+    sh.square(t, length=length/2, start_pos=window_pos(start_pos, length/2, length/2), fillc="light blue")
 
 
 window(t, length=200, start_pos=(0, 0))

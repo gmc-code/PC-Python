@@ -1,11 +1,14 @@
 ====================================================
-Turtle houses module
+Turtle shapes and houses modules
 ====================================================
 
 | The houses will be built from squares, rectangles and triangles.
-| To reduce the code in the main file, definitions for the base shapes will be placed in a module which will need to be imported.
+| To reduce the code in the main file, separate modules will be created.
+| Definitions for the base shapes will be placed in a module, ``shapes.py``.
+| Definitions for house shapes will be placed in a module, ``houses.py``.
 
-| Download the python file :download:`houses.py module <files/houses.py>`
+| Download the python file :download:`shapes.py module <files/shapes.py>`
+| Create the module, ``houses.py``
 
 ----
 
@@ -13,14 +16,14 @@ Importing the module
 -----------------------
 
 | See: https://www.w3schools.com/python/ref_keyword_as.asp
-| The code below shows importing the house module as an alias.
-| This makes it shorter to refer to functions in the house module.
-| Instead of needing ``houses.rectangle``, only ``h.rectangle`` is needed.
+| The code below shows importing the house module as an alias via ``import shapes as sh``.
+| This makes it shorter to refer to functions in the shapes module.
+| Instead of needing ``shapes.rectangle``, only ``sh.rectangle`` is needed.
 
 .. code-block:: python
 
     import turtle
-    import houses as h
+    import shapes as sh
 
     s = turtle.Screen()
     s.bgcolor("white")
@@ -28,16 +31,17 @@ Importing the module
     s.setup(width=800, height=600, startx=200, starty=100)
 
     t = turtle.Turtle()
-    h.rectangle(t, length=200, width=80, start_pos=(0,0), fillc="light green")
+    sh.rectangle(t, length=200, width=80, start_pos=(0,0), fillc="light green")
 
     s.exitonclick()
 
 ----
 
-Module functions
+Module shape functions
 -----------------------
 
-| The full syntax of the houses module is below.
+| The syntax of the basic shapes in the shapes module is below.
+
 | In using this, there is no need to include all the parameters that have default values, since this makes them optional.
 | e.g. ``square(t, length=100, start_pos=(10, 20), fillc="light green")`` can be used in most cases 
 | rather than the full ``square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)``.
@@ -112,7 +116,7 @@ Documenting the module
 
 | The first line describes the use of the function.
 | The arguments are described under the heading: Args.
-| Consider the string: ``length (int, optional): side length. Defaults to 50.``
+| Consider the string: ``length (int, optional): side lengtsh. Defaults to 50.``
 | The name of the argument is followed by its type in brackets along with "optional" if a default value has been given. A short description of the argument follows. Any default values are stated.
 
 .. code-block:: python
@@ -122,7 +126,7 @@ Documenting the module
 
         Args:
             t (turtle): turtle object
-            length (int, optional): side length. Defaults to 50.
+            length (int, optional): side lengtsh. Defaults to 50.
             start_pos (tuple, optional): start position. Defaults to (0, 0).
             start_h (int, optional): start heading. Defaults to 0.
             penw (int, optional): pen size. Defaults to 1.
@@ -148,8 +152,8 @@ Documenting the module
 
                         Args:
                             t (turtle): turtle instance
-                            length (_type_, optional): side length. Defaults to _value_.
-                            width (_type_, optional): side width. Defaults to _value_.
+                            length (_type_, optional): side lengtsh. Defaults to _value_.
+                            width (_type_, optional): side widtsh. Defaults to _value_.
                             start_pos (_type_, optional): start position. Defaults to _value_.
                             start_h (_type_, optional): start heading. Defaults to _value_.
                             penw (_type_, optional): pen size. Defaults to _value_.
@@ -235,8 +239,8 @@ Documenting the module
 
                             Args:
                                 t (class turtle.Turtle): turtle instance.
-                                length (int, optional): side length. Defaults to 40.
-                                width (int, optional): side width. Defaults to 30.
+                                length (int, optional): side lengtsh. Defaults to 40.
+                                width (int, optional): side widtsh. Defaults to 30.
                                 start_pos (tuple, optional): start position coordinates. Defaults to (0, 0).
                                 start_h (int, optional): start heading. Defaults to 0.
                                 penw (int, optional): pen size. Defaults to 1.
@@ -296,7 +300,7 @@ Documenting the module
 
                             Args:
                                 t (class turtle.Turtle): turtle instance.
-                                side (int): side length.
+                                side (int): side lengtsh.
                                 start_pos (tuple, optional): start position. Defaults to (0, 0).
                                 start_h (int, optional): start heading. Defaults to 0.
                                 penw (int, optional): pen size. Defaults to 1.

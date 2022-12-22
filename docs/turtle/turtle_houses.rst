@@ -1,9 +1,29 @@
 ====================================================
-Turtle houses
+Turtle houses module
 ====================================================
 
-| The houses will be built from squares, rectangles and triangles.
-| To reduce the code in the main file, definitions for the base shapes will be placed in a module which will need to be imported.
+| The houses are built from squares, rectangles and triangles.
+| To reduce the code in the main file, separate modules are used which group the code together.
+| Definitions for the base shapes are placed in a module, ``shapes.py``.
+| Definitions for house shapes will be placed in a module, ``houses.py``.
+
+| Download the python file :download:`shapes.py module <files/shapes.py>`
+| Create the module, ``houses.py``, by following the steps below to build a basic house shape by combining together various shapes from the shapes module.
+
+----
+
+Importing the module
+-----------------------
+
+| See: https://www.w3schools.com/python/ref_keyword_as.asp
+| The code below shows importing the house module as an alias via ``import shapes as sh``.
+| This makes it shorter to refer to functions in the house module.
+| Instead of needing ``houses.rectangle``, only ``h.rectangle`` is needed.
+
+.. code-block:: python
+
+    import turtle
+    import houses as h
 
 ----
 

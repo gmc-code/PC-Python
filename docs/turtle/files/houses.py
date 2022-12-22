@@ -1,180 +1,87 @@
 import turtle
-import math
+import shapes as sh
 
 
-def square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
-    """Draw a square given side length.
+def door_pos(start_pos, length):
+    """calculate door bottom left position
+        1/3 along length of house
+
+    Args:
+        start_pos (tuple): bottom left of house
+        length (int): house length
+
+    Returns:
+        tuple: bottom left position of door
+    """
+    return (start_pos[0] + length//3, start_pos[1])
+
+
+def roof_pos(start_pos, length, height):
+    """calculate roof bottom left position 
+    allows for an overhang of 5 pixels over left side of house
+
+    Args:
+        start_pos (tuple): bottom left of house
+        length (int): house length
+        height (int): house height
+
+    Returns:
+        tuple: bottom left position of roof
+    """
+    return (start_pos[0] -5, start_pos[1] + height)
+
+
+def window_pos(start_pos, x_add, y_add):
+    """calculate the bottom left of window or square making up a window
+
+    Args:
+        start_pos (tuple): bottom left of house
+        x_add (int): amount to add to the x coordinate of the house start_pos to locate the window
+        y_add (int): amount to add to the y coordinate of the house start_pos to locate the window
+
+    Returns:
+        tuple: bottom left position of roof
+    """
+    return (start_pos[0] + x_add, start_pos[1] + y_add)
+
+
+def window(t, length=10, start_pos=(0, 0), fillc="light blue"):
+    """draw a 4 pane square window.
+    Uses the window_pos function.
 
     Args:
         t (class turtle.Turtle): turtle instance.
-        length (int, optional): side length. Defaults to 50.
-        start_pos (tuple, optional): start position. Defaults to (0, 0).
-        start_h (int, optional): initial heading. Defaults to 0.
-        penw (int, optional): pensize. Defaults to 1.
-        penc (str, optional): pencolor. Defaults to "black".
-        fillc (str, optional): fillcolor. Defaults to None.
-
+        length (int, optional): full length of window. Defaults to 10.
+        start_pos (tuple, optional): bottom left of window. Defaults to (0, 0).
+        fillc (str, optional): window colour. Defaults to "light blue".
     """
-    t.pu()
-    t.goto(start_pos)
-    t.pd()
-    t.seth(start_h)
-
-    t.pensize(penw)
-    t.pencolor(penc)
-
-    if fillc is not None:
-        t.fillcolor(fillc)
-        t.begin_fill()
-
-    for _ in range(4):
-        t.fd(length)
-        t.lt(90)
-
-    if fillc is not None:
-        t.end_fill()
+    sh.square(t, length=length//2, start_pos=start_pos, fillc="light blue")
+    sh.square(t, length=length//2, start_pos=window_pos(start_pos, length//2, 0), fillc="light blue")
+    sh.square(t, length=length//2, start_pos=window_pos(start_pos, 0, length//2), fillc="light blue")
+    sh.square(t, length=length//2, start_pos=window_pos(start_pos, length//2, length//2), fillc="light blue")
 
 
-def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
-    """Draw a rectangle given side lengths.
+def windowed_house(t, length=60, height=40, start_pos=(0, 0), windows=0):
+    """draw a house with 0-2 windows
 
     Args:
         t (class turtle.Turtle): turtle instance.
-        length (int, optional): side length. Defaults to 40.
-        width (int, optional): side width. Defaults to 30.
-        start_pos (tuple, optional): start position coordinates. Defaults to (0, 0).
-        start_h (int, optional): initial heading. Defaults to 0.
-        penw (int, optional): pen size. Defaults to 1.
-        penc (str, optional): pen color. Defaults to "black".
-        fillc (_type_, optional): fill color. Defaults to None.
+        length (int, optional): length of house. Defaults to 60.
+        height (int, optional): height of house. Defaults to 40.
+        start_pos (tuple, optional): bottom left of house. Defaults to (0, 0).
+        windows (int, optional): number of windows, 0, 1 or 2. Defaults to 0.
     """
-
-    t.pu()
-    t.goto(start_pos)
-    t.pd()
-    t.seth(start_h)
-
-    t.pensize(penw)
-    t.pencolor(penc)
-
-    if fillc is not None:
-        t.fillcolor(fillc)
-        t.begin_fill()
-
-    for _ in range(2):
-        t.fd(length)
-        t.lt(90)
-        t.fd(width)
-        t.lt(90)
-
-    if fillc is not None:
-        t.end_fill()
-
-
-
-def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
-    """Draw a scalene triangle given SAS (side angle side).
-
-    Args:
-        t (class turtle.Turtle): turtle instance.
-        side_a (int): side length before angle.
-        angle_C (int): angle between 2 sides.
-        side_b (int): side length after angle.
-        start_pos (tuple, optional): start position. Defaults to (0, 0).
-        start_h (int, optional): initial heading. Defaults to 0.
-        penw (int, optional): pen size. Defaults to 1.
-        penc (str, optional): pen color. Defaults to "black".
-        fillc (str, optional): fill color. Defaults to None.
-    """
-    t.pu()
-    t.goto(start_pos)
-    t.pd()
-    t.seth(start_h)
-
-    t.pensize(penw)
-    t.pencolor(penc)
-
-    if fillc is not None:
-        t.fillcolor(fillc)
-        t.begin_fill()
-
-    t.fd(side_a)
-    t.lt(180 - angle_C)
-    t.fd(side_b)
-    t.goto(start_pos)
-
-    if fillc is not None:
-        t.end_fill()
-
-
-
-
-def isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
-    """Draw an isosceles triangle given base and height.
-
-    Args:
-        t (class turtle.Turtle): turtle instance.
-        base (int): base of triangle.
-        height (int): height of triangle.
-        start_pos (tuple, optional): start position. Defaults to (0, 0).
-        start_h (int, optional): initial heading. Defaults to 0.
-        penw (int, optional): pen size. Defaults to 1.
-        penc (str, optional): pen color. Defaults to "black".
-        fillc (str, optional): fill color. Defaults to None.
-    """
-    t.pu()
-    t.goto(start_pos)
-    t.pd()
-    t.seth(start_h)
-
-    t.pensize(penw)
-    t.pencolor(penc)
-
-    b = math.sqrt(height**2 + (base**2) / 4)
-    angle_B = math.degrees(math.atan(2 * height / base))
-
-    if fillc is not None:
-        t.fillcolor(fillc)
-        t.begin_fill()
-
-    t.fd(base)
-    t.lt(180 - angle_B)
-    t.fd(b)
-    t.goto(start_pos)
-
-    if fillc is not None:
-        t.end_fill()
-
-
-def equilateral(t, side, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
-    """Draw an equilateral triangle
-
-    Args:
-        t (class turtle.Turtle): turtle instance.
-        side (int): side length.
-        start_pos (tuple, optional): start position. Defaults to (0, 0).
-        start_h (int, optional): initial heading. Defaults to 0.
-        penw (int, optional): pen size. Defaults to 1.
-        penc (str, optional): pen color. Defaults to "black".
-        fillc (str, optional): fill color. Defaults to None.
-    """
-    t.pu()
-    t.goto(start_pos)
-    t.pd()
-    t.seth(start_h)
-
-    t.pensize(penw)
-    t.pencolor(penc)
-
-    if fillc is not None:
-        t.fillcolor(fillc)
-        t.begin_fill()
-
-    start_pos = t.pos()
-    for _ in range(3):
-        t.fd(side)
-        t.lt(120)
-
-    if fillc is not None:
-        t.end_fill()
+    # front of house
+    sh.rectangle(t, length=length, width=height, start_pos=start_pos, penw=1, penc="black", fillc="snow")
+    # door: 1/5 of house length, 6/10 of house height
+    sh.rectangle(t, length=length//5, width=height//1.6, start_pos=door_pos(start_pos, length), penw=1, penc="black", fillc="green")
+    # roof: 10 pixels wider than house; 1/3 of height of house
+    sh.isosceles(t, base=length + 10, height=length//3, start_pos=roof_pos(start_pos, length, height), penw=1, penc="black", fillc="brown")
+    # windows
+    if windows > 0:
+        # right hand window; 1/5 of house length; 2/3 of house length from left of house up 1/3 of height of house
+        window(t, length=length//5, start_pos=window_pos(start_pos, length//1.5, height/3))
+    if windows > 1:
+        # left hand window; 1/5 of house length; 1/20 of house length from left of house up 1/3 of height of house
+        window(t, length=length//5, start_pos=window_pos(start_pos, length//20, height/3))
 

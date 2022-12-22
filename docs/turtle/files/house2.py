@@ -1,6 +1,5 @@
 import turtle
-
-import houses as h
+import shapes as sh
 
 
 def door_pos(start_pos, length):
@@ -18,7 +17,8 @@ def door_pos(start_pos, length):
 
 
 def roof_pos(start_pos, length, height):
-    """calculate roof bottom left position allowing a hang of 5 pixels over house
+    """calculate roof bottom left position 
+    allows for an overhang of 5 pixels over left side of house
 
     Args:
         start_pos (tuple): bottom left of house
@@ -55,10 +55,10 @@ def window(t, length=10, start_pos=(0, 0), fillc="light blue"):
         start_pos (tuple, optional): bottom left of window. Defaults to (0, 0).
         fillc (str, optional): window colour. Defaults to "light blue".
     """
-    h.square(t, length=length//2, start_pos=start_pos, fillc="light blue")
-    h.square(t, length=length//2, start_pos=window_pos(start_pos, length//2, 0), fillc="light blue")
-    h.square(t, length=length//2, start_pos=window_pos(start_pos, 0, length//2), fillc="light blue")
-    h.square(t, length=length//2, start_pos=window_pos(start_pos, length//2, length//2), fillc="light blue")
+    sh.square(t, length=length//2, start_pos=start_pos, fillc="light blue")
+    sh.square(t, length=length//2, start_pos=window_pos(start_pos, length//2, 0), fillc="light blue")
+    sh.square(t, length=length//2, start_pos=window_pos(start_pos, 0, length//2), fillc="light blue")
+    sh.square(t, length=length//2, start_pos=window_pos(start_pos, length//2, length//2), fillc="light blue")
 
 
 def windowed_house(t, length=60, height=40, start_pos=(0, 0), windows=0):
@@ -72,17 +72,17 @@ def windowed_house(t, length=60, height=40, start_pos=(0, 0), windows=0):
         windows (int, optional): number of windows, 0, 1 or 2. Defaults to 0.
     """
     # front of house
-    h.rectangle(t, length=length, width=height, start_pos=start_pos, penw=1, penc="black", fillc="snow")
-    # door about 1/5 of house length, 6/10 of house height
-    h.rectangle(t, length=length//5, width=height//1.6, start_pos=door_pos(start_pos, length), penw=1, penc="black", fillc="green")
-    # roof
-    h.isosceles(t, base=length + 10, height=length//3, start_pos=roof_pos(start_pos, length, height), penw=1, penc="black", fillc="brown")
+    sh.rectangle(t, length=length, width=height, start_pos=start_pos, penw=1, penc="black", fillc="snow")
+    # door: 1/5 of house length, 6/10 of house height
+    sh.rectangle(t, length=length//5, width=height//1.6, start_pos=door_pos(start_pos, length), penw=1, penc="black", fillc="green")
+    # roof: 10 pixels wider than house; 1/3 of height of house
+    sh.isosceles(t, base=length + 10, height=length//3, start_pos=roof_pos(start_pos, length, height), penw=1, penc="black", fillc="brown")
     # windows
     if windows > 0:
-        # right hand window
+        # right hand window; 1/5 of house length; 2/3 of house length from left of house up 1/3 of height of house
         window(t, length=length//5, start_pos=window_pos(start_pos, length//1.5, height/3))
     if windows > 1:
-        # left hand window
+        # left hand window; 1/5 of house length; 1/20 of house length from left of house up 1/3 of height of house
         window(t, length=length//5, start_pos=window_pos(start_pos, length//20, height/3))
 
 

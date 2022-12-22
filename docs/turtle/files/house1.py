@@ -1,5 +1,5 @@
 import turtle
-import houses as h
+import shapes as sh
 
 s = turtle.Screen()
 s.bgcolor("white")
@@ -17,11 +17,11 @@ def roof_pos(start_pos, length, height):
     return (start_pos[0] -5, start_pos[1] + height)
 
 def simple_house(t, length=60, height=40, start_pos=(0, 0)):
-    h.rectangle(t, length=length, width=height, start_pos=start_pos, penw=1, penc="black", fillc="snow")
+    sh.rectangle(t, length=length, width=height, start_pos=start_pos, penw=1, penc="black", fillc="snow")
     # door
-    h.rectangle(t, length=length/5, width=height/1.6, start_pos=door_pos(start_pos, length), penw=1, penc="black", fillc="green")
+    sh.rectangle(t, length=length/5, width=height/1.6, start_pos=door_pos(start_pos, length), penw=1, penc="black", fillc="green")
     # roof
-    h.isosceles(t, base=length + 10, height=length/3, start_pos=roof_pos(start_pos, length, height), penw=1, penc="black", fillc="brown")
+    sh.isosceles(t, base=length + 10, height=length/3, start_pos=roof_pos(start_pos, length, height), penw=1, penc="black", fillc="brown")
 
 simple_house(t, length=210, height=160, start_pos=(-200, 20))
 simple_house(t, length=150, height=120, start_pos=(200, 20))
