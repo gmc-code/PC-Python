@@ -5,6 +5,73 @@ Turtle houses module
 | The houses will be built from squares, rectangles and triangles.
 | To reduce the code in the main file, defintions for the base shapes will be placed in a module which will need to be imported.
 
+| Download the python file :download:`houses.py module <files/houses.py>`
+
+----
+
+Module functions
+-----------------------
+
+.. py:function:: square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)
+
+    | **t** - the turtle object to draw the square
+    | **length** - side length; default 50
+    | **start_pos** - starting position; default (0, 0)
+    | **start_h** - starting heading; default 0
+    | **penw** - pensize; default 1
+    | **penc** - pencolor; default is blue
+    | **fillc** - fillcolor; default is None
+
+
+.. py:function:: rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)
+
+    | **t** - the turtle object to draw the rectangle
+    | **length** - side length; default 40
+    | **width** - side width; default 30
+    | **start_pos** - starting position; default (0, 0)
+    | **start_h** - starting heading; default 0 degrees
+    | **penw** - pensize; default 1
+    | **penc** - pencolor; default is blue
+    | **fillc** - fillcolor; default is None
+
+
+.. py:function:: def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)
+
+    | **t** - the turtle object to draw the rectangle
+    | **side_a** - side length a
+    | **angle_C** - angle_C
+    | **side_b** - side length b
+    | **start_pos** - starting position; default (0, 0)
+    | **start_h** - starting heading; default 0 degrees
+    | **penw** - pensize; default 1
+    | **penc** - pencolor; default is blue
+    | **fillc** - fillcolor; default is None
+
+
+.. py:function:: def isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)
+
+    | **t** - the turtle object to draw the rectangle
+    | **base** - base length
+    | **height** - height
+    | **start_pos** - starting position; default (0, 0)
+    | **start_h** - starting heading; default 0 degrees
+    | **penw** - pensize; default 1
+    | **penc** - pencolor; default is blue
+    | **fillc** - fillcolor; default is None
+
+
+.. py:function:: def equilateral(t, side, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)
+
+    | **t** - the turtle object to draw the rectangle
+    | **side** - side length
+    | **start_pos** - starting position; default (0, 0)
+    | **start_h** - starting heading; default 0 degrees
+    | **penw** - pensize; default 1
+    | **penc** - pencolor; default is blue
+    | **fillc** - fillcolor; default is None
+
+
+
 ----
 
 Documenting the module
