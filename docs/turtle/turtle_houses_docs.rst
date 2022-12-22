@@ -3,7 +3,7 @@ Turtle houses module
 ====================================================
 
 | The houses will be built from squares, rectangles and triangles.
-| To reduce the code in the main file, defintions for the base shapes will be placed in a module which will need to be imported.
+| To reduce the code in the main file, definitions for the base shapes will be placed in a module which will need to be imported.
 
 | Download the python file :download:`houses.py module <files/houses.py>`
 
@@ -35,7 +35,7 @@ Module functions
     | **fillc** - fillcolor; default is None
 
 
-.. py:function:: def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)
+.. py:function:: scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)
 
     | **t** - the turtle object to draw the rectangle
     | **side_a** - side length a
@@ -48,7 +48,7 @@ Module functions
     | **fillc** - fillcolor; default is None
 
 
-.. py:function:: def isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)
+.. py:function:: isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)
 
     | **t** - the turtle object to draw the rectangle
     | **base** - base length
@@ -60,7 +60,7 @@ Module functions
     | **fillc** - fillcolor; default is None
 
 
-.. py:function:: def equilateral(t, side, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)
+.. py:function:: equilateral(t, side, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)
 
     | **t** - the turtle object to draw the rectangle
     | **side** - side length
@@ -81,7 +81,7 @@ Documenting the module
 | The code snippet below shows the doc string for the square function.
 
 | The first line describes the use of the function.
-| The arguments are decribed under the heading: Args.
+| The arguments are described under the heading: Args.
 | Consider the string: ``length (int, optional): side length. Defaults to 50.``
 | The name of the argument is followed by its type in brackets along with "optional" if a default value has been given. A short description of the argument follows. Any default values are stated.
 
