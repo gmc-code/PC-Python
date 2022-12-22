@@ -40,5 +40,5 @@ t.pu(); t.goto((92, 75)); t.pd()
 t.write("(5, 5)", move=False, align='left', font=('Arial', 14, 'normal'))
 
 t.ht()
-turtle.update()
+s.update()
 s.exitonclick()

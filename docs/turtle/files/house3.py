@@ -18,5 +18,5 @@ h.windowed_house(t, length=80, height=50, start_pos=(-10, 0), windows="L")
 h.windowed_house(t, length=120, height=100, start_pos=(90, 0), windows="LR")
     
 t.ht()
-turtle.update()
+s.update()
 s.exitonclick()

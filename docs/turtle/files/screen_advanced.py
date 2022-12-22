@@ -21,5 +21,5 @@ for i in range(60):
     square(t, side=200)
     t.rt(6)
 
-turtle.update()
+s.update()
 s.exitonclick()

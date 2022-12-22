@@ -1,6 +1,3 @@
-"""
-draw squares 
-"""
 import turtle
 
 s = turtle.Screen()
@@ -13,6 +10,7 @@ t = turtle.Turtle()
 t.speed(0)
 
 
+
 def square(t, length=50, start_pos=(0, 0), start_h=0):
     t.pu()
     t.goto(start_pos)
@@ -23,9 +21,9 @@ def square(t, length=50, start_pos=(0, 0), start_h=0):
         t.lt(90)
 
 
-for i in range(16):
-    square(t, length=100, start_h=i * 6)
-    t.lt(6)
+square(t)
+square(t, length=50, start_pos=(20, 30))
+square(t, length=250, start_pos=(-300, -200), start_h=20)
 
-s.update()
+# s.update()
 s.exitonclick()

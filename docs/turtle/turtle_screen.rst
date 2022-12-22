@@ -72,7 +72,8 @@ Screen colours
     | If colormode is 255, a colour is a rgb tuple such as (50, 193, 143)
 
 
-| The code below sets the background to white.
+| The code below sets the background to white. 
+| ``turtle.bgcolor("white")`` or ``s.bgcolor("white")`` can be used below.
 
 .. code-block:: python
 
@@ -87,13 +88,14 @@ Screen colours
 
 
 | Change the colormode to 255, so that the background can be set using the rgb tuple (50, 193, 143).
+| ``turtle.colormode(cmode=255)`` or ``s.colormode(cmode=255)`` can be used below.
 
 .. code-block:: python
 
     import turtle
 
     s = turtle.Screen()
-    turtle.colormode(cmode=255)
+    s.colormode(cmode=255)
     s.bgcolor((50, 193, 143))
 
     # turtle drawing to go here

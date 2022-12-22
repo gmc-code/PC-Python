@@ -106,5 +106,5 @@ windowed_house(t, length=120, height=100, start_pos=(90, 0), windows="LR")
 
     
 t.ht()
-turtle.update()
+s.update()
 s.exitonclick()

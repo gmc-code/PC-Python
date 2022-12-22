@@ -92,7 +92,7 @@ Simple houses
 
 
     t.ht()
-    turtle.update()
+    s.update()
     s.exitonclick()
 
 
@@ -147,7 +147,7 @@ windows
         h.square(t, length=length/2, start_pos=window_pos(?), fillc="light blue")
 
     t.ht()
-    turtle.update()
+    s.update()
     s.exitonclick()
 
 ----

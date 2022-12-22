@@ -96,9 +96,9 @@ h.windowed_house(t, length=200, height=100, start_pos=(100, 0), windows="LR")
 
     
 t.ht()
-turtle.update()
+
 """drawing code above"""
 
-turtle.update()
+s.update()
 s.exitonclick()
 # turtle.done()

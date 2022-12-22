@@ -32,5 +32,5 @@ simple_house(t, length=210, height=160, start_pos=(-390, 0))
 
 
 t.ht()
-turtle.update()
+s.update()
 s.exitonclick()

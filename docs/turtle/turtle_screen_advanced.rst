@@ -394,7 +394,7 @@ Animation control
         square(t, l=100)
         t.rt(6)
 
-    turtle.update()
+    s.update()
     s.exitonclick()
 
 ----
@@ -463,7 +463,7 @@ Animation control
                             square(t, side=200)
                             t.rt(6)
 
-                        turtle.update()
+                        s.update()
                         s.exitonclick()
 
 ----
