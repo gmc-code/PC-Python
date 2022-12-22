@@ -38,23 +38,27 @@ Documenting the module
 
 .. admonition:: Tasks
 
-    1. Complete the doc string for the rectangle function using the template provided.
+    .. tab-set::
 
-        .. code-block:: python
+        .. tab-item:: Q1
+            
+            1. Complete the doc string for the rectangle function using the template provided.
 
-            def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
-                """Draw a rectangle
+                .. code-block:: python
 
-                Args:
-                    t (turtle): turtle instance
-                    length (_type_, optional): side length. Defaults to _value_.
-                    width (_type_, optional): side width. Defaults to _value_.
-                    start_pos (_type_, optional): start position. Defaults to _value_.
-                    start_h (_type_, optional): initial heading. Defaults to _value_.
-                    penw (_type_, optional): pensize. Defaults to _value_.
-                    penc (str, optional): pencolor. Defaults to "blue".
-                    fillc (str, optional): fillcolor. Defaults to None.
-                """
+                    def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
+                        """Draw a rectangle
+
+                        Args:
+                            t (turtle): turtle instance
+                            length (_type_, optional): side length. Defaults to _value_.
+                            width (_type_, optional): side width. Defaults to _value_.
+                            start_pos (_type_, optional): start position. Defaults to _value_.
+                            start_h (_type_, optional): initial heading. Defaults to _value_.
+                            penw (_type_, optional): pensize. Defaults to _value_.
+                            penc (str, optional): pencolor. Defaults to "blue".
+                            fillc (str, optional): fillcolor. Defaults to None.
+                        """
 
     2. Complete the doc string for the scalene triangle function using the template provided.
 
