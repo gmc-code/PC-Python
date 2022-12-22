@@ -2,15 +2,13 @@
 Turtle triangle progressions
 ====================================================
 
-| The code progressions below draw a triangle.
-| With each version, an improvement in code structure is made.
-| Firstly, only sequencing is used.
-| Iteration can be used for an equilateral triangle.
+| The basic code to draw different triangles is given below.
+| With each version, attempt to write a definition for the triangle.
 | Then a definition block with parameters allows for code reuse via the use of arguments.
 
 ----
 
-Sequencing: steps to draw a triangle
+Scalene triangle
 ------------------------------------------
 
 | A triangle of sides a, b, c, has opposite angles of A, B, C. 
@@ -20,10 +18,9 @@ Sequencing: steps to draw a triangle
     :align: center
     :alt: triangle_labels
     
-| The code below uses sequencing only.
 | The code below draws a triangle of given Side, Angle, Side.
 | The code uses variables for side a, angle C, side b.
-| The code completes the triangle by storing the start position and returning to it.
+| The code also amkes use of the heading and start position.
 
 .. code-block:: python
 
@@ -37,23 +34,71 @@ Sequencing: steps to draw a triangle
     t = turtle.Turtle()
     t.speed(5)
 
-    t.seth(0)
+    # --begin triangle
+    side_a = 100
+    angle_C = 70
+    side_b = 100
+    heading = 15
+    start_pos = (20, 30)
+
+    t.seth(heading)
     t.pu()
-    t.goto(20, 30)
+    t.goto(start_pos)
     t.pd()
 
-    a = 100
-    C = 60
-    b = 100
-
-    start_pos = t.pos()
-    t.fd(a)
-    t.lt(180 - C)
-    t.fd(b)
-    t.lt(90)
+    t.fd(side_a)
+    t.lt(180 - angle_C)
+    t.fd(side_b)
     t.goto(start_pos)
+    # --end triangle
 
     s.exitonclick()
+
+----
+
+.. admonition:: Tasks
+
+    1. Write a defintion to replace the lines between the comments (begin triangle and end triangle) in the code above.
+
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
+
+            .. tab-set::
+
+                .. tab-item:: Q1
+
+                    Identify the lines of code that replaced the 8 steps. 
+
+                    .. code-block:: python
+
+                        import turtle
+
+                        s = turtle.Screen()
+                        s.bgcolor("white")
+                        s.title("Grid")
+                        s.setup(width=800, height=600, startx=0, starty=0)
+
+                        t = turtle.Turtle()
+                        t.speed(5)
+
+                        
+                        def scalene(t, side_a, angle_C, side_b, heading, start_pos):
+                            t.seth(heading)
+                            t.pu()
+                            t.goto(start_pos)
+                            t.pd()
+
+                            t.fd(side_a)
+                            t.lt(180 - angle_C)
+                            t.fd(side_b)
+                            t.goto(start_pos)
+
+
+                        scalene(t, side_a=100, angle_C=60, side_b=100, heading=15, start_pos=(20, 30))
+
+                        s.exitonclick()
 
 ----
 
@@ -282,13 +327,3 @@ Adding pen colour and fill colour parameters
     s.exitonclick()
 
 
-----
-
-Practice Questions
---------------------
-
-.. admonition:: Tasks
-
-    1. Using sequencing only, draw a triangle of side length 500 at (-250, -250).
-    2. Using a repeat loop (without a function), draw a triangle of side length 50 at (-25, -25).
-    3. Use the definition provided above to draw a triangle of length 400 at (x=-200, y=-200) with a purple pencolor, a bisque fillcolor, with a pensize of 10.
