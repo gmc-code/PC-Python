@@ -278,14 +278,13 @@ Adding pen colour and fill colour parameters
 
 | The syntax below adds parameters for pen and fill colours.
 
-.. py:function:: rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, 
-                            penw=1, penc="blue", fillc=None)
+.. py:function:: rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)
 
     | **t** - the turtle object to draw the rectangle
     | **length** - side length; default 40
     | **width** - side width; default 30
-    | **x** - starting x position; default 0
-    | **y** - starting y position; default 0
+    | **start_pos** - starting position; default (0, 0)
+    | **start_h** - starting heading; default 0 degrees
     | **penw** - pensize; default 1
     | **penc** - pencolor; default is blue
     | **fillc** - fillcolor; default is None
@@ -386,7 +385,7 @@ Adding pen colour and fill colour parameters
                                 t.end_fill()
 
 
-                        rectangle(t, length=150, width=250,start_pos=(-150, -250), start_h=0, penw=10, penc="purple", fillc="bisque")
+                        rectangle(t, length=150, width=250, start_pos=(-150, -250), start_h=0, penw=10, penc="purple", fillc="bisque")
 
 ----
 
