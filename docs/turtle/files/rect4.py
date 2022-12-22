@@ -12,26 +12,28 @@ t = turtle.Turtle()
 t.speed(0)
 
 
-def rectangle(t, length=40, width=30, x=0, y=0, penc="blue", fillc="white", penw=1):
+def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
     t.pu()
-    t.goto(x, y)
+    t.goto(start_pos)
     t.pd()
+    t.seth(start_h)
     t.pensize(penw)
     t.pencolor(penc)
+
     if fillc is not None:
         t.fillcolor(fillc)
         t.begin_fill()
+
     for _ in range(2):
         t.fd(length)
         t.lt(90)
         t.fd(width)
         t.lt(90)
+
     if fillc is not None:
         t.end_fill()
 
 
-t.seth(0)
-
-rectangle(t, length=400, width=300, x=-100, y=-150, penc="blue", fillc="green", penw=5)
+rectangle(t, length=400, width=300, start_pos=(-100, -150), start_h=10, penw=5, penc="blue", fillc="green")
 
 s.exitonclick()

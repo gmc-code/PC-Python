@@ -37,10 +37,10 @@ Sequencing: steps to draw a rectangle
     t = turtle.Turtle()
     t.speed(5)
 
-    t.seth(0)
     t.pu()
     t.goto(20, 30)
     t.pd()
+    t.seth(0)
 
     t.fd(120)
     t.lt(90)
@@ -116,10 +116,10 @@ Iteration: using a for-loop to draw a rectangle
     t = turtle.Turtle()
     t.speed(5)
 
-    t.seth(0)
     t.pu()
     t.goto(20, 30)
     t.pd()
+    t.seth(0)
 
     for _ in range(2):
         t.fd(120)
@@ -158,10 +158,10 @@ Iteration: using a for-loop to draw a rectangle
                         t = turtle.Turtle()
                         t.speed(5)
 
-                        t.seth(0)
                         t.pu()
                         t.goto(20, 30)
                         t.pd()
+                        t.seth(0)
 
                         for _ in range(2):
                             t.fd(80)
@@ -182,17 +182,17 @@ Definitions: using a def block to draw a rectangle
 | Before the for-loop, the turtle is repositioned without drawing the movement; **penup** and **pendown** are needed for that.
 | The initial heading has been left out of the rectangle function, but it can be set prior to using the rectangle function.
 
-.. py:function:: rectangle(t, length=40, width=30, x=0, y=0)
+.. py:function:: rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0)
 
     | **t** - the turtle object to draw the rectangle
-    | **length** - side length, default 40
-    | **width** - side width, default 30
-    | **x** - starting x position, default 0
-    | **y** - starting y position, default 0
+    | **length** - side length; default 40
+    | **width** - side width; default 30
+    | **start_pos** - starting position; default (0, 0)
+    | **start_h** - starting heading; default 0 degrees
     
 | In the code below, ``rectangle(t)`` draws a default rectangle.
-| ``rectangle(t, length=120, width=50, x=20, y=30)`` draws a rectangle of 120 by 50 at (x=20, y=30).
-| ``rectangle(t, length=400, width=300, x=-300, y=-200)`` draws a rectangle of 400 by 300 at (x=-300, y=-100).
+| ``rectangle(t, length=120, width=50, start_pos=(20, 30))`` draws a rectangle of 120 by 50 at (x=20, y=30).
+| ``rectangle(t, length=400, width=300, start_pos=(-300, -100), start_h=10)`` draws a rectangle of 400 by 300 at (x=-300, y=-100) with an angle of 10 degrees
     
 .. code-block:: python
 
@@ -206,10 +206,11 @@ Definitions: using a def block to draw a rectangle
     t = turtle.Turtle()
     t.speed(5)
 
-    def rectangle(t, length=40, width=30, x=0, y=0):
+    def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0):
         t.pu()
-        t.goto(x, y)
+        t.goto(start_pos)
         t.pd()
+        t.seth(start_h)
         for _ in range(2):
             t.fd(length)
             t.lt(90)
@@ -217,10 +218,9 @@ Definitions: using a def block to draw a rectangle
             t.lt(90)
 
 
-    t.seth(0)
     rectangle(t)
-    rectangle(t, length=120, width=50, x=50, y=30)
-    rectangle(t, length=400, width=300, x=-300, y=-200)
+    rectangle(t, length=120, width=50, start_pos=(20, 30))
+    rectangle(t, length=400, width=300, start_pos=(-300, -100), start_h=10)
 
     s.exitonclick()
 
@@ -253,10 +253,11 @@ Definitions: using a def block to draw a rectangle
                         t = turtle.Turtle()
                         t.speed(5)
 
-                        def rectangle(t, length=40, width=30, x=0, y=0):
+                        def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0):
                             t.pu()
-                            t.goto(x, y)
+                            t.goto(start_pos)
                             t.pd()
+                            t.seth(start_h)
                             for _ in range(2):
                                 t.fd(length)
                                 t.lt(90)
@@ -264,8 +265,7 @@ Definitions: using a def block to draw a rectangle
                                 t.lt(90)
 
 
-                        t.seth(0)
-                        rectangle(t, length=80, width=150, x=-80, y=-150)
+                        rectangle(t, length=80, width=150, start_pos=(-80, -150), start_h=0)
 
                         s.exitonclick()
 
@@ -276,18 +276,20 @@ Adding pen colour and fill colour parameters
 
 | The syntax below adds parameters for pen and fill colours.
 
-.. py:function:: rectangle(t, length=40, width=30, x=0, y=0, penc="blue", fillc=None, penw=1)
+.. py:function:: rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, 
+                            penw=1, penc="blue", fillc=None)
 
     | **t** - the turtle object to draw the rectangle
     | **length** - side length; default 40
     | **width** - side width; default 30
     | **x** - starting x position; default 0
     | **y** - starting y position; default 0
+    | **penw** - pensize; default 1
     | **penc** - pencolor; default is blue
     | **fillc** - fillcolor; default is None
-    | **penw** - pensize; default 1
+
    
-| In the code below, ``rectangle(t, length=400, width=300, x=-100, y=-150, penc="blue", fillc="green", penw=5)`` draws a rectangle of 400 by 300 at (x=-100, y=-150) with a blue pencolor, a green fillcolor, using a pensize of 5.
+| In the code below, ``rectangle(t, length=400, width=300, start_pos=(-100, -150), start_h=10, penw=5, penc="blue", fillc="green")`` draws a rectangle of 400 by 300 at (x=-100, y=-150) with a blue pencolor, a green fillcolor, using a pensize of 5.
 | The code needs to check the **fillc** argument since setting a fillcolor to **None** will throw an error.
 
 .. code-block:: python
@@ -302,24 +304,30 @@ Adding pen colour and fill colour parameters
     t = turtle.Turtle()
     t.speed(0)
 
-    def rectangle(t, length=40, width=30, x=0, y=0, x=0, y=0, penc="blue", fillc="red", penw=1):
+
+    def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc="white"):
         t.pu()
-        t.goto(x, y)
+        t.goto(start_pos)
         t.pd()
+        t.seth(start_h)
         t.pensize(penw)
         t.pencolor(penc)
+
         if fillc is not None:
             t.fillcolor(fillc)
             t.begin_fill()
+
         for _ in range(2):
             t.fd(length)
             t.lt(90)
             t.fd(width)
             t.lt(90)
+
         if fillc is not None:
             t.end_fill()
 
-    rectangle(t, length=400, width=300, x=-100, y=-150, penc="blue", fillc="green", penw=5)
+
+    rectangle(t, length=400, width=300, start_pos=(-100, -150), start_h=10, penw=5, penc="blue", fillc="green")
 
     s.exitonclick()
 
@@ -352,24 +360,29 @@ Adding pen colour and fill colour parameters
                         t = turtle.Turtle()
                         t.speed(0)
 
-                        def rectangle(t, length=40, width=30, x=0, y=0, x=0, y=0, penc="blue", fillc="red", penw=1):
+                        def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc="white"):
                             t.pu()
-                            t.goto(x, y)
+                            t.goto(start_pos)
                             t.pd()
+                            t.seth(start_h)
                             t.pensize(penw)
                             t.pencolor(penc)
+
                             if fillc is not None:
                                 t.fillcolor(fillc)
                                 t.begin_fill()
+
                             for _ in range(2):
                                 t.fd(length)
                                 t.lt(90)
                                 t.fd(width)
                                 t.lt(90)
+
                             if fillc is not None:
                                 t.end_fill()
 
-                        rectangle(t, length=150, width=250, x=-150, y=-250, penc="purple", fillc="bisque", penw=10)
+
+                        rectangle(t, length=150, width=250,start_pos=(-150, -250), start_h=0, penw=10, penc="purple", fillc="bisque")
 
 ----
 

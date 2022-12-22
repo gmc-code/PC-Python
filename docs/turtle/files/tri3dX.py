@@ -12,9 +12,8 @@ t.speed(5)
 
 
 # --begin triangle
-def equilateral(t, side, start_pos, start_heading, 
-                    pencolor="blue", fillcolor=None, pensize=1):
-    t.seth(start_heading)
+def equilateral(t, side, start_pos, start_h, penc="blue", fillc=None, penw=1):
+    t.seth(start_h)
     t.pu()
     t.goto(start_pos)
     t.pd()
@@ -34,8 +33,7 @@ def equilateral(t, side, start_pos, start_heading,
         t.end_fill()
 
 
-equilateral(t, side=100, start_pos=(20, 30), start_heading=10, 
-                pencolor="purple", fillcolor="light green", pensize=2)
+equilateral(t, side=100, start_pos=(20, 30), start_h=10, penc="purple", fillc="light green", penw=2)
 # --end triangle
 
 s.exitonclick()

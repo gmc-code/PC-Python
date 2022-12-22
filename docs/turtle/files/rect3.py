@@ -11,10 +11,11 @@ t = turtle.Turtle()
 t.speed(5)
 
 
-def rectangle(t, length=40, width=30, x=0, y=0):
+def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0):
     t.pu()
-    t.goto(x, y)
+    t.goto(start_pos)
     t.pd()
+    t.seth(start_h)
     for _ in range(2):
         t.fd(length)
         t.lt(90)
@@ -22,9 +23,9 @@ def rectangle(t, length=40, width=30, x=0, y=0):
         t.lt(90)
 
 
-t.seth(0)
 rectangle(t)
-rectangle(t, length=120, width=50, x=50, y=30)
-rectangle(t, length=400, width=300, x=-300, y=-200)
+rectangle(t, length=120, width=50, start_pos=(20, 30))
+rectangle(t, length=400, width=300, start_pos=(-300, -100), start_h=10)
+
 
 s.exitonclick()

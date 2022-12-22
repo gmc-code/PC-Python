@@ -228,9 +228,9 @@ Isosceles triangle at any angle
     base = 100
     height = 50
     start_pos = (20, 30)
-    start_heading = 15
+    start_h = 15
 
-    t.seth(start_heading)
+    t.seth(start_h)
     t.pu()
     t.goto(start_pos)
     t.pd()
@@ -277,8 +277,8 @@ Isosceles triangle at any angle
                         t.speed(5)
 
                         # --begin triangle
-                        def isosceles(t, base, height, start_pos, start_heading):
-                            t.seth(start_heading)
+                        def isosceles(t, base, height, start_pos, start_h):
+                            t.seth(start_h)
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
@@ -292,7 +292,7 @@ Isosceles triangle at any angle
                             t.goto(start_pos)
 
 
-                        isosceles(t, base=100, height=50, start_pos=(20, 30), start_heading=15)
+                        isosceles(t, base=100, height=50, start_pos=(20, 30), start_h=15)
                         # --end triangle
 
                         s.exitonclick()
@@ -303,7 +303,7 @@ Isosceles triangle at any angle
 Equilateral triangles 
 ------------------------------------------------
 
-| The code below uses iteration to draw an equilateral triangle with angles of 60 degrees at (20,30), with the base at 30 degrees from the horizontal (start_heading = 10).
+| The code below uses iteration to draw an equilateral triangle with angles of 60 degrees at (20,30), with the base at 30 degrees from the horizontal (start_h = 10).
 | FOr an internal angle of 60 degrees when drawing anticlockwise, and angle of 120 degrees is need for the left turn.
 
 .. code-block:: python
@@ -321,9 +321,9 @@ Equilateral triangles
     # --begin triangle
     side = 100
     start_pos = (20, 30)
-    start_heading = 10
+    start_h = 10
 
-    t.seth(start_heading)
+    t.seth(start_h)
     t.pu()
     t.goto(start_pos)
     t.pd()
@@ -366,8 +366,8 @@ Equilateral triangles
                         t.speed(5)
 
                         # --begin triangle
-                        def equilateral(t, side, start_pos, start_heading):
-                            t.seth(start_heading)
+                        def equilateral(t, side, start_pos, start_h):
+                            t.seth(start_h)
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
@@ -378,7 +378,7 @@ Equilateral triangles
                                 t.lt(120)
 
 
-                        equilateral(t, side=100, start_pos=(20, 30), start_heading=10)
+                        equilateral(t, side=100, start_pos=(20, 30), start_h=10)
                         # --end triangle
 
                         s.exitonclick()
@@ -414,7 +414,7 @@ Adding pen colour and fill colour parameters
 
                         # --begin triangle
                         def scalene(t, side_a, angle_C, side_b, heading, start_pos, 
-                                        pencolor="blue", fillcolor =None, pensize=1): 
+                                    penc="blue", fillc=None, penw=1): 
                             t.seth(heading)
                             t.pu()
                             t.goto(start_pos)
@@ -435,7 +435,7 @@ Adding pen colour and fill colour parameters
                                 t.end_fill()
 
                         scalene(t, side_a=100, angle_C=60, side_b=150, heading=15, start_pos=(20, 30),
-                                pencolor="blue", fillcolor="light green", pensize=3)
+                                penc="blue", fillc="light green", penw=3)
                         # --end triangle  
                                                   
                         s.exitonclick()
@@ -458,9 +458,9 @@ Adding pen colour and fill colour parameters
                         t.speed(5)
 
                         # --begin triangle
-                        def isosceles(t, base, height, start_pos, start_heading, 
-                                        pencolor="blue", fillcolor=None, pensize=1):
-                            t.seth(start_heading)
+                        def isosceles(t, base, height, start_pos, start_h, 
+                                        penc="blue", fillc=None, penw=1):
+                            t.seth(start_h)
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
@@ -482,8 +482,8 @@ Adding pen colour and fill colour parameters
                             if fillcolor is not None:
                                 t.end_fill()
 
-                        isosceles(t, base=100, height=50, start_pos=(20, 30), start_heading=15, 
-                                        pencolor="blue", fillcolor="pink", pensize=2)
+                        isosceles(t, base=100, height=50, start_pos=(20, 30), start_h=15, 
+                                        penc="blue", fillc="pink", penw=2)
                         # --end triangle
 
                         s.exitonclick()
@@ -504,9 +504,9 @@ Adding pen colour and fill colour parameters
 
 
                         # --begin triangle
-                        def equilateral(t, side, start_pos, start_heading, 
-                                            pencolor="blue", fillcolor=None, pensize=1):
-                            t.seth(start_heading)
+                        def equilateral(t, side, start_pos, start_h, 
+                                            penc="blue", fillc=None, penw=1):
+                            t.seth(start_h)
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
@@ -526,8 +526,8 @@ Adding pen colour and fill colour parameters
                                 t.end_fill()
 
 
-                        equilateral(t, side=100, start_pos=(20, 30), start_heading=10, 
-                                        pencolor="purple", fillcolor="light green", pensize=2)
+                        equilateral(t, side=100, start_pos=(20, 30), start_h=10, 
+                                        penc="purple", fillc="light green", penw=2)
                         # --end triangle
 
                         s.exitonclick()

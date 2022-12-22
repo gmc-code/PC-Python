@@ -12,10 +12,11 @@ t = turtle.Turtle()
 t.speed(0)
 
 
-def square(t, length=50, x=0, y=0, penc="blue", fillc="white", penw=1):
+def square(t, length=50, start_pos=(0, 0), start_h=0, penc="blue", fillc="white", penw=1):
     t.pu()
-    t.goto(x, y)
+    t.goto(start_pos)
     t.pd()
+    t.seth(start_h)
     t.pensize(penw)
     t.pencolor(penc)
     if fillc is not None:
@@ -28,25 +29,6 @@ def square(t, length=50, x=0, y=0, penc="blue", fillc="white", penw=1):
         t.end_fill()
 
 
-def window(t, length=10, x=20, y=40, penc="black", fillc="snow", penw=2):
-    for _ in range(4):
-        square(t, length, x, y, penc, fillc, penw)
-        t.lt(90)
-
-
-def house(t, length, x, y, penc="black", fillc="snow", penw=2):
-    square(t, length, x, y, penc, fillc, penw)
-    window(t, length / 10, x + length / 5, y + length / 2.5, penc, fillc, penw)
-
-
-t.seth(0)
-
-square(t, length=200, x=-100, y=-100, penc="blue", fillc="snow", penw=2)
-
-# window(t, length=10, x=20, y=40, penc="blue", fillc="white", penw=2)
-house(t, length=100, x=0, y=0, penc="blue", fillc="PowderBlue", penw=1)
-house(t, length=70, x=-200, y=0, penc="blue", fillc="PowderBlue", penw=1)
-house(t, length=40, x=-300, y=0, penc="blue", fillc="PowderBlue", penw=1)
-house(t, length=20, x=-400, y=0, penc="blue", fillc="PowderBlue", penw=1)
+square(t, length=250, start_pos=(-100, -150), start_h=0, penw=2, penc="blue", fillc="green")
 
 s.exitonclick()

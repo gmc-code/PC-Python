@@ -13,9 +13,9 @@ t.speed(5)
 base = 100
 height = 50
 start_pos = (20, 30)
-start_heading = 15
+start_h = 15
 
-t.seth(start_heading)
+t.seth(start_h)
 t.pu()
 t.goto(start_pos)
 t.pd()
