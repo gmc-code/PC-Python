@@ -72,7 +72,7 @@ PC-Python
     turtle/turtle_rectangle_progressions.rst   
     turtle/turtle_triangle_progressions.rst   
     turtle/turtle_shapes_module.rst
-    =turtle/turtle_houses_module.rst
+    turtle/turtle_houses_module.rst
     turtle/turtle_houses.rst 
 
 .. toctree::
