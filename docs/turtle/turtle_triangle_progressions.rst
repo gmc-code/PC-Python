@@ -412,6 +412,7 @@ Adding pen colour and fill colour parameters
                         t = turtle.Turtle()
                         t.speed(5)
 
+                        # --begin triangle
                         def scalene(t, side_a, angle_C, side_b, heading, start_pos, 
                                         pencolor="blue", fillcolor =None, pensize=1): 
                             t.seth(heading)
@@ -435,7 +436,8 @@ Adding pen colour and fill colour parameters
 
                         scalene(t, side_a=100, angle_C=60, side_b=150, heading=15, start_pos=(20, 30),
                                 pencolor="blue", fillcolor="light green", pensize=3)
-                            
+                        # --end triangle  
+                                                  
                         s.exitonclick()
 
 
