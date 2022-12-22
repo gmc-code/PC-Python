@@ -306,7 +306,7 @@ Adding pen colour and fill colour parameters
     t.speed(0)
 
 
-    def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc="white"):
+    def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
         t.pu()
         t.goto(start_pos)
         t.pd()
@@ -362,7 +362,7 @@ Adding pen colour and fill colour parameters
                         t = turtle.Turtle()
                         t.speed(0)
 
-                        def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc="white"):
+                        def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
