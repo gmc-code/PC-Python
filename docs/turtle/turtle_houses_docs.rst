@@ -139,7 +139,7 @@ Documenting the module
 
         .. tab-item:: Q1
 
-            1. Complete the doc string for the rectangle function using the template provided.
+            1. Complete the doc string for the rectangle function using the template provided. Replace _type_, _value_, _description_ and _summary_.
 
                 .. code-block:: python
 
@@ -241,7 +241,7 @@ Documenting the module
                                 start_h (int, optional): start heading. Defaults to 0.
                                 penw (int, optional): pen size. Defaults to 1.
                                 penc (str, optional): pen color. Defaults to "black".
-                                fillc (_type_, optional): fill color. Defaults to None.
+                                fillc (str, optional): fill color. Defaults to None.
                             """
 
                 .. tab-item:: Q2
