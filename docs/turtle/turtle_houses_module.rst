@@ -10,20 +10,26 @@ Turtle houses module
 | Download the python file :download:`shapes.py module <files/shapes.py>`
 | Create the module, ``houses.py``, by following the steps below to build a basic house shape by combining together various shapes from the shapes module.
 
+.. image:: images/house_measurements.png
+    :scale: 40 %
+    :align: center
+    :alt: simple_houses1
+
+
 ----
 
-Importing the module
------------------------
+Importing the shapes module
+----------------------------------
 
 | See: https://www.w3schools.com/python/ref_keyword_as.asp
-| The code below shows importing the house module as an alias via ``import shapes as sh``.
-| This makes it shorter to refer to functions in the house module.
-| Instead of needing ``houses.rectangle``, only ``h.rectangle`` is needed.
+| The code below shows importing the shapes module as an alias via ``import shapes as sh``.
+| This makes it shorter to refer to functions in the shapes module.
+| Instead of needing ``shapes.rectangle``, only ``sh.rectangle`` is needed.
 
 .. code-block:: python
 
     import turtle
-    import houses as h
+    import shapes as sh
 
 ----
 
@@ -31,7 +37,7 @@ Simple houses
 ------------------
 
 | Write a definition that produces a house of given length, height and position.
-| Use the functions from the houses.py module.
+| Use the functions from the ``shapes.py`` module.
 | Use the function to make several houses as shown below.
 
 .. image:: images/simple_houses1.png

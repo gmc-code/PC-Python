@@ -61,7 +61,7 @@ def window(t, length=10, start_pos=(0, 0), fillc="light blue"):
     sh.square(t, length=length//2, start_pos=window_pos(start_pos, length//2, length//2), fillc="light blue")
 
 
-def windowed_house(t, length=60, height=40, start_pos=(0, 0), windows=0):
+def windowed_house(t, length=60, height=40, start_pos=(0, 0), windows=None):
     """draw a house with 0-2 windows
 
     Args:
@@ -69,7 +69,7 @@ def windowed_house(t, length=60, height=40, start_pos=(0, 0), windows=0):
         length (int, optional): length of house. Defaults to 60.
         height (int, optional): height of house. Defaults to 40.
         start_pos (tuple, optional): bottom left of house. Defaults to (0, 0).
-        windows (int, optional): number of windows, 0, 1 or 2. Defaults to 0.
+        windows (str, optional): L for left side of house; R for right and LR for both. Defaults to None.
     """
     # front of house
     sh.rectangle(t, length=length, width=height, start_pos=start_pos, penw=1, penc="black", fillc="snow")
@@ -78,12 +78,14 @@ def windowed_house(t, length=60, height=40, start_pos=(0, 0), windows=0):
     # roof: 10 pixels wider than house; 1/3 of height of house
     sh.isosceles(t, base=length + 10, height=length//3, start_pos=roof_pos(start_pos, length, height), penw=1, penc="black", fillc="brown")
     # windows
-    if windows > 0:
-        # right hand window; 1/5 of house length; 2/3 of house length from left of house up 1/3 of height of house
-        window(t, length=length//5, start_pos=window_pos(start_pos, length//1.5, height/3))
-    if windows > 1:
-        # left hand window; 1/5 of house length; 1/20 of house length from left of house up 1/3 of height of house
-        window(t, length=length//5, start_pos=window_pos(start_pos, length//20, height/3))
+    if windows is not None:
+        if "R" in windows:
+            # right hand window; 1/5 of house length; 2/3 of house length from left of house up 1/3 of height of house
+            window(t, length=length//5, start_pos=window_pos(start_pos, length//1.5, height/3))
+        if "L" in windows:
+            # left hand window; 1/5 of house length; 1/20 of house length from left of house up 1/3 of height of house
+            window(t, length=length//5, start_pos=window_pos(start_pos, length//20, height/3))
+
 
 
 s = turtle.Screen()
@@ -95,12 +97,13 @@ s.tracer(0, 0)
 t = turtle.Turtle()
 t.speed(0)
 
-windowed_house(t, length=210, height=160, start_pos=(-200, 20), windows=2)
-windowed_house(t, length=150, height=120, start_pos=(200, 20), windows=2)
-windowed_house(t, length=60, height=40, start_pos=(-100, 0), windows=0)
-windowed_house(t, length=80, height=50, start_pos=(-10, 0), windows=1)
-windowed_house(t, length=120, height=100, start_pos=(90, 0), windows=1)
-windowed_house(t, length=210, height=160, start_pos=(-390, 0), windows=2)
+windowed_house(t, length=210, height=160, start_pos=(-200, 20), windows="R")
+windowed_house(t, length=150, height=120, start_pos=(200, 20), windows="R")
+windowed_house(t, length=210, height=160, start_pos=(-390, 0), windows="LR")
+windowed_house(t, length=60, height=40, start_pos=(-100, 0), windows=None)
+windowed_house(t, length=80, height=50, start_pos=(-10, 0), windows="L")
+windowed_house(t, length=120, height=100, start_pos=(90, 0), windows="LR")
+
     
 t.ht()
 turtle.update()

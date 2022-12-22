@@ -80,23 +80,23 @@ draw_axes(grid_turtle, 800, 600, 4, "red")
 label_axes(grid_turtle, 800, 600, 100, "red")
 
 """drawing code below"""
+import houses as h
+
+s = turtle.Screen()
+s.bgcolor("white")
+s.title("Grid")
+s.setup(width=800, height=600, startx=200, starty=100)
+s.tracer(0, 0)
+
 t = turtle.Turtle()
-t.seth(90)
-t.width(2)
-t.pu()
-t.goto(50,50)
-t.pd()
+t.speed(0)
 
-t.fd(50)
-t.rt(90)
-t.fd(50)
-t.rt(90)
-t.fd(50)
-t.rt(90)
-t.fd(50)
-t.rt(90)
+h.windowed_house(t, length=100, height=50, start_pos=(-200, 0), windows=None)
+h.windowed_house(t, length=200, height=100, start_pos=(100, 0), windows="LR")
 
+    
 t.ht()
+turtle.update()
 """drawing code above"""
 
 turtle.update()
