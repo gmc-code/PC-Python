@@ -72,7 +72,7 @@ Simple houses
 
 ----
 
-Houses with windows
+windows
 ---------------------
 
 | Write a definition, ``window(t, length=10, start_pos=(0, 0))``, that produces a 4 pane square window given the window length and start position.
@@ -91,7 +91,7 @@ Houses with windows
 .. py:function:: window(t, length=10, start_pos=(0, 0))
 
     | **t** - the turtle object to draw the rectangle
-    | **length** - the length of the house; default 60
+    | **length** - the length of the window; default 10
     | **start_pos** - start position in bottom left of the window; default (0, 0)
 
 

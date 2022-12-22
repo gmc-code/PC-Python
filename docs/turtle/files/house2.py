@@ -1,18 +1,11 @@
 import turtle
+
 import houses as h
-
-s = turtle.Screen()
-s.bgcolor("white")
-s.title("Grid")
-s.setup(width=800, height=600, startx=200, starty=100)
-s.tracer(0, 0)
-
-t = turtle.Turtle()
-t.speed(0)
 
 
 def door_pos(start_pos, length):
     """calculate door bottom left position
+        1/3 along length of house
 
     Args:
         start_pos (tuple): bottom left of house
@@ -80,7 +73,7 @@ def windowed_house(t, length=60, height=40, start_pos=(0, 0), windows=0):
     """
     # front of house
     h.rectangle(t, length=length, width=height, start_pos=start_pos, penw=1, penc="black", fillc="snow")
-    # door
+    # door about 1/5 of house length, 6/10 of house height
     h.rectangle(t, length=length//5, width=height//1.6, start_pos=door_pos(start_pos, length), penw=1, penc="black", fillc="green")
     # roof
     h.isosceles(t, base=length + 10, height=length//3, start_pos=roof_pos(start_pos, length, height), penw=1, penc="black", fillc="brown")
@@ -93,22 +86,22 @@ def windowed_house(t, length=60, height=40, start_pos=(0, 0), windows=0):
         window(t, length=length//5, start_pos=window_pos(start_pos, length//20, height/3))
 
 
-windowed_house(t, length=210, height=160, start_pos=(-200, 20))
-windowed_house(t, length=150, height=120, start_pos=(200, 20))
-windowed_house(t, length=60, height=40, start_pos=(-100, 0))
-windowed_house(t, length=80, height=50, start_pos=(-10, 0))
-windowed_house(t, length=120, height=100, start_pos=(90, 0))
-windowed_house(t, length=210, height=160, start_pos=(-390, 0))
+s = turtle.Screen()
+s.bgcolor("white")
+s.title("Grid")
+s.setup(width=800, height=600, startx=200, starty=100)
+s.tracer(0, 0)
 
+t = turtle.Turtle()
+t.speed(0)
 
-windowed_house(t, length=210, height=160, start_pos=(-200, -270), windows=0)
-windowed_house(t, length=150, height=120, start_pos=(200, -270), windows=2)
-windowed_house(t, length=60, height=40, start_pos=(-100, -290), windows=1)
-windowed_house(t, length=80, height=50, start_pos=(-10, -290), windows=2)
-windowed_house(t, length=120, height=100, start_pos=(90, -290), windows=1)
-windowed_house(t, length=210, height=160, start_pos=(-390, -290), windows=2)
-
-
+windowed_house(t, length=210, height=160, start_pos=(-200, 20), windows=2)
+windowed_house(t, length=150, height=120, start_pos=(200, 20), windows=2)
+windowed_house(t, length=60, height=40, start_pos=(-100, 0), windows=0)
+windowed_house(t, length=80, height=50, start_pos=(-10, 0), windows=1)
+windowed_house(t, length=120, height=100, start_pos=(90, 0), windows=1)
+windowed_house(t, length=210, height=160, start_pos=(-390, 0), windows=2)
+    
 t.ht()
 turtle.update()
 s.exitonclick()

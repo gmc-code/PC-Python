@@ -29,15 +29,15 @@ t.write("(0, 0)", move=False, align='left', font=('Arial', 14, 'normal'))
 
 t.pu(); t.goto((100, 0)); t.pd(); t.dot(10, "red")
 t.pu(); t.goto((92, -25)); t.pd()
-t.write("(100, 0)", move=False, align='left', font=('Arial', 14, 'normal'))
+t.write("(5, 0)", move=False, align='left', font=('Arial', 14, 'normal'))
 
 t.pu(); t.goto((0, 100)); t.pd(); t.dot(10, "red")
-t.pu(); t.goto((-75, 85)); t.pd()
-t.write("(0, 100)", move=False, align='left', font=('Arial', 14, 'normal'))
+t.pu(); t.goto((-55, 85)); t.pd()
+t.write("(0, 5)", move=False, align='left', font=('Arial', 14, 'normal'))
 
 t.pu(); t.goto((100, 100)); t.pd(); t.dot(10, "red")
 t.pu(); t.goto((92, 75)); t.pd()
-t.write("(100, 100)", move=False, align='left', font=('Arial', 14, 'normal'))
+t.write("(5, 5)", move=False, align='left', font=('Arial', 14, 'normal'))
 
 t.ht()
 turtle.update()
