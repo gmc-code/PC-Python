@@ -212,8 +212,8 @@ Screen size and position
     | Set the size and position of the main window.
     | **width** - if an integer, a size in pixels; if a float, a fraction of the screen
     | **height** - if an integer, the height in pixels; if a float, a fraction of the screen
-    | **startx** - if positive, starting position in pixels from the left edge of the screen; if negative from the right edge, if None, center window horizontally
-    | **starty** - if positive, starting position in pixels from the top edge of the screen; if negative from the bottom edge, if None, center window vertically
+    | **startx** - if positive, start position in pixels from the left edge of the screen; if negative from the right edge, if None, center window horizontally
+    | **starty** - if positive, start position in pixels from the top edge of the screen; if negative from the bottom edge, if None, center window vertically
     | Default values are: width = 0.5; height = 0.75; startx = None; starty = None
 
 

@@ -16,11 +16,11 @@ Module functions
 
     | **t** - the turtle object to draw the square
     | **length** - side length; default 50
-    | **start_pos** - starting position; default (0, 0)
-    | **start_h** - starting heading; default 0
-    | **penw** - pensize; default 1
-    | **penc** - pencolor; default is blue
-    | **fillc** - fillcolor; default is None
+    | **start_pos** - start position; default (0, 0)
+    | **start_h** - start heading; default 0
+    | **penw** - pen size; default 1
+    | **penc** - pen color; default is blue
+    | **fillc** - fill color; default is None
 
 
 .. py:function:: rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)
@@ -28,11 +28,11 @@ Module functions
     | **t** - the turtle object to draw the rectangle
     | **length** - side length; default 40
     | **width** - side width; default 30
-    | **start_pos** - starting position; default (0, 0)
-    | **start_h** - starting heading; default 0 degrees
-    | **penw** - pensize; default 1
-    | **penc** - pencolor; default is blue
-    | **fillc** - fillcolor; default is None
+    | **start_pos** - start position; default (0, 0)
+    | **start_h** - start heading; default 0 degrees
+    | **penw** - pen size; default 1
+    | **penc** - pen color; default is blue
+    | **fillc** - fill color; default is None
 
 
 .. py:function:: scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)
@@ -41,11 +41,11 @@ Module functions
     | **side_a** - side length a
     | **angle_C** - angle_C
     | **side_b** - side length b
-    | **start_pos** - starting position; default (0, 0)
-    | **start_h** - starting heading; default 0 degrees
-    | **penw** - pensize; default 1
-    | **penc** - pencolor; default is blue
-    | **fillc** - fillcolor; default is None
+    | **start_pos** - start position; default (0, 0)
+    | **start_h** - start heading; default 0 degrees
+    | **penw** - pen size; default 1
+    | **penc** - pen color; default is blue
+    | **fillc** - fill color; default is None
 
 
 .. py:function:: isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)
@@ -53,22 +53,22 @@ Module functions
     | **t** - the turtle object to draw the rectangle
     | **base** - base length
     | **height** - height
-    | **start_pos** - starting position; default (0, 0)
-    | **start_h** - starting heading; default 0 degrees
-    | **penw** - pensize; default 1
-    | **penc** - pencolor; default is blue
-    | **fillc** - fillcolor; default is None
+    | **start_pos** - start position; default (0, 0)
+    | **start_h** - start heading; default 0 degrees
+    | **penw** - pen size; default 1
+    | **penc** - pen color; default is blue
+    | **fillc** - fill color; default is None
 
 
 .. py:function:: equilateral(t, side, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)
 
     | **t** - the turtle object to draw the rectangle
     | **side** - side length
-    | **start_pos** - starting position; default (0, 0)
-    | **start_h** - starting heading; default 0 degrees
-    | **penw** - pensize; default 1
-    | **penc** - pencolor; default is blue
-    | **fillc** - fillcolor; default is None
+    | **start_pos** - start position; default (0, 0)
+    | **start_h** - start heading; default 0 degrees
+    | **penw** - pen size; default 1
+    | **penc** - pen color; default is blue
+    | **fillc** - fill color; default is None
 
 
 
@@ -94,10 +94,10 @@ Documenting the module
             t (turtle): turtle object
             length (int, optional): side length. Defaults to 50.
             start_pos (tuple, optional): start position. Defaults to (0, 0).
-            start_h (int, optional): initial heading. Defaults to 0.
-            penw (int, optional): pensize. Defaults to 1.
-            penc (str, optional): pencolor. Defaults to "blue".
-            fillc (str, optional): fillcolor. Defaults to "red".
+            start_h (int, optional): start heading. Defaults to 0.
+            penw (int, optional): pen size. Defaults to 1.
+            penc (str, optional): pen color. Defaults to "blue".
+            fillc (str, optional): fill color. Defaults to "red".
 
         """
 
@@ -121,10 +121,10 @@ Documenting the module
                             length (_type_, optional): side length. Defaults to _value_.
                             width (_type_, optional): side width. Defaults to _value_.
                             start_pos (_type_, optional): start position. Defaults to _value_.
-                            start_h (_type_, optional): initial heading. Defaults to _value_.
-                            penw (_type_, optional): pensize. Defaults to _value_.
-                            penc (str, optional): pencolor. Defaults to "blue".
-                            fillc (str, optional): fillcolor. Defaults to None.
+                            start_h (_type_, optional): start heading. Defaults to _value_.
+                            penw (_type_, optional): pen size. Defaults to _value_.
+                            penc (str, optional): pen color. Defaults to "blue".
+                            fillc (str, optional): fill color. Defaults to None.
                         """
                         
         .. tab-item:: Q2
@@ -208,7 +208,7 @@ Documenting the module
                                 length (int, optional): side length. Defaults to 40.
                                 width (int, optional): side width. Defaults to 30.
                                 start_pos (tuple, optional): start position coordinates. Defaults to (0, 0).
-                                start_h (int, optional): initial heading. Defaults to 0.
+                                start_h (int, optional): start heading. Defaults to 0.
                                 penw (int, optional): pen size. Defaults to 1.
                                 penc (str, optional): pen color. Defaults to "blue".
                                 fillc (_type_, optional): fill color. Defaults to None.
@@ -229,7 +229,7 @@ Documenting the module
                                 angle_C (int): angle between 2 sides.
                                 side_b (int): side length after angle.
                                 start_pos (tuple, optional): start position. Defaults to (0, 0).
-                                start_h (int, optional): initial heading. Defaults to 0.
+                                start_h (int, optional): start heading. Defaults to 0.
                                 penw (int, optional): pen size. Defaults to 1.
                                 penc (str, optional): pen color. Defaults to "blue".
                                 fillc (str, optional): fill color. Defaults to None.
@@ -249,7 +249,7 @@ Documenting the module
                                 base (int): base of triangle.
                                 height (int): height of triangle.
                                 start_pos (tuple, optional): start position. Defaults to (0, 0).
-                                start_h (int, optional): initial heading. Defaults to 0.
+                                start_h (int, optional): start heading. Defaults to 0.
                                 penw (int, optional): pen size. Defaults to 1.
                                 penc (str, optional): pen color. Defaults to "blue".
                                 fillc (str, optional): fill color. Defaults to None.
@@ -268,7 +268,7 @@ Documenting the module
                                 t (class turtle.Turtle): turtle instance.
                                 side (int): side length.
                                 start_pos (tuple, optional): start position. Defaults to (0, 0).
-                                start_h (int, optional): initial heading. Defaults to 0.
+                                start_h (int, optional): start heading. Defaults to 0.
                                 penw (int, optional): pen size. Defaults to 1.
                                 penc (str, optional): pen color. Defaults to "blue".
                                 fillc (str, optional): fill color. Defaults to None.
