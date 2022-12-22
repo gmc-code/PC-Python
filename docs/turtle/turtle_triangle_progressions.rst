@@ -207,6 +207,9 @@ Isosceles triangle at any angle
   
 | An isosceles triangle can be drawn at a given angle, given the base and the height. 
 | The formuals above can be used to calculate the angle B, which the turtle needs to turn and the side length, b.
+| The code for each formula is:
+|     ``b = math.sqrt(height**2 + (base**2) / 4)``
+|     ``angle_B = math.degrees(math.atan(2 * height / base))``
 
 .. code-block:: python
 
