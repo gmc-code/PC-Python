@@ -12,7 +12,7 @@ t = turtle.Turtle()
 t.speed(0)
 
 
-def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
+def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
     t.pu()
     t.goto(start_pos)
     t.pd()
@@ -35,6 +35,6 @@ def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc=
         t.end_fill()
 
 
-rectangle(t, length=400, width=300, start_pos=(-100, -150), start_h=10, penw=5, penc="blue", fillc="green")
+rectangle(t, length=400, width=300, start_pos=(-100, -150), start_h=10, penw=5, penc="black", fillc="green")
 
 s.exitonclick()

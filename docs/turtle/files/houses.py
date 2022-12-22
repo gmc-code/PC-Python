@@ -2,7 +2,7 @@ import turtle
 import math
 
 
-def square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
+def square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
     """Draw a square given side length.
 
     Args:
@@ -11,8 +11,8 @@ def square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc
         start_pos (tuple, optional): start position. Defaults to (0, 0).
         start_h (int, optional): initial heading. Defaults to 0.
         penw (int, optional): pensize. Defaults to 1.
-        penc (str, optional): pencolor. Defaults to "blue".
-        fillc (str, optional): fillcolor. Defaults to "red".
+        penc (str, optional): pencolor. Defaults to "black".
+        fillc (str, optional): fillcolor. Defaults to None.
 
     """
     t.pu()
@@ -35,7 +35,7 @@ def square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc
         t.end_fill()
 
 
-def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
+def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
     """Draw a rectangle given side lengths.
 
     Args:
@@ -45,7 +45,7 @@ def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc=
         start_pos (tuple, optional): start position coordinates. Defaults to (0, 0).
         start_h (int, optional): initial heading. Defaults to 0.
         penw (int, optional): pen size. Defaults to 1.
-        penc (str, optional): pen color. Defaults to "blue".
+        penc (str, optional): pen color. Defaults to "black".
         fillc (_type_, optional): fill color. Defaults to None.
     """
 
@@ -72,7 +72,7 @@ def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc=
 
 
 
-def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
+def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
     """Draw a scalene triangle given SAS (side angle side).
 
     Args:
@@ -83,7 +83,7 @@ def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, penw=1, pen
         start_pos (tuple, optional): start position. Defaults to (0, 0).
         start_h (int, optional): initial heading. Defaults to 0.
         penw (int, optional): pen size. Defaults to 1.
-        penc (str, optional): pen color. Defaults to "blue".
+        penc (str, optional): pen color. Defaults to "black".
         fillc (str, optional): fill color. Defaults to None.
     """
     t.pu()
@@ -109,7 +109,7 @@ def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, penw=1, pen
 
 
 
-def isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
+def isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
     """Draw an isosceles triangle given base and height.
 
     Args:
@@ -119,7 +119,7 @@ def isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1, penc="blue",
         start_pos (tuple, optional): start position. Defaults to (0, 0).
         start_h (int, optional): initial heading. Defaults to 0.
         penw (int, optional): pen size. Defaults to 1.
-        penc (str, optional): pen color. Defaults to "blue".
+        penc (str, optional): pen color. Defaults to "black".
         fillc (str, optional): fill color. Defaults to None.
     """
     t.pu()
@@ -146,7 +146,7 @@ def isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1, penc="blue",
         t.end_fill()
 
 
-def equilateral(t, side, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
+def equilateral(t, side, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
     """Draw an equilateral triangle
 
     Args:
@@ -155,7 +155,7 @@ def equilateral(t, side, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc
         start_pos (tuple, optional): start position. Defaults to (0, 0).
         start_h (int, optional): initial heading. Defaults to 0.
         penw (int, optional): pen size. Defaults to 1.
-        penc (str, optional): pen color. Defaults to "blue".
+        penc (str, optional): pen color. Defaults to "black".
         fillc (str, optional): fill color. Defaults to None.
     """
     t.pu()

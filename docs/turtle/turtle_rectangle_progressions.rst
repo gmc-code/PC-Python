@@ -278,7 +278,7 @@ Adding pen colour and fill colour parameters
 
 | The syntax below adds parameters for pen and fill colours.
 
-.. py:function:: rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)
+.. py:function:: rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)
 
     | **t** - the turtle object to draw the rectangle
     | **length** - side length; default 40
@@ -286,11 +286,11 @@ Adding pen colour and fill colour parameters
     | **start_pos** - start position; default (0, 0)
     | **start_h** - start heading; default 0 degrees
     | **penw** - pensize; default 1
-    | **penc** - pencolor; default is blue
+    | **penc** - pencolor; default is black
     | **fillc** - fillcolor; default is None
 
    
-| In the code below, ``rectangle(t, length=400, width=300, start_pos=(-100, -150), start_h=10, penw=5, penc="blue", fillc="green")`` draws a rectangle of 400 by 300 at (x=-100, y=-150) with a blue pencolor, a green fillcolor, using a pensize of 5.
+| In the code below, ``rectangle(t, length=400, width=300, start_pos=(-100, -150), start_h=10, penw=5, penc="black", fillc="green")`` draws a rectangle of 400 by 300 at (x=-100, y=-150) with a black pencolor, a green fillcolor, using a pensize of 5.
 | The code needs to check the **fillc** argument since setting a fillcolor to **None** will throw an error.
 
 .. code-block:: python
@@ -306,7 +306,7 @@ Adding pen colour and fill colour parameters
     t.speed(0)
 
 
-    def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
+    def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
         t.pu()
         t.goto(start_pos)
         t.pd()
@@ -329,7 +329,7 @@ Adding pen colour and fill colour parameters
             t.end_fill()
 
 
-    rectangle(t, length=400, width=300, start_pos=(-100, -150), start_h=10, penw=5, penc="blue", fillc="green")
+    rectangle(t, length=400, width=300, start_pos=(-100, -150), start_h=10, penw=5, penc="black", fillc="green")
 
     s.exitonclick()
 
@@ -362,7 +362,7 @@ Adding pen colour and fill colour parameters
                         t = turtle.Turtle()
                         t.speed(0)
 
-                        def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
+                        def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
@@ -393,4 +393,4 @@ Adding pen colour and fill colour parameters
 
     1. Using sequencing only, draw a rectangle of side lengths 500 and 400 at (-250, -250).
     2. Using a repeat loop (without a function), draw a rectangle of side lengths 50 and 40 at (-25, -25).
-    3. Use the definition provided above to draw a rectangle of side lengths 400 and 300 at (x=-300, y=-200) with a blue pencolor, a snow fillcolor, with a pensize of 6.
+    3. Use the definition provided above to draw a rectangle of side lengths 400 and 300 at (x=-300, y=-200) with a black pencolor, a snow fillcolor, with a pensize of 6.

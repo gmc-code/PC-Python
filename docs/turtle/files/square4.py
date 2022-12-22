@@ -12,7 +12,7 @@ t = turtle.Turtle()
 t.speed(0)
 
 
-def square(t, length=50, start_pos=(0, 0), start_h=0, penc="blue", fillc="white", penw=1):
+def square(t, length=50, start_pos=(0, 0), start_h=0, penc="black", fillc="white", penw=1):
     t.pu()
     t.goto(start_pos)
     t.pd()
@@ -32,6 +32,6 @@ def square(t, length=50, start_pos=(0, 0), start_h=0, penc="blue", fillc="white"
         t.end_fill()
 
 
-square(t, length=250, start_pos=(-100, -150), start_h=0, penw=2, penc="blue", fillc="green")
+square(t, length=250, start_pos=(-100, -150), start_h=0, penw=2, penc="black", fillc="green")
 
 s.exitonclick()

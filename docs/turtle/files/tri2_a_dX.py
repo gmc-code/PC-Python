@@ -11,7 +11,7 @@ t.speed(5)
 
 # --begin triangle
 def isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1, 
-                penc="blue", fillc=None):
+                penc="black", fillc=None):
     t.seth(start_h)
     t.pu()
     t.goto(start_pos)
@@ -35,7 +35,7 @@ def isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1,
         t.end_fill()
 
 isosceles(t, base=100, height=50, start_pos=(20, 30), start_h=15, penw=2, 
-                penc="blue", fillc="pink")
+                penc="black", fillc="pink")
 # --end triangle
 
 s.exitonclick()

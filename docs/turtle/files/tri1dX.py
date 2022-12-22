@@ -10,7 +10,7 @@ t = turtle.Turtle()
 t.speed(5)
 
 def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h, penw=1, 
-                penc="blue", fillc=None): 
+                penc="black", fillc=None): 
     t.pu()
     t.goto(start_pos)
     t.pd()
@@ -32,6 +32,6 @@ def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h, penw=1,
         t.end_fill()
 
 scalene(t, side_a=100, angle_C=60, side_b=150, start_pos=(20, 30), start_h=15, penw=3,
-         penc="blue", fillc="light green")
+         penc="black", fillc="light green")
   
 s.exitonclick()

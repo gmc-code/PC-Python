@@ -267,18 +267,18 @@ Adding pen colour and fill colour parameters
 
 | The syntax below adds parameters for pen and fill colours and pen size.
 
-.. py:function:: square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)
+.. py:function:: square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)
 
     | **t** - the turtle object to draw the square
     | **length** - side length; default 50
     | **start_pos** - start position; default (0, 0)
     | **start_h** - start heading; default 0
     | **penw** - pensize; default 1
-    | **penc** - pencolor; default is blue
+    | **penc** - pencolor; default is black
     | **fillc** - fillcolor; default is None
 
    
-| In the code below, ``square(t, length=250, start_pos=(-100, -150), start_h=0, penw=2, penc="blue", fillc="green")`` draws a square of length 250 at (x=-100, y=-150) with a blue pencolor, a green fillcolor, with a pensize of 2.
+| In the code below, ``square(t, length=250, start_pos=(-100, -150), start_h=0, penw=2, penc="black", fillc="green")`` draws a square of length 250 at (x=-100, y=-150) with a black pencolor, a green fillcolor, with a pensize of 2.
 | The code needs to check the **fillc** argument since setting a fillcolor to **None** will throw an error.
 
 .. code-block:: python
@@ -294,7 +294,7 @@ Adding pen colour and fill colour parameters
     t.speed(0)
 
 
-    def square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
+    def square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
         t.pu()
         t.goto(start_pos)
         t.pd()
@@ -315,7 +315,7 @@ Adding pen colour and fill colour parameters
             t.end_fill()
 
 
-    square(t, length=250, start_pos=(-100, -150), start_h=0, penw=2, penc="blue", fillc="green")
+    square(t, length=250, start_pos=(-100, -150), start_h=0, penw=2, penc="black", fillc="green")
 
     s.exitonclick()
 
@@ -323,8 +323,8 @@ Adding pen colour and fill colour parameters
 
 .. admonition:: Tasks
 
-    1. Modify ``square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)`` to draw a square of length 200 at (-300, -100) with red outline of thickness 5.
-    2. Modify ``square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)`` to draw a square of length 30 at (70, 100) with green outline of thickness 3 and a yellow fill.
+    1. Modify ``square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)`` to draw a square of length 200 at (-300, -100) with red outline of thickness 5.
+    2. Modify ``square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)`` to draw a square of length 30 at (70, 100) with green outline of thickness 3 and a yellow fill.
 
     .. dropdown::
             :icon: codescan
@@ -335,7 +335,7 @@ Adding pen colour and fill colour parameters
 
                 .. tab-item:: Q1
 
-                    Modify ``square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)`` to draw a square of length 200 at (-300, -100) with red outline of thickness 5.
+                    Modify ``square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)`` to draw a square of length 200 at (-300, -100) with red outline of thickness 5.
 
                     .. code-block:: python
 
@@ -343,7 +343,7 @@ Adding pen colour and fill colour parameters
 
                 .. tab-item:: Q2
 
-                    Modify ``square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)`` to draw a square of length 30 at (70, 100) with green outline of thickness 3 and a yellow fill.
+                    Modify ``square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)`` to draw a square of length 30 at (70, 100) with green outline of thickness 3 and a yellow fill.
 
                     .. code-block:: python
 

@@ -415,7 +415,7 @@ Adding pen colour and fill colour parameters
 
                         # --begin triangle
                         def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, penw=1, 
-                                    penc="blue", fillc=None): 
+                                    penc="black", fillc=None): 
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
@@ -437,7 +437,7 @@ Adding pen colour and fill colour parameters
                                 t.end_fill()
 
                         scalene(t, side_a=100, angle_C=60, side_b=150, start_pos=(20, 30), start_h=15,
-                                penw=3, penc="blue", fillc="light green")
+                                penw=3, penc="black", fillc="light green")
                         # --end triangle  
                                                   
                         s.exitonclick()
@@ -461,7 +461,7 @@ Adding pen colour and fill colour parameters
 
                         # --begin triangle
                         def isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1, 
-                                        penc="blue", fillc=None):
+                                        penc="black", fillc=None):
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
@@ -486,7 +486,7 @@ Adding pen colour and fill colour parameters
                                 t.end_fill()
 
                         isosceles(t, base=100, height=50, start_pos=(20, 30), start_h=15, penw=2, 
-                                        penc="blue", fillc="pink")
+                                        penc="black", fillc="pink")
                         # --end triangle
 
                         s.exitonclick()
@@ -508,7 +508,7 @@ Adding pen colour and fill colour parameters
 
                         # --begin triangle
                         def equilateral(t, side, start_pos=(0, 0), start_h=0, penw=1, 
-                                            penc="blue", fillc=None):
+                                            penc="black", fillc=None):
                             t.pu()
                             t.goto(start_pos)
                             t.pd()

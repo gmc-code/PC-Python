@@ -12,18 +12,18 @@ Turtle houses module
 Module functions
 -----------------------
 
-.. py:function:: square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)
+.. py:function:: square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)
 
     | **t** - the turtle object to draw the square
     | **length** - side length; default 50
     | **start_pos** - start position; default (0, 0)
     | **start_h** - start heading; default 0
     | **penw** - pen size; default 1
-    | **penc** - pen color; default is blue
+    | **penc** - pen color; default is black
     | **fillc** - fill color; default is None
 
 
-.. py:function:: rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)
+.. py:function:: rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)
 
     | **t** - the turtle object to draw the rectangle
     | **length** - side length; default 40
@@ -31,11 +31,11 @@ Module functions
     | **start_pos** - start position; default (0, 0)
     | **start_h** - start heading; default 0 degrees
     | **penw** - pen size; default 1
-    | **penc** - pen color; default is blue
+    | **penc** - pen color; default is black
     | **fillc** - fill color; default is None
 
 
-.. py:function:: scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)
+.. py:function:: scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)
 
     | **t** - the turtle object to draw the rectangle
     | **side_a** - side length a
@@ -44,11 +44,11 @@ Module functions
     | **start_pos** - start position; default (0, 0)
     | **start_h** - start heading; default 0 degrees
     | **penw** - pen size; default 1
-    | **penc** - pen color; default is blue
+    | **penc** - pen color; default is black
     | **fillc** - fill color; default is None
 
 
-.. py:function:: isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)
+.. py:function:: isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)
 
     | **t** - the turtle object to draw the rectangle
     | **base** - base length
@@ -56,18 +56,18 @@ Module functions
     | **start_pos** - start position; default (0, 0)
     | **start_h** - start heading; default 0 degrees
     | **penw** - pen size; default 1
-    | **penc** - pen color; default is blue
+    | **penc** - pen color; default is black
     | **fillc** - fill color; default is None
 
 
-.. py:function:: equilateral(t, side, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None)
+.. py:function:: equilateral(t, side, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)
 
     | **t** - the turtle object to draw the rectangle
     | **side** - side length
     | **start_pos** - start position; default (0, 0)
     | **start_h** - start heading; default 0 degrees
     | **penw** - pen size; default 1
-    | **penc** - pen color; default is blue
+    | **penc** - pen color; default is black
     | **fillc** - fill color; default is None
 
 
@@ -87,7 +87,7 @@ Documenting the module
 
 .. code-block:: python
 
-    def square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
+    def square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
         """draw a square
 
         Args:
@@ -96,7 +96,7 @@ Documenting the module
             start_pos (tuple, optional): start position. Defaults to (0, 0).
             start_h (int, optional): start heading. Defaults to 0.
             penw (int, optional): pen size. Defaults to 1.
-            penc (str, optional): pen color. Defaults to "blue".
+            penc (str, optional): pen color. Defaults to "black".
             fillc (str, optional): fill color. Defaults to "red".
 
         """
@@ -113,7 +113,7 @@ Documenting the module
 
                 .. code-block:: python
 
-                    def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
+                    def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
                         """Draw a rectangle
 
                         Args:
@@ -123,7 +123,7 @@ Documenting the module
                             start_pos (_type_, optional): start position. Defaults to _value_.
                             start_h (_type_, optional): start heading. Defaults to _value_.
                             penw (_type_, optional): pen size. Defaults to _value_.
-                            penc (str, optional): pen color. Defaults to "blue".
+                            penc (str, optional): pen color. Defaults to "black".
                             fillc (str, optional): fill color. Defaults to None.
                         """
                         
@@ -133,7 +133,7 @@ Documenting the module
 
                 .. code-block:: python
 
-                    def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
+                    def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
                         """_summary_
 
                         Args:
@@ -144,7 +144,7 @@ Documenting the module
                             start_pos (_type_, optional): start position. Defaults to _value_.
                             start_h (int, optional): _description_. Defaults to 0.
                             penw (int, optional): _description_. Defaults to 1.
-                            penc (str, optional): _description_. Defaults to "blue".
+                            penc (str, optional): _description_. Defaults to "black".
                             fillc (_type_, optional): _description_. Defaults to None.
                         """
 
@@ -154,7 +154,7 @@ Documenting the module
 
                 .. code-block:: python
 
-                    def isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
+                    def isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
                         """_summary_
 
                         Args:
@@ -164,7 +164,7 @@ Documenting the module
                             start_pos (_type_, optional): start position. Defaults to _value_.
                             start_h (int, optional): _description_. Defaults to 0.
                             penw (int, optional): _description_. Defaults to 1.
-                            penc (str, optional): _description_. Defaults to "blue".
+                            penc (str, optional): _description_. Defaults to "black".
                             fillc (_type_, optional): _description_. Defaults to None.
                         """
 
@@ -174,7 +174,7 @@ Documenting the module
 
                 .. code-block:: python
 
-                    def equilateral(t, side, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
+                    def equilateral(t, side, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
                         """_summary_
 
                         Args:
@@ -183,7 +183,7 @@ Documenting the module
                             start_pos (_type_, optional): start position. Defaults to _value_.
                             start_h (int, optional): _description_. Defaults to 0.
                             penw (int, optional): _description_. Defaults to 1.
-                            penc (str, optional): _description_. Defaults to "blue".
+                            penc (str, optional): _description_. Defaults to "black".
                             fillc (_type_, optional): _description_. Defaults to None.
                         """
 
@@ -200,7 +200,7 @@ Documenting the module
 
                     .. code-block:: python
 
-                        def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
+                        def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
                             """Draw a rectangle given side lengths.
 
                             Args:
@@ -210,7 +210,7 @@ Documenting the module
                                 start_pos (tuple, optional): start position coordinates. Defaults to (0, 0).
                                 start_h (int, optional): start heading. Defaults to 0.
                                 penw (int, optional): pen size. Defaults to 1.
-                                penc (str, optional): pen color. Defaults to "blue".
+                                penc (str, optional): pen color. Defaults to "black".
                                 fillc (_type_, optional): fill color. Defaults to None.
                             """
 
@@ -220,7 +220,7 @@ Documenting the module
 
                     .. code-block:: python
 
-                        def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
+                        def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
                             """Draw a scalene triangle given SAS (side angle side).
 
                             Args:
@@ -231,7 +231,7 @@ Documenting the module
                                 start_pos (tuple, optional): start position. Defaults to (0, 0).
                                 start_h (int, optional): start heading. Defaults to 0.
                                 penw (int, optional): pen size. Defaults to 1.
-                                penc (str, optional): pen color. Defaults to "blue".
+                                penc (str, optional): pen color. Defaults to "black".
                                 fillc (str, optional): fill color. Defaults to None.
                             """
 
@@ -241,7 +241,7 @@ Documenting the module
 
                     .. code-block:: python
 
-                        def isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
+                        def isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
                             """Draw an isosceles triangle given base and height.
 
                             Args:
@@ -251,7 +251,7 @@ Documenting the module
                                 start_pos (tuple, optional): start position. Defaults to (0, 0).
                                 start_h (int, optional): start heading. Defaults to 0.
                                 penw (int, optional): pen size. Defaults to 1.
-                                penc (str, optional): pen color. Defaults to "blue".
+                                penc (str, optional): pen color. Defaults to "black".
                                 fillc (str, optional): fill color. Defaults to None.
                             """
 
@@ -261,7 +261,7 @@ Documenting the module
 
                     .. code-block:: python
 
-                        def equilateral(t, side, start_pos=(0, 0), start_h=0, penw=1, penc="blue", fillc=None):
+                        def equilateral(t, side, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
                             """Draw an equilateral triangle
 
                             Args:
@@ -270,7 +270,7 @@ Documenting the module
                                 start_pos (tuple, optional): start position. Defaults to (0, 0).
                                 start_h (int, optional): start heading. Defaults to 0.
                                 penw (int, optional): pen size. Defaults to 1.
-                                penc (str, optional): pen color. Defaults to "blue".
+                                penc (str, optional): pen color. Defaults to "black".
                                 fillc (str, optional): fill color. Defaults to None.
                             """
 
