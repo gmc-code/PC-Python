@@ -113,6 +113,52 @@ Rectangle
     | **penc** - pen color; default is black
     | **fillc** - fill color; default is None
 
+.. admonition:: Code Completion
+
+    .. tab-set::
+
+        .. tab-item:: Q
+
+            Complete the doc string for the rectangle function using the template provided.
+            Replace _summary_, _type_, _description_ and _value_ with suitable text.
+
+            .. code-block:: python
+
+                def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, 
+                                penw=1, penc="black", fillc=None):
+                    """Draw a rectangle
+
+                    Args:
+                        t (turtle): turtle instance
+                        length (_type_, optional): side lengths. Defaults to _value_.
+                        width (_type_, optional): side widtsh. Defaults to _value_.
+                        start_pos (_type_, optional): start position. Defaults to _value_.
+                        start_h (_type_, optional): start heading. Defaults to _value_.
+                        penw (_type_, optional): pen size. Defaults to _value_.
+                        penc (str, optional): pen color. Defaults to "black".
+                        fillc (str, optional): fill color. Defaults to None.
+                    """
+
+        .. tab-item:: Ans
+
+            Completed doc string for the rectangle function.
+
+            .. code-block:: python
+
+                def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, 
+                                penw=1, penc="black", fillc=None):
+                    """Draw a rectangle
+
+                    Args:
+                        t (turtle): turtle instance
+                        length (_type_, optional): side lengths. Defaults to _value_.
+                        width (_type_, optional): side widtsh. Defaults to _value_.
+                        start_pos (_type_, optional): start position. Defaults to _value_.
+                        start_h (_type_, optional): start heading. Defaults to _value_.
+                        penw (_type_, optional): pen size. Defaults to _value_.
+                        penc (str, optional): pen color. Defaults to "black".
+                        fillc (str, optional): fill color. Defaults to None.
+                    """
 ----
 
 Scalene
@@ -132,6 +178,55 @@ Scalene
     | **penc** - pen color; default is black
     | **fillc** - fill color; default is None
 
+.. admonition:: Code Completion
+
+    .. tab-set::
+
+        .. tab-item:: Q
+
+            Complete the doc string for the scalene triangle function using the template provided.
+            Replace _summary_, _type_, _description_ and _value_ with suitable text.
+
+            .. code-block:: python
+
+                def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, 
+                            penw=1, penc="black", fillc=None):
+                    """_summary_
+
+                    Args:
+                        t (_type_): _description_
+                        side_a (_type_): _description_
+                        angle_C (_type_): _description_
+                        side_b (_type_): _description_
+                        start_pos (_type_, optional): start position. Defaults to _value_.
+                        start_h (int, optional): _description_. Defaults to 0.
+                        penw (int, optional): _description_. Defaults to 1.
+                        penc (str, optional): _description_. Defaults to "black".
+                        fillc (_type_, optional): _description_. Defaults to None.
+                        """
+
+        .. tab-item:: Ans
+
+            Completed doc string for the scalene triangle function using the template provided.
+
+            .. code-block:: python
+
+                def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, 
+                            penw=1, penc="black", fillc=None):
+                    """Draw a scalene triangle given SAS (side angle side).
+
+                    Args:
+                        t (class turtle.Turtle): turtle instance.
+                        side_a (int): side length before angle.
+                        angle_C (int): angle between 2 sides.
+                        side_b (int): side length after angle.
+                        start_pos (tuple, optional): start position. Defaults to (0, 0).
+                        start_h (int, optional): start heading. Defaults to 0.
+                        penw (int, optional): pen size. Defaults to 1.
+                        penc (str, optional): pen color. Defaults to "black".
+                        fillc (str, optional): fill color. Defaults to None.
+                    """
+
 ----
 
 Isosceles
@@ -149,6 +244,53 @@ Isosceles
     | **penw** - pen size; default 1
     | **penc** - pen color; default is black
     | **fillc** - fill color; default is None
+
+.. admonition:: Code Completion
+
+    .. tab-set::
+
+        .. tab-item:: Q
+
+            Complete the doc string for the isosceles triangle function using the template provided.
+            Replace _summary_, _type_, _description_ and _value_ with suitable text.
+
+            .. code-block:: python
+
+                def isosceles(t, base, height, start_pos=(0, 0), start_h=0, 
+                                penw=1, penc="black", fillc=None):
+                    """_summary_
+
+                    Args:
+                        t (_type_): _description_
+                        base (_type_): _description_
+                        height (_type_): _description_
+                        start_pos (_type_, optional): start position. Defaults to _value_.
+                        start_h (int, optional): _description_. Defaults to 0.
+                        penw (int, optional): _description_. Defaults to 1.
+                        penc (str, optional): _description_. Defaults to "black".
+                        fillc (_type_, optional): _description_. Defaults to None.
+                    """
+
+        .. tab-item:: Ans
+
+            Completed doc string for the iscosceles triangle function.
+
+            .. code-block:: python
+
+                def isosceles(t, base, height, start_pos=(0, 0), start_h=0, 
+                                penw=1, penc="black", fillc=None):
+                    """Draw an isosceles triangle given base and height.
+
+                    Args:
+                        t (class turtle.Turtle): turtle instance.
+                        base (int): base of triangle.
+                        height (int): height of triangle.
+                        start_pos (tuple, optional): start position. Defaults to (0, 0).
+                        start_h (int, optional): start heading. Defaults to 0.
+                        penw (int, optional): pen size. Defaults to 1.
+                        penc (str, optional): pen color. Defaults to "black".
+                        fillc (str, optional): fill color. Defaults to None.
+                    """
 
 ----
 
@@ -175,6 +317,7 @@ Equilateral
         .. tab-item:: Q
 
             Complete the doc string for the equilateral triangle function using the template provided.
+            Replace _summary_, _type_, _description_ and _value_ with suitable text.
 
             .. code-block:: python
 
@@ -211,188 +354,3 @@ Equilateral
                         penc (str, optional): pen color. Defaults to "black".
                         fillc (str, optional): fill color. Defaults to None.
                     """               
-----
-
-
-.. admonition:: Tasks
-
-    Replace _type_, _value_, _description_ and _summary_ with suitable text.
-
-    .. tab-set::
-
-        .. tab-item:: Q1
-
-            1. Complete the doc string for the rectangle function using the template provided.
-
-                .. code-block:: python
-
-                    def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, 
-                                    penw=1, penc="black", fillc=None):
-                        """Draw a rectangle
-
-                        Args:
-                            t (turtle): turtle instance
-                            length (_type_, optional): side lengths. Defaults to _value_.
-                            width (_type_, optional): side widtsh. Defaults to _value_.
-                            start_pos (_type_, optional): start position. Defaults to _value_.
-                            start_h (_type_, optional): start heading. Defaults to _value_.
-                            penw (_type_, optional): pen size. Defaults to _value_.
-                            penc (str, optional): pen color. Defaults to "black".
-                            fillc (str, optional): fill color. Defaults to None.
-                        """
-                        
-        .. tab-item:: Q2
-            
-            2. Complete the doc string for the scalene triangle function using the template provided.
-
-                .. code-block:: python
-
-                    def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, 
-                                penw=1, penc="black", fillc=None):
-                        """_summary_
-
-                        Args:
-                            t (_type_): _description_
-                            side_a (_type_): _description_
-                            angle_C (_type_): _description_
-                            side_b (_type_): _description_
-                            start_pos (_type_, optional): start position. Defaults to _value_.
-                            start_h (int, optional): _description_. Defaults to 0.
-                            penw (int, optional): _description_. Defaults to 1.
-                            penc (str, optional): _description_. Defaults to "black".
-                            fillc (_type_, optional): _description_. Defaults to None.
-                        """
-
-        .. tab-item:: Q3
-            
-            3. Complete the doc string for the isosceles triangle function using the template provided.
-
-                .. code-block:: python
-
-                    def isosceles(t, base, height, start_pos=(0, 0), start_h=0, 
-                                    penw=1, penc="black", fillc=None):
-                        """_summary_
-
-                        Args:
-                            t (_type_): _description_
-                            base (_type_): _description_
-                            height (_type_): _description_
-                            start_pos (_type_, optional): start position. Defaults to _value_.
-                            start_h (int, optional): _description_. Defaults to 0.
-                            penw (int, optional): _description_. Defaults to 1.
-                            penc (str, optional): _description_. Defaults to "black".
-                            fillc (_type_, optional): _description_. Defaults to None.
-                        """
-
-        .. tab-item:: Q4
-                
-            4. Complete the doc string for the equilateral triangle function using the template provided.
-
-                .. code-block:: python
-
-                    def equilateral(t, side, start_pos=(0, 0), start_h=0, 
-                                    penw=1, penc="black", fillc=None):
-                        """_summary_
-
-                        Args:
-                            t (_type_): _description_
-                            side (_type_): _description_
-                            start_pos (_type_, optional): start position. Defaults to _value_.
-                            start_h (int, optional): _description_. Defaults to 0.
-                            penw (int, optional): _description_. Defaults to 1.
-                            penc (str, optional): _description_. Defaults to "black".
-                            fillc (_type_, optional): _description_. Defaults to None.
-                        """
-
-    .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
-
-            .. tab-set::
-
-                .. tab-item:: Q1
-
-                    Complete the doc string for the rectangle function using the template provided.
-
-                    .. code-block:: python
-
-                        def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, 
-                                        penw=1, penc="black", fillc=None):
-                            """Draw a rectangle given side lengths.
-
-                            Args:
-                                t (class turtle.Turtle): turtle instance.
-                                length (int, optional): side lengths. Defaults to 40.
-                                width (int, optional): side widtsh. Defaults to 30.
-                                start_pos (tuple, optional): start position coordinates. Defaults to (0, 0).
-                                start_h (int, optional): start heading. Defaults to 0.
-                                penw (int, optional): pen size. Defaults to 1.
-                                penc (str, optional): pen color. Defaults to "black".
-                                fillc (str, optional): fill color. Defaults to None.
-                            """
-
-                .. tab-item:: Q2
-
-                    Complete the doc string for the scalene triangle function using the template provided.
-
-                    .. code-block:: python
-
-                        def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, 
-                                    penw=1, penc="black", fillc=None):
-                            """Draw a scalene triangle given SAS (side angle side).
-
-                            Args:
-                                t (class turtle.Turtle): turtle instance.
-                                side_a (int): side length before angle.
-                                angle_C (int): angle between 2 sides.
-                                side_b (int): side length after angle.
-                                start_pos (tuple, optional): start position. Defaults to (0, 0).
-                                start_h (int, optional): start heading. Defaults to 0.
-                                penw (int, optional): pen size. Defaults to 1.
-                                penc (str, optional): pen color. Defaults to "black".
-                                fillc (str, optional): fill color. Defaults to None.
-                            """
-
-                .. tab-item:: Q3
-
-                    Complete the doc string for the iscosceles triangle function using the template provided.
-
-                    .. code-block:: python
-
-                        def isosceles(t, base, height, start_pos=(0, 0), start_h=0, 
-                                        penw=1, penc="black", fillc=None):
-                            """Draw an isosceles triangle given base and height.
-
-                            Args:
-                                t (class turtle.Turtle): turtle instance.
-                                base (int): base of triangle.
-                                height (int): height of triangle.
-                                start_pos (tuple, optional): start position. Defaults to (0, 0).
-                                start_h (int, optional): start heading. Defaults to 0.
-                                penw (int, optional): pen size. Defaults to 1.
-                                penc (str, optional): pen color. Defaults to "black".
-                                fillc (str, optional): fill color. Defaults to None.
-                            """
-
-                .. tab-item:: Q4
-
-                    Complete the doc string for the equilateral triangle function using the template provided.
-
-                    .. code-block:: python
-
-                        def equilateral(t, side, start_pos=(0, 0), start_h=0, 
-                                        penw=1, penc="black", fillc=None):
-                            """Draw an equilateral triangle
-
-                            Args:
-                                t (class turtle.Turtle): turtle instance.
-                                side (int): side lengths.
-                                start_pos (tuple, optional): start position. Defaults to (0, 0).
-                                start_h (int, optional): start heading. Defaults to 0.
-                                penw (int, optional): pen size. Defaults to 1.
-                                penc (str, optional): pen color. Defaults to "black".
-                                fillc (str, optional): fill color. Defaults to None.
-                            """
-
-
