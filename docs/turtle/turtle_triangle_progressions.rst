@@ -65,7 +65,7 @@ Scalene triangle
 
                 s.exitonclick()
 
-        .. tab-item:: Q
+        .. tab-item:: Ans
 
             A definition for a scalene triangle.
                                          
@@ -113,85 +113,80 @@ Isosceles triangle
 | The code below uses the x and y positions and only works when the base is drawn horizontally with the intitial heading set to 0.
 | The code draws an isosceles triangle of base 100 and height 50 at (20, 30).
 
-.. code-block:: python
+.. admonition:: Code Completion
 
-    import turtle
+    .. tab-set::
 
-    s = turtle.Screen()
-    s.bgcolor("white")
-    s.title("Grid")
-    s.setup(width=800, height=600, startx=0, starty=0)
+        .. tab-item:: Q
 
-    t = turtle.Turtle()
-    t.speed(5)
+            Write a definition to replace the lines between the comments (begin triangle and end triangle) in the code above.
+                                                        
+            .. code-block:: python
 
-    # --begin triangle
-    base = 100
-    height = 50
-    start_pos = (20, 30)
+                import turtle
 
+                s = turtle.Screen()
+                s.bgcolor("white")
+                s.title("Grid")
+                s.setup(width=800, height=600, startx=0, starty=0)
 
-    t.pu()
-    t.goto(start_pos)
-    t.pd()
-    t.seth(0)
+                t = turtle.Turtle()
+                t.speed(5)
 
-    start_x = start_pos[0]
-    start_y = start_pos[1]
-    t.fd(base)
-    t.goto(start_x + base/2, start_y + height)
-    t.goto(start_x, start_y)
-    # --end triangle
-
-    s.exitonclick()
-
-----
-
-.. admonition:: Tasks
-
-    1. Write a definition  to replace the lines between the comments (begin triangle and end triangle) in the code above.
-
-    .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
-
-            .. tab-set::
-
-                .. tab-item:: Q1
-
-                    Write a definition  to replace the lines between the comments (begin triangle and end triangle) in the code above.
-
-                    .. code-block:: python
-
-                        import turtle
-
-                        s = turtle.Screen()
-                        s.bgcolor("white")
-                        s.title("Grid")
-                        s.setup(width=800, height=600, startx=0, starty=0)
-
-                        t = turtle.Turtle()
-                        t.speed(5)
-
-                        # --begin triangle
-                        def isosceles(t, base, height, start_pos):
-                            t.pu()
-                            t.goto(start_pos)
-                            t.pd()
-                            t.seth(0)
-
-                            start_x = start_pos[0]
-                            start_y = start_pos[1]
-                            t.fd(base)
-                            t.goto(start_x + base / 2, start_y + height)
-                            t.goto(start_x, start_y)
+                # --begin triangle
+                base = 100
+                height = 50
+                start_pos = (20, 30)
 
 
-                        isosceles(t, base=100, height=50, start_pos=(20, 30))
-                        # --end triangle
+                t.pu()
+                t.goto(start_pos)
+                t.pd()
+                t.seth(0)
 
-                        s.exitonclick()
+                start_x = start_pos[0]
+                start_y = start_pos[1]
+                t.fd(base)
+                t.goto(start_x + base/2, start_y + height)
+                t.goto(start_x, start_y)
+                # --end triangle
+
+                s.exitonclick()
+
+        .. tab-item:: Ans
+
+            A definition for an Isosceles triangle.
+
+            .. code-block:: python
+
+                import turtle
+
+                s = turtle.Screen()
+                s.bgcolor("white")
+                s.title("Grid")
+                s.setup(width=800, height=600, startx=0, starty=0)
+
+                t = turtle.Turtle()
+                t.speed(5)
+
+                # --begin triangle
+                def isosceles(t, base, height, start_pos):
+                    t.pu()
+                    t.goto(start_pos)
+                    t.pd()
+                    t.seth(0)
+
+                    start_x = start_pos[0]
+                    start_y = start_pos[1]
+                    t.fd(base)
+                    t.goto(start_x + base / 2, start_y + height)
+                    t.goto(start_x, start_y)
+
+
+                isosceles(t, base=100, height=50, start_pos=(20, 30))
+                # --end triangle
+
+                s.exitonclick()
 
 ----
 
@@ -209,91 +204,86 @@ Isosceles triangle at any angle
 |     ``b = math.sqrt(height**2 + (base**2) / 4)``
 |     ``angle_B = math.degrees(math.atan(2 * height / base))``
 
-.. code-block:: python
+.. admonition:: Code Completion
 
-    import turtle
-    import math
+    .. tab-set::
 
-    s = turtle.Screen()
-    s.bgcolor("white")
-    s.title("Grid")
-    s.setup(width=800, height=600, startx=0, starty=0)
+        .. tab-item:: Q
 
-    t = turtle.Turtle()
-    t.speed(5)
+            Write a definition to replace the lines between the comments (begin triangle and end triangle) in the code above.
+              
+            .. code-block:: python
 
-    # --begin triangle
-    base = 100
-    height = 50
-    start_pos = (20, 30)
-    start_h = 15
+                import turtle
+                import math
 
-    t.pu()
-    t.goto(start_pos)
-    t.pd()
-    t.seth(start_h)
+                s = turtle.Screen()
+                s.bgcolor("white")
+                s.title("Grid")
+                s.setup(width=800, height=600, startx=0, starty=0)
 
-    b = math.sqrt(height**2 + (base**2) / 4)
-    angle_B = math.degrees(math.atan(2 * height / base))
+                t = turtle.Turtle()
+                t.speed(5)
 
-    t.fd(base)
-    t.lt(180 - angle_B)
-    t.fd(b)
-    t.goto(start_pos)
-    # --end triangle
+                # --begin triangle
+                base = 100
+                height = 50
+                start_pos = (20, 30)
+                start_h = 15
 
-    s.exitonclick()
+                t.pu()
+                t.goto(start_pos)
+                t.pd()
+                t.seth(start_h)
 
-----
+                b = math.sqrt(height**2 + (base**2) / 4)
+                angle_B = math.degrees(math.atan(2 * height / base))
 
-.. admonition:: Tasks
+                t.fd(base)
+                t.lt(180 - angle_B)
+                t.fd(b)
+                t.goto(start_pos)
+                # --end triangle
 
-    1. Write a definition  to replace the lines between the comments (begin triangle and end triangle) in the code above.
+                s.exitonclick()
 
-    .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        .. tab-item:: Ans
 
-            .. tab-set::
+            A definition for an Isosceles triangle.
 
-                .. tab-item:: Q1
+            .. code-block:: python
 
-                    Write a definition  to replace the lines between the comments (begin triangle and end triangle) in the code above.
+                import turtle
+                import math
 
-                    .. code-block:: python
+                s = turtle.Screen()
+                s.bgcolor("white")
+                s.title("Grid")
+                s.setup(width=800, height=600, startx=0, starty=0)
 
-                        import turtle
-                        import math
+                t = turtle.Turtle()
+                t.speed(5)
 
-                        s = turtle.Screen()
-                        s.bgcolor("white")
-                        s.title("Grid")
-                        s.setup(width=800, height=600, startx=0, starty=0)
+                # --begin triangle
+                def isosceles(t, base, height, start_pos=(0, 0), start_h=0):
+                    t.pu()
+                    t.goto(start_pos)
+                    t.pd()
+                    t.seth(start_h)
 
-                        t = turtle.Turtle()
-                        t.speed(5)
+                    b = math.sqrt(height**2 + (base**2) / 4)
+                    angle_B = math.degrees(math.atan(2 * height / base))
 
-                        # --begin triangle
-                        def isosceles(t, base, height, start_pos=(0, 0), start_h=0):
-                            t.pu()
-                            t.goto(start_pos)
-                            t.pd()
-                            t.seth(start_h)
-
-                            b = math.sqrt(height**2 + (base**2) / 4)
-                            angle_B = math.degrees(math.atan(2 * height / base))
-
-                            t.fd(base)
-                            t.lt(180 - angle_B)
-                            t.fd(b)
-                            t.goto(start_pos)
+                    t.fd(base)
+                    t.lt(180 - angle_B)
+                    t.fd(b)
+                    t.goto(start_pos)
 
 
-                        isosceles(t, base=100, height=50, start_pos=(20, 30), start_h=15)
-                        # --end triangle
+                isosceles(t, base=100, height=50, start_pos=(20, 30), start_h=15)
+                # --end triangle
 
-                        s.exitonclick()
+                s.exitonclick()
                                             
 
 ----
@@ -302,84 +292,79 @@ Equilateral triangles
 ------------------------------------------------
 
 | The code below uses iteration to draw an equilateral triangle with angles of 60 degrees at (20,30), with the base at 30 degrees from the horizontal (start_h = 10).
-| FOr an internal angle of 60 degrees when drawing anticlockwise, and angle of 120 degrees is need for the left turn.
+| For an internal angle of 60 degrees when drawing anticlockwise, and angle of 120 degrees is need for the left turn.
 
-.. code-block:: python
+.. admonition:: Code Completion
 
-    import turtle
+    .. tab-set::
 
-    s = turtle.Screen()
-    s.bgcolor("white")
-    s.title("Grid")
-    s.setup(width=800, height=600, startx=0, starty=0)
+        .. tab-item:: Q
 
-    t = turtle.Turtle()
-    t.speed(5)
+            Write a definition to replace the lines between the comments (begin triangle and end triangle) in the code above.
+                            
+            .. code-block:: python
 
-    # --begin triangle
-    side = 100
-    start_pos = (20, 30)
-    start_h = 10
+                import turtle
 
-    t.pu()
-    t.goto(start_pos)
-    t.pd()
-    t.seth(start_h)
+                s = turtle.Screen()
+                s.bgcolor("white")
+                s.title("Grid")
+                s.setup(width=800, height=600, startx=0, starty=0)
 
-    start_pos = t.pos()
-    for _ in range(3):
-        t.fd(side)
-        t.lt(120)
-    # --end triangle
+                t = turtle.Turtle()
+                t.speed(5)
 
-    s.exitonclick()
+                # --begin triangle
+                side = 100
+                start_pos = (20, 30)
+                start_h = 10
 
-----
+                t.pu()
+                t.goto(start_pos)
+                t.pd()
+                t.seth(start_h)
 
-.. admonition:: Tasks
+                start_pos = t.pos()
+                for _ in range(3):
+                    t.fd(side)
+                    t.lt(120)
+                # --end triangle
 
-    1. Write a definition  to replace the lines between the comments (begin triangle and end triangle) in the code above.
+                s.exitonclick()
 
-    .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        .. tab-item:: Ans
 
-            .. tab-set::
+            A definition for an equilateral triangle.
 
-                .. tab-item:: Q1
+            .. code-block:: python
 
-                    Write a definition  to replace the lines between the comments (begin triangle and end triangle) in the code above.
+                import turtle
 
-                    .. code-block:: python
+                s = turtle.Screen()
+                s.bgcolor("white")
+                s.title("Grid")
+                s.setup(width=800, height=600, startx=0, starty=0)
 
-                        import turtle
+                t = turtle.Turtle()
+                t.speed(5)
 
-                        s = turtle.Screen()
-                        s.bgcolor("white")
-                        s.title("Grid")
-                        s.setup(width=800, height=600, startx=0, starty=0)
+                # --begin triangle
+                def equilateral(t, side, start_pos=(0, 0), start_h=0):
+                    t.pu()
+                    t.goto(start_pos)
+                    t.pd()
+                    t.seth(start_h)
 
-                        t = turtle.Turtle()
-                        t.speed(5)
-
-                        # --begin triangle
-                        def equilateral(t, side, start_pos=(0, 0), start_h=0):
-                            t.pu()
-                            t.goto(start_pos)
-                            t.pd()
-                            t.seth(start_h)
-
-                            start_pos = t.pos()
-                            for _ in range(3):
-                                t.fd(side)
-                                t.lt(120)
+                    start_pos = t.pos()
+                    for _ in range(3):
+                        t.fd(side)
+                        t.lt(120)
 
 
-                        equilateral(t, side=100, start_pos=(20, 30), start_h=10)
-                        # --end triangle
+                equilateral(t, side=100, start_pos=(20, 30), start_h=10)
+                # --end triangle
 
-                        s.exitonclick()
+                s.exitonclick()
 
 ----
 
@@ -438,7 +423,6 @@ Adding pen colour and fill colour parameters
                         # --end triangle  
                                                   
                         s.exitonclick()
-
 
 
                 .. tab-item:: Isosceles
