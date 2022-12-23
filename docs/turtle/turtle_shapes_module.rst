@@ -151,7 +151,8 @@ Documenting the module
 
                 .. code-block:: python
 
-                    def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
+                    def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, 
+                                    penw=1, penc="black", fillc=None):
                         """Draw a rectangle
 
                         Args:
@@ -171,7 +172,8 @@ Documenting the module
 
                 .. code-block:: python
 
-                    def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
+                    def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, 
+                                penw=1, penc="black", fillc=None):
                         """_summary_
 
                         Args:
@@ -192,7 +194,8 @@ Documenting the module
 
                 .. code-block:: python
 
-                    def isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
+                    def isosceles(t, base, height, start_pos=(0, 0), start_h=0, 
+                                    penw=1, penc="black", fillc=None):
                         """_summary_
 
                         Args:
@@ -212,7 +215,8 @@ Documenting the module
 
                 .. code-block:: python
 
-                    def equilateral(t, side, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
+                    def equilateral(t, side, start_pos=(0, 0), start_h=0, 
+                                    penw=1, penc="black", fillc=None):
                         """_summary_
 
                         Args:
