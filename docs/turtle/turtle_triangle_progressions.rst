@@ -3,7 +3,9 @@ Turtle triangle progressions
 ====================================================
 
 | The basic code to draw different triangles is given below.
+
 | With each version, attempt to write a definition for the triangle.
+| The values to be passed as arguments have been assigned to variables for easy identification.
 | Then a definition block with parameters allows for code reuse via the use of arguments.
 
 ----
@@ -23,83 +25,78 @@ Scalene triangle
 | The code also makes use of the heading and start position.
 | The code draws a triangle of base 100, angle 70 and side 150 with a heading of 15 degrees, positioned at (20, 30).
 
-.. code-block:: python
+.. admonition:: Code Completion
 
-    import turtle
+    .. tab-set::
 
-    s = turtle.Screen()
-    s.bgcolor("white")
-    s.title("Grid")
-    s.setup(width=800, height=600, startx=0, starty=0)
+        .. tab-item:: Q
 
-    t = turtle.Turtle()
-    t.speed(5)
+            Write a definition to replace the lines between the comments (begin triangle and end triangle) in the code above.
+                                         
+            .. code-block:: python
 
-    # --begin triangle
-    side_a = 100
-    angle_C = 70
-    side_b = 150
-    start_pos = (20, 30)
-    start_h = 15
+                import turtle
 
-    t.pu()
-    t.goto(start_pos)
-    t.pd()
-    t.seth(start_h)
+                s = turtle.Screen()
+                s.bgcolor("white")
+                s.title("Grid")
+                s.setup(width=800, height=600, startx=0, starty=0)
 
-    t.fd(side_a)
-    t.lt(180 - angle_C)
-    t.fd(side_b)
-    t.goto(start_pos)
-    # --end triangle
+                t = turtle.Turtle()
+                t.speed(5)
 
-    s.exitonclick()
+                # --begin triangle
+                side_a = 100
+                angle_C = 70
+                side_b = 150
+                start_pos = (20, 30)
+                start_h = 15
 
-----
+                t.pu()
+                t.goto(start_pos)
+                t.pd()
+                t.seth(start_h)
 
-.. admonition:: Tasks
+                t.fd(side_a)
+                t.lt(180 - angle_C)
+                t.fd(side_b)
+                t.goto(start_pos)
+                # --end triangle
 
-    1. Write a defintion to replace the lines between the comments (begin triangle and end triangle) in the code above.
+                s.exitonclick()
 
-    .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        .. tab-item:: Q
 
-            .. tab-set::
+            A definition for a scalene triangle.
+                                         
+            .. code-block:: python
 
-                .. tab-item:: Q1
+                import turtle
 
-                    Write a defintion to replace the lines between the comments (begin triangle and end triangle) in the code above.
+                s = turtle.Screen()
+                s.bgcolor("white")
+                s.title("Grid")
+                s.setup(width=800, height=600, startx=0, starty=0)
 
-                    .. code-block:: python
-
-                        import turtle
-
-                        s = turtle.Screen()
-                        s.bgcolor("white")
-                        s.title("Grid")
-                        s.setup(width=800, height=600, startx=0, starty=0)
-
-                        t = turtle.Turtle()
-                        t.speed(5)
+                t = turtle.Turtle()
+                t.speed(5)
 
 
-                        def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h):
-                            t.pu()
-                            t.goto(start_pos)
-                            t.pd()
-                            t.seth(start_h)
+                def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h):
+                    t.pu()
+                    t.goto(start_pos)
+                    t.pd()
+                    t.seth(start_h)
 
-                            t.fd(side_a)
-                            t.lt(180 - angle_C)
-                            t.fd(side_b)
-                            t.goto(start_pos)
+                    t.fd(side_a)
+                    t.lt(180 - angle_C)
+                    t.fd(side_b)
+                    t.goto(start_pos)
 
 
-                        scalene(t, side_a=100, angle_C=60, side_b=150, start_pos=(20, 30), start_h=15)
+                scalene(t, side_a=100, angle_C=60, side_b=150, start_pos=(20, 30), start_h=15)
 
-                        s.exitonclick()
+                s.exitonclick()
 
 ----
 
@@ -152,7 +149,7 @@ Isosceles triangle
 
 .. admonition:: Tasks
 
-    1. Write a defintion to replace the lines between the comments (begin triangle and end triangle) in the code above.
+    1. Write a definition  to replace the lines between the comments (begin triangle and end triangle) in the code above.
 
     .. dropdown::
             :icon: codescan
@@ -163,7 +160,7 @@ Isosceles triangle
 
                 .. tab-item:: Q1
 
-                    Write a defintion to replace the lines between the comments (begin triangle and end triangle) in the code above.
+                    Write a definition  to replace the lines between the comments (begin triangle and end triangle) in the code above.
 
                     .. code-block:: python
 
@@ -251,7 +248,7 @@ Isosceles triangle at any angle
 
 .. admonition:: Tasks
 
-    1. Write a defintion to replace the lines between the comments (begin triangle and end triangle) in the code above.
+    1. Write a definition  to replace the lines between the comments (begin triangle and end triangle) in the code above.
 
     .. dropdown::
             :icon: codescan
@@ -262,7 +259,7 @@ Isosceles triangle at any angle
 
                 .. tab-item:: Q1
 
-                    Write a defintion to replace the lines between the comments (begin triangle and end triangle) in the code above.
+                    Write a definition  to replace the lines between the comments (begin triangle and end triangle) in the code above.
 
                     .. code-block:: python
 
@@ -341,7 +338,7 @@ Equilateral triangles
 
 .. admonition:: Tasks
 
-    1. Write a defintion to replace the lines between the comments (begin triangle and end triangle) in the code above.
+    1. Write a definition  to replace the lines between the comments (begin triangle and end triangle) in the code above.
 
     .. dropdown::
             :icon: codescan
@@ -352,7 +349,7 @@ Equilateral triangles
 
                 .. tab-item:: Q1
 
-                    Write a defintion to replace the lines between the comments (begin triangle and end triangle) in the code above.
+                    Write a definition  to replace the lines between the comments (begin triangle and end triangle) in the code above.
 
                     .. code-block:: python
 
