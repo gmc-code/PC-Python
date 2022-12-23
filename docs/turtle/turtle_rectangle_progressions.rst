@@ -415,45 +415,98 @@ Adding pen colour and fill colour parameters
 | In the code below, ``rectangle(t, length=400, width=300, start_pos=(-100, -150), start_h=10, penw=5, penc="black", fillc="green")`` draws a rectangle of 400 by 300 at (x=-100, y=-150) with a black pencolor, a green fillcolor, using a pensize of 5.
 | The code needs to check the **fillc** argument since setting a fillcolor to **None** will throw an error.
 
-.. code-block:: python
+.. admonition:: Code Completion
 
-    import turtle
+    .. tab-set::
 
-    s = turtle.Screen()
-    s.bgcolor("white")
-    s.title("Grid")
-    s.setup(width=800, height=600, startx=0, starty=0)
+        .. tab-item:: Q
 
-    t = turtle.Turtle()
-    t.speed(0)
+            1. Complete the code to draw a rectangle of side length 120 and width 50 at (20, 30).
+                         
+                .. code-block:: python
 
+                    import turtle
 
-    def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
-        t.pu()
-        t.goto(start_pos)
-        t.pd()
-        t.seth(start_h)
+                    s = turtle.Screen()
+                    s.bgcolor("white")
+                    s.title("Grid")
+                    s.setup(width=800, height=600, startx=0, starty=0)
 
-        t.pensize(penw)
-        t.pencolor(penc)
-
-        if fillc is not None:
-            t.fillcolor(fillc)
-            t.begin_fill()
-
-        for _ in range(2):
-            t.fd(length)
-            t.lt(90)
-            t.fd(width)
-            t.lt(90)
-
-        if fillc is not None:
-            t.end_fill()
+                    t = turtle.Turtle()
+                    t.speed(0)
 
 
-    rectangle(t, length=400, width=300, start_pos=(-100, -150), start_h=10, penw=5, penc="black", fillc="green")
+                    def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, ?=1, ??="black", ???=None):
+                        t.pu()
+                        t.goto(start_pos)
+                        t.pd()
+                        t.seth(start_h)
 
-    s.exitonclick()
+                        t.pensize(?)
+                        t.pencolor(??)
+
+                        if ??? is not None:
+                            t.fillcolor(???)
+                            t.begin_fill()
+
+                        for _ in range(2):
+                            t.fd(length)
+                            t.lt(90)
+                            t.fd(width)
+                            t.lt(90)
+
+                        if ??? is not None:
+                            t.end_fill()
+
+
+                    rectangle(t, length=400, width=300, start_pos=(-100, -150), start_h=10, penw=5, penc="black", fillc="green")
+
+                    s.exitonclick()
+
+
+        .. tab-item:: Ans
+
+            1. Completed code to draw a rectangle of side length 120 and width 50 at (20, 30).
+                         
+                .. code-block:: python
+
+                    import turtle
+
+                    s = turtle.Screen()
+                    s.bgcolor("white")
+                    s.title("Grid")
+                    s.setup(width=800, height=600, startx=0, starty=0)
+
+                    t = turtle.Turtle()
+                    t.speed(0)
+
+
+                    def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
+                        t.pu()
+                        t.goto(start_pos)
+                        t.pd()
+                        t.seth(start_h)
+
+                        t.pensize(penw)
+                        t.pencolor(penc)
+
+                        if fillc is not None:
+                            t.fillcolor(fillc)
+                            t.begin_fill()
+
+                        for _ in range(2):
+                            t.fd(length)
+                            t.lt(90)
+                            t.fd(width)
+                            t.lt(90)
+
+                        if fillc is not None:
+                            t.end_fill()
+
+
+                    rectangle(t, length=400, width=300, start_pos=(-100, -150), start_h=10, penw=5, penc="black", fillc="green")
+
+                    s.exitonclick()
 
 ----
 
