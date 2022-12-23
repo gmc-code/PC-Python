@@ -291,6 +291,7 @@ Definitions: using a def block to draw a rectangle
                     t = turtle.Turtle()
                     t.speed(5)
 
+
                     def rectangle(t, ?=40, ??=30, ???=(0, 0), ????=0):
                         t.pu()
                         t.goto(???)
