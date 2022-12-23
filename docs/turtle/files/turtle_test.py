@@ -1,29 +1,24 @@
 import turtle
 
 s = turtle.Screen()
-s.bgcolor("white")
-s.title("Grid")
-s.setup(width=800, height=600, startx=0, starty=0)
-s.tracer(0, 0)
+s.bgpic("docs/turtle/images/mario.gif")
+s.title("Turtle Screen")
+s.setup(width=800, height=600, startx=40, starty=20)
 
+# turtle drawing
 t = turtle.Turtle()
-t.speed(0)
+t.shapesize(10, 10, 12)
+t.color("blue")
+t.pensize(10)
+t.penup(); t.setpos(-400, -250); t.pendown()
+t.fd(800)
 
+s.screensize(canvwidth=1200, canvheight=800, bg="yellow")
 
+# same turtle - new drawing
+t.color("red")
+t.pensize(10)
+t.penup(); t.setpos(-400, -285); t.pendown()
+t.fd(800)
 
-def square(t, length=50, start_pos=(0, 0), start_h=0):
-    t.pu()
-    t.goto(start_pos)
-    t.pd()
-    t.seth(start_h)
-    for _ in range(4):
-        t.fd(length)
-        t.lt(90)
-
-
-square(t)
-square(t, length=50, start_pos=(20, 30))
-square(t, length=250, start_pos=(-300, -200), start_h=20)
-
-# s.update()
-s.exitonclick()
+turtle.done()

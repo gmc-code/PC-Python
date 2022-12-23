@@ -21,7 +21,7 @@ Screen background gif
     | If picname is "nopic", delete background image, if present. e.g s.bgpic("nopic")
     | If picname is None, return the filename of the current background image.
     | e.g print(s.bgpic(picname=None))
-
+    | When ``s = turtle.Screen()``, ``s.bgpic(...)`` can be used as below.
 
 | The code below sets the gackground image to a gif.
 
@@ -32,7 +32,7 @@ Screen background gif
     s = turtle.Screen()
     s.bgpic("docs/turtle/images/mario.gif")
     s.title("Mario")
-    s.setup (width=800, height=600, startx=0, starty=0)
+    s.setup(width=800, height=600, startx=0, starty=0)
 
     # turtle drawing to go here
 
@@ -118,7 +118,7 @@ Clear screen
     | Also **turtle.clear()**
     | Delete all drawings and all turtles from the TurtleScreen.
     | Reset the now empty Screen to its initial state: white background, no background image, no event bindings and tracing on.
-
+    | When ``s = turtle.Screen()``, ``s.clear()`` can be used as below.
 
 .. code-block:: python
 
@@ -169,6 +169,7 @@ Reset screen
 
     | Also **turtle.reset()**
     | Reset all turtles on the Screen to their initial state, clearing their drawings.
+    | When ``s = turtle.Screen()``, ``s.resetscreen()`` can be used as below.
 
 .. code-block:: python
 
@@ -290,8 +291,9 @@ Reset screensize
     | If no arguments are given, return current (canvaswidth, canvasheight). 
     | Else, resize the canvas the turtles are drawing on without altering the drawings. 
     | Scrollbars are added, to observe hidden parts of the canvas previously outside the canvas.
+    | When ``s = turtle.Screen()``, ``s.screensize(...)`` can be used as below.
 
-| The code line below, ``turtle.screensize(canvwidth=1200, canvheight=800, bg="yellow")``, creates scrollbars and extends the canvas which is drawn in yellow around the background gif.
+| The code line below, ``s.screensize(canvwidth=1200, canvheight=800, bg="yellow")``, creates scrollbars and extends the canvas which is drawn in yellow around the background gif.
 
 .. code-block:: python
 
@@ -310,7 +312,7 @@ Reset screensize
     t.penup(); t.setpos(-400, -250); t.pendown()
     t.fd(800)
 
-    turtle.screensize(canvwidth=1200, canvheight=800, bg="yellow")
+    s.screensize(canvwidth=1200, canvheight=800, bg="yellow")
 
     # same turtle - new drawing
     t.color("red")

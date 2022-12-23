@@ -60,7 +60,7 @@ Screen colours
     | If colormode is 1, a colour, as a rgb tuple, is written with values from 0 to 1, such as (0.2, 0.8, 0.55).
     | If colormode is 255, a colour, as a rgb tuple, is written with values from 0 to 255, such as (50, 193, 143).
     | If cmode=None, the cmode value is returned. 
-
+    | When ``s = turtle.Screen()``, ``s.colormode(cmode=255)`` can be used as below.
 
 | Set the screen color.
 
@@ -70,10 +70,10 @@ Screen colours
     | Color stings can be a named color such as "orange" or a hex color such as "#800080".
     | If colormode is 1, a colour is a rgb tuple such as (0.2, 0.8, 0.55),
     | If colormode is 255, a colour is a rgb tuple such as (50, 193, 143)
+    | When ``s = turtle.Screen()``, ``s.bgcolor("white")`` can be used as below.
 
 
 | The code below sets the background to white. 
-| ``turtle.bgcolor("white")`` or ``s.bgcolor("white")`` can be used below.
 
 .. code-block:: python
 
@@ -88,7 +88,7 @@ Screen colours
 
 
 | Change the colormode to 255, so that the background can be set using the rgb tuple (50, 193, 143).
-| ``turtle.colormode(cmode=255)`` or ``s.colormode(cmode=255)`` can be used below.
+
 
 .. code-block:: python
 
@@ -158,6 +158,7 @@ Screen title
 .. py:function:: turtle.title(titlestring)
 
     | **titlestring** - a string that is shown in the titlebar of the turtle graphics window
+    | When ``s = turtle.Screen()``, ``s.title("Turtle Screen")`` can be used as below.
 
 .. code-block:: python
 
@@ -217,6 +218,7 @@ Screen size and position
     | **startx** - if positive, start position in pixels from the left edge of the screen; if negative from the right edge, if None, center window horizontally
     | **starty** - if positive, start position in pixels from the top edge of the screen; if negative from the bottom edge, if None, center window vertically
     | Default values are: width = 0.5; height = 0.75; startx = None; starty = None
+    | When ``s = turtle.Screen()``, ``s.setup()`` can be used as below.
 
 
 .. code-block:: python
@@ -300,6 +302,7 @@ Exit on click
 
     | Also **turtle.bye()**
     | Shut the turtle graphics window when the mouse is clicked on the Screen.
+    | When ``s = turtle.Screen()``, ``s.exitonclick()`` can be used as below.
 
 
 .. code-block:: python
