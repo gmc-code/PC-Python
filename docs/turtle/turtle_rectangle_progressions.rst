@@ -46,18 +46,18 @@ Sequencing: steps to draw a rectangle
                 t.speed(5)
 
                 t.pu()
-              X(20, 30)
+                X(20, 30)
                 t.pd()
                 t.seth(0)
 
-              X(120)
-              X(90)
-              X(50)
-              X(90)
-              X(120)
-              X(90)
-              X(50)
-              X(90)
+                X(120)
+                X(90)
+                X(50)
+                X(90)
+                X(120)
+                X(90)
+                X(50)
+                X(90)
 
                 s.exitonclick()
 
@@ -166,15 +166,15 @@ Iteration: using a for-loop to draw a rectangle
                 t.speed(5)
 
                 t.pu()
-              X(20, 30)
+                X(20, 30)
                 t.pd()
                 t.seth(0)
 
                 for _ in range(X):
-                  X(120)
-                  X(90)
-                  X(50)
-                  X(90)
+                    X(120)
+                    X(90)
+                    X(50)
+                    X(90)
                     
                 s.exitonclick()
 
