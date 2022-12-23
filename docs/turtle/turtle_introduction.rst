@@ -6,8 +6,9 @@ Introduction to turtle
 | The turtle can draw on the screen as it moves.
 
 | This section begins with some basic syntax for the screen and turtles.
-| Basic shapes, squares, rectangles and triangles, are drawn via sequencing, iteration and definitions.
-| The houses introduces defintion documentation in a module.
+| Basic shapes, squares, rectangles and triangles, are drawn via **sequencing**, **iteration** and **definitions**.
+| The houses section puts togther **modules** that group similar code together.
+| Module code is **documented** using a standard documentation layout.
 
 ----
 

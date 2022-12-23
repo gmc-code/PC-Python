@@ -4,9 +4,9 @@ Turtle rectangle progressions
 
 | The code progressions below draw a rectangle.
 | With each version, an improvement in code structure is made.
-| Firstly, only sequencing is used, with no iteration.
-| Secondly, iteration, using a for-loop, reduces code duplication.
-| Thirdly, a definition block with parameters allows for code reuse via the use of arguments.
+| Firstly, only **sequencing** is used, with no iteration.
+| Secondly, **iteration**, using a for-loop, reduces code duplication.
+| Thirdly, a **definition** block with parameters allows for code reuse via the use of arguments.
 
 ----
 
@@ -180,7 +180,6 @@ Definitions: using a def block to draw a rectangle
 | The function has parameters to specify the side length and the staring position of the bottom left vertex.
 | The function also requires the turtle to be passed as an argument so it can be referred to.
 | Before the for-loop, the turtle is repositioned without drawing the movement; **penup** and **pendown** are needed for that.
-| The initial heading has been left out of the rectangle function, but it can be set prior to using the rectangle function.
 
 .. py:function:: rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0)
 
@@ -191,8 +190,8 @@ Definitions: using a def block to draw a rectangle
     | **start_h** - start heading; default 0 degrees
     
 | In the code below, ``rectangle(t)`` draws a default rectangle.
-| ``rectangle(t, length=120, width=50, start_pos=(20, 30))`` draws a rectangle of 120 by 50 at (x=20, y=30).
-| ``rectangle(t, length=400, width=300, start_pos=(-300, -100), start_h=10)`` draws a rectangle of 400 by 300 at (x=-300, y=-100) with an angle of 10 degrees
+| ``rectangle(t, length=120, width=50, start_pos=(20, 30))`` draws a rectangle of 120 by 50 at (20, 30).
+| ``rectangle(t, length=400, width=300, start_pos=(-300, -100), start_h=10)`` draws a rectangle of 400 by 300 at (-300, -100) with an angle of 10 degrees.
     
 .. code-block:: python
 

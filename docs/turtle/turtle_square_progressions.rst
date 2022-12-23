@@ -4,9 +4,9 @@ Turtle square progressions
 
 | The code progressions below draw a square.
 | With each version, an improvement in code structure is made.
-| Firstly, only sequencing is used, with no iteration.
-| Secondly, iteration, using a for-loop, reduces code duplication.
-| Thirdly, a definition block with parameters allows for code reuse via the use of arguments.
+| Firstly, only **sequencing** is used, with no iteration.
+| Secondly, **iteration**, using a for-loop, reduces code duplication.
+| Thirdly, a **definition** block with parameters allows for code reuse via the use of arguments.
 
 ----
 
@@ -17,8 +17,8 @@ Sequencing: steps to draw a square
 | The code below draws a square of side length 50 at coordinates (20, 30).
 | The start direction, eastwards, is set by: ``t.seth(0)``
 | The start position, at (20, 30), is set by: ``t.goto(20, 30)``. 
-| ``t.pu()`` and ``t.pd()`` are used either side of it to avoid line drawing when repositioning the turtle.
-| A line is drawn forwards by: ``t.fd(50)``.
+| ``t.pu()`` and ``t.pd()`` are used either side of ``t.goto(20, 30)`` to avoid line drawing when repositioning the turtle.
+| A line is drawn forwards, in the direction the turtle is heading, by: ``t.fd(50)``.
 | The turtle then turns to the left by: ``t.lt(90)``.
 | The ``t.fd(50)`` and ``t.lt(90)`` are then repeated 3 more times for the other three sides.
 
@@ -199,6 +199,7 @@ Definitions: using a def block to draw a square
     | **start_h** - start heading; default 0
     
 | In the code below, ``square(t)`` draws a default square.
+| The square function's parameters that have default values don't need to be passed as arguments when the the function is called.
 | ``square(t, length=50, start_pos=(20, 30))`` draws a square of length 50 at (x=20, y=30).
 | ``square(t, length=250, start_pos=(-300, -200), start_h=20)`` draws a square of length 250 at (x=-300, y=-200) angled 20 degrees.
     
