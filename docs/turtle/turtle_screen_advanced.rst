@@ -118,7 +118,7 @@ Clear screen
     | Also **turtle.clear()**
     | Delete all drawings and all turtles from the TurtleScreen.
     | Reset the now empty Screen to its initial state: white background, no background image, no event bindings and tracing on.
-    | When ``s = turtle.Screen()``, ``s.clear()`` can be used as below.
+    | When ``s = turtle.Screen()``, ``s.clearscreen()`` can be used as below.
 
 .. code-block:: python
 
@@ -355,6 +355,9 @@ Animation control
     | n - nonnegative integer; higher is faster; 0 to turn off tracing
     | delay - nonnegative integer
     | If n is given, only each n-th regular screen update is really performed. When called without arguments, returns the currently stored value of n. Second argument sets delay value (see delay()).
+    | When ``s = turtle.Screen()``, ``s.tracer(0, 0)`` can be used as below.
+
+----
 
 | Set the delay for update drawings.
 
@@ -362,12 +365,18 @@ Animation control
  
     | Set or return the drawing delay in milliseconds. This is approximately the time interval between two consecutive canvas updates.
     | delay - positive integer
+    | When ``s = turtle.Screen()``, ``s.delay(1000)`` can be used as below.
+
+----
 
 | Update the screen. Use when tracing has been set to 0 to turn it off. 
 
 .. py:function:: turtle.update()
  
     | Perform a TurtleScreen update. To be used when tracer is turned off.
+    | When ``s = turtle.Screen()``, ``s.update()`` can be used as below.
+
+----
 
 | The code below turns off turtle animation and produces the image rapidly.
 | Try changing the tracer to ``s.tracer(1, 100)`` to compare.
