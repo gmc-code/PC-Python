@@ -58,6 +58,7 @@ Documenting the module
 | The arguments are described under the heading: Args.
 | Consider the string: ``length (int, optional): side lengths. Defaults to 50.``
 | The name of the argument is followed by its type in brackets along with "optional" if a default value has been given. A short description of the argument follows. Any default values are stated.
+| None of the functions below return values, so there is no need for a Return section in the doc strings.
 
 ----
 
