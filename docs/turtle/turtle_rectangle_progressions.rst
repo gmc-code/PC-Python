@@ -24,9 +24,8 @@ Sequencing: steps to draw a rectangle
 | The turtle then turns to the left by: ``t.lt(90)``.
 | Then the last 2 sides are drawn by doing the same 4 steps again.
 
-----
 
-.. admonition:: Tasks
+.. admonition:: Code Completion
 
     .. tab-set::
 
@@ -47,14 +46,14 @@ Sequencing: steps to draw a rectangle
                     t.speed(5)
 
                     t.pu()
-                    t.goto(20, 30)
+                    ?(20, 30)
                     t.pd()
                     t.seth(0)
 
-                    t.fd(120)
-                    t.lt(90)
-                    t.fd(50)
-                    t.lt(90)
+                    ?(120)
+                    ?(90)
+                    ?(50)
+                    ?(90)
                     ?(120)
                     ?(90)
                     ?(50)
