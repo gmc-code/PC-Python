@@ -31,67 +31,67 @@ Sequencing: steps to draw a rectangle
 
         .. tab-item:: Q
 
-            1. Complete the code to draw a rectangle of side length 120 and width 50 at (20, 30).
+            Complete the code to draw a rectangle of side length 120 and width 50 at (20, 30).
 
-                .. code-block:: python
+            .. code-block:: python
 
-                    import turtle
+                import turtle
 
-                    s = turtle.Screen()
-                    s.bgcolor("white")
-                    s.title("Grid")
-                    s.setup(width=800, height=600, startx=0, starty=0)
+                s = turtle.Screen()
+                s.bgcolor("white")
+                s.title("Grid")
+                s.setup(width=800, height=600, startx=0, starty=0)
 
-                    t = turtle.Turtle()
-                    t.speed(5)
+                t = turtle.Turtle()
+                t.speed(5)
 
-                    t.pu()
-                    ?(20, 30)
-                    t.pd()
-                    t.seth(0)
+                t.pu()
+              X(20, 30)
+                t.pd()
+                t.seth(0)
 
-                    ?(120)
-                    ?(90)
-                    ?(50)
-                    ?(90)
-                    ?(120)
-                    ?(90)
-                    ?(50)
-                    ?(90)
+              X(120)
+              X(90)
+              X(50)
+              X(90)
+              X(120)
+              X(90)
+              X(50)
+              X(90)
 
-                    s.exitonclick()
+                s.exitonclick()
 
         .. tab-item:: Ans
 
-            1. Completed code to draw a rectangle of side length 120 and width 50 at (20, 30).
+            Completed code to draw a rectangle of side length 120 and width 50 at (20, 30).
 
-                .. code-block:: python
+            .. code-block:: python
 
-                    import turtle
+                import turtle
 
-                    s = turtle.Screen()
-                    s.bgcolor("white")
-                    s.title("Grid")
-                    s.setup(width=800, height=600, startx=0, starty=0)
+                s = turtle.Screen()
+                s.bgcolor("white")
+                s.title("Grid")
+                s.setup(width=800, height=600, startx=0, starty=0)
 
-                    t = turtle.Turtle()
-                    t.speed(5)
+                t = turtle.Turtle()
+                t.speed(5)
 
-                    t.pu()
-                    t.goto(20, 30)
-                    t.pd()
-                    t.seth(0)
+                t.pu()
+                t.goto(20, 30)
+                t.pd()
+                t.seth(0)
 
-                    t.fd(120)
-                    t.lt(90)
-                    t.fd(50)
-                    t.lt(90)
-                    t.fd(120)
-                    t.lt(90)
-                    t.fd(50)
-                    t.lt(90)
+                t.fd(120)
+                t.lt(90)
+                t.fd(50)
+                t.lt(90)
+                t.fd(120)
+                t.lt(90)
+                t.fd(50)
+                t.lt(90)
 
-                    s.exitonclick()
+                s.exitonclick()
 
 
 ----
@@ -151,61 +151,61 @@ Iteration: using a for-loop to draw a rectangle
 
         .. tab-item:: Q
 
-            1. Complete the code to draw a rectangle of side length 120 and width 50 at (20, 30).
+            Complete the code to draw a rectangle of side length 120 and width 50 at (20, 30).
 
-                .. code-block:: python
+            .. code-block:: python
 
-                    import turtle
+                import turtle
 
-                    s = turtle.Screen()
-                    s.bgcolor("white")
-                    s.title("Grid")
-                    s.setup(width=800, height=600, startx=0, starty=0)
+                s = turtle.Screen()
+                s.bgcolor("white")
+                s.title("Grid")
+                s.setup(width=800, height=600, startx=0, starty=0)
 
-                    t = turtle.Turtle()
-                    t.speed(5)
+                t = turtle.Turtle()
+                t.speed(5)
 
-                    t.pu()
-                    ?(20, 30)
-                    t.pd()
-                    t.seth(0)
+                t.pu()
+              X(20, 30)
+                t.pd()
+                t.seth(0)
 
-                    for _ in range(?):
-                        ?(120)
-                        ?(90)
-                        ?(50)
-                        ?(90)
-                        
-                    s.exitonclick()
+                for _ in range(X):
+                  X(120)
+                  X(90)
+                  X(50)
+                  X(90)
+                    
+                s.exitonclick()
 
         .. tab-item:: Ans
 
-            1. Completed code to draw a rectangle of side length 120 and width 50 at (20, 30).
+            Completed code to draw a rectangle of side length 120 and width 50 at (20, 30).
 
-                .. code-block:: python
+            .. code-block:: python
 
-                    import turtle
+                import turtle
 
-                    s = turtle.Screen()
-                    s.bgcolor("white")
-                    s.title("Grid")
-                    s.setup(width=800, height=600, startx=0, starty=0)
+                s = turtle.Screen()
+                s.bgcolor("white")
+                s.title("Grid")
+                s.setup(width=800, height=600, startx=0, starty=0)
 
-                    t = turtle.Turtle()
-                    t.speed(5)
+                t = turtle.Turtle()
+                t.speed(5)
 
-                    t.pu()
-                    t.goto(20, 30)
-                    t.pd()
-                    t.seth(0)
+                t.pu()
+                t.goto(20, 30)
+                t.pd()
+                t.seth(0)
 
-                    for _ in range(2):
-                        t.fd(120)
-                        t.lt(90)
-                        t.fd(50)
-                        t.lt(90)
-                        
-                    s.exitonclick()
+                for _ in range(2):
+                    t.fd(120)
+                    t.lt(90)
+                    t.fd(50)
+                    t.lt(90)
+                    
+                s.exitonclick()
 
 ----
 
@@ -277,76 +277,76 @@ Definitions: using a def block to draw a rectangle
 
         .. tab-item:: Q
 
-            1. Complete the code to draw a rectangle of side length 120 and width 50 at (20, 30).
-        
-                .. code-block:: python
+            Complete the code to draw a rectangle of side length 120 and width 50 at (20, 30).
+    
+            .. code-block:: python
 
-                    import turtle
+                import turtle
 
-                    s = turtle.Screen()
-                    s.bgcolor("white")
-                    s.title("Grid")
-                    s.setup(width=800, height=600, startx=0, starty=0)
+                s = turtle.Screen()
+                s.bgcolor("white")
+                s.title("Grid")
+                s.setup(width=800, height=600, startx=0, starty=0)
 
-                    t = turtle.Turtle()
-                    t.speed(5)
-
-
-                    def rectangle(t, ?=40, ??=30, ???=(0, 0), ????=0):
-                        t.pu()
-                        t.goto(???)
-                        t.pd()
-                        t.seth(????)
-
-                        for _ in range(2):
-                            t.fd(?)
-                            t.lt(90)
-                            t.fd(??)
-                            t.lt(90)
+                t = turtle.Turtle()
+                t.speed(5)
 
 
-                    rectangle(t)
-                    rectangle(t, length=120, width=50, start_pos=(20, 30))
-                    rectangle(t, length=400, width=300, start_pos=(-300, -100), start_h=10)
+                def rectangle(t, X=40, XX=30, XXX=(0, 0), XXXX=0):
+                    t.pu()
+                    t.goto(XXX)
+                    t.pd()
+                    t.seth(XXXX)
 
-                    s.exitonclick()
+                    for _ in range(2):
+                        t.fd(X)
+                        t.lt(90)
+                        t.fd(XX)
+                        t.lt(90)
+
+
+                rectangle(t)
+                rectangle(t, length=120, width=50, start_pos=(20, 30))
+                rectangle(t, length=400, width=300, start_pos=(-300, -100), start_h=10)
+
+                s.exitonclick()
 
 
         .. tab-item:: Ans
 
-            1. Completed code to draw a rectangle of side length 120 and width 50 at (20, 30).
-        
-                .. code-block:: python
+            Completed code to draw a rectangle of side length 120 and width 50 at (20, 30).
+    
+            .. code-block:: python
 
-                    import turtle
+                import turtle
 
-                    s = turtle.Screen()
-                    s.bgcolor("white")
-                    s.title("Grid")
-                    s.setup(width=800, height=600, startx=0, starty=0)
+                s = turtle.Screen()
+                s.bgcolor("white")
+                s.title("Grid")
+                s.setup(width=800, height=600, startx=0, starty=0)
 
-                    t = turtle.Turtle()
-                    t.speed(5)
-
-
-                    def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0):
-                        t.pu()
-                        t.goto(start_pos)
-                        t.pd()
-                        t.seth(start_h)
-
-                        for _ in range(2):
-                            t.fd(length)
-                            t.lt(90)
-                            t.fd(width)
-                            t.lt(90)
+                t = turtle.Turtle()
+                t.speed(5)
 
 
-                    rectangle(t)
-                    rectangle(t, length=120, width=50, start_pos=(20, 30))
-                    rectangle(t, length=400, width=300, start_pos=(-300, -100), start_h=10)
+                def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0):
+                    t.pu()
+                    t.goto(start_pos)
+                    t.pd()
+                    t.seth(start_h)
 
-                    s.exitonclick()
+                    for _ in range(2):
+                        t.fd(length)
+                        t.lt(90)
+                        t.fd(width)
+                        t.lt(90)
+
+
+                rectangle(t)
+                rectangle(t, length=120, width=50, start_pos=(20, 30))
+                rectangle(t, length=400, width=300, start_pos=(-300, -100), start_h=10)
+
+                s.exitonclick()
 
 ----
 
@@ -438,17 +438,17 @@ Adding pen colour and fill colour parameters
 
 
                 def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, 
-                                ?=1, ??="black", ???=None):
+                              X=1, XX="black", XXX=None):
                     t.pu()
                     t.goto(start_pos)
                     t.pd()
                     t.seth(start_h)
 
-                    t.pensize(?)
-                    t.pencolor(??)
+                    t.pensize(X)
+                    t.pencolor(XX)
 
-                    if ??? is not None:
-                        t.fillcolor(???)
+                    if XXX is not None:
+                        t.fillcolor(XXX)
                         t.begin_fill()
 
                     for _ in range(2):
@@ -457,7 +457,7 @@ Adding pen colour and fill colour parameters
                         t.fd(width)
                         t.lt(90)
 
-                    if ??? is not None:
+                    if XXX is not None:
                         t.end_fill()
 
 
