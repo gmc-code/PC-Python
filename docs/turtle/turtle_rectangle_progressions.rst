@@ -438,7 +438,7 @@ Adding pen colour and fill colour parameters
 
 
                 def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, 
-                              X=1, XX="black", XXX=None):
+                                X=1, XX="black", XXX=None):
                     t.pu()
                     t.goto(start_pos)
                     t.pd()
