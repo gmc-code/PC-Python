@@ -49,6 +49,22 @@ Shape module functions
 | rather than the full ``square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)``.
 
 ----
+Documenting the module
+-----------------------
+
+| Documentation in the module follows the standard Google python docs format.
+
+| The first line describes the use of the function.
+| The arguments are described under the heading: Args.
+| Consider the string: ``length (int, optional): side lengths. Defaults to 50.``
+| The name of the argument is followed by its type in brackets along with "optional" if a default value has been given. A short description of the argument follows. Any default values are stated.
+
+----
+
+Square
+----------
+
+| Syntax for the square function.
 
 .. py:function:: square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)
 
@@ -59,6 +75,31 @@ Shape module functions
     | **penw** - pen size; default 1
     | **penc** - pen color; default is black
     | **fillc** - fill color; default is None
+
+
+| The code snippet below shows the doc string for the square function.
+
+.. code-block:: python
+
+    def square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
+        """draw a square
+
+        Args:
+            t (turtle): turtle object
+            length (int, optional): side lengths. Defaults to 50.
+            start_pos (tuple, optional): start position. Defaults to (0, 0).
+            start_h (int, optional): start heading. Defaults to 0.
+            penw (int, optional): pen size. Defaults to 1.
+            penc (str, optional): pen color. Defaults to "black".
+            fillc (str, optional): fill color. Defaults to "red".
+
+        """
+----
+
+Rectangle
+------------
+
+| Syntax for the rectangle function.
 
 
 .. py:function:: rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)
@@ -72,6 +113,12 @@ Shape module functions
     | **penc** - pen color; default is black
     | **fillc** - fill color; default is None
 
+----
+
+Scalene
+----------
+
+| Syntax for the scalene function.
 
 .. py:function:: scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)
 
@@ -85,6 +132,12 @@ Shape module functions
     | **penc** - pen color; default is black
     | **fillc** - fill color; default is None
 
+----
+
+Isosceles
+----------
+
+| Syntax for the isosceles function.
 
 .. py:function:: isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)
 
@@ -97,6 +150,12 @@ Shape module functions
     | **penc** - pen color; default is black
     | **fillc** - fill color; default is None
 
+----
+
+Equilateral
+----------
+
+| Syntax for the equilateral function.
 
 .. py:function:: equilateral(t, side, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)
 
@@ -108,36 +167,52 @@ Shape module functions
     | **penc** - pen color; default is black
     | **fillc** - fill color; default is None
 
+
+.. admonition:: Code Completion
+
+    .. tab-set::
+
+        .. tab-item:: Q
+
+            Complete the doc string for the equilateral triangle function using the template provided.
+
+            .. code-block:: python
+
+                def equilateral(t, side, start_pos=(0, 0), start_h=0, 
+                                penw=1, penc="black", fillc=None):
+                    """_summary_
+
+                    Args:
+                        t (_type_): _description_
+                        side (_type_): _description_
+                        start_pos (_type_, optional): start position. Defaults to _value_.
+                        start_h (int, optional): _description_. Defaults to 0.
+                        penw (int, optional): _description_. Defaults to 1.
+                        penc (str, optional): _description_. Defaults to "black".
+                        fillc (_type_, optional): _description_. Defaults to None.
+                    """
+
+        .. tab-item:: Ans
+
+            Completed doc string for the equilateral triangle function.
+
+            .. code-block:: python
+
+                def equilateral(t, side, start_pos=(0, 0), start_h=0, 
+                                penw=1, penc="black", fillc=None):
+                    """Draw an equilateral triangle
+
+                    Args:
+                        t (class turtle.Turtle): turtle instance.
+                        side (int): side lengths.
+                        start_pos (tuple, optional): start position. Defaults to (0, 0).
+                        start_h (int, optional): start heading. Defaults to 0.
+                        penw (int, optional): pen size. Defaults to 1.
+                        penc (str, optional): pen color. Defaults to "black".
+                        fillc (str, optional): fill color. Defaults to None.
+                    """               
 ----
 
-Documenting the module
------------------------
-
-| Documentation in the module follows the standard Google python docs format.
-| The code snippet below shows the doc string for the square function.
-
-| The first line describes the use of the function.
-| The arguments are described under the heading: Args.
-| Consider the string: ``length (int, optional): side lengtsh. Defaults to 50.``
-| The name of the argument is followed by its type in brackets along with "optional" if a default value has been given. A short description of the argument follows. Any default values are stated.
-
-.. code-block:: python
-
-    def square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
-        """draw a square
-
-        Args:
-            t (turtle): turtle object
-            length (int, optional): side lengtsh. Defaults to 50.
-            start_pos (tuple, optional): start position. Defaults to (0, 0).
-            start_h (int, optional): start heading. Defaults to 0.
-            penw (int, optional): pen size. Defaults to 1.
-            penc (str, optional): pen color. Defaults to "black".
-            fillc (str, optional): fill color. Defaults to "red".
-
-        """
-
-----
 
 .. admonition:: Tasks
 
@@ -157,7 +232,7 @@ Documenting the module
 
                         Args:
                             t (turtle): turtle instance
-                            length (_type_, optional): side lengtsh. Defaults to _value_.
+                            length (_type_, optional): side lengths. Defaults to _value_.
                             width (_type_, optional): side widtsh. Defaults to _value_.
                             start_pos (_type_, optional): start position. Defaults to _value_.
                             start_h (_type_, optional): start heading. Defaults to _value_.
@@ -248,7 +323,7 @@ Documenting the module
 
                             Args:
                                 t (class turtle.Turtle): turtle instance.
-                                length (int, optional): side lengtsh. Defaults to 40.
+                                length (int, optional): side lengths. Defaults to 40.
                                 width (int, optional): side widtsh. Defaults to 30.
                                 start_pos (tuple, optional): start position coordinates. Defaults to (0, 0).
                                 start_h (int, optional): start heading. Defaults to 0.
@@ -312,7 +387,7 @@ Documenting the module
 
                             Args:
                                 t (class turtle.Turtle): turtle instance.
-                                side (int): side lengtsh.
+                                side (int): side lengths.
                                 start_pos (tuple, optional): start position. Defaults to (0, 0).
                                 start_h (int, optional): start heading. Defaults to 0.
                                 penw (int, optional): pen size. Defaults to 1.
