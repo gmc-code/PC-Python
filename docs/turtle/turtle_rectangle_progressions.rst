@@ -437,7 +437,8 @@ Adding pen colour and fill colour parameters
                     t.speed(0)
 
 
-                    def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, ?=1, ??="black", ???=None):
+                    def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, 
+                                    ?=1, ??="black", ???=None):
                         t.pu()
                         t.goto(start_pos)
                         t.pd()
@@ -460,7 +461,8 @@ Adding pen colour and fill colour parameters
                             t.end_fill()
 
 
-                    rectangle(t, length=400, width=300, start_pos=(-100, -150), start_h=10, penw=5, penc="black", fillc="green")
+                    rectangle(t, length=400, width=300, start_pos=(-100, -150), start_h=10, 
+                                penw=5, penc="black", fillc="green")
 
                     s.exitonclick()
 
@@ -482,7 +484,8 @@ Adding pen colour and fill colour parameters
                     t.speed(0)
 
 
-                    def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
+                    def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, 
+                                    penw=1, penc="black", fillc=None):
                         t.pu()
                         t.goto(start_pos)
                         t.pd()
@@ -505,7 +508,8 @@ Adding pen colour and fill colour parameters
                             t.end_fill()
 
 
-                    rectangle(t, length=400, width=300, start_pos=(-100, -150), start_h=10, penw=5, penc="black", fillc="green")
+                    rectangle(t, length=400, width=300, start_pos=(-100, -150), start_h=10, 
+                                penw=5, penc="black", fillc="green")
 
                     s.exitonclick()
 
@@ -538,7 +542,8 @@ Adding pen colour and fill colour parameters
                         t = turtle.Turtle()
                         t.speed(0)
 
-                        def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
+                        def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, 
+                                        penw=1, penc="black", fillc=None):
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
@@ -561,7 +566,8 @@ Adding pen colour and fill colour parameters
                                 t.end_fill()
 
 
-                        rectangle(t, length=150, width=250, start_pos=(-150, -250), start_h=0, penw=10, penc="purple", fillc="bisque")
+                        rectangle(t, length=150, width=250, start_pos=(-150, -250), start_h=0, 
+                                    penw=10, penc="purple", fillc="bisque")
 
 ----
 
