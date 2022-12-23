@@ -141,11 +141,13 @@ Documenting the module
 
 .. admonition:: Tasks
 
+     Replace _type_, _value_, _description_ and _summary_ with suitable text.
+
     .. tab-set::
 
         .. tab-item:: Q1
 
-            1. Complete the doc string for the rectangle function using the template provided. Replace _type_, _value_, _description_ and _summary_.
+            1. Complete the doc string for the rectangle function using the template provided.
 
                 .. code-block:: python
 
