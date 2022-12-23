@@ -120,8 +120,8 @@ Rectangle
 
         .. tab-item:: Q
 
-            Complete the doc string for the rectangle function using the template provided.
-            Replace _summary_, _type_, _description_ and _value_ with suitable text.
+            | Complete the doc string for the rectangle function using the template provided.
+            | Replace _summary_, _type_, _description_ and _value_ with suitable text.
 
             .. code-block:: python
 
@@ -185,8 +185,8 @@ Scalene
 
         .. tab-item:: Q
 
-            Complete the doc string for the scalene triangle function using the template provided.
-            Replace _summary_, _type_, _description_ and _value_ with suitable text.
+            | Complete the doc string for the scalene triangle function using the template provided.
+            | Replace _summary_, _type_, _description_ and _value_ with suitable text.
 
             .. code-block:: python
 
@@ -252,8 +252,8 @@ Isosceles
 
         .. tab-item:: Q
 
-            Complete the doc string for the isosceles triangle function using the template provided.
-            Replace _summary_, _type_, _description_ and _value_ with suitable text.
+            | Complete the doc string for the isosceles triangle function using the template provided.
+            | Replace _summary_, _type_, _description_ and _value_ with suitable text.
 
             .. code-block:: python
 
@@ -317,8 +317,8 @@ Equilateral
 
         .. tab-item:: Q
 
-            Complete the doc string for the equilateral triangle function using the template provided.
-            Replace _summary_, _type_, _description_ and _value_ with suitable text.
+            | Complete the doc string for the equilateral triangle function using the template provided.
+            | Replace _summary_, _type_, _description_ and _value_ with suitable text.
 
             .. code-block:: python
 
