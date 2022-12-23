@@ -1,28 +1,26 @@
-# import packages
 import turtle
-import random
 
-# global colors
-col = ['red', 'yellow', 'green', 'blue',
-	'white', 'black', 'orange', 'pink']
+s = turtle.Screen()
+s.bgcolor("white")
+s.title("Grid")
+s.setup(width=800, height=600, startx=0, starty=0)
 
-# method to call on timer
-def fxn():
-	global col
-	ind = random.randint(0, 7)
-
-	# set background color of the
-	# turtle screen randomly
-	sc.bgcolor(col[ind])
+t = turtle.Turtle()
+t.speed(5)
 
 
-# set screen
-sc = turtle.Screen()
-sc.setup(400, 300)
+def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0):
+    t.pu()
+    t.goto(start_pos)
+    t.pd()
+    t.seth(start_h)
 
-# loop for timer
-for i in range(10):
-	turtle.ontimer(fxn, t=400*(i+1))
+    t.fd(side_a)
+    t.lt(180 - angle_C)
+    t.fd(side_b)
+    t.goto(start_pos)
 
 
-turtle.done()
+scalene(t, side_a=100, angle_C=60, side_b=150, start_pos=(20, 30), start_h=15)
+
+s.exitonclick()

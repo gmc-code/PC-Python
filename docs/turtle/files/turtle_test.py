@@ -1,40 +1,35 @@
-"""draw triangle
-"""
-import turtle
-import houses as h
-from PIL import ImageGrab
-
 import turtle
 
 s = turtle.Screen()
 s.bgcolor("white")
-s.title("Turtle Screen")
-s.setup(width=800, height=600, startx=300, starty=300)
-s.tracer(0, 0)
-
-# turtle drawing to go here
+s.title("Grid")
+s.setup(width=800, height=600, startx=0, starty=0)
 
 t = turtle.Turtle()
-t.speed(0)
-
-h.windowed_house(t, length=210, height=160, start_pos=(-200, 20), windows="R")
-h.windowed_house(t, length=150, height=120, start_pos=(200, 20), windows="R")
-h.windowed_house(t, length=210, height=160, start_pos=(-390, 0), windows="LR")
-h.windowed_house(t, length=60, height=40, start_pos=(-100, 0), windows=None)
-h.windowed_house(t, length=80, height=50, start_pos=(-10, 0), windows="L")
-h.windowed_house(t, length=120, height=100, start_pos=(90, 0), windows="LR")
-
-t.ht()
-s.update()  
+t.speed(5)
 
 
-def fxn():
-    ImageGrab.grab((300, 300, 1100, 900)).save('test.png')
-      
-# call methods
-turtle.onkey(fxn,'space')
-  
-# to listen by the turtle
-turtle.listen()
+def square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
+    t.pu()
+    t.goto(start_pos)
+    t.pd()
+    t.seth(start_h)
+
+    t.pensize(penw)
+    t.pencolor(penc)
+
+    if fillc is not None:
+        t.fillcolor(fillc)
+        t.begin_fill()
+
+    for _ in range(4):
+        t.fd(length)
+        t.lt(90)
+
+    if fillc is not None:
+        t.end_fill()
+
+
+square(t, length=250, start_pos=(-100, -150), start_h=0, penw=2, penc="black", fillc="green")
 
 s.exitonclick()

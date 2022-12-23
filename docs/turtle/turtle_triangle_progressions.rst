@@ -82,7 +82,7 @@ Scalene triangle
                 t.speed(5)
 
 
-                def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h):
+                def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0):
                     t.pu()
                     t.goto(start_pos)
                     t.pd()
