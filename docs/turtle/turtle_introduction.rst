@@ -7,7 +7,7 @@ Introduction to turtle
 
 | This section begins with some basic syntax for the screen and turtles.
 | Basic shapes, squares, rectangles and triangles, are drawn via **sequencing**, **iteration** and **definitions**.
-| The houses section puts togther **modules** that group similar code together.
+| The houses section puts together **modules** that group similar code together.
 | Module code is **documented** using a standard documentation layout.
 
 ----
@@ -16,7 +16,7 @@ turtle documentation
 ----------------------------------------
 
 | Docs: https://docs.python.org/3.11/library/turtle.html#module-turtle
-| See the docs for a full lisitng of methods.
+| See the docs for a full listing of methods.
 
 ----
 

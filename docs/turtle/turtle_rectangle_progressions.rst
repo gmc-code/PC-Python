@@ -24,34 +24,76 @@ Sequencing: steps to draw a rectangle
 | The turtle then turns to the left by: ``t.lt(90)``.
 | Then the last 2 sides are drawn by doing the same 4 steps again.
 
+----
 
-.. code-block:: python
+.. admonition:: Tasks
 
-    import turtle
+    .. tab-set::
 
-    s = turtle.Screen()
-    s.bgcolor("white")
-    s.title("Grid")
-    s.setup(width=800, height=600, startx=0, starty=0)
+        .. tab-item:: Q
 
-    t = turtle.Turtle()
-    t.speed(5)
+            1. Complete the code to draw a rectangle of side length 120 and width 50 at (20, 30).
 
-    t.pu()
-    t.goto(20, 30)
-    t.pd()
-    t.seth(0)
+                .. code-block:: python
 
-    t.fd(120)
-    t.lt(90)
-    t.fd(50)
-    t.lt(90)
-    t.fd(120)
-    t.lt(90)
-    t.fd(50)
-    t.lt(90)
+                    import turtle
 
-    s.exitonclick()
+                    s = turtle.Screen()
+                    s.bgcolor("white")
+                    s.title("Grid")
+                    s.setup(width=800, height=600, startx=0, starty=0)
+
+                    t = turtle.Turtle()
+                    t.speed(5)
+
+                    t.pu()
+                    t.goto(20, 30)
+                    t.pd()
+                    t.seth(0)
+
+                    t.fd(120)
+                    t.lt(90)
+                    t.fd(50)
+                    t.lt(90)
+                    ?(120)
+                    ?(90)
+                    ?(50)
+                    ?(90)
+
+                    s.exitonclick()
+
+        .. tab-item:: Ans
+
+            1. Completed code to draw a rectangle of side length 120 and width 50 at (20, 30).
+
+                .. code-block:: python
+
+                    import turtle
+
+                    s = turtle.Screen()
+                    s.bgcolor("white")
+                    s.title("Grid")
+                    s.setup(width=800, height=600, startx=0, starty=0)
+
+                    t = turtle.Turtle()
+                    t.speed(5)
+
+                    t.pu()
+                    t.goto(20, 30)
+                    t.pd()
+                    t.seth(0)
+
+                    t.fd(120)
+                    t.lt(90)
+                    t.fd(50)
+                    t.lt(90)
+                    t.fd(120)
+                    t.lt(90)
+                    t.fd(50)
+                    t.lt(90)
+
+                    s.exitonclick()
+
 
 ----
 

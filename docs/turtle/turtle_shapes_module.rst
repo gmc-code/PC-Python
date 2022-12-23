@@ -141,7 +141,7 @@ Documenting the module
 
 .. admonition:: Tasks
 
-     Replace _type_, _value_, _description_ and _summary_ with suitable text.
+    Replace _type_, _value_, _description_ and _summary_ with suitable text.
 
     .. tab-set::
 
