@@ -2,6 +2,9 @@
 Own designs
 ====================================================
 
+Symmetrical house
+--------------------------
+
 | Redesign the house to make it more symmetrical.
 | Below is a symmetrical house, resized to 500 wide for convenience.
 | The door is in the centre of the front.

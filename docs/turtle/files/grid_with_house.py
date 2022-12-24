@@ -91,8 +91,8 @@ s.tracer(0, 0)
 t = turtle.Turtle()
 t.speed(0)
 
-h.windowed_house(t, length=100, height=50, start_pos=(100, 100), w_sides="LR")
-h.windowed_house(t, length=300, height=200, start_pos=(-300, -200), w_sides="LR")
+h.house(t, length=100, height=50, start_pos=(100, 100), w_sides="LR")
+h.house(t, length=300, height=200, start_pos=(-300, -200), w_sides="LR")
 
     
 t.ht()

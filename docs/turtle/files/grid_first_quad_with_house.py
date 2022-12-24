@@ -109,7 +109,7 @@ t = turtle.Turtle()
 t.speed(0)
 ytranslate = -200
 xtranslate = -300
-h.windowed_house(t, length=500, height=300, start_pos=(0 + xtranslate, 0 + ytranslate), w_sides="LR")
+h.house(t, length=500, height=300, start_pos=(0 + xtranslate, 0 + ytranslate), w_sides="LR")
 manual_labels(grid_turtle, (0 + xtranslate, 250 + ytranslate), "blue")
     
 t.ht()

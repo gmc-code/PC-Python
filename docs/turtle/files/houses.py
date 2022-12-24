@@ -105,7 +105,7 @@ def house_window4(t, length, height, start_pos, w_side, fillc="light blue"):
 
 
 
-def windowed_house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
+def house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
     """draw a house with 0-2 windows
 
     Args:
@@ -130,3 +130,28 @@ def windowed_house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
             # left hand window
             house_window4(t, length, height, start_pos, "L")
 
+
+def house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
+    """draw a house with 0-2 windows
+
+    Args:
+        t (class turtle.Turtle): turtle instance.
+        length (int, optional): length of house. Defaults to 60.
+        height (int, optional): height of house. Defaults to 40.
+        start_pos (tuple, optional): bottom left of house. Defaults to (0, 0).
+        w_sides (str, optional): window sides - L for windows on left side of house; R for right and LR for both. Defaults to None.
+    """
+    # front of house
+    sh.rectangle(t, length=length, width=height, start_pos=start_pos, penw=1, penc="black", fillc="snow")
+    # door
+    house_door(t, length, height, start_pos)
+    # roof
+    house_roof(t, length, height, start_pos)
+    # windows
+    if w_sides is not None:
+        if "R" in w_sides:
+            # right hand window
+            house_window4(t, length, height, start_pos, "R")
+        if "L" in w_sides:
+            # left hand window
+            house_window4(t, length, height, start_pos, "L")

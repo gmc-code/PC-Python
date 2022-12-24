@@ -10,10 +10,10 @@ Turtle houses module
 | Download the python file :download:`shapes.py module <files/shapes.py>`
 | Create the module, ``houses.py``, by following the steps below to build a basic house shape by combining together various shapes from the shapes module.
 
-.. image:: images/windowed_houses.png
+.. image:: images/houses.png
     :scale: 50 %
     :align: center
-    :alt: windowed_houses
+    :alt: houses
 
 ----
 
@@ -32,7 +32,7 @@ Importing the shapes module
 
 ----
 
-Windowed houses
+Houses
 ------------------
 
 | The diagram below shows the layout of a house with windows.
@@ -51,7 +51,7 @@ House definition
 
 | Write a definition that produces a house of given length, height and position with 0 to 2 windows.
 
-.. py:function:: windowed_house(t, length=60, height=40, start_pos=(0, 0), w_sides=None))
+.. py:function:: house(t, length=60, height=40, start_pos=(0, 0), w_sides=None))
 
     | draw a house with 0-2 windows
     | **t** (class turtle.Turtle): turtle instance.
@@ -60,8 +60,8 @@ House definition
     | **start_pos** (tuple, optional): bottom left of house. Defaults to (0, 0).
     | **w_sides** (str, optional): L for windows on left side of house; R for right; LR for both. Defaults to None.
 
-| Use the functions from the ``shapes.py`` module to build the windowed_house function.
-| The code below is starter code for the windowed_house definition.
+| Use the functions from the ``shapes.py`` module to build the house function.
+| The code below is starter code for the house definition.
 | The doc string has already been added.
 | Comments are in place to indicate where each part of the house will be added.
 
@@ -70,7 +70,7 @@ House definition
     import turtle
     import shapes as sh
 
-    def windowed_house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
+    def house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
         """draw a house with 0-2 windows
 
         Args:
@@ -108,14 +108,14 @@ Front of house
 
         .. tab-item:: Q
 
-            | Add code to ``windowed_house`` for the front of the house.
+            | Add code to ``house`` for the front of the house.
 
             .. code-block:: python
 
                 import turtle
                 import shapes as sh
 
-                def windowed_house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
+                def house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
                     """draw a house with 0-2 windows
 
                     Args:
@@ -137,7 +137,7 @@ Front of house
                 import turtle
                 import shapes as sh
 
-                def windowed_house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
+                def house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
                     """draw a house with 0-2 windows
 
                     Args:
@@ -152,7 +152,7 @@ Front of house
                                     penw=1, penc="black", fillc="snow")
 
 
-| Test the code sofar using ``windowed_house(t, length=600, height=300, start_pos=(-300, -200), w_sides="LR")``
+| Test the code sofar using ``house(t, length=600, height=300, start_pos=(-300, -200), w_sides="LR")``
 | This will build a house of 600 by 300 at (-300, -200).
 | Only the houses main rectangle will be drawn so far.
 
@@ -163,13 +163,13 @@ Front of house
 
     s = turtle.Screen()
     s.bgcolor("white")
-    s.title("Windowed Houses")
+    s.title("Houses")
     s.setup(width=800, height=600, startx=200, starty=100)
 
     t = turtle.Turtle()
 
 
-    def windowed_house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
+    def house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
         """draw a house with 0-2 windows
 
         Args:
@@ -184,7 +184,7 @@ Front of house
                         penw=1, penc="black", fillc="snow")
 
 
-    windowed_house(t, length=600, height=300, start_pos=(-300, -200), w_sides="LR")
+    house(t, length=600, height=300, start_pos=(-300, -200), w_sides="LR")
 
     s.exitonclick()
 

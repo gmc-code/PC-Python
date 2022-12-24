@@ -3,12 +3,12 @@ import shapes as sh
 
 s = turtle.Screen()
 s.bgcolor("white")
-s.title("Windowed Houses")
+s.title("Houses")
 s.setup(width=800, height=600, startx=200, starty=100)
 
 t = turtle.Turtle()
 
-def windowed_house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
+def house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
     """draw a house with 0-2 windows
 
     Args:
@@ -22,6 +22,6 @@ def windowed_house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
     sh.rectangle(t, length=length, width=height, start_pos=start_pos,
                     penw=1, penc="black", fillc="snow")
 
-windowed_house(t, length=600, height=300, start_pos=(-300, -200), w_sides="LR")
+house(t, length=600, height=300, start_pos=(-300, -200), w_sides="LR")
 
 s.exitonclick()

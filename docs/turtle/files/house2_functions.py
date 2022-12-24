@@ -62,7 +62,7 @@ def house_window4(t, length, height, start_pos, w_side, fillc="light blue"):
 
 
 
-def windowed_house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
+def house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
     """draw a house with 0-2 windows
 
     Args:
@@ -92,7 +92,7 @@ def windowed_house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
 
 s = turtle.Screen()
 s.bgcolor("white")
-s.title("Windowed Houses")
+s.title("Houses")
 s.setup(width=800, height=600, startx=200, starty=100)
 s.tracer(0, 0)
 
@@ -100,12 +100,12 @@ t = turtle.Turtle()
 t.speed(0)
 
 
-windowed_house(t, length=210, height=160, start_pos=(-200, 20), w_sides="LR")
-windowed_house(t, length=150, height=120, start_pos=(200, 20), w_sides="LR")
-windowed_house(t, length=60, height=40, start_pos=(-100, 0), w_sides=None)
-windowed_house(t, length=80, height=50, start_pos=(-10, 0), w_sides="R")
-windowed_house(t, length=120, height=100, start_pos=(90, 0), w_sides="L")
-windowed_house(t, length=210, height=160, start_pos=(-390, 0), w_sides="LR")
+house(t, length=210, height=160, start_pos=(-200, 20), w_sides="LR")
+house(t, length=150, height=120, start_pos=(200, 20), w_sides="LR")
+house(t, length=60, height=40, start_pos=(-100, 0), w_sides=None)
+house(t, length=80, height=50, start_pos=(-10, 0), w_sides="R")
+house(t, length=120, height=100, start_pos=(90, 0), w_sides="L")
+house(t, length=210, height=160, start_pos=(-390, 0), w_sides="LR")
 
 t.ht()
 s.update()
