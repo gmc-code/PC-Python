@@ -22,42 +22,52 @@ def draw_grid(t, width, height, spacing, tcolor):
 
 
 def draw_axes(t, width, height, pensize, tcolor):
+    ytranslate = -200
+    xtranslate = -300
+
     t.width(pensize)
     t.color(tcolor, tcolor)
     xmax = width // 2
     ymax = height // 2
     # x axis
     t.pu()
-    t.goto(-xmax, 0)
+    t.goto(-xmax, ytranslate)
     t.pd()
     t.seth(0)
     t.fd(width)
     # y axis
     t.pu()
-    t.goto(0, -ymax)
+    t.goto(xtranslate, -ymax)
     t.pd()
     t.seth(90)
     t.fd(height)
 
 
 def label_axes(t, width, height, spacing, tcolor):
+    ytranslate = +200
+    xtranslate = +300
+    
     t.color(tcolor, tcolor)
     xmax = width // 2
     ymax = height // 2
     # x axis
     for i in range(-xmax + spacing, xmax, spacing):
-        if i == 0:
+        if i == 0 - xtranslate:
             continue
         t.pu()
-        t.goto(i, -20)
+        t.goto(i, -20 - ytranslate)
         t.pd()
-        t.write(i, align="center", font=("Arial", 12, "normal"))
+        t.write(i + xtranslate, align="center", font=("Arial", 12, "normal"))
+     # y axis
     for i in range(-ymax + spacing, ymax, spacing):
-        if i == 0:
+        if i == 0 - ytranslate:
             continue
         t.pu()
-        t.goto(25, i - 10)
-        t.write(i, align="center", font=("Arial", 12, "normal"))
+        t.goto(-25 - xtranslate, i - 10)
+        t.pd()
+        t.write(i + ytranslate, align="center", font=("Arial", 12, "normal"))
+
+
 
 
 s = turtle.Screen()
@@ -72,11 +82,22 @@ draw_grid(grid_turtle, 800, 600, 50, "green")
 draw_axes(grid_turtle, 800, 600, 4, "red")
 label_axes(grid_turtle, 800, 600, 100, "red")
 grid_turtle.ht()
+
+ytranslate = -200
+xtranslate = -300
 """drawing code below"""
 
+import houses as h
+
+s.tracer(0, 0)
+
+t = turtle.Turtle()
+t.speed(0)
+
+h.windowed_house(t, length=600, height=300, start_pos=(0 + xtranslate, 0 + ytranslate), w_sides="LR")
 
     
-
+t.ht()
 
 """drawing code above"""
 

@@ -59,6 +59,13 @@ def label_axes(t, width, height, spacing, tcolor):
         t.goto(25, i - 10)
         t.write(i, align="center", font=("Arial", 12, "normal"))
 
+    # y axis
+    t.pu()
+    t.goto(0, -ymax)
+    t.pd()
+    t.seth(90)
+    t.fd(height)
+
 
 s = turtle.Screen()
 s.bgcolor("white")
@@ -71,15 +78,27 @@ grid_turtle.speed(0)
 draw_grid(grid_turtle, 800, 600, 50, "green")
 draw_axes(grid_turtle, 800, 600, 4, "red")
 label_axes(grid_turtle, 800, 600, 100, "red")
-grid_turtle.ht()
-"""drawing code below"""
 
+"""drawing code below"""
+import houses as h
+
+s = turtle.Screen()
+s.bgcolor("white")
+s.title("Grid")
+s.setup(width=800, height=600, startx=200, starty=100)
+s.tracer(0, 0)
+
+t = turtle.Turtle()
+t.speed(0)
+
+h.windowed_house(t, length=100, height=50, start_pos=(100, 100), w_sides="LR")
+h.windowed_house(t, length=300, height=200, start_pos=(-300, -200), w_sides="LR")
 
     
-
+t.ht()
 
 """drawing code above"""
 
 s.update()
 s.exitonclick()
-
+# turtle.done()
