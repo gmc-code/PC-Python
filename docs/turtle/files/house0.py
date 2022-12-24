@@ -19,7 +19,8 @@ def windowed_house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
         w_sides (str, optional): L for left side of house; R for right and LR for both. Defaults to None.
     """
     # front of house
-    sh.rectangle(t, length=length, width=height, start_pos=start_pos, penw=1, penc="black", fillc="snow")
+    sh.rectangle(t, length=length, width=height, start_pos=start_pos,
+                    penw=1, penc="black", fillc="snow")
 
 windowed_house(t, length=600, height=300, start_pos=(-300, -200), w_sides="LR")
 
