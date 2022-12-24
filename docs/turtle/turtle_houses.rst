@@ -3,7 +3,7 @@ Turtle houses
 ====================================================
 
 | Redesign the house to make it more symmetrical.
-| An empty grid is below as well as a symmetrical house.
+| An empty grid is below as well as a symmetrical house resized to 500 wide for convenience.
 | The door in the centre of the front.
 | The windows are either side of the door at equal distances from the wall and door.
 | Write new definitions for the ``house_door`` and ``house_window4``.
