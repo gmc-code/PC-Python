@@ -35,15 +35,21 @@ Importing the shapes module
 Windowed houses
 ------------------
 
+| The diagram below shows the layout of a house with windows.
+| Positions and sizes of each shape are related to the position and sizes of the house.
+| Measurements are calculated using multiplications and division so that the hosue can be scled up or down and still keep the same propeortions.
 
 .. image:: images/house_measurements.png
     :scale: 75 %
     :align: center
     :alt: simple_houses1
 
+----
 
+House definition
+------------------
 
-| Write a definition that produces a house of given length, height and position.
+| Write a definition that produces a house of given length, height and position with 0 to 2 windows.
 
 .. py:function:: windowed_house(t, length=60, height=40, start_pos=(0, 0), w_sides=None))
 
@@ -52,18 +58,106 @@ Windowed houses
     | **length** (int, optional): length of house. Defaults to 60.
     | **height** (int, optional): height of house. Defaults to 40.
     | **start_pos** (tuple, optional): bottom left of house. Defaults to (0, 0).
-    | **w_sides** (str, optional): L for left side of house; R for right and LR for both. Defaults to None.
+    | **w_sides** (str, optional): L for left side of house; R for right; LR for both. Defaults to None.
 
 | Use the functions from the ``shapes.py`` module to build the windowed_house function.
+| The code below is starter code for thte windowed_house definition.
+| The doc string has already been added.
+| Comments are in place to indicate where each part of the hosue will be added.
+
+.. code-block:: python
+
+    import turtle
+    import shapes as sh
+
+    def windowed_house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
+        """draw a house with 0-2 windows
+
+        Args:
+            t (class turtle.Turtle): turtle instance.
+            length (int, optional): length of house. Defaults to 60.
+            height (int, optional): height of house. Defaults to 40.
+            start_pos (tuple, optional): bottom left of house. Defaults to (0, 0).
+            w_sides (str, optional): L for left side of house; R for right and LR for both. Defaults to None.
+        """
+        # front of house
+        
+        # door
+
+        # roof
+
+        # windows
 
 
-Windowed houses
+
+
+----
+
+Front of house
 ------------------
 
 
+| The front of the house will be a rectangle.
+| The length, width, start_pos of the rectangle are those of the house.
+| For simplicity, the pensize, pencolor and fillcolor have been set below.
+| ``sh.rectangle(t, length=length, width=height, start_pos=start_pos, penw=1, penc="black", fillc="snow")``
+
+.. code-block:: python
+
+    import turtle
+    import shapes as sh
+
+    def windowed_house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
+        """draw a house with 0-2 windows
+
+        Args:
+            t (class turtle.Turtle): turtle instance.
+            length (int, optional): length of house. Defaults to 60.
+            height (int, optional): height of house. Defaults to 40.
+            start_pos (tuple, optional): bottom left of house. Defaults to (0, 0).
+            w_sides (str, optional): L for left side of house; R for right and LR for both. Defaults to None.
+        """
+        # front of house
+        sh.rectangle(t, length=length, width=height, start_pos=start_pos, penw=1, penc="black", fillc="snow")
+
+| Test the code sofar using ``windowed_house(t, length=600, height=300, start_pos=(-300, -200), w_sides="LR")``
+| This will build a house of 600 by 300 at (-300, -200).
+| Only the houses main rectangle will be drawn so far.
+
+.. code-block:: python
+
+    import turtle
+    import shapes as sh
+
+    s = turtle.Screen()
+    s.bgcolor("white")
+    s.title("Windowed Houses")
+    s.setup(width=800, height=600, startx=200, starty=100)
+
+    t = turtle.Turtle()
+
+    def windowed_house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
+        """draw a house with 0-2 windows
+
+        Args:
+            t (class turtle.Turtle): turtle instance.
+            length (int, optional): length of house. Defaults to 60.
+            height (int, optional): height of house. Defaults to 40.
+            start_pos (tuple, optional): bottom left of house. Defaults to (0, 0).
+            w_sides (str, optional): L for left side of house; R for right and LR for both. Defaults to None.
+        """
+        # front of house
+        sh.rectangle(t, length=length, width=height, start_pos=start_pos, penw=1, penc="black", fillc="snow")
+
+    windowed_house(t, length=600, height=300, start_pos=(-300, -200), w_sides="LR")
+
+    s.exitonclick()
 
 
 
+
+
+----
 
 .. admonition:: Code Completion
 
