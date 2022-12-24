@@ -46,12 +46,12 @@ Simple houses
     :alt: simple_houses1
 
 
-.. py:function:: simple_house(t, length=60, height=40, start_pos=(0, 0))
+.. py:function:: simple_house(t, hlength=60, hheight=40, hstart_pos=(0, 0))
 
     | **t** - the turtle object to draw the rectangle
-    | **length** - the length of the house; default 60
-    | **height** - the height of the house (not including the roof); default 40
-    | **start_pos** - start position in bottom left of house; default (0, 0)
+    | **hlength** - the length of the house; default 60
+    | **hheight** - the height of the house (not including the roof); default 40
+    | **hstart_pos** - start position in bottom left of house; default (0, 0)
 
 
 
@@ -68,7 +68,7 @@ Simple houses
             .. code-block:: python
 
                 import turtle
-                import houses as h
+                import shapes as sh
 
                 s = turtle.Screen()
                 s.bgcolor("white")
@@ -81,28 +81,32 @@ Simple houses
 
 
                 def door_pos(start_pos, length):
-                    return (start_pos[0] + XXX, start_pos[1])
+                    """return bottom left position of door 1/3 along length of house
+                    """
+                    return (start_pos[0] + length//XXX, start_pos[1])
 
 
-                def roof_pos(start_pos, length, height):
-                    return (start_pos[0] -XXX, start_pos[1] + XXX)
+                def roof_pos(start_pos, height):
+                    """return bottom left position of roof allows for an overhang of 5 pixels over left side of house
+                    """
+                    return (start_pos[0] -XXX, start_pos[1] + height)
 
 
-                def simple_house(t, length=60, height=40, start_pos=(0, 0)):
+                def simple_house(t, hlength=60, hheight=40, hstart_pos=(0, 0)):
                     # main house
-                    h.rectangle(t, length=length, width=height, start_pos=start_pos, fillc="snow")
+                    sh.rectangle(t, length=hlength, width=hheight, start_pos=hstart_pos, penw=1, penc="black", fillc="snow")
                     # door
-                    h.rectangle(t, length=XXX, width=XXX, start_pos=door_pos(XXX), fillc="green")
+                    sh.rectangle(t, length=hlength//XXX, width=hheight//XXX, start_pos=door_pos(hstart_pos, hlength), penw=1, penc="black", fillc="green")
                     # roof
-                    h.isosceles(t, base=XXX, height=XXX, start_pos=roof_pos(XXX), fillc="brown")
+                    sh.isosceles(t, base=hlength + XXX, height=hlength//XXX, start_pos=roof_pos(hstart_pos, hheight), penw=1, penc="black", fillc="brown")
 
 
-                simple_house(t, length=210, height=160, start_pos=(-200, 20))
-                simple_house(t, length=150, height=120, start_pos=(200, 20))
-                simple_house(t, length=60, height=40, start_pos=(-100, 0))
-                simple_house(t, length=80, height=50, start_pos=(-10, 0))
-                simple_house(t, length=120, height=100, start_pos=(90, 0))
-                simple_house(t, length=210, height=160, start_pos=(-390, 0))
+                simple_house(t, hlength=210, hheight=160, hstart_pos=(-200, 20))
+                simple_house(t, hlength=150, hheight=120, hstart_pos=(200, 20))
+                simple_house(t, hlength=60, hheight=40, hstart_pos=(-100, 0))
+                simple_house(t, hlength=80, hheight=50, hstart_pos=(-10, 0))
+                simple_house(t, hlength=120, hheight=100, hstart_pos=(90, 0))
+                simple_house(t, hlength=210, hheight=160, hstart_pos=(-390, 0))
 
 
                 t.ht()
@@ -129,29 +133,32 @@ Simple houses
 
 
                 def door_pos(start_pos, length):
-                    return (start_pos[0] + length/3, start_pos[1])
+                    """return bottom left position of door 1/3 along length of house
+                    """
+                    return (start_pos[0] + length//3, start_pos[1])
 
 
-                def roof_pos(start_pos, length, height):
+                def roof_pos(start_pos, height):
+                    """return bottom left position of roof allows for an overhang of 5 pixels over left side of house
+                    """
                     return (start_pos[0] -5, start_pos[1] + height)
 
 
-                def simple_house(t, length=60, height=40, start_pos=(0, 0)):
+                def simple_house(t, hlength=60, hheight=40, hstart_pos=(0, 0)):
                     # main house
-                    sh.rectangle(t, length=length, width=height, start_pos=start_pos, penw=1, penc="black", fillc="snow")
+                    sh.rectangle(t, length=hlength, width=hheight, start_pos=hstart_pos, penw=1, penc="black", fillc="snow")
                     # door
-                    sh.rectangle(t, length=length/5, width=height/1.6, start_pos=door_pos(start_pos, length), penw=1, penc="black", fillc="green")
+                    sh.rectangle(t, length=hlength//5, width=hheight//1.6, start_pos=door_pos(hstart_pos, hlength), penw=1, penc="black", fillc="green")
                     # roof
-                    sh.isosceles(t, base=length + 10, height=length/3, start_pos=roof_pos(start_pos, length, height), penw=1, penc="black", fillc="brown")
+                    sh.isosceles(t, base=hlength + 10, height=hlength//3, start_pos=roof_pos(hstart_pos, hheight), penw=1, penc="black", fillc="brown")
 
 
-                simple_house(t, length=210, height=160, start_pos=(-200, 20))
-                simple_house(t, length=150, height=120, start_pos=(200, 20))
-                simple_house(t, length=60, height=40, start_pos=(-100, 0))
-                simple_house(t, length=80, height=50, start_pos=(-10, 0))
-                simple_house(t, length=120, height=100, start_pos=(90, 0))
-                simple_house(t, length=210, height=160, start_pos=(-390, 0))
-
+                simple_house(t, hlength=210, hheight=160, hstart_pos=(-200, 20))
+                simple_house(t, hlength=150, hheight=120, hstart_pos=(200, 20))
+                simple_house(t, hlength=60, hheight=40, hstart_pos=(-100, 0))
+                simple_house(t, hlength=80, hheight=50, hstart_pos=(-10, 0))
+                simple_house(t, hlength=120, hheight=100, hstart_pos=(90, 0))
+                simple_house(t, hlength=210, hheight=160, hstart_pos=(-390, 0))
 
                 t.ht()
                 s.update()
