@@ -11,7 +11,7 @@ Turtle houses module
 | Create the module, ``houses.py``, by following the steps below to build a basic house shape by combining together various shapes from the shapes module.
 
 .. image:: images/house_measurements.png
-    :scale: 40 %
+    :scale: 75 %
     :align: center
     :alt: simple_houses1
 
