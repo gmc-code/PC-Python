@@ -4,7 +4,7 @@ Turtle houses module
 
 | The houses are built from squares, rectangles and triangles.
 | To reduce the code in the main file, separate modules are used which group the code together.
-| Definitions for the base shapes are placed in a module, ``shapes.py``.
+| Definitions for the base shapes, squares, rectangles and triangles, are placed in a module, ``shapes.py``.
 | Definitions for house shapes will be placed in a module, ``houses.py``.
 
 | Download the python file :download:`shapes.py module <files/shapes.py>`
@@ -53,48 +53,109 @@ Simple houses
     | **height** - the height of the house (not including the roof); default 40
     | **start_pos** - start position in bottom left of house; default (0, 0)
 
-| Starter code is provided with ``?`` where the code has to be completed.
-
-.. code-block:: python
-
-    import turtle
-    import houses as h
-
-    s = turtle.Screen()
-    s.bgcolor("white")
-    s.title("Grid")
-    s.setup(width=800, height=600, startx=200, starty=100)
-    s.tracer(0, 0)
-
-    t = turtle.Turtle()
-    t.speed(0)
-
-    def door_pos(start_pos, length):
-        return (start_pos[0] + ?, start_pos[1])
-
-    def roof_pos(start_pos, length, height):
-        return (start_pos[0] -?, start_pos[1] + ?)
-
-    def simple_house(t, length=60, height=40, start_pos=(0, 0)):
-        # main house
-        h.rectangle(t, length=length, width=height, start_pos=start_pos, fillc="snow")
-        # door
-        h.rectangle(t, length=?, width=?, start_pos=door_pos(?), fillc="green")
-        # roof
-        h.isosceles(t, base=?, height=?, start_pos=roof_pos(?), fillc="brown")
-
-    simple_house(t, length=210, height=160, start_pos=(-200, 20))
-    simple_house(t, length=150, height=120, start_pos=(200, 20))
-    simple_house(t, length=60, height=40, start_pos=(-100, 0))
-    simple_house(t, length=80, height=50, start_pos=(-10, 0))
-    simple_house(t, length=120, height=100, start_pos=(90, 0))
-    simple_house(t, length=210, height=160, start_pos=(-390, 0))
 
 
-    t.ht()
-    s.update()
-    s.exitonclick()
 
+.. admonition:: Code Completion
+
+    .. tab-set::
+
+        .. tab-item:: Q
+
+            | Complete the code to build a series of houses.
+            | Starter code is provided with ``XXX`` where the code has to be completed.
+
+            .. code-block:: python
+
+                import turtle
+                import houses as h
+
+                s = turtle.Screen()
+                s.bgcolor("white")
+                s.title("Grid")
+                s.setup(width=800, height=600, startx=200, starty=100)
+                s.tracer(0, 0)
+
+                t = turtle.Turtle()
+                t.speed(0)
+
+
+                def door_pos(start_pos, length):
+                    return (start_pos[0] + XXX, start_pos[1])
+
+
+                def roof_pos(start_pos, length, height):
+                    return (start_pos[0] -XXX, start_pos[1] + XXX)
+
+
+                def simple_house(t, length=60, height=40, start_pos=(0, 0)):
+                    # main house
+                    h.rectangle(t, length=length, width=height, start_pos=start_pos, fillc="snow")
+                    # door
+                    h.rectangle(t, length=XXX, width=XXX, start_pos=door_pos(XXX), fillc="green")
+                    # roof
+                    h.isosceles(t, base=XXX, height=XXX, start_pos=roof_pos(XXX), fillc="brown")
+
+
+                simple_house(t, length=210, height=160, start_pos=(-200, 20))
+                simple_house(t, length=150, height=120, start_pos=(200, 20))
+                simple_house(t, length=60, height=40, start_pos=(-100, 0))
+                simple_house(t, length=80, height=50, start_pos=(-10, 0))
+                simple_house(t, length=120, height=100, start_pos=(90, 0))
+                simple_house(t, length=210, height=160, start_pos=(-390, 0))
+
+
+                t.ht()
+                s.update()
+                s.exitonclick()
+
+        .. tab-item:: Ans
+
+            Completed code to build a series of houses.
+
+            .. code-block:: python
+
+                import turtle
+                import shapes as sh
+
+                s = turtle.Screen()
+                s.bgcolor("white")
+                s.title("Grid")
+                s.setup(width=800, height=600, startx=200, starty=100)
+                s.tracer(0, 0)
+
+                t = turtle.Turtle()
+                t.speed(0)
+
+
+                def door_pos(start_pos, length):
+                    return (start_pos[0] + length/3, start_pos[1])
+
+
+                def roof_pos(start_pos, length, height):
+                    return (start_pos[0] -5, start_pos[1] + height)
+
+
+                def simple_house(t, length=60, height=40, start_pos=(0, 0)):
+                    # main house
+                    sh.rectangle(t, length=length, width=height, start_pos=start_pos, penw=1, penc="black", fillc="snow")
+                    # door
+                    sh.rectangle(t, length=length/5, width=height/1.6, start_pos=door_pos(start_pos, length), penw=1, penc="black", fillc="green")
+                    # roof
+                    sh.isosceles(t, base=length + 10, height=length/3, start_pos=roof_pos(start_pos, length, height), penw=1, penc="black", fillc="brown")
+
+
+                simple_house(t, length=210, height=160, start_pos=(-200, 20))
+                simple_house(t, length=150, height=120, start_pos=(200, 20))
+                simple_house(t, length=60, height=40, start_pos=(-100, 0))
+                simple_house(t, length=80, height=50, start_pos=(-10, 0))
+                simple_house(t, length=120, height=100, start_pos=(90, 0))
+                simple_house(t, length=210, height=160, start_pos=(-390, 0))
+
+
+                t.ht()
+                s.update()
+                s.exitonclick()
 
 ----
 
@@ -121,7 +182,7 @@ windows
     | **start_pos** - start position in bottom left of the window; default (0, 0)
 
 
-| Starter code is provided with ``?`` where the code has to be completed.
+| Starter code is provided with ``XXX`` where the code has to be completed.
 
 .. code-block:: python
 
@@ -137,14 +198,17 @@ windows
     t = turtle.Turtle()
     t.speed(0)
         
+
     def window_pos(start_pos, x_add, y_add):
-        return (start_pos[0] + ?, start_pos[1] + ?)
+        return (start_pos[0] + XXX, start_pos[1] + XXX)
+
 
     def window(t, length=10, start_pos=(0, 0)):
         h.square(t, length=length/2, start_pos=start_pos, fillc="light blue")
-        h.square(t, length=length/2, start_pos=window_pos(?), fillc="light blue")
-        h.square(t, length=length/2, start_pos=window_pos(?), fillc="light blue")
-        h.square(t, length=length/2, start_pos=window_pos(?), fillc="light blue")
+        h.square(t, length=length/2, start_pos=window_pos(XXX), fillc="light blue")
+        h.square(t, length=length/2, start_pos=window_pos(XXX), fillc="light blue")
+        h.square(t, length=length/2, start_pos=window_pos(XXX), fillc="light blue")
+
 
     t.ht()
     s.update()
