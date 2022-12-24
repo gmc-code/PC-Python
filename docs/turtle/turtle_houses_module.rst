@@ -10,11 +10,10 @@ Turtle houses module
 | Download the python file :download:`shapes.py module <files/shapes.py>`
 | Create the module, ``houses.py``, by following the steps below to build a basic house shape by combining together various shapes from the shapes module.
 
-.. image:: images/house_measurements.png
-    :scale: 75 %
+.. image:: images/windowed_houses.png
+    :scale: 50 %
     :align: center
-    :alt: simple_houses1
-
+    :alt: windowed_houses
 
 ----
 
@@ -33,25 +32,35 @@ Importing the shapes module
 
 ----
 
-Simple houses
+Windowed houses
 ------------------
 
-| Write a definition that produces a house of given length, height and position.
-| Use the functions from the ``shapes.py`` module.
-| Use the function to make several houses as shown below.
 
-.. image:: images/simple_houses1.png
-    :scale: 40 %
+.. image:: images/house_measurements.png
+    :scale: 75 %
     :align: center
     :alt: simple_houses1
 
 
-.. py:function:: simple_house(t, hlength=60, hheight=40, hstart_pos=(0, 0))
 
-    | **t** - the turtle object to draw the rectangle
-    | **hlength** - the length of the house; default 60
-    | **hheight** - the height of the house (not including the roof); default 40
-    | **hstart_pos** - start position in bottom left of house; default (0, 0)
+| Write a definition that produces a house of given length, height and position.
+
+.. py:function:: windowed_house(t, length=60, height=40, start_pos=(0, 0), w_sides=None))
+
+    | draw a house with 0-2 windows
+    | **t** (class turtle.Turtle): turtle instance.
+    | **length** (int, optional): length of house. Defaults to 60.
+    | **height** (int, optional): height of house. Defaults to 40.
+    | **start_pos** (tuple, optional): bottom left of house. Defaults to (0, 0).
+    | **w_sides** (str, optional): L for left side of house; R for right and LR for both. Defaults to None.
+
+| Use the functions from the ``shapes.py`` module to build the windowed_house function.
+
+
+Windowed houses
+------------------
+
+
 
 
 
@@ -72,7 +81,7 @@ Simple houses
 
                 s = turtle.Screen()
                 s.bgcolor("white")
-                s.title("Grid")
+                s.title("Windowed House")
                 s.setup(width=800, height=600, startx=200, starty=100)
                 s.tracer(0, 0)
 
@@ -80,39 +89,6 @@ Simple houses
                 t.speed(0)
 
 
-                def house_door(t, length, height, start_pos):
-                    """draw door 1/3 along length of house, 1/5 of length of house, 1/1.6 of height of house
-                    """
-                    d_pos = (start_pos[0] + length//3, start_pos[1])
-                    d_height = height//1.6
-                    d_length = length//5
-                    sh.rectangle(t, length=d_length, width=d_height, start_pos=d_pos, penw=1, penc="black", fillc="green")
-
-
-                def house_roof(t, length, height, start_pos):
-                    """draw roof with overhang of 5 pixels over left side and right side of house
-                    """
-                    r_pos = (start_pos[0] - 5, start_pos[1] + height)
-                    r_height = length//3
-                    r_length = length + 10
-                    sh.isosceles(t, base=r_length, height=r_height, start_pos=r_pos, penw=1, penc="black", fillc="brown")
-
-
-                def simple_house(t, length=60, height=40, start_pos=(0, 0)):
-                    # main house
-                    sh.rectangle(t, length=length, width=height, start_pos=start_pos, penw=1, penc="black", fillc="snow")
-                    # door
-                    house_door(t, length, height, start_pos)
-                    # roof
-                    house_roof(t, length, height, start_pos)
-
-
-                simple_house(t, length=210, height=160, start_pos=(-200, 20))
-                simple_house(t, length=150, height=120, start_pos=(200, 20))
-                simple_house(t, length=60, height=40, start_pos=(-100, 0))
-                simple_house(t, length=80, height=50, start_pos=(-10, 0))
-                simple_house(t, length=120, height=100, start_pos=(90, 0))
-                simple_house(t, length=210, height=160, start_pos=(-390, 0))
 
                 t.ht()
                 s.update()
