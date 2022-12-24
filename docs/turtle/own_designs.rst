@@ -1,5 +1,5 @@
 ====================================================
-Turtle houses
+Own designs
 ====================================================
 
 | Redesign the house to make it more symmetrical.
@@ -16,14 +16,19 @@ Turtle houses
     :alt: house_grid
 
 
-
 ----
 
-Own design
----------------
+Other compound objects
+--------------------------
 
 | An empty grid is below.
-| Design your own house and write definitions to place the parts.
+| Design your own compound objects and write definitions to place the parts.
+
+| Some ideas can be gained from the links below.
+| Remember to write defintions to place each part so that the final object can be scaled and repositioned.
+| e.g A Christmass tree. See: https://copyassignment.com/draw-a-christmas-tree-using-python-turtle/
+| e.g A snowman made of circles. See: https://copyassignment.com/draw-snowman-using-turtle/
+| e.g. A boat mad of triangles and rectangles: See: https://www.youtube.com/watch?v=S21p1EwNgA8&list=PLS9qLR8VoFA56NWSswK2daQSovI9QCpQE&index=48
 
 .. image:: images/house_grid.png
     :scale: 75 %

@@ -73,7 +73,9 @@ PC-Python
     turtle/turtle_triangle_progressions.rst   
     turtle/turtle_shapes_module.rst
     turtle/turtle_houses_module.rst
-    turtle/turtle_houses.rst 
+    turtle/own_designs.rst 
+
+
 
 .. toctree::
     :maxdepth: 2
