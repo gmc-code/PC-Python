@@ -396,8 +396,8 @@ Adding pen colour and fill colour parameters
                         t.speed(5)
 
                         # --begin triangle
-                        def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, penw=1, 
-                                    penc="black", fillc=None): 
+                        def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, 
+                                    penw=1, penc="black", fillc=None): 
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
@@ -441,8 +441,8 @@ Adding pen colour and fill colour parameters
                         t.speed(5)
 
                         # --begin triangle
-                        def isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1, 
-                                        penc="black", fillc=None):
+                        def isosceles(t, base, height, start_pos=(0, 0), start_h=0,
+                                        penw=1, penc="black", fillc=None):
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
@@ -466,8 +466,8 @@ Adding pen colour and fill colour parameters
                             if fillc is not None:
                                 t.end_fill()
 
-                        isosceles(t, base=100, height=50, start_pos=(20, 30), start_h=15, penw=2, 
-                                        penc="black", fillc="pink")
+                        isosceles(t, base=100, height=50, start_pos=(20, 30), start_h=15, 
+                                    penw=2, penc="black", fillc="pink")
                         # --end triangle
 
                         s.exitonclick()
@@ -488,8 +488,8 @@ Adding pen colour and fill colour parameters
 
 
                         # --begin triangle
-                        def equilateral(t, side, start_pos=(0, 0), start_h=0, penw=1, 
-                                            penc="black", fillc=None):
+                        def equilateral(t, side, start_pos=(0, 0), start_h=0, 
+                                        penw=1, penc="black", fillc=None):
                             t.pu()
                             t.goto(start_pos)
                             t.pd()
@@ -511,8 +511,8 @@ Adding pen colour and fill colour parameters
                                 t.end_fill()
 
 
-                        equilateral(t, side=100, start_pos=(20, 30), start_h=10, penw=2, 
-                                        penc="purple", fillc="light green")
+                        equilateral(t, side=100, start_pos=(20, 30), start_h=10, 
+                                    penw=2, penc="purple", fillc="light green")
                         # --end triangle
 
                         s.exitonclick()
