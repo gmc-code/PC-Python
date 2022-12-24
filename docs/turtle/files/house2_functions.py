@@ -28,7 +28,7 @@ def roof_pos(start_pos, length, height):
     Returns:
         tuple: bottom left position of roof
     """
-    return (start_pos[0] -5, start_pos[1] + height)
+    return (start_pos[0] - 5, start_pos[1] + height)
 
 
 def window_pos(start_pos, x_add, y_add):
