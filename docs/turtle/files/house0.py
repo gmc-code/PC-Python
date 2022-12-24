@@ -16,7 +16,7 @@ def windowed_house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
         length (int, optional): length of house. Defaults to 60.
         height (int, optional): height of house. Defaults to 40.
         start_pos (tuple, optional): bottom left of house. Defaults to (0, 0).
-        w_sides (str, optional): L for left side of house; R for right and LR for both. Defaults to None.
+        w_sides (str, optional): window sides - L for left side of house; R for right and LR for both. Defaults to None.
     """
     # front of house
     sh.rectangle(t, length=length, width=height, start_pos=start_pos,
