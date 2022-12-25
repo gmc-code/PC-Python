@@ -25,6 +25,11 @@ Scalene triangle
 | The code also makes use of the heading and start position.
 | The code draws a triangle of base 100, angle 70 and side 150 with a heading of 15 degrees, positioned at (20, 30).
 
+.. image:: images/scalene_steps.png
+    :scale: 50 %
+    :align: center
+    :alt: scalene_steps
+
 .. admonition:: Code Completion
 
     .. tab-set::
@@ -370,6 +375,11 @@ Equilateral triangles
 
 Adding pen colour and fill colour parameters
 ---------------------------------------------
+
+.. image:: images/equilateral_steps_coloured.png
+    :scale: 50 %
+    :align: center
+    :alt: equilateral_steps_coloured
 
 .. admonition:: Tasks
 

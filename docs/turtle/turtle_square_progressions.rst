@@ -275,7 +275,7 @@ Adding pen colour and fill colour parameters
 
 
 .. image:: images/square_steps_coloured.png
-    :scale: 25 %
+    :scale: 50 %
     :align: center
     :alt: square_steps_coloured
 

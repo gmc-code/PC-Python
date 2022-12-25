@@ -420,7 +420,7 @@ Adding pen colour and fill colour parameters
 
  
 .. image:: images/rectangle_steps_coloured.png
-    :scale: 25 %
+    :scale: 50 %
     :align: center
     :alt: rectangle_steps_coloured
 
