@@ -2,13 +2,12 @@
 """
 import turtle
 
-def do_dot(t, start_pos=(0, 0), size=30, color="white"):
+
+def draw_dot(t, centre=(0, 0), size=20, color="blue"):
     t.pu()
-    t.goto(start_pos)
+    t.goto(centre)
     t.pd()
-    t.dot(200, color)
-
-
+    t.dot(size, color)
 
 
 s = turtle.Screen()
@@ -19,18 +18,10 @@ s.setup(width=800, height=600, startx=0, starty=0)
 t = turtle.Turtle()
 t.speed(5)
 
-
-t.pu()
-t.goto(20, 30)
-t.pd()
-t.seth(0)
-
-# t.dot(200, "light blue")
-# t.dot(150, "pink")
-# t.dot(100, "light green")
-# t.dot(50, "yellow")
-do_dot(t, start_pos=(-100, -150), size=200, color="light green")
-
-
+sizes = [200, 150, 100, 50]
+colors = ["light blue", "pink", "light green", "yellow"]
+centres = [(0, -100), (0, -50), (0, 0), (0, 30)]
+for i in range(len(sizes)):
+    draw_dot(t, centre=centres[i], size=sizes[i], color=colors[i])
 
 s.exitonclick()
