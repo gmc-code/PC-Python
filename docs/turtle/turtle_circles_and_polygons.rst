@@ -79,6 +79,15 @@ Using the Draw_dot definition
     :alt: dot_stack_1
 
 | Make use of the ``draw_dot`` definition by drawing a dot stack of 4 dots of decreasing size.
+| The code below uses list of postions and sizes.
+| For overlapping circles to have a common tangent on a side, if the change in the radii (or sizes), from one circle to the next, is the same, then the centres of the circles will be the same distance apart from one circle to the next in the sequence.
+| Notice how the y values of the centres increase by 50 from one point to the next.
+| Notice also how the sizes (diameters) decrease by the same amount from one dot to the next.
+| ``centres = [(0, -100), (0, -50), (0, 0), (0, 50)]``
+| ``sizes = [200, 150, 100, 50]``
+| After completing the code completion below, try varying the change in the centres or sizes.
+| See if you can use variables to specify the start values of the lists and the size changes in hte values.
+
 
 .. admonition:: Code Completion
 
