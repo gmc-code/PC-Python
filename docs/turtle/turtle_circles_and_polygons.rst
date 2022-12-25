@@ -20,8 +20,8 @@ Turtle Dots
 
 ----
 
-Dots at a specified location
-------------------------------------------
+Draw_dot definition: dots at a specified location
+--------------------------------------------------
 
 | Adding a starting position, the centre of the dot, provides some convenience:
 
@@ -70,13 +70,15 @@ Dots at a specified location
 
 ----
 
+Using the Draw_dot definition
+--------------------------------------------------
+
 .. image:: images/dot_stack_1.png
     :scale: 75 %
     :align: center
     :alt: dot_stack_1
 
-| Make use of the ``draw_dot`` definition by drawing a series of dots of various sizes and colours at various locations.
-| The sizes, colours and locations are provided as lists ready to use.
+| Make use of the ``draw_dot`` definition by drawing a dot stack of 4 dots of decreasing size.
 
 .. admonition:: Code Completion
 
@@ -152,10 +154,8 @@ Dots at a specified location
 
 ----
 
-.. image:: images/dot_stacks.png
-    :scale: 75 %
-    :align: center
-    :alt: dot_stacks
+Exploring draw_dot further
+---------------------------
 
 .. admonition:: Exercise
 
