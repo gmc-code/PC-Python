@@ -1,4 +1,4 @@
-"""draw dots
+"""draw dots -- for testing only
 """
 import turtle
 

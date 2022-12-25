@@ -80,23 +80,37 @@ draw_axes(grid_turtle, 800, 600, 4, "red")
 label_axes(grid_turtle, 800, 600, 100, "red")
 
 """drawing code below"""
-import houses as h
 
-s = turtle.Screen()
-s.bgcolor("white")
-s.title("Grid")
-s.setup(width=800, height=600, startx=200, starty=100)
-s.tracer(0, 0)
+def draw_centered_circle(t, centre=(0, 0), radius=10, penw=1, penc="black", fillc=None):
+    t.pu()
+    t.goto(centre)
+    t.seth(0)
+    t.fd(radius)
+    t.seth(90)
+    t.pensize(penw)
+    t.pencolor(penc)
+    t.pd()
+    if fillc is not None:
+        t.fillcolor(fillc)
+        t.begin_fill()   
+
+    t.circle(radius)  
+    if fillc is not None:
+        t.end_fill()
 
 t = turtle.Turtle()
 t.speed(0)
 
-h.house(t, length=100, height=50, start_pos=(100, 100), w_sides="LR")
-h.house(t, length=300, height=200, start_pos=(-300, -200), w_sides="LR")
-t.goto(0, 0)
-t.dot(200, "light blue")
-t.dot()
-t.ht()
+centres = [(0, -150), (0, 40), (0, 140), (0, 200)]
+radii = [100, 60, 40, 30]
+pensizes = [40, 30, 20, 10]
+pencolors = ["blue", "red", "green", "orange"]
+fillcolors = ["light blue", "pink", "light green", "yellow"]
+
+for i in range(len(radii)):
+    draw_centered_circle(t, centre=centres[i], radius=radii[i], penw=pensizes[i], penc=pencolors[i], fillc=fillcolors[i])
+
+
 
 """drawing code above"""
 

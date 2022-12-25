@@ -2,7 +2,7 @@
 Turtle circles and polygons
 ====================================================
 
-| The code draws dots, circles and polygons.
+| The code below draws dots, circles , parts of circles and regular polygons.
 
 ----
 
@@ -13,10 +13,10 @@ Turtle Dots
 
 .. py:function:: turtle.dot(size=None, *color)
 
-    | **size** - the dot diameter, an integer >= 1 (if given)
-    | **color** - a colorstring or a numeric color tuple (r,g, b,)
     | Draw a circular dot with diameter size, using color. 
     | If size is not given, the maximum of pensize+4 and 2*pensize is used.
+    | **size** - the dot diameter, an integer >= 1 (if given)
+    | **color** - a colorstring or a numeric color tuple (r,g, b,)
 
 ----
 
@@ -28,8 +28,8 @@ Dots at a specified location
 .. py:function:: draw_dot(t, centre=(0, 0), size=20, color="blue"):
 
     | **t** - the turtle object to draw the rectangle
-    | **centre** - start position; default (0, 0)
-    | **size** - the dot diameter, an integer >= 1 (if given)
+    | **centre** - the centre of the dot; default (0, 0)
+    | **size** - the diameter of the dot, an integer >= 1
     | **color** - a colorstring or a numeric color tuple (r,g, b,)
 
 | The ``draw_dot`` definition code is below:
@@ -49,7 +49,7 @@ Dots at a specified location
 
                 def draw_dot(t, centre=(0, 0), size=20, color="blue"):
                     t.XXX()
-                    t.goto(centre)
+                    t.goto(XXX)
                     t.XXX()
                     t.dot(XXX, XXX)
 
@@ -101,9 +101,10 @@ Dots at a specified location
                 t = turtle.Turtle()
                 t.speed(5)
 
+                centres = [(0, -100), (0, -50), (0, 0), (0, 30)]
                 sizes = [200, 150, 100, 50]
                 colors = ["light blue", "pink", "light green", "yellow"]
-                centres = [(0, -100), (0, -50), (0, 0), (0, 30)]
+                
                 for i in range(len(sizes)):
                     draw_dot(t, centre=XXX, size=XXX, color=XXX)
 
@@ -133,9 +134,10 @@ Dots at a specified location
                 t = turtle.Turtle()
                 t.speed(5)
 
+                centres = [(0, -100), (0, -50), (0, 0), (0, 30)]
                 sizes = [200, 150, 100, 50]
                 colors = ["light blue", "pink", "light green", "yellow"]
-                centres = [(0, -100), (0, -50), (0, 0), (0, 30)]
+                
                 for i in range(len(sizes)):
                     draw_dot(t, centre=centres[i], size=sizes[i], color=colors[i])
 
@@ -154,9 +156,10 @@ Turtle Circles
     | extent - an angle, a number (or None for whole circle), which determines which part of the circle is drawn
     | steps - an integer (or None for a circle) which allows polygons to be drawn.
 
-| The center is radius units left of the turtle.
-| The circle or arc is drawn counterclockwise if radius is positive, otherwise in clockwise direction.
+| The center is radius units left of the turtle at right angles from its heading if the radius is positive.
+| The circle or arc is drawn counterclockwise if radius is positive, clockwise direction if negative.
 | The direction of the turtle is changed by the amount of extent.
+| The pensize increases the circle line inwards an outwards from the radius distance. So a pensize of 41 draws the circle 20 pixels inwards and 20 pixels outwards from the exact radius position. This is important for predicting circle edges with large pensizes. 
 
 ----
 
@@ -165,7 +168,7 @@ Circles at a specified location
 
 | Adding a starting position, the centre of the circle, provides some convenience:
 
-.. py:function:: draw_centered_circle(t, centre=(0, 0), size=20, color="blue", penw=1, penc="black", fillc="light green")
+.. py:function:: draw_centered_circle(t, centre=(0, 0), size=20, color="blue", penw=1, penc="black", fillc=None)
 
     | **t** - the turtle object to draw the rectangle
     | **centre** - start position; default (0, 0)
