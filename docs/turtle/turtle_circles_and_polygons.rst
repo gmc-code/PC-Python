@@ -86,7 +86,7 @@ Using the Draw_dot definition
 | ``centres = [(0, -100), (0, -50), (0, 0), (0, 50)]``
 | ``sizes = [200, 150, 100, 50]``
 | After completing the code completion below, try varying the change in the centres or sizes.
-| See if you can use variables to specify the start values of the lists and the size changes in hte values.
+| See if you can use variables to specify the start values of the lists and the size changes in the values so that you only need to change one number for all the numbers to adjust to that change.
 
 
 .. admonition:: Code Completion
