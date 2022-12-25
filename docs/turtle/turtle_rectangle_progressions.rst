@@ -13,6 +13,11 @@ Turtle rectangle progressions
 Sequencing: steps to draw a rectangle
 ------------------------------------------
 
+.. image:: images/rectangle_steps.png
+    :scale: 100 %
+    :align: center
+    :alt: rectangle_steps
+    
 | The code below uses sequencing only.
 | The code below draws a rectangle of side length 120 and width 50 at coordinates (20, 30).
 | The start direction, eastwards, is set by: ``t.seth(0)``
@@ -93,10 +98,7 @@ Sequencing: steps to draw a rectangle
 
                 s.exitonclick()
 
-.. image:: images/rectangle_steps.png
-    :scale: 100 %
-    :align: center
-    :alt: rectangle_steps
+
 
 ----
 
@@ -416,8 +418,14 @@ Adding pen colour and fill colour parameters
     | **penc** - pencolor; default is black
     | **fillc** - fillcolor; default is None
 
-   
-| In the code below, ``rectangle(t, length=400, width=300, start_pos=(-100, -150), start_h=10, penw=5, penc="black", fillc="green")`` draws a rectangle of 400 by 300 at (x=-100, y=-150) with a black pencolor, a green fillcolor, using a pensize of 5.
+ 
+.. image:: images/rectangle_steps_coloured.png
+    :scale: 100 %
+    :align: center
+    :alt: rectangle_steps_coloured
+
+
+| In the code below, ``rectangle(t, length=400, width=300, start_pos=(-100, -150), start_h=10, penw=5, penc="black", fillc="light green")`` draws a rectangle of 400 by 300 at (x=-100, y=-150) with a black pencolor, a green fillcolor, using a pensize of 5.
 | The code needs to check the **fillc** argument since setting a fillcolor to **None** will throw an error.
 
 .. admonition:: Code Completion
@@ -466,7 +474,7 @@ Adding pen colour and fill colour parameters
 
 
                 rectangle(t, length=400, width=300, start_pos=(-100, -150), start_h=10, 
-                            penw=5, penc="black", fillc="green")
+                            penw=5, penc="black", fillc="light green")
 
                 s.exitonclick()
 
@@ -513,7 +521,7 @@ Adding pen colour and fill colour parameters
 
 
                 rectangle(t, length=400, width=300, start_pos=(-100, -150), start_h=10, 
-                            penw=5, penc="black", fillc="green")
+                            penw=5, penc="black", fillc="light green")
 
                 s.exitonclick()
 

@@ -13,6 +13,12 @@ Turtle square progressions
 Sequencing: steps to draw a square
 ------------------------------------------
 
+.. image:: images/square_steps.png
+    :scale: 100 %
+    :align: center
+    :alt: square_steps
+
+
 | The code below uses sequencing only.
 | The code below draws a square of side length 50 at coordinates (20, 30).
 | The start direction, eastwards, is set by: ``t.seth(0)``
@@ -51,10 +57,6 @@ Sequencing: steps to draw a square
 
     s.exitonclick()
 
-.. image:: images/square_steps.png
-    :scale: 100 %
-    :align: center
-    :alt: square_steps
 
 ----
 
@@ -271,6 +273,13 @@ Definitions: using a def block to draw a square
 Adding pen colour and fill colour parameters
 -----------------------------------------------
 
+
+.. image:: images/square_steps_coloured.png
+    :scale: 100 %
+    :align: center
+    :alt: square_steps_coloured
+
+
 | The syntax below adds parameters for pen and fill colours and pen size.
 
 .. py:function:: square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)
@@ -326,10 +335,6 @@ Adding pen colour and fill colour parameters
     s.exitonclick()
 
 
-.. image:: images/square_steps.png
-    :scale: 100 %
-    :align: center
-    :alt: square_steps
     
 ----
 
