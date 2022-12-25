@@ -250,7 +250,7 @@ windows
 
 
 .. image:: images/window.png
-    :scale: 100 %
+    :scale: 50 %
     :align: center
     :alt: window
 

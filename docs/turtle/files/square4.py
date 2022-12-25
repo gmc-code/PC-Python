@@ -32,6 +32,6 @@ def square(t, length=50, start_pos=(0, 0), start_h=0, penc="black", fillc="white
         t.end_fill()
 
 
-square(t, length=250, start_pos=(-100, -150), start_h=0, penw=2, penc="black", fillc="green")
+square(t, length=250, start_pos=(-100, -150), start_h=0, penw=2, penc="black", fillc="light green")
 
 s.exitonclick()

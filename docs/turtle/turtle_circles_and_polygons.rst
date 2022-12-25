@@ -1,28 +1,21 @@
 ====================================================
-Turtle rectangle progressions
+Turtle circles and polygons
 ====================================================
 
-| The code progressions below draw a rectangle.
-| With each version, an improvement in code structure is made.
-| Firstly, only **sequencing** is used, with no iteration.
-| Secondly, **iteration**, using a for-loop, reduces code duplication.
-| Thirdly, a **definition** block with parameters allows for code reuse via the use of arguments.
+| The code below builds on the turtle circle method.
 
 ----
 
-Sequencing: steps to draw a rectangle
+Dots
 ------------------------------------------
 
-| The code below uses sequencing only.
-| The code below draws a rectangle of side length 120 and width 50 at coordinates (20, 30).
-| The start direction, eastwards, is set by: ``t.seth(0)``
-| The start position, at (20, 30), is set by: ``t.goto(20, 30)``. 
-| ``t.pu()`` and ``t.pd()`` are used either side of it to avoid line drawing when repositioning the turtle.
-| A line is drawn forwards by: ``t.fd(120)``.
-| The turtle then turns to the left by: ``t.lt(90)``.
-| A line is drawn forwards by: ``t.fd(50)``.
-| The turtle then turns to the left by: ``t.lt(90)``.
-| Then the last 2 sides are drawn by doing the same 4 steps again.
+| turtle.dot(size=None, *color)
+Parameters
+size - an integer >= 1 (if given)
+
+color - a colorstring or a numeric color tuple
+
+Draw a circular dot with diameter size, using color. If size is not given, the maximum of pensize+4 and 2*pensize is used.
 
 
 .. admonition:: Code Completion
@@ -93,10 +86,6 @@ Sequencing: steps to draw a rectangle
 
                 s.exitonclick()
 
-.. image:: images/rectangle_steps.png
-    :scale: 100 %
-    :align: center
-    :alt: rectangle_steps
 
 ----
 

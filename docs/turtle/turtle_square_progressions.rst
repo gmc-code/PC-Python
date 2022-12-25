@@ -51,6 +51,11 @@ Sequencing: steps to draw a square
 
     s.exitonclick()
 
+.. image:: images/square_steps.png
+    :scale: 100 %
+    :align: center
+    :alt: square_steps
+
 ----
 
 .. admonition:: Tasks
@@ -279,7 +284,7 @@ Adding pen colour and fill colour parameters
     | **fillc** - fillcolor; default is None
 
    
-| In the code below, ``square(t, length=250, start_pos=(-100, -150), start_h=0, penw=2, penc="black", fillc="green")`` draws a square of length 250 at (x=-100, y=-150) with a black pencolor, a green fillcolor, with a pensize of 2.
+| In the code below, ``square(t, length=250, start_pos=(-100, -150), start_h=0, penw=2, penc="black", fillc="light green")`` draws a square of length 250 at (x=-100, y=-150) with a black pencolor, a light green fillcolor, with a pensize of 2.
 | The code needs to check the **fillc** argument since setting a fillcolor to **None** will throw an error.
 
 .. code-block:: python
@@ -316,10 +321,16 @@ Adding pen colour and fill colour parameters
             t.end_fill()
 
 
-    square(t, length=250, start_pos=(-100, -150), start_h=0, penw=2, penc="black", fillc="green")
+    square(t, length=250, start_pos=(-100, -150), start_h=0, penw=2, penc="black", fillc="light green")
 
     s.exitonclick()
 
+
+.. image:: images/square_steps.png
+    :scale: 100 %
+    :align: center
+    :alt: square_steps
+    
 ----
 
 .. admonition:: Tasks
