@@ -14,7 +14,7 @@ Sequencing: steps to draw a rectangle
 ------------------------------------------
 
 .. image:: images/rectangle_steps.png
-    :scale: 50 %
+    :scale: 75 %
     :align: center
     :alt: rectangle_steps
     
@@ -420,7 +420,7 @@ Adding pen colour and fill colour parameters
 
  
 .. image:: images/rectangle_steps_coloured.png
-    :scale: 50 %
+    :scale: 75 %
     :align: center
     :alt: rectangle_steps_coloured
 

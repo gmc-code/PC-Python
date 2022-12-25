@@ -23,10 +23,10 @@ Scalene triangle
 | The code below draws a triangle of given Side, Angle, Side.
 | The code uses variables for side a, angle C, side b.
 | The code also makes use of the heading and start position.
-| The code draws a triangle of base 100, angle 70 and side 150 with a heading of 15 degrees, positioned at (20, 30).
+| The code draws a triangle of base 100, angle 60 and side 150 with a heading of 15 degrees, positioned at (20, 30).
 
 .. image:: images/scalene_steps.png
-    :scale: 50 %
+    :scale: 100 %
     :align: center
     :alt: scalene_steps
 
@@ -52,7 +52,7 @@ Scalene triangle
 
                 # --begin triangle
                 side_a = 100
-                angle_C = 70
+                angle_C = 60
                 side_b = 150
                 start_pos = (20, 30)
                 start_h = 15
@@ -377,7 +377,7 @@ Adding pen colour and fill colour parameters
 ---------------------------------------------
 
 .. image:: images/equilateral_steps_coloured.png
-    :scale: 50 %
+    :scale: 100 %
     :align: center
     :alt: equilateral_steps_coloured
 
