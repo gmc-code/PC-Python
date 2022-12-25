@@ -14,7 +14,7 @@ Sequencing: steps to draw a square
 ------------------------------------------
 
 .. image:: images/square_steps.png
-    :scale: 50 %
+    :scale: 100 %
     :align: center
     :alt: square_steps
 
@@ -275,7 +275,7 @@ Adding pen colour and fill colour parameters
 
 
 .. image:: images/square_steps_coloured.png
-    :scale: 50 %
+    :scale: 100 %
     :align: center
     :alt: square_steps_coloured
 
