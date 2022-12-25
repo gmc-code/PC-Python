@@ -70,6 +70,11 @@ Dots at a specified location
 
 ----
 
+.. image:: images/dot_stack_1.png
+    :scale: 75 %
+    :align: center
+    :alt: dot_stack_1
+
 | Make use of the ``draw_dot`` definition by drawing a series of dots of various sizes and colours at various locations.
 | The sizes, colours and locations are provided as lists ready to use.
 
@@ -100,8 +105,9 @@ Dots at a specified location
 
                 t = turtle.Turtle()
                 t.speed(5)
+                t.ht()
 
-                centres = [(0, -100), (0, -50), (0, 0), (0, 30)]
+                centres = [(0, -100), (0, -50), (0, 0), (0, 50)]
                 sizes = [200, 150, 100, 50]
                 colors = ["light blue", "pink", "light green", "yellow"]
                 
@@ -133,8 +139,9 @@ Dots at a specified location
 
                 t = turtle.Turtle()
                 t.speed(5)
+                t.ht()
 
-                centres = [(0, -100), (0, -50), (0, 0), (0, 30)]
+                centres = [(0, -100), (0, -50), (0, 0), (0, 50)]
                 sizes = [200, 150, 100, 50]
                 colors = ["light blue", "pink", "light green", "yellow"]
                 
@@ -142,6 +149,76 @@ Dots at a specified location
                     draw_dot(t, centre=centres[i], size=sizes[i], color=colors[i])
 
                 s.exitonclick()
+
+----
+
+.. image:: images/dot_stacks.png
+    :scale: 75 %
+    :align: center
+    :alt: dot_stacks
+
+.. admonition:: Exercise
+
+    1. Explore using lists to store multiple values for colors and positions and sizes. 
+    Write a definition to iterate through the various values to draw stacks of dots of different sizes and colours.
+
+    .. image:: images/dot_stacks.png
+        :scale: 75 %
+        :align: center
+        :alt: dot_stacks
+
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
+
+            .. tab-set::
+
+                .. tab-item:: Sample code
+
+                    .. code-block:: python
+
+                        import turtle
+
+
+                        def draw_dot(t, centre=(0, 0), size=20, color="blue"):
+                            t.pu()
+                            t.goto(centre)
+                            t.pd()
+                            t.dot(size, color)
+
+
+                        def draw_dot_stack(t, x, y, yadd, sizes, colors):
+                            for i in range(len(sizes)):
+                                centre_xy = (x, y+yadd*i)
+                                draw_dot(t, centre=centre_xy, size=sizes[i], color=colors[i])
+
+
+                        s = turtle.Screen()
+                        s.bgcolor("white")
+                        s.title("Grid")
+                        s.setup(width=850, height=600, startx=0, starty=0)
+
+                        t = turtle.Turtle()
+                        t.speed(5)
+                        t.ht()
+
+                        colors = ["light blue", "pink", "light green", "yellow"]
+
+                        sizes = [200, 150, 100, 50]
+                        draw_dot_stack(t,-300, -80, 10, sizes, colors)
+
+                        sizes = [200, 160, 120, 80]
+                        draw_dot_stack(t,-100, -80, 25, sizes, colors)
+
+                        sizes = [200, 170, 140, 110]
+                        draw_dot_stack(t,100, -80, 40, sizes, colors)
+
+                        sizes = [200, 180, 160, 140]
+                        draw_dot_stack(t,300, -80, 55, sizes, colors)
+
+                        s.exitonclick()
+
 
 ----
 

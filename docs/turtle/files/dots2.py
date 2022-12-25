@@ -1,5 +1,3 @@
-"""draw_dot
-"""
 import turtle
 
 
@@ -17,8 +15,9 @@ s.setup(width=800, height=600, startx=0, starty=0)
 
 t = turtle.Turtle()
 t.speed(5)
+t.ht()
 
-centres = [(0, -100), (0, -50), (0, 0), (0, 30)]
+centres = [(0, -100), (0, -50), (0, 0), (0, 50)]
 sizes = [200, 150, 100, 50]
 colors = ["light blue", "pink", "light green", "yellow"]
 
