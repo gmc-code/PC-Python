@@ -233,7 +233,6 @@ Exploring dot stacks further
 
 ----
 
-
 Using the Draw_dot: hexagonal array
 --------------------------------------------------
 
@@ -397,5 +396,17 @@ Using the Draw_dot: hexagonal array
                 s.update()
                 s.exitonclick()
 
+
+----
+
+Icecreem cones from dot stacks
+--------------------------------------------------
+
+.. image:: images/cones_by_dot_stacks.png
+    :scale: 75 %
+    :align: center
+    :alt: dot_stack_1
+
+| Make use of the ``draw_dot`` definition to approximate a cone shape by drawing smaller and smaller circles.
 
 
