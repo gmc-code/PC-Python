@@ -172,12 +172,12 @@ Using the Draw_dot definition
 
 ----
 
-Exploring draw_dot further
----------------------------
+Exploring dot stacks further
+-----------------------------
 
 .. admonition:: Exercise
 
-    1. Explore using lists to store multiple values for colors and positions and sizes. 
+    1. Explore drawing dot stacks using lists to store multiple values for colors and positions and sizes. 
     Write a definition to iterate through the various values to draw stacks of dots of different sizes and colours.
 
     .. image:: images/dot_stacks.png
@@ -231,4 +231,105 @@ Exploring draw_dot further
 
                         s.exitonclick()
 
+----
 
+
+Using the Draw_dot: hexagonal array
+--------------------------------------------------
+
+.. image:: images/dot_hexagon.png
+    :scale: 75 %
+    :align: center
+    :alt: dot_stack_1
+
+| Make use of the ``draw_dot`` definition by hexagon of circles using draw_dot.
+
+| The code completion below draws a 6 circles around a central circle, wiht all circles the same size.
+| The 6 circles have their centres in the shape of a hexagon. 
+| Since 360/6 is 60 degrees, the turtle can locate the centres of each circle by starting for the central circles's centre each time and heading outwards at angles that change by 60 degrees each time.
+| The image below shows the path taken by the turtle in doing the drawing.
+
+.. image:: images/dot_hexagon_turtle_trail.png
+    :scale: 75 %
+    :align: center
+    :alt: dot_stack_1
+
+
+.. py:function:: draw_dot_hexagon(t, x, y, angle, size, colors):
+
+    | **t** - the turtle object to draw the rectangle
+    | **centre** - the centre of the dot; default (0, 0)
+    | **size** - the diameter of the dot, an integer >= 1
+    | **color** - a colorstring or a numeric color tuple (r,g, b,)
+
+
+.. admonition:: Code Completion
+
+    .. tab-set::
+
+        .. tab-item:: Q
+
+            | Complete the code to draw a series of stacked dots by replacing the "XXX"s.
+
+            .. code-block:: python
+
+                def draw_dot_hexagon(t, x, y, angle, size, colors):
+                    hex_centre = (x, y)
+                    draw_dot(t, centre=hex_centre, size=size, color="ivory3")
+                    for i in range(6):
+                        t.pu()
+                        t.goto(hex_centre)
+                        t.seth(angle + 60 * i)
+                        t.fd(size)
+                        centre = t.pos()
+                        draw_dot(t, centre=centre, size=size, color=colors[i])
+
+
+
+.. admonition:: Code Completion
+
+    .. tab-set::
+
+        .. tab-item:: Q
+
+            | Complete the code to draw a hexagon of circles by replacing the "XXX"s.
+
+            .. code-block:: python
+
+                import turtle
+
+
+                def draw_dot(t, centre=(0, 0), size=20, color="blue"):
+                    t.pu()
+                    t.goto(centre)
+                    t.pd()
+                    t.dot(size, color)
+
+
+                def draw_dot_hexagon(t, centre, angle, size, colors):
+                    draw_dot(t, centre=centre, size=size, color="ivory3")
+                    for i in range(6):
+                        t.pu()
+                        t.goto(centre)
+                        t.seth(angle + 60 * i)
+                        t.fd(size)
+                        dot_centre = t.pos()
+                        draw_dot(t, centre=dot_centre, size=size, color=colors[i])
+
+
+                s = turtle.Screen()
+                s.bgcolor("white")
+                s.title("Grid")
+                s.setup(width=850, height=600, startx=0, starty=0)
+                s.tracer(0, 0)
+                s.colormode(255)
+
+                t = turtle.Turtle()
+                t.speed(0)
+                t.ht()
+
+                colors = ["light blue", "pink", "light green", "orange", "MediumPurple1", "yellow"]
+                draw_dot_hexagon(t, centre=(0, 0), angle=0, size=80, colors=colors)
+
+                s.update()
+                s.exitonclick()
