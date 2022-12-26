@@ -175,7 +175,7 @@ Using the Draw_dot definition
 Exploring dot stacks further
 -----------------------------
 
-.. admonition:: Exercise
+.. admonition:: Task
 
     1. Explore drawing dot stacks using lists to store multiple values for colors and positions and sizes. 
     Write a definition to iterate through the various values to draw stacks of dots of different sizes and colours.
