@@ -242,11 +242,13 @@ Using the Draw_dot: hexagonal array
     :align: center
     :alt: dot_stack_1
 
-| Make use of the ``draw_dot`` definition by hexagon of circles using draw_dot.
+| Make use of the ``draw_dot`` definition by drawing a hexagon of circles using draw_dot.
 
-| The code completion below draws a 6 circles around a central circle, wiht all circles the same size.
+| The code completion below draws 6 circles around a central circle, with all circles the same size.
 | The 6 circles have their centres in the shape of a hexagon. 
-| Since 360/6 is 60 degrees, the turtle can locate the centres of each circle by starting for the central circles's centre each time and heading outwards at angles that change by 60 degrees each time.
+| Since 360/6 is 60 degrees, the turtle can locate the centres of each circle by starting from the central circles's centre each time and heading outwards at angles that change by 60 degrees each time.
+| This avoids using trig to calculate the centre of the circles, since ``dot_centre = t.pos()`` can be used instead.
+| An alternative approach would be to go from centre to centre by turning 60 degrees.
 | The image below shows the path taken by the turtle in doing the drawing.
 
 .. image:: images/dot_hexagon_turtle_trail.png
@@ -255,12 +257,13 @@ Using the Draw_dot: hexagonal array
     :alt: dot_stack_1
 
 
-.. py:function:: draw_dot_hexagon(t, x, y, angle, size, colors):
+.. py:function:: draw_dot_hexagon(t, centre, angle, size, colors):
 
     | **t** - the turtle object to draw the rectangle
-    | **centre** - the centre of the dot; default (0, 0)
+    | **centre** - the centre of the hexagon
+    | **angle** - the direction of the first circle
     | **size** - the diameter of the dot, an integer >= 1
-    | **color** - a colorstring or a numeric color tuple (r,g, b,)
+    | **colors** - a list of 6 colorstring or a numeric color tuples (r,g, b,)
 
 
 .. admonition:: Code Completion
@@ -269,21 +272,36 @@ Using the Draw_dot: hexagonal array
 
         .. tab-item:: Q
 
-            | Complete the code to draw a series of stacked dots by replacing the "XXX"s.
+            | Complete the draw_dot_hexagon definition used to draw 6 circles around a central circle, with all circles the same size.
+            | Replacing the "XXX"s.
 
             .. code-block:: python
 
-                def draw_dot_hexagon(t, x, y, angle, size, colors):
-                    hex_centre = (x, y)
-                    draw_dot(t, centre=hex_centre, size=size, color="ivory3")
+                def draw_dot_hexagon(t, centre, angle, size, colors):
+                    draw_dot(t, centre=centre, size=size, color="ivory3")
                     for i in range(6):
                         t.pu()
-                        t.goto(hex_centre)
+                        t.goto(XXX)
+                        t.seth(angle + XXX * i)
+                        t.fd(XXX)
+                        dot_centre = t.pos()
+                        draw_dot(t, centre=dot_centre, size=size, color=colors[i])
+
+        .. tab-item:: Ans
+
+            | Completed draw_dot_hexagon definition.
+
+            .. code-block:: python
+
+                def draw_dot_hexagon(t, centre, angle, size, colors):
+                    draw_dot(t, centre=centre, size=size, color="ivory3")
+                    for i in range(6):
+                        t.pu()
+                        t.goto(centre)
                         t.seth(angle + 60 * i)
                         t.fd(size)
-                        centre = t.pos()
-                        draw_dot(t, centre=centre, size=size, color=colors[i])
-
+                        dot_centre = t.pos()
+                        draw_dot(t, centre=dot_centre, size=size, color=colors[i])
 
 
 .. admonition:: Code Completion
@@ -292,7 +310,52 @@ Using the Draw_dot: hexagonal array
 
         .. tab-item:: Q
 
-            | Complete the code to draw a hexagon of circles by replacing the "XXX"s.
+            | Complete the code to draw 6 circles around a central circle, with all circles the same size.
+
+            .. code-block:: python
+
+                import turtle
+
+
+                def draw_dot(t, centre=(0, 0), size=20, color="blue"):
+                    t.pu()
+                    t.goto(centre)
+                    t.pd()
+                    t.dot(size, color)
+
+
+                def draw_dot_hexagon(t, centre, angle, size, colors):
+                    draw_dot(t, centre=centre, size=size, color="ivory3")
+                    for i in range(6):
+                        t.pu()
+                        t.goto(centre)
+                        t.seth(angle + 60 * i)
+                        t.fd(size)
+                        dot_centre = t.pos()
+                        draw_dot(t, centre=dot_centre, size=size, color=colors[i])
+
+
+                s = turtle.Screen()
+                s.bgcolor("white")
+                s.title("Grid")
+                s.setup(width=850, height=600, startx=0, starty=0)
+                s.tracer(0, 0)
+                s.colormode(XXX)
+
+                t = turtle.Turtle()
+                t.speed(0)
+                t.ht()
+
+                XXX = ["light blue", "pink", "light green", "orange", "MediumPurple1", "yellow"]
+                XXX(t, centre=(0, 0), angle=0, size=80, colors=colors)
+
+                s.update()
+                s.exitonclick()
+
+
+        .. tab-item:: Ans
+
+            | Completed code to draw 6 circles around a central circle, with all circles the same size.
 
             .. code-block:: python
 
@@ -333,3 +396,6 @@ Using the Draw_dot: hexagonal array
 
                 s.update()
                 s.exitonclick()
+
+
+
