@@ -24,7 +24,7 @@ Draw_dot definition: dots at a specified location
 --------------------------------------------------
 
 | Adding a starting position, the centre of the dot, provides some convenience.
-| The turtle syntax for the ``draw_dot`` definition in below:
+| The syntax for a ``draw_dot`` definition in below:
 
 .. py:function:: draw_dot(t, centre=(0, 0), size=20, color="blue")
 
@@ -176,14 +176,14 @@ Using the Draw_dot definition
 draw_dot_stack definition
 --------------------------------------------------
 
-| Move the iteration into the definition to create a new defintion: ``draw_dot_stack``.
+| From the code above, the iteration lines can be moved into a new defintion: ``draw_dot_stack``.
 | The ``draw_dot_stack`` syntax :
 
 .. py:function:: draw_dot_stack(t, centre, pos_step, angle, size, size_step, colors)
 
     | **t** - the turtle object to draw the rectangle
     | **centre** - the centre of the dot
-    | **pos_step** - the length to move in the directon given by angle, from centre
+    | **pos_step** - the length to move in the directon given by the angle, from the centre
     | **angle** - the angle to draw the stack    
     | **size** - the diameter of the dot    
     | **size_step** - the length to reduce the diameter by for successive dots
@@ -244,7 +244,7 @@ Exploring dot stacks further
 
 .. admonition:: Task
 
-    1. Use ``draw_dot_stack`` to draw the dot stacks above using the skeleton outlien below.
+    1. Use ``draw_dot_stack`` to draw the dot stacks above using the skeleton outline below.
 
     .. image:: images/dot_stacks.png
         :scale: 75 %
