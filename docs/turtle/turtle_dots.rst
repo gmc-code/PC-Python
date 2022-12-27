@@ -364,8 +364,10 @@ draw_dot_stack definition
 | As a result, a counter will be used for the other variables that need to be changed with each loop.
 | To loop through the colors list, when more loops occur than the length of the colors list, the modulus operator can be used to get the remainder, which is then used to index the colour in the colors list.
 | ``counter % len(colors)`` gives a value between 0 and the last index position in the colors list.
+| See: https://www.w3schools.com/python/gloss_python_arithmetic_operators.asp
 | If only one colour is passed as an argument, then ``len(colors)`` will treat is as a string and not as a list. 
 | ``isinstance(colors,list)`` is used to cover this situation, and either use that single colour if there is just one, or index the next colour in the list.
+| See: https://www.w3schools.com/python/ref_func_isinstance.asp
 
 .. admonition:: Code Completion: draw_dot_stack_cone definition
 
