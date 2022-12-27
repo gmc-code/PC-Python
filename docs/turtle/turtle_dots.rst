@@ -340,13 +340,13 @@ Icecream cones from dot stacks
     :align: center
     :alt: dot_stack_1
 
-| Make use of the ``draw_dot_stack`` definition to approximate a cone shape by drawing a series of circles decreasing in size as they more further from the centre of the largest circle.
+| Make use of the ``draw_dot_stack`` definition to approximate a cone shape by drawing a series of circles, decreasing in size as they more further from the centre of the largest circle.
 
 
 draw_dot_stack definition
 --------------------------------------------------
 
-| The draw_dot_stack syntax :
+| The draw_dot_stack_cone syntax :
 
 .. py:function:: draw_dot_stack_cone(t, centre, pos_step, angle, size, size_step, colors)
 
@@ -360,9 +360,9 @@ draw_dot_stack definition
 
 | The ``draw_dot_stack_cone`` definition code is below.
 | This modifies the ``draw_dot_stack`` definition.
-| It loops through the dot size ffrom its starting size down towards 0.
-| As a result, a counter will be used for the otehr variabels that need to be changes with each loop.
-| To loop through the colors list, when more loops occur than the length if the colors list, the modulus can be used to get the remainder.
+| It loops through the dot size from its starting size down towards 0.
+| As a result, a counter will be used for the other variables that need to be changed with each loop.
+| To loop through the colors list, when more loops occur than the length of the colors list, the modulus operator can be used to get the remainder, which is then used to index the colour in the colors list.
 | ``counter % len(colors)`` gives a value between 0 and the last index position in the colors list.
 
 .. admonition:: Code Completion: draw_dot_stack_cone definition
@@ -380,15 +380,20 @@ draw_dot_stack definition
  
                 def draw_dot_stack_cone(t, centre, pos_step, angle, size, size_step, colors):
                     # based on size and size_step
-                    # use  counter % len(colors) to be able to loop though colors more than once.
+                    # use  counter % len(colors)  to be able to loop though colors more than once.
+                    # use isinstance(colors,list) to check for just one colour or a list of colours
                     counter = 0
-                    for i in range(size, 0, -XXX):
+                    for i in range(size, 0, -size_step):
                         t.pu()
-                        t.goto(XXX)
+                        t.goto(centre)
                         t.seth(angle)
-                        t.fd(counter*XXX)
+                        t.fd(counter*pos_step)
                         dot_centre = t.pos()
-                        draw_dot(t, centre=dot_centre, size=size - counter*XXX, color=colors[counter % len(XXX)])
+                        if isinstance(colors,list):
+                            dot_color = colors[counter % len(colors)] 
+                        else:
+                            dot_color = colors  
+                        draw_dot(t, centre=dot_centre, size=size - counter*size_step, color=dot_color)
                         counter += 1
 
         .. tab-item:: Ans
@@ -403,6 +408,7 @@ draw_dot_stack definition
                 def draw_dot_stack_cone(t, centre, pos_step, angle, size, size_step, colors):
                     # based on size and size_step
                     # use  counter % len(colors)  to be able to loop though colors more than once.
+                    # use isinstance(colors,list) to check for just one colour or a list of colours
                     counter = 0
                     for i in range(size, 0, -size_step):
                         t.pu()
@@ -410,7 +416,11 @@ draw_dot_stack definition
                         t.seth(angle)
                         t.fd(counter*pos_step)
                         dot_centre = t.pos()
-                        draw_dot(t, centre=dot_centre, size=size - counter*size_step, color=colors[counter % len(colors)])
+                        if isinstance(colors,list):
+                            dot_color = colors[counter % len(colors)] 
+                        else:
+                            dot_color = colors  
+                        draw_dot(t, centre=dot_centre, size=size - counter*size_step, color=dot_color)
                         counter += 1
 
 ----
@@ -441,9 +451,8 @@ draw_dot_stack definition
 
                 colors = ["light blue", "pink", "light green", "yellow", "MediumPurple1", "bisque"]
 
-                draw_dot_stack_cone(t, centre=(-200, 100), pos_step=50, angle=270, size=200, size_step =50, colors=colors[0:2])
-                draw_dot_stack_cone(t, centre=(0, 100), pos_step=30, angle=270, size=200, size_step=30, colors=colors[2:5])
-                draw_dot_stack_cone(t, centre=(200, 100), pos_step=10,  angle=270, size=200, size_step=10, colors=colors)
+                draw_dot_stack_cone(t, centre=(-200, 100), pos_step=50, angle=270, size=200, size_step =50, colors=colors)
+                #...
 
                 s.update()
                 s.exitonclick()
@@ -468,6 +477,7 @@ draw_dot_stack definition
                 def draw_dot_stack_cone(t, centre, pos_step, angle, size, size_step, colors):
                     # based on size and size_step
                     # use  counter % len(colors)  to be able to loop though colors more than once.
+                    # use isinstance(colors,list) to check for just one colour or a list of colours
                     counter = 0
                     for i in range(size, 0, -size_step):
                         t.pu()
@@ -475,7 +485,11 @@ draw_dot_stack definition
                         t.seth(angle)
                         t.fd(counter*pos_step)
                         dot_centre = t.pos()
-                        draw_dot(t, centre=dot_centre, size=size - counter*size_step, color=colors[counter % len(colors)])
+                        if isinstance(colors,list):
+                            dot_color = colors[counter % len(colors)] 
+                        else:
+                            dot_color = colors  
+                        draw_dot(t, centre=dot_centre, size=size - counter*size_step, color=dot_color)
                         counter += 1
 
 
@@ -492,9 +506,9 @@ draw_dot_stack definition
 
                 colors = ["light blue", "pink", "light green", "yellow", "MediumPurple1", "bisque"]
 
-                draw_dot_stack_cone(t, centre=(-200, 100), pos_step=50, angle=270, size=200, size_step =50, colors=colors[0:2])
-                draw_dot_stack_cone(t, centre=(0, 100), pos_step=30, angle=270, size=200, size_step=30, colors=colors[2:5])
-                draw_dot_stack_cone(t, centre=(200, 100), pos_step=10,  angle=270, size=200, size_step=10, colors=colors)
+                draw_dot_stack_cone(t, centre=(-200, 100), pos_step=50, angle=270, size=200, size_step =50, colors=colors)
+                draw_dot_stack_cone(t, centre=(0, 100), pos_step=30, angle=270, size=200, size_step=30, colors=colors[2:4])
+                draw_dot_stack_cone(t, centre=(200, 100), pos_step=10,  angle=270, size=200, size_step=10, colors=colors[0])
 
                 s.update()
                 s.exitonclick()
