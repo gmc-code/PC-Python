@@ -23,7 +23,8 @@ Turtle Dots
 Draw_dot definition: dots at a specified location
 --------------------------------------------------
 
-| Adding a starting position, the centre of the dot, provides some convenience:
+| Adding a starting position, the centre of the dot, provides some convenience.
+| The turtle syntax for the ``draw_dot`` definition in below:
 
 .. py:function:: draw_dot(t, centre=(0, 0), size=20, color="blue")
 
@@ -34,7 +35,7 @@ Draw_dot definition: dots at a specified location
 
 | The ``draw_dot`` definition code is below:
 
-.. admonition:: Code Completion
+.. admonition:: Code Completion: draw_dot definition
 
     .. tab-set::
 
@@ -88,7 +89,7 @@ Using the Draw_dot definition
 
 | The code completion below draws the stacked dots in the image above. 
 
-.. admonition:: Code Completion
+.. admonition:: Code Completion: stacked dots
 
     .. tab-set::
 
@@ -175,7 +176,8 @@ Using the Draw_dot definition
 draw_dot_stack definition
 --------------------------------------------------
 
-| The draw_dot_stack syntax :
+| Move the iteration into the definition to create a new defintion: ``draw_dot_stack``.
+| The ``draw_dot_stack`` syntax :
 
 .. py:function:: draw_dot_stack(t, centre, pos_step, angle, size, size_step, colors)
 
@@ -190,7 +192,7 @@ draw_dot_stack definition
 
 | The ``draw_dot_stack`` definition code is below:
 
-.. admonition:: Code Completion
+.. admonition:: Code Completion: draw_dot_stack definition
 
     .. tab-set::
 
@@ -363,7 +365,7 @@ draw_dot_stack definition
 | To loop through the colors list, when more loops occur than the length if the colors list, the modulus can be used to get the remainder.
 | ``counter % len(colors)`` gives a value between 0 and the last index position in the colors list.
 
-.. admonition:: Code Completion
+.. admonition:: Code Completion: draw_dot_stack_cone definition
 
     .. tab-set::
 
@@ -530,7 +532,7 @@ Using the Draw_dot: hexagonal array
     :alt: dot_stack_1
 
 
-.. admonition:: Code Completion
+.. admonition:: Code Completion: draw_dot_hexagon definition
 
     .. tab-set::
 
@@ -568,7 +570,7 @@ Using the Draw_dot: hexagonal array
                         draw_dot(t, centre=dot_centre, size=size, color=colors[i])
 
 
-.. admonition:: Code Completion
+.. admonition:: Code Completion: draw_dot_stack_cone definition
 
     .. tab-set::
 

@@ -102,7 +102,7 @@ Front of house
 | For simplicity, the pensize has been set to 1, pencolor to black and fillcolor to snow.
 | ``sh.rectangle(t, length=length, width=height, start_pos=start_pos, penw=1, penc="black", fillc="snow")``
 
-.. admonition:: Code Completion
+.. admonition:: Code Completion: front of house
 
     .. tab-set::
 

@@ -30,13 +30,13 @@ Scalene triangle
     :align: center
     :alt: scalene_steps
 
-.. admonition:: Code Completion
+.. admonition:: Code Completion: scalene_steps definition
 
     .. tab-set::
 
         .. tab-item:: Q
 
-            Write a definition to replace the lines between the comments (begin triangle and end triangle) in the code above.
+            Write a definition to replace the lines between the comments (begin triangle and end triangle) in the code below.
                                          
             .. code-block:: python
 
@@ -118,7 +118,7 @@ Isosceles triangle
 | The code below uses the x and y positions and only works when the base is drawn horizontally with the intitial heading set to 0.
 | The code draws an isosceles triangle of base 100 and height 50 at (20, 30).
 
-.. admonition:: Code Completion
+.. admonition:: Code Completion: isosceles definition
 
     .. tab-set::
 
@@ -209,7 +209,7 @@ Isosceles triangle at any angle
 |     ``b = math.sqrt(height**2 + (base**2) / 4)``
 |     ``angle_B = math.degrees(math.atan(2 * height / base))``
 
-.. admonition:: Code Completion
+.. admonition:: Code Completion: isosceles definition
 
     .. tab-set::
 
@@ -299,7 +299,7 @@ Equilateral triangles
 | The code below uses iteration to draw an equilateral triangle with angles of 60 degrees at (20,30), with the base at 30 degrees from the horizontal (start_h = 10).
 | For an internal angle of 60 degrees when drawing anticlockwise, and angle of 120 degrees is need for the left turn.
 
-.. admonition:: Code Completion
+.. admonition:: Code Completion: equilateral definition
 
     .. tab-set::
 

@@ -30,7 +30,7 @@ Sequencing: steps to draw a rectangle
 | Then the last 2 sides are drawn by doing the same 4 steps again.
 
 
-.. admonition:: Code Completion
+.. admonition:: Code Completion: rectangle steps
 
     .. tab-set::
 
@@ -151,7 +151,7 @@ Iteration: using a for-loop to draw a rectangle
 | Firstly, 2 sides are drawn, then this is repeated.
 | The iterator used is "_". This is the standard choice in python when the iterator is not referenced in the for-loop block.
 
-.. admonition:: Code Completion
+.. admonition:: Code Completion: rectangle for loops
 
     .. tab-set::
 
@@ -277,7 +277,7 @@ Definitions: using a def block to draw a rectangle
 | ``rectangle(t, length=120, width=50, start_pos=(20, 30))`` draws a rectangle of 120 by 50 at (20, 30).
 | ``rectangle(t, length=400, width=300, start_pos=(-300, -100), start_h=10)`` draws a rectangle of 400 by 300 at (-300, -100) with an angle of 10 degrees.
 
-.. admonition:: Code Completion
+.. admonition:: Code Completion: rectangle definition
 
     .. tab-set::
 
@@ -428,7 +428,7 @@ Adding pen colour and fill colour parameters
 | In the code below, ``rectangle(t, length=400, width=300, start_pos=(-100, -150), start_h=10, penw=5, penc="black", fillc="light green")`` draws a rectangle of 400 by 300 at (x=-100, y=-150) with a black pencolor, a green fillcolor, using a pensize of 5.
 | The code needs to check the **fillc** argument since setting a fillcolor to **None** will throw an error.
 
-.. admonition:: Code Completion
+.. admonition:: Code Completion: rectangle_steps_coloured definition
 
     .. tab-set::
 

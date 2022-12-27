@@ -28,7 +28,8 @@ Turtle Circles
 Circles at a specified location
 ------------------------------------------
 
-| Adding a starting position, the centre of the circle, provides some convenience:
+| Adding a starting position, the centre of the circle, will provide some convenience.
+| The ``draw_centered_circle`` syntax is below:
 
 .. py:function:: draw_centered_circle(t, centre=(0, 0), size=20, color="blue", penw=1, penc="black", fillc=None)
 
@@ -37,114 +38,5 @@ Circles at a specified location
     | **size** - the dot diameter, an integer >= 1 (if given)
     | **color** - a colorstring or a numeric color tuple (r,g, b,)
 
-| The ``draw_dot`` definition code is below:
-
-.. admonition:: Code Completion
-
-    .. tab-set::
-
-        .. tab-item:: Q
-
-            | Complete the code for the draw_dot definition by replacing the "XXX"s.
-
-            .. code-block:: python
-
-                import turtle
-
-
-                def draw_dot(t, centre=(0, 0), size=20, color="blue"):
-                    t.XXX()
-                    t.goto(centre)
-                    t.XXX()
-                    t.dot(XXX, XXX)
-
-        .. tab-item:: Ans
-
-            | Completed code for the draw_dot definition.
-
-            .. code-block:: python
-
-                import turtle
-
-
-                def draw_dot(t, centre=(0, 0), size=20, color="blue"):
-                    t.pu()
-                    t.goto(centre)
-                    t.pd()
-                    t.dot(size, color)
-
-----
-
-| Make use of the ``draw_dot`` definition by drawing a series of dots of various sizes and colours at various locations.
-| The sizes, colours and locations are provided as lists ready to use.
-
-.. admonition:: Code Completion
-
-    .. tab-set::
-
-        .. tab-item:: Q
-
-            | Complete the code to draw a series of stacked dots by replacing the "XXX"s.
-
-            .. code-block:: python
-
-                import turtle
-
-
-                def draw_dot(t, centre=(0, 0), size=20, color="blue"):
-                    t.pu()
-                    t.goto(centre)
-                    t.pd()
-                    t.dot(size, color)
-
-
-                s = turtle.Screen()
-                s.bgcolor("white")
-                s.title("Grid")
-                s.setup(width=800, height=600, startx=0, starty=0)
-
-                t = turtle.Turtle()
-                t.speed(5)
-
-                sizes = [200, 150, 100, 50]
-                colors = ["light blue", "pink", "light green", "yellow"]
-                centres = [(0, -100), (0, -50), (0, 0), (0, 30)]
-                for i in range(len(sizes)):
-                    draw_dot(t, centre=XXX, size=XXX, color=XXX)
-
-                s.exitonclick()
-
-        .. tab-item:: Ans
-
-            | Completed code to draw a series of stacked dots.
-
-            .. code-block:: python
-
-                import turtle
-
-
-                def draw_dot(t, centre=(0, 0), size=20, color="blue"):
-                    t.pu()
-                    t.goto(centre)
-                    t.pd()
-                    t.dot(size, color)
-
-
-                s = turtle.Screen()
-                s.bgcolor("white")
-                s.title("Grid")
-                s.setup(width=800, height=600, startx=0, starty=0)
-
-                t = turtle.Turtle()
-                t.speed(5)
-
-                sizes = [200, 150, 100, 50]
-                colors = ["light blue", "pink", "light green", "yellow"]
-                centres = [(0, -100), (0, -50), (0, 0), (0, 30)]
-                for i in range(len(sizes)):
-                    draw_dot(t, centre=centres[i], size=sizes[i], color=colors[i])
-
-                s.exitonclick()
-
-
+| The ``draw_centered_circle`` definition code is below.
 

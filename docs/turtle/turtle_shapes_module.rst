@@ -114,7 +114,7 @@ Rectangle
     | **penc** - pen color; default is black
     | **fillc** - fill color; default is None
 
-.. admonition:: Code Completion
+.. admonition:: Code Completion: rectangle doc string
 
     .. tab-set::
 
@@ -179,7 +179,7 @@ Scalene
     | **penc** - pen color; default is black
     | **fillc** - fill color; default is None
 
-.. admonition:: Code Completion
+.. admonition:: Code Completion: scalene doc string
 
     .. tab-set::
 
@@ -246,7 +246,7 @@ Isosceles
     | **penc** - pen color; default is black
     | **fillc** - fill color; default is None
 
-.. admonition:: Code Completion
+.. admonition:: Code Completion: isosceles doc string
 
     .. tab-set::
 
@@ -311,7 +311,7 @@ Equilateral
     | **fillc** - fill color; default is None
 
 
-.. admonition:: Code Completion
+.. admonition:: Code Completion: equilateral doc string
 
     .. tab-set::
 
