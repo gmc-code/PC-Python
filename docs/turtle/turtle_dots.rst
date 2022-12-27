@@ -16,7 +16,7 @@ Turtle Dots
     | Draw a circular dot with diameter size, using color. 
     | **size** - the dot diameter, an integer >= 1 (if given)
     | If size is not given, the maximum of pensize+4 and 2*pensize is used.
-    | **color** - a colorstring or a numeric color tuple (r,g, b,)
+    | **color** - a colorstring or a numeric color tuple (r, g, b,)
 
 ----
 
@@ -25,12 +25,12 @@ Draw_dot definition: dots at a specified location
 
 | Adding a starting position, the centre of the dot, provides some convenience:
 
-.. py:function:: draw_dot(t, centre=(0, 0), size=20, color="blue"):
+.. py:function:: draw_dot(t, centre=(0, 0), size=20, color="blue")
 
     | **t** - the turtle object to draw the rectangle
     | **centre** - the centre of the dot; default (0, 0)
     | **size** - the diameter of the dot, an integer >= 1
-    | **color** - a colorstring or a numeric color tuple (r,g, b,)
+    | **color** - a colorstring or a numeric color tuple (r, g, b,)
 
 | The ``draw_dot`` definition code is below:
 
@@ -79,7 +79,7 @@ Using the Draw_dot definition
     :alt: dot_stack_1
 
 | Make use of the ``draw_dot`` definition by drawing a dot stack of 4 dots of decreasing size.
-| The code below uses list of postions and sizes.
+| The code below uses list of positions and sizes.
 | For overlapping circles to have a common tangent on a side (that is, a line touches all the circles), if the change in the sizes (diameters), from one circle to the next, is the same, then the centres of the circles will be the same distance apart from one circle to the next.
 | ``centres = [(0, -100), (0, -50), (0, 0), (0, 50)]``
 | Notice how the y values of the centres increase by the same amount from one point to the next.
@@ -172,13 +172,77 @@ Using the Draw_dot definition
 
 ----
 
+draw_dot_stack definition
+--------------------------------------------------
+
+| The draw_dot_stack definition :
+
+.. py:function:: draw_dot_stack(t, centre, pos_step, angle, size, size_step, colors)
+
+    | **t** - the turtle object to draw the rectangle
+    | **centre** - the centre of the dot
+    | **size_step** - the length to move in the directon given by angle, from centre
+    | **angle** - the angle to draw the stack    
+    | **size** - the diameter of the dot    
+    | **size_step** - the length to reduce the diameter by for successive dots
+    | **colors** - a list of colorstring or numeric color tuples (r, g, b,)
+
+
+| The ``draw_dot_stack`` definition code is below:
+
+.. admonition:: Code Completion
+
+    .. tab-set::
+
+        .. tab-item:: Q
+
+            | Complete the code for the draw_dot_stack definition by replacing the "XXX"s.
+
+            .. code-block:: python
+
+                import turtle
+
+
+                def draw_dot_stack(t, centre, pos_step, angle, size, size_step, colors):
+                    # based on number of colours
+                    for i in range(len(XXX)):
+                        t.pu()
+                        t.goto(XXX)
+                        t.seth(XXX)
+                        t.fd(i*XXX)
+                        dot_centre = t.pos()
+                        draw_dot(t, centre=dot_centre, size=size - i*XXX, color=colors[XXX])
+
+
+        .. tab-item:: Ans
+
+            | Completed code for the draw_dot definition.
+
+            .. code-block:: python
+
+                import turtle
+
+
+                def draw_dot_stack(t, centre, pos_step, angle, size, size_step, colors):
+                    # based on number of colours
+                    for i in range(len(colors)):
+                        t.pu()
+                        t.goto(centre)
+                        t.seth(angle)
+                        t.fd(i*pos_step)
+                        dot_centre = t.pos()
+                        draw_dot(t, centre=dot_centre, size=size - i*size_step, color=colors[i])
+
+
+----
+
+
 Exploring dot stacks further
 -----------------------------
 
 .. admonition:: Task
 
-    1. Explore drawing dot stacks using lists to store multiple values for colors and positions and sizes. 
-    Write a definition to iterate through the various values to draw stacks of dots of different sizes and colours.
+    1. Write a definition draw dot stacks.
 
     .. image:: images/dot_stacks.png
         :scale: 75 %
@@ -206,11 +270,15 @@ Exploring dot stacks further
                             t.dot(size, color)
 
 
-                        def draw_dot_stack(t, x, y, yadd, size_0, size_dec, colors):
+                        def draw_dot_stack(t, centre, pos_step, angle, size, size_step, colors):
+                            # based on number of colours
                             for i in range(len(colors)):
-                                centre_xy = (x, y + yadd*i)
-                                size = size_0 - size_dec*i
-                                draw_dot(t, centre=centre_xy, size=size, color=colors[i])
+                                t.pu()
+                                t.goto(centre)
+                                t.seth(angle)
+                                t.fd(i*pos_step)
+                                dot_centre = t.pos()
+                                draw_dot(t, centre=dot_centre, size=size - i*size_step, color=colors[i])
 
 
                         s = turtle.Screen()
@@ -219,20 +287,19 @@ Exploring dot stacks further
                         s.setup(width=850, height=600, startx=0, starty=0)
 
                         t = turtle.Turtle()
-                        t.speed(5)
+                        t.speed(0)
                         t.ht()
 
                         colors = ["light blue", "pink", "light green", "yellow"]
 
-                        draw_dot_stack(t,x=-300, y=-80, yadd=10, size_0=200, size_dec=50, colors=colors)
-                        draw_dot_stack(t,x=-100, y=-80, yadd=25, size_0=200, size_dec=40, colors=colors)
-                        draw_dot_stack(t,x=100, y=-80, yadd=40, size_0=200, size_dec=30, colors=colors)
-                        draw_dot_stack(t,x=300, y=-80, yadd=55, size_0=200, size_dec=20, colors=colors)
+                        draw_dot_stack(t, centre=(-300, -80), pos_step=10, angle=45, size=200, size_step=50, colors=colors)
+                        draw_dot_stack(t, centre=(-100, -80), pos_step=25, angle=60, size=200, size_step=40, colors=colors)
+                        draw_dot_stack(t, centre=(100, -80), pos_step=40, angle=75, size=200, size_step=30, colors=colors)
+                        draw_dot_stack(t, centre=(300, -80), pos_step=55, angle=90, size=200, size_step=20, colors=colors)
 
                         s.exitonclick()
 
 ----
-
 
 Icecream cones from dot stacks
 --------------------------------------------------
@@ -242,7 +309,7 @@ Icecream cones from dot stacks
     :align: center
     :alt: dot_stack_1
 
-| Make use of the ``draw_dot`` definition to approximate a cone shape by drawing a series of circles decreasing in size as they more further from the centre of the largest circle.
+| Make use of the ``draw_dot_stack`` definition to approximate a cone shape by drawing a series of circles decreasing in size as they more further from the centre of the largest circle.
 
 
 .. admonition:: Task
@@ -251,40 +318,17 @@ Icecream cones from dot stacks
 
         .. tab-item:: Q
 
-            | Complete the skeleton code to draw a a series of 3 cones which approximate a cone shape as in the image above.
+            | Write code to draw a series of 3 cones which approximate a cone shape as in the image above.
 
             .. code-block:: python
 
                 import turtle
 
 
-                # def draw_dot...
-
-
-                # def draw_dot_stack...
-
-
-                # s = turtle.Screen() ...
-
-
-                # t = turtle.Turtle()
-
-
-                # colors = ...
-
-                for i in range(200, 5, -XXX):
-                    draw_dot_stack(t, centre=(-200, -100), angle=90, size=i, color=colors[0])
-                for i in range(200, 5, -XXX):
-                    draw_dot_stack(t, centre=(0, -100), angle=90, size=i, color=colors[1])
-                for i in range(200, 5, -XXX):
-                    draw_dot_stack(t, centre=(200, -100), angle=90, size=i, color=colors[2])
-
-                s.update()
-                s.exitonclick()
 
         .. tab-item:: Ans
 
-            | Completed code to draw a a series of 3 cones which approximate a cone shape as in the image above.
+            | Completed code to draw a series of 3 cones which approximate a cone shape as in the image above.
 
             .. code-block:: python
 
@@ -298,14 +342,17 @@ Icecream cones from dot stacks
                     t.dot(size, color)
 
 
-                def draw_dot_stack(t, centre, angle, size, color):
-                    t.pu()
-                    t.goto(centre)
-                    t.seth(angle)
-                    t.fd(size)
-                    dot_centre = t.pos()
-                    draw_dot(t, centre=dot_centre, size=size, color=color)
-
+                def draw_dot_stack(t, centre, angle, size, step, colors):
+                    col_i = 0
+                    for i in range(size, 0, -step):
+                        t.pu()
+                        t.goto(centre)
+                        t.seth(angle)
+                        t.fd(i)
+                        dot_centre = t.pos()
+                        draw_dot(t, centre=dot_centre, size=i, color=colors[col_i])
+                        col_i = (col_i + 1) % len(colors)
+                        print(col_i, end=" ")
 
                 s = turtle.Screen()
                 s.bgcolor("white")
@@ -320,16 +367,13 @@ Icecream cones from dot stacks
 
                 colors = ["light blue", "pink", "light green", "yellow", "MediumPurple1", "bisque"]
 
-                for i in range(200, 5, -50):
-                    draw_dot_stack(t, centre=(-200, -100), angle=90, size=i, color=colors[0])
-                for i in range(200, 5, -30):
-                    draw_dot_stack(t, centre=(0, -100), angle=90, size=i, color=colors[1])
-                for i in range(200, 5, -10):
-                    draw_dot_stack(t, centre=(200, -100), angle=90, size=i, color=colors[2])
+                draw_dot_stack(t, centre=(-200, -100), angle=90, size=200, step = 50, colors=colors[0:2])
+                draw_dot_stack(t, centre=(0, -100), angle=90, size=200, step = 30, colors=colors[2:5])
+                draw_dot_stack(t, centre=(200, -100), angle=90, size=200, step = 10, colors=colors)
 
                 s.update()
                 s.exitonclick()
-                
+
 ----
 
 Using the Draw_dot: hexagonal array
