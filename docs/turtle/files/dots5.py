@@ -8,7 +8,7 @@ def draw_dot(t, centre=(0, 0), size=20, color="blue"):
     t.dot(size, color)
 
 
-def draw_dot_hexagon(t, centre, angle, size, centre_color, colors):
+def draw_dot_centre_hexagon(t, centre, angle, size, centre_color, colors):
     draw_dot(t, centre=centre, size=size, color=centre_color)
     for i in range(6):
         t.pu()
@@ -31,7 +31,7 @@ t.speed(0)
 t.ht()
 
 colors = ["light blue", "pink", "light green", "orange", "MediumPurple1", "yellow"]
-draw_dot_hexagon(t, centre=(0, 0), angle=0, size=80, centre_color="ivory3", colors=colors)
+draw_dot_centre_hexagon(t, centre=(0, 0), angle=0, size=80, centre_color="ivory3", colors=colors)
 
 s.update()
 s.exitonclick()

@@ -533,7 +533,7 @@ draw_dot_stack_cone usage
 
 ----
 
-Hexagonal array: draw_dot_hexagon definition
+Hexagonal array: draw_dot_centre_hexagon definition
 --------------------------------------------------
 
 .. image:: images/dot_hexagon.png
@@ -541,9 +541,9 @@ Hexagonal array: draw_dot_hexagon definition
     :align: center
     :alt: dot_stack_1
 
-| Write a ``draw_dot_hexagon`` definition to draw a hexagon of circles around a central dot.
+| Write a ``draw_dot_centre_hexagon`` definition to draw a hexagon of circles around a central dot.
 
-.. py:function:: draw_dot_hexagon(t, centre, angle, size, centre_color, colors)
+.. py:function:: draw_dot_centre_hexagon(t, centre, angle, size, centre_color, colors)
 
     | **t** - the turtle object to draw the rectangle
     | **centre** - the centre of the hexagon
@@ -552,7 +552,7 @@ Hexagonal array: draw_dot_hexagon definition
     | **centre_color** - the colour of the central dot; a colorstring or a numeric color tuple (r, g, b,)
     | **colors** - the colours of the surrounding dots; a list of 6 colorstring or a numeric color tuples (r, g, b,)
 
-| The code completion below completes the ``draw_dot_hexagon`` definition to draw 6 circles around a central circle, with all circles the same size.
+| The code completion below completes the ``draw_dot_centre_hexagon`` definition to draw 6 circles around a central circle, with all circles the same size.
 | The 6 circles have their centres in the shape of a hexagon. 
 | Since 360/6 is 60 degrees, the turtle can locate the centres of each circle by starting from the central circles's centre each time and heading outwards at angles that change by 60 degrees each time.
 | This avoids using trig to calculate the centre of the circles, since ``dot_centre = t.pos()`` can be used instead.
@@ -565,18 +565,18 @@ Hexagonal array: draw_dot_hexagon definition
     :alt: dot_stack_1
 
 
-.. admonition:: Code Completion: draw_dot_hexagon definition
+.. admonition:: Code Completion: draw_dot_centre_hexagon definition
 
     .. tab-set::
 
         .. tab-item:: Q
 
-            | Complete the draw_dot_hexagon definition used to draw 6 circles around a central circle, with all circles the same size.
+            | Complete the draw_dot_centre_hexagon definition used to draw 6 circles around a central circle, with all circles the same size.
             | Replacing the "XXX"s.
 
             .. code-block:: python
 
-                def draw_dot_hexagon(t, centre, angle, size, centre_color, colors):
+                def draw_dot_centre_hexagon(t, centre, angle, size, centre_color, colors):
                     draw_dot(t, centre=centre, size=size, color=XXX)
                     for i in range(6):
                         t.pu()
@@ -588,11 +588,11 @@ Hexagonal array: draw_dot_hexagon definition
 
         .. tab-item:: Ans
 
-            | Completed draw_dot_hexagon definition.
+            | Completed draw_dot_centre_hexagon definition.
 
             .. code-block:: python
 
-                def draw_dot_hexagon(t, centre, angle, size, centre_color, colors):
+                def draw_dot_centre_hexagon(t, centre, angle, size, centre_color, colors):
                     draw_dot(t, centre=centre, size=size, color=centre_color)
                     for i in range(6):
                         t.pu()
@@ -630,7 +630,7 @@ Hexagonal array: draw_dot_hexagon definition
                             t.dot(size, color)
 
 
-                        def draw_dot_hexagon(t, centre, angle, size, colors):
+                        def draw_dot_centre_hexagon(t, centre, angle, size, colors):
                             draw_dot(t, centre=centre, size=size, color="ivory3")
                             for i in range(6):
                                 t.pu()
@@ -675,7 +675,7 @@ Hexagonal array: draw_dot_hexagon definition
                             t.dot(size, color)
 
 
-                        def draw_dot_hexagon(t, centre, angle, size, colors):
+                        def draw_dot_centre_hexagon(t, centre, angle, size, colors):
                             draw_dot(t, centre=centre, size=size, color="ivory3")
                             for i in range(6):
                                 t.pu()
@@ -698,7 +698,7 @@ Hexagonal array: draw_dot_hexagon definition
                         t.ht()
 
                         colors = ["light blue", "pink", "light green", "orange", "MediumPurple1", "yellow"]
-                        draw_dot_hexagon(t, centre=(0, 0), angle=0, size=80, colors=colors)
+                        draw_dot_centre_hexagon(t, centre=(0, 0), angle=0, size=80, colors=colors)
 
                         s.update()
                         s.exitonclick()
