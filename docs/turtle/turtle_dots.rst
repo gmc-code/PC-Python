@@ -435,7 +435,7 @@ draw_dot_stack_cone usage
 
 .. admonition:: Task
 
-    1. | Write code to draw a series of 3 cones which approximate a cone shape as in the image below.
+    1. | Write code to draw a series of 3 cones which approximate a cone shape as in the image below, using the skeleton outline below.
 
     .. image:: images/cones_by_dot_stacks.png
         :scale: 50 %
@@ -616,41 +616,24 @@ Hexagonal array: draw_dot_centre_hexagon definition
 
                 .. tab-item:: Q
 
-                    | Complete the code to draw 6 circles around a central circle, with all circles the same size.
+                    | Complete the code to draw 6 circles around a central circle using the skeleton outline below.
 
                     .. code-block:: python
 
                         import turtle
 
 
-                        def draw_dot(t, centre=(0, 0), size=20, color="blue"):
-                            t.pu()
-                            t.goto(centre)
-                            t.pd()
-                            t.dot(size, color)
+                        #def draw_dot...
 
 
-                        def draw_dot_centre_hexagon(t, centre, angle, size, colors):
-                            draw_dot(t, centre=centre, size=size, color="ivory3")
-                            for i in range(6):
-                                t.pu()
-                                t.goto(centre)
-                                t.seth(angle + 60 * i)
-                                t.fd(size)
-                                dot_centre = t.pos()
-                                draw_dot(t, centre=dot_centre, size=size, color=colors[i])
+                        #def draw_dot_centre_hexagon...
 
 
                         s = turtle.Screen()
-                        s.bgcolor("white")
-                        s.title("Grid")
-                        s.setup(width=850, height=600, startx=0, starty=0)
-                        s.tracer(0, 0)
-                        s.colormode(XXX)
+                        #...
 
                         t = turtle.Turtle()
-                        t.speed(0)
-                        t.ht()
+                        #...
 
                         XXX = ["light blue", "pink", "light green", "orange", "MediumPurple1", "yellow"]
                         XXX(t, centre=(0, 0), angle=0, size=80, colors=colors)
