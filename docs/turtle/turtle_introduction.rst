@@ -25,6 +25,15 @@ Tutorial
 
 | Tutorial: https://www.geeksforgeeks.org/python-turtle-tutorial/
 | This has a large number of examples for specific syntax.
+----
+
+Academy
+--------------
+
+| Academy: https://pythonturtle.academy/
+| Excellent, extensive challenges from easy to very hard, with images of what to make, with some sample code.
+| Warning: you can easily get lost in turtle graphics. 
+| Make sure you limit yourself to 30min a day.
 
 ----
 
