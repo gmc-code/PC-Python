@@ -36,7 +36,7 @@ Circles at a specified location
     | **t** - the turtle object to draw the rectangle
     | **centre** - start position; default (0, 0)
     | **size** - the dot diameter, an integer >= 1 (if given)
-    | **color** - a colorstring or a numeric color tuple (r,g, b,)
+    | **color** - a colorstring or a numeric color tuple (r, g, b,)
 
 | The ``draw_centered_circle`` definition code is below.
 

@@ -258,7 +258,6 @@ Exploring dot stacks further
 
             .. tab-set::
 
-
                 .. tab-item:: Ans
 
                     .. code-block:: python
@@ -436,96 +435,101 @@ draw_dot_stack_cone usage
 
 .. admonition:: Task
 
-    .. tab-set::
+    1. | Write code to draw a series of 3 cones which approximate a cone shape as in the image below.
 
-        .. tab-item:: Q
+    .. image:: images/cones_by_dot_stacks.png
+        :scale: 50 %
+        :align: center
+        :alt: dot_stack_1
 
-            | Write code to draw a series of 3 cones which approximate a cone shape as in the image below.
-            
-            .. image:: images/cones_by_dot_stacks.png
-                :scale: 50 %
-                :align: center
-                :alt: dot_stack_1
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
 
-            .. code-block:: python
+            .. tab-set::
 
-                import turtle
+                .. tab-item:: Q
 
+                    .. code-block:: python
 
-                # def draw_dot...
-
-                # def draw_dot_stack_cone...
-
-
-                s = turtle.Screen()
-                #...
-
-                t = turtle.Turtle()
-                #...
-
-                colors = ["light blue", "pink", "light green", "yellow", "MediumPurple1", "bisque"]
-
-                draw_dot_stack_cone(t, centre=(-200, 100), pos_step=50, angle=270, size=200, size_step =50, colors=colors)
-                #...
-
-                s.update()
-                s.exitonclick()
+                        import turtle
 
 
-        .. tab-item:: Ans
+                        # def draw_dot...
 
-            | Completed code to draw a series of 3 cones which approximate a cone shape.
-
-            .. code-block:: python
-
-                import turtle
+                        # def draw_dot_stack_cone...
 
 
-                def draw_dot(t, centre=(0, 0), size=20, color="blue"):
-                    t.pu()
-                    t.goto(centre)
-                    t.pd()
-                    t.dot(size, color)
+                        s = turtle.Screen()
+                        #...
+
+                        t = turtle.Turtle()
+                        #...
+
+                        colors = ["light blue", "pink", "light green", "yellow", "MediumPurple1", "bisque"]
+
+                        draw_dot_stack_cone(t, centre=(-200, 100), pos_step=50, angle=270, size=200, size_step =50, colors=colors)
+                        #...
+
+                        s.update()
+                        s.exitonclick()
 
 
-                def draw_dot_stack_cone(t, centre, pos_step, angle, size, size_step, colors):
-                    # based on size and size_step
-                    # use  counter % len(colors)  to be able to loop though colors more than once.
-                    # use isinstance(colors,list) to check for just one colour or a list of colours
-                    counter = 0
-                    for i in range(size, 0, -size_step):
-                        t.pu()
-                        t.goto(centre)
-                        t.seth(angle)
-                        t.fd(counter*pos_step)
-                        dot_centre = t.pos()
-                        if isinstance(colors,list):
-                            dot_color = colors[counter % len(colors)] 
-                        else:
-                            dot_color = colors  
-                        draw_dot(t, centre=dot_centre, size=size - counter*size_step, color=dot_color)
-                        counter += 1
+                .. tab-item:: Ans
+
+                    | Completed code to draw a series of 3 cones which approximate a cone shape.
+
+                    .. code-block:: python
+
+                        import turtle
 
 
-                s = turtle.Screen()
-                s.bgcolor("white")
-                s.title("Grid")
-                s.setup(width=850, height=600, startx=0, starty=0)
-                s.tracer(0, 0)
-                s.colormode(255)
+                        def draw_dot(t, centre=(0, 0), size=20, color="blue"):
+                            t.pu()
+                            t.goto(centre)
+                            t.pd()
+                            t.dot(size, color)
 
-                t = turtle.Turtle()
-                t.speed(0)
-                t.ht()
 
-                colors = ["light blue", "pink", "light green", "yellow", "MediumPurple1", "bisque"]
+                        def draw_dot_stack_cone(t, centre, pos_step, angle, size, size_step, colors):
+                            # based on size and size_step
+                            # use  counter % len(colors)  to be able to loop though colors more than once.
+                            # use isinstance(colors,list) to check for just one colour or a list of colours
+                            counter = 0
+                            for i in range(size, 0, -size_step):
+                                t.pu()
+                                t.goto(centre)
+                                t.seth(angle)
+                                t.fd(counter*pos_step)
+                                dot_centre = t.pos()
+                                if isinstance(colors,list):
+                                    dot_color = colors[counter % len(colors)] 
+                                else:
+                                    dot_color = colors  
+                                draw_dot(t, centre=dot_centre, size=size - counter*size_step, color=dot_color)
+                                counter += 1
 
-                draw_dot_stack_cone(t, centre=(-200, 100), pos_step=50, angle=270, size=200, size_step =50, colors=colors)
-                draw_dot_stack_cone(t, centre=(0, 100), pos_step=30, angle=270, size=200, size_step=30, colors=colors[2:4])
-                draw_dot_stack_cone(t, centre=(200, 100), pos_step=10,  angle=270, size=200, size_step=10, colors=colors[0])
 
-                s.update()
-                s.exitonclick()
+                        s = turtle.Screen()
+                        s.bgcolor("white")
+                        s.title("Grid")
+                        s.setup(width=850, height=600, startx=0, starty=0)
+                        s.tracer(0, 0)
+                        s.colormode(255)
+
+                        t = turtle.Turtle()
+                        t.speed(0)
+                        t.ht()
+
+                        colors = ["light blue", "pink", "light green", "yellow", "MediumPurple1", "bisque"]
+
+                        draw_dot_stack_cone(t, centre=(-200, 100), pos_step=50, angle=270, size=200, size_step =50, colors=colors)
+                        draw_dot_stack_cone(t, centre=(0, 100), pos_step=30, angle=270, size=200, size_step=30, colors=colors[2:4])
+                        draw_dot_stack_cone(t, centre=(200, 100), pos_step=10,  angle=270, size=200, size_step=10, colors=colors[0])
+
+                        s.update()
+                        s.exitonclick()
 
 ----
 
@@ -545,8 +549,8 @@ Hexagonal array: draw_dot_hexagon definition
     | **centre** - the centre of the hexagon
     | **angle** - the direction of the first circle
     | **size** - the diameter of the dot, an integer >= 1
-    | **centre_color** - the colour of the central dot; a colorstring or a numeric color tuple (r,g, b,)
-    | **colors** - the colours of the surrounding dots; a list of 6 colorstring or a numeric color tuples (r,g, b,)
+    | **centre_color** - the colour of the central dot; a colorstring or a numeric color tuple (r, g, b,)
+    | **colors** - the colours of the surrounding dots; a list of 6 colorstring or a numeric color tuples (r, g, b,)
 
 | The code completion below completes the ``draw_dot_hexagon`` definition to draw 6 circles around a central circle, with all circles the same size.
 | The 6 circles have their centres in the shape of a hexagon. 
@@ -599,97 +603,104 @@ Hexagonal array: draw_dot_hexagon definition
                         draw_dot(t, centre=dot_centre, size=size, color=colors[i])
 
 
-.. admonition:: Code Completion: draw_dot_stack_cone definition
+.. admonition:: Task
 
-    .. tab-set::
+    1. | Write code to draw 6 circles around a central circle, with all circles the same size.
 
-        .. tab-item:: Q
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
 
-            | Complete the code to draw 6 circles around a central circle, with all circles the same size.
+            .. tab-set::
 
-            .. code-block:: python
+                .. tab-item:: Q
 
-                import turtle
+                    | Complete the code to draw 6 circles around a central circle, with all circles the same size.
 
+                    .. code-block:: python
 
-                def draw_dot(t, centre=(0, 0), size=20, color="blue"):
-                    t.pu()
-                    t.goto(centre)
-                    t.pd()
-                    t.dot(size, color)
-
-
-                def draw_dot_hexagon(t, centre, angle, size, colors):
-                    draw_dot(t, centre=centre, size=size, color="ivory3")
-                    for i in range(6):
-                        t.pu()
-                        t.goto(centre)
-                        t.seth(angle + 60 * i)
-                        t.fd(size)
-                        dot_centre = t.pos()
-                        draw_dot(t, centre=dot_centre, size=size, color=colors[i])
+                        import turtle
 
 
-                s = turtle.Screen()
-                s.bgcolor("white")
-                s.title("Grid")
-                s.setup(width=850, height=600, startx=0, starty=0)
-                s.tracer(0, 0)
-                s.colormode(XXX)
-
-                t = turtle.Turtle()
-                t.speed(0)
-                t.ht()
-
-                XXX = ["light blue", "pink", "light green", "orange", "MediumPurple1", "yellow"]
-                XXX(t, centre=(0, 0), angle=0, size=80, colors=colors)
-
-                s.update()
-                s.exitonclick()
+                        def draw_dot(t, centre=(0, 0), size=20, color="blue"):
+                            t.pu()
+                            t.goto(centre)
+                            t.pd()
+                            t.dot(size, color)
 
 
-        .. tab-item:: Ans
-
-            | Completed code to draw 6 circles around a central circle, with all circles the same size.
-
-            .. code-block:: python
-
-                import turtle
-
-
-                def draw_dot(t, centre=(0, 0), size=20, color="blue"):
-                    t.pu()
-                    t.goto(centre)
-                    t.pd()
-                    t.dot(size, color)
+                        def draw_dot_hexagon(t, centre, angle, size, colors):
+                            draw_dot(t, centre=centre, size=size, color="ivory3")
+                            for i in range(6):
+                                t.pu()
+                                t.goto(centre)
+                                t.seth(angle + 60 * i)
+                                t.fd(size)
+                                dot_centre = t.pos()
+                                draw_dot(t, centre=dot_centre, size=size, color=colors[i])
 
 
-                def draw_dot_hexagon(t, centre, angle, size, colors):
-                    draw_dot(t, centre=centre, size=size, color="ivory3")
-                    for i in range(6):
-                        t.pu()
-                        t.goto(centre)
-                        t.seth(angle + 60 * i)
-                        t.fd(size)
-                        dot_centre = t.pos()
-                        draw_dot(t, centre=dot_centre, size=size, color=colors[i])
+                        s = turtle.Screen()
+                        s.bgcolor("white")
+                        s.title("Grid")
+                        s.setup(width=850, height=600, startx=0, starty=0)
+                        s.tracer(0, 0)
+                        s.colormode(XXX)
+
+                        t = turtle.Turtle()
+                        t.speed(0)
+                        t.ht()
+
+                        XXX = ["light blue", "pink", "light green", "orange", "MediumPurple1", "yellow"]
+                        XXX(t, centre=(0, 0), angle=0, size=80, colors=colors)
+
+                        s.update()
+                        s.exitonclick()
 
 
-                s = turtle.Screen()
-                s.bgcolor("white")
-                s.title("Grid")
-                s.setup(width=850, height=600, startx=0, starty=0)
-                s.tracer(0, 0)
-                s.colormode(255)
+                .. tab-item:: Ans
 
-                t = turtle.Turtle()
-                t.speed(0)
-                t.ht()
+                    | Completed code to draw 6 circles around a central circle, with all circles the same size.
 
-                colors = ["light blue", "pink", "light green", "orange", "MediumPurple1", "yellow"]
-                draw_dot_hexagon(t, centre=(0, 0), angle=0, size=80, colors=colors)
+                    .. code-block:: python
 
-                s.update()
-                s.exitonclick()
+                        import turtle
+
+
+                        def draw_dot(t, centre=(0, 0), size=20, color="blue"):
+                            t.pu()
+                            t.goto(centre)
+                            t.pd()
+                            t.dot(size, color)
+
+
+                        def draw_dot_hexagon(t, centre, angle, size, colors):
+                            draw_dot(t, centre=centre, size=size, color="ivory3")
+                            for i in range(6):
+                                t.pu()
+                                t.goto(centre)
+                                t.seth(angle + 60 * i)
+                                t.fd(size)
+                                dot_centre = t.pos()
+                                draw_dot(t, centre=dot_centre, size=size, color=colors[i])
+
+
+                        s = turtle.Screen()
+                        s.bgcolor("white")
+                        s.title("Grid")
+                        s.setup(width=850, height=600, startx=0, starty=0)
+                        s.tracer(0, 0)
+                        s.colormode(255)
+
+                        t = turtle.Turtle()
+                        t.speed(0)
+                        t.ht()
+
+                        colors = ["light blue", "pink", "light green", "orange", "MediumPurple1", "yellow"]
+                        draw_dot_hexagon(t, centre=(0, 0), angle=0, size=80, colors=colors)
+
+                        s.update()
+                        s.exitonclick()
 
 
