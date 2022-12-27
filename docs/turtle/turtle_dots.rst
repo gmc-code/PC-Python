@@ -534,13 +534,14 @@ Using the Draw_dot: hexagonal array
 
 | Make use of the ``draw_dot`` definition by drawing a hexagon of circles using draw_dot.
 
-.. py:function:: draw_dot_hexagon(t, centre, angle, size, colors):
+.. py:function:: draw_dot_hexagon(t, centre, angle, size, centre_color, colors)
 
     | **t** - the turtle object to draw the rectangle
     | **centre** - the centre of the hexagon
     | **angle** - the direction of the first circle
     | **size** - the diameter of the dot, an integer >= 1
-    | **colors** - a list of 6 colorstring or a numeric color tuples (r,g, b,)
+    | **centre_color** - the colour of the central dot; a colorstring or a numeric color tuple (r,g, b,)
+    | **colors** - the colours of the surrounding dots; a list of 6 colorstring or a numeric color tuples (r,g, b,)
 
 | The code completion below completes the ``draw_dot_hexagon`` definition to draw 6 circles around a central circle, with all circles the same size.
 | The 6 circles have their centres in the shape of a hexagon. 
@@ -566,15 +567,15 @@ Using the Draw_dot: hexagonal array
 
             .. code-block:: python
 
-                def draw_dot_hexagon(t, centre, angle, size, colors):
-                    draw_dot(t, centre=centre, size=size, color="ivory3")
+                def draw_dot_hexagon(t, centre, angle, size, centre_color, colors):
+                    draw_dot(t, centre=centre, size=size, color=XXX)
                     for i in range(6):
                         t.pu()
                         t.goto(XXX)
                         t.seth(angle + XXX * i)
                         t.fd(XXX)
                         dot_centre = t.pos()
-                        draw_dot(t, centre=dot_centre, size=size, color=colors[i])
+                        draw_dot(t, centre=XXX, size=XXX, color=colors[XXX])
 
         .. tab-item:: Ans
 
@@ -582,8 +583,8 @@ Using the Draw_dot: hexagonal array
 
             .. code-block:: python
 
-                def draw_dot_hexagon(t, centre, angle, size, colors):
-                    draw_dot(t, centre=centre, size=size, color="ivory3")
+                def draw_dot_hexagon(t, centre, angle, size, centre_color, colors):
+                    draw_dot(t, centre=centre, size=size, color=centre_color)
                     for i in range(6):
                         t.pu()
                         t.goto(centre)
