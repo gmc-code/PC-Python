@@ -80,10 +80,10 @@ Using the Draw_dot definition
 
 | Make use of the ``draw_dot`` definition by drawing a dot stack of 4 dots of decreasing size.
 | The code below uses list of positions and sizes.
-| For overlapping circles to have a common tangent on a side (that is, a line touches all the circles), if the change in the sizes (diameters), from one circle to the next, is the same, then the centres of the circles will be the same distance apart from one circle to the next.
+| For overlapping circles to have a common tangent on a side (that is, a line touches all the circles), set the change in the sizes (diameters), from one circle to the next, to the same value, and set the centres of the circles to be the same distance apart from one circle to the next.
 | ``centres = [(0, -100), (0, -50), (0, 0), (0, 50)]``
 | Notice how the y values of the centres increase by the same amount from one point to the next.
-| ``sizes = [200, 150, 100, 50]``
+| ``sizes = [200, 160, 120, 80]``
 | Notice also how the sizes (diameters) decrease by the same amount from one dot to the next.
 
 | The code completion below draws the stacked dots in the image above. 
@@ -118,7 +118,7 @@ Using the Draw_dot definition
                 t.ht()
 
                 centres = [(0, -100), (0, -50), (0, 0), (0, 50)]
-                sizes = [200, 150, 100, 50]
+                sizes = [200, 160, 120, 80]
                 colors = ["light blue", "pink", "light green", "yellow"]
                 
                 for i in range(len(sizes)):
@@ -152,7 +152,7 @@ Using the Draw_dot definition
                 t.ht()
 
                 centres = [(0, -100), (0, -50), (0, 0), (0, 50)]
-                sizes = [200, 150, 100, 50]
+                sizes = [200, 160, 120, 80]
                 colors = ["light blue", "pink", "light green", "yellow"]
                 
                 for i in range(len(sizes)):

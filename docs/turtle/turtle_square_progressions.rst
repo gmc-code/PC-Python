@@ -23,7 +23,7 @@ Sequencing: steps to draw a square
 | The code below draws a square of side length 50 at coordinates (20, 30).
 | The start direction, eastwards, is set by: ``t.seth(0)``
 | The start position, at (20, 30), is set by: ``t.goto(20, 30)``. 
-| ``t.pu()`` and ``t.pd()`` are used either side of ``t.goto(20, 30)`` to avoid line drawing when repositioning the turtle.
+| Penup, ``t.pu()``, and pendown, ``t.pd()``, are used either side of ``t.goto(20, 30)`` to avoid line drawing when repositioning the turtle.
 | A line is drawn forwards, in the direction the turtle is heading, by: ``t.fd(50)``.
 | The turtle then turns to the left by: ``t.lt(90)``.
 | The ``t.fd(50)`` and ``t.lt(90)`` are then repeated 3 more times for the other three sides.

@@ -18,7 +18,7 @@ t.speed(5)
 t.ht()
 
 centres = [(0, -100), (0, -50), (0, 0), (0, 50)]
-sizes = [200, 150, 100, 50]
+sizes = [200, 160, 120, 80]
 colors = ["light blue", "pink", "light green", "yellow"]
 
 for i in range(len(sizes)):
