@@ -343,7 +343,7 @@ Icecream cones from dot stacks
 | Make use of the ``draw_dot_stack`` definition to approximate a cone shape by drawing a series of smaller and smaller circles.
 
 
-draw_dot_stack definition
+draw_dot_stack_cone definition
 --------------------------------------------------
 
 | The draw_dot_stack_cone syntax :
@@ -524,7 +524,7 @@ draw_dot_stack definition
 
 ----
 
-Using the Draw_dot: hexagonal array
+Hexagonal array: draw_dot_hexagon definition
 --------------------------------------------------
 
 .. image:: images/dot_hexagon.png
@@ -532,7 +532,7 @@ Using the Draw_dot: hexagonal array
     :align: center
     :alt: dot_stack_1
 
-| Make use of the ``draw_dot`` definition by drawing a hexagon of circles using draw_dot.
+| Write a ``draw_dot_hexagon`` definition to draw a hexagon of circles around a central dot.
 
 .. py:function:: draw_dot_hexagon(t, centre, angle, size, centre_color, colors)
 
