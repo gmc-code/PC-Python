@@ -435,7 +435,7 @@ draw_dot_stack definition
 
         .. tab-item:: Q
 
-            | Write code to draw a series of 3 cones which approximate a cone shape as in the image belwo.
+            | Write code to draw a series of 3 cones which approximate a cone shape as in the image below.
             
             .. image:: images/cones_by_dot_stacks.png
                 :scale: 50 %
@@ -469,7 +469,7 @@ draw_dot_stack definition
 
         .. tab-item:: Ans
 
-            | Completed code to draw a series of 3 cones which approximate a cone shape as in the image above.
+            | Completed code to draw a series of 3 cones which approximate a cone shape.
 
             .. code-block:: python
 
