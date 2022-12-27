@@ -340,7 +340,7 @@ Icecream cones from dot stacks
     :align: center
     :alt: dot_stack_1
 
-| Make use of the ``draw_dot_stack`` definition to approximate a cone shape by drawing a series of circles, decreasing in size as they more further from the centre of the largest circle.
+| Make use of the ``draw_dot_stack`` definition to approximate a cone shape by drawing a series of smaller and smaller circles.
 
 
 draw_dot_stack definition
