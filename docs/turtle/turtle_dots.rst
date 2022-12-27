@@ -242,7 +242,7 @@ Exploring dot stacks further
 
 .. admonition:: Task
 
-    1. Write a definition draw dot stacks.
+    1. Use ``draw_dot_stack`` to draw the dot stacks above using the skeleton outlien below.
 
     .. image:: images/dot_stacks.png
         :scale: 75 %
@@ -256,7 +256,36 @@ Exploring dot stacks further
 
             .. tab-set::
 
-                .. tab-item:: Sample code
+
+                .. tab-item:: Ans
+
+                    .. code-block:: python
+
+                        import turtle
+
+
+                        # def draw_dot...
+
+
+                        # def draw_dot_stack...
+
+
+                        s = turtle.Screen()
+                        #...
+
+                        t = turtle.Turtle()
+                        #...
+
+                        # colors = ...
+
+                        draw_dot_stack(t, centre=(-300, -80), pos_step=10, angle=45, size=200, size_step=50, colors=colors)
+                        # draw_dot_stack...
+                        # draw_dot_stack...
+                        # draw_dot_stack...
+
+                        s.exitonclick()
+
+                .. tab-item:: Ans
 
                     .. code-block:: python
 
