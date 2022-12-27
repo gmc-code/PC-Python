@@ -429,6 +429,11 @@ draw_dot_stack_cone definition
 
 ----
 
+draw_dot_stack_cone usage
+--------------------------------------------------
+
+| Draw cone shapes with the draw_dot_stack_cone definition, with different numbers of dots in each.
+
 .. admonition:: Task
 
     .. tab-set::
