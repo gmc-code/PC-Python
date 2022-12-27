@@ -175,7 +175,7 @@ Using the Draw_dot definition
 draw_dot_stack definition
 --------------------------------------------------
 
-| The draw_dot_stack definition :
+| The draw_dot_stack syntax :
 
 .. py:function:: draw_dot_stack(t, centre, pos_step, angle, size, size_step, colors)
 
