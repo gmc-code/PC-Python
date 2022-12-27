@@ -365,7 +365,7 @@ draw_dot_stack definition
 | To loop through the colors list, when more loops occur than the length of the colors list, the modulus operator can be used to get the remainder, which is then used to index the colour in the colors list.
 | ``counter % len(colors)`` gives a value between 0 and the last index position in the colors list.
 | If only one colour is passed as an argument, then ``len(colors)`` will treat is as a string and not as a list. 
-| ``isinstance(colors,list)`` is used to cover this situation and either apply that single colour is there is just one, or index the next colour in the list.
+| ``isinstance(colors,list)`` is used to cover this situation, and either use that single colour if there is just one, or index the next colour in the list.
 
 .. admonition:: Code Completion: draw_dot_stack_cone definition
 
@@ -385,22 +385,22 @@ draw_dot_stack definition
                     # use  counter % len(colors)  to be able to loop though colors more than once.
                     # use isinstance(colors,list) to check for just one colour or a list of colours
                     counter = 0
-                    for i in range(size, 0, -size_step):
+                    for i in range(size, 0, -XXX):
                         t.pu()
-                        t.goto(centre)
-                        t.seth(angle)
-                        t.fd(counter*pos_step)
+                        t.goto(XXX)
+                        t.seth(XXX)
+                        t.fd(counter*XXX)
                         dot_centre = t.pos()
                         if isinstance(colors,list):
                             dot_color = colors[counter % len(colors)] 
                         else:
                             dot_color = colors  
-                        draw_dot(t, centre=dot_centre, size=size - counter*size_step, color=dot_color)
+                        draw_dot(t, centre=dot_centre, size=size - counter*XXX, color=dot_color)
                         counter += 1
 
         .. tab-item:: Ans
 
-            | Completed code for the draw_dot definition.
+            | Completed code for the draw_dot_stack_cone definition.
 
             .. code-block:: python
 
