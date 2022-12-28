@@ -301,8 +301,6 @@ Rings of circles
                 s.exitonclick()
 
 
-    .. tab-set::
-
         .. tab-item:: Ans
 
             Completed code to draw a ring of circles.
