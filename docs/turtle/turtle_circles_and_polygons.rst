@@ -30,12 +30,173 @@ Circles at a specified location
 | Adding a starting position, the centre of the circle, will provide some convenience.
 | The ``draw_centered_circle`` syntax is below:
 
-.. py:function:: draw_centered_circle(t, centre=(0, 0), size=20, color="blue", penw=1, penc="black", fillc=None)
+.. py:function:: draw_centered_circle(t, centre=(0, 0), radius=20, color="blue", penw=1, penc="black", fillc=None)
 
     | **t** - the turtle object to draw the rectangle
     | **centre** - start position; default (0, 0)
-    | **size** - the dot diameter, an integer >= 1 (if given)
+    | **radius** - the circle radius
     | **color** - a colorstring or a numeric color tuple (r, g, b,)
+    | **penw** - the pen width
+    | **penc** - the pen color; a colorstring or a numeric color tuple (r, g, b,)
+    | **fillc** - the fill color; a colorstring or a numeric color tuple (r, g, b,)
+
 
 | The ``draw_centered_circle`` definition code is below.
+| The code moves the turtle to the given centre, sets the angle to 0, moves forward the raius and sets the angle to 90, then draws the circle.
+| If there is a fill color given, then ``begin_fill`` and ``end_fill`` need to be sued wither side of the drawing.
+
+.. admonition:: Code Completion: draw_centered_circle definition
+
+    .. tab-set::
+
+        .. tab-item:: Q
+
+            Complete the code for the ``draw_centered_circle`` definition by replacing the "XXX"s.
+                        
+            .. code-block:: python
+    
+                def draw_centered_circle(t, centre=(0, 0), radius=10, penw=1, penc="black", fillc=None):
+                    t.pu()
+                    t.goto(XXX)
+                    t.seth(XXX)
+                    t.fd(XXX)
+                    t.seth(XXX)
+                    t.pensize(XXX)
+                    t.pencolor(XXX)
+                    t.pd()
+                    if XXX is not None:
+                        t.fillcolor(XXX)
+                        t.begin_fill()   
+                    t.circle(XXX)  
+                    if XXX is not None:
+                        t.end_fill()
+
+
+        .. tab-item:: Ans
+
+            Completed code for the ``draw_centered_circle`` definition.
+                        
+            .. code-block:: python
+    
+                def draw_centered_circle(t, centre=(0, 0), radius=10, penw=1, penc="black", fillc=None):
+                    t.pu()
+                    t.goto(centre)
+                    t.seth(0)
+                    t.fd(radius)
+                    t.seth(90)
+                    t.pensize(penw)
+                    t.pencolor(penc)
+                    t.pd()
+                    if fillc is not None:
+                        t.fillcolor(fillc)
+                        t.begin_fill()   
+                    t.circle(radius)  
+                    if fillc is not None:
+                        t.end_fill()
+
+----
+
+Concentric ircles
+--------------------
+
+import turtle
+
+
+def draw_centered_circle(t, centre=(0, 0), radius=10, penw=1, penc="black", fillc=None):
+    t.pu()
+    t.goto(centre)
+    t.seth(0)
+    t.fd(radius)
+    t.seth(90)
+    t.pensize(penw)
+    t.pencolor(penc)
+    t.pd()
+    if fillc is not None:
+        t.fillcolor(fillc)
+        t.begin_fill()   
+    t.circle(radius)  
+    if fillc is not None:
+        t.end_fill()
+
+
+s = turtle.Screen()
+s.bgcolor("white")
+s.title("Grid")
+s.setup(width=800, height=600, startx=0, starty=0)
+
+t = turtle.Turtle()
+t.speed(0)
+t.ht()
+
+centres = [(0, 0),(0, 50),(0, 100),(0, 150)]
+radii = [200, 150, 100, 50]
+pensizes =  [16, 8, 4, 2]  # [1, 1, 1, 1]  #
+pencolors = ["blue", "red", "green", "orange"]
+fillcolors = ["light blue", "pink", "light green", "yellow"]
+
+for i in range(len(radii)):
+    draw_centered_circle(t, centre=centres[i], radius=radii[i], penw=pensizes[i], penc=pencolors[i], fillc=fillcolors[i])
+
+s.exitonclick()
+
+----
+
+Rings of circles
+--------------------
+
+import turtle
+from math import sin, radians
+
+
+def draw_centered_circle(t, centre=(0, 0), radius=10, penw=1, penc="black", fillc=None):
+    t.pu()
+    t.goto(centre)
+    t.seth(0)
+    t.fd(radius)
+    t.seth(90)
+    t.pensize(penw)
+    t.pencolor(penc)
+    t.pd()
+    if fillc is not None:
+        t.fillcolor(fillc)
+        t.begin_fill()   
+    t.circle(radius)  
+    if fillc is not None:
+        t.end_fill()
+
+
+def draw_circle_of_circles(t, centre, angle, size, sides, colors=None):
+    circum_r = (sin(radians(180/sides)) / (1 - sin(radians(180/sides)))) * size
+    for i in range(sides):
+        t.pu()
+        t.goto(centre)
+        t.seth(angle + i*360//sides)
+        t.fd(size + circum_r)
+        dot_centre = t.pos()
+        if colors is None:  
+            draw_centered_circle(t, centre=dot_centre, radius=circum_r, penw=1, penc="blue", fillc=None)
+        else:  
+            dot_color = colors[i]
+            draw_centered_circle(t, centre=dot_centre, radius=circum_r, penw=1, penc="blue", fillc=dot_color)
+
+
+s = turtle.Screen()
+s.bgcolor("white")
+s.title("Grid")
+s.setup(width=1000, height=1000, startx=0, starty=0)
+s.tracer(0, 0)
+s.colormode(255)
+
+t = turtle.Turtle()
+t.speed(0)
+t.ht()
+
+
+colorlist=["light blue", "pink", "light green", "yellow", "MediumPurple1", "bisque"]*4
+draw_circle_of_circles(t, centre=(0, 0), angle=0, size=20, sides=6, colors=colorlist)
+draw_circle_of_circles(t, centre=(0, 0), angle=0, size=100, sides=10, colors=colorlist)
+draw_circle_of_circles(t, centre=(0, 0), angle=9, size=135, sides=20, colors=colorlist)
+
+s.update()
+s.exitonclick()
 

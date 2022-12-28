@@ -1,6 +1,7 @@
-"""draw dots
+"""draw_circle_of_circles
 """
 import turtle
+from math import sin, radians
 
 
 def draw_centered_circle(t, centre=(0, 0), radius=10, penw=1, penc="black", fillc=None):
@@ -15,40 +16,42 @@ def draw_centered_circle(t, centre=(0, 0), radius=10, penw=1, penc="black", fill
     if fillc is not None:
         t.fillcolor(fillc)
         t.begin_fill()   
-
     t.circle(radius)  
     if fillc is not None:
         t.end_fill()
 
 
+def draw_circle_of_circles(t, centre, angle, size, sides, colors=None):
+    circum_r = (sin(radians(180/sides)) / (1 - sin(radians(180/sides)))) * size
+    for i in range(sides):
+        t.pu()
+        t.goto(centre)
+        t.seth(angle + i*360//sides)
+        t.fd(size + circum_r)
+        dot_centre = t.pos()
+        if colors is None:  
+            draw_centered_circle(t, centre=dot_centre, radius=circum_r, penw=1, penc="blue", fillc=None)
+        else:  
+            dot_color = colors[i]
+            draw_centered_circle(t, centre=dot_centre, radius=circum_r, penw=1, penc="blue", fillc=dot_color)
+
+
 s = turtle.Screen()
 s.bgcolor("white")
 s.title("Grid")
-s.setup(width=800, height=600, startx=0, starty=0)
+s.setup(width=1000, height=1000, startx=0, starty=0)
+s.tracer(0, 0)
+s.colormode(255)
 
 t = turtle.Turtle()
 t.speed(0)
-
-centres = [(150, -148), (150, 14), (150, 136), (150, 227)]
-radii = [92, 69, 52, 39]
-# pensizes = [30, 30, 30, 30]
-pensizes = [80, 80, 80, 80]
-pencolors = ["blue", "red", "green", "orange"]
-fillcolors = ["light blue", "pink", "light green", "yellow"]
-
-for i in range(len(radii)):
-    draw_centered_circle(t, centre=centres[i], radius=radii[i], penw=pensizes[i], penc=pencolors[i], fillc=fillcolors[i])
+t.ht()
 
 
-centres = [(-150, -112), (-150, 80), (-150, 176), (-150, 224)]
-radii = [128, 64, 32, 16]
-pensizes = [1, 1, 1, 1]
-pencolors = ["blue", "red", "green", "orange"]
-fillcolors = ["light blue", "pink", "light green", "yellow"]
+colorlist=["light blue", "pink", "light green", "yellow", "MediumPurple1", "bisque"]*4
+draw_circle_of_circles(t, centre=(0, 0), angle=0, size=20, sides=6, colors=colorlist)
+draw_circle_of_circles(t, centre=(0, 0), angle=0, size=100, sides=10, colors=colorlist)
+draw_circle_of_circles(t, centre=(0, 0), angle=9, size=135, sides=20, colors=colorlist)
 
-for i in range(len(radii)):
-    draw_centered_circle(t, centre=centres[i], radius=radii[i], penw=pensizes[i], penc=pencolors[i], fillc=fillcolors[i])
-
-
-
+s.update()
 s.exitonclick()

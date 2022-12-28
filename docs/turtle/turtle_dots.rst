@@ -514,7 +514,7 @@ draw_dot_stack_cone usage
                         s = turtle.Screen()
                         s.bgcolor("white")
                         s.title("Grid")
-                        s.setup(width=850, height=600, startx=0, starty=0)
+                        s.setup(width=800, height=600, startx=0, starty=0)
                         s.tracer(0, 0)
                         s.colormode(255)
 
@@ -605,7 +605,7 @@ Hexagonal array: draw_dot_centre_hexagon definition
 
 .. admonition:: Task
 
-    1. | Write code to draw 6 circles around a central circle, with all circles the same size.
+    1. | Write code to draw 6 dots around a central dot, with all dots the same size.
 
     .. dropdown::
             :icon: codescan
@@ -616,7 +616,7 @@ Hexagonal array: draw_dot_centre_hexagon definition
 
                 .. tab-item:: Q
 
-                    | Complete the code to draw 6 circles around a central circle using the skeleton outline below.
+                    | Complete the code to draw 6 dots around a central dots using the skeleton outline below.
 
                     .. code-block:: python
 
@@ -644,7 +644,7 @@ Hexagonal array: draw_dot_centre_hexagon definition
 
                 .. tab-item:: Ans
 
-                    | Completed code to draw 6 circles around a central circle, with all circles the same size.
+                    | Completed code to draw 6 dots around a central dots, with all dots the same size.
 
                     .. code-block:: python
 
@@ -672,7 +672,7 @@ Hexagonal array: draw_dot_centre_hexagon definition
                         s = turtle.Screen()
                         s.bgcolor("white")
                         s.title("Grid")
-                        s.setup(width=850, height=600, startx=0, starty=0)
+                        s.setup(width=800, height=600, startx=0, starty=0)
                         s.tracer(0, 0)
                         s.colormode(255)
 
@@ -686,4 +686,18 @@ Hexagonal array: draw_dot_centre_hexagon definition
                         s.update()
                         s.exitonclick()
 
+----
+
+.. admonition:: Exercise
+
+    .. tab-set::
+
+        .. tab-item:: Challenge
+
+            | Write code to construct the image below.
+
+            .. image:: images/hexagonal_dot_cones.png
+                :scale: 75 %
+                :align: center
+                :alt: hexagonal_dot_cones
 
