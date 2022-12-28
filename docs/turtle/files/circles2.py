@@ -50,8 +50,7 @@ t.ht()
 
 colorlist=["light blue", "pink", "light green", "yellow", "MediumPurple1", "bisque"]*4
 draw_circle_of_circles(t, centre=(0, 0), angle=0, size=20, sides=6, colors=colorlist)
-draw_circle_of_circles(t, centre=(0, 0), angle=0, size=100, sides=10, colors=colorlist)
-draw_circle_of_circles(t, centre=(0, 0), angle=9, size=135, sides=20, colors=colorlist)
+draw_circle_of_circles(t, centre=(0, 0), angle=9, size=100, sides=24, colors=colorlist)
 
 s.update()
 s.exitonclick()
