@@ -371,7 +371,7 @@ Adding pen colour and fill colour parameters
 Practice Questions
 --------------------
 
-.. admonition:: Tasks
+.. admonition:: Exercises
 
     1. Using sequencing only, draw a square of side length 500 at (-250, -250).
     2. Using a repeat loop (without a function), draw a square of side length 50 at (-25, -25).

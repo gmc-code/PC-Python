@@ -14,14 +14,13 @@ Turtle Circles
 
 .. py:function:: turtle.circle(radius, extent=None, steps=None)
 
-    | radius - radius, a number
-    | extent - an angle, a number (or None for whole circle), which determines which part of the circle is drawn
+    | radius - radius; a positive number draws anticlockwise, a negative number draws clockwise. 
+    | extent - an angle; a number (or None for whole circle), which determines how many degrees of the circle is drawn.
     | steps - an integer (or None for a circle) which allows polygons to be drawn.
 
 | The center is radius units left of the turtle at right angles from its heading if the radius is positive.
-| The circle or arc is drawn counterclockwise if radius is positive, clockwise direction if negative.
 | The direction of the turtle is changed by the amount of extent.
-| The pensize increases the circle line inwards an outwards from the radius distance. So a pensize of 41 draws the circle 20 pixels inwards and 20 pixels outwards from the exact radius position. This is important for predicting circle edges with large pensizes. 
+| The pensize increases the circle line inwards and outwards from the radius distance. So a pensize of 41 draws the circle 20 pixels inwards and 20 pixels outwards from the exact radius position. This is important for predicting circle edges with large pensizes. 
 
 ----
 

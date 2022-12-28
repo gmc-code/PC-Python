@@ -8,7 +8,7 @@ s.title("Grid")
 s.setup(width=800, height=600, startx=0, starty=0)
 
 t = turtle.Turtle()
-t.speed(8)
+t.speed(9)
 
 
 t.pu()

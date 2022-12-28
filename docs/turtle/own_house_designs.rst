@@ -1,5 +1,5 @@
 ====================================================
-Own designs
+Own house designs
 ====================================================
 
 Symmetrical house
@@ -10,14 +10,25 @@ Symmetrical house
 | The door is in the centre of the front.
 | The windows are either side of the door at equal distances from the wall and door.
 | Think of the house as having 10 equal divisions across the front, with each space being 1 division and each door and window each being 2 divisions.
-| Write new definitions for the ``house_door`` and ``house_window4``.
-| Keep and rename the old ``house_door`` and ``house_window4`` to ``house_door_v1`` and ``house_window4_v1``.
 
 .. image:: images/house_measurements_v2.png
     :scale: 75 %
     :align: center
-    :alt: house_grid
+    :alt: house_measurements_v2
 
+----
+
+Module revision
+--------------------
+
+.. admonition:: Exercises
+
+    1. Write new definitions for the ``house_door`` and ``house_window4`` tp produce the image below.
+    
+        .. image:: images/houses_v2.png
+            :scale: 75 %
+            :align: center
+            :alt: houses_v2.png
 
 ----
 

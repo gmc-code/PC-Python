@@ -131,7 +131,7 @@ def house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
             house_window4(t, length, height, start_pos, "L")
 
 
-def house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
+def house2(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
     """draw a house with 0-2 windows
 
     Args:

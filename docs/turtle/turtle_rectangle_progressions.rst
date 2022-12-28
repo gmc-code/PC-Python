@@ -583,7 +583,10 @@ Adding pen colour and fill colour parameters
 
 ----
 
-.. admonition:: Tasks
+Practice Questions
+--------------------
+
+.. admonition:: Exercises
 
     1. Using sequencing only, draw a rectangle of side lengths 500 and 400 at (-250, -250).
     2. Using a repeat loop (without a function), draw a rectangle of side lengths 50 and 40 at (-25, -25).
