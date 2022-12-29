@@ -32,7 +32,7 @@ def draw_circles_in_hexagon(t, centre, angle, size, colors):
 
 s = turtle.Screen()
 s.bgcolor("white")
-s.title("Grid")
+s.title("circle")
 s.setup(width=1000, height=1000, startx=0, starty=0)
 s.tracer(0, 0)
 s.colormode(255)

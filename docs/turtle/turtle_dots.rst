@@ -111,7 +111,7 @@ Using the Draw_dot definition
 
                 s = turtle.Screen()
                 s.bgcolor("white")
-                s.title("Grid")
+                s.title("draw_dot")
                 s.setup(width=800, height=600, startx=0, starty=0)
 
                 t = turtle.Turtle()
@@ -145,7 +145,7 @@ Using the Draw_dot definition
 
                 s = turtle.Screen()
                 s.bgcolor("white")
-                s.title("Grid")
+                s.title("draw_dot")
                 s.setup(width=800, height=600, startx=0, starty=0)
 
                 t = turtle.Turtle()
@@ -313,7 +313,7 @@ Exploring dot stacks further
 
                         s = turtle.Screen()
                         s.bgcolor("white")
-                        s.title("Grid")
+                        s.title("draw_dot_stack")
                         s.setup(width=850, height=600, startx=0, starty=0)
 
                         t = turtle.Turtle()
@@ -513,7 +513,7 @@ draw_dot_stack_cone usage
 
                         s = turtle.Screen()
                         s.bgcolor("white")
-                        s.title("Grid")
+                        s.title("draw_dot_stack_cone")
                         s.setup(width=800, height=600, startx=0, starty=0)
                         s.tracer(0, 0)
                         s.colormode(255)
@@ -671,7 +671,7 @@ Hexagonal array: draw_dot_centre_hexagon definition
 
                         s = turtle.Screen()
                         s.bgcolor("white")
-                        s.title("Grid")
+                        s.title("draw_dot_centre_hexagon")
                         s.setup(width=800, height=600, startx=0, starty=0)
                         s.tracer(0, 0)
                         s.colormode(255)

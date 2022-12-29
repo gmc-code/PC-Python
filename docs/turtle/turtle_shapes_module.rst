@@ -29,7 +29,7 @@ Importing the module
 
     s = turtle.Screen()
     s.bgcolor("white")
-    s.title("Grid")
+    s.title("rectangle")
     s.setup(width=800, height=600, startx=200, starty=100)
 
     t = turtle.Turtle()

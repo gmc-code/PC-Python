@@ -23,7 +23,7 @@ def draw_dot_stack(t, centre, pos_step, angle, size, size_step, colors):
 
 s = turtle.Screen()
 s.bgcolor("white")
-s.title("Grid")
+s.title("dots")
 s.setup(width=850, height=600, startx=0, starty=0)
 
 t = turtle.Turtle()

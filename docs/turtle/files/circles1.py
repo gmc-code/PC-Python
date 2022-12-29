@@ -22,7 +22,7 @@ def draw_centered_circle(t, centre=(0, 0), radius=10, penw=1, penc="black", fill
 
 s = turtle.Screen()
 s.bgcolor("white")
-s.title("Grid")
+s.title("circle")
 s.setup(width=800, height=600, startx=0, starty=0)
 
 t = turtle.Turtle()

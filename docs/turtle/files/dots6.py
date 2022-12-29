@@ -22,7 +22,7 @@ def draw_dot_hexagon(t, centre, angle, size, colors):
 
 s = turtle.Screen()
 s.bgcolor("white")
-s.title("Grid")
+s.title("dots")
 s.setup(width=800, height=600, startx=0, starty=0)
 s.tracer(0, 0)
 s.colormode(255)

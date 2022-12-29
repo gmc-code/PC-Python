@@ -35,7 +35,7 @@ Sequencing: steps to draw a square
 
     s = turtle.Screen()
     s.bgcolor("white")
-    s.title("Grid")
+    s.title("Grsquareid")
     s.setup(width=800, height=600, startx=0, starty=0)
 
     t = turtle.Turtle()
@@ -107,7 +107,7 @@ Sequencing: steps to draw a square
 
                         s = turtle.Screen()
                         s.bgcolor("white")
-                        s.title("Grid")
+                        s.title("square")
                         s.setup(width=800, height=600, startx=0, starty=0)
 
                         t = turtle.Turtle()
@@ -146,7 +146,7 @@ Iteration: using a for-loop to draw a square
 
     s = turtle.Screen()
     s.bgcolor("white")
-    s.title("Grid")
+    s.title("square")
     s.setup(width=800, height=600, startx=0, starty=0)
 
     t = turtle.Turtle()
@@ -193,7 +193,7 @@ Definitions: using a def block to draw a square
 ----------------------------------------------------
 
 | The code below uses a definition block to draw a square.
-| The function has parameters to specify the side length and the staring position of the bottom left vertex.
+| The function has parameters to specify the side length and the starting position of the bottom left vertex.
 | The function also requires the turtle to be passed as an argument so it can be referred to.
 | Before the for-loop, the turtle is repositioned without drawing the movement; **penup** and **pendown** are needed for that.
 | The initial heading defaults to 0, which is acrosss to the right.
@@ -216,7 +216,7 @@ Definitions: using a def block to draw a square
 
     s = turtle.Screen()
     s.bgcolor("white")
-    s.title("Grid")
+    s.title("square")
     s.setup(width=800, height=600, startx=0, starty=0)
 
     t = turtle.Turtle()
@@ -302,7 +302,7 @@ Adding pen colour and fill colour parameters
 
     s = turtle.Screen()
     s.bgcolor("white")
-    s.title("Grid")
+    s.title("square")
     s.setup(width=800, height=600, startx=0, starty=0)
 
     t = turtle.Turtle()

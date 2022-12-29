@@ -118,7 +118,7 @@ Circles within circles
 
         .. tab-item:: Q
 
-            Complete the code to draw circles within circles.
+            Complete the code to draw circles within circles, by replacing the XXXs.
                         
             .. code-block:: python
 
@@ -144,7 +144,7 @@ Circles within circles
 
                 s = turtle.Screen()
                 s.bgcolor("white")
-                s.title("Grid")
+                s.title("draw_centered_circle")
                 s.setup(width=800, height=600, startx=0, starty=0)
 
                 t = turtle.Turtle()
@@ -191,7 +191,7 @@ Circles within circles
 
                 s = turtle.Screen()
                 s.bgcolor("white")
-                s.title("Grid")
+                s.title("draw_centered_circle")
                 s.setup(width=800, height=600, startx=0, starty=0)
 
                 t = turtle.Turtle()
@@ -236,7 +236,7 @@ Rings of circles
 
         .. tab-item:: Q
 
-            Complete the code to draw a ring of circles as in the image by putitng in arguments to the draw_ring_of_circles calls.
+            Complete the code to draw a ring of circles as in the image by putitng in arguments to the draw_ring_of_circles calls, by replacing the XXXs.
 
             .. image:: images/rings_of_circles.png
                 :scale: 75 %
@@ -283,7 +283,7 @@ Rings of circles
 
                 s = turtle.Screen()
                 s.bgcolor("white")
-                s.title("Grid")
+                s.title("draw_ring_of_circles")
                 s.setup(width=1000, height=1000, startx=0, starty=0)
                 s.tracer(0, 0)
                 s.colormode(255)
@@ -344,7 +344,7 @@ Rings of circles
 
                 s = turtle.Screen()
                 s.bgcolor("white")
-                s.title("Grid")
+                s.title("draw_ring_of_circles")
                 s.setup(width=1000, height=1000, startx=0, starty=0)
                 s.tracer(0, 0)
                 s.colormode(255)

@@ -70,6 +70,7 @@ PC-Python
     turtle/turtle_drawing.rst
     turtle/turtle_square_progressions.rst
     turtle/turtle_rectangle_progressions.rst
+    turtle/turtle_star_progressions.rst 
     turtle/turtle_triangle_progressions.rst 
     turtle/turtle_dots.rst     
     turtle/turtle_circles.rst

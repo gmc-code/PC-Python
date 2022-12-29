@@ -38,7 +38,7 @@ def draw_ring_of_circles(t, centre, angle, size, count, colors=None):
 
 s = turtle.Screen()
 s.bgcolor("white")
-s.title("Grid")
+s.title("circle")
 s.setup(width=1000, height=1000, startx=0, starty=0)
 s.tracer(0, 0)
 s.colormode(255)

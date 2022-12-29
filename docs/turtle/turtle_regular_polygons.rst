@@ -146,7 +146,7 @@ Simple regular polygons
 
                         s = turtle.Screen()
                         s.bgcolor("white")
-                        s.title("Grid")
+                        s.title("draw_centered_regular_polygon")
                         s.setup(width=800, height=600, startx=0, starty=0)
 
                         t = turtle.Turtle()

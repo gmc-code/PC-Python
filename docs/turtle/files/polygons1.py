@@ -22,7 +22,7 @@ def draw_centered_regular_polygon(t, centre=(0, 0), radius=10, sides=4, penw=1, 
 
 s = turtle.Screen()
 s.bgcolor("white")
-s.title("Grid")
+s.title("polygon")
 s.setup(width=800, height=600, startx=0, starty=0)
 
 t = turtle.Turtle()

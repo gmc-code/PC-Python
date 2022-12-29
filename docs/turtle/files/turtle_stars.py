@@ -4,7 +4,7 @@ import random
 
 s = turtle.Screen()
 s.bgcolor("white")
-s.title("Grid")
+s.title("stars")
 s.setup(width=800, height=600, startx=0, starty=0)
 s.tracer(0, 0)
 

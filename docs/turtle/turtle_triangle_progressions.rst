@@ -44,7 +44,7 @@ Scalene triangle
 
                 s = turtle.Screen()
                 s.bgcolor("white")
-                s.title("Grid")
+                s.title("triangle")
                 s.setup(width=800, height=600, startx=0, starty=0)
 
                 t = turtle.Turtle()
@@ -80,7 +80,7 @@ Scalene triangle
 
                 s = turtle.Screen()
                 s.bgcolor("white")
-                s.title("Grid")
+                s.title("triangle")
                 s.setup(width=800, height=600, startx=0, starty=0)
 
                 t = turtle.Turtle()
@@ -132,7 +132,7 @@ Isosceles triangle
 
                 s = turtle.Screen()
                 s.bgcolor("white")
-                s.title("Grid")
+                s.title("triangle")
                 s.setup(width=800, height=600, startx=0, starty=0)
 
                 t = turtle.Turtle()
@@ -168,7 +168,7 @@ Isosceles triangle
 
                 s = turtle.Screen()
                 s.bgcolor("white")
-                s.title("Grid")
+                s.title("triangle")
                 s.setup(width=800, height=600, startx=0, starty=0)
 
                 t = turtle.Turtle()
@@ -224,7 +224,7 @@ Isosceles triangle at any angle
 
                 s = turtle.Screen()
                 s.bgcolor("white")
-                s.title("Grid")
+                s.title("triangle")
                 s.setup(width=800, height=600, startx=0, starty=0)
 
                 t = turtle.Turtle()
@@ -263,7 +263,7 @@ Isosceles triangle at any angle
 
                 s = turtle.Screen()
                 s.bgcolor("white")
-                s.title("Grid")
+                s.title("triangle")
                 s.setup(width=800, height=600, startx=0, starty=0)
 
                 t = turtle.Turtle()
@@ -313,7 +313,7 @@ Equilateral triangles
 
                 s = turtle.Screen()
                 s.bgcolor("white")
-                s.title("Grid")
+                s.title("triangle")
                 s.setup(width=800, height=600, startx=0, starty=0)
 
                 t = turtle.Turtle()
@@ -347,7 +347,7 @@ Equilateral triangles
 
                 s = turtle.Screen()
                 s.bgcolor("white")
-                s.title("Grid")
+                s.title("triangle")
                 s.setup(width=800, height=600, startx=0, starty=0)
 
                 t = turtle.Turtle()
@@ -400,7 +400,7 @@ Adding pen colour and fill colour parameters
 
                         s = turtle.Screen()
                         s.bgcolor("white")
-                        s.title("Grid")
+                        s.title("triangle")
                         s.setup(width = 800, height = 600, startx = 0, starty = 0)
                         t = turtle.Turtle()
                         t.speed(5)
@@ -444,7 +444,7 @@ Adding pen colour and fill colour parameters
 
                         s = turtle.Screen()
                         s.bgcolor("white")
-                        s.title("Grid")
+                        s.title("triangle")
                         s.setup(width=800, height=600, startx=0, starty=0)
 
                         t = turtle.Turtle()
@@ -490,7 +490,7 @@ Adding pen colour and fill colour parameters
 
                         s = turtle.Screen()
                         s.bgcolor("white")
-                        s.title("Grid")
+                        s.title("triangle")
                         s.setup(width=800, height=600, startx=0, starty=0)
 
                         t = turtle.Turtle()

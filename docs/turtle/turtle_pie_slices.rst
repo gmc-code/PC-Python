@@ -18,9 +18,10 @@ Turtle Circles as pie slices
     | extent - an angle; a number (or None for whole circle), which determines how many degrees of the circle is drawn; default None
     | steps - an integer (or None for a circle) which allows polygons to be drawn; default None
 
-| To draw a thin slice, use ``extent=30``
-| To draw a quarter slice, use ``extent=90``
-| To draw a cake with a thin slice removed, use ``extent=330``
+| To draw a cake with a thin slice removed, use ``extent=330``.
+| To draw a quarter slice, use ``extent=90``.
+| To draw a thin slice, use ``extent=30``.
+| To draw a very thin slice, use ``extent=15``.
 
 .. image:: images/pie_extents.png
     :scale: 75 %
@@ -32,7 +33,7 @@ Turtle Circles as pie slices
 Pie slices at a specified location
 ------------------------------------------
 
-| Adding a starting position, the centre of the circle for te pie slice, will provide some convenience.
+| Adding a starting position, the centre of the circle for the pie slice, will provide some convenience.
 | The ``draw_centered_pie_slice`` syntax is below:
 
 .. py:function:: draw_centered_pie_slice(t, centre=(0, 0), angle=0, radius=10, extent=360, penw=1, penc="black", fillc=None)
@@ -157,7 +158,7 @@ Simple pie slices
 
                         s = turtle.Screen()
                         s.bgcolor("white")
-                        s.title("Grid")
+                        s.title("draw_centered_pie_slice")
                         s.setup(width=800, height=600, startx=0, starty=0)
 
                         t = turtle.Turtle()

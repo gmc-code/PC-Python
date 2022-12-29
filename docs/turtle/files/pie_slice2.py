@@ -26,7 +26,7 @@ def draw_centered_pie_slice(t, centre=(0, 0), angle=0, radius=10, extent=330, pe
 
 s = turtle.Screen()
 s.bgcolor("white")
-s.title("Grid")
+s.title("polygon")
 s.setup(width=800, height=600, startx=0, starty=0)
 
 t = turtle.Turtle()
