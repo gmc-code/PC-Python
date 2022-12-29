@@ -22,8 +22,10 @@ s.setup(width=800, height=600, startx=0, starty=0)
 t = turtle.Turtle()
 t.speed(9)
 
-
-star(t, length=300, points=7, start_pos=(-100, 0), start_h=0)
+start_poss = [(-300, -200),(-200,0),(-100, 200),(0, -200),(100, 0), (200, 200)]
+points = [5, 7, 9, 11, 13, 15]
+for i in range(6):
+    star(t, length=180, start_pos=start_poss[i], start_h=0, points=points[i])
 
 t.ht()
 s.exitonclick()

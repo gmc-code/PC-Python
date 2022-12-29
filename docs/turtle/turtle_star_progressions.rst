@@ -176,7 +176,7 @@ Iteration: using a for-loop to draw a star
                 t.speed(5)
 
                 t.pu()
-                X(20, 30)
+                XXX(20, 30)
                 t.pd()
                 t.seth(0)
 
@@ -267,7 +267,7 @@ Definitions: using a def block to draw a star
 
     | **t** - the turtle object to draw the star
     | **length** - diagonal length; default 50
-    | **points** - number of ppoints in the star; default 5
+    | **points** - number of points in the star, odd integer >=5; default 5
     | **start_pos** - start position; default (0, 0)
     | **start_h** - start heading; default 0 degrees
 
@@ -363,3 +363,143 @@ Definitions: using a def block to draw a star
 
                         t.ht()
                         s.exitonclick()
+
+
+----
+
+
+
+Adding pen colour and fill colour parameters
+-----------------------------------------------
+
+| The syntax below adds parameters for pen and fill colours.
+
+.. py:function:: star(t, length=50, points=5, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)
+
+    | **t** - the turtle object to draw the star
+    | **length** - diagonal length; default 50
+    | **points** - number of points in the star, odd integer >=5; default 5
+    | **start_pos** - start position; default (0, 0)
+    | **start_h** - start heading; default 0 degrees
+    | **penw** - pensize; default 1
+    | **penc** - pencolor; ; default "black"
+    | **fillc** - fillcolor; default None
+
+ 
+.. image:: images/star_coloured.png
+    :scale: 75 %
+    :align: center
+    :alt: rectangle_steps_coloured
+
+
+| In the code below, ``star(t, length=300, points=7, start_pos=(-100, 0), start_h=0, penw=3, penc="grey90", fillc="yellow")`` draws a 9 pointed star at (x=-100, y=0) with a grey90 pencolor, a yellow fillcolor, using a pensize of 3.
+| The code needs to check the **fillc** argument since setting a fillcolor to **None** will throw an error.
+
+.. admonition:: Code Completion: star definition
+
+    .. tab-set::
+
+        .. tab-item:: Q
+
+            Complete the code to draw a 9 pointed star at (x=-100, y=0) with a grey90 pencolor, a yellow fillcolor, using a pensize of 3, by replacing the XXXs.
+                        
+            .. code-block:: python
+
+                import turtle
+
+
+                def star(t, length=50, points=5, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
+                    ang = (360 * ((points-1)/2))/points
+                    t.pu()
+                    t.goto(start_pos)
+                    t.pd()
+                    t.seth(start_h)
+
+                    t.pensize(penw)
+                    t.pencolor(penc)
+
+                    if fillc is not None:
+                        t.fillcolor(fillc)
+                        t.begin_fill()
+
+                    for _ in range(points):
+                        t.fd(length)
+                        t.lt(ang)
+                        
+                    if fillc is not None:
+                        t.end_fill()
+
+
+                s = turtle.Screen()
+                s.bgcolor("white")
+                s.title("star")
+                s.setup(width=800, height=600, startx=0, starty=0)
+
+                t = turtle.Turtle()
+                t.speed(9)
+
+
+                star(t, length=XXX, points=XXX, start_pos=(XXX), start_h=0, penw=XXX, penc="XXX", fillc="XXX")
+
+                t.ht()
+                s.exitonclick()
+
+
+        .. tab-item:: Ans
+
+            Completed code to draw a 9 pointed star at (x=-100, y=0) with a grey90 pencolor, a yellow fillcolor, using a pensize of 3.
+                        
+            .. code-block:: python
+
+                import turtle
+
+
+                def star(t, length=50, points=5, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None):
+                    ang = (360 * ((points-1)/2))/points
+                    t.pu()
+                    t.goto(start_pos)
+                    t.pd()
+                    t.seth(start_h)
+
+                    t.pensize(penw)
+                    t.pencolor(penc)
+
+                    if fillc is not None:
+                        t.fillcolor(fillc)
+                        t.begin_fill()
+
+                    for _ in range(points):
+                        t.fd(length)
+                        t.lt(ang)
+                        
+                    if fillc is not None:
+                        t.end_fill()
+
+
+                s = turtle.Screen()
+                s.bgcolor("white")
+                s.title("star")
+                s.setup(width=800, height=600, startx=0, starty=0)
+
+                t = turtle.Turtle()
+                t.speed(9)
+
+
+                star(t, length=300, points=7, start_pos=(-100, 0), start_h=0, penw=3, penc="grey90", fillc="yellow")
+
+                t.ht()
+                s.exitonclick()
+
+----
+
+
+Practice Questions
+--------------------
+
+.. admonition:: Exercises
+
+    1. Draw a 5 pointed star with an orange fill colour.
+    2. Draw a 7 pointed star with a red pen and gold2 fill colour.
+    3. Draw a random number, between 10 and 20, of 5 pointed stars, of random size, between 10 and 100, at random positions.
+
+    
