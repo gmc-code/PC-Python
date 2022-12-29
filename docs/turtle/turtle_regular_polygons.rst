@@ -24,26 +24,27 @@ Turtle Circles as polygons
 
 ----
 
-Circles at a specified location
+Regular polygons at a specified location
 ------------------------------------------
 
-| Adding a starting position, the centre of the circle, will provide some convenience.
+| Adding a starting position, the centre of the regular polygon, will provide some convenience.
 | The ``draw_centered_circle`` syntax is below:
 
-.. py:function:: draw_centered_circle(t, centre=(0, 0), radius=20, color="blue", penw=1, penc="black", fillc=None)
+.. py:function:: draw_centered_regular_polygon(t, centre=(0, 0), radius=20, sides=4, color="blue", penw=1, penc="black", fillc=None)
 
-    | **t** - the turtle object to draw the rectangle
+    | **t** - the turtle object to draw the regular polygon
     | **centre** - start position; default (0, 0)
     | **radius** - the circle radius
+    | **sides** - the number of sides; default 4
     | **color** - a colorstring or a numeric color tuple (r, g, b,)
     | **penw** - the pen width
     | **penc** - the pen color; a colorstring or a numeric color tuple (r, g, b,)
     | **fillc** - the fill color; a colorstring or a numeric color tuple (r, g, b,)
 
 
-| The ``draw_centered_circle`` definition code is below.
-| The code moves the turtle to the given centre, sets the angle to 0, moves forward the raius and sets the angle to 90, then draws the circle.
-| If there is a fill color given, then ``begin_fill`` and ``end_fill`` need to be sued wither side of the drawing.
+| The ``draw_centered_regular_polygon`` definition code is below.
+| The code moves the turtle to the given centre, sets the angle to 0, moves forward the radius and sets the angle to 90, then draws the  regular polygon.
+| If there is a fill color given, then ``begin_fill`` and ``end_fill`` need to be used either side of the drawing.
 
 .. admonition:: Code Completion: draw_centered_circle definition
 

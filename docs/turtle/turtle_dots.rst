@@ -28,7 +28,7 @@ Draw_dot definition: dots at a specified location
 
 .. py:function:: draw_dot(t, centre=(0, 0), size=20, color="blue")
 
-    | **t** - the turtle object to draw the rectangle
+    | **t** - the turtle object to draw the dot
     | **centre** - the centre of the dot; default (0, 0)
     | **size** - the diameter of the dot, an integer >= 1
     | **color** - a colorstring or a numeric color tuple (r, g, b,)
@@ -181,9 +181,9 @@ draw_dot_stack definition
 
 .. py:function:: draw_dot_stack(t, centre, pos_step, angle, size, size_step, colors)
 
-    | **t** - the turtle object to draw the rectangle
+    | **t** - the turtle object to draw the dot stack
     | **centre** - the centre of the dot
-    | **pos_step** - the length to move in the directon given by the angle, from the centre
+    | **pos_step** - the length to move in the direction given by the angle, from the centre
     | **angle** - the angle to draw the stack    
     | **size** - the diameter of the dot    
     | **size_step** - the length to reduce the diameter by for successive dots
@@ -349,9 +349,9 @@ draw_dot_stack_cone definition
 
 .. py:function:: draw_dot_stack_cone(t, centre, pos_step, angle, size, size_step, colors)
 
-    | **t** - the turtle object to draw the rectangle
+    | **t** - the turtle object to draw the dot stack cone
     | **centre** - the centre of the dot
-    | **pos_step** - the length to move in the directon given by angle, from centre
+    | **pos_step** - the length to move in the direction given by angle, from centre
     | **angle** - the angle to draw the stack    
     | **size** - the diameter of the dot    
     | **size_step** - the length to reduce the diameter by for successive dots
@@ -546,8 +546,8 @@ Hexagonal array: draw_dot_centre_hexagon definition
 .. py:function:: draw_dot_centre_hexagon(t, centre, angle, size, centre_color, colors)
 
     | **t** - the turtle object to draw the rectangle
-    | **centre** - the centre of the hexagon
-    | **angle** - the direction of the first circle
+    | **centre** - the centre of the dot hexagon
+    | **angle** - the direction of the first dot
     | **size** - the diameter of the dot, an integer >= 1
     | **centre_color** - the colour of the central dot; a colorstring or a numeric color tuple (r, g, b,)
     | **colors** - the colours of the surrounding dots; a list of 6 colorstring or a numeric color tuples (r, g, b,)

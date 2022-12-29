@@ -32,7 +32,7 @@ Circles at a specified location
 
 .. py:function:: draw_centered_circle(t, centre=(0, 0), radius=20, color="blue", penw=1, penc="black", fillc=None)
 
-    | **t** - the turtle object to draw the rectangle
+    | **t** - the turtle object to draw the circle
     | **centre** - start position; default (0, 0)
     | **radius** - the circle radius
     | **color** - a colorstring or a numeric color tuple (r, g, b,)
@@ -42,8 +42,8 @@ Circles at a specified location
 
 
 | The ``draw_centered_circle`` definition code is below.
-| The code moves the turtle to the given centre, sets the angle to 0, moves forward the raius and sets the angle to 90, then draws the circle.
-| If there is a fill color given, then ``begin_fill`` and ``end_fill`` need to be sued wither side of the drawing.
+| The code moves the turtle to the given centre, sets the angle to 0, moves forward the radius and sets the angle to 90, then draws the circle.
+| If there is a fill color given, then ``begin_fill`` and ``end_fill`` need to be used either side of the drawing.
 
 .. admonition:: Code Completion: draw_centered_circle definition
 

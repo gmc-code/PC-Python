@@ -169,7 +169,7 @@ Scalene
 
 .. py:function:: scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)
 
-    | **t** - the turtle object to draw the rectangle
+    | **t** - the turtle object to draw the scalene triangle
     | **side_a** - side length a
     | **angle_C** - angle_C
     | **side_b** - side length b
@@ -237,7 +237,7 @@ Isosceles
 
 .. py:function:: isosceles(t, base, height, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)
 
-    | **t** - the turtle object to draw the rectangle
+    | **t** - the turtle object to draw the isosceles triangle
     | **base** - base length
     | **height** - height
     | **start_pos** - start position; default (0, 0)
@@ -302,7 +302,7 @@ Equilateral
 
 .. py:function:: equilateral(t, side, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)
 
-    | **t** - the turtle object to draw the rectangle
+    | **t** - the turtle object to draw the equilateral triangle
     | **side** - side length
     | **start_pos** - start position; default (0, 0)
     | **start_h** - start heading; default 0 degrees
