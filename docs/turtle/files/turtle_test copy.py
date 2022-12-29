@@ -24,6 +24,22 @@ def house_door(t, length, height, start_pos):
     sh.rectangle(t, length=d_length, width=d_height, start_pos=d_pos, penw=1, penc="black", fillc="green")
 
 
+def house_roof(t, length, height, start_pos):
+    """draw roof with overhang of 1/20 length of house over left side and right side of house
+
+    Args:
+        t (class turtle.Turtle): turtle instance.
+        length (int, optional): length of house.
+        height (int, optional): height of house.
+        start_pos (tuple, optional): bottom left of house.
+    """
+    r_height = length//3
+    r_length = length * 1.1
+    r_overhang = length//20
+    r_pos = (start_pos[0] - r_overhang, start_pos[1] + height)
+    sh.isosceles(t, base=r_length, height=r_height, start_pos=r_pos, penw=1, penc="black", fillc="brown")
+
+
 def house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
     """draw a house with 0-2 windows
 
@@ -41,7 +57,8 @@ def house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
     house_door(t, length, height, start_pos)
 
     # roof
-
+    house_roof(t, length, height, start_pos)
+    
     # windows
 
 house(t, length=600, height=300, start_pos=(-300, -200), w_sides="LR")

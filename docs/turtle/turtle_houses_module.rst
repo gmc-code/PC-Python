@@ -170,52 +170,62 @@ Front of house
 | This will build a house of 600 by 300 at (-300, -200).
 | Only the houses main rectangle will be drawn so far.
 
-.. code-block:: python
+.. admonition:: Tasks
 
-    import turtle
-    import shapes as sh
+    1. Test the code so far.
+        
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
 
-    s = turtle.Screen()
-    s.bgcolor("white")
-    s.title("Houses")
-    s.setup(width=800, height=600, startx=200, starty=100)
+            .. tab-set::
 
-    t = turtle.Turtle()
-    t.speed(9)
+                .. code-block:: python
 
-    def house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
-        """draw a house with 0-2 windows
+                    import turtle
+                    import shapes as sh
 
-        Args:
-            t (class turtle.Turtle): turtle instance.
-            length (int, optional): length of house. Defaults to 60.
-            height (int, optional): height of house. Defaults to 40.
-            start_pos (tuple, optional): bottom left of house. Defaults to (0, 0).
-            w_sides (str, optional): L for left side of house; R for right and LR for both. Defaults to None.
-        """
-        # front of house
-        sh.rectangle(t, length=length, width=height, start_pos=start_pos, 
-                        penw=1, penc="black", fillc="snow")
-         
-        # door
+                    s = turtle.Screen()
+                    s.bgcolor("white")
+                    s.title("Houses")
+                    s.setup(width=800, height=600, startx=200, starty=100)
 
-        # roof
+                    t = turtle.Turtle()
+                    t.speed(9)
 
-        # windows
+                    def house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
+                        """draw a house with 0-2 windows
 
-    house(t, length=600, height=300, start_pos=(-300, -200), w_sides="LR")
+                        Args:
+                            t (class turtle.Turtle): turtle instance.
+                            length (int, optional): length of house. Defaults to 60.
+                            height (int, optional): height of house. Defaults to 40.
+                            start_pos (tuple, optional): bottom left of house. Defaults to (0, 0).
+                            w_sides (str, optional): L for left side of house; R for right and LR for both. Defaults to None.
+                        """
+                        # front of house
+                        sh.rectangle(t, length=length, width=height, start_pos=start_pos, 
+                                        penw=1, penc="black", fillc="snow")
+                        
+                        # door
 
-    s.exitonclick()
+                        # roof
+
+                        # windows
+
+                    house(t, length=600, height=300, start_pos=(-300, -200), w_sides="LR")
+
+                    s.exitonclick()
 
 ----
 
 Door of house
 ------------------
 
-
 | The door of the house will be a rectangle.
 
-.. admonition:: Code Completion: front of house
+.. admonition:: Code Completion: door of house
 
     .. tab-set::
 
@@ -237,7 +247,7 @@ Door of house
                     d_pos = (start_pos[0] + length//XXX, start_pos[1])
                     d_height = height//XXX
                     d_length = length//XXX
-                    sh.rectangle(t, length=d_length, width=d_height, start_pos=d_pos, penw=1, penc="black", fillc="green")
+                    sh.XXX(t, length=d_length, width=d_height, start_pos=d_pos, penw=1, penc="black", fillc="green")
 
         .. tab-item:: Ans
 
@@ -265,57 +275,68 @@ Door of house
 | This will build a house of 600 by 300 at (-300, -200).
 | Only the houses main rectangle and door will be drawn.
 
-.. code-block:: python
+.. admonition:: Tasks
 
-    import turtle
-    import shapes as sh
+    1. Test the code so far
+        
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
 
-    s = turtle.Screen()
-    s.bgcolor("white")
-    s.title("Houses")
-    s.setup(width=800, height=600, startx=200, starty=100)
+            .. tab-set::
 
-    t = turtle.Turtle()
-    t.speed(9)
+                .. code-block:: python
 
-    def house_door(t, length, height, start_pos):
-        """draw door 1/3 along length of house, 1/5 of length of house, 1/1.6 of height of house
+                    import turtle
+                    import shapes as sh
 
-        Args:
-            t (class turtle.Turtle): turtle instance.
-            length (int, optional): length of house.
-            height (int, optional): height of house.
-            start_pos (tuple, optional): bottom left of house.
-        """
-        d_pos = (start_pos[0] + length//3, start_pos[1])
-        d_height = height//1.6
-        d_length = length//5
-        sh.rectangle(t, length=d_length, width=d_height, start_pos=d_pos, penw=1, penc="black", fillc="green")
+                    s = turtle.Screen()
+                    s.bgcolor("white")
+                    s.title("Houses")
+                    s.setup(width=800, height=600, startx=200, starty=100)
+
+                    t = turtle.Turtle()
+                    t.speed(9)
+
+                    def house_door(t, length, height, start_pos):
+                        """draw door 1/3 along length of house, 1/5 of length of house, 1/1.6 of height of house
+
+                        Args:
+                            t (class turtle.Turtle): turtle instance.
+                            length (int, optional): length of house.
+                            height (int, optional): height of house.
+                            start_pos (tuple, optional): bottom left of house.
+                        """
+                        d_pos = (start_pos[0] + length//3, start_pos[1])
+                        d_height = height//1.6
+                        d_length = length//5
+                        sh.rectangle(t, length=d_length, width=d_height, start_pos=d_pos, penw=1, penc="black", fillc="green")
 
 
-    def house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
-        """draw a house with 0-2 windows
+                    def house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
+                        """draw a house with 0-2 windows
 
-        Args:
-            t (class turtle.Turtle): turtle instance.
-            length (int, optional): length of house. Defaults to 60.
-            height (int, optional): height of house. Defaults to 40.
-            start_pos (tuple, optional): bottom left of house. Defaults to (0, 0).
-            w_sides (str, optional): L for left side of house; R for right and LR for both. Defaults to None.
-        """
-        # front of house
-        sh.rectangle(t, length=length, width=height, start_pos=start_pos,
-                        penw=1, penc="black", fillc="snow")
-        # door
-        house_door(t, length, height, start_pos)
+                        Args:
+                            t (class turtle.Turtle): turtle instance.
+                            length (int, optional): length of house. Defaults to 60.
+                            height (int, optional): height of house. Defaults to 40.
+                            start_pos (tuple, optional): bottom left of house. Defaults to (0, 0).
+                            w_sides (str, optional): L for left side of house; R for right and LR for both. Defaults to None.
+                        """
+                        # front of house
+                        sh.rectangle(t, length=length, width=height, start_pos=start_pos,
+                                        penw=1, penc="black", fillc="snow")
+                        # door
+                        house_door(t, length, height, start_pos)
 
-        # roof
+                        # roof
 
-        # windows
+                        # windows
 
-    house(t, length=600, height=300, start_pos=(-300, -200), w_sides="LR")
+                    house(t, length=600, height=300, start_pos=(-300, -200), w_sides="LR")
 
-    s.exitonclick()
+                    s.exitonclick()
 
 ----
 
@@ -325,24 +346,137 @@ Roof of house
 
 | The roof of the house will be an isosceles triangle.
 
-.. code-block:: python
+.. admonition:: Code Completion: roof of house
 
-    def house_roof(t, length, height, start_pos):
-        """draw roof with overhang of 1/20 length of house over left side and right side of house
+    .. tab-set::
 
-        Args:
-            t (class turtle.Turtle): turtle instance.
-            length (int, optional): length of house.
-            height (int, optional): height of house.
-            start_pos (tuple, optional): bottom left of house.
-        """
-        r_height = length//3
-        r_length = length * 1.1
-        r_overhang = length//20
-        r_pos = (start_pos[0] - r_overhang, start_pos[1] + height)
-        sh.isosceles(t, base=r_length, height=r_height, start_pos=r_pos, penw=1, penc="black", fillc="brown")
+        .. tab-item:: Q
+
+            | Complete the ``house_roof`` definition.
+
+            .. code-block:: python
+
+                def house_roof(t, length, height, start_pos):
+                    """draw roof height 1/3 of house length
+                    with overhang of 1/20 length of house over left side and right side of house
+
+                    Args:
+                        t (class turtle.Turtle): turtle instance.
+                        length (int, optional): length of house.
+                        height (int, optional): height of house.
+                        start_pos (tuple, optional): bottom left of house.
+                    """
+                    r_height = length//XXX
+                    r_length = length * XXX
+                    r_overhang = length//XXX
+                    r_pos = (start_pos[0] - r_overhang, start_pos[1] + height)
+                    sh.XXX(t, base=r_length, height=r_height, start_pos=r_pos, penw=1, penc="black", fillc="brown")
+
+        .. tab-item:: Ans
+
+            | Complete the ``house_roof`` definition.
+
+            .. code-block:: python
+
+                def house_roof(t, length, height, start_pos):
+                    """draw roof with overhang of 1/20 length of house over left side and right side of house
+
+                    Args:
+                        t (class turtle.Turtle): turtle instance.
+                        length (int, optional): length of house.
+                        height (int, optional): height of house.
+                        start_pos (tuple, optional): bottom left of house.
+                    """
+                    r_height = length//3
+                    r_length = length * 1.1
+                    r_overhang = length//20
+                    r_pos = (start_pos[0] - r_overhang, start_pos[1] + height)
+                    sh.isosceles(t, base=r_length, height=r_height, start_pos=r_pos, penw=1, penc="black", fillc="brown")
+
+| Test the code so far using:
+| ``house(t, length=600, height=300, start_pos=(-300, -200), w_sides="LR")``
+| This will build a house of 600 by 300 at (-300, -200).
+| Only the houses main rectangle and door and roof will be drawn.
+
+.. admonition:: Tasks
+
+    1. Test the code so far
+        
+    .. dropdown::
+            :icon: codescan
+            :color: primary
+            :class-container: sd-dropdown-container
+
+            .. tab-set::
+
+                .. code-block:: python
+
+                    import turtle
+                    import shapes as sh
+
+                    s = turtle.Screen()
+                    s.bgcolor("white")
+                    s.title("Houses")
+                    s.setup(width=800, height=600, startx=200, starty=100)
+
+                    t = turtle.Turtle()
+                    t.speed(9)
+
+                    def house_door(t, length, height, start_pos):
+                        """draw door 1/3 along length of house, 1/5 of length of house, 1/1.6 of height of house
+
+                        Args:
+                            t (class turtle.Turtle): turtle instance.
+                            length (int, optional): length of house.
+                            height (int, optional): height of house.
+                            start_pos (tuple, optional): bottom left of house.
+                        """
+                        d_pos = (start_pos[0] + length//3, start_pos[1])
+                        d_height = height//1.6
+                        d_length = length//5
+                        sh.rectangle(t, length=d_length, width=d_height, start_pos=d_pos, penw=1, penc="black", fillc="green")
 
 
+                    def house_roof(t, length, height, start_pos):
+                        """draw roof with overhang of 1/20 length of house over left side and right side of house
+
+                        Args:
+                            t (class turtle.Turtle): turtle instance.
+                            length (int, optional): length of house.
+                            height (int, optional): height of house.
+                            start_pos (tuple, optional): bottom left of house.
+                        """
+                        r_height = length//3
+                        r_length = length * 1.1
+                        r_overhang = length//20
+                        r_pos = (start_pos[0] - r_overhang, start_pos[1] + height)
+                        sh.isosceles(t, base=r_length, height=r_height, start_pos=r_pos, penw=1, penc="black", fillc="brown")
+
+
+                    def house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
+                        """draw a house with 0-2 windows
+
+                        Args:
+                            t (class turtle.Turtle): turtle instance.
+                            length (int, optional): length of house. Defaults to 60.
+                            height (int, optional): height of house. Defaults to 40.
+                            start_pos (tuple, optional): bottom left of house. Defaults to (0, 0).
+                            w_sides (str, optional): L for left side of house; R for right and LR for both. Defaults to None.
+                        """
+                        # front of house
+                        sh.rectangle(t, length=length, width=height, start_pos=start_pos,
+                                        penw=1, penc="black", fillc="snow")
+                        # door
+                        house_door(t, length, height, start_pos)
+
+                        # roof
+                        house_roof(t, length, height, start_pos)
+                        
+                        # windows
+
+                    house(t, length=600, height=300, start_pos=(-300, -200), w_sides="LR")
+
+                    s.exitonclick()
 
 ----
 

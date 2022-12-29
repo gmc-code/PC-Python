@@ -33,8 +33,9 @@ def house_door_v1(t, length, height, start_pos):
 
 
 def house_roof(t, length, height, start_pos):
-    """draw roof with overhang of 1/20 length of house over left side and right side of house
-
+    """draw roof height 1/3 of house length
+    with overhang of 1/20 length of house over left side and right side of house
+    
     Args:
         t (class turtle.Turtle): turtle instance.
         length (int, optional): length of house.
