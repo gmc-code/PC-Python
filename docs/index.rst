@@ -70,9 +70,10 @@ PC-Python
     turtle/turtle_drawing.rst
     turtle/turtle_square_progressions.rst
     turtle/turtle_rectangle_progressions.rst
-    turtle/turtle_dots.rst     
-    turtle/turtle_circles_and_polygons.rst 
     turtle/turtle_triangle_progressions.rst 
+    turtle/turtle_dots.rst     
+    turtle/turtle_circles.rst
+    turtle/turtle_regular_polygons.rst
     turtle/turtle_shapes_module.rst
     turtle/turtle_houses_module.rst
     turtle/own_house_designs.rst 

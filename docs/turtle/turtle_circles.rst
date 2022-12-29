@@ -1,8 +1,8 @@
 ====================================================
-Turtle circles and polygons
+Turtle circles
 ====================================================
 
-| The code below draws circles, parts of circles and regular polygons.
+| The code below draws circles.
 
 ----
 

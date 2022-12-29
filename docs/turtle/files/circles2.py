@@ -21,12 +21,12 @@ def draw_centered_circle(t, centre=(0, 0), radius=10, penw=1, penc="black", fill
         t.end_fill()
 
 
-def draw_circle_of_circles(t, centre, angle, size, sides, colors=None):
-    circum_r = (sin(radians(180/sides)) / (1 - sin(radians(180/sides)))) * size
-    for i in range(sides):
+def draw_ring_of_circles(t, centre, angle, size, count, colors=None):
+    circum_r = (sin(radians(180/count)) / (1 - sin(radians(180/count)))) * size
+    for i in range(count):
         t.pu()
         t.goto(centre)
-        t.seth(angle + i*360//sides)
+        t.seth(angle + i*360//count)
         t.fd(size + circum_r)
         dot_centre = t.pos()
         if colors is None:  
@@ -49,8 +49,8 @@ t.ht()
 
 
 colorlist=["light blue", "pink", "light green", "yellow", "MediumPurple1", "bisque"]*4
-draw_circle_of_circles(t, centre=(0, 0), angle=0, size=20, sides=6, colors=colorlist)
-draw_circle_of_circles(t, centre=(0, 0), angle=9, size=100, sides=24, colors=colorlist)
+draw_ring_of_circles(t, centre=(0, 0), angle=0, size=20, count=4, colors=colorlist)
+draw_ring_of_circles(t, centre=(0, 0), angle=9, size=100, count=8, colors=colorlist)
 
 s.update()
 s.exitonclick()
