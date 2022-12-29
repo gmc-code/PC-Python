@@ -7,7 +7,7 @@ s.title("Houses")
 s.setup(width=800, height=600, startx=200, starty=100)
 
 t = turtle.Turtle()
-t.speed(9)
+t.speed(0)
 
 def house_door(t, length, height, start_pos):
     """draw door 1/3 along length of house, 1/5 of length of house, 1/1.6 of height of house
