@@ -103,66 +103,67 @@ Front of house
 | For simplicity, the pensize has been set to 1, pencolor to black and fillcolor to snow.
 | Use: ``sh.rectangle(t, length=length, width=height, start_pos=start_pos, penw=1, penc="black", fillc="snow")``
 
-.. admonition:: Code Completion: front of house
+.. .. admonition:: Code Completion: front of house
 
-    .. tab-set::
+..     .. tab-set::
 
-        .. tab-item:: Q
+..         .. tab-item:: Q
 
-            | Add the front of the house to the ``house`` definition.
+..             | Add the front of the house to the ``house`` definition.
 
-            .. code-block:: python
+..             .. code-block:: python
 
-                import turtle
-                import shapes as sh
+..                 import turtle
+..                 import shapes as sh
 
-                def house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
-                    """draw a house with 0-2 windows
+..                 def house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
+..                     """draw a house with 0-2 windows
 
-                    Args:
-                        t (class turtle.Turtle): turtle instance.
-                        length (int, optional): length of house. Defaults to 60.
-                        height (int, optional): height of house. Defaults to 40.
-                        start_pos (tuple, optional): bottom left of house. Defaults to (0, 0).
-                        w_sides (str, optional): L for left side of house; R for right and LR for both. Defaults to None.
-                    """
-                    # front of house
-                    '''add code here to draw the rectangle'''
+..                     Args:
+..                         t (class turtle.Turtle): turtle instance.
+..                         length (int, optional): length of house. Defaults to 60.
+..                         height (int, optional): height of house. Defaults to 40.
+..                         start_pos (tuple, optional): bottom left of house. Defaults to (0, 0).
+..                         w_sides (str, optional): L for left side of house; R for right and LR for both. Defaults to None.
+..                     """
+..                     # front of house
+..                     '''add code here to draw the rectangle'''
                     
-                    # door
+..                     # door
 
-                    # roof
+..                     # roof
 
-                    # windows
+..                     # windows
 
-        .. tab-item:: Ans
+..         .. tab-item:: Ans
 
-            | Added the front of the house to the ``house`` definition.
+..             | Added the front of the house to the ``house`` definition.
 
-            .. code-block:: python
+..             .. code-block:: python
 
-                import turtle
-                import shapes as sh
+..                 import turtle
+..                 import shapes as sh
 
-                def house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
-                    """draw a house with 0-2 windows
+..                 def house(t, length=60, height=40, start_pos=(0, 0), w_sides=None):
+..                     """draw a house with 0-2 windows
 
-                    Args:
-                        t (class turtle.Turtle): turtle instance.
-                        length (int, optional): length of house. Defaults to 60.
-                        height (int, optional): height of house. Defaults to 40.
-                        start_pos (tuple, optional): bottom left of house. Defaults to (0, 0).
-                        w_sides (str, optional): L for left side of house; R for right and LR for both. Defaults to None.
-                    """
-                    # front of house
-                    sh.rectangle(t, length=length, width=height, start_pos=start_pos, 
-                                    penw=1, penc="black", fillc="snow")
+..                     Args:
+..                         t (class turtle.Turtle): turtle instance.
+..                         length (int, optional): length of house. Defaults to 60.
+..                         height (int, optional): height of house. Defaults to 40.
+..                         start_pos (tuple, optional): bottom left of house. Defaults to (0, 0).
+..                         w_sides (str, optional): L for left side of house; R for right and LR for both. Defaults to None.
+..                     """
+..                     # front of house
+..                     sh.rectangle(t, length=length, width=height, start_pos=start_pos, 
+..                                     penw=1, penc="black", fillc="snow")
                     
-                    # door
+..                     # door
 
-                    # roof
+..                     # roof
 
-                    # windows
+..                     # windows
+
 
 | Test the code so far using:
 | ``house(t, length=600, height=300, start_pos=(-300, -200), w_sides="LR")``
