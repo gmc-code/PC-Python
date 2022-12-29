@@ -34,7 +34,7 @@ Regular polygons at a specified location
 
     | **t** - the turtle object to draw the regular polygon
     | **centre** - start position; default (0, 0)
-    | **radius** - the circle radius
+    | **radius** - the circle radius; default 10
     | **sides** - the number of sides; default 4
     | **penw** - the pen width; default 1
     | **penc** - the pen color; a colorstring or a numeric color tuple (r, g, b,); default "black"
