@@ -263,17 +263,19 @@ Definitions: using a def block to draw a star
 | The function also requires the turtle to be passed as an argument so it can be referred to.
 | Before the for-loop, the turtle is repositioned without drawing the movement; **penup** and **pendown** are needed for that.
 
-.. py:function:: star(t, diagonal=40, points=5, start_pos=(0, 0), start_h=0)
+.. py:function:: star(t, length=50, points=5, start_pos=(0, 0), start_h=0)
 
     | **t** - the turtle object to draw the star
-    | **length** - side length; default 40
-    | **width** - side width; default 30
+    | **length** - diagonal length; default 50
+    | **points** - number of ppoints in the star; default 5
     | **start_pos** - start position; default (0, 0)
     | **start_h** - start heading; default 0 degrees
-    
-| In the code below, ``star(t)`` draws a default star.
-| ``star(t, length=120, width=50, start_pos=(20, 30))`` draws a star of 120 by 50 at (20, 30).
-| ``star(t, length=400, width=300, start_pos=(-300, -100), start_h=10)`` draws a star of 400 by 300 at (-300, -100) with an angle of 10 degrees.
+
+
+| The formula to calculate the turning angle of the turtle is (360 * ((points-1)/2))/points.
+| e.g for 5 points the angle is (360 * (5-1)/2)/5 which is 720/5 which is 144.
+
+| The code to draw a star with an odd number of points from 5 upwards is below. 
 
 .. admonition:: Code Completion: star definition
 
@@ -281,82 +283,45 @@ Definitions: using a def block to draw a star
 
         .. tab-item:: Q
 
-            Complete the code to draw a star with diagonals of 120 at (20, 30), by replacing the XXXs.
+            Complete the ``star`` definition by replacing the "XXX"s.
     
             .. code-block:: python
 
-                import turtle
 
-                s = turtle.Screen()
-                s.bgcolor("white")
-                s.title("star")
-                s.setup(width=800, height=600, startx=0, starty=0)
-
-                t = turtle.Turtle()
-                t.speed(5)
-
-
-                def star(t, X=40, XX=30, XXX=(0, 0), XXXX=0):
-                    t.pu()
-                    t.goto(XXX)
-                    t.pd()
-                    t.seth(XXXX)
-
-                    for _ in range(2):
-                        t.fd(X)
-                        t.lt(90)
-                        t.fd(XX)
-                        t.lt(90)
-
-
-                star(t)
-                star(t, length=120, width=50, start_pos=(20, 30))
-                star(t, length=400, width=300, start_pos=(-300, -100), start_h=10)
-
-                s.exitonclick()
-
-
-        .. tab-item:: Ans
-
-            Complete the code to draw a star with diagonals of 120 at (20, 30), by replacing the XXXs.
-    
-            .. code-block:: python
-
-                import turtle
-
-                s = turtle.Screen()
-                s.bgcolor("white")
-                s.title("star")
-                s.setup(width=800, height=600, startx=0, starty=0)
-
-                t = turtle.Turtle()
-                t.speed(5)
-
-
-                def star(t, length=40, width=30, start_pos=(0, 0), start_h=0):
+                def star(t, length=50, points=5, start_pos=(0, 0), start_h=0):
+                    ang = (360 * ((points-1)/2))/points
                     t.pu()
                     t.goto(start_pos)
                     t.pd()
                     t.seth(start_h)
-
-                    for _ in range(2):
+                    for _ in range(points):
                         t.fd(length)
-                        t.lt(90)
-                        t.fd(width)
-                        t.lt(90)
+                        t.lt(ang)
 
 
-                star(t)
-                star(t, length=120, width=50, start_pos=(20, 30))
-                star(t, length=400, width=300, start_pos=(-300, -100), start_h=10)
+        .. tab-item:: Ans
 
-                s.exitonclick()
+            Completed ``star`` definition.
+    
+            .. code-block:: python
+
+
+                def star(t, length=50, points=5, start_pos=(0, 0), start_h=0):
+                    ang = (360 * ((points-1)/2))/points
+                    t.pu()
+                    t.goto(start_pos)
+                    t.pd()
+                    t.seth(start_h)
+                    for _ in range(points):
+                        t.fd(length)
+                        t.lt(ang)
+
 
 ----
 
 .. admonition:: Tasks
 
-    1. Modify the code above to draw a star of 80 by 150 at (-80, -150).
+    1. Use the code above to draw a star with 7 points and diagonal length of 300, at (-100, 0).
 
     .. dropdown::
             :icon: codescan
@@ -367,11 +332,23 @@ Definitions: using a def block to draw a star
 
                 .. tab-item:: Q1
 
-                    Complete the code to draw a star with diagonals of 120 at (20, 30), by replacing the XXXs.
+                    Use the code above to draw a star with 7 points and diagonal length of 300, at (0, 0).
 
                     .. code-block:: python
 
                         import turtle
+
+
+                        def star(t, length=50, points=5, start_pos=(0, 0), start_h=0):
+                            ang = (360 * ((points-1)/2))/points
+                            t.pu()
+                            t.goto(start_pos)
+                            t.pd()
+                            t.seth(start_h)
+                            for _ in range(points):
+                                t.fd(length)
+                                t.lt(ang)
+
 
                         s = turtle.Screen()
                         s.bgcolor("white")
@@ -379,213 +356,10 @@ Definitions: using a def block to draw a star
                         s.setup(width=800, height=600, startx=0, starty=0)
 
                         t = turtle.Turtle()
-                        t.speed(5)
-
-                        def star(t, length=40, width=30, start_pos=(0, 0), start_h=0):
-                            t.pu()
-                            t.goto(start_pos)
-                            t.pd()
-                            t.seth(start_h)
-
-                            for _ in range(2):
-                                t.fd(length)
-                                t.lt(90)
-                                t.fd(width)
-                                t.lt(90)
+                        t.speed(9)
 
 
-                        star(t, length=80, width=150, start_pos=(-80, -150), start_h=0)
+                        star(t, length=300, start_pos=(-100, 0), start_h=0, points=7)
 
+                        t.ht()
                         s.exitonclick()
-
-----
-
-Adding pen colour and fill colour parameters
------------------------------------------------
-
-| The syntax below adds parameters for pen and fill colours.
-
-.. py:function:: star(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)
-
-    | **t** - the turtle object to draw the star
-    | **length** - side length; default 40
-    | **width** - side width; default 30
-    | **start_pos** - start position; default (0, 0)
-    | **start_h** - start heading; default 0 degrees
-    | **penw** - pensize; default 1
-    | **penc** - pencolor; ; default "black"
-    | **fillc** - fillcolor; default None
-
- 
-.. image:: images/star_steps_coloured.png
-    :scale: 75 %
-    :align: center
-    :alt: star_steps_coloured
-
-
-| In the code below, ``star(t, length=400, width=300, start_pos=(-100, -150), start_h=10, penw=5, penc="black", fillc="light green")`` draws a star of 400 by 300 at (x=-100, y=-150) with a black pencolor, a green fillcolor, using a pensize of 5.
-| The code needs to check the **fillc** argument since setting a fillcolor to **None** will throw an error.
-
-.. admonition:: Code Completion: star_steps_coloured definition
-
-    .. tab-set::
-
-        .. tab-item:: Q
-
-            Complete the code to draw a star with diagonals of 120 at (20, 30), by replacing the XXXs.
-                        
-            .. code-block:: python
-
-                import turtle
-
-                s = turtle.Screen()
-                s.bgcolor("white")
-                s.title("star")
-                s.setup(width=800, height=600, startx=0, starty=0)
-
-                t = turtle.Turtle()
-                t.speed(0)
-
-
-                def star(t, length=40, width=30, start_pos=(0, 0), start_h=0, 
-                                X=1, XX="black", XXX=None):
-                    t.pu()
-                    t.goto(start_pos)
-                    t.pd()
-                    t.seth(start_h)
-
-                    t.pensize(X)
-                    t.pencolor(XX)
-
-                    if XXX is not None:
-                        t.fillcolor(XXX)
-                        t.begin_fill()
-
-                    for _ in range(2):
-                        t.fd(length)
-                        t.lt(90)
-                        t.fd(width)
-                        t.lt(90)
-
-                    if XXX is not None:
-                        t.end_fill()
-
-
-                star(t, length=400, width=300, start_pos=(-100, -150), start_h=10, 
-                            penw=5, penc="black", fillc="light green")
-
-                s.exitonclick()
-
-
-        .. tab-item:: Ans
-
-            Completed code to draw a star of side length 120 and width 50 at (20, 30).
-                        
-            .. code-block:: python
-
-                import turtle
-
-                s = turtle.Screen()
-                s.bgcolor("white")
-                s.title("star")
-                s.setup(width=800, height=600, startx=0, starty=0)
-
-                t = turtle.Turtle()
-                t.speed(0)
-
-
-                def star(t, length=40, width=30, start_pos=(0, 0), start_h=0, 
-                                penw=1, penc="black", fillc=None):
-                    t.pu()
-                    t.goto(start_pos)
-                    t.pd()
-                    t.seth(start_h)
-
-                    t.pensize(penw)
-                    t.pencolor(penc)
-
-                    if fillc is not None:
-                        t.fillcolor(fillc)
-                        t.begin_fill()
-
-                    for _ in range(2):
-                        t.fd(length)
-                        t.lt(90)
-                        t.fd(width)
-                        t.lt(90)
-
-                    if fillc is not None:
-                        t.end_fill()
-
-
-                star(t, length=400, width=300, start_pos=(-100, -150), start_h=10, 
-                            penw=5, penc="black", fillc="light green")
-
-                s.exitonclick()
-
-----
-
-.. admonition:: Tasks
-
-    1. Use the definition provided above to draw a star of side lengths 150 and 250 at (x=-150, y=-250) with a purple pencolor, a bisque fillcolor, with a pensize of 10.
-
-    .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
-
-            .. tab-set::
-
-                .. tab-item:: Q1
-
-                    Use the definition provided above to draw a star of side lengths 150 and 250 at (x=-150, y=-250) with a purple pencolor, a bisque fillcolor, with a pensize of 10. 
-
-                    .. code-block:: python
-
-                        import turtle
-
-                        s = turtle.Screen()
-                        s.bgcolor("white")
-                        s.title("star")
-                        s.setup(width=800, height=600, startx=0, starty=0)
-
-                        t = turtle.Turtle()
-                        t.speed(0)
-
-                        def star(t, length=40, width=30, start_pos=(0, 0), start_h=0, 
-                                        penw=1, penc="black", fillc=None):
-                            t.pu()
-                            t.goto(start_pos)
-                            t.pd()
-                            t.seth(start_h)
-                            
-                            t.pensize(penw)
-                            t.pencolor(penc)
-
-                            if fillc is not None:
-                                t.fillcolor(fillc)
-                                t.begin_fill()
-
-                            for _ in range(2):
-                                t.fd(length)
-                                t.lt(90)
-                                t.fd(width)
-                                t.lt(90)
-
-                            if fillc is not None:
-                                t.end_fill()
-
-
-                        star(t, length=150, width=250, start_pos=(-150, -250), start_h=0, 
-                                    penw=10, penc="purple", fillc="bisque")
-
-----
-
-Practice Questions
---------------------
-
-.. admonition:: Exercises
-
-    1. Using sequencing only, draw a star of side lengths 500 and 400 at (-250, -250).
-    2. Using a repeat loop (without a function), draw a star of side lengths 50 and 40 at (-25, -25).
-    3. Use the definition provided above to draw a star of side lengths 400 and 300 at (x=-300, y=-200) with a black pencolor, a snow fillcolor, with a pensize of 6.
