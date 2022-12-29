@@ -14,8 +14,8 @@ Turtle Circles as polygons
 .. py:function:: turtle.circle(radius, extent=None, steps=None)
 
     | radius - radius; a positive number draws anticlockwise, a negative number draws clockwise. 
-    | extent - an angle; a number (or None for whole circle), which determines how many degrees of the circle is drawn.
-    | steps - an integer (or None for a circle) which allows polygons to be drawn.
+    | extent - an angle; a number (or None for whole circle), which determines how many degrees of the circle is drawn; default None
+    | steps - an integer (or None for a circle) which allows polygons to be drawn; default None
 
 | To draw a triangle, use ``steps=3``
 | To draw a square, use ``steps=4``
@@ -30,56 +30,55 @@ Regular polygons at a specified location
 | Adding a starting position, the centre of the regular polygon, will provide some convenience.
 | The ``draw_centered_circle`` syntax is below:
 
-.. py:function:: draw_centered_regular_polygon(t, centre=(0, 0), radius=20, sides=4, color="blue", penw=1, penc="black", fillc=None)
+.. py:function:: draw_centered_regular_polygon(t, centre=(0, 0), radius=20, sides=4, penw=1, penc="black", fillc=None)
 
     | **t** - the turtle object to draw the regular polygon
     | **centre** - start position; default (0, 0)
     | **radius** - the circle radius
     | **sides** - the number of sides; default 4
-    | **color** - a colorstring or a numeric color tuple (r, g, b,)
-    | **penw** - the pen width
-    | **penc** - the pen color; a colorstring or a numeric color tuple (r, g, b,)
-    | **fillc** - the fill color; a colorstring or a numeric color tuple (r, g, b,)
+    | **penw** - the pen width; default 1
+    | **penc** - the pen color; a colorstring or a numeric color tuple (r, g, b,); default "black"
+    | **fillc** - the fill color; a colorstring or a numeric color tuple (r, g, b,); default None
 
 
 | The ``draw_centered_regular_polygon`` definition code is below.
 | The code moves the turtle to the given centre, sets the angle to 0, moves forward the radius and sets the angle to 90, then draws the  regular polygon.
 | If there is a fill color given, then ``begin_fill`` and ``end_fill`` need to be used either side of the drawing.
 
-.. admonition:: Code Completion: draw_centered_circle definition
+.. admonition:: Code Completion: draw_centered_regular_polygon definition
 
     .. tab-set::
 
         .. tab-item:: Q
 
-            Complete the code for the ``draw_centered_circle`` definition by replacing the "XXX"s.
+            Complete the code for the ``draw_centered_regular_polygon`` definition by replacing the "XXX"s.
                         
             .. code-block:: python
     
-                def draw_centered_circle(t, centre=(0, 0), radius=10, penw=1, penc="black", fillc=None):
+                def draw_centered_regular_polygon(t, centre=(0, 0), radius=10, sides=4, penw=1, penc="black", fillc=None):
                     t.pu()
                     t.goto(XXX)
-                    t.seth(XXX)
+                    t.seth(0)
                     t.fd(XXX)
-                    t.seth(XXX)
-                    t.pensize(XXX)
-                    t.pencolor(XXX)
+                    t.seth(90)
+                    t.pensize(penw)
+                    t.pencolor(penc)
                     t.pd()
-                    if XXX is not None:
-                        t.fillcolor(XXX)
+                    if fillc is not None:
+                        t.fillcolor(fillc)
                         t.begin_fill()   
-                    t.circle(XXX)  
-                    if XXX is not None:
+                    t.circle(XXX, steps=XXX)  
+                    if fillc is not None:
                         t.end_fill()
 
 
         .. tab-item:: Ans
 
-            Completed code for the ``draw_centered_circle`` definition.
+            Completed code for the ``draw_centered_regular_polygon`` definition.
                         
             .. code-block:: python
     
-                def draw_centered_circle(t, centre=(0, 0), radius=10, penw=1, penc="black", fillc=None):
+                def draw_centered_regular_polygon(t, centre=(0, 0), radius=10, sides=4, penw=1, penc="black", fillc=None):
                     t.pu()
                     t.goto(centre)
                     t.seth(0)
@@ -91,274 +90,6 @@ Regular polygons at a specified location
                     if fillc is not None:
                         t.fillcolor(fillc)
                         t.begin_fill()   
-                    t.circle(radius)  
+                    t.circle(radius, steps=sides)  
                     if fillc is not None:
                         t.end_fill()
-
-----
-
-Circles within circles
----------------------------
- 
-.. image:: images/circles_within_circles.png
-    :scale: 75 %
-    :align: center
-    :alt: rectangle_steps_coloured
-
-| Use draw_centered_circle to draw circles within circles.
-| Use list indexing along with the lists given below.
-| centres = [(0, 0),(0, 50),(0, 100),(0, 150)]
-| radii = [200, 150, 100, 50]
-| pensizes =  [16, 8, 4, 2]
-| pencolors = ["blue", "red", "green", "orange"]
-| fillcolors = ["light blue", "pink", "light green", "yellow"]
-
-
-.. admonition:: Code Completion: rectangle_steps_coloured definition
-
-    .. tab-set::
-
-        .. tab-item:: Q
-
-            Complete the code to draw circles within circles.
-                        
-            .. code-block:: python
-
-                import turtle
-
-
-                def draw_centered_circle(t, centre=(0, 0), radius=10, penw=1, penc="black", fillc=None):
-                    t.pu()
-                    t.goto(centre)
-                    t.seth(0)
-                    t.fd(radius)
-                    t.seth(90)
-                    t.pensize(penw)
-                    t.pencolor(penc)
-                    t.pd()
-                    if fillc is not None:
-                        t.fillcolor(fillc)
-                        t.begin_fill()   
-                    t.circle(radius)  
-                    if fillc is not None:
-                        t.end_fill()
-
-
-                s = turtle.Screen()
-                s.bgcolor("white")
-                s.title("Grid")
-                s.setup(width=800, height=600, startx=0, starty=0)
-
-                t = turtle.Turtle()
-                t.speed(0)
-                t.ht()
-
-                centres = [(0, 0),(0, 50),(0, 100),(0, 150)]
-                radii = [200, 150, 100, 50]
-                pensizes =  [16, 8, 4, 2]
-                pencolors = ["blue", "red", "green", "orange"]
-                fillcolors = ["light blue", "pink", "light green", "yellow"]
-
-                for i in range(XXX):
-                    draw_centered_circle(t, centre=XXX, radius=XXX, penw=XXX, penc=XXX, fillc=XXX)
-
-                s.exitonclick()
-
-
-        .. tab-item:: Ans
-
-            Completed code to draw circles within circles.
-                        
-            .. code-block:: python
-
-                import turtle
-
-
-                def draw_centered_circle(t, centre=(0, 0), radius=10, penw=1, penc="black", fillc=None):
-                    t.pu()
-                    t.goto(centre)
-                    t.seth(0)
-                    t.fd(radius)
-                    t.seth(90)
-                    t.pensize(penw)
-                    t.pencolor(penc)
-                    t.pd()
-                    if fillc is not None:
-                        t.fillcolor(fillc)
-                        t.begin_fill()   
-                    t.circle(radius)  
-                    if fillc is not None:
-                        t.end_fill()
-
-
-                s = turtle.Screen()
-                s.bgcolor("white")
-                s.title("Grid")
-                s.setup(width=800, height=600, startx=0, starty=0)
-
-                t = turtle.Turtle()
-                t.speed(0)
-                t.ht()
-
-                centres = [(0, 0),(0, 50),(0, 100),(0, 150)]
-                radii = [200, 150, 100, 50]
-                pensizes =  [16, 8, 4, 2]
-                pencolors = ["blue", "red", "green", "orange"]
-                fillcolors = ["light blue", "pink", "light green", "yellow"]
-
-                for i in range(len(radii)):
-                    draw_centered_circle(t, centre=centres[i], radius=radii[i], penw=pensizes[i], penc=pencolors[i], fillc=fillcolors[i])
-
-                s.exitonclick()
-
-----
-
-.. admonition:: Exercises
-
-    1. Modify the lists above to draw the concentric circles show:
- 
-    .. image:: images/concentric_circles.png
-        :scale: 75 %
-        :align: center
-        :alt: rectangle_steps_coloured
-
-----
-
-Rings of circles
---------------------
-
-| The draw_ring_of_circles defintion draws a given number of circles in a circle shape.
-| In the code below, the draw_ring_of_circles definition requires the importing of 2 maths functions via: ``from math import sin, radians``.
-| List multiplication is used in the line below in which the list is replicted to have 24 colors:
-| ``colorlist=["light blue", "pink", "light green", "yellow", "MediumPurple1", "bisque"]*4``
-
-.. admonition:: Code Completion: rectangle_steps_coloured definition
-
-    .. tab-set::
-
-        .. tab-item:: Q
-
-            Complete the code to draw a ring of circles as in the image by putitng in arguments to the draw_ring_of_circles calls.
-
-            .. image:: images/rings_of_circles.png
-                :scale: 75 %
-                :align: center
-                :alt: rectangle_steps_coloured
-
-            .. code-block:: python
-
-                import turtle
-                from math import sin, radians
-
-
-                def draw_centered_circle(t, centre=(0, 0), radius=10, penw=1, penc="black", fillc=None):
-                    t.pu()
-                    t.goto(centre)
-                    t.seth(0)
-                    t.fd(radius)
-                    t.seth(90)
-                    t.pensize(penw)
-                    t.pencolor(penc)
-                    t.pd()
-                    if fillc is not None:
-                        t.fillcolor(fillc)
-                        t.begin_fill()   
-                    t.circle(radius)  
-                    if fillc is not None:
-                        t.end_fill()
-
-
-                def draw_ring_of_circles(t, centre, angle, size, sides, colors=None):
-                    circum_r = (sin(radians(180/sides)) / (1 - sin(radians(180/sides)))) * size
-                    for i in range(sides):
-                        t.pu()
-                        t.goto(centre)
-                        t.seth(angle + i*360//sides)
-                        t.fd(size + circum_r)
-                        dot_centre = t.pos()
-                        if colors is None:  
-                            draw_centered_circle(t, centre=dot_centre, radius=circum_r, penw=1, penc="blue", fillc=None)
-                        else:  
-                            dot_color = colors[i]
-                            draw_centered_circle(t, centre=dot_centre, radius=circum_r, penw=1, penc="blue", fillc=dot_color)
-
-
-                s = turtle.Screen()
-                s.bgcolor("white")
-                s.title("Grid")
-                s.setup(width=1000, height=1000, startx=0, starty=0)
-                s.tracer(0, 0)
-                s.colormode(255)
-
-                t = turtle.Turtle()
-                t.speed(0)
-                t.ht()
-
-                colorlist=["light blue", "pink", "light green", "yellow", "MediumPurple1", "bisque"]*4
-                draw_ring_of_circles(XXX)
-                draw_ring_of_circles(XXX)
-
-                s.update()
-                s.exitonclick()
-
-
-        .. tab-item:: Ans
-
-            Completed code to draw a ring of circles.
-                        
-            .. code-block:: python
-
-                import turtle
-                from math import sin, radians
-
-
-                def draw_centered_circle(t, centre=(0, 0), radius=10, penw=1, penc="black", fillc=None):
-                    t.pu()
-                    t.goto(centre)
-                    t.seth(0)
-                    t.fd(radius)
-                    t.seth(90)
-                    t.pensize(penw)
-                    t.pencolor(penc)
-                    t.pd()
-                    if fillc is not None:
-                        t.fillcolor(fillc)
-                        t.begin_fill()   
-                    t.circle(radius)  
-                    if fillc is not None:
-                        t.end_fill()
-
-
-                def draw_ring_of_circles(t, centre, angle, size, sides, colors=None):
-                    circum_r = (sin(radians(180/sides)) / (1 - sin(radians(180/sides)))) * size
-                    for i in range(sides):
-                        t.pu()
-                        t.goto(centre)
-                        t.seth(angle + i*360//sides)
-                        t.fd(size + circum_r)
-                        dot_centre = t.pos()
-                        if colors is None:  
-                            draw_centered_circle(t, centre=dot_centre, radius=circum_r, penw=1, penc="blue", fillc=None)
-                        else:  
-                            dot_color = colors[i]
-                            draw_centered_circle(t, centre=dot_centre, radius=circum_r, penw=1, penc="blue", fillc=dot_color)
-
-
-                s = turtle.Screen()
-                s.bgcolor("white")
-                s.title("Grid")
-                s.setup(width=1000, height=1000, startx=0, starty=0)
-                s.tracer(0, 0)
-                s.colormode(255)
-
-                t = turtle.Turtle()
-                t.speed(0)
-                t.ht()
-
-                colorlist=["light blue", "pink", "light green", "yellow", "MediumPurple1", "bisque"]*4
-                draw_ring_of_circles(t, centre=(0, 0), angle=0, size=20, sides=6, colors=colorlist)
-                draw_ring_of_circles(t, centre=(0, 0), angle=9, size=100, sides=24, colors=colorlist)
-
-                s.update()
-                s.exitonclick()
-

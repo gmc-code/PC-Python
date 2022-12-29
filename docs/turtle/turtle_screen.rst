@@ -55,8 +55,7 @@ Screen colours
 
 .. py:function:: turtle.colormode(cmode=None)
 
-    | **cmode** - set to one of the values 1.0 or 255.
-    | The default config has turtles starting with a cmode of 1.0
+    | **cmode** - set to one of the values 1.0 or 255. The default config has turtles starting with a cmode of 1.0
     | If colormode is 1, a colour, as a rgb tuple, is written with values from 0 to 1, such as (0.2, 0.8, 0.55).
     | If colormode is 255, a colour, as a rgb tuple, is written with values from 0 to 255, such as (50, 193, 143).
     | If cmode=None, the cmode value is returned. 
@@ -213,11 +212,10 @@ Screen size and position
 .. py:function:: turtle.setup(width=0.5, height=0.75, startx=None, starty=None)
 
     | Set the size and position of the main window.
-    | **width** - if an integer, a size in pixels; if a float, a fraction of the screen
-    | **height** - if an integer, the height in pixels; if a float, a fraction of the screen
-    | **startx** - if positive, start position in pixels from the left edge of the screen; if negative from the right edge, if None, center window horizontally
-    | **starty** - if positive, start position in pixels from the top edge of the screen; if negative from the bottom edge, if None, center window vertically
-    | Default values are: width = 0.5; height = 0.75; startx = None; starty = None
+    | **width** - if an integer, a size in pixels; if a float, a fraction of the screen; default 0.5
+    | **height** - if an integer, the height in pixels; if a float, a fraction of the screen; default 0.75
+    | **startx** - if positive, start position in pixels from the left edge of the screen; if negative from the right edge, if None, center window horizontally; default None
+    | **starty** - if positive, start position in pixels from the top edge of the screen; if negative from the bottom edge, if None, center window vertically; default None
     | When ``s = turtle.Screen()``, ``s.setup()`` can be used as below.
 
 

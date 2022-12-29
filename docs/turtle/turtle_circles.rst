@@ -15,8 +15,8 @@ Turtle Circles
 .. py:function:: turtle.circle(radius, extent=None, steps=None)
 
     | radius - radius; a positive number draws anticlockwise, a negative number draws clockwise. 
-    | extent - an angle; a number (or None for whole circle), which determines how many degrees of the circle is drawn.
-    | steps - an integer (or None for a circle) which allows polygons to be drawn.
+    | extent - an angle; a number (or None for whole circle), which determines how many degrees of the circle is drawn; default None
+    | steps - an integer (or None for a circle) which allows polygons to be drawn; default None
 
 | The center is radius units left of the turtle at right angles from its heading if the radius is positive.
 | The direction of the turtle is changed by the amount of extent.
@@ -30,15 +30,14 @@ Circles at a specified location
 | Adding a starting position, the centre of the circle, will provide some convenience.
 | The ``draw_centered_circle`` syntax is below:
 
-.. py:function:: draw_centered_circle(t, centre=(0, 0), radius=20, color="blue", penw=1, penc="black", fillc=None)
+.. py:function:: draw_centered_circle(t, centre=(0, 0), radius=10, penw=1, penc="black", fillc=None)
 
     | **t** - the turtle object to draw the circle
     | **centre** - start position; default (0, 0)
-    | **radius** - the circle radius
-    | **color** - a colorstring or a numeric color tuple (r, g, b,)
-    | **penw** - the pen width
-    | **penc** - the pen color; a colorstring or a numeric color tuple (r, g, b,)
-    | **fillc** - the fill color; a colorstring or a numeric color tuple (r, g, b,)
+    | **radius** - the circle radius; default 10
+    | **penw** - the pen width; default 1
+    | **penc** - the pen color; a colorstring or a numeric color tuple (r, g, b,); default "black"
+    | **fillc** - the fill color; a colorstring or a numeric color tuple (r, g, b,); default None
 
 
 | The ``draw_centered_circle`` definition code is below.

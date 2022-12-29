@@ -74,8 +74,8 @@ Square
     | **start_pos** - start position; default (0, 0)
     | **start_h** - start heading; default 0
     | **penw** - pen size; default 1
-    | **penc** - pen color; default is black
-    | **fillc** - fill color; default is None
+    | **penc** - pen color; default "black"
+    | **fillc** - fill color; default None
 
 
 | The code snippet below shows the doc string for the square function.
@@ -111,8 +111,8 @@ Rectangle
     | **start_pos** - start position; default (0, 0)
     | **start_h** - start heading; default 0 degrees
     | **penw** - pen size; default 1
-    | **penc** - pen color; default is black
-    | **fillc** - fill color; default is None
+    | **penc** - pen color; default "black"
+    | **fillc** - fill color; default None
 
 .. admonition:: Code Completion: rectangle doc string
 
@@ -176,8 +176,8 @@ Scalene
     | **start_pos** - start position; default (0, 0)
     | **start_h** - start heading; default 0 degrees
     | **penw** - pen size; default 1
-    | **penc** - pen color; default is black
-    | **fillc** - fill color; default is None
+    | **penc** - pen color; default "black"
+    | **fillc** - fill color; default None
 
 .. admonition:: Code Completion: scalene doc string
 
@@ -243,8 +243,8 @@ Isosceles
     | **start_pos** - start position; default (0, 0)
     | **start_h** - start heading; default 0 degrees
     | **penw** - pen size; default 1
-    | **penc** - pen color; default is black
-    | **fillc** - fill color; default is None
+    | **penc** - pen color; default "black"
+    | **fillc** - fill color; default None
 
 .. admonition:: Code Completion: isosceles doc string
 
@@ -307,8 +307,8 @@ Equilateral
     | **start_pos** - start position; default (0, 0)
     | **start_h** - start heading; default 0 degrees
     | **penw** - pen size; default 1
-    | **penc** - pen color; default is black
-    | **fillc** - fill color; default is None
+    | **penc** - pen color; default "black"
+    | **fillc** - fill color; default None
 
 
 .. admonition:: Code Completion: equilateral doc string

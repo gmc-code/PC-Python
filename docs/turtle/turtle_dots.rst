@@ -14,7 +14,7 @@ Turtle Dots
 .. py:function:: turtle.dot(size=None, *color)
 
     | Draw a circular dot with diameter size, using color. 
-    | **size** - the dot diameter, an integer >= 1 (if given)
+    | **size** - the dot diameter, an integer >= 1 (if given); default None
     | If size is not given, the maximum of pensize+4 and 2*pensize is used.
     | **color** - a colorstring or a numeric color tuple (r, g, b,)
 
@@ -30,8 +30,8 @@ Draw_dot definition: dots at a specified location
 
     | **t** - the turtle object to draw the dot
     | **centre** - the centre of the dot; default (0, 0)
-    | **size** - the diameter of the dot, an integer >= 1
-    | **color** - a colorstring or a numeric color tuple (r, g, b,)
+    | **size** - the diameter of the dot, an integer >= 1; default 20
+    | **color** - a colorstring or a numeric color tuple (r, g, b,); default "blue"
 
 | The ``draw_dot`` definition code is below:
 

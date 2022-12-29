@@ -289,8 +289,8 @@ Adding pen colour and fill colour parameters
     | **start_pos** - start position; default (0, 0)
     | **start_h** - start heading; default 0
     | **penw** - pensize; default 1
-    | **penc** - pencolor; default is black
-    | **fillc** - fillcolor; default is None
+    | **penc** - pencolor; default "black"
+    | **fillc** - fillcolor; default None
 
    
 | In the code below, ``square(t, length=250, start_pos=(-100, -150), start_h=0, penw=2, penc="black", fillc="light green")`` draws a square of length 250 at (x=-100, y=-150) with a black pencolor, a light green fillcolor, with a pensize of 2.

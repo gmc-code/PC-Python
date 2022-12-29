@@ -15,7 +15,7 @@ Screen background gif
 
 .. py:function:: turtle.bgpic(picname=None)
     
-    | **picname** - a string, name of a **gif**-file or "nopic", or None
+    | **picname** - a string, name of a **gif**-file or "nopic", or None; default None
     | Set background image or return the name of current background image.
     | If picname is a filename, set the corresponding image as background. 
     | If picname is "nopic", delete background image, if present. e.g s.bgpic("nopic")
@@ -285,9 +285,9 @@ Reset screensize
 
 .. py:function:: turtle.screensize(canvwidth=None, canvheight=None, bg=None)
 
-    | **canvwidth** - positive integer, new width of canvas in pixels
-    | **canvheight** - positive integer, new height of canvas in pixels
-    | **bg** - colorstring or color-tuple, new background color
+    | **canvwidth** - positive integer, new width of canvas in pixels; default None
+    | **canvheight** - positive integer, new height of canvas in pixels; default None
+    | **bg** - colorstring or color-tuple, new background color; default None
     | If no arguments are given, return current (canvaswidth, canvasheight). 
     | Else, resize the canvas the turtles are drawing on without altering the drawings. 
     | Scrollbars are added, to observe hidden parts of the canvas previously outside the canvas.
@@ -352,8 +352,8 @@ Animation control
 
 .. py:function:: turtle.tracer(n=None, delay=None)
  
-    | n - nonnegative integer; higher is faster; 0 to turn off tracing
-    | delay - nonnegative integer
+    | n - nonnegative integer; higher is faster; 0 to turn off tracing; default None
+    | delay - nonnegative integer; default None
     | If n is given, only each n-th regular screen update is really performed. When called without arguments, returns the currently stored value of n. Second argument sets delay value (see delay()).
     | When ``s = turtle.Screen()``, ``s.tracer(0, 0)`` can be used as below.
 
@@ -364,7 +364,7 @@ Animation control
 .. py:function:: turtle.delay(delay=None)
  
     | Set or return the drawing delay in milliseconds. This is approximately the time interval between two consecutive canvas updates.
-    | delay - positive integer
+    | delay - positive integer; default None
     | When ``s = turtle.Screen()``, ``s.delay(1000)`` can be used as below.
 
 ----
