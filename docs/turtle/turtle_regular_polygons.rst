@@ -119,7 +119,7 @@ Simple regular polygons
 
                 .. tab-item:: Q1
 
-                    Use the definition provided above to draw polyogns of 3, 4, 5,and 6 sides.
+                    Use the definition provided above to draw polygons of 3, 4, 5,and 6 sides.
 
                     .. code-block:: python
 
