@@ -2,6 +2,8 @@
 Turtle houses module
 ====================================================
 
+| Make a house module that provides definitions to make prefabricated houses with one line of code.
+
 | The houses are built from squares, rectangles and triangles.
 | To reduce the code in the main file, separate modules are used which group the code together.
 | Definitions for the base shapes, squares, rectangles and triangles, are placed in a module, ``shapes.py``.
@@ -20,7 +22,7 @@ Turtle houses module
 Importing the shapes module
 ----------------------------------
 
-| See: https: // www.w3schools.com/python/ref_keyword_as.asp
+| See: https://www.w3schools.com/python/ref_keyword_as.asp
 | The code below shows importing the shapes module as an alias via ``import shapes as sh``.
 | This makes it shorter to refer to functions in the shapes module.
 | Instead of needing ``shapes.rectangle``, only ``sh.rectangle`` is needed.
@@ -152,7 +154,7 @@ Front of house
                                     penw=1, penc="black", fillc="snow")
 
 
-| Test the code sofar using ``house(t, length=600, height=300, start_pos=(-300, -200), w_sides="LR")``
+| Test the code so far using ``house(t, length=600, height=300, start_pos=(-300, -200), w_sides="LR")``
 | This will build a house of 600 by 300 at (-300, -200).
 | Only the houses main rectangle will be drawn so far.
 
