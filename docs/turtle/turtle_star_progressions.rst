@@ -8,6 +8,8 @@ Turtle star progressions
 | Secondly, **iteration**, using a for-loop, reduces code duplication.
 | Thirdly, a **definition** block with parameters allows for code reuse via the use of arguments.
 
+| For star polygrams, made of a polygon and isosceles triangles see: https://www.desmos.com/calculator/hpglbai0jg
+
 ----
 
 Sequencing: steps to draw a star
@@ -257,11 +259,11 @@ Definitions: using a def block to draw a star
 ----------------------------------------------------
 
 | The code below uses a definition block to draw a star.
-| The function has parameters to specify the diagonal length and the starting position of the bottom left vertex.
+| The function has parameters to specify the diagonal length and the starting position.
 | The function also requires the turtle to be passed as an argument so it can be referred to.
 | Before the for-loop, the turtle is repositioned without drawing the movement; **penup** and **pendown** are needed for that.
 
-.. py:function:: star(t, length=40, width=30, start_pos=(0, 0), start_h=0)
+.. py:function:: star(t, diagonal=40, points=5, start_pos=(0, 0), start_h=0)
 
     | **t** - the turtle object to draw the star
     | **length** - side length; default 40
