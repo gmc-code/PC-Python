@@ -108,37 +108,37 @@ Sequencing: steps to draw a rectangle
     2. From the 8 lines, list the simplest amount of code that is repeated to form a rectangle.
 
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
-            .. tab-set::
+        .. tab-set::
 
-                .. tab-item:: Q1
+            .. tab-item:: Q1
 
-                    From the code above, list the lines that do the actual drawing. 
+                From the code above, list the lines that do the actual drawing. 
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        t.fd(120)
-                        t.lt(90)
-                        t.fd(50)
-                        t.lt(90)
-                        t.fd(120)
-                        t.lt(90)
-                        t.fd(50)
-                        t.lt(90)
+                    t.fd(120)
+                    t.lt(90)
+                    t.fd(50)
+                    t.lt(90)
+                    t.fd(120)
+                    t.lt(90)
+                    t.fd(50)
+                    t.lt(90)
 
-                .. tab-item:: Q2
+            .. tab-item:: Q2
 
-                    From the 8 lines, list the simplest amount of code that is repeated to form a rectangle.
+                From the 8 lines, list the simplest amount of code that is repeated to form a rectangle.
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        t.fd(120)
-                        t.lt(90)
-                        t.fd(50)
-                        t.lt(90)
+                    t.fd(120)
+                    t.lt(90)
+                    t.fd(50)
+                    t.lt(90)
 
 
 ----
@@ -220,40 +220,40 @@ Iteration: using a for-loop to draw a rectangle
     1. Modify the code above to draw a rectangle of 80 by 150.
 
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
-            .. tab-set::
+        .. tab-set::
 
-                .. tab-item:: Q1
+            .. tab-item:: Q1
 
-                    Modify the code above to draw a rectangle of 80 by 150.
+                Modify the code above to draw a rectangle of 80 by 150.
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        import turtle
+                    import turtle
 
-                        s = turtle.Screen()
-                        s.bgcolor("white")
-                        s.title("rectangle")
-                        s.setup(width=800, height=600, startx=0, starty=0)
+                    s = turtle.Screen()
+                    s.bgcolor("white")
+                    s.title("rectangle")
+                    s.setup(width=800, height=600, startx=0, starty=0)
 
-                        t = turtle.Turtle()
-                        t.speed(5)
+                    t = turtle.Turtle()
+                    t.speed(5)
 
-                        t.pu()
-                        t.goto(20, 30)
-                        t.pd()
-                        t.seth(0)
+                    t.pu()
+                    t.goto(20, 30)
+                    t.pd()
+                    t.seth(0)
 
-                        for _ in range(2):
-                            t.fd(80)
-                            t.lt(90)
-                            t.fd(150)
-                            t.lt(90)
-                            
-                        s.exitonclick()
+                    for _ in range(2):
+                        t.fd(80)
+                        t.lt(90)
+                        t.fd(150)
+                        t.lt(90)
+                        
+                    s.exitonclick()
 
 ----
 
@@ -361,44 +361,44 @@ Definitions: using a def block to draw a rectangle
     1. Modify the code above to draw a rectangle of 80 by 150 at (-80, -150).
 
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
-            .. tab-set::
+        .. tab-set::
 
-                .. tab-item:: Q1
+            .. tab-item:: Q1
 
-                    Modify the code above to draw a rectangle of 80 by 150 at (-80, -150).
+                Modify the code above to draw a rectangle of 80 by 150 at (-80, -150).
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        import turtle
+                    import turtle
 
-                        s = turtle.Screen()
-                        s.bgcolor("white")
-                        s.title("rectangle")
-                        s.setup(width=800, height=600, startx=0, starty=0)
+                    s = turtle.Screen()
+                    s.bgcolor("white")
+                    s.title("rectangle")
+                    s.setup(width=800, height=600, startx=0, starty=0)
 
-                        t = turtle.Turtle()
-                        t.speed(5)
+                    t = turtle.Turtle()
+                    t.speed(5)
 
-                        def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0):
-                            t.pu()
-                            t.goto(start_pos)
-                            t.pd()
-                            t.seth(start_h)
+                    def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0):
+                        t.pu()
+                        t.goto(start_pos)
+                        t.pd()
+                        t.seth(start_h)
 
-                            for _ in range(2):
-                                t.fd(length)
-                                t.lt(90)
-                                t.fd(width)
-                                t.lt(90)
+                        for _ in range(2):
+                            t.fd(length)
+                            t.lt(90)
+                            t.fd(width)
+                            t.lt(90)
 
 
-                        rectangle(t, length=80, width=150, start_pos=(-80, -150), start_h=0)
+                    rectangle(t, length=80, width=150, start_pos=(-80, -150), start_h=0)
 
-                        s.exitonclick()
+                    s.exitonclick()
 
 ----
 
@@ -532,54 +532,54 @@ Adding pen colour and fill colour parameters
     1. Use the definition provided above to draw a rectangle of side lengths 150 and 250 at (x=-150, y=-250) with a purple pencolor, a bisque fillcolor, with a pensize of 10.
 
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
-            .. tab-set::
+        .. tab-set::
 
-                .. tab-item:: Q1
+            .. tab-item:: Q1
 
-                    Use the definition provided above to draw a rectangle of side lengths 150 and 250 at (x=-150, y=-250) with a purple pencolor, a bisque fillcolor, with a pensize of 10. 
+                Use the definition provided above to draw a rectangle of side lengths 150 and 250 at (x=-150, y=-250) with a purple pencolor, a bisque fillcolor, with a pensize of 10. 
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        import turtle
+                    import turtle
 
-                        s = turtle.Screen()
-                        s.bgcolor("white")
-                        s.title("rectangle")
-                        s.setup(width=800, height=600, startx=0, starty=0)
+                    s = turtle.Screen()
+                    s.bgcolor("white")
+                    s.title("rectangle")
+                    s.setup(width=800, height=600, startx=0, starty=0)
 
-                        t = turtle.Turtle()
-                        t.speed(0)
+                    t = turtle.Turtle()
+                    t.speed(0)
 
-                        def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, 
-                                        penw=1, penc="black", fillc=None):
-                            t.pu()
-                            t.goto(start_pos)
-                            t.pd()
-                            t.seth(start_h)
-                            
-                            t.pensize(penw)
-                            t.pencolor(penc)
+                    def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, 
+                                    penw=1, penc="black", fillc=None):
+                        t.pu()
+                        t.goto(start_pos)
+                        t.pd()
+                        t.seth(start_h)
+                        
+                        t.pensize(penw)
+                        t.pencolor(penc)
 
-                            if fillc is not None:
-                                t.fillcolor(fillc)
-                                t.begin_fill()
+                        if fillc is not None:
+                            t.fillcolor(fillc)
+                            t.begin_fill()
 
-                            for _ in range(2):
-                                t.fd(length)
-                                t.lt(90)
-                                t.fd(width)
-                                t.lt(90)
+                        for _ in range(2):
+                            t.fd(length)
+                            t.lt(90)
+                            t.fd(width)
+                            t.lt(90)
 
-                            if fillc is not None:
-                                t.end_fill()
+                        if fillc is not None:
+                            t.end_fill()
 
 
-                        rectangle(t, length=150, width=250, start_pos=(-150, -250), start_h=0, 
-                                    penw=10, penc="purple", fillc="bisque")
+                    rectangle(t, length=150, width=250, start_pos=(-150, -250), start_h=0, 
+                                penw=10, penc="purple", fillc="bisque")
 
 ----
 

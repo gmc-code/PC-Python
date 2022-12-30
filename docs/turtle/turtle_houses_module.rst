@@ -175,9 +175,9 @@ Front of house
     1. Test the code so far.
         
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
         .. tab-set::
 
@@ -282,9 +282,9 @@ Door of house
     1. Test the code so far
         
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
         .. tab-set::
 
@@ -407,9 +407,9 @@ Roof of house
     1. Test the code so far
         
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
         .. tab-set::
 
@@ -583,9 +583,9 @@ Houses with windows
     1. Test the completed code
         
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
         .. tab-set::
 

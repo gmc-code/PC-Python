@@ -109,42 +109,42 @@ Screen colours
     2. Draw a cyan background using rgb value of (0, 255, 255).
 
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
-            .. tab-set::
+        .. tab-set::
 
-                .. tab-item:: Q1
+            .. tab-item:: Q1
 
-                    Modify the code above to draw a yellow background.
+                Modify the code above to draw a yellow background.
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        import turtle
+                    import turtle
 
-                        s = turtle.Screen()
-                        s.bgcolor("yellow")
+                    s = turtle.Screen()
+                    s.bgcolor("yellow")
 
-                        # turtle drawing to go here
+                    # turtle drawing to go here
 
-                        turtle.done()
+                    turtle.done()
 
-                .. tab-item:: Q2
+            .. tab-item:: Q2
 
-                    Draw a cyan background using rgb value of (0, 255, 255).
+                Draw a cyan background using rgb value of (0, 255, 255).
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        import turtle
+                    import turtle
 
-                        s = turtle.Screen()
-                        turtle.colormode(cmode=255)
-                        s.bgcolor((0, 255, 255))
+                    s = turtle.Screen()
+                    turtle.colormode(cmode=255)
+                    s.bgcolor((0, 255, 255))
 
-                        # turtle drawing to go here
+                    # turtle drawing to go here
 
-                        turtle.done()
+                    turtle.done()
 ----
 
 Screen title
@@ -178,27 +178,27 @@ Screen title
     1. Modify the code above to set the screen title to "Turtle Race".
 
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
-            .. tab-set::
+        .. tab-set::
 
-                .. tab-item:: Q1
+            .. tab-item:: Q1
 
-                    Modify the code above to set the screen title to "Turtle Race".
+                Modify the code above to set the screen title to "Turtle Race".
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        import turtle
+                    import turtle
 
-                        s = turtle.Screen()
-                        s.bgcolor("white")
-                        s.title("Turtle Race")
+                    s = turtle.Screen()
+                    s.bgcolor("white")
+                    s.title("Turtle Race")
 
-                        # turtle drawing to go here
+                    # turtle drawing to go here
 
-                        turtle.done()
+                    turtle.done()
 
 ----
 
@@ -239,28 +239,28 @@ Screen size and position
     1. Modify the code above to have a screen of 600 by 400, with the left edge 40 pixels from the screen edge and the top edge at the top of the screen.
 
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
-            .. tab-set::
+        .. tab-set::
 
-                .. tab-item:: Q1
+            .. tab-item:: Q1
 
-                    Modify the code above to have a screen of 600 by 400, with the left edge 40 pixels from the screen edge and the top edge at the top of the screen.
+                Modify the code above to have a screen of 600 by 400, with the left edge 40 pixels from the screen edge and the top edge at the top of the screen.
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        import turtle
+                    import turtle
 
-                        s = turtle.Screen()
-                        s.bgcolor("white")
-                        s.title("Turtle Screen")
-                        s.setup(width=600, height=400, startx=40, starty=0)
+                    s = turtle.Screen()
+                    s.bgcolor("white")
+                    s.title("Turtle Screen")
+                    s.setup(width=600, height=400, startx=40, starty=0)
 
-                        # turtle drawing to go here
+                    # turtle drawing to go here
 
-                        turtle.done()
+                    turtle.done()
 
 ----
 
@@ -336,26 +336,26 @@ Exit on click
         turtle.done()
 
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
-            .. tab-set::
+        .. tab-set::
 
-                .. tab-item:: Q1
+            .. tab-item:: Q1
 
-                    Modify the code above to require a mouse click to close the turtle window.
+                Modify the code above to require a mouse click to close the turtle window.
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        import turtle
+                    import turtle
 
-                        s = turtle.Screen()
-                        s.bgcolor("lightblue")
-                        s.title("Turtle Screen")
+                    s = turtle.Screen()
+                    s.bgcolor("lightblue")
+                    s.title("Turtle Screen")
 
-                        # turtle drawing to go here
+                    # turtle drawing to go here
 
-                        s.exitonclick()
+                    s.exitonclick()
 
 

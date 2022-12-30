@@ -67,67 +67,67 @@ Sequencing: steps to draw a square
     3. Using sequencing only, draw a square of side length 500 at (-250, -250).
 
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
-            .. tab-set::
+        .. tab-set::
 
-                .. tab-item:: Q1
+            .. tab-item:: Q1
 
-                    From the code above, list the lines that do the actual drawing. 
+                From the code above, list the lines that do the actual drawing. 
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        t.fd(50)
-                        t.lt(90)
-                        t.fd(50)
-                        t.lt(90)
-                        t.fd(50)
-                        t.lt(90)
-                        t.fd(50)
-                        t.lt(90)
-                        
-                .. tab-item:: Q2
+                    t.fd(50)
+                    t.lt(90)
+                    t.fd(50)
+                    t.lt(90)
+                    t.fd(50)
+                    t.lt(90)
+                    t.fd(50)
+                    t.lt(90)
+                    
+            .. tab-item:: Q2
 
-                    From the 8 lines, list the simplest amount of code that is repeated.
+                From the 8 lines, list the simplest amount of code that is repeated.
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        t.fd(50)
-                        t.lt(90)
+                    t.fd(50)
+                    t.lt(90)
 
-                .. tab-item:: Q3
+            .. tab-item:: Q3
 
-                    Using sequencing only, draw a square of side length 500 at (-250, -250).
+                Using sequencing only, draw a square of side length 500 at (-250, -250).
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        import turtle
+                    import turtle
 
-                        s = turtle.Screen()
-                        s.bgcolor("white")
-                        s.title("square")
-                        s.setup(width=800, height=600, startx=0, starty=0)
+                    s = turtle.Screen()
+                    s.bgcolor("white")
+                    s.title("square")
+                    s.setup(width=800, height=600, startx=0, starty=0)
 
-                        t = turtle.Turtle()
-                        t.speed(5)
+                    t = turtle.Turtle()
+                    t.speed(5)
 
-                        t.pu()
-                        t.goto(-250, -250)
-                        t.pd()
-                        t.seth(0)
+                    t.pu()
+                    t.goto(-250, -250)
+                    t.pd()
+                    t.seth(0)
 
-                        t.fd(500)
-                        t.lt(90)
-                        t.fd(500)
-                        t.lt(90)
-                        t.fd(500)
-                        t.lt(90)
-                        t.fd(500)
-                        t.lt(90)
+                    t.fd(500)
+                    t.lt(90)
+                    t.fd(500)
+                    t.lt(90)
+                    t.fd(500)
+                    t.lt(90)
+                    t.fd(500)
+                    t.lt(90)
 
-                        s.exitonclick()
+                    s.exitonclick()
 
 
 ----
@@ -171,21 +171,21 @@ Iteration: using a for-loop to draw a square
     t.fd(50); t.lt(90); t.fd(50); t.lt(90); t.fd(50); t.lt(90); t.fd(50); t.lt(90)
 
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
-            .. tab-set::
+        .. tab-set::
 
-                .. tab-item:: Q1
+            .. tab-item:: Q1
 
-                    Identify the lines of code that replaced the 8 steps. 
+                Identify the lines of code that replaced the 8 steps. 
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        for _ in range(4):
-                            t.fd(50)
-                            t.lt(90)
+                    for _ in range(4):
+                        t.fd(50)
+                        t.lt(90)
                     
 ----
 
@@ -246,27 +246,27 @@ Definitions: using a def block to draw a square
     2. Modify ``square(t, length=50, start_pos=(0, 0), start_h=0)`` to draw a square of length 30 at (70, 100) with heading 30 degrees.
 
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
-            .. tab-set::
+        .. tab-set::
 
-                .. tab-item:: Q1
+            .. tab-item:: Q1
 
-                    Modify ``square(t, length=50, start_pos=(0, 0))`` to draw a square of length 200 at (-300, -100).
+                Modify ``square(t, length=50, start_pos=(0, 0))`` to draw a square of length 200 at (-300, -100).
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        square(t, length=200, start_pos=(-300, -100))
+                    square(t, length=200, start_pos=(-300, -100))
 
-                .. tab-item:: Q2
+            .. tab-item:: Q2
 
-                    Modify ``square(t, length=50, start_pos=(0, 0), start_h=0)`` to draw a square of length 30 at (70, 100) with heading 30 degrees.
+                Modify ``square(t, length=50, start_pos=(0, 0), start_h=0)`` to draw a square of length 30 at (70, 100) with heading 30 degrees.
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        square(t, length=30, start_pos=(70, 100), start_h=30)
+                    square(t, length=30, start_pos=(70, 100), start_h=30)
 
 ----
 
@@ -344,27 +344,27 @@ Adding pen colour and fill colour parameters
     2. Modify ``square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)`` to draw a square of length 30 at (70, 100) with green outline of thickness 3 and a yellow fill.
 
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
-            .. tab-set::
+        .. tab-set::
 
-                .. tab-item:: Q1
+            .. tab-item:: Q1
 
-                    Modify ``square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)`` to draw a square of length 200 at (-300, -100) with red outline of thickness 5.
+                Modify ``square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)`` to draw a square of length 200 at (-300, -100) with red outline of thickness 5.
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        square(t, length=200, start_pos=(-300, -100), start_h=0, penw=5, penc="red", fillc=None)
+                    square(t, length=200, start_pos=(-300, -100), start_h=0, penw=5, penc="red", fillc=None)
 
-                .. tab-item:: Q2
+            .. tab-item:: Q2
 
-                    Modify ``square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)`` to draw a square of length 30 at (70, 100) with green outline of thickness 3 and a yellow fill.
+                Modify ``square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)`` to draw a square of length 30 at (70, 100) with green outline of thickness 3 and a yellow fill.
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        square(t, length=30, start_pos=(70, 100), start_h=0, penw=3, penc="green", fillc="yellow")
+                    square(t, length=30, start_pos=(70, 100), start_h=0, penw=3, penc="green", fillc="yellow")
 
 ----
 

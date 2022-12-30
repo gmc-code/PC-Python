@@ -386,145 +386,145 @@ Adding pen colour and fill colour parameters
     1. Modify the triangle definitions to include parameters for pencolor, fillcolor, pensize. Set default values for each parameter for pencolor, fillcolor, pensize so that they can be omitted as arguments when the funcitons are called, without breaking the code.
     
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
-            .. tab-set::
+        .. tab-set::
 
-                .. tab-item:: Scalene
+            .. tab-item:: Scalene
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        import turtle
+                    import turtle
 
-                        s = turtle.Screen()
-                        s.bgcolor("white")
-                        s.title("triangle")
-                        s.setup(width = 800, height = 600, startx = 0, starty = 0)
-                        t = turtle.Turtle()
-                        t.speed(5)
+                    s = turtle.Screen()
+                    s.bgcolor("white")
+                    s.title("triangle")
+                    s.setup(width = 800, height = 600, startx = 0, starty = 0)
+                    t = turtle.Turtle()
+                    t.speed(5)
 
-                        # --begin triangle
-                        def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, 
-                                    penw=1, penc="black", fillc=None): 
-                            t.pu()
-                            t.goto(start_pos)
-                            t.pd()
-                            t.seth(start_h)
+                    # --begin triangle
+                    def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, 
+                                penw=1, penc="black", fillc=None): 
+                        t.pu()
+                        t.goto(start_pos)
+                        t.pd()
+                        t.seth(start_h)
 
-                            t.pensize(penw)
-                            t.pencolor(penc)
+                        t.pensize(penw)
+                        t.pencolor(penc)
 
-                            if fillc is not None:
-                                t.fillcolor(fillc)
-                                t.begin_fill()
+                        if fillc is not None:
+                            t.fillcolor(fillc)
+                            t.begin_fill()
 
-                            t.fd(side_a)
-                            t.lt(180 - angle_C)
-                            t.fd(side_b)
-                            t.goto(start_pos)
+                        t.fd(side_a)
+                        t.lt(180 - angle_C)
+                        t.fd(side_b)
+                        t.goto(start_pos)
 
-                            if fillc is not None:
-                                t.end_fill()
+                        if fillc is not None:
+                            t.end_fill()
 
-                        scalene(t, side_a=100, angle_C=60, side_b=150, start_pos=(20, 30), start_h=15,
-                                penw=3, penc="black", fillc="light green")
-                        # --end triangle  
-                                                  
-                        s.exitonclick()
-
-
-                .. tab-item:: Isosceles
-
-                    .. code-block:: python
-
-                        import turtle
-                        import math
-
-                        s = turtle.Screen()
-                        s.bgcolor("white")
-                        s.title("triangle")
-                        s.setup(width=800, height=600, startx=0, starty=0)
-
-                        t = turtle.Turtle()
-                        t.speed(5)
-
-                        # --begin triangle
-                        def isosceles(t, base, height, start_pos=(0, 0), start_h=0,
-                                        penw=1, penc="black", fillc=None):
-                            t.pu()
-                            t.goto(start_pos)
-                            t.pd()
-                            t.seth(start_h)
-
-                            t.pensize(penw)
-                            t.pencolor(penc)
-
-                            b = math.sqrt(height**2 + (base**2) / 4)
-                            angle_B = math.degrees(math.atan(2 * height / base))
-
-                            if fillc is not None:
-                                t.fillcolor(fillc)
-                                t.begin_fill()
-                            
-                            t.fd(base)
-                            t.lt(180 - angle_B)
-                            t.fd(b)
-                            t.goto(start_pos)
-
-                            if fillc is not None:
-                                t.end_fill()
-
-                        isosceles(t, base=100, height=50, start_pos=(20, 30), start_h=15, 
-                                    penw=2, penc="black", fillc="pink")
-                        # --end triangle
-
-                        s.exitonclick()
-
-                .. tab-item:: Equilateral
-
-                    .. code-block:: python
-
-                        import turtle
-
-                        s = turtle.Screen()
-                        s.bgcolor("white")
-                        s.title("triangle")
-                        s.setup(width=800, height=600, startx=0, starty=0)
-
-                        t = turtle.Turtle()
-                        t.speed(5)
+                    scalene(t, side_a=100, angle_C=60, side_b=150, start_pos=(20, 30), start_h=15,
+                            penw=3, penc="black", fillc="light green")
+                    # --end triangle  
+                                                
+                    s.exitonclick()
 
 
-                        # --begin triangle
-                        def equilateral(t, side, start_pos=(0, 0), start_h=0, 
-                                        penw=1, penc="black", fillc=None):
-                            t.pu()
-                            t.goto(start_pos)
-                            t.pd()
-                            t.seth(start_h)
+            .. tab-item:: Isosceles
 
-                            t.pensize(penw)
-                            t.pencolor(penc)
+                .. code-block:: python
 
-                            if fillc is not None:
-                                t.fillcolor(fillc)
-                                t.begin_fill()
+                    import turtle
+                    import math
+
+                    s = turtle.Screen()
+                    s.bgcolor("white")
+                    s.title("triangle")
+                    s.setup(width=800, height=600, startx=0, starty=0)
+
+                    t = turtle.Turtle()
+                    t.speed(5)
+
+                    # --begin triangle
+                    def isosceles(t, base, height, start_pos=(0, 0), start_h=0,
+                                    penw=1, penc="black", fillc=None):
+                        t.pu()
+                        t.goto(start_pos)
+                        t.pd()
+                        t.seth(start_h)
+
+                        t.pensize(penw)
+                        t.pencolor(penc)
+
+                        b = math.sqrt(height**2 + (base**2) / 4)
+                        angle_B = math.degrees(math.atan(2 * height / base))
+
+                        if fillc is not None:
+                            t.fillcolor(fillc)
+                            t.begin_fill()
                         
-                            start_pos = t.pos()
-                            for _ in range(3):
-                                t.fd(side)
-                                t.lt(120)
+                        t.fd(base)
+                        t.lt(180 - angle_B)
+                        t.fd(b)
+                        t.goto(start_pos)
 
-                            if fillc is not None:
-                                t.end_fill()
+                        if fillc is not None:
+                            t.end_fill()
+
+                    isosceles(t, base=100, height=50, start_pos=(20, 30), start_h=15, 
+                                penw=2, penc="black", fillc="pink")
+                    # --end triangle
+
+                    s.exitonclick()
+
+            .. tab-item:: Equilateral
+
+                .. code-block:: python
+
+                    import turtle
+
+                    s = turtle.Screen()
+                    s.bgcolor("white")
+                    s.title("triangle")
+                    s.setup(width=800, height=600, startx=0, starty=0)
+
+                    t = turtle.Turtle()
+                    t.speed(5)
 
 
-                        equilateral(t, side=100, start_pos=(20, 30), start_h=10, 
-                                    penw=2, penc="purple", fillc="light green")
-                        # --end triangle
+                    # --begin triangle
+                    def equilateral(t, side, start_pos=(0, 0), start_h=0, 
+                                    penw=1, penc="black", fillc=None):
+                        t.pu()
+                        t.goto(start_pos)
+                        t.pd()
+                        t.seth(start_h)
 
-                        s.exitonclick()
+                        t.pensize(penw)
+                        t.pencolor(penc)
+
+                        if fillc is not None:
+                            t.fillcolor(fillc)
+                            t.begin_fill()
+                    
+                        start_pos = t.pos()
+                        for _ in range(3):
+                            t.fd(side)
+                            t.lt(120)
+
+                        if fillc is not None:
+                            t.end_fill()
+
+
+                    equilateral(t, side=100, start_pos=(20, 30), start_h=10, 
+                                penw=2, penc="purple", fillc="light green")
+                    # --end triangle
+
+                    s.exitonclick()
 
 

@@ -112,37 +112,37 @@ Sequencing: steps to draw a star
     2. From the 10 lines, list the simplest amount of code that is repeated.
 
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
-            .. tab-set::
+        .. tab-set::
 
-                .. tab-item:: Q1
+            .. tab-item:: Q1
 
-                    From the code above, list the lines that do the actual drawing. 
+                From the code above, list the lines that do the actual drawing. 
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        t.fd(120)
-                        t.lt(144)
-                        t.fd(120)
-                        t.lt(144)
-                        t.fd(120)
-                        t.lt(144)
-                        t.fd(120)
-                        t.lt(144)
-                        t.fd(120)
-                        t.lt(144)
+                    t.fd(120)
+                    t.lt(144)
+                    t.fd(120)
+                    t.lt(144)
+                    t.fd(120)
+                    t.lt(144)
+                    t.fd(120)
+                    t.lt(144)
+                    t.fd(120)
+                    t.lt(144)
 
-                .. tab-item:: Q2
+            .. tab-item:: Q2
 
-                    From the 10 lines, list the simplest amount of code that is repeated.
+                From the 10 lines, list the simplest amount of code that is repeated.
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        t.fd(120)
-                        t.lt(144)
+                    t.fd(120)
+                    t.lt(144)
 
 
 ----
@@ -220,36 +220,36 @@ Iteration: using a for-loop to draw a star
     1. Modify the code above to draw a 9 pointed star with diagonals of 120 at (20, 30), by turning 160 degrees at the points of the stars.
 
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
-            .. tab-set::
+        .. tab-set::
 
-                .. tab-item:: Q1
+            .. tab-item:: Q1
 
-                    Modify the code above to draw a 9 pointed star with diagonals of 120 at (20, 30), by turning 160 degrees at the points of the stars.
+                Modify the code above to draw a 9 pointed star with diagonals of 120 at (20, 30), by turning 160 degrees at the points of the stars.
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        import turtle
+                    import turtle
 
-                        s = turtle.Screen()
-                        s.bgcolor("white")
-                        s.title("star")
-                        s.setup(width=800, height=600, startx=0, starty=0)
+                    s = turtle.Screen()
+                    s.bgcolor("white")
+                    s.title("star")
+                    s.setup(width=800, height=600, startx=0, starty=0)
 
-                        t = turtle.Turtle()
-                        t.speed(5)
+                    t = turtle.Turtle()
+                    t.speed(5)
 
-                        t.pu()
-                        t.goto(20, 30)
-                        t.pd()
-                        t.seth(0)
+                    t.pu()
+                    t.goto(20, 30)
+                    t.pd()
+                    t.seth(0)
 
-                        for _ in range(9):
-                            t.fd(120)
-                            t.lt(160)
+                    for _ in range(9):
+                        t.fd(120)
+                        t.lt(160)
 
                         s.exitonclick()
 
@@ -324,45 +324,45 @@ Definitions: using a def block to draw a star
     1. Use the code above to draw a star with 7 points and diagonal length of 300, at (-100, 0).
 
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
-            .. tab-set::
+        .. tab-set::
 
-                .. tab-item:: Q1
+            .. tab-item:: Q1
 
-                    Use the code above to draw a star with 7 points and diagonal length of 300, at (0, 0).
+                Use the code above to draw a star with 7 points and diagonal length of 300, at (0, 0).
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        import turtle
-
-
-                        def star(t, length=50, points=5, start_pos=(0, 0), start_h=0):
-                            ang = (360 * ((points-1)/2))/points
-                            t.pu()
-                            t.goto(start_pos)
-                            t.pd()
-                            t.seth(start_h)
-                            for _ in range(points):
-                                t.fd(length)
-                                t.lt(ang)
+                    import turtle
 
 
-                        s = turtle.Screen()
-                        s.bgcolor("white")
-                        s.title("star")
-                        s.setup(width=800, height=600, startx=0, starty=0)
+                    def star(t, length=50, points=5, start_pos=(0, 0), start_h=0):
+                        ang = (360 * ((points-1)/2))/points
+                        t.pu()
+                        t.goto(start_pos)
+                        t.pd()
+                        t.seth(start_h)
+                        for _ in range(points):
+                            t.fd(length)
+                            t.lt(ang)
 
-                        t = turtle.Turtle()
-                        t.speed(9)
+
+                    s = turtle.Screen()
+                    s.bgcolor("white")
+                    s.title("star")
+                    s.setup(width=800, height=600, startx=0, starty=0)
+
+                    t = turtle.Turtle()
+                    t.speed(9)
 
 
-                        star(t, length=300, start_pos=(-100, 0), start_h=0, points=7)
+                    star(t, length=300, start_pos=(-100, 0), start_h=0, points=7)
 
-                        t.ht()
-                        s.exitonclick()
+                    t.ht()
+                    s.exitonclick()
 
 
 ----

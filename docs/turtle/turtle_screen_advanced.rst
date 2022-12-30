@@ -69,40 +69,40 @@ Screen background gif
         turtle.done()
 
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
-            .. tab-set::
+        .. tab-set::
 
-                .. tab-item:: Q2
+            .. tab-item:: Q2
 
-                    Modify the code below to clear the gif while keeping the drawing.
+                Modify the code below to clear the gif while keeping the drawing.
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        import turtle
+                    import turtle
 
-                        s = turtle.Screen()
-                        s.bgpic("docs/turtle/images/mario.gif")
-                        s.title("Turtle Screen")
-                        s.setup(width=800, height=600, startx=0, starty=0)
+                    s = turtle.Screen()
+                    s.bgpic("docs/turtle/images/mario.gif")
+                    s.title("Turtle Screen")
+                    s.setup(width=800, height=600, startx=0, starty=0)
 
-                        # turtle drawing
-                        t = turtle.Turtle()
-                        t.speed(10)
-                        t.color("blue", "red")
-                        t.pensize(10)
-                        t.pu()
-                        t.goto(110, -290)
-                        t.pd()
-                        t.begin_fill()
-                        t.circle(200)
-                        t.end_fill()
+                    # turtle drawing
+                    t = turtle.Turtle()
+                    t.speed(10)
+                    t.color("blue", "red")
+                    t.pensize(10)
+                    t.pu()
+                    t.goto(110, -290)
+                    t.pd()
+                    t.begin_fill()
+                    t.circle(200)
+                    t.end_fill()
 
-                        s.bgpic("nopic")
+                    s.bgpic("nopic")
 
-                        turtle.done()
+                    turtle.done()
                         
 ----
 
@@ -146,15 +146,15 @@ Clear screen
     1. Suggest a use case for ``s.clearscreen()``.
 
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
-            .. tab-set::
+        .. tab-set::
 
-                .. tab-item:: Q1
+            .. tab-item:: Q1
 
-                    ``s.clearscreen()`` could be used to clear the screen between stages in a game that uses a different background and different turtles.
+                ``s.clearscreen()`` could be used to clear the screen between stages in a game that uses a different background and different turtles.
 
 ----
 
@@ -235,44 +235,44 @@ Reset screen
         turtle.done()
 
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
-            .. tab-set::
+        .. tab-set::
 
-                .. tab-item:: Q1
+            .. tab-item:: Q1
 
-                    Adjust the code so that only one circle is drawn on the screen at any time.
+                Adjust the code so that only one circle is drawn on the screen at any time.
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        import turtle
+                    import turtle
 
-                        s = turtle.Screen()
-                        s.bgpic("docs/turtle/images/mario.gif")
-                        s.title("Turtle Screen")
-                        s.setup(width=800, height=600, startx=0, starty=0)
+                    s = turtle.Screen()
+                    s.bgpic("docs/turtle/images/mario.gif")
+                    s.title("Turtle Screen")
+                    s.setup(width=800, height=600, startx=0, starty=0)
 
-                        # turtle drawing
-                        t = turtle.Turtle()
-                        t.speed(10)
-                        t.color("blue", "red")
-                        t.pensize(10)
-                        t.begin_fill()
-                        t.circle(120)
-                        t.end_fill()
+                    # turtle drawing
+                    t = turtle.Turtle()
+                    t.speed(10)
+                    t.color("blue", "red")
+                    t.pensize(10)
+                    t.begin_fill()
+                    t.circle(120)
+                    t.end_fill()
 
-                        s.resetscreen()
+                    s.resetscreen()
 
-                        # same turtle - new drawing
-                        t.color("green", "yellow")
-                        t.pensize(5)
-                        t.begin_fill()
-                        t.circle(50)
-                        t.end_fill()
+                    # same turtle - new drawing
+                    t.color("green", "yellow")
+                    t.pensize(5)
+                    t.begin_fill()
+                    t.circle(50)
+                    t.end_fill()
 
-                        turtle.done()
+                    turtle.done()
 
 ----
 
@@ -329,17 +329,17 @@ Reset screensize
     1. Replace the screensize line above with ``s.setup(width=1200, height=800, startx=0, starty=0)``. What happens instead?
 
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
-            .. tab-set::
+        .. tab-set::
 
-                .. tab-item:: Q1
+            .. tab-item:: Q1
 
-                    Replace the screensize line above with ``s.setup(width=1200, height=800, startx=0, starty=0)``. What happens instead?
+                Replace the screensize line above with ``s.setup(width=1200, height=800, startx=0, starty=0)``. What happens instead?
 
-                    No scroll bars are required as the screen window resizes and repositions to the topleft of the screen.
+                No scroll bars are required as the screen window resizes and repositions to the topleft of the screen.
 
 ----
 
@@ -439,43 +439,43 @@ Animation control
         s.exitonclick()
 
     .. dropdown::
-            :icon: codescan
-            :color: primary
-            :class-container: sd-dropdown-container
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
-            .. tab-set::
+        .. tab-set::
 
-                .. tab-item:: Q1
+            .. tab-item:: Q1
 
-                    Add 2 lines of code to display the drawing without animation.
+                Add 2 lines of code to display the drawing without animation.
 
-                    .. code-block:: python
+                .. code-block:: python
 
-                        import turtle
+                    import turtle
 
-                        s = turtle.Screen()
-                        s.bgcolor("white")
-                        s.title("square")
-                        s.setup(width=800, height=600, startx=0, starty=0)
-                        s.tracer(0, 0)
+                    s = turtle.Screen()
+                    s.bgcolor("white")
+                    s.title("square")
+                    s.setup(width=800, height=600, startx=0, starty=0)
+                    s.tracer(0, 0)
 
-                        t = turtle.Turtle()
-                        t.pencolor("blue")
-                        t.speed(0)
-
-
-                        def square(t, side, x=0, y=0):
-                            for _ in range(4):
-                                t.fd(side)
-                                t.rt(90)
+                    t = turtle.Turtle()
+                    t.pencolor("blue")
+                    t.speed(0)
 
 
-                        for i in range(60):
-                            square(t, side=200)
-                            t.rt(6)
+                    def square(t, side, x=0, y=0):
+                        for _ in range(4):
+                            t.fd(side)
+                            t.rt(90)
 
-                        s.update()
-                        s.exitonclick()
+
+                    for i in range(60):
+                        square(t, side=200)
+                        t.rt(6)
+
+                    s.update()
+                    s.exitonclick()
 
 ----
 
