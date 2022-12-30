@@ -1,5 +1,5 @@
 ====================================================
-Turtle: Own house designs
+Turtle houses designs
 ====================================================
 
 Symmetrical house
@@ -23,7 +23,7 @@ Module revision
 
 .. admonition:: Exercises
 
-    1. Write new definitions for the ``house_door`` and ``house_window4`` tp produce the image below.
+    1. Write new definitions for the ``house_door`` and ``house_window4`` to produce the image below. Add these to the house module and use them to make your own row of houses.
     
         .. image:: images/houses_v2.png
             :scale: 75 %
@@ -34,6 +34,8 @@ Module revision
 
 Other compound objects
 --------------------------
+
+| Add dots, cirles, polygons, pie slices and stars to the shapes module in preparation for making other compound objects.
 
 | An empty grid is below.
 | Design your own compound objects and write definitions to place the parts relative to a start position so that the total object can be scaled.
