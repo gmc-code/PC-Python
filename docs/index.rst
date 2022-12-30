@@ -78,7 +78,7 @@ PC-Python
     turtle/turtle_pie_slices.rst
     turtle/turtle_shapes_module.rst
     turtle/turtle_houses_module.rst
-    turtle/own_house_designs.rst 
+    turtle/turtle_own_house_designs.rst 
 
 
 

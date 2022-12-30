@@ -1,5 +1,5 @@
 ====================================================
-Own house designs
+Turtle: Own house designs
 ====================================================
 
 Symmetrical house
@@ -39,9 +39,9 @@ Other compound objects
 | Design your own compound objects and write definitions to place the parts relative to a start position so that the total object can be scaled.
 
 | Some ideas can be gained from the links below.
-| Remember to write defintions to place each part so that the final object can be scaled and repositioned.
-| Don't just use sequencing as in the examples below. Create code that uses defintions to place the shapes from the ``shape`` module.
-| e.g A Christmass tree. See: https://copyassignment.com/draw-a-christmas-tree-using-python-turtle/
+| Remember to write definitions to place each part so that the final object can be scaled and repositioned.
+| Don't just use sequencing as in the examples below. Create code that uses definitions to place the shapes from the ``shape`` module.
+| e.g A Christmas tree. See: https://copyassignment.com/draw-a-christmas-tree-using-python-turtle/
 | e.g A snowman made of circles. See: https://copyassignment.com/draw-snowman-using-turtle/
 | e.g. A boat mad of triangles and rectangles: See: https://www.youtube.com/watch?v=S21p1EwNgA8&list=PLS9qLR8VoFA56NWSswK2daQSovI9QCpQE&index=48
 
