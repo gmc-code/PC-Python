@@ -24,22 +24,22 @@ Create a python Virtual environment
 
 | Create a virtual environment for the packages needed.
 | By default, these will be created in the users directory: ``C:\Users\username\``.
-| In examples below, the virtual environment folder will be called: ``rtd_venv310``, but any suitable name can be used.
+| In examples below, the virtual environment folder will be called: ``rtd_venv311``, but any suitable name can be used.
 
-| Create a virtual environment, called **rtd_venv310**, with the default system python:
+| Create a virtual environment, called **rtd_venv311**, with the default system python:
 
 .. code-block::
 
-    python -m venv rtd_venv310
+    python -m venv venv_rtd
     
 | If there are different versions of python installed, use the full path to the version required to create the virtual environment.
 | <username> used in the paths below will be different for each user.
-| e.g. ``C:\Users\username\AppData\Local\Programs\Python\Python310\python.exe``
+| e.g. ``C:\Users\username\AppData\Local\Programs\Python\Python311\python.exe``
 | Create a virtual environment using a specific installed version of python:
 
 .. code-block::
 
-    "C:\Users\username\AppData\Local\Programs\Python\Python310\python.exe" -m venv rtd_venv310
+    "C:\Users\username\AppData\Local\Programs\Python\Python311\python.exe" -m venv venv_rtd
 
 Activate a python Virtual environment
 ---------------------------------------
@@ -52,7 +52,7 @@ Activate a python Virtual environment
 
 .. code-block::
     
-    "C:\Users\username\rtd_venv310\Scripts\activate.bat"
+    "C:\Users\username\venv_rtd\Scripts\activate.bat"
 
 ----
 
@@ -64,7 +64,7 @@ Using the python Virtual environment in VSCode
 
     #. Choose **View: Command Palette**. 
     #. Into the drop down search field, type: **Python : Select Interpreter**
-    #. Choose the one listed that refers to the newly created **rtd_venv310**.
+    #. Choose the one listed that refers to the newly created **venv_rtd**.
 
 ----
 
