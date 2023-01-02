@@ -24,9 +24,9 @@ Create a python Virtual environment
 
 | Create a virtual environment for the packages needed.
 | By default, these will be created in the users directory: ``C:\Users\username\``.
-| In examples below, the virtual environment folder will be called: ``rtd_venv311``, but any suitable name can be used.
+| In examples below, the virtual environment folder will be called: ``venv_rtd``, but any suitable name can be used.
 
-| Create a virtual environment, called **rtd_venv311**, with the default system python:
+| Create a virtual environment, called **venv_rtd**, with the default system python:
 
 .. code-block::
 
