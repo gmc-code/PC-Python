@@ -1,4 +1,4 @@
 **/.vscode
-docs/_build
-docs/jupyter
-docs/.gitignore
+**/docs/_build
+**/docs/jupyter
+**/docs/.gitignore
