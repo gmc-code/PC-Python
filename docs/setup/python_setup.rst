@@ -103,6 +103,7 @@ Updating packages
 * To update installed packages, such as pillow, to the latest version, run pip install with the --upgrade or -U option.
 
 .. code-block::
+    
     pip install --upgrade pillow
 
 ----

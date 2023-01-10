@@ -34,7 +34,7 @@ Match-case
 
 | In the simple pattern below, the subject is checked against each case pattern, in order, till a match is found.
 
-.. code-block::
+.. code-block:: python
 
     match subject:
         case <pattern_1>:

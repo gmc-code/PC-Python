@@ -61,6 +61,14 @@ PC-Python
 
 .. toctree::
     :maxdepth: 2
+    :caption: Files
+    :numbered:
+
+    python_files/text_files.rst
+
+
+.. toctree::
+    :maxdepth: 2
     :caption: Turtle
     :numbered:
 
@@ -79,7 +87,6 @@ PC-Python
     turtle/turtle_shapes_module.rst
     turtle/turtle_houses_module.rst
     turtle/turtle_houses_designs.rst 
-
 
 
 .. toctree::

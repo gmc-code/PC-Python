@@ -10,7 +10,7 @@ List is a data structure used to store any data type in order. It's a data struc
 
 To create a list, you specify its contents enclosed within brackets and delimited by commas: 
 
-.. code-block::
+.. code-block:: python
 
     from microbit import *
 
