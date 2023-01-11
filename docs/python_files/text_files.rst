@@ -15,11 +15,23 @@ Text files
 Reading files
 =====================================
 
+| The code below opens a file for reading, prints the file name and mode used, reads and prints the file contents and then closes the file.
+| ``f`` is commonly used to refer to the file object from reading a file.
 
+.. code-block:: python
+    
+    f = open("files/12days.txt", "r")
+    print(f.name)
+    print(f.mode)
+    print(f.read())
+    f.close()
+
+| The syntax used in the code above is shown below.
+ 
 Open file
 -------------
 
-| Use the ``open()`` funnction to open a file.
+| Use the ``open()`` function to open a file.
 
 Syntax:
 
@@ -83,23 +95,11 @@ Syntax:
 
 ----
 
-| ``f`` is commonly used to refer to the file object from reading a file.
-| The code below opens the file for reading, prints the file name and mode used, prints the file contents and then closes the file.
-
-.. code-block:: python
-    
-    f = open("files/12days.txt", "r")
-    print(f.name)
-    print(f.mode)
-    print(f.read())
-    f.close()
-
-----
-
 Context manager approach
 --------------------------
 
-| The recommended approach for opening files is to use a context manager, "with", so that the file is closed automatically.
+| The recommended approach for opening files is to use a context manager, "with ... as ...", so that the file is closed automatically.
+| See: https://realpython.com/python-with-statement/
 | The code below reads the whole file and prints it.
 
 .. code-block:: python
@@ -108,6 +108,7 @@ Context manager approach
         f_contents = f.read()
         print(f_contents)
 
+----
 
 Readlines
 --------------------------
