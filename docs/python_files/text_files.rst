@@ -26,7 +26,7 @@ Reading files
     print(f.read())
     f.close()
 
-| The syntax used in the code above is shown below.
+| The syntax used in the code above is decribed below.
  
 Open file
 -------------
@@ -63,7 +63,7 @@ name attribute
 
 Syntax:
 
-.. py:function:: fileobject.name
+.. py:attribute:: fileobject.name
 
     :param fileobject: the object returned from opening a file.
 
@@ -76,7 +76,7 @@ mode attribute
 
 Syntax:
 
-.. py:function:: fileobject.mode
+.. py:attribute:: fileobject.mode
 
     :param fileobject: the object returned from opening a file.
 
@@ -128,63 +128,26 @@ Syntax:
         f_contents = f.readlines()
         print(f_contents)
 
-| This returns a list of lines:
+| The code above prints a list of lines returned by ``f.readlines()``.
 | ['1 partridge in a pear tree\n', '2 turtle-doves\n', ...]
-
 
 ----
 
+Iterating through the file
+-----------------------------
 
-        ###With the extra lines:
-        #f_contents = f.readline()
-        #print(f_contents)
-        #f_contents = f.readline()
-        #print(f_contents)
+| Use ``for line in f`` to efficiently iterate over the lines of the file.
 
-        ###Without the extra lines:
-        #f_contents = f.readline()
-        #print(f_contents, end = '')
-        #f_contents = f.readline()
-        #print(f_contents, end = '')
+.. code-block:: python
+    
+    with open("files/12days.txt", "r") as f:
+        for f_line in f:
+            print(f_line, end="")
 
-        ###Iterating through the file:
-        #for line in f:
-            #print(line, end = '')
+| This prints each line.
 
-        ###Going Back....:
-        #f_contents = f.read()
-        #print(f_contents, end = '')
-
-        ###Printing by characters:
-        #f_contents = f.read(100)
-        #print(f_contents, end = '')
-        #f_contents = f.read(100)
-        #print(f_contents, end = '')
-        #f_contents = f.read(100)
-        #print(f_contents, end = '')
-
-        ###Iterating through small chunks:
-        #size_to_read = 100
-        #f_contents = f.read(size_to_read)
-        #while len(f_contents) > 0:
-            #print(f_contents)
-            #f_contents = f.read(size_to_read)
-
-        ###Iterating through small chunks, with 10 characters:
-        #size_to_read = 10
-        #f_contents = f.read(size_to_read)
-        #print(f_contents, end = '')
-        #f.seek(0)
-        #f_contents = f.read(size_to_read)
-        #print(f_contents, end = '')
-        #print(f.tell())
-        #while len(f_contents) > 0:
-            #print(f_contents, end = '*')
-            #f_contents = f.read(size_to_read)
-    #print(f.mode)
-    #print(f.closed)
-    #print(f.read())
-
+----
+ 
 
     ##Writing Files:
     ###The Error:
