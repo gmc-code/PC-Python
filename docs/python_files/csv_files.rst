@@ -16,6 +16,8 @@ csv files
 Reading files
 --------------------
 
+| Download the test csv file :download:`month.csv <files/month.csv>`
+
 | The code below opens a csv file and uses a for loop to iterate over each row of the csv_reader object.
 | Each row is a list of the comma separated values.
 
