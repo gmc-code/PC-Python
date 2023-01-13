@@ -36,8 +36,8 @@ Syntax:
 
 .. py:function:: open(filename, mode, encoding=None)
 
-    :param filename: a strng for the file path to the file from the current directory.
-    :param mode: a tring; "r" to read; "w" to write; "a" to append; "r+" to read and write; "b" for binary; "t" for text. Defaults are "rt" for read text.
+    :param filename: a string for the file path to the file from the current directory.
+    :param mode: a string; "r" to read; "w" to write; "a" to append; "r+" to read and write; "b" for binary; "t" for text. Defaults are "rt" for read text.
     :param encoding: defaults to system; "utf-8" is recommended; see: https://docs.python.org/3/library/codecs.html#standard-encodings
 
 ----
