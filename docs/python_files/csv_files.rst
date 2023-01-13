@@ -204,6 +204,34 @@ Syntax:
     | If a non-blank row has fewer fields than fieldnames, the missing values are filled-in with the value of **restval** (which defaults to None).
 
 
+----
+
+DictReading files
+--------------------
+
+| Download the test csv file :download:`months.csv <files/months.csv>`
+
+| The code below uses DictReader, and so, produces a dictionary for each row.
+| The first row is used for the dictionary keys, so is not printed below.
+
+.. code-block:: python
+    
+    import csv
+
+    with open('files/months.csv', 'r', newline='') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+        for row in csv_reader:
+            print(row)
+
+.. code-block::
+
+    {'Month': 'January', 'Abbrev': 'Jan', 'Numeric': '1'}
+    {'Month': 'Feburary', 'Abbrev': 'Feb', 'Numeric': '2'}
+    {'Month': 'March', 'Abbrev': 'Mar', 'Numeric': '3'}
+
+    ...
+
+
 
 
 
