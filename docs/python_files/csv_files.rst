@@ -109,7 +109,23 @@ Padded strings
 csv writer
 ------------------
 
-| The code below spaces out the csv data as in a manual table format.
+| Use the ``csv.writer`` function to write to a csv file.
+
+Syntax:
+
+.. py:function:: csv.writer(csvfile, dialect='excel', newline='', **fmtparams)
+
+    :param csvfile: a string for the file path to the csv file from the current directory.
+    :param dialect: Use a set of parameters specific to a particular CSV dialect; Defaults to excel; one of ['excel', 'excel-tab', 'unix']
+    :param newline: newline='' is recommended to avoid incorrect line endings.
+    :param fmtparams: optional fmtparams keyword arguments can be given to override individual formatting parameters in the current dialect.
+
+    | Return a writer object responsible for converting the user's data into delimited strings on the given file-like object. 
+    | Non-string data are stringified with str() before being written.
+
+
+
+| The code below converts a comma delimited csv file to tab delimited.
 
 .. code-block:: python
     
@@ -123,6 +139,8 @@ csv writer
             csv_writer = csv.writer(new_csv_file, delimiter="\t")
             for row in csv_reader:
                 csv_writer.writerow(row)
+
+
 
 
 
