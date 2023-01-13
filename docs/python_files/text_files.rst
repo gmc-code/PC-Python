@@ -15,14 +15,13 @@ Text files
 Reading files
 =====================================
 
-| The code below opens a file for reading, prints the file name and mode used, reads and prints the file contents and then closes the file.
+| The code below opens a file for reading, prints the file name, reads the file, prints the file contents and then closes the file.
 | ``f`` is commonly used to refer to the file object from reading a file.
 
 .. code-block:: python
     
     f = open("files/12days.txt", "r")
     print(f.name)
-    print(f.mode)
     print(f.read())
     f.close()
 
@@ -69,18 +68,6 @@ Syntax:
 
 ----
 
-mode attribute
------------------
-
-| Use the ``mode`` attribute to get the mode used when opening the file.
-
-Syntax:
-
-.. py:attribute:: fileobject.mode
-
-    :param fileobject: the object returned from opening a file.
-
-----
 
 read method
 -----------------
@@ -148,44 +135,34 @@ Iterating through the file
 
 ----
  
+Write to a file
+-----------------------------
 
-    ##Writing Files:
-    ###The Error:
-    #with open("files/12days.txt", "r") as f:
-        #f.write("Test")
+| Use ``w`` as the mode to write to a file.
+| The code below writes "Test" to a the file called "new_file.txt".
+| If the file exists, it overwrites it.
+| If the file doesn't exist, it creates it.
 
-    ###Writing Starts:
-    #with open("test2.txt", "w") as f:
-        #pass
-        #f.write("Test")
-        #f.seek(0)
-        #f.write("Test")
-        #f.seek("R")
+.. code-block:: python
+    
+    with open("files/new_file.txt", "w") as f:
+        f.write("Test")
 
-    ##Copying Files:
-    #with open("files/12days.txt", "r") as rf:
-        #with open("test_copy.txt", "w") as wf:
-            #for line in rf:
-                #wf.write(line)
 
-    #Copying the/your image:
-    ###The Error
-    #with open("bronx.jpg", "r") as rf:
-        #with open("bronx_copy.jpg", "w") as wf:
-            #for line in rf:
-                #wf.write(line)
+----
+ 
 
-    ###Copying the image starts, without chunks:
-    #with open("bronx.jpg", "rb") as rf:
-        #with open("bronx_copy.jpg", "wb") as wf:
-            #for line in rf:
-                #wf.write(line)
+Copying a text file
+-----------------------------
 
-    ###Copying the image with chunks:
-    #with open("bronx.jpg", "rb") as rf:
-        #with open("bronx_copy.jpg", "wb") as wf:
-            #chunk_size = 4096
-            #rf_chunk = rf.read(chunk_size)
-            #while len(rf_chunk) > 0:
-                #wf.write(rf_chunk)
-                #rf_chunk = rf.read(chunk_size)
+| Use ``a`` as the mode to append to the end of a file.
+| If the file exists, it appends it.
+| If the file doesn't exist, it creates it.
+
+.. code-block:: python
+    
+    with open("files/12days.txt", "r") as rf:
+        with open("files/12days_copy.txt", "a") as wf:
+            for line in rf:
+                wf.write(line)
+

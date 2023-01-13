@@ -65,6 +65,7 @@ PC-Python
     :numbered:
 
     python_files/text_files.rst
+    python_files/csv_files.rst
 
 
 .. toctree::
