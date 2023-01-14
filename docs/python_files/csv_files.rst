@@ -96,6 +96,24 @@ Reading files with non comma delimiter
 
 ----
 
+next function
+-------------
+
+| The next() function returns the next item in an iterator.
+
+Syntax:
+
+.. py:function:: next(iterable, default)
+
+    :param iterable:  An iterable object.
+    :param default:  Optional. An default value to return if the iterable has reached its end.
+
+    | The next() function returns the next item in an iterator.
+
+| In the code below, next is used to return the first row in a csv reader object in order to skip it.
+
+----
+
 Using an index with the row lists
 -----------------------------------
 
@@ -212,7 +230,7 @@ DictReading files
 | Download the test csv file :download:`months.csv <files/months.csv>`
 
 | The code below uses DictReader, and so, produces a dictionary for each row.
-| The first row is used for the dictionary keys, so is not printed below.
+| The first row, "Month,Abbrev,Numeric", is used for the dictionary keys, so is not printed below.
 
 .. code-block:: python
     
@@ -231,24 +249,74 @@ DictReading files
 
     ...
 
+----
+
+Using a key with the row dictionaries
+--------------------------------------
+
+| The code below just prints the part of each row that has a key of "Abbrev".
 
 
+.. code-block:: python
+    
+    import csv
 
+    with open('files/months.csv', 'r', newline='') as csv_file:
+        csv_reader = csv.DictReader
+        (csv_file)
+        
+        for row in csv_reader:
+            print(row["Abbrev"], end=", ")
 
+.. code-block::
 
-
-
-
-
-
-
-
-
-
-
+    Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec, 
 
 
 ----
+
+DictWriter
+-----------------
+
+| DictWriter is required after using DictReader.
+| See: https://docs.python.org/3/library/csv.html#csv.DictWriter
+
+Syntax:
+
+.. py:class:: csv.DictWriter(csvfile, fieldnames, restval='', extrasaction='raise', dialect='excel', *args, **kwds)
+
+    :param csvfile: a string for the file path to the csv file from the current directory.
+    :param fieldnames:  a sequence of keys that identify the order in which values in the dictionary passed to the writerow() method are written to file **csvfile**.
+    :param restval: specify the value to be written if the dictionary is missing a key in **fieldnames**. 
+    :param extrasaction: indicates what action to take if the dictionary passed to the writerow() method contains a key not found in fieldnames. If it is set to 'raise', the default value, a ValueError is raised. If it is set to 'ignore', extra values in the dictionary are ignored. 
+    :param dialect: Use a set of parameters specific to a particular CSV dialect; Defaults to excel; one of ['excel', 'excel-tab', 'unix']
+    :param *args, **kwds: other optional or keyword arguments are passed to the underlying writer instance.
+
+    | Create an object which operates like a regular writer but maps dictionaries onto output rows. 
+
+----
+
+DictWriter.writeheader
+--------------------------
+
+| DictWriter.writeheader is used to write the dictionary keys to the first line of the new csv file.
+| See: https://docs.python.org/3/library/csv.html#csv.DictWriter.writeheader
+
+Syntax:
+
+.. py:class:: DictWriter.writeheader()
+    
+    | Write a row with the field names (as specified in the constructor) to the writer's file object, formatted according to the current dialect. 
+    | Return the return value of the csvwriter.writerow() call used internally.
+
+----
+
+DictWriter with fieldnames
+--------------------------------------
+
+| The code below uses DictReader to write to a new csv file.
+| Fieldnames need to be given to covert the dictionary rows to output for the writer.
+| Download the test csv file :download:`letter_frequency.csv <files/letter_frequency.csv>`
 
 .. code-block:: python
     
@@ -257,7 +325,7 @@ DictReading files
     with open('files/letter_frequency.csv', 'r') as csv_file:
         csv_reader = csv.DictReader(csv_file)
 
-        with open('files/letter_frequency_tab.csv', 'w') as new_file:
+        with open('files/letter_frequency_tab.csv', 'w', newline='') as new_file:
             fieldnames = ['letter', 'frequency']
 
             csv_writer = csv.DictWriter(new_file, fieldnames=fieldnames, delimiter='\t')
@@ -266,4 +334,7 @@ DictReading files
 
             for line in csv_reader:
                 csv_writer.writerow(line)
+
+
+
 
