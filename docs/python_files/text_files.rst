@@ -10,6 +10,7 @@ Text files
 
 | See video guide at: https://www.youtube.com/watch?v=Uh2ebFW8OYM&list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7&index=11
 
+| | Download the test csv file :download:`12days.txt <files/12days.txt>`
 ----
 
 Reading files
