@@ -5,8 +5,6 @@ csv files
 | See: https://docs.python.org/3/library/csv.html
 | See video guide at: https://www.youtube.com/watch?v=q5uM4VKywbA&list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7&index=15
 
-| Census data can be exported as csv from: https://explore.data.abs.gov.au/ and https://data.gov.au/
-
 | csv files are comma separated files. 
 | Data is separated or delimited within the same line by a comma.
 | Other delimiters are also used, such as tabs.
@@ -16,8 +14,7 @@ csv files
 Opening files: newline=''
 ---------------------------
 
-| If ``newline=''`` is not specified, newlines embedded inside quoted fields will not be interpreted correctly, 
-| and on platforms that use \r\n linendings on write an extra \r will be added. 
+| If ``newline=''`` is not specified, newlines embedded inside quoted fields will not be interpreted correctly, and on platforms that use \r\n linendings on write an extra \r will be added. 
 | It should always be safe to specify ``newline=''``, since the csv module does its own (universal) newline handling.
 
 ----
