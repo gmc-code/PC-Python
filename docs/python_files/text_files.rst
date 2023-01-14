@@ -20,7 +20,8 @@ Reading files
 
 .. code-block:: python
     
-    f = open("files/12days.txt", "r")
+    filepath = "files/12days.txt"
+    f = open(filepath, "r")
     print(f.read())
     f.close()
 
@@ -94,7 +95,8 @@ Context manager approach
 
 .. code-block:: python
     
-    with open("files/12days.txt", "r") as f:
+    filepath = "files/12days.txt"
+    with open(filepath, "r") as f:
         f_contents = f.read()
         print(f_contents)
 
@@ -114,7 +116,8 @@ Syntax:
 
 .. code-block:: python
     
-    with open("files/12days.txt", "r") as f:
+    filepath = "files/12days.txt"
+    with open(filepath, "r") as f:
         f_contents = f.readlines()
         print(f_contents)
 
@@ -133,7 +136,8 @@ Iterating through the file
 
 .. code-block:: python
     
-    with open("files/12days.txt", "r") as f:
+    filepath = "files/12days.txt"
+    with open(filepath, "r") as f:
         for f_line in f:
             print(f_line, end="")
 
@@ -151,27 +155,52 @@ Write to a file
 
 .. code-block:: python
     
-    with open("files/new_file.txt", "w") as f:
+    filepath = "files/new_file.txt"
+    with open(filepath, "w") as f:
         f.write("Test")
 
 
 ----
  
 
-Copying a text file
+Appending to a text file
 -----------------------------
 
 | Use ``a`` as the mode to append to the end of a file.
 | If the file exists, it appends it.
 | If the file doesn't exist, it creates it.
-| In the code below, rf is the read file object.
-| wf is the file object for writing.
-| Each line of the file **12days.txt** is written to the file **12days_copy.txt**.
+
+| In the code below, the file is first opened in "w" mode to clear it and write to it.
+| Then the file is opened in "a" mdoe to add text to the end of it.
+| "\n" add a line ending to put the second text on a next line.
+
 
 .. code-block:: python
     
-    with open("files/12days.txt", "r") as rf:
-        with open("files/12days_copy.txt", "a") as wf:
+    filepath = "files/new_file.txt"
+    # overwrite file if it exists
+    with open(filepath, "w") as f:
+        f.write("Test 1")
+    # open again for appending
+    with open(filepath, "a") as f:
+        f.write("\nTest 2")
+
+----
+
+Copying a text file
+-----------------------------
+
+| In the code below, rf is the read file object.
+| wf is the file object for writing.
+| Each line of the file **12days.txt** is written to the file **12days_copy.txt**.
+| Mulitple lines can be written to the same file within the **with open** context mamnager.
+
+.. code-block:: python
+    
+    rfilepath = "files/12days.txt"
+    wfilepath = "files/12days_copy.txt"
+    with open(rfilepath, "r") as rf:
+        with open(wfilepath, "w") as wf:
             for line in rf:
                 wf.write(line)
 
