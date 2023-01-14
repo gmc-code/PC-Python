@@ -66,6 +66,7 @@ PC-Python
 
     python_files/text_files.rst
     python_files/csv_files.rst
+    python_files/json_files.rst
 
 
 .. toctree::

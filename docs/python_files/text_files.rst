@@ -10,7 +10,8 @@ Text files
 
 | See video guide at: https://www.youtube.com/watch?v=Uh2ebFW8OYM&list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7&index=11
 
-| | Download the test csv file :download:`12days.txt <files/12days.txt>`
+| Download the test csv file :download:`12days.txt <files/12days.txt>`
+
 ----
 
 Reading files
@@ -27,6 +28,8 @@ Reading files
     f.close()
 
 | The syntax used in each line of the code above is decribed below.
+
+----
  
 Open file
 -------------
