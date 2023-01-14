@@ -32,7 +32,7 @@ Open file
 
 | Use the ``open()`` function to open a file.
 
-| In most cases the syntax to use is:
+| In most used syntax is:
 
 .. py:function:: open(file, mode='r')
 
@@ -68,7 +68,6 @@ Syntax:
 
 .. py:function:: fileobject.close()
 
-    :param fileobject: the object returned from opening a file.
 
 ----
 
@@ -81,14 +80,14 @@ Syntax:
 
 .. py:function:: fileobject.read(size)
 
-    :param size: the number of characters (in text mode) or bytes (in binary mode) that are read; default 0 for whole file.
+    :param size: the number of characters (in text mode) or bytes (in binary mode) that are read; default 0 or omitted for whole file.
 
 ----
 
 Context manager approach
 --------------------------
 
-| The recommended approach for opening files is to use a context manager, "with ... as ...", so that the file is closed automatically.
+| The recommended approach for opening files is to use a context manager, **"with ... as ..."**, so that the file is closed automatically.
 | See: https://realpython.com/python-with-statement/
 | The code below reads the whole file and prints it.
 
