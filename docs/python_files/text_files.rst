@@ -15,7 +15,7 @@ Text files
 Reading files
 =====================================
 
-| The code below opens a file for reading, reads the file, prints the file contents and then closes the file.
+| The code below opens a file for reading, reads the file, prints the file contents, then closes the file.
 | ``f`` is commonly used to refer to the file object from opening a file.
 
 .. code-block:: python
