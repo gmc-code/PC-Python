@@ -15,30 +15,41 @@ Text files
 Reading files
 =====================================
 
-| The code below opens a file for reading, prints the file name, reads the file, prints the file contents and then closes the file.
-| ``f`` is commonly used to refer to the file object from reading a file.
+| The code below opens a file for reading, reads the file, prints the file contents and then closes the file.
+| ``f`` is commonly used to refer to the file object from opening a file.
 
 .. code-block:: python
     
     f = open("files/12days.txt", "r")
-    print(f.name)
     print(f.read())
     f.close()
 
-| The syntax used in the code above is decribed below.
+| The syntax used in each line of the code above is decribed below.
  
 Open file
 -------------
 
 | Use the ``open()`` function to open a file.
+| For advanced parameter usage see: https://docs.python.org/3/library/functions.html#open
 
-Syntax:
+| In most cases the syntax to use is:
 
-.. py:function:: open(filename, mode, encoding=None)
+.. py:function:: open(file, mode='r', newline="")
 
-    :param filename: a string for the file path to the file from the current directory.
+The full Syntax:
+
+.. py:function:: open(file, mode='r', buffering=- 1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
+
+    :param file: a string for the file path to the file from the current directory.
     :param mode: a string; "r" to read; "w" to write; "a" to append; "r+" to read and write; "b" for binary; "t" for text. Defaults are "rt" for read text.
+    :param buffering: an optional integer used to set the buffering policy.
     :param encoding: defaults to system; "utf-8" is recommended; see: https://docs.python.org/3/library/codecs.html#standard-encodings
+    :param errors: an optional string that specifies how encoding and decoding errors are to be handled.
+    :param newline: a string; can be None, '', '\n', '\r', or '\r\n'.;
+    :param closefd: if a filename is given closefd must be True otherwise, an error will be raised.
+    :param opener: A custom opener can be used by passing a callable as opener
+
+| Open file and return a corresponding file object.
 
 ----
 
@@ -54,20 +65,6 @@ Syntax:
     :param fileobject: the object returned from opening a file.
 
 ----
-
-name attribute
------------------
-
-| Use the ``name`` attribute to get the file name of a file object.
-
-Syntax:
-
-.. py:attribute:: fileobject.name
-
-    :param fileobject: the object returned from opening a file.
-
-----
-
 
 read method
 -----------------
@@ -116,7 +113,10 @@ Syntax:
         print(f_contents)
 
 | The code above prints a list of lines returned by ``f.readlines()``.
-| ['1 partridge in a pear tree\n', '2 turtle-doves\n', ...]
+
+.. code-block::
+
+    ['1 partridge in a pear tree\n', '2 turtle-doves\n', ...]
 
 ----
 
@@ -139,7 +139,7 @@ Write to a file
 -----------------------------
 
 | Use ``w`` as the mode to write to a file.
-| The code below writes "Test" to a the file called "new_file.txt".
+| The code below writes "Test" to the file called "new_file.txt".
 | If the file exists, it overwrites it.
 | If the file doesn't exist, it creates it.
 
@@ -158,6 +158,9 @@ Copying a text file
 | Use ``a`` as the mode to append to the end of a file.
 | If the file exists, it appends it.
 | If the file doesn't exist, it creates it.
+| In the code below, rf is the read file object.
+| wf is the file object for writing.
+| Each line of the file **12days.txt** is written to the file **12days_copy.txt**.
 
 .. code-block:: python
     
