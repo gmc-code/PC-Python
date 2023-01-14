@@ -31,7 +31,6 @@ Open file
 -------------
 
 | Use the ``open()`` function to open a file.
-| For advanced parameter usage see: https://docs.python.org/3/library/functions.html#open
 
 | In most cases the syntax to use is:
 
@@ -42,8 +41,8 @@ Open file
 
     | Open file and return a corresponding file object.
 
-
-The full Syntax for advanced use:
+| For advanced parameter usage see: https://docs.python.org/3/library/functions.html#open
+| The full Syntax for advanced use:
 
 .. py:function:: open(file, mode='r', buffering=- 1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
 
