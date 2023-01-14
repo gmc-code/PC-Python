@@ -7,7 +7,7 @@ csv files
 
 | csv files are comma separated files. 
 | Data is separated or delimited within the same line by a comma.
-| Other delimiters are also used, such as tabs.
+| csv files are not restricted to using commas as delimiters. Other delimiters are also used, such as tabs.
 
 ----
 
