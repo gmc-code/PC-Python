@@ -34,9 +34,15 @@ Open file
 
 | In most cases the syntax to use is:
 
-.. py:function:: open(file, mode='r', newline="")
+.. py:function:: open(file, mode='r')
 
-The full Syntax:
+    :param file: a string for the file path to the file from the current directory.
+    :param mode: a string; "r" to read; "w" to write; "a" to append; "r+" to read and write; "b" for binary; "t" for text. Defaults are "rt" for read text.
+
+    | Open file and return a corresponding file object.
+
+
+The full Syntax for advanced use:
 
 .. py:function:: open(file, mode='r', buffering=- 1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
 
@@ -45,11 +51,11 @@ The full Syntax:
     :param buffering: an optional integer used to set the buffering policy.
     :param encoding: defaults to system; "utf-8" is recommended; see: https://docs.python.org/3/library/codecs.html#standard-encodings
     :param errors: an optional string that specifies how encoding and decoding errors are to be handled.
-    :param newline: a string; can be None, '', '\n', '\r', or '\r\n'.;
+    :param newline: a string; can be None, '', '\n', '\r', or '\r\n'
     :param closefd: if a filename is given closefd must be True otherwise, an error will be raised.
-    :param opener: A custom opener can be used by passing a callable as opener
+    :param opener: A custom opener can be used by passing a callable as opener.
 
-| Open file and return a corresponding file object.
+    | Open file and return a corresponding file object.
 
 ----
 
