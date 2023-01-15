@@ -27,7 +27,7 @@ Reading files
     print(f.read())
     f.close()
 
-| The syntax used in each line of the code above is decribed below.
+| The syntax used in each line of the code above is described below.
 
 ----
  
@@ -141,6 +141,7 @@ Iterating through the file
 -----------------------------
 
 | Use ``for line in f`` to efficiently iterate over the lines of the file.
+| This prints each line.
 
 .. code-block:: python
     
@@ -149,7 +150,6 @@ Iterating through the file
         for f_line in f:
             print(f_line, end="")
 
-| This prints each line.
 
 ----
  
@@ -179,7 +179,7 @@ Appending to a text file
 | If the file doesn't exist, it creates it.
 
 | In the code below, the file is first opened in "w" mode to clear it and write to it.
-| Then the file is opened in "a" mdoe to add text to the end of it.
+| Then the file is opened in "a" mode to add text to the end of it.
 | "\n" add a line ending to put the second text on a next line.
 
 
@@ -201,7 +201,7 @@ Copying a text file
 | In the code below, rf is the read file object.
 | wf is the file object for writing.
 | Each line of the file **12days.txt** is written to the file **12days_copy.txt**.
-| Mulitple lines can be written to the same file within the **with open** context mamnager.
+| Multiple lines can be written to the same file within the **with open** context mamnager.
 
 .. code-block:: python
     
@@ -212,3 +212,16 @@ Copying a text file
             for line in rf:
                 wf.write(line)
 
+
+| Every second line can be copied by enumerating the file object, rf, then using the using the modulus operator, %, to get lines every second line.
+
+.. code-block:: python
+
+    step = 2
+    rfilepath = "files/12days.txt"
+    wfilepath = "files/12days_copy.txt"
+    with open(rfilepath, "r") as rf:
+        with open(wfilepath, "w") as wf:
+            for lineno, f_line in enumerate(rf):
+                if lineno % step == 0:
+                    wf.write(f_line)
