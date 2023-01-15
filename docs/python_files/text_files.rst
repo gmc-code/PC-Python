@@ -32,7 +32,7 @@ Reading files
 ----
  
 Open file
--------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | Use the ``open()`` function to open a file.
 
@@ -69,7 +69,7 @@ Open file
 ----
 
 Close file
--------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | Use the ``close()`` method to close the file object after opening it.
 
@@ -80,8 +80,8 @@ Syntax:
 
 ----
 
-read method
------------------
+Read method
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | Use the ``read`` method to read the whole of a small file.
 
