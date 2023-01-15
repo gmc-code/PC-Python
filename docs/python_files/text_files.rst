@@ -36,7 +36,7 @@ Open file
 
 | Use the ``open()`` function to open a file.
 
-| In most used syntax is:
+| The most used syntax is:
 
 .. py:function:: open(file, mode='r')
 
@@ -44,6 +44,11 @@ Open file
     :param mode: a string; "r" to read; "w" to write; "a" to append; "r+" to read and write; "b" for binary; "t" for text. Defaults are "rt" for read text.
 
     | Open file and return a corresponding file object.
+
+| The recommended syntax is:
+
+.. py:function:: open(file, mode='r', encoding="utf-8")
+
 
 | For advanced parameter usage see: https://docs.python.org/3/library/functions.html#open
 | The full Syntax for advanced use:
@@ -70,7 +75,7 @@ Close file
 
 Syntax:
 
-.. py:function:: fileobject.close()
+.. py:function:: f.close()
 
 
 ----
@@ -107,11 +112,12 @@ Context manager approach
 Readlines
 --------------------------
 
+| To read all the lines of a file into a list, list(f) or f.readlines() can be used.
 | Use readlines to create a list of lines of the file.
 
 Syntax:
 
-.. py:function:: fileobject.readlines(size)
+.. py:function:: f.readlines(size)
 
     :param size: optional; the number of characters or bytes returned exceed the size number, no more lines will be returned after that are returned.
 
