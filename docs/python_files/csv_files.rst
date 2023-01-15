@@ -32,7 +32,7 @@ Syntax:
     :param dialect: Use a set of parameters specific to a particular CSV dialect; Defaults to excel; one of ['excel', 'excel-tab', 'unix']
     :param fmtparams: optional fmtparams keyword arguments can be given to override individual formatting parameters in the current dialect.
 
-    | Return a reader object which will iterate over lines in the given csvfile.
+    | Return a reader object which is an iterable that behaves like a generator allowing iteration over lines in the given csvfile.
     | Each row read from the csv file is returned as a list of strings. 
     | No automatic data type conversion is performed unless the QUOTE_NONNUMERIC format option is specified
     | (in which case unquoted fields are transformed into floats).
