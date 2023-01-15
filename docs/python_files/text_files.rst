@@ -15,7 +15,7 @@ Text files
 ----
 
 Reading files
-=====================================
+--------------------------
 
 | The code below opens a file for reading, reads the file, prints the file contents, then closes the file.
 | ``f`` is commonly used to refer to the file object from opening a file.
@@ -31,8 +31,8 @@ Reading files
 
 ----
  
-Open file
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Open file:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | Use the ``open()`` function to open a file.
 
@@ -69,7 +69,7 @@ Open file
 ----
 
 Close file
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | Use the ``close()`` method to close the file object after opening it.
 
@@ -81,7 +81,7 @@ Syntax:
 ----
 
 Read method
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | Use the ``read`` method to read the whole of a small file.
 
