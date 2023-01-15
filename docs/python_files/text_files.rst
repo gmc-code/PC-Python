@@ -213,7 +213,7 @@ Copying a text file
                 wf.write(line)
 
 
-| Every second line can be copied by enumerating the file object, rf, then using the using the modulus operator, %, to get lines every second line.
+| Every second line can be copied by enumerating the file object, rf, then using the using the modulus operator, %, to get every second line.
 
 .. code-block:: python
 
@@ -225,3 +225,10 @@ Copying a text file
             for lineno, f_line in enumerate(rf):
                 if lineno % step == 0:
                     wf.write(f_line)
+
+.. code-block:: 
+
+    1 partridge in a pear tree
+    3 French hens
+    5 golden rings
+    ...
