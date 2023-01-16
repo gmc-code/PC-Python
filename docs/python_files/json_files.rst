@@ -8,6 +8,9 @@ Json files
 | json files are common when working with APIs and configuration files.
 | json stands for Java Script Object Notation but is independent of programming languages.
 
+| To minify json online see: https://onlinejsontools.com/minify-json
+| To produce pretty json see: https://onlinejsontools.com/prettify-json
+
 ----
 
 Structure
@@ -18,12 +21,11 @@ Structure
 
 .. code:: 
 
-    {"employees":[
-    { "firstName":"John", "lastName":"Doe" },
-    { "firstName":"Anna", "lastName":"Smith" },
-    { "firstName":"Peter", "lastName":"Jones" }
-    ]}
-
+    {"employees":
+    [{"firstName":"John","lastName":"Doe","gender":"Male"},
+    {"firstName":"Anna","lastName":"Smith","gender":"Female"},
+    {"firstName":"Peter","lastName":"Jones","gender":"Male"}]
+    }
 
 ----
 
@@ -53,11 +55,11 @@ Loading a json string
     import json
 
     emp_str = """
-    {"employees":[
-        { "firstName":"John", "lastName":"Doe" },
-        { "firstName":"Anna", "lastName":"Smith" },
-        { "firstName":"Peter", "lastName":"Jones" }
-    ]}
+    {"employees":
+    [{"firstName":"John","lastName":"Doe","gender":"Male"},
+    {"firstName":"Anna","lastName":"Smith","gender":"Female"},
+    {"firstName":"Peter","lastName":"Jones","gender":"Male"}]
+    }
     """
 
     data_json = json.loads(emp_str)
@@ -85,24 +87,34 @@ dumps method
 
     | Returns a string from a json object
 
+| Use the syntax below for pretty printing:
+
+.. py:function:: json.dumps(json, indent=2, sort_keys=True)
+
+    :param json: a JSON object
+    :param indent: teh number of spaces to indent
+    :param sort_keys: set to True to sort the keys alphabetically
+
+    | Returns a string from a json object 
+
 
 ----
 
 Dumping json to a string
---------------------------
+-----------------------------------------------
 
-| The code below first deletes the firstName key from each employee, then converts the json object to a string and prints it.
+| The code below deletes the gender key then converts the json to a string, then prints it.
 
 .. code-block:: python
     
     import json
 
     emp_str = """
-    {"employees":[
-        { "firstName":"John", "lastName":"Doe" },
-        { "firstName":"Anna", "lastName":"Smith" },
-        { "firstName":"Peter", "lastName":"Jones" }
-    ]}
+    {"employees":
+    [{"firstName":"John","lastName":"Doe","gender":"Male"},
+    {"firstName":"Anna","lastName":"Smith","gender":"Female"},
+    {"firstName":"Peter","lastName":"Jones","gender":"Male"}]
+    }
     """
 
     # convert to json object
@@ -118,7 +130,56 @@ Dumping json to a string
 
 .. code-block:: 
 
-    {"employees": [{"lastName": "Doe"}, {"lastName": "Smith"}, {"lastName": "Jones"}]}
+    {"employees": [{"firstName": "John", "lastName": "Doe"}, {"firstName": "Anna", "lastName": "Smith"}, {"firstName": "Peter", "lastName": "Jones"}]}
+
+----
+
+Dumping json to a string with pretty printing
+-----------------------------------------------
+
+| The code below does pretty printing via: ``data_str = json.dumps(data_json, indent=2, sort_keys=True)``
+
+.. code-block:: python
+    
+    import json
+
+    emp_str = """
+    {"employees":
+    [{"firstName":"John","lastName":"Doe","gender":"Male"},
+    {"firstName":"Anna","lastName":"Smith","gender":"Female"},
+    {"firstName":"Peter","lastName":"Jones","gender":"Male"}]
+    }
+    """
+
+    # convert to json object
+    data_json = json.loads(emp_str)
+    # delete each firstname
+    for emp in data_json["employees"]:
+        del emp["firstName"]
+
+    # convert to a string
+    data_str = json.dumps(data_json, indent=2, sort_keys=True)
+    print(data_str)
+
+
+.. code-block:: 
+
+    {
+    "employees": [
+        {
+        "firstName": "John",
+        "lastName": "Doe"
+        },
+        {
+        "firstName": "Anna",
+        "lastName": "Smith"
+        },
+        {
+        "firstName": "Peter",
+        "lastName": "Jones"
+        }
+    ]
+    }
 
 ----
 

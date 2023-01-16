@@ -1,5 +1,19 @@
-{"employees":[
-    { "firstName":"John", "lastName":"Doe" },
-    { "firstName":"Anna", "lastName":"Smith" },
-    { "firstName":"Peter", "lastName":"Jones" }
-  ]}
+{
+  "employees": [
+      {
+          "firstName": "John",
+          "lastName": "Doe",
+          "gender": "Male"
+      },
+      {
+          "firstName": "Anna",
+          "lastName": "Smith",
+          "gender": "Male"
+      },
+      {
+          "firstName": "Peter",
+          "lastName": "Jones",
+          "gender": "Male"
+      }
+  ]
+}
