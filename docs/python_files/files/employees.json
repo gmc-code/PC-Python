@@ -1,19 +1,19 @@
 {
   "employees": [
-      {
-          "firstName": "John",
-          "lastName": "Doe",
-          "gender": "Male"
-      },
-      {
-          "firstName": "Anna",
-          "lastName": "Smith",
-          "gender": "Male"
-      },
-      {
-          "firstName": "Peter",
-          "lastName": "Jones",
-          "gender": "Male"
-      }
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "gender": "Male"
+    },
+    {
+      "firstName": "Anna",
+      "lastName": "Smith",
+      "gender": "Female"
+    },
+    {
+      "firstName": "Peter",
+      "lastName": "Jones",
+      "gender": "Male"
+    }
   ]
 }

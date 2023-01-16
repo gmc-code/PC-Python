@@ -29,10 +29,10 @@ Structure
 
 ----
 
-loads method
-------------------
+Loadstring loads function
+----------------------------
 
-| Use the loads method to convert a string to json.
+| Use the loads function to convert a string to json.
 | The full syntax is at: https://docs.python.org/3/library/json.html#json.loads
 | Use the simple syntax:
 
@@ -74,10 +74,10 @@ Loading a json string
 
 ----
 
-dumps method
+dumps function
 ------------------
 
-| Use the dumps method to convert a json object to a sting.
+| Use the dumps function to convert a json object to a string.
 | The full syntax is at: https://docs.python.org/3/library/json.html#json.dumps
 | Use the simple syntax:
 
@@ -89,13 +89,12 @@ dumps method
 
 | Use the syntax below for pretty printing:
 
-.. py:function:: json.dumps(json, indent=2, sort_keys=True)
+.. py:function:: json.dumps(json, indent=2)
 
     :param json: a JSON object
     :param indent: the number of spaces to indent
-    :param sort_keys: set to True to sort the keys alphabetically
 
-    | Returns a string from a json object using indenting and sorting of keys.
+    | Returns a string from a json object using specified indenting.
 
 ----
 
@@ -120,7 +119,7 @@ Dumping json to a string
     data_json = json.loads(emp_str)
     # delete each firstname
     for emp in data_json["employees"]:
-        del emp["firstName"]
+        del emp["gender"]
 
     # convert to a string
     data_str = json.dumps(data_json)
@@ -136,7 +135,9 @@ Dumping json to a string
 Dumping json to a string with pretty printing
 -----------------------------------------------
 
-| The code below does pretty printing via: ``data_str = json.dumps(data_json, indent=2, sort_keys=True)``
+| The code below does pretty printing via: ``data_str = json.dumps(data_json, indent=2)``
+| The "gender" key is deleted for each employee record.
+| The json object is then dumped to a string format for printing.
 
 .. code-block:: python
     
@@ -154,33 +155,229 @@ Dumping json to a string with pretty printing
     data_json = json.loads(emp_str)
     # delete each firstname
     for emp in data_json["employees"]:
-        del emp["firstName"]
+        del emp["gender"]
 
     # convert to a string
-    data_str = json.dumps(data_json, indent=2, sort_keys=True)
+    data_str = json.dumps(data_json, indent=2)
     print(data_str)
 
 
 .. code-block:: 
 
-    {
+  {
     "employees": [
-        {
+      {
         "firstName": "John",
         "lastName": "Doe"
-        },
-        {
+      },
+      {
         "firstName": "Anna",
         "lastName": "Smith"
-        },
-        {
+      },
+      {
         "firstName": "Peter",
         "lastName": "Jones"
-        }
+      }
     ]
-    }
+  }
+
 
 ----
 
-from files
+Load file function
+----------------------------
 
+| Use the load function to load a file to json.
+| The full syntax is at: https://docs.python.org/3/library/json.html#json.load
+| Use the simple syntax:
+
+.. py:function:: json.load(textfile)
+
+    :param textfile: a textfile containing a JSON document
+
+    | Returns a json object from a file.
+
+----
+
+Loading a json file
+------------------------
+
+| Download the test csv file :download:`afl_premiers_counts.json <files/afl_premiers_counts.json>`
+| The code below loads the json file and prints it.
+
+.. code-block:: python
+    
+    import json
+
+    json_path = "files/afl_premiers_counts.json"
+    with open(json_path, "r") as f:
+        json_data = json.load(f)
+        print(json_data)
+
+.. code-block:: 
+
+    {'premiers': [{'Index': '0', 'Club': 'Essendon', 'Years': '1897-present', 'Premierships Total': '16', 'Premierships Season(s)': '1897, 1901, 1911, 1912, 1923, 1924, 1942, 1946, 1949, 1950, 1962, 1965, 1984, 1985, 1993, 2000', 'Runners-up Total': '14', 'Runners-up Season(s)': '1898, 1902, 1908, 1941, 1943, 1947, 1948, 1951, 1957, 1959, 1968, 1983, 1990, 2001'},...]}
+
+----
+
+Printing specific keys
+------------------------
+
+| The code below loads the json file and prints specific keys.
+| The main key to the json file is "premiers". This can be obtained using ``j_key = list(json_data.keys())[0]``.
+| The code below prints the names of clubs with 15 or more premierships (up to 2022)
+| Note that the json values are strings and need to be converted to ints for: ``if int(entry["Premierships Total"]) > 9:``
+
+.. code-block:: python
+    
+    import json
+
+    json_path = "files/afl_premiers_counts.json"
+    with open(json_path, "r") as f:
+        json_data = json.load(f)
+
+        j_key = list(json_data.keys())[0]
+        for entry in json_data[j_key]:
+            if int(entry["Premierships Total"]) >= 15:
+                print(f'{entry["Club"]} {entry["Premierships Total"]}')
+
+.. code-block:: 
+
+    Essendon 16
+    Carlton 16
+    Collingwood 15
+
+----
+
+dump method
+------------------
+
+| Use the dump method to convert a json object to a string and save it to a file.
+| The full syntax is at: https://docs.python.org/3/library/json.html#json.dump
+| Use the simple syntax:
+
+.. py:function:: json.dump(json)
+
+    :param json: a JSON object
+
+    | Returns a string from a json object
+
+| Use the syntax below for pretty printing:
+
+.. py:function:: json.dumps(json, indent=2)
+
+    :param json: a JSON object
+    :param indent: the number of spaces to indent
+
+    | Returns a string from a json object using indenting.
+
+----
+
+dump json data to a file
+--------------------------
+
+| The code below does the same processing as an example above, but dumps the json to a file.
+
+.. code-block:: python
+    
+    import json
+
+    emp_str = """
+    {"employees":
+    [{"firstName":"John","lastName":"Doe","gender":"Male"},
+    {"firstName":"Anna","lastName":"Smith","gender":"Female"},
+    {"firstName":"Peter","lastName":"Jones","gender":"Male"}]
+    }
+    """
+
+    # convert to json object
+    data_json = json.loads(emp_str)
+    # delete each firstname
+    for emp in data_json["employees"]:
+        del emp["gender"]
+
+    # convert to a string
+    data_str = json.dumps(data_json, indent=2)
+
+    json_path = "files/employees2.json"
+    with open(json_path, 'w', encoding='utf-8') as f2:
+        json.dump(data, f2, indent=2)
+
+
+| The file, employees2.json, contents are shown below.
+
+.. code-block:: 
+
+  {
+    "employees": [
+      {
+        "firstName": "John",
+        "lastName": "Doe"
+      },
+      {
+        "firstName": "Anna",
+        "lastName": "Smith"
+      },
+      {
+        "firstName": "Peter",
+        "lastName": "Jones"
+      }
+    ]
+  }
+
+
+----
+
+dump json processed file data to a file
+----------------------------------------
+
+| The code below loads a json file, processes it and dumps the json to a file.
+| ``data_list = []`` holds the dictionaries for each entry that meet the criteria: ``if int(entry["Premierships Total"]) >=15:``.
+| ``keys_premiers = ["Club", "Premierships Total"]`` is used to store the dictionary keys that will be kept.
+| ``entry_dict = {key: entry[key] for key in keys_premiers}`` builds the dictionary using just the chosen keys in the list: keys_premiers.
+| ``data = {mainkey: data_list}`` makes the json data.
+
+.. code-block:: python
+    
+    import json
+
+    json_path = "files/afl_premiers_counts.json"
+    json_path2 = "files/afl_premiers_top.json"
+    data_list = []
+    keys_premiers = ["Club", "Premierships Total"]
+    mainkey = "premiers"
+    with open(json_path, encoding='utf-8') as f:
+        json_data = json.load(f)
+        # append data 
+        for entry in json_data[mainkey]:
+            if int(entry["Premierships Total"]) >=15:
+                entry_dict = {key: entry[key] for key in keys_premiers}
+                data_list.append(entry_dict)
+
+    data = {mainkey: data_list}      
+    # Open a json writer, and use the json.dumps() function to dump data
+    with open(json_path2, 'w', encoding='utf-8') as f2:
+        json.dump(data, f2, indent=2)
+
+
+
+| The file, afl_premiers_top.json, contents are shown below.
+
+.. code-block:: 
+
+  {
+    "premiers": [
+      {
+        "Club": "Essendon",
+        "Premierships Total": "16"
+      },
+      {
+        "Club": "Carlton",
+        "Premierships Total": "16"
+      },
+      {
+        "Club": "Collingwood",
+        "Premierships Total": "15"
+      }
+    ]
+  }

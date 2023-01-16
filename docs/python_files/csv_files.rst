@@ -303,7 +303,7 @@ Syntax:
 
 .. py:class:: DictWriter.writeheader()
     
-    | Write a row with the field names (as specified in the constructor) to the writer's file object, formatted according to the current dialect. 
+    | Write a row with the field names (as specified in the constructor) to the writer's file object.
     | Return the return value of the csvwriter.writerow() call used internally.
 
 ----
@@ -328,6 +328,14 @@ DictWriter with fieldnames
             for line in csv_reader:
                 csv_writer.writerow(line)
 
+.. code-block:: 
+
+    letter	frequency
+    A	0.08167
+    B	0.01492
+    ...
+
+----
 
 DictWriter with selected fieldnames
 --------------------------------------
@@ -355,9 +363,10 @@ DictWriter with selected fieldnames
                 csv_writer.writerow(fieldnames_dict)
 
 .. code-block:: 
-    
+
     Year	Premiership team
     2022	Geelong Cats
     2021	Melbourne
     2020	Richmond
     ...
+
