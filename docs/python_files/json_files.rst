@@ -27,10 +27,14 @@ Structure
     {"firstName":"Peter","lastName":"Jones","gender":"Male"}]
     }
 
+| The simplified structure is ``{mainkey:[dictionaries]}``
+| ``"employees"`` is the mainkey
+| ``{"firstName":"John","lastName":"Doe","gender":"Male"}`` is the first dictionary in the list of dictionaries.
+
 ----
 
-Loadstring loads function
-----------------------------
+Load a string: loads function
+-------------------------------
 
 | Use the loads function to convert a string to json.
 | The full syntax is at: https://docs.python.org/3/library/json.html#json.loads
@@ -44,10 +48,10 @@ Loadstring loads function
 
 ----
 
-Loading a json string
-------------------------
+Printing data from a json string
+-------------------------------------
 
-| The code below loads the json string, iterates through the list of employees and prints the name of each employee using an f string.
+| The code below loads the json string, iterates through the list of employee dictionaries and prints the name of each employee using an f string.
 
 
 .. code-block:: python
@@ -94,12 +98,12 @@ dumps function
     :param json: a JSON object
     :param indent: the number of spaces to indent
 
-    | Returns a string from a json object using specified indenting.
+    | Returns a string from a json object using indenting.
 
 ----
 
-Dumping json to a string
------------------------------------------------
+Printing specific keys from json objects
+-----------------------------------------
 
 | The code below deletes the gender key then converts the json to a string, then prints it.
 
@@ -132,11 +136,11 @@ Dumping json to a string
 
 ----
 
-Dumping json to a string with pretty printing
------------------------------------------------
+Printing specific keys from json objects with pretty printing
+--------------------------------------------------------------
 
 | The code below does pretty printing via: ``data_str = json.dumps(data_json, indent=2)``
-| The "gender" key is deleted for each employee record.
+| The "gender" key is deleted from each employee record.
 | The json object is then dumped to a string format for printing.
 
 .. code-block:: python
@@ -252,7 +256,7 @@ Printing specific keys
 dump method
 ------------------
 
-| Use the dump method to convert a json object to a string and save it to a file.
+| Use the dump method to save a json object to a file.
 | The full syntax is at: https://docs.python.org/3/library/json.html#json.dump
 | Use the simple syntax:
 
@@ -260,7 +264,7 @@ dump method
 
     :param json: a JSON object
 
-    | Returns a string from a json object
+    | Save a json object to a file
 
 | Use the syntax below for pretty printing:
 
@@ -269,7 +273,7 @@ dump method
     :param json: a JSON object
     :param indent: the number of spaces to indent
 
-    | Returns a string from a json object using indenting.
+    | Save a json object to a file using indenting.
 
 ----
 
@@ -292,16 +296,13 @@ dump json data to a file
 
     # convert to json object
     data_json = json.loads(emp_str)
-    # delete each firstname
+    # delete gender key
     for emp in data_json["employees"]:
         del emp["gender"]
 
-    # convert to a string
-    data_str = json.dumps(data_json, indent=2)
-
     json_path = "files/employees2.json"
     with open(json_path, 'w', encoding='utf-8') as f2:
-        json.dump(data, f2, indent=2)
+        json.dump(data_json, f2, indent=2)
 
 
 | The file, employees2.json, contents are shown below.
@@ -381,3 +382,6 @@ dump json processed file data to a file
       }
     ]
   }
+
+
+
