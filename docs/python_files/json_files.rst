@@ -28,7 +28,7 @@ Structure
     }
 
 | The simplified structure is ``{mainkey:[dictionaries]}``
-| ``"employees"`` is the mainkey
+| ``"employees"`` is the mainkey.
 | ``{"firstName":"John","lastName":"Doe","gender":"Male"}`` is the first dictionary in the list of dictionaries.
 
 ----
@@ -78,8 +78,8 @@ Printing data from a json string
 
 ----
 
-dumps function
-------------------
+Convert a json object to a string: dumps function
+----------------------------------------------------
 
 | Use the dumps function to convert a json object to a string.
 | The full syntax is at: https://docs.python.org/3/library/json.html#json.dumps
@@ -228,9 +228,10 @@ Printing specific keys
 ------------------------
 
 | The code below loads the json file and prints specific keys.
-| The main key to the json file is "premiers". This can be obtained using ``j_key = list(json_data.keys())[0]``.
+| The main key to the json file is "premiers". 
+| This could be obtained using ``j_key = list(json_data.keys())[0]``.
 | The code below prints the names of clubs with 15 or more premierships (up to 2022)
-| Note that the json values are strings and need to be converted to ints for: ``if int(entry["Premierships Total"]) > 9:``
+| Note that the json values are strings and numbers as strings need to be converted to ints as in: ``if int(entry["Premierships Total"]) > 9:``
 
 .. code-block:: python
     
@@ -240,8 +241,7 @@ Printing specific keys
     with open(json_path, "r") as f:
         json_data = json.load(f)
 
-        j_key = list(json_data.keys())[0]
-        for entry in json_data[j_key]:
+        for entry in json_data["premiers"]:
             if int(entry["Premierships Total"]) >= 15:
                 print(f'{entry["Club"]} {entry["Premierships Total"]}')
 
@@ -280,7 +280,7 @@ dump method
 dump json data to a file
 --------------------------
 
-| The code below does the same processing as an example above, but dumps the json to a file.
+| The code below does the same processing as a previous example, but dumps the json to a file.
 
 .. code-block:: python
     
@@ -345,14 +345,14 @@ dump json processed file data to a file
     json_path = "files/afl_premiers_counts.json"
     json_path2 = "files/afl_premiers_top.json"
     data_list = []
-    keys_premiers = ["Club", "Premierships Total"]
+    keys_to_keep = ["Club", "Premierships Total"]
     mainkey = "premiers"
     with open(json_path, encoding='utf-8') as f:
         json_data = json.load(f)
         # append data 
         for entry in json_data[mainkey]:
             if int(entry["Premierships Total"]) >=15:
-                entry_dict = {key: entry[key] for key in keys_premiers}
+                entry_dict = {key: entry[key] for key in keys_to_keep}
                 data_list.append(entry_dict)
 
     data = {mainkey: data_list}      
