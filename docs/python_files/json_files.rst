@@ -5,7 +5,7 @@ Json files
 | See: https://docs.python.org/3/library/json.html#module-json
 | See: https://www.youtube.com/watch?v=9N6a-VLBa2I&list=RDCMUCCezIgC97PvUuR4_gbFUs5g&start_radio=1&rv=9N6a-VLBa2I&t=1
 
-| json files are common when working with APIs and configuration files.
+| json files are common when working with APIs and configuration, settings and preference files.
 | json stands for Java Script Object Notation but is independent of programming languages.
 
 | To minify json online see: https://onlinejsontools.com/minify-json
@@ -17,7 +17,7 @@ Structure
 ---------------
 
 | json looks like a dictionary.
-| The key of "employees" has a value consisting of an array of 3 objects with keys: "firstName" and "lastName".
+| The key of "employees" has a value consisting of an array of 3 objects with keys: "firstName",  "lastName" and "gender".
 
 .. code:: 
 
@@ -40,14 +40,14 @@ loads method
 
     :param string: a string containing a JSON document
 
-    | Returns a a json object from a string
+    | Returns a json object from a string
 
 ----
 
 Loading a json string
 ------------------------
 
-| The code below loads the json string, iterates through the list of employees and prints the name of each employee.
+| The code below loads the json string, iterates through the list of employees and prints the name of each employee using an f string.
 
 
 .. code-block:: python
@@ -64,7 +64,7 @@ Loading a json string
 
     data_json = json.loads(emp_str)
     for emp in data_json["employees"]:
-        print(emp["firstName"],emp["lastName"])
+        print(f'{emp["firstName"]} {emp["lastName"]}')
 
 .. code-block:: 
 
@@ -77,7 +77,7 @@ Loading a json string
 dumps method
 ------------------
 
-| Use the dumps method to a json object to a sting.
+| Use the dumps method to convert a json object to a sting.
 | The full syntax is at: https://docs.python.org/3/library/json.html#json.dumps
 | Use the simple syntax:
 
@@ -92,11 +92,10 @@ dumps method
 .. py:function:: json.dumps(json, indent=2, sort_keys=True)
 
     :param json: a JSON object
-    :param indent: teh number of spaces to indent
+    :param indent: the number of spaces to indent
     :param sort_keys: set to True to sort the keys alphabetically
 
-    | Returns a string from a json object 
-
+    | Returns a string from a json object using indenting and sorting of keys.
 
 ----
 

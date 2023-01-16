@@ -321,17 +321,43 @@ DictWriter with fieldnames
 
     with open('files/letter_frequency.csv', 'r') as csv_file:
         csv_reader = csv.DictReader(csv_file)
-
         with open('files/letter_frequency_tab.csv', 'w', newline='') as new_file:
             fieldnames = ['letter', 'frequency']
-
             csv_writer = csv.DictWriter(new_file, fieldnames=fieldnames, delimiter='\t')
-
             csv_writer.writeheader()
-
             for line in csv_reader:
                 csv_writer.writerow(line)
 
 
+DictWriter with selected fieldnames
+--------------------------------------
+
+| The code below uses DictReader to write to a new csv file.
+| Fieldnames need to be given to covert the dictionary rows to output for the writer.
+| Download the test csv file :download:`afl_premiers_2000s.csv <files/afl_premiers_2000s.csv>`
+| The fieldnames in the downlaoded file are: "Index,Year,Premiership team,Runner-up"
+| The code below uses dictionary comprehension, ``fieldnames_dict = {key: line[key] for key in fieldnames}``, on each row, to produce a new dictionary for writing to the new csv file.
 
 
+.. code-block:: python
+    
+    import csv
+
+    with open('files/afl_premiers_2000s.csv', 'r') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+
+        with open('files/afl_premiers_2000s_tabbed.csv', 'w', newline='') as new_file:
+            fieldnames = ["Year","Premiership team"]
+            csv_writer = csv.DictWriter(new_file, fieldnames=fieldnames, delimiter='\t')
+            csv_writer.writeheader()
+            for line in csv_reader:
+                fieldnames_dict = {key: line[key] for key in fieldnames}
+                csv_writer.writerow(fieldnames_dict)
+
+.. code-block:: 
+    
+    Year	Premiership team
+    2022	Geelong Cats
+    2021	Melbourne
+    2020	Richmond
+    ...
