@@ -2,16 +2,9 @@
 xml files
 ==========================
 
-| xml stands for Application Programming Interface. 
-| The API defines how two applications communicate with each other using requests and responses.
+| XML stands for eXtensible Markup Language.
+| XML is a markup language.
+| XML was designed to store and transport data in a software- and hardware-independent way.
+| XML stores data in plain text format.
+| With XML, the author must define both the tags and the document structure.
 
-| See: https://docs.python.org/3/library/xml.etree.elementtree.html
-| Corey Schafer video See: https://www.youtube.com/watch?v=q5uM4VKywbA&list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7&index=15
-| Socratica video See:https://www.youtube.com/watch?v=j0xr0-IAqyk&list=RDCMUCW6TXMZ5Pq6yL6_k5NZ2e0Q&index=21
-
-----
-
-| The API defines how two applications communicate with each other using requests and responses.
-
-
-----
