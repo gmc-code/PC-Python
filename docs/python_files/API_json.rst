@@ -210,3 +210,48 @@ Reading weather json
     2023-01-21 14.4 26.7
     2023-01-22 15.9 26.7
     2023-01-23 16.7 28.6
+
+----
+
+Plot weather data
+---------------------
+
+| As an extension, the weather data is plotted below.
+
+.. code-block:: python
+
+    import json
+    from urllib.request import urlopen
+    import matplotlib.pyplot as plt
+
+    url = "https://api.open-meteo.com/v1/forecast?latitude=-37.81&longitude=144.96&daily=temperature_2m_max,temperature_2m_min&timezone=Australia%2FSydney"
+    with urlopen(url) as response:
+        source = response.read()
+    data = json.loads(source)
+    dates_list = data["daily"]["time"]
+    max_list = data["daily"]["temperature_2m_max"]
+    min_list = data["daily"]["temperature_2m_min"]
+
+    xAxis = dates_list
+    tmax = max_list
+    tmin = min_list
+    plt.grid(True)
+    plt.xlabel('date')
+    plt.ylabel('temperature')
+    plt.title('Melbourne Temperature forecast Jan 2023')
+
+    ## LINE GRAPH ##
+    plt.plot(xAxis, tmax, color='red', marker='o', label = "Max Temp")
+    plt.plot(xAxis, tmin, color='blue', marker='x', label = "Min Temp")
+
+    # format dates so they are angled to fit
+    plt.gcf().autofmt_xdate()
+    plt.legend()
+    plt.show()
+
+
+.. image:: images/weather.png
+    :scale: 60 %
+    :align: center
+    :alt: weather
+
