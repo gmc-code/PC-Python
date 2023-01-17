@@ -113,7 +113,7 @@ next function
 
 | The next() function returns the next item in an iterator.
 
-Syntax:
+| Syntax:
 
 .. py:function:: next(iterable, default)
 
