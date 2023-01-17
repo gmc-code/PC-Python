@@ -3,11 +3,26 @@ csv files
 ==========================
 
 | See: https://docs.python.org/3/library/csv.html
-| See video guide at: https://www.youtube.com/watch?v=q5uM4VKywbA&list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7&index=15
+| Corey Schafer video See: https://www.youtube.com/watch?v=q5uM4VKywbA&list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7&index=15
+| Socratica video See: https://www.youtube.com/watch?v=Xi52tx6phRU&list=RDCMUCW6TXMZ5Pq6yL6_k5NZ2e0Q&index=1
 
 | csv files are comma separated files. 
 | Data is separated or delimited within the same line by a comma.
 | csv files are not restricted to using commas as delimiters. Other delimiters are also used, such as tabs.
+
+----
+
+Header rows
+------------------
+
+| csv files may have a header row that names each column.
+| In the csv snippet below, the first row a header row.
+
+.. code-block::
+
+    Month,Abbrev,Numeric
+    January,Jan,1
+    ...
 
 ----
 

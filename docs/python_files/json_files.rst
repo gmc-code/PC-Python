@@ -2,11 +2,13 @@
 Json files
 ==========================
 
-| See: https://docs.python.org/3/library/json.html#module-json
-| See: https://www.youtube.com/watch?v=9N6a-VLBa2I&list=RDCMUCCezIgC97PvUuR4_gbFUs5g&start_radio=1&rv=9N6a-VLBa2I&t=1
-
 | json files are common when working with APIs and configuration, settings and preference files.
 | json stands for Java Script Object Notation but is independent of programming languages.
+
+| See: https://docs.python.org/3/library/json.html#module-json
+| Corey Schafer video See: https://www.youtube.com/watch?v=9N6a-VLBa2I&list=RDCMUCCezIgC97PvUuR4_gbFUs5g&start_radio=1&rv=9N6a-VLBa2I&t=1
+| Socratica video See: https://www.youtube.com/watch?v=pTT7HMqDnJw&list=RDCMUCW6TXMZ5Pq6yL6_k5NZ2e0Q&index=2
+
 
 | To minify json online see: https://onlinejsontools.com/minify-json
 | To produce pretty json see: https://onlinejsontools.com/prettify-json

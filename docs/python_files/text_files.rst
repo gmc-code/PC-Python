@@ -8,7 +8,8 @@ Text files
 | See: https://docs.python.org/3/library/functions.html#open
 | See: https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 
-| See video guide at: https://www.youtube.com/watch?v=Uh2ebFW8OYM&list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7&index=11
+| Corey Schafer video See: https://www.youtube.com/watch?v=Uh2ebFW8OYM&list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7&index=11
+| Socratica video See: https://www.youtube.com/watch?v=4mX0uPQFLDU&list=RDCMUCW6TXMZ5Pq6yL6_k5NZ2e0Q&index=7
 
 | Download the test csv file :download:`12days.txt <files/12days.txt>`
 
