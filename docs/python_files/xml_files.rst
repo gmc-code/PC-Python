@@ -16,7 +16,7 @@ xml files
 | docs, See: https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree
 | W3schools, See: https://www.w3schools.com/xml/default.asp
 
-.. admonition:: Note
+.. admonition:: Warning
 
     | The XML modules are not secure against erroneous or maliciously constructed data. 
     | If you need to parse untrusted or unauthenticated data see the defusedxml Package.
