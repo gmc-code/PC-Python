@@ -2,7 +2,7 @@
 xml files
 ==========================
 
-| API stands for Application Programming Interface. 
+| xml stands for Application Programming Interface. 
 | The API defines how two applications communicate with each other using requests and responses.
 
 | See: https://docs.python.org/3/library/xml.etree.elementtree.html
@@ -13,3 +13,5 @@ xml files
 
 | The API defines how two applications communicate with each other using requests and responses.
 
+
+----
