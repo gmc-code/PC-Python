@@ -19,7 +19,11 @@ Structure
 ---------------
 
 | json looks like a dictionary.
-| The key of "employees" has a value consisting of an array of 3 objects with keys: "firstName",  "lastName" and "gender".
+| json uses {} brackets.
+| json uses key:value pairs. e.g. ``"firstName":"John"``
+| json can use [] to make an array of values.
+| The key of "employees" has a value consisting of an array of 3 objects.
+| ``{"firstName":"John","lastName":"Doe","gender":"Male"}`` has 3 keys: "firstName",  "lastName" and "gender".
 
 .. code:: 
 
@@ -29,7 +33,7 @@ Structure
     {"firstName":"Peter","lastName":"Jones","gender":"Male"}]
     }
 
-| The simplified structure is ``{mainkey:[dictionaries]}``
+| The simplified structure above is ``{mainkey:[dictionaries]}``
 | ``"employees"`` is the mainkey.
 | ``{"firstName":"John","lastName":"Doe","gender":"Male"}`` is the first dictionary in the list of dictionaries.
 
@@ -186,6 +190,77 @@ Printing specific keys from json objects with pretty printing
       }
     ]
   }
+
+
+----
+
+Convert a dict to json
+------------------------
+
+| The cricket dictionary below, with just key value pairs, can be dumped to a json string, then loaded as json.
+
+.. code-block:: python
+    
+    import json
+
+    cricket_dict = {
+            "player": "Sobers",
+            "average": "57.8"
+        }
+
+    cricket_jsonstr = json.dumps(cricket_dict, indent=4)
+    cricket_json = json.loads(cricket_jsonstr)
+    print(f'{cricket_json["player"]} averaged {cricket_json["average"]}')
+
+| Each value is accessed using keys. e.g. ``cricket_json["player"]`` returns "Sobers".
+
+.. code-block:: 
+
+    Sobers averaged 57.8
+
+----
+
+Convert a nested dict to json
+------------------------------
+
+| The sportsman dictionary below, with 4 sprt nested dictionaries, can be dumped to a json string, then loaded as json.
+
+.. code-block:: python
+    
+    import json
+
+    spt_dict = {
+        "cricket": {
+            "player": "Sobers",
+            "average": "57.8 runs per innings",
+        },
+        "AFL": {
+            "player": "Locket",
+            "average": "4.84 goals per game",
+        },
+        "soccer": {
+            "player": "Pele",
+            "average": "0.92 goals per game",
+        },
+        "basketball": {
+            "player": "Bryant",
+            "average": "25.0 points per game",
+        }
+    }
+
+    spt_jsonstr = json.dumps(spt_dict, indent=4)
+    spt_json = json.loads(spt_jsonstr)
+    for sport in spt_json:
+            print(f'{spt_json[sport]["player"]} averaged {spt_json[sport]["average"]}')
+
+| Each value is accessed using nested keys. e.g. ``spt_json[sport]["player"]`` returns "Sobers" when sport is "cricket".
+
+.. code-block:: 
+
+    Sobers averaged 57.8 runs per innings
+    Locket averaged 4.84 goals per game
+    Pele averaged 0.92 goals per game
+    Bryant averaged 25.0 points per game
 
 
 ----
