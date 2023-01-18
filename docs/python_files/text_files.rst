@@ -196,13 +196,14 @@ Appending to a text file
 
 ----
 
-Copying a text file
+Copying parts of a text file
 -----------------------------
 
 | In the code below, rf is the read file object.
 | wf is the file object for writing.
-| Each line of the file **12days.txt** is written to the file **12days_copy.txt**.
 | Multiple lines can be written to the same file within the **with open** context mamnager.
+
+| The code below copies each line of the file **12days.txt** to the file **12days_copy.txt**.
 
 .. code-block:: python
     
@@ -213,8 +214,14 @@ Copying a text file
             for line in rf:
                 wf.write(line)
 
+.. code-block:: 
 
-| Every second line can be copied by enumerating the file object, rf, then using the using the modulus operator, %, to get every second line.
+    1 partridge in a pear tree
+    2 turtle-doves
+    3 French hens
+    ...
+
+| Every second line can be copied by enumerating the file object, rf, then using the modulus operator, %, to get every second line.
 
 .. code-block:: python
 
@@ -233,3 +240,4 @@ Copying a text file
     3 French hens
     5 golden rings
     ...
+

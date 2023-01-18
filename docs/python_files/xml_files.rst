@@ -13,7 +13,8 @@ xml files
 | Elements can contain attributes within the start tag as key value pairs. e.g <name id="1">Joe</name>
 | Elements can contain text between the tags and other elements. e.g <name id="1">Joe<nickname>Joey</nickname></name>
 
-| docs, See: https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree
+| docs, See: https://docs.python.org/3/library/xml.html
+| docs, See: https://docs.python.org/3/library/xml.etree.elementtree.html
 | W3schools, See: https://www.w3schools.com/xml/default.asp
 
 .. admonition:: Warning
