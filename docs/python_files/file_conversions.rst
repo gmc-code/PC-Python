@@ -12,7 +12,6 @@ Convert a nested dict to json file
     
     import json
 
-
     sport_dict = {
         "cricket": {
             "player": "Sobers",
@@ -91,17 +90,61 @@ Convert a nested dict to json file
 
 ----
 
-csv to a row of dictionaries
-
-csv to json
+json to csv
 -------------
 
-| See: https://pythonexamples.org/python-csv-to-json/
-| THe csv needs a header row.
+| json is flexible in its structure.
+| Each particular json file structure will have a different conversion to csv.
+| The json stucture below is based on a simplified structure as ``{mainkey:[dictionaries]}``.
+| The employees json follows that structrue.
+| Each object in the array will become a row in csv.
+
+.. code:: json
+
+    {"employees":
+    [{"firstName":"John","lastName":"Doe","gender":"Male"},
+    {"firstName":"Anna","lastName":"Smith","gender":"Female"},
+    {"firstName":"Peter","lastName":"Jones","gender":"Male"}]
+    }
+
+.. code:: CSV
+
+    firstName	lastName	gender
+    John	Doe	Male
+    Anna	Smith	Female
+    Peter	Jones	Male
+
+.. code-block:: python
+
+    import json
+    import csv
 
 
-flat json to csv
+    csv_path = "files/employees.csv"
+    json_path = "files/employees.json"
+
+    with open(json_path, "r") as f:
+        json_data = json.load(f)
+
+        j_key = list(json_data.keys())[0]
+        fieldnames = list(json_data[j_key][0].keys())
+
+        with open(csv_path, 'w', newline='') as new_file:
+            csv_writer = csv.DictWriter(new_file, fieldnames=fieldnames, delimiter='\t')
+            csv_writer.writeheader()
+            for row in json_data[j_key]:
+                csv_writer.writerow(row)
+
+
+
+csv to json
 ------------------
+
+| See: https://pythonexamples.org/python-csv-to-json/
+| The csv needs a header row.
+
+
+----
 
 xml to json
 --------------
