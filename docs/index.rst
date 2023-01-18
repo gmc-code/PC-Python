@@ -69,6 +69,7 @@ PC-Python
     python_files/json_files.rst
     python_files/json_API.rst
     python_files/xml_files.rst
+    python_files/file_conversions.rst
 
 
 .. toctree::

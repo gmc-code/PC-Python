@@ -99,7 +99,7 @@ Convert a json object to a string: dumps function
 
 | Use the syntax below for pretty printing:
 
-.. py:function:: json.dumps(json, indent=2)
+.. py:function:: json.dumps(json, indent=4)
 
     :param json: a JSON object
     :param indent: the number of spaces to indent
@@ -145,7 +145,7 @@ Printing specific keys from json objects
 Printing specific keys from json objects with pretty printing
 --------------------------------------------------------------
 
-| The code below does pretty printing via: ``data_str = json.dumps(data_json, indent=2)``
+| The code below does pretty printing via: ``data_str = json.dumps(data_json, indent=4)``
 | The "gender" key is deleted from each employee record.
 | The json object is then dumped to a string format for printing.
 
@@ -168,7 +168,7 @@ Printing specific keys from json objects with pretty printing
         del emp["gender"]
 
     # convert to a string
-    data_str = json.dumps(data_json, indent=2)
+    data_str = json.dumps(data_json, indent=4)
     print(data_str)
 
 
@@ -345,7 +345,7 @@ dump method
 
 | Use the syntax below for pretty printing:
 
-.. py:function:: json.dumps(json, indent=2)
+.. py:function:: json.dumps(json, indent=4)
 
     :param json: a JSON object
     :param indent: the number of spaces to indent
@@ -379,29 +379,29 @@ dump json data to a file
 
     json_path = "files/employees2.json"
     with open(json_path, 'w', encoding='utf-8') as f2:
-        json.dump(data_json, f2, indent=2)
+        json.dump(data_json, f2, indent=4)
 
 
 | The file, employees2.json, contents are shown below.
 
 .. code-block:: 
 
-  {
-    "employees": [
-      {
-        "firstName": "John",
-        "lastName": "Doe"
-      },
-      {
-        "firstName": "Anna",
-        "lastName": "Smith"
-      },
-      {
-        "firstName": "Peter",
-        "lastName": "Jones"
-      }
-    ]
-  }
+    {
+        "employees": [
+            {
+                "firstName": "John",
+                "lastName": "Doe"
+            },
+            {
+                "firstName": "Anna",
+                "lastName": "Smith"
+            },
+            {
+                "firstName": "Peter",
+                "lastName": "Jones"
+            }
+        ]
+    }
 
 
 ----
@@ -435,7 +435,7 @@ dump json processed file data to a file
     data = {mainkey: data_list}      
     # Open a json writer, and use the json.dumps() function to dump data
     with open(json_path2, 'w', encoding='utf-8') as f2:
-        json.dump(data, f2, indent=2)
+        json.dump(data, f2, indent=4)
 
 
 
@@ -443,22 +443,21 @@ dump json processed file data to a file
 
 .. code-block:: 
 
-  {
-    "premiers": [
-      {
-        "Club": "Essendon",
-        "Premierships Total": "16"
-      },
-      {
-        "Club": "Carlton",
-        "Premierships Total": "16"
-      },
-      {
-        "Club": "Collingwood",
-        "Premierships Total": "15"
-      }
-    ]
-  }
-
+    {
+        "premiers": [
+            {
+                "Club": "Essendon",
+                "Premierships Total": "16"
+            },
+            {
+                "Club": "Carlton",
+                "Premierships Total": "16"
+            },
+            {
+                "Club": "Collingwood",
+                "Premierships Total": "15"
+            }
+        ]
+    }
 
 
