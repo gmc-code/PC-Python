@@ -18,12 +18,16 @@ Json files
 Structure
 ---------------
 
-| json looks like a dictionary.
 | json uses {} brackets.
-| json uses key:value pairs. e.g. ``"firstName":"John"``
+| json uses key:value pairs. e.g. ``"firstName":"Anna"``
+| json looks like a dictionary with key:value pairs.
+
+.. code:: 
+
+    {"firstName":"Anna","lastName":"Smith",}
+
 | json can use [] to make an array of values.
-| The key of "employees" has a value consisting of an array of 3 objects.
-| ``{"firstName":"John","lastName":"Doe","gender":"Male"}`` has 3 keys: "firstName",  "lastName" and "gender".
+| The key of "employees" has a value consisting of an array of 3 objects, each in {}.
 
 .. code:: 
 
@@ -35,14 +39,14 @@ Structure
 
 | The simplified structure above is ``{mainkey:[dictionaries]}``
 | ``"employees"`` is the mainkey.
-| ``{"firstName":"John","lastName":"Doe","gender":"Male"}`` is the first dictionary in the list of dictionaries.
+| ``[{"firstName":"John"..."gender":"Male"}]`` is the value.
 
 ----
 
 Load a string: loads function
 -------------------------------
 
-| Use the loads function to convert a string to json.
+| Use the **loads** function to convert a string to json.
 | The full syntax is at: https://docs.python.org/3/library/json.html#json.loads
 | Use the simple syntax:
 
