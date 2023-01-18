@@ -20,13 +20,19 @@ Structure
 
 | json uses {} brackets.
 | json uses key:value pairs. e.g. ``"firstName":"Anna"``
-| json looks like a dictionary with key:value pairs.
+| The simple json below looks like a dictionary with key:value pairs in {}.
 
 .. code:: 
 
-    {"firstName":"Anna","lastName":"Smith",}
+    {"firstName":"Anna","lastName":"Smith"}
 
 | json can use [] to make an array of values.
+
+.. code::
+
+    {"days30":["Apr","Jun","Sep","Nov"]}
+
+
 | The key of "employees" has a value consisting of an array of 3 objects, each in {}.
 
 .. code:: 
