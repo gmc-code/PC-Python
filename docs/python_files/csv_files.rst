@@ -68,7 +68,8 @@ Reading files
     
     import csv
 
-    with open('files/months.csv', 'r', newline='') as csv_file:
+    csv_path = 'files/months.csv'
+    with open(csv_path, 'r', newline='') as csv_file:
         csv_reader = csv.reader(csv_file)
         for row in csv_reader:
             print(row)
@@ -102,7 +103,8 @@ Reading files with non comma delimiter
     
     import csv
 
-    with open('files/months_tabbed.csv', 'r', newline='') as csv_file:
+    csv_path = 'files/months_tabbed.csv'
+    with open(csv_path, 'r', newline='') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter="\t")
         for row in csv_reader:
             print(row)
@@ -143,7 +145,8 @@ Using an index with the row lists
     
     import csv
 
-    with open('files/months.csv', 'r', newline='') as csv_file:
+    csv_path = 'files/months.csv'
+    with open(csv_path, 'r', newline='') as csv_file:
         csv_reader = csv.reader(csv_file)
         next(csv_reader)
         for row in csv_reader:
@@ -175,7 +178,8 @@ Padded strings
     
     import csv
 
-    with open('files/months.csv', 'r', newline='') as csv_file:
+    csv_path = 'files/months.csv'
+    with open(csv_path, 'r', newline='') as csv_file:
         csv_reader = csv.reader(csv_file)
         for row in csv_reader:
             padded_row = [str(i).ljust(14) for i in row]
@@ -208,11 +212,13 @@ Syntax:
     
     import csv
 
-    with open('files/months.csv', 'r', newline='') as csv_file:
+    csv_path = 'files/months.csv'
+    csv_path2 = 'files/months_tabbed.csv'
+
+    with open(csv_path, 'r', newline='') as csv_file:
         csv_reader = csv.reader(csv_file)
         # next(csv_reader)
-
-        with open('files/months_tabbed.csv', 'w', newline='') as new_csv_file:
+        with open(csv_path2, 'w', newline='') as new_csv_file:
             csv_writer = csv.writer(new_csv_file, delimiter="\t")
             for row in csv_reader:
                 csv_writer.writerow(row)
@@ -275,7 +281,8 @@ DictReading files
     
     import csv
 
-    with open('files/months.csv', 'r', newline='') as csv_file:
+    csv_path = 'files/months.csv'
+    with open(csv_path, 'r', newline='') as csv_file:
         csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
             print(row)
@@ -300,7 +307,8 @@ Using a key with the row dictionaries
     
     import csv
 
-    with open('files/months.csv', 'r', newline='') as csv_file:
+    csv_path = 'files/months.csv'
+    with open(csv_path, 'r', newline='') as csv_file:
         csv_reader = csv.DictReader
         (csv_file)
         
@@ -361,9 +369,12 @@ DictWriter with fieldnames
     
     import csv
 
-    with open('files/letter_frequency.csv', 'r') as csv_file:
+    csv_path = 'files/letter_frequency.csv'
+    csv_path2 = 'files/letter_frequency_tabbed.csv'
+
+    with open(csv_path, 'r') as csv_file:
         csv_reader = csv.DictReader(csv_file)
-        with open('files/letter_frequency_tab.csv', 'w', newline='') as new_file:
+        with open(csv_path2, 'w', newline='') as new_file:
             fieldnames = ['letter', 'frequency']
             csv_writer = csv.DictWriter(new_file, fieldnames=fieldnames, delimiter='\t')
             csv_writer.writeheader()
@@ -393,10 +404,13 @@ DictWriter with selected fieldnames
     
     import csv
 
-    with open('files/afl_premiers_2000s.csv', 'r') as csv_file:
+    csv_path = 'files/afl_premiers_2000s.csv'
+    csv_path2 = 'files/afl_premiers_2000s_tabbed.csv'
+
+    with open(csv_path, 'r') as csv_file:
         csv_reader = csv.DictReader(csv_file)
 
-        with open('files/afl_premiers_2000s_tabbed.csv', 'w', newline='') as new_file:
+        with open(csv_path2, 'w', newline='') as new_file:
             fieldnames = ["Year","Premiership team"]
             csv_writer = csv.DictWriter(new_file, fieldnames=fieldnames, delimiter='\t')
             csv_writer.writeheader()

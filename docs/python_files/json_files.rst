@@ -18,9 +18,8 @@ Json files
 Structure
 ---------------
 
-| json uses {} brackets.
-| json uses key:value pairs. e.g. ``"firstName":"Anna"``
-| The simple json below looks like a dictionary with key:value pairs in {}.
+| json uses key:value pairs in {} brackets.
+| The simple json below looks like a python dictionary.
 
 .. code:: 
 
@@ -34,9 +33,9 @@ Structure
 
 
 | In the code below, the key of "employees" has a value consisting of an array of 3 objects, each in {}.
-| The simplified structure above is ``{mainkey:[dictionaries]}``
-| ``"employees"`` is the mainkey.
-| ``[{"firstName":"John"..."gender":"Male"}]`` is the value.
+| The simplified structure is ``{mainkey:[dictionaries]}``
+| ``"employees"`` is the key.
+| ``[{"firstName":"John" ... "gender":"Male"}]`` is the value.
 
 .. code:: 
 
@@ -431,6 +430,7 @@ dump json processed file data to a file
 
     json_path = "files/afl_premiers_counts.json"
     json_path2 = "files/afl_premiers_top.json"
+    
     data_list = []
     keys_to_keep = ["Club", "Premierships Total"]
     mainkey = "premiers"

@@ -13,7 +13,7 @@ Convert a nested dict to json file
     import json
 
 
-    py_dict = {
+    sport_dict = {
         "cricket": {
             "player": "Sobers",
             "average": "57.8 runs per innings",
@@ -24,14 +24,15 @@ Convert a nested dict to json file
         }
     }
 
-    j_str = json.dumps(py_dict, indent=4)
+    j_str = json.dumps(sport_dict, indent=4)
     j_json = json.loads(j_str)
 
     json_path = "files/convert_dict_json.json"
     with open(json_path, 'w') as f:
         json.dump(j_json, f, indent=4)
 
-| The contents of the json file are below:
+| The contents of the json file are below.
+| THe json string in the file looks just like the python dictionary.
 
 .. code-block:: 
 
@@ -51,7 +52,7 @@ Convert a nested dict to json file
 
 .. admonition:: Tasks
 
-    #. Write a definition to do teh conversion from a python dictionary to a json file.
+    #. Write a definition to do the conversion from a python dictionary to a json file.
 
     .. dropdown::
         :icon: codescan
@@ -62,11 +63,11 @@ Convert a nested dict to json file
 
             .. tab-item:: Q1
 
-                Write a definition to do teh conversion from a python dictionary to a json file.
+                Write a definition to do the conversion from a python dictionary to a json file.
 
                 .. code-block:: python
 
-                    py_dict = {
+                    sport_dict = {
                         "cricket": {
                             "player": "Sobers",
                             "average": "57.8 runs per innings",
@@ -86,14 +87,18 @@ Convert a nested dict to json file
                             json.dump(j_json, f, indent=4)
                         return None
 
-                    dict_to_json_file(py_dict, json_path)
+                    dict_to_json_file(sport_dict, json_path)
 
 ----
 
-csv to row of dictionaries
+csv to a row of dictionaries
 
 csv to json
 -------------
+
+| See: https://pythonexamples.org/python-csv-to-json/
+| THe csv needs a header row.
+
 
 flat json to csv
 ------------------
@@ -102,5 +107,8 @@ xml to json
 --------------
 
 json to xml
+--------------
+
+
 
 
