@@ -114,6 +114,22 @@ json to csv
     Anna	Smith	Female
     Peter	Jones	Male
 
+
+| Some parts of the code need some explanation:
+
+| ``j_key = list(json_data.keys())[0]`` gets the key: "employees".
+| ``json_data.keys()`` return a dict object withe the key.
+| ``list(json_data.keys())`` converts the dict object to a list.
+| ``list(json_data.keys())[0]`` gives the key value "employees" which will be needed to get the fieldnames for the csv DictWriter.
+
+| ``fieldnames = list(json_data[j_key][0].keys())`` gets the fieldnames for the csv DictWriter, where j_key is "employees".
+| ``json_data[j_key]`` gives the array of dictionaries for each employee. These are listed below in the [].
+| ``json_data[j_key][0]`` gives the first employee dictionary: {"firstName":"John","lastName":"Doe","gender":"Male"}.
+| ``json_data[j_key][0].keys()`` gives a dict keys object.
+| ``list(json_data[j_key][0].keys()) converts the dict keys object into a list.
+
+| The dictionary elements of the json array are iterated over by: ``for row in json_data[j_key]``, where j_key is "employees".
+
 .. code-block:: python
 
     import json
@@ -136,6 +152,7 @@ json to csv
                 csv_writer.writerow(row)
 
 
+----
 
 csv to json
 ------------------
