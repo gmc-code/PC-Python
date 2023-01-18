@@ -223,7 +223,7 @@ Convert a dict to json
 Convert a nested dict to json
 ------------------------------
 
-| The sportsman dictionary below, with 4 sprt nested dictionaries, can be dumped to a json string, then loaded as json.
+| The sportsman dictionary below, with 4 sport nested dictionaries, can be dumped to a json string, then loaded as json.
 
 .. code-block:: python
     

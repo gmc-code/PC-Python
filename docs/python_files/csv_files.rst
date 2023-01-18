@@ -41,13 +41,13 @@ csv.reader
 
 Syntax:
 
-.. py:function:: csv.reader(csvfile, dialect='excel', **fmtparams)
+.. py:function:: csv.reader(f, dialect='excel', **fmtparams)
 
-    :param csvfile: a string for the file path to the csv file from the current directory.
+    :param f: a string for the file path to the csv file from the current directory.
     :param dialect: Use a set of parameters specific to a particular CSV dialect; Defaults to excel; one of ['excel', 'excel-tab', 'unix']
     :param fmtparams: optional fmtparams keyword arguments can be given to override individual formatting parameters in the current dialect.
 
-    | Return a reader object which is an iterable that behaves like a generator allowing iteration over lines in the given csvfile.
+    | Return a reader object which is an iterable that behaves like a generator allowing iteration over lines in the given f.
     | Each row read from the csv file is returned as a list of strings. 
     | No automatic data type conversion is performed unless the QUOTE_NONNUMERIC format option is specified
     | (in which case unquoted fields are transformed into floats).
@@ -190,9 +190,9 @@ csv writer
 
 Syntax:
 
-.. py:function:: csv.writer(csvfile, dialect='excel', **fmtparams)
+.. py:function:: csv.writer(f, dialect='excel', **fmtparams)
 
-    :param csvfile: a string for the file path to the csv file from the current directory.
+    :param f: a string for the file path to the csv file from the current directory.
     :param dialect: Use a set of parameters specific to a particular CSV dialect; Defaults to excel; one of ['excel', 'excel-tab', 'unix']
     :param fmtparams: optional fmtparams keyword arguments can be given to override individual formatting parameters in the current dialect.
 
@@ -246,13 +246,16 @@ Syntax:
 
 .. py:class:: csv.DictReader(f, fieldnames=None, restkey=None, restval=None, dialect='excel', *args, **kwds)
 
-    :param csvfile: a string for the file path to the csv file from the current directory.
+
+    :param f: a string for the file path to the csv file from the current directory.
+    :param fieldnames:  a sequence of keys that identify the order in which values in the dictionary passed to the writerow() method are written to file **f**.
+    :param restval: specify the value to be written if the dictionary is missing a key in **fieldnames**. 
     :param dialect: Use a set of parameters specific to a particular CSV dialect; Defaults to excel; one of ['excel', 'excel-tab', 'unix']
-    :param fmtparams: optional fmtparams keyword arguments can be given to override individual formatting parameters in the current dialect.
+    :param *args, **kwds: other optional or keyword arguments are passed to the underlying writer instance.
 
     | Create an object that operates like a regular reader but maps the information in each row to a dict whose keys are given by the optional fieldnames parameter.
     | The fieldnames parameter is a sequence. 
-    | If fieldnames is omitted, the values in the first row of file f will be used as the fieldnames. 
+    | If fieldnames is omitted, the values in the first row of file f will be used as the fieldnames.
     | The dictionary preserves their original ordering.
     | If a row has more fields than fieldnames, the remaining data is put in a list and stored with the fieldname specified by **restkey** (which defaults to None). 
     | If a non-blank row has fewer fields than fieldnames, the missing values are filled-in with the value of **restval** (which defaults to None).
@@ -319,10 +322,10 @@ DictWriter
 
 Syntax:
 
-.. py:class:: csv.DictWriter(csvfile, fieldnames, restval='', extrasaction='raise', dialect='excel', *args, **kwds)
+.. py:class:: csv.DictWriter(f, fieldnames, restval='', extrasaction='raise', dialect='excel', *args, **kwds)
 
-    :param csvfile: a string for the file path to the csv file from the current directory.
-    :param fieldnames:  a sequence of keys that identify the order in which values in the dictionary passed to the writerow() method are written to file **csvfile**.
+    :param f: a string for the file path to the csv file from the current directory.
+    :param fieldnames:  a sequence of keys that identify the order in which values in the dictionary passed to the writerow() method are written to file **f**.
     :param restval: specify the value to be written if the dictionary is missing a key in **fieldnames**. 
     :param extrasaction: indicates what action to take if the dictionary passed to the writerow() method contains a key not found in fieldnames. If it is set to 'raise', the default value, a ValueError is raised. If it is set to 'ignore', extra values in the dictionary are ignored. 
     :param dialect: Use a set of parameters specific to a particular CSV dialect; Defaults to excel; one of ['excel', 'excel-tab', 'unix']
