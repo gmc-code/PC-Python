@@ -90,12 +90,17 @@ Convert a nested dict to json file
 
 ----
 
+csv to row of dictionaries
+
 csv to json
 -------------
+
+flat json to csv
+------------------
 
 xml to json
 --------------
 
-
+json to xml
 
 
