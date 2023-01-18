@@ -33,7 +33,10 @@ Structure
     {"days30":["Apr","Jun","Sep","Nov"]}
 
 
-| The key of "employees" has a value consisting of an array of 3 objects, each in {}.
+| In the code below, the key of "employees" has a value consisting of an array of 3 objects, each in {}.
+| The simplified structure above is ``{mainkey:[dictionaries]}``
+| ``"employees"`` is the mainkey.
+| ``[{"firstName":"John"..."gender":"Male"}]`` is the value.
 
 .. code:: 
 
@@ -43,9 +46,6 @@ Structure
     {"firstName":"Peter","lastName":"Jones","gender":"Male"}]
     }
 
-| The simplified structure above is ``{mainkey:[dictionaries]}``
-| ``"employees"`` is the mainkey.
-| ``[{"firstName":"John"..."gender":"Male"}]`` is the value.
 
 ----
 
