@@ -49,7 +49,7 @@ Structure
 
 ----
 
-Load a string: loads function
+Loads
 -------------------------------
 
 | Use the **loads** function to convert a string to json.
@@ -94,8 +94,8 @@ Printing data from a json string
 
 ----
 
-Convert a json object to a string: dumps function
-----------------------------------------------------
+Dumps
+-------------
 
 | Use the dumps function to convert a json object to a string.
 | The full syntax is at: https://docs.python.org/3/library/json.html#json.dumps
@@ -275,7 +275,7 @@ Convert a nested dict to json
 
 ----
 
-Load file function
+Load
 ----------------------------
 
 | Use the load function to load a file to json.
@@ -340,7 +340,7 @@ Printing specific keys
 
 ----
 
-dump method
+Dump
 ------------------
 
 | Use the dump method to save a json object to a file.
@@ -355,7 +355,7 @@ dump method
 
 | Use the syntax below for pretty printing:
 
-.. py:function:: json.dumps(json, indent=4)
+.. py:function:: json.dump(json, indent=4)
 
     :param json: a JSON object
     :param indent: the number of spaces to indent
@@ -388,8 +388,8 @@ dump json data to a file
         del emp["gender"]
 
     json_path = "files/employees2.json"
-    with open(json_path, 'w', encoding='utf-8') as f2:
-        json.dump(data_json, f2, indent=4)
+    with open(json_path, 'w', encoding='utf-8') as f:
+        json.dump(data_json, f, indent=4)
 
 
 | The file, employees2.json, contents are shown below.
