@@ -86,6 +86,13 @@ Reading files with non comma delimiter
 
 | Download the test csv file :download:`months_tabbed.csv <files/months_tabbed.csv>`
 
+.. code-block::
+
+    Month	Abbrev	Numeric
+    January	Jan	1
+    ...
+
+
 | The code below opens a csv file and uses a for loop to iterate over each row of the csv_reader object.
 | Each row is a list of the **tab** separated values from the file.
 | ``csv_reader = csv.reader(csv_file, delimiter="\t")`` uses the delimiter argument since the csv file used is tab delimited.
