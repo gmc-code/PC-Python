@@ -217,6 +217,23 @@ Syntax:
             for row in csv_reader:
                 csv_writer.writerow(row)
 
+
+| Before: 
+
+.. code-block::
+
+    Month,Abbrev,Numeric
+    January,Jan,1
+    ...
+
+| After:
+
+.. code-block::
+
+    Month	Abbrev	Numeric
+    January	Jan	1
+    ...
+
 ----
 
 DictReader
