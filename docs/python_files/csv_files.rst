@@ -10,6 +10,8 @@ csv files
 | Data is separated or delimited within the same line by a comma.
 | csv files are not restricted to using commas as delimiters. Other delimiters are also used, such as tabs.
 
+| csv files are useful as tables of values with headers for each column.
+
 ----
 
 Header rows
@@ -20,7 +22,7 @@ Header rows
 
 .. code-block::
 
-    Month,Abbrev,Numeric
+    Month,Abbr,Numeric
     January,Jan,1
     ...
 
@@ -58,7 +60,7 @@ Syntax:
 Reading files
 --------------------
 
-| Download the test csv file :download:`months.csv <files/months.csv>`
+| Download the csv file :download:`months.csv <files/months.csv>`
 
 | The code below opens a csv file and uses a for loop to iterate over each row of the csv_reader object.
 | Each row is a list of the comma separated values.
@@ -76,22 +78,26 @@ Reading files
 
 .. code-block::
 
-    ['Month,Abbrev,Numeric']
+    ['Month,Abbr,Numeric']
     ['January,Jan,1']
+    ['Feburary,Feb,2']
     ...
+    ['December,Dec,12']
 
 ----
 
 Reading files with non comma delimiter
 ----------------------------------------------
 
-| Download the test csv file :download:`months_tabbed.csv <files/months_tabbed.csv>`
+| Download the csv file :download:`months_tabbed.csv <files/months_tabbed.csv>`
 
 .. code-block::
 
-    Month	Abbrev	Numeric
+    Month	Abbr	Numeric
     January	Jan	1
+    Feburary	Feb	2
     ...
+    December	Dec	12
 
 
 | The code below opens a csv file and uses a for loop to iterate over each row of the csv_reader object.
@@ -111,9 +117,11 @@ Reading files with non comma delimiter
 
 .. code-block::
 
-    ['Month,Abbrev,Numeric']
+    ['Month,Abbr,Numeric']
     ['January,Jan,1']
+    ['Feburary,Feb,2']
     ...
+    ['December,Dec,12']
 
 ----
 
@@ -139,7 +147,7 @@ Using an index with the row lists
 -----------------------------------
 
 | The code below just prints the part of each row that has an index of 1.
-| Use ``next(csv_reader)`` to skip the first row which has the headings: "Month,Abbrev,Numeric".
+| Use ``next(csv_reader)`` to skip the first row which has the headings: "Month,Abbr,Numeric".
 
 .. code-block:: python
     
@@ -166,10 +174,12 @@ Padded strings
 
 .. code-block::
 
-    |  Month         |  Abbrev        |  Numeric       |
+    |  Month         |  Abbr          |  Numeric       |
     |  January       |  Jan           |  1             |
     |  Feburary      |  Feb           |  2             |
     ...
+    |  December      |  Dec           |  12            |
+
 
 | The list comprehension, ``padded_row = [str(i).ljust(14) for i in row]``, builds a list which pads the strings with spaces on the right to reach 14 characters in length.
 | The print statement uses the string join method to concatenate the padded list elements with pipes before and after each line.
@@ -228,17 +238,21 @@ Syntax:
 
 .. code-block::
 
-    Month,Abbrev,Numeric
+    Month,Abbr,Numeric
     January,Jan,1
+    Feburary,Feb,2
     ...
+    December,Dec,12
 
 | After:
 
 .. code-block::
 
-    Month	Abbrev	Numeric
+    Month	Abbr	Numeric
     January	Jan	1
+    Feburary	Feb	2
     ...
+    December	Dec	12
 
 ----
 
@@ -272,10 +286,10 @@ Syntax:
 DictReading files
 --------------------
 
-| Download the test csv file :download:`months.csv <files/months.csv>`
+| Download the csv file :download:`months.csv <files/months.csv>`
 
 | The code below uses DictReader, and so, produces a dictionary for each row.
-| The first row, "Month,Abbrev,Numeric", is used for the dictionary keys, so is not printed below.
+| The first row, "Month,Abbr,Numeric", is used for the dictionary keys, so is not printed below.
 
 .. code-block:: python
     
@@ -289,18 +303,17 @@ DictReading files
 
 .. code-block::
 
-    {'Month': 'January', 'Abbrev': 'Jan', 'Numeric': '1'}
-    {'Month': 'Feburary', 'Abbrev': 'Feb', 'Numeric': '2'}
-    {'Month': 'March', 'Abbrev': 'Mar', 'Numeric': '3'}
-
+    {'Month': 'January', 'Abbr': 'Jan', 'Numeric': '1'}
+    {'Month': 'Feburary', 'Abbr': 'Feb', 'Numeric': '2'}
     ...
+    {"Month": "December", "Abbr": "Dec", "Numeric": "12"}
 
 ----
 
 Using a key with the row dictionaries
 --------------------------------------
 
-| The code below just prints the part of each row that has a key of "Abbrev".
+| The code below just prints the part of each row that has a key of "Abbr".
 
 
 .. code-block:: python
@@ -313,7 +326,7 @@ Using a key with the row dictionaries
         (csv_file)
         
         for row in csv_reader:
-            print(row["Abbrev"], end=", ")
+            print(row["Abbr"], end=", ")
 
 .. code-block::
 
@@ -361,9 +374,10 @@ Syntax:
 DictWriter with fieldnames
 --------------------------------------
 
+| Download the csv file :download:`letter_frequency.csv <files/letter_frequency.csv>`
+
 | The code below uses DictReader to write to a new csv file.
 | Fieldnames need to be given to covert the dictionary rows to output for the writer.
-| Download the test csv file :download:`letter_frequency.csv <files/letter_frequency.csv>`
 
 .. code-block:: python
     
@@ -387,15 +401,18 @@ DictWriter with fieldnames
     A	0.08167
     B	0.01492
     ...
+    Z	0.00074
 
 ----
 
 DictWriter with selected fieldnames
 --------------------------------------
 
+| Download the csv file :download:`afl_premiers_2000s.csv <files/afl_premiers_2000s.csv>`
+
 | The code below uses DictReader to write to a new csv file.
 | Fieldnames need to be given to covert the dictionary rows to output for the writer.
-| Download the test csv file :download:`afl_premiers_2000s.csv <files/afl_premiers_2000s.csv>`
+
 | The fieldnames in the downlaoded file are: "Index,Year,Premiership team,Runner-up"
 | The code below uses dictionary comprehension, ``fieldnames_dict = {key: line[key] for key in fieldnames}``, on each row, to produce a new dictionary for writing to the new csv file.
 
@@ -423,6 +440,6 @@ DictWriter with selected fieldnames
     Year	Premiership team
     2022	Geelong Cats
     2021	Melbourne
-    2020	Richmond
     ...
+    2000	Essendon
 

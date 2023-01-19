@@ -40,7 +40,7 @@ Getting free weather data from the web
 
 .. code-block:: 
 
-    b'{"latitude":-37.75,"longitude":145.0,"generationtime_ms":0.2799034118652344,"utc_offset_seconds":39600,"timezone":"Australia/Sydney","timezone_abbreviation":"AEDT","elevation":98.0,"daily_units":{"time":"iso8601","temperature_2m_max":"\xc2\xb0C","temperature_2m_min":"\xc2\xb0C"},"daily":{"time":["2023-01-17","2023-01-18","2023-01-19","2023-01-20","2023-01-21","2023-01-22","2023-01-23"],"temperature_2m_max":[36.6,26.4,19.0,22.9,26.4,28.0,27.2],"temperature_2m_min":[19.0,14.6,13.3,12.8,14.1,16.1,17.0]}}'
+    b'{"latitude":-37.75,"longitude":145.0,"generationtime_ms":0.2799034118652344,"utc_offset_seconds":39600,"timezone":"Australia/Sydney","timezone_Abbriation":"AEDT","elevation":98.0,"daily_units":{"time":"iso8601","temperature_2m_max":"\xc2\xb0C","temperature_2m_min":"\xc2\xb0C"},"daily":{"time":["2023-01-17","2023-01-18","2023-01-19","2023-01-20","2023-01-21","2023-01-22","2023-01-23"],"temperature_2m_max":[36.6,26.4,19.0,22.9,26.4,28.0,27.2],"temperature_2m_min":[19.0,14.6,13.3,12.8,14.1,16.1,17.0]}}'
 
 ----
 

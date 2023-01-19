@@ -33,17 +33,19 @@ Structure
     {"days30":["Apr","Jun","Sep","Nov"]}
 
 
-| In the code below, the key of "employees" has a value consisting of an array of 3 objects, each in {}.
-| The simplified structure is ``{mainkey:[dictionaries]}``
-| ``"employees"`` is the key.
-| ``[{"firstName":"John" ... "gender":"Male"}]`` is the value.
+| In the code below, the key of "employees" has a value consisting of a dictionary with 2 keys: "office_worker" and "writer".
+| The "office_worker" key has a value that is an array of 2 objects, each in {}.
 
 .. code:: 
 
-    {"employees":
-    [{"firstName":"John","lastName":"Doe","gender":"Male"},
-    {"firstName":"Anna","lastName":"Smith","gender":"Female"},
-    {"firstName":"Peter","lastName":"Jones","gender":"Male"}]
+    {
+        "employees": {
+            "office_worker": [
+                {"firstName": "John", "lastName": "Doe", "gender": "Male"},
+                {"firstName": "Peter", "lastName": "Jones", "gender": "Male"},
+            ],
+            "writer": {"firstName": "Anna", "lastName": "Smith", "gender": "Female"},
+        }
     }
 
 
@@ -68,7 +70,10 @@ Loads
 json to dict
 -------------------------------------
 
-| The code below loads the json string, converting it to a dictionary, iterates through the list of employee dictionaries and prints the name of each employee using an f string.
+| The code below loads the json string, converting it to a dictionary.
+| The employees are in two keys: office_worker as a list of employee dictionaries; writer as a dictionary.
+| The code iterates through the list of office_worker dictionaries and prints the name of each office_worker using an f string.
+| The code gets the writer dictionary and prints the name of the writer using an f string.
 
 
 .. code-block:: python
@@ -76,22 +81,30 @@ json to dict
     import json
 
     emp_str = """
-    {"employees":
-    [{"firstName":"John","lastName":"Doe","gender":"Male"},
-    {"firstName":"Anna","lastName":"Smith","gender":"Female"},
-    {"firstName":"Peter","lastName":"Jones","gender":"Male"}]
+    {
+        "employees": {
+            "office_worker": [
+                {"firstName": "John", "lastName": "Doe", "gender": "Male"},
+                {"firstName": "Peter", "lastName": "Jones", "gender": "Male"},
+            ],
+            "writer": {"firstName": "Anna", "lastName": "Smith", "gender": "Female"},
+        }
     }
     """
 
     data_json = json.loads(emp_str)
-    for emp in data_json["employees"]:
+    # iterate over office_worker
+    for emp in data_json["employees"]["office_worker"]:
         print(f'{emp["firstName"]} {emp["lastName"]}')
+    # writer
+    emp = data_json["employees"]["writer"]   
+    print(f'{emp["firstName"]} {emp["lastName"]}')
 
 .. code-block:: 
 
     John Doe
-    Anna Smith
     Peter Jones
+    Anna Smith
 
 ----
 
@@ -122,25 +135,32 @@ Dumps
 Printing specific keys from json objects
 -----------------------------------------
 
-| The code below deletes the gender key then converts the json to a string, then prints it.
+| The code below deletes the gender keys then converts the json to a string, then prints it.
 
 .. code-block:: python
     
     import json
 
     emp_str = """
-    {"employees":
-    [{"firstName":"John","lastName":"Doe","gender":"Male"},
-    {"firstName":"Anna","lastName":"Smith","gender":"Female"},
-    {"firstName":"Peter","lastName":"Jones","gender":"Male"}]
+    {
+        "employees": {
+            "office_worker": [
+                {"firstName": "John", "lastName": "Doe", "gender": "Male"},
+                {"firstName": "Peter", "lastName": "Jones", "gender": "Male"},
+            ],
+            "writer": {"firstName": "Anna", "lastName": "Smith", "gender": "Female"},
+        }
     }
     """
 
     # convert to json object
     data_json = json.loads(emp_str)
-    # delete each firstname
-    for emp in data_json["employees"]:
+    # iterate over list of office workers
+    for emp in data_json["employees"]["office_worker"]:
         del emp["gender"]
+    # delete key for writer
+    del data_json["employees"]["writer"]["gender"]
+
 
     # convert to a string
     data_str = json.dumps(data_json)
@@ -149,58 +169,37 @@ Printing specific keys from json objects
 
 .. code-block:: 
 
-    {"employees": [{"firstName": "John", "lastName": "Doe"}, {"firstName": "Anna", "lastName": "Smith"}, {"firstName": "Peter", "lastName": "Jones"}]}
+    {"employees": {"office_worker": [{"firstName": "John", "lastName": "Doe"}, {"firstName": "Peter", "lastName": "Jones"}], 
+    "writer": {"firstName": "Anna", "lastName": "Smith"}}}
 
 ----
 
-Printing specific keys from json objects with pretty printing
+Printing specific keys from json objects with indenting
 --------------------------------------------------------------
 
-| The code below does pretty printing via: ``data_str = json.dumps(data_json, indent=4)``
-| The "gender" key is deleted from each employee record.
-| The json object is then dumped to a string format for printing.
-
-.. code-block:: python
-    
-    import json
-
-    emp_str = """
-    {"employees":
-    [{"firstName":"John","lastName":"Doe","gender":"Male"},
-    {"firstName":"Anna","lastName":"Smith","gender":"Female"},
-    {"firstName":"Peter","lastName":"Jones","gender":"Male"}]
-    }
-    """
-
-    # convert to json object
-    data_json = json.loads(emp_str)
-    # delete each firstname
-    for emp in data_json["employees"]:
-        del emp["gender"]
-
-    # convert to a string
-    data_str = json.dumps(data_json, indent=4)
-    print(data_str)
-
+| To print with indenting, in the code above, change the line ``data_str = json.dumps(data_json)`` to ``data_str = json.dumps(data_json, indent=4)``.
+| The indented output is below.
 
 .. code-block:: 
 
-  {
-    "employees": [
-      {
-        "firstName": "John",
-        "lastName": "Doe"
-      },
-      {
-        "firstName": "Anna",
-        "lastName": "Smith"
-      },
-      {
-        "firstName": "Peter",
-        "lastName": "Jones"
-      }
-    ]
-  }
+    {
+        "employees": {
+            "office_worker": [
+                {
+                    "firstName": "John",
+                    "lastName": "Doe"
+                },
+                {
+                    "firstName": "Peter",
+                    "lastName": "Jones"
+                }
+            ],
+            "writer": {
+                "firstName": "Anna",
+                "lastName": "Smith"
+            }
+        }
+    }
 
 
 ----
@@ -259,6 +258,7 @@ Convert a nested dict to json
     Pele averaged 0.92 goals per game
     Bryant averaged 25.0 points per game
 
+----
 
 Convert a nested dict to json file
 -----------------------------------
@@ -270,10 +270,14 @@ Convert a nested dict to json file
     
     import json
 
-    emp_dict = {"employees":
-    [{"firstName":"John","lastName":"Doe","gender":"Male"},
-    {"firstName":"Anna","lastName":"Smith","gender":"Female"},
-    {"firstName":"Peter","lastName":"Jones","gender":"Male"}]
+    emp_dict = {
+        "employees": {
+            "office_worker": [
+                {"firstName": "John", "lastName": "Doe", "gender": "Male"},
+                {"firstName": "Peter", "lastName": "Jones", "gender": "Male"},
+            ],
+            "writer": {"firstName": "Anna", "lastName": "Smith", "gender": "Female"},
+        }
     }
 
     j_str = json.dumps(emp_dict, indent=4)
@@ -289,23 +293,25 @@ Convert a nested dict to json file
 .. code-block:: 
 
     {
-        "employees": [
-            {
-                "firstName": "John",
-                "lastName": "Doe",
-                "gender": "Male"
-            },
-            {
+        "employees": {
+            "office_worker": [
+                {
+                    "firstName": "John",
+                    "lastName": "Doe",
+                    "gender": "Male"
+                },
+                {
+                    "firstName": "Peter",
+                    "lastName": "Jones",
+                    "gender": "Male"
+                }
+            ],
+            "writer": {
                 "firstName": "Anna",
                 "lastName": "Smith",
                 "gender": "Female"
-            },
-            {
-                "firstName": "Peter",
-                "lastName": "Jones",
-                "gender": "Male"
             }
-        ]
+        }
     }
 
 ----
@@ -338,10 +344,14 @@ Convert a nested dict to json file
                         return None
 
 
-                    emp_dict = {"employees":
-                    [{"firstName":"John","lastName":"Doe","gender":"Male"},
-                    {"firstName":"Anna","lastName":"Smith","gender":"Female"},
-                    {"firstName":"Peter","lastName":"Jones","gender":"Male"}]
+                    emp_dict = {
+                        "employees": {
+                            "office_worker": [
+                                {"firstName": "John", "lastName": "Doe", "gender": "Male"},
+                                {"firstName": "Peter", "lastName": "Jones", "gender": "Male"},
+                            ],
+                            "writer": {"firstName": "Anna", "lastName": "Smith", "gender": "Female"},
+                        }
                     }
 
                     json_path = "files/convert_dict_json.json"
@@ -449,20 +459,26 @@ dump json data to a file
     import json
 
     emp_str = """
-    {"employees":
-    [{"firstName":"John","lastName":"Doe","gender":"Male"},
-    {"firstName":"Anna","lastName":"Smith","gender":"Female"},
-    {"firstName":"Peter","lastName":"Jones","gender":"Male"}]
+    {
+        "employees": {
+            "office_worker": [
+                {"firstName": "John", "lastName": "Doe", "gender": "Male"},
+                {"firstName": "Peter", "lastName": "Jones", "gender": "Male"},
+            ],
+            "writer": {"firstName": "Anna", "lastName": "Smith", "gender": "Female"},
+        }
     }
     """
 
     # convert to json object
     data_json = json.loads(emp_str)
-    # delete gender key
-    for emp in data_json["employees"]:
+    # iterate over list of office workers
+    for emp in data_json["employees"]["office_worker"]:
         del emp["gender"]
+    # delete key for writer
+    del data_json["employees"]["writer"]["gender"]
 
-    json_path = "files/employees2.json"
+    json_path = "files/employees_names.json"
     with open(json_path, 'w', encoding='utf-8') as f:
         json.dump(data_json, f, indent=4)
 
@@ -472,22 +488,23 @@ dump json data to a file
 .. code-block:: 
 
     {
-        "employees": [
-            {
-                "firstName": "John",
-                "lastName": "Doe"
-            },
-            {
+        "employees": {
+            "office_worker": [
+                {
+                    "firstName": "John",
+                    "lastName": "Doe"
+                },
+                {
+                    "firstName": "Peter",
+                    "lastName": "Jones"
+                }
+            ],
+            "writer": {
                 "firstName": "Anna",
                 "lastName": "Smith"
-            },
-            {
-                "firstName": "Peter",
-                "lastName": "Jones"
             }
-        ]
+        }
     }
-
 
 ----
 

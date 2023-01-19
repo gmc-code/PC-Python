@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<employees>
+	<office_worker>
+		<firstName>John</firstName>
+		<lastName>Doe</lastName>
+		<gender>Male</gender>
+	</office_worker>
+	<office_worker>
+		<firstName>Peter</firstName>
+		<lastName>Jones</lastName>
+		<gender>Male</gender>
+	</office_worker>
+	<writer>
+		<firstName>Anna</firstName>
+		<lastName>Smith</lastName>
+		<gender>Female</gender>
+	</writer>
+</employees>

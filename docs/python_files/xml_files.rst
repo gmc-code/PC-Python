@@ -35,28 +35,28 @@ xml structure
 
 | An example of xml for employees is below.
 | ``<employees>`` is the root tag.
-| ``<employee>`` is a child tag of the root tag.
-| ``<firstName>`` is a child tag of the employee tag.
+| ``<office_worker>`` is a child tag of the root tag.
+| ``<firstName>`` is a child tag of the office_worker tag.
 
 .. code-block:: 
 
     <?xml version="1.0" encoding="UTF-8" ?>
     <employees>
-        <employee>
+        <office_worker>
             <firstName>John</firstName>
             <lastName>Doe</lastName>
             <gender>Male</gender>
-        </employee>
-        <employee>
-            <firstName>Anna</firstName>
-            <lastName>Smith</lastName>
-            <gender>Female</gender>
-        </employee>
-        <employee>
+        </office_worker>
+        <office_worker>
             <firstName>Peter</firstName>
             <lastName>Jones</lastName>
             <gender>Male</gender>
-        </employee>
+        </office_worker>
+        <writer>
+            <firstName>Anna</firstName>
+            <lastName>Smith</lastName>
+            <gender>Female</gender>
+        </writer>
     </employees>
 
 ----
@@ -96,8 +96,9 @@ Parse xml file
 ----
 
 | The code below opens the xml file, ``tree = ET.parse(xml_file_path)`` and parses it into the variable ``tree``.
-| ``found_elememnts = tree.findall("employee")`` is used to get a list containing the employee data as a list of element objects.
-| ``for elem in found_elememnts:`` iterates over each employee list of elements so the text of each element can be obtained. e.g.  ``elem.find("firstName").text``
+| ``found_elememnts = tree.findall("office_worker")`` is used to get a list containing the office_worker data as a list of element objects.
+| ``for elem in found_elememnts:`` iterates over each office_worker list of elements so the text of each element can be obtained.
+| e.g.  ``elem.find("firstName").text``
 
 
 .. code-block::  python
@@ -107,20 +108,68 @@ Parse xml file
     xml_file_path = "files/employees.xml"
     tree = ET.parse(xml_file_path)
 
-    found_elememnts = tree.findall("employee")
+
+    employee_type = "office_worker"
+    found_elememnts = tree.findall(employee_type)
     for elem in found_elememnts:
         f_name = elem.find("firstName").text
         l_name = elem.find("lastName").text
         gen = elem.find("gender").text
-        print(f'{f_name} {l_name} is {gen}')
+        print(f'{f_name} {l_name} is a {gen.lower()} {employee_type}')
+
+    employee_type = "writer"
+    found_elememnts = tree.findall(employee_type)
+    for elem in found_elememnts:
+        f_name = elem.find("firstName").text
+        l_name = elem.find("lastName").text
+        gen = elem.find("gender").text
+        print(f'{f_name} {l_name} is a {gen.lower()} {employee_type}')
+
 
 | The print output is below:
 
 .. code-block:: 
 
-    John Doe is Male
-    Anna Smith is Female
-    Peter Jones is Male
+    John Doe is a male office_worker
+    Peter Jones is a male office_worker
+    Anna Smith is a female writer
+
+----
+
+.. admonition:: Tasks
+
+    #. Avoid code duplication above by using a list of employee types and iterating over them.
+    
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Avoid code duplication above by using a list of employee types and iterating over them.
+
+                .. code-block:: python
+
+                    import xml.etree.ElementTree as ET
+
+                    xml_file_path = "files/employees.xml"
+                    tree = ET.parse(xml_file_path)
+
+
+                    employee_types = ["office_worker", "writer"]
+                    for employee_type in employee_types:
+                        found_elememnts = tree.findall(employee_type)
+                        for elem in found_elememnts:
+                            f_name = elem.find("firstName").text
+                            l_name = elem.find("lastName").text
+                            gen = elem.find("gender").text
+                            print(f'{f_name} {l_name} is a {gen.lower()} {employee_type}')
+
+
 
 ----
 
@@ -128,20 +177,20 @@ Edit tag text
 --------------------------------
 
 | Elements can be referred to by numeric indices from the root or from the parent.
-| e.g. "Peter", the third employee at index 2, is at ``root[2][0].text``.
+| e.g. The text "Peter", the firstName of the second employee (who is at at index 1 of the root), is at ``root[1][0].text``.
 
 .. code-block:: 
 
     <?xml version="1.0" encoding="UTF-8" ?>
     <employees>
         ...
-        <employee>
+        <office_worker>
             <firstName>Peter</firstName>
             ...
-        </employee>
+        </office_worker>
     </employees>
 
-| The code below changes "Peter" t0 "Pete" and saves the change to the file employees2.xml
+| The code below changes "Peter" to "Pete" and saves the change to the file employees2.xml
 
 .. code-block::  python
 
@@ -190,7 +239,7 @@ Append element
 
 | Elements can be appended to the root.
 | e.g. root.append(emp4_xml)
-| ``employer4 = ET.Element("employee")`` creates an element for the new employee.
+| ``employer4 = ET.Element("writer")`` creates an element for the new employee.
 | ``child = ET.Element("firstName")`` creates an element for the firstName.
 | ``child.text = "Jane"`` adds the text value to firstName element. 
 | ``employer4.append(child)`` appends the  firstName element to the employer4 element.
@@ -205,7 +254,7 @@ Append element
     tree = ET.parse(xml_file_path)
     root = tree.getroot()
 
-    employer4 = ET.Element("employee")
+    employer4 = ET.Element("writer")
 
     child = ET.Element("firstName")
     child.text = "Jane"
@@ -227,11 +276,11 @@ Append element
 
 .. code-block:: 
 
-    <employee>
+    <writer>
         <firstName>Jane</firstName>
         <lastName>Austin</lastName>
         <gender>Female</gender>
-    </employee>
+    </writer>
 
 ----
 
@@ -248,7 +297,7 @@ Append element
 
             .. tab-item:: Q1
 
-                Write a definition to append the employee data from a python dictionary to the xml and use it to add the employee dictionary: {"firstName":"Jane","lastName":"Austin","gender":"Female"}
+                Write a definition to append the employee data from a python dictionary to the xml and use it to add the employee dictionary: {"firstName":"Jane","lastName":"Austin","gender":"Female"} using a tag of "writer"
 
                 .. code-block:: python
 
@@ -270,7 +319,7 @@ Append element
                         return elem
 
                     emp4_dict = {"firstName":"Jane","lastName":"Austin","gender":"Female"}
-                    tag = "employee"
+                    tag = "writer"
                     emp4_xml = append_dict_to_xml(tag, emp4_dict)
                     root.append(emp4_xml)
 
@@ -281,26 +330,26 @@ Append element
     .. code-block:: 
 
         <employees>
-            <employee>
+            <office_worker>
                 <firstName>John</firstName>
                 <lastName>Doe</lastName>
                 <gender>Male</gender>
-            </employee>
-            <employee>
-                <firstName>Anna</firstName>
-                <lastName>Smith</lastName>
-                <gender>Female</gender>
-            </employee>
-            <employee>
+            </office_worker>
+            <office_worker>
                 <firstName>Peter</firstName>
                 <lastName>Jones</lastName>
                 <gender>Male</gender>
-            </employee>
-            <employee>
+            </office_worker>
+            <writer>
+                <firstName>Anna</firstName>
+                <lastName>Smith</lastName>
+                <gender>Female</gender>
+            </writer>
+            <writer>
                 <firstName>Jane</firstName>
                 <lastName>Austin</lastName>
                 <gender>Female</gender>
-            </employee>
+            </writer>
         </employees>
 
     

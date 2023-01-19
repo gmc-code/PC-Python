@@ -7,56 +7,63 @@ File conversions
 
 ----
 
+Files for csv ⇔ json
+------------------------
+
+| Download the csv file :download:`months.csv <files/months.csv>`
+| Download the json file :download:`months.json <files/months.json>`
+
+----
+
 json file to csv file
 -----------------------
 
 | json is flexible in its structure.
 | Each particular json file structure will have a different conversion to csv.
 | The json stucture below is based on a simplified structure as ``{mainkey:[dictionaries]}``.
-| The employees json follows that structrue.
+| The months json follows that structrue.
 | Each object in the array will become a row in csv.
 
 .. code:: json
 
-    {"employees":
-    [{"firstName":"John","lastName":"Doe","gender":"Male"},
-    {"firstName":"Anna","lastName":"Smith","gender":"Female"},
-    {"firstName":"Peter","lastName":"Jones","gender":"Male"}]
+    {"months":
+    [{"Month":"January","Abbr":"Jan","Numeric":"1"},
+    ...
+    {"Month":"December","Abbr":"Dec","Numeric":"12"}]
     }
-
 
 | csv file contents
 
 .. code:: 
 
-    firstName,lastName,gender
-    John,Doe,Male
-    Anna,Smith,Female
-    Peter,Jones,Male
+    Month,Abbr,Numeric
+    January,Jan,1
+    ...
+    December,Dec,12
 
 
 | Some parts of the code need some explanation:
 
-| ``j_key = list(json_data.keys())[0]`` gets the key: "employees".
+| ``j_key = list(json_data.keys())[0]`` gets the key: "months".
 | ``json_data.keys()`` return a dict object withe the key.
 | ``list(json_data.keys())`` converts the dict object to a list.
-| ``list(json_data.keys())[0]`` gives the key value "employees" which will be needed to get the fieldnames for the csv DictWriter.
+| ``list(json_data.keys())[0]`` gives the key value "months" which will be needed to get the fieldnames for the csv DictWriter.
 
-| ``fieldnames = list(json_data[j_key][0].keys())`` gets the fieldnames for the csv DictWriter, where j_key is "employees".
+| ``fieldnames = list(json_data[j_key][0].keys())`` gets the fieldnames for the csv DictWriter, where j_key is "months".
 | ``json_data[j_key]`` gives the array of dictionaries for each employee. These are listed below in the [].
 | ``json_data[j_key][0]`` gives the first employee dictionary: {"firstName":"John","lastName":"Doe","gender":"Male"}.
 | ``json_data[j_key][0].keys()`` gives a dict keys object.
 | ``list(json_data[j_key][0].keys())`` converts the dict keys object into a list.
 
-| The dictionary elements of the json array are iterated over by: ``for row in json_data[j_key]``, where j_key is "employees".
+| The dictionary elements of the json array are iterated over by: ``for row in json_data[j_key]``, where j_key is "months".
 
 .. code-block:: python
 
     import json
     import csv
 
-    json_path = "files/employees.json"
-    csv_path = "files/employees.csv"
+    json_path = "files/months.json"
+    csv_path = "files/months2.csv"
 
     with open(json_path, "r") as f:
         json_data = json.load(f)
@@ -109,8 +116,8 @@ json file to csv file
                                     csv_writer.writerow(row)
 
 
-                    json_path = "files/employees.json"
-                    csv_path = "files/employees.csv"
+                    json_path = "files/months.json"
+                    csv_path = "files/months.csv"
 
                     json_to_csv_file(json_path, csv_path)
 
@@ -132,14 +139,13 @@ csv file to json file
     import json
 
 
-    csv_path = "files/employees.csv"
-    json_path = "files/employees3.json"
-    json_mainkey = "employees"
+    csv_path = "files/months.csv"
+    json_path = "files/months2.json"
+    json_mainkey = "months"
     json_array = []
     with open(csv_path, 'r', newline='') as csv_file:
         csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
-            print(row)
             json_array.append(row)
 
     json_dict = {json_mainkey: json_array}
@@ -176,7 +182,6 @@ csv file to json file
                         with open(csv_file_path, 'r', newline='') as csv_file:
                             csv_reader = csv.DictReader(csv_file)
                             for row in csv_reader:
-                                print(row)
                                 json_array.append(row)
 
                         json_dict = {json_mainkey: json_array}
@@ -185,10 +190,18 @@ csv file to json file
                             jsonf.write(json_str)
 
 
-                    csv_path = "files/employees.csv"
-                    json_path = "files/employees.json"
-                    json_mainkey = "employees"
+                    csv_path = "files/months.csv"
+                    json_path = "files/months.json"
+                    json_mainkey = "months"
                     csv_to_json_file(csv_path, json_path, json_mainkey)
+
+----
+
+Files for xml ⇔ json
+------------------------
+
+| Download the months csv file :download:`employees.xml <files/employees.xml>`
+| Download the months json file :download:`employees.json <files/employees.json>`
 
 ----
 

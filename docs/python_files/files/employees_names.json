@@ -3,19 +3,16 @@
         "office_worker": [
             {
                 "firstName": "John",
-                "lastName": "Doe",
-                "gender": "Male"
+                "lastName": "Doe"
             },
             {
                 "firstName": "Peter",
-                "lastName": "Jones",
-                "gender": "Male"
+                "lastName": "Jones"
             }
         ],
         "writer": {
             "firstName": "Anna",
-            "lastName": "Smith",
-            "gender": "Female"
+            "lastName": "Smith"
         }
     }
 }
