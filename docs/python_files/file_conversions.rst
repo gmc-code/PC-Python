@@ -7,8 +7,8 @@ File conversions
 
 ----
 
-json to csv file
-------------------
+json file to csv file
+-----------------------
 
 | json is flexible in its structure.
 | Each particular json file structure will have a different conversion to csv.
@@ -117,8 +117,8 @@ json to csv file
 
 ----
 
-csv to json file
-------------------
+csv file to json file
+---------------------------
 
 | See: https://pythonexamples.org/python-csv-to-json/
 | The csv needs a header row.
@@ -192,35 +192,56 @@ csv to json file
 
 ----
 
-xml to json
---------------
+xml file to dict
+-----------------
 
-| The function ``xml_to_dict(xml_file_path)`` takes a path to an xml file and builds a python dictionary by iterating through 2 levels of the xml.
-| This works for simple xml. It ignores attributes in tags.
-| For more complex xml, install and use dicttoxml2. 
-| See: https://pypi.org/project/dicttoxml2/#description
-| See: https://dicttoxml.readthedocs.io/en/latest/user/getstarted.html
+| ``pip install xmltodict`` from the terminal first.
+
+| The function ``xml_to_dict(xml_file_path)`` takes a path to an xml file and returns a python dictionary.
 
 
 .. code-block:: python
 
-    import xml.etree.ElementTree as ET
+    # pip install xmltodict
+
     import json
+    import xmltodict
 
 
     def xml_to_dict(xml_file_path):
-        tree = ET.parse(xml_file_path)
-        root = tree.getroot()
-        d={}
-        for child in root:
-            if child.tag not in d:
-                d[child.tag]=[]
-            child_d={}
-            for child2 in child:
-                if child2.tag not in child_d:
-                    child_d[child2.tag]=child2.text
-            d[child.tag].append(child_d)
-        return d
+        with open(xml_file_path) as f:
+            xml_str = f.read()
+            py_dict = xmltodict.parse(xml_str)
+        return py_dict
+
+
+    xml_file_path = "files/employees.xml"
+
+    py_dict = xml_to_dict(xml_file_path)
+    print(py_dict)
+
+----
+
+xml file to json file
+--------------------------
+
+| ``pip install xmltodict`` from the terminal first.
+
+| The function ``xml_to_dict(xml_file_path)`` takes a path to an xml file and returns a python dictionary.
+| The function ``dict_to_json_file(py_dict, json_file_path)`` takes a dictionary and a path to the json file.
+| There are two conversion steps: convert xml to a dictionary then from a dictionary to json.
+
+.. code-block:: python
+
+    import json
+    import xmltodict
+
+
+    def xml_to_dict(xml_file_path):
+        with open(xml_file_path) as f:
+            xml_str = f.read()
+            py_dict = xmltodict.parse(xml_str)
+        return py_dict
 
 
     def dict_to_json_file(py_dict, json_file_path):
@@ -231,16 +252,18 @@ xml to json
         return None
 
 
-    xml_file_path = "files/employees1.xml"
-    json_path = "files/convert_xml_json.json"
+    xml_file_path = "files/employees.xml"
+    json_file_path = "files/convert_xml_json.json"
 
     py_dict = xml_to_dict(xml_file_path)
-    dict_to_json_file(py_dict, json_path)
+    dict_to_json_file(py_dict, json_file_path)
 
+----
 
 json to xml
 --------------
 
-
-
+| For  complex xml, install and use dicttoxml2. 
+| See: https://pypi.org/project/dicttoxml2/#description
+| See: https://dicttoxml.readthedocs.io/en/latest/user/getstarted.html
 
