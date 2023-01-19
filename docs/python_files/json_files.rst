@@ -18,6 +18,7 @@ Json files
 Structure
 ---------------
 
+| Imported json files are made up of structures like python dictionaries and lists.
 | json uses key:value pairs in {} brackets.
 | The simple json below looks like a python dictionary.
 

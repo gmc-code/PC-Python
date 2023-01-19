@@ -13,7 +13,7 @@ See ref video at: https://www.youtube.com/watch?v=3dt4OGnU5sM
 List comprehension
 =====================================
 
-| List comprehensions provide a concise way to create lists. They are more readable than otehr approaches.
+| List comprehensions provide a concise way to create lists. They are more readable than other approaches.
 | They are used to make new lists where each element is the result of some operations applied to each member of another sequence or iterable.
 | They can create a subsequence of those elements that satisfy a certain condition.
 

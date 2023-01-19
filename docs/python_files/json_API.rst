@@ -129,7 +129,7 @@ Reading weather json
 
 | The code below uses the keys identifies above to place the weather data lists in 3 variables: dates_list, max_list, min_list.
 | The 3 lists hold their data in sequence. The first values in each list are for the same date.
-| The zip function is used on teh 3 lists so that they can be iterated over together.
+| The zip function is used on the 3 lists so that they can be iterated over together.
 | The weather data is printed out below.
 
 .. code-block:: python
