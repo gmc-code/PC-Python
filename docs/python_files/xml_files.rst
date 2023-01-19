@@ -97,7 +97,7 @@ Parse xml file
 
 | The code below opens the xml file, ``tree = ET.parse(xml_file_path)`` and parses it into the variable ``tree``.
 | ``found_elememnts = tree.findall("employee")`` is used to get a list containing the employee data as a list of element objects.
-| ``for el in found_elememnts:`` iterates over each employee list of elements so the text of each element can be obtained. e.g.  ``el.find("firstName").text``
+| ``for elem in found_elememnts:`` iterates over each employee list of elements so the text of each element can be obtained. e.g.  ``elem.find("firstName").text``
 
 
 .. code-block::  python
@@ -108,10 +108,10 @@ Parse xml file
     tree = ET.parse(xml_file_path)
 
     found_elememnts = tree.findall("employee")
-    for el in found_elememnts:
-        f_name = el.find("firstName").text
-        l_name = el.find("lastName").text
-        gen = el.find("gender").text
+    for elem in found_elememnts:
+        f_name = elem.find("firstName").text
+        l_name = elem.find("lastName").text
+        gen = elem.find("gender").text
         print(f'{f_name} {l_name} is {gen}')
 
 | The print output is below:
