@@ -1,5 +1,5 @@
 ==========================
-Json files
+json files
 ==========================
 
 | json files are common when working with APIs and configuration, settings and preference files.
@@ -53,6 +53,7 @@ Loads
 -------------------------------
 
 | Use the **loads** function to convert a string to json.
+| For conversion see: https://docs.python.org/3/library/json.html#encoders-and-decoders
 | The full syntax is at: https://docs.python.org/3/library/json.html#json.loads
 | Use the simple syntax:
 
@@ -64,10 +65,10 @@ Loads
 
 ----
 
-Printing data from a json string
+json to dict
 -------------------------------------
 
-| The code below loads the json string, iterates through the list of employee dictionaries and prints the name of each employee using an f string.
+| The code below loads the json string, converting it to a dictionary, iterates through the list of employee dictionaries and prints the name of each employee using an f string.
 
 
 .. code-block:: python
@@ -239,24 +240,10 @@ Convert a nested dict to json
     
     import json
 
-    spt_dict = {
-        "cricket": {
-            "player": "Sobers",
-            "average": "57.8 runs per innings",
-        },
-        "AFL": {
-            "player": "Locket",
-            "average": "4.84 goals per game",
-        },
-        "soccer": {
-            "player": "Pele",
-            "average": "0.92 goals per game",
-        },
-        "basketball": {
-            "player": "Bryant",
-            "average": "25.0 points per game",
-        }
-    }
+    spt_dict = {'cricket':{'player':'Sobers','average':'57.8 runs per innings'},
+    'AFL':{'player':'Locket','average':'4.84 goals per game'},
+    'soccer':{'player':'Pele','average':'0.92 goals per game'},
+    'basketball':{'player':'Bryant','average':'25.0 points per game'}}
 
     spt_jsonstr = json.dumps(spt_dict, indent=4)
     spt_json = json.loads(spt_jsonstr)
@@ -272,6 +259,94 @@ Convert a nested dict to json
     Pele averaged 0.92 goals per game
     Bryant averaged 25.0 points per game
 
+
+Convert a nested dict to json file
+-----------------------------------
+
+| The dictionary below, with nested dictionaries, can be dumped to a json string, j_str, then loaded as json, j_json.
+| The json, j_json, can then be dumped to a json file.
+
+.. code-block:: python
+    
+    import json
+
+    emp_dict = {"employees":
+    [{"firstName":"John","lastName":"Doe","gender":"Male"},
+    {"firstName":"Anna","lastName":"Smith","gender":"Female"},
+    {"firstName":"Peter","lastName":"Jones","gender":"Male"}]
+    }
+
+    j_str = json.dumps(emp_dict, indent=4)
+    j_json = json.loads(j_str)
+
+    json_path = "files/convert_dict_json.json"
+    with open(json_path, 'w') as f:
+        json.dump(j_json, f, indent=4)
+
+| The contents of the json file are below.
+| THe json string in the file looks just like the python dictionary.
+
+.. code-block:: 
+
+    {
+        "employees": [
+            {
+                "firstName": "John",
+                "lastName": "Doe",
+                "gender": "Male"
+            },
+            {
+                "firstName": "Anna",
+                "lastName": "Smith",
+                "gender": "Female"
+            },
+            {
+                "firstName": "Peter",
+                "lastName": "Jones",
+                "gender": "Male"
+            }
+        ]
+    }
+
+----
+
+.. admonition:: Tasks
+
+    #. Write a definition to do the conversion from a python dictionary to a json file.
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Write a definition to do the conversion from a python dictionary to a json file.
+
+                .. code-block:: python
+
+                    import json
+
+
+                    def dict_to_json_file(py_dict, json_file_path):
+                        j_str = json.dumps(py_dict, indent=4)
+                        j_json = json.loads(j_str)
+                        with open(json_file_path, 'w') as f:
+                            json.dump(j_json, f, indent=4)
+                        return None
+
+
+                    emp_dict = {"employees":
+                    [{"firstName":"John","lastName":"Doe","gender":"Male"},
+                    {"firstName":"Anna","lastName":"Smith","gender":"Female"},
+                    {"firstName":"Peter","lastName":"Jones","gender":"Male"}]
+                    }
+
+                    json_path = "files/convert_dict_json.json"
+
+                    dict_to_json_file(emp_dict, json_path)
 
 ----
 

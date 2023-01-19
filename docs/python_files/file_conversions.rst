@@ -1,95 +1,9 @@
 ==========================
-file conversions
+File conversions
 ==========================
 
-Convert a nested dict to json file
------------------------------------
-
-| The dictionary below, with nested dictionaries, can be dumped to a json string, j_str, then loaded as json, j_json.
-| The json, j_json, can then be dumped to a json file.
-
-.. code-block:: python
-    
-    import json
-
-    emp_dict = {"employees":
-    [{"firstName":"John","lastName":"Doe","gender":"Male"},
-    {"firstName":"Anna","lastName":"Smith","gender":"Female"},
-    {"firstName":"Peter","lastName":"Jones","gender":"Male"}]
-    }
-
-    j_str = json.dumps(emp_dict, indent=4)
-    j_json = json.loads(j_str)
-
-    json_path = "files/convert_dict_json.json"
-    with open(json_path, 'w') as f:
-        json.dump(j_json, f, indent=4)
-
-| The contents of the json file are below.
-| THe json string in the file looks just like the python dictionary.
-
-.. code-block:: 
-
-    {
-        "employees": [
-            {
-                "firstName": "John",
-                "lastName": "Doe",
-                "gender": "Male"
-            },
-            {
-                "firstName": "Anna",
-                "lastName": "Smith",
-                "gender": "Female"
-            },
-            {
-                "firstName": "Peter",
-                "lastName": "Jones",
-                "gender": "Male"
-            }
-        ]
-    }
-
-----
-
-
-.. admonition:: Tasks
-
-    #. Write a definition to do the conversion from a python dictionary to a json file.
-
-    .. dropdown::
-        :icon: codescan
-        :color: primary
-        :class-container: sd-dropdown-container
-
-        .. tab-set::
-
-            .. tab-item:: Q1
-
-                Write a definition to do the conversion from a python dictionary to a json file.
-
-                .. code-block:: python
-
-                    import json
-
-
-                    def dict_to_json_file(py_dict, json_file_path):
-                        j_str = json.dumps(py_dict, indent=4)
-                        j_json = json.loads(j_str)
-                        with open(json_file_path, 'w') as f:
-                            json.dump(j_json, f, indent=4)
-                        return None
-
-
-                    emp_dict = {"employees":
-                    [{"firstName":"John","lastName":"Doe","gender":"Male"},
-                    {"firstName":"Anna","lastName":"Smith","gender":"Female"},
-                    {"firstName":"Peter","lastName":"Jones","gender":"Male"}]
-                    }
-
-                    json_path = "files/convert_dict_json.json"
-
-                    dict_to_json_file(emp_dict, json_path)
+| For json formatting and conversions see: https://jsonformatter.org/
+| For xml formatting and conversion see: https://jsonformatter.org/xml-formatter
 
 ----
 
@@ -280,6 +194,49 @@ csv to json file
 
 xml to json
 --------------
+
+| The function ``xml_to_dict(xml_file_path)`` takes a path to an xml file and builds a python dictionary by iterating through 2 levels of the xml.
+| This works for simple xml. It ignores attributes in tags.
+| For more complex xml, install and use dicttoxml2. 
+| See: https://pypi.org/project/dicttoxml2/#description
+| See: https://dicttoxml.readthedocs.io/en/latest/user/getstarted.html
+
+
+.. code-block:: python
+
+    import xml.etree.ElementTree as ET
+    import json
+
+
+    def xml_to_dict(xml_file_path):
+        tree = ET.parse(xml_file_path)
+        root = tree.getroot()
+        d={}
+        for child in root:
+            if child.tag not in d:
+                d[child.tag]=[]
+            child_d={}
+            for child2 in child:
+                if child2.tag not in child_d:
+                    child_d[child2.tag]=child2.text
+            d[child.tag].append(child_d)
+        return d
+
+
+    def dict_to_json_file(py_dict, json_file_path):
+        j_str = json.dumps(py_dict, indent=4)
+        j_json = json.loads(j_str)
+        with open(json_file_path, 'w') as f:
+            json.dump(j_json, f, indent=4)
+        return None
+
+
+    xml_file_path = "files/employees1.xml"
+    json_path = "files/convert_xml_json.json"
+
+    py_dict = xml_to_dict(xml_file_path)
+    dict_to_json_file(py_dict, json_path)
+
 
 json to xml
 --------------

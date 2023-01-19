@@ -190,7 +190,11 @@ Append element
 
 | Elements can be appended to the root.
 | e.g. root.append(emp4_xml)
-
+| ``employer4 = ET.Element("employee")`` creates an element for the new employee.
+| ``child = ET.Element("firstName")`` creates an element for the firstName.
+| ``child.text = "Jane"`` adds the text value to firstName element. 
+| ``employer4.append(child)`` appends the  firstName element to the employer4 element.
+| The other child elements are then built and appended to the employer4 element befor eit is finally appended to the root. 
 
 .. code-block::  python
 
@@ -202,12 +206,15 @@ Append element
     root = tree.getroot()
 
     employer4 = ET.Element("employee")
+
     child = ET.Element("firstName")
     child.text = "Jane"
     employer4.append(child)
+
     child = ET.Element("lastName")
     child.text = "Austin"
     employer4.append(child)
+
     child = ET.Element("gender")
     child.text = "Female"
     employer4.append(child)
