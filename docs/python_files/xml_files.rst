@@ -18,9 +18,8 @@ xml files
 .. admonition:: Warning
 
     | The XML modules are not secure against erroneous or maliciously constructed data. 
-    | If you need to parse untrusted or unauthenticated data see the defusedxml Package.
-    | defusedxml is a pure Python package with modified subclasses of all stdlib XML parsers that prevent any potentially malicious operation. 
-    | Use of this package is recommended for any server code that parses untrusted XML data.
+    | If you need to parse untrusted or unauthenticated data use the defusedxml Package.
+    | defusedxml is a pure Python package that prevents any potentially malicious operation. 
 
 ----
 
@@ -36,7 +35,8 @@ xml structure
 
 | An example of xml for employees is below.
 | ``<employees>`` is the root tag.
-| ``<employee>`` are child tags.
+| ``<employee>`` is a child tag of the root tag.
+| ``<firstName>`` is a child tag of the employee tag.
 
 .. code-block:: 
 
@@ -64,17 +64,18 @@ xml structure
 Parse xml file
 --------------------------------
 
-| Use ``xml.etree.ElementTree.parse`` to parse an XML source into an element tree.
-| Syntax:
+| Import a part of the xml library using: ``import xml.etree.ElementTree as ET``
 
-.. py:function:: xml.etree.ElementTree.parse(source, parser=None)
+| Use ``ET.parse`` to parse an XML source into an element tree.
+
+.. py:function:: ET.parse(source, parser=None)
  
     :param source: a filename or file object containing XML data. 
     :param parser: an optional parser instance. If not given, the standard XMLParser parser is used. 
     
     |  Returns an ElementTree instance.
 
-
+----
 
 | Use ``getroot()`` to get the root of the element tree object.
 
@@ -82,7 +83,7 @@ Parse xml file
 
     | Returns the root element for the tree, ET.
 
-
+----
 
 .. py:function:: ET.findall(match, namespaces=None)
 
@@ -92,9 +93,11 @@ Parse xml file
     | Finds all matching subelements, by tag name or path, starting at the root of the tree.
     | Returns a list containing all matching elements in document order.
 
+----
+
 | The code below opens the xml file, ``tree = ET.parse(xml_file_path)`` and parses it into the variable ``tree``.
 | ``found_elememnts = tree.findall("employee")`` is used to get a list containing the employee data as a list of element objects.
-| ``for el in found_elememnts:`` iterates over each employee list of elements so the etxt of each eleemnt can be obtained. e.g.  ``el.find("firstName").text``
+| ``for el in found_elememnts:`` iterates over each employee list of elements so the text of each element can be obtained. e.g.  ``el.find("firstName").text``
 
 
 .. code-block::  python
@@ -125,7 +128,7 @@ Edit tag text
 --------------------------------
 
 | Elements can be referred to by numeric indices from the root or from the parent.
-| e.g. "Peter" is at ``root[2][0].text``.
+| e.g. "Peter", the third employee at index 2, is at ``root[2][0].text``.
 
 .. code-block:: 
 
@@ -138,7 +141,7 @@ Edit tag text
         </employee>
     </employees>
 
-| The code below changes "Peter" tp "Pete" and saves the change to the file employees2.xml
+| The code below changes "Peter" t0 "Pete" and saves the change to the file employees2.xml
 
 .. code-block::  python
 
