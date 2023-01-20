@@ -205,13 +205,18 @@ Files for xml ⇔ json
 
 ----
 
+Module for xml conversions
+----------------------------
+
+| ``pip install xmltodict`` from the terminal firstso that file converions involving xml can be done.
+| See: https://pypi.org/project/xmltodict/
+
+----
+
 xml file to dict
 -----------------
 
-| ``pip install xmltodict`` from the terminal first.
-
 | The function ``xml_to_dict(xml_file_path)`` takes a path to an xml file and returns a python dictionary.
-
 
 .. code-block:: python
 
@@ -240,9 +245,9 @@ xml file to json file
 
 | ``pip install xmltodict`` from the terminal first.
 
-| The function ``xml_to_dict(xml_file_path)`` takes a path to an xml file and returns a python dictionary.
-| The function ``dict_to_json_file(py_dict, json_file_path)`` takes a dictionary and a path to the json file.
-| There are two conversion steps: convert xml to a dictionary then from a dictionary to json.
+| The function ``xml_to_json_file(xml_file_path, json_file_path)`` takes a path to an xml file and a path to a json file.
+| There are two conversion steps: convert an xml string to a dictionary via ``py_dict = xmltodict.parse(xml_str)``.
+| Then from a dictionary to a json file via ``json.dump(py_dict, f, indent=4)``.
 
 .. code-block:: python
 
@@ -250,33 +255,44 @@ xml file to json file
     import xmltodict
 
 
-    def xml_to_dict(xml_file_path):
+    def xml_to_json_file(xml_file_path, json_file_path):
         with open(xml_file_path) as f:
             xml_str = f.read()
-            py_dict = xmltodict.parse(xml_str)
-        return py_dict
-
-
-    def dict_to_json_file(py_dict, json_file_path):
-        j_str = json.dumps(py_dict, indent=4)
-        j_json = json.loads(j_str)
+        py_dict = xmltodict.parse(xml_str)
         with open(json_file_path, 'w') as f:
-            json.dump(j_json, f, indent=4)
-        return None
+            json.dump(py_dict, f, indent=4)
 
 
     xml_file_path = "files/employees.xml"
-    json_file_path = "files/convert_xml_json.json"
+    json_file_path = "files/convert_xml_to_json.json"
 
-    py_dict = xml_to_dict(xml_file_path)
-    dict_to_json_file(py_dict, json_file_path)
+    xml_to_json_file(xml_file_path, json_file_path)
 
 ----
 
-json to xml
---------------
+json file to xml file
+-----------------------
 
-| For  complex xml, install and use dicttoxml2. 
-| See: https://pypi.org/project/dicttoxml2/#description
-| See: https://dicttoxml.readthedocs.io/en/latest/user/getstarted.html
+| ``pip install xmltodict`` from the terminal first.
+
+| The function ``json_to_xml_file(json_file_path, xml_file_path)`` takes a path to a json file and a path to an xml file.
+| The line ``xml_str = xmltodict.unparse(json_data, pretty=True)`` converts teh json data to an xml string.
+
+.. code-block:: python
+
+    import json
+    import xmltodict
+
+    def json_to_xml_file(json_file_path, xml_file_path):
+        with open(json_file_path, "r") as f:
+            json_data = json.load(f)
+            xml_str = xmltodict.unparse(json_data, pretty=True)
+        with open(xml_file_path, "w") as f2:
+            f2.write(xml_str)
+
+
+    json_file_path = "files/employees.json"
+    xml_file_path = "files/convert_json_to_xml.xml"
+
+    json_to_xml_file(json_file_path, xml_file_path)
 
