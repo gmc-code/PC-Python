@@ -54,7 +54,7 @@ Structure
 Loads
 -------------------------------
 
-| Use the **loads** function to convert a string to json.
+| Use the **loads** function to convert a string to a json in the form of a dictionary.
 | For conversion see: https://docs.python.org/3/library/json.html#encoders-and-decoders
 | The full syntax is at: https://docs.python.org/3/library/json.html#json.loads
 | Use the simple syntax:
@@ -92,12 +92,12 @@ json to dict
     }
     """
 
-    data_json = json.loads(emp_str)
+    json_dict = json.loads(emp_str)
     # iterate over office_worker
-    for emp in data_json["employees"]["office_worker"]:
+    for emp in json_dict["employees"]["office_worker"]:
         print(f'{emp["firstName"]} {emp["lastName"]}')
     # writer
-    emp = data_json["employees"]["writer"]   
+    emp = json_dict["employees"]["writer"]   
     print(f'{emp["firstName"]} {emp["lastName"]}')
 
 .. code-block:: 
@@ -154,16 +154,16 @@ Printing specific keys from json objects
     """
 
     # convert to json object
-    data_json = json.loads(emp_str)
+    json_dict = json.loads(emp_str)
     # iterate over list of office workers
-    for emp in data_json["employees"]["office_worker"]:
+    for emp in json_dict["employees"]["office_worker"]:
         del emp["gender"]
     # delete key for writer
-    del data_json["employees"]["writer"]["gender"]
+    del json_dict["employees"]["writer"]["gender"]
 
 
     # convert to a string
-    data_str = json.dumps(data_json)
+    data_str = json.dumps(json_dict)
     print(data_str)
 
 
@@ -177,7 +177,7 @@ Printing specific keys from json objects
 Printing specific keys from json objects with indenting
 --------------------------------------------------------------
 
-| To print with indenting, in the code above, change the line ``data_str = json.dumps(data_json)`` to ``data_str = json.dumps(data_json, indent=4)``.
+| To print with indenting, in the code above, change the line ``data_str = json.dumps(json_dict)`` to ``data_str = json.dumps(json_dict, indent=4)``.
 | The indented output is below.
 
 .. code-block:: 
@@ -471,16 +471,16 @@ dump json data to a file
     """
 
     # convert to json object
-    data_json = json.loads(emp_str)
+    json_dict = json.loads(emp_str)
     # iterate over list of office workers
-    for emp in data_json["employees"]["office_worker"]:
+    for emp in json_dict["employees"]["office_worker"]:
         del emp["gender"]
     # delete key for writer
-    del data_json["employees"]["writer"]["gender"]
+    del json_dict["employees"]["writer"]["gender"]
 
     json_path = "files/employees_names.json"
     with open(json_path, 'w', encoding='utf-8') as f:
-        json.dump(data_json, f, indent=4)
+        json.dump(json_dict, f, indent=4)
 
 
 | The file, employees2.json, contents are shown below.
