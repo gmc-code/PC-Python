@@ -216,8 +216,6 @@ Module for xml conversions
 xml file to json file
 --------------------------
 
-| ``pip install xmltodict`` from the terminal first.
-
 | The function ``xml_to_json_file(xml_file_path, json_file_path)`` takes a path to an xml file and a path to a json file.
 | There are two conversion steps: convert an xml string to a dictionary via ``py_dict = xmltodict.parse(xml_str)``.
 | Then from a dictionary to a json file via ``json.dump(py_dict, f, indent=4)``.
@@ -246,7 +244,8 @@ xml file to json file
 json file to xml file
 -----------------------
 
-| ``pip install xmltodict`` from the terminal first.
+| xmltodict needs to construct the JSON with the very first key as the root XML tag. 
+| This means that there should only be a single JSON key at the root level of data.
 
 | The function ``json_to_xml_file(json_file_path, xml_file_path)`` takes a path to a json file and a path to an xml file.
 | The line ``xml_str = xmltodict.unparse(json_data, pretty=True)`` converts the json as a dictionary to an xml string.
