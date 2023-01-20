@@ -428,7 +428,7 @@ Printing specific keys
 Dump
 ------------------
 
-| Use the dump method to save a json object to a file.
+| Use the dump method to save a json object, including a dictionary, to a file.
 | The full syntax is at: https://docs.python.org/3/library/json.html#json.dump
 | Use the simple syntax:
 
@@ -463,9 +463,9 @@ dump json data to a file
         "employees": {
             "office_worker": [
                 {"firstName": "John", "lastName": "Doe", "gender": "Male"},
-                {"firstName": "Peter", "lastName": "Jones", "gender": "Male"},
+                {"firstName": "Peter", "lastName": "Jones", "gender": "Male"}
             ],
-            "writer": {"firstName": "Anna", "lastName": "Smith", "gender": "Female"},
+            "writer": {"firstName": "Anna", "lastName": "Smith", "gender": "Female"}
         }
     }
     """
