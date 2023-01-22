@@ -197,6 +197,46 @@ Padded strings
 
 ----
 
+Reading a csv file to a list
+----------------------------------
+
+| The code below reads in the months csv file and appends each row to the list: data_list.
+
+.. code-block:: python
+    
+    import csv
+
+    csv_path = 'files/months.csv'
+    data_list = []
+    with open(csv_path, 'r', newline='') as csv_file:
+        csv_reader = csv.reader(csv_file, delimiter=",")
+        for row in csv_reader:
+            data_list.append(row)
+    print(data_list)
+
+| The printed data_list is below, showing each row of the csv file as a sublist in the list: data_list.
+
+.. code-block:: 
+
+    [
+        ["Month", "Abbr", "Numeric"],
+        ["January", "Jan", "1"],
+        ["Feburary", "Feb", "2"],
+        ["March", "Mar", "3"],
+        ["April", "Apr", "4"],
+        ["May", "May", "5"],
+        ["June", "Jun", "6"],
+        ["July", "Jul", "7"],
+        ["August", "Aug", "8"],
+        ["September", "Sep", "9"],
+        ["October", "Oct", "10"],
+        ["November", "Nov", "11"],
+        ["December", "Dec", "12"],
+    ]
+
+
+----
+
 csv writer
 ------------------
 
