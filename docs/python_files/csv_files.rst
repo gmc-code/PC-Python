@@ -215,6 +215,11 @@ Syntax:
     | For **fmtparams** see: https://docs.python.org/3/library/csv.html#dialects-and-formatting-parameters
 
 
+-----
+
+Converting comma delimited to tab delimited files.
+-------------------------------------------------------
+
 | The code below converts a comma delimited csv file to tab delimited.
 | ``delimiter="\t"`` is one of the optional fmtparams arguments that allows the delimiter to be set.
 
@@ -253,6 +258,36 @@ Syntax:
     Feburary	Feb	2
     ...
     December	Dec	12
+
+
+-----
+
+Saving a list of sublists to a csv file
+-----------------------------------------------
+
+| The code below saves a list to a csv file.
+| The list represents data collected by the accelerometer on a microbit.
+| The list is made up of sublists of 4 integers: a time value, x acceleration, y acceleration, z acceleration.
+
+.. code-block:: python
+    
+    import csv
+
+    data_list = [
+        [87574, 208, 876, -12],
+        [87677, 388, 900, 1992],
+        [87780, -236, 540, -2040],
+        [87884, 208, 1888, -1136],
+        [87989, 560, 1284, 280],
+        [88092, 1660, 1772, -1040],
+    ]
+    myheaders = ["time", "x", "y", "z"]
+    filename = "files/microbit_data.csv"
+    with open(filename, "w", newline="") as myfile:
+        writer = csv.writer(myfile)
+        writer.writerow(myheaders)
+        writer.writerows(data_list)
+
 
 ----
 
