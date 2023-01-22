@@ -31,7 +31,7 @@ Header rows
 Opening files: newline=''
 ---------------------------
 
-| If ``newline=''`` is not specified, newlines embedded inside quoted fields will not be interpreted correctly, and on platforms that use \r\n linendings on write an extra \r will be added. 
+| If ``newline=''`` is not specified, newlines embedded inside quoted fields will not be interpreted correctly, and on platforms that use \\r\\n linendings on write an extra \\r will be added. 
 | It should always be safe to specify ``newline=''``, since the csv module does its own (universal) newline handling.
 
 ----
@@ -80,7 +80,7 @@ Reading files
 
     ['Month,Abbr,Numeric']
     ['January,Jan,1']
-    ['Feburary,Feb,2']
+    ['February,Feb,2']
     ...
     ['December,Dec,12']
 
@@ -95,7 +95,7 @@ Reading files with non comma delimiter
 
     Month	Abbr	Numeric
     January	Jan	1
-    Feburary	Feb	2
+    February	Feb	2
     ...
     December	Dec	12
 
@@ -119,7 +119,7 @@ Reading files with non comma delimiter
 
     ['Month,Abbr,Numeric']
     ['January,Jan,1']
-    ['Feburary,Feb,2']
+    ['February,Feb,2']
     ...
     ['December,Dec,12']
 
@@ -176,7 +176,7 @@ Padded strings
 
     |  Month         |  Abbr          |  Numeric       |
     |  January       |  Jan           |  1             |
-    |  Feburary      |  Feb           |  2             |
+    |  February      |  Feb           |  2             |
     ...
     |  December      |  Dec           |  12            |
 
@@ -221,7 +221,7 @@ Reading a csv file to a list
     [
         ["Month", "Abbr", "Numeric"],
         ["January", "Jan", "1"],
-        ["Feburary", "Feb", "2"],
+        ["February", "Feb", "2"],
         ["March", "Mar", "3"],
         ["April", "Apr", "4"],
         ["May", "May", "5"],
@@ -285,7 +285,7 @@ Converting comma delimited to tab delimited files.
 
     Month,Abbr,Numeric
     January,Jan,1
-    Feburary,Feb,2
+    February,Feb,2
     ...
     December,Dec,12
 
@@ -295,7 +295,7 @@ Converting comma delimited to tab delimited files.
 
     Month	Abbr	Numeric
     January	Jan	1
-    Feburary	Feb	2
+    February	Feb	2
     ...
     December	Dec	12
 
@@ -379,7 +379,7 @@ DictReading files
 .. code-block::
 
     {'Month': 'January', 'Abbr': 'Jan', 'Numeric': '1'}
-    {'Month': 'Feburary', 'Abbr': 'Feb', 'Numeric': '2'}
+    {'Month': 'February', 'Abbr': 'Feb', 'Numeric': '2'}
     ...
     {"Month": "December", "Abbr": "Dec", "Numeric": "12"}
 
