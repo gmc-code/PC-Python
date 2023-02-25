@@ -15,6 +15,8 @@ Unpacking to merge tuples
     merged_tuple = (*tuple1, *tuple2)
     print(merged_tuple)
 
+| The ouput is: ('a', 'b', 'c', 3, 2, 1)
+
 ----
 
 Unpacking to merge lists
@@ -29,7 +31,7 @@ Unpacking to merge lists
     merged_list = [*list1, *list2]
     print(merged_list)
 
-
+| The ouput is: ['a', 'b', 'c', 3, 2, 1]
 
 
 
