@@ -33,3 +33,13 @@ Key references:
 | python: https://www.w3schools.com/python/
 | microbit: https://microbit-micropython.readthedocs.io/en/v2-docs/index.html
 
+----
+
+Online editors:
+------------------
+
+| https://www.w3schools.com/python/python_compiler.asp
+| https://replit.com/
+| https://www.online-python.com/
+
+
