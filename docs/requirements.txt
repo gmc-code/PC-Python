@@ -5,5 +5,4 @@ sphinx-design
 sphinx-togglebutton
 sphinx-thebe
 nbsphinx
-sphinx-design
 sphinxcontrib.jupyter
