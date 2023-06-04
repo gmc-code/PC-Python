@@ -4,6 +4,7 @@ Introduction to turtle
 
 | Turtles are objects that can be directed to move about on a screen.
 | The turtle can draw on the screen as it moves.
+| The turtle graphics window has a default coordinate system, where the origin (0, 0) is at the center of the window, the positive x-axis points to the right, the positive y-axis points to the top, and the angle 0 degrees corresponds to the rightward direction.
 
 | This section begins with some basic syntax for the screen and turtles.
 | Basic shapes, squares, rectangles and triangles, are drawn via **sequencing**, **iteration** and **definitions**.
