@@ -344,7 +344,8 @@ Syntax:
 
     :param f: a string for the file path to the csv file from the current directory.
     :param fieldnames:  a sequence of keys that identify the order in which values in the dictionary passed to the writerow() method are written to file **f**.
-    :param restval: specify the value to be written if the dictionary is missing a key in **fieldnames**. 
+    :param restkey: specify the fieldname to be store the remaining data as a list if a row has more fields than  **fieldnames**. 
+    :param restval: specify the value to be written if a non-blank row has fewer fields than **fieldnames**. 
     :param dialect: Use a set of parameters specific to a particular CSV dialect; Defaults to excel; one of ['excel', 'excel-tab', 'unix']
     :param *args, **kwds: other optional or keyword arguments are passed to the underlying writer instance.
 

@@ -16,7 +16,7 @@ Introduction to turtle
 turtle documentation
 ----------------------------------------
 
-| Docs: https://docs.python.org/3.11/library/turtle.html#module-turtle
+| Docs: https://docs.python.org/3.12/library/turtle.html#module-turtle
 | See the docs for a full listing of methods.
 
 ----
@@ -85,3 +85,13 @@ Screen and turtles
 
     s = turtle.Screen()
     t = turtle.Turtle()
+
+----
+
+Colours
+-----------
+
+Colours can be specified by **(r,g,b)**,  or **hexadecimal digits "#33cc8c"**, or **colorstrings**, which is a Tk color specification string, such as "red", "yellow".
+For hexadecimal vlaues see: https://www.tcl.tk/man/tcl8.4/TkCmd/colors.html
+For rgb vlaues see: https://www.tcl.tk/man/tcl8.5/TkCmd/colors.html
+

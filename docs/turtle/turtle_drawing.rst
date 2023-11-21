@@ -18,6 +18,7 @@ Turtle methods
 | **t.home()**: move the turtle to (0, 0), pointing east (depending on mode)
 | **t.position()**, **t.pos()**: return the current position (x, y)
 | **t.setposition(x, y)**, **t.setpos(x, y)**, **t.goto(x, y)**: move to coordinates (x, y)
+| **t.teleport(x, y=None, *, fill_gap=False)**: move to coordinates (x, y) wihtout drawing a line.
 | **t.xcor()**: Return the turtle's x coordinate.
 | **t.ycor()**: Return the turtle'sy coordinate.
 | **t.setx(x)**: set the turtle's x coordinate, leave y unchanged
@@ -86,7 +87,7 @@ Turtle methods
 **Appearance**
 
 | The turtle appeance can be controlled:
-| See: https://docs.python.org/3.11/library/turtle.html#appearance
+| See: https://docs.python.org/3.12/library/turtle.html#appearance
 
 | shape()
 | resizemode()

@@ -4,14 +4,15 @@ import turtle
 
 
 def draw_centered_circle(t, centre=(0, 0), radius=10, penw=1, penc="black", fillc=None):
-    t.pu()
-    t.goto(centre)
+    t.teleport(centre[0] + radius, centre[1])
+    # t.pu()
+    # t.goto(centre)
     t.seth(0)
-    t.fd(radius)
+    # t.fd(radius)
     t.seth(90)
     t.pensize(penw)
     t.pencolor(penc)
-    t.pd()
+    # t.pd()
     if fillc is not None:
         t.fillcolor(fillc)
         t.begin_fill()   

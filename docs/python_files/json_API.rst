@@ -23,7 +23,7 @@ Getting free weather data from the web
 | Enter Melbourne as the city and use the daily checkboxes to generate the url below.
 | The url below is for Melbourne daily max and min temperatures for the next 7 days.
 | The built-in python library, urllib, is used to get the web data from the url.
-| THe syntax for urlopen and read is below.
+| The syntax for urlopen and read is below.
 
 .. code-block:: python
     

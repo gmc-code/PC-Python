@@ -288,7 +288,7 @@ Convert a nested dict to json file
         json.dump(j_json, f, indent=4)
 
 | The contents of the json file are below.
-| THe json string in the file looks just like the python dictionary.
+| The json string in the file looks just like the python dictionary.
 
 .. code-block:: 
 
