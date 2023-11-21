@@ -378,7 +378,7 @@ Load
 Loading a json file
 ------------------------
 
-| Download the test csv file :download:`afl_premiers_counts.json <files/afl_premiers_counts.json>`
+| Download the test json file :download:`afl_premiers_counts.json <files/afl_premiers_counts.json>`
 | The code below loads the json file and prints it.
 
 .. code-block:: python
