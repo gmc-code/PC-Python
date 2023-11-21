@@ -1,25 +1,25 @@
 Index,Year,Premiership team,Runner-up
 0,2000,Essendon,Melbourne
-1,2001,Brisbane Lions,Essendon
-2,2002,Brisbane Lions,Collingwood
-3,2003,Brisbane Lions,Collingwood
-4,2004,Port Adelaide,Brisbane Lions
-5,2005,Sydney Swans,West Coast
-6,2006,West Coast,Sydney Swans
+1,2001,Brisbane,Essendon
+2,2002,Brisbane,Collingwood
+3,2003,Brisbane,Collingwood
+4,2004,Port Adelaide,Brisbane
+5,2005,Sydney,West Coast
+6,2006,West Coast,Sydney
 7,2007,Geelong,Port Adelaide
 8,2008,Hawthorn,Geelong
 9,2009,Geelong,St Kilda
 10,2010,Collingwood,St Kilda
 11,2011,Geelong,Collingwood
-12,2012,Sydney Swans,Hawthorn
-13,2013,Hawthorn,Fremantle Dockers
-14,2014,Hawthorn,Sydney Swans
+12,2012,Sydney,Hawthorn
+13,2013,Hawthorn,Fremantle
+14,2014,Hawthorn,Sydney
 15,2015,Hawthorn,West Coast
-16,2016,Western Bulldogs,Sydney Swans
+16,2016,Western Bulldogs,Sydney
 17,2017,Richmond,Adelaide
 18,2018,West Coast,Collingwood
-19,2019,Richmond,GWS Giants
+19,2019,Richmond,GWS
 20,2020,Richmond,Geelong
 21,2021,Melbourne,Western Bulldogs
-22,2022,Geelong Cats,Sydney Swans
-23,2023,Collingwood,Brisbane Lions
+22,2022,Geelong,Sydney
+23,2023,Collingwood,Brisbane
