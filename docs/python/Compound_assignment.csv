@@ -1,0 +1,9 @@
+﻿Compound Operator,Example,Description,Equivalent
+=,x = 5,Assignment,x = 5
++=,x += 3,Addition,x = x + 3
+-=,x -= 3,Subtraction,x = x - 3
+*=,x *= 3,Multiplication,x = x * 3
+/=,x /= 3,Division,x = x / 3
+%=,x %= 3,Modulus,x = x % 3
+//=,x //= 3,Floor division,x = x // 3
+**=,x **= 3,Exponentiation,x = x ** 3

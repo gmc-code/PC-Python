@@ -1,0 +1,18 @@
+{
+    "employees": {
+        "office_worker": [
+            {
+                "firstName": "John",
+                "lastName": "Doe"
+            },
+            {
+                "firstName": "Peter",
+                "lastName": "Jones"
+            }
+        ],
+        "writer": {
+            "firstName": "Anna",
+            "lastName": "Smith"
+        }
+    }
+}

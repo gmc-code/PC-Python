@@ -1,0 +1,64 @@
+{
+    "months": [
+        {
+            "Month": "January",
+            "Abbr": "Jan",
+            "Numeric": "1"
+        },
+        {
+            "Month": "February",
+            "Abbr": "Feb",
+            "Numeric": "2"
+        },
+        {
+            "Month": "March",
+            "Abbr": "Mar",
+            "Numeric": "3"
+        },
+        {
+            "Month": "April",
+            "Abbr": "Apr",
+            "Numeric": "4"
+        },
+        {
+            "Month": "May",
+            "Abbr": "May",
+            "Numeric": "5"
+        },
+        {
+            "Month": "June",
+            "Abbr": "Jun",
+            "Numeric": "6"
+        },
+        {
+            "Month": "July",
+            "Abbr": "Jul",
+            "Numeric": "7"
+        },
+        {
+            "Month": "August",
+            "Abbr": "Aug",
+            "Numeric": "8"
+        },
+        {
+            "Month": "September",
+            "Abbr": "Sep",
+            "Numeric": "9"
+        },
+        {
+            "Month": "October",
+            "Abbr": "Oct",
+            "Numeric": "10"
+        },
+        {
+            "Month": "November",
+            "Abbr": "Nov",
+            "Numeric": "11"
+        },
+        {
+            "Month": "December",
+            "Abbr": "Dec",
+            "Numeric": "12"
+        }
+    ]
+}

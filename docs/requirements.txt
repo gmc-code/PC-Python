@@ -1,0 +1,9 @@
+sphinx
+sphinx_rtd_theme
+sphinx-copybutton
+sphinx-design
+sphinx-togglebutton
+sphinx-thebe
+nbsphinx
+sphinxcontrib.jupyter
+urllib3 < 2.0.0
