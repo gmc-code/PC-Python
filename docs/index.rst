@@ -40,7 +40,10 @@ PC-Python
     python/selection.rst
     python/iteration.rst
     python/functions.rst
-    python/data_structures.rst
+    python/data_structures_lists.rst
+    python/data_structures_sets.rst
+    python/data_structures_tuples.rst
+    python/data_structures_dictionaries.rst
     python/multiple_assignment.rst
     python/unpacking_iterables.rst
     python/function_packing and_unpacking.rst
