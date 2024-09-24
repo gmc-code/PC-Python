@@ -37,15 +37,19 @@ PC-Python
     python/operators_identity.rst
     python/variables.rst
     python/variables_scope.rst
+    
     python/selection.rst
     python/iteration.rst
-    python/functions.rst
-    python/data_structures_lists.rst
-    python/data_structures_sets.rst
-    python/data_structures_tuples.rst
-    python/data_structures_dictionaries.rst
+    
+    python/lists.rst
+    python/sets.rst
+    python/tuples.rst
+    python/dictionaries.rst
+
     python/multiple_assignment.rst
     python/unpacking_iterables.rst
+
+    python/functions.rst
     python/function_packing and_unpacking.rst
 
 
