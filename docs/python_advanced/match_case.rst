@@ -105,7 +105,7 @@ Case Alternatives
 
 ----
 
-Wilcard
+Wildcard
 --------------------------------
 
 | If an exact match is not found, the last case, if provided, will be used as the matching case.
@@ -140,7 +140,7 @@ Wilcard
 
 ----
 
-Vaiable instead of Wilcard
+Variable instead of Wildcard
 --------------------------------
 
 | Instead of using the wildcard ``_``, another variable, such as ``other``, can be used so that it may be referred to in the following case block code. 
@@ -360,10 +360,10 @@ Structure Matching lists or tuples
 .. admonition:: Tasks
 
     1. A silly maths function does different things with a list of values depending in the number of elements in the list. 
-    Complete the code below by filling in the square brackets and the curvy brackets. Some parts are done already. 
+    Complete the code below by filling in the square brackets and the curly brackets. Some parts are done already. 
     Here are the silly rules: for 1 element in the list, square it. 
     For 2 elements raise a to the power of b using the inbuilt pow function. 
-    For 3 elements, multilpy the first two then use floor division with the third. 
+    For 3 elements, multiply the first two then use floor division with the third. 
     For more than 3 elements, add the first 3 then subtract the sum of the rest.
 
         .. code-block:: python
@@ -414,7 +414,7 @@ Matching tuples for coordinates
 
 .. admonition:: Tasks
 
-    1. Modify the curvy brackets below to give feedback using the variables from the case statements used in playing a game of cards.
+    1. Modify the curly brackets below to give feedback using the variables from the case statements used in playing a game of cards.
 
         .. code-block:: python
 
