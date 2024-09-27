@@ -169,7 +169,7 @@ Practice Questions
 
 .. admonition:: Tasks
 
-    #. Create a dictionary comprehension that maps the names of students, Alice, Bob, Charlie, and David, to their test_scores: 85, 72, 90, and 65. Print the dictionary.
+    #. Create a dictionary comprehension that maps the names of students, 'Alice', 'Bob', 'Charlie', and 'David', to their test scores: 85, 72, 90, and 65. Print the dictionary.
     #. Create a dictionary comprehension that maps the names of products, apple, banana, cherry, and date, to their prices: 15, 25, 10, and 30. Print the dictionary.
     #. Create a dictionary comprehension that maps the names of vehicles, 'car', 'bike', 'boat', and 'plane', to their types: 'land', 'land', 'water', and 'air'. Print the dictionary.
 
@@ -182,7 +182,7 @@ Practice Questions
 
             .. tab-item:: Q1
 
-                Create a dictionary comprehension that maps the names of students, Alice, Bob, Charlie, and David, to their test_scores: 85, 72, 90, and 65. Print the dictionary.
+                Create a dictionary comprehension that maps the names of students, 'Alice', 'Bob', 'Charlie', and 'David', to their test scores: 85, 72, 90, and 65. Print the dictionary.
 
                 .. code-block:: python
 
