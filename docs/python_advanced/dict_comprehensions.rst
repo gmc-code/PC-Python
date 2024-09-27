@@ -2,8 +2,8 @@
 Dictionary Comprehensions
 ==========================
 
-See docs at: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
-See ref video at: https://www.youtube.com/watch?v=3dt4OGnU5sM
+See docs at: https://docs.python.org/3/tutorial/datastructures.html#dictionaries
+See ref video at: https://youtu.be/3dt4OGnU5sM?feature=shared&t=738
 
 ----
 
@@ -16,8 +16,8 @@ Dictionary comprehension
 
 ----
 
-Syntax
-------------
+Dictionary comprehension of the range function, lists and strings
+----------------------------------------------------------------------
 
 .. py:function:: new_dictionary = {key: value for item in iterable}
 
@@ -47,6 +47,7 @@ Practice Questions
     #. Create a dictionary comprehension that maps the first three letters in uppercase of the days of the week to their full names. Print the dictionary.
     #. Create a dictionary comprehension that maps the names of the months of the year, 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', and 'December', to their first three letters in uppercase. Print the dictionary.
     #. Create a dictionary comprehension that maps the first three letters in uppercase of the months of the year to their full names. Print the dictionary.
+    #. Use a dictionary comprehension that maps each character in the string "Python" to its ASCII values. Print the dictionary.
 
     .. dropdown::
         :icon: codescan
@@ -124,20 +125,31 @@ Practice Questions
                     # Output: {'JAN': 'January', 'FEB': 'February', 'MAR': 'March', 'APR': 'April', 'MAY': 'May', 'JUN': 'June', 'JUL': 'July', 'AUG': 'August', 'SEP': 'September', 'OCT': 'October', 'NOV': 'November', 'DEC': 'December'}
 
 
+            .. tab-item:: Q7
 
+                Use a dictionary comprehension that maps each character in the string "Python" to its ASCII values. Print the dictionary.
 
+                .. code-block:: python
+
+                    string = "Python"
+                    string_ascii = {char: ord(char) for char in string}
+                    print(string_ascii)
+                    # {'P': 80, 'y': 121, 't': 116, 'h': 104, 'o': 111, 'n': 110}
 
 ----
 
-Syntax
-------------
+Dictionary comprehension of zipped lists
+----------------------------------------------------------------------
+
+| Zipping 2 lists produces a zip object which is like a list of tuples.
+
+| Syntax:
 
 .. py:function:: new_dictionary = {key: value for key, value in iterable}
 
     :param key: the key variable.
     :param value: the value variable.
     :param iterable: iterable objects like zip objects from 2 lists.
-
 
 .. code-block:: python
     
@@ -297,8 +309,94 @@ Practice Questions
                     print(squared_evens)
                     # Output: {2: 4, 4: 16, 6: 36, 8: 64}
 
+----
+
+Dictionary comprehension of dictionaries
+----------------------------------------------------------------------
+
+Syntax:
+
+.. py:function:: new_dictionary = {key: value_expression for key, value in dictionary.items()}
+
+    :param key: the key variable.
+    :param value: the value variable.
+    :param value_expression: an expression based on the value variable.
+    :param dictionary: starting dictionary with keys and values ot be used.
+
+| This can be useful for doing numerical conversions on values in a dictionary.
+| The code below creates a new dictionary with temperatures in Celsius instead of Fahrenheit.
+
+.. code-block:: python
+    
+    cities_in_F = {'Sydney': 86, 'Melbourne': 68, 'Brisbane': 95, 'Perth': 77}
+    cities_in_C = {key: round((value-32)*(5/9)) for (key, value) in cities_in_F.items()}
+    print(cities_in_C)
+    # {'Sydney': 30, 'Melbourne': 20, 'Brisbane': 35, 'Perth': 25}
 
 
+----
+
+Practice Questions
+--------------------
+
+.. admonition:: Tasks
+
+    #. Use a dictionary comprehension starting with a dictionary of the animal names and their weights in pounds, ``{'Elephant': 12000, 'Tiger': 500, 'Kangaroo': 200, 'Panda': 300}``, and converts them to kilograms. Print the dictionary.
+    #. Use a dictionary comprehension starting with a dictionary of the names of famous basketball players and their heights in inches, ``{"Michael": 78, "LeBron": 81, "Kobe": 78, "Shaquille": 85}``, and converts them to centimeters. Print the dictionary.
+    #. Use a dictionary comprehension starting with a dictionary of the vehicle names and their speeds in mph, ``{'Car': 60, 'Bike': 20, 'Train': 80, 'Plane': 500}``, and converts them to kph. Print the dictionary.
+    #. Use a dictionary comprehension starting with a dictionary of the parts of a name and their values in uppercase, ``{'first': 'SHERLOCK', 'middle': 'HAMISH', 'surname': 'HOLMES'}``, and converts them to title case. Print the dictionary.
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Use a dictionary comprehension starting with a dictionary of the animal names and their weights in pounds, ``{'Elephant': 12000, 'Tiger': 500, 'Kangaroo': 200, 'Panda': 300}``, and converts them to kilograms. Print the dictionary.
+
+                .. code-block:: python
+
+                    weights_in_pounds = {'Elephant': 12000, 'Tiger': 500, 'Kangaroo': 200, 'Panda': 300}
+                    weights_in_kg = {key: round(value * 0.453592, 2) for key, value in weights_in_pounds.items()}
+                    print(weights_in_kg)
+                    # {'Elephant': 5443.11, 'Tiger': 226.8, 'Kangaroo': 90.72, 'Panda': 136.08}
+
+            .. tab-item:: Q2
+
+                Use a dictionary comprehension starting with a dictionary of the names of famous basketball players and their heights in inches, ``{"Michael": 78, "LeBron": 81, "Kobe": 78, "Shaquille": 85}``, and converts them to centimeters. Print the dictionary.
+
+                .. code-block:: python
+
+                    heights_in_inches = {"Michael": 78, "LeBron": 81, "Kobe": 78, "Shaquille": 85}
+                    heights_in_cm = {key: round(value * 2.54) for key, value in heights_in_inches.items()}
+                    print(heights_in_cm)
+                    # {"Michael": 198, "LeBron": 206, "Kobe": 198, "Shaquille": 216}
+
+
+            .. tab-item:: Q3
+
+                Use a dictionary comprehension starting with a dictionary of the vehicle names and their speeds in mph, ``{'Car': 60, 'Bike': 20, 'Train': 80, 'Plane': 500}``, and converts them to kph. Print the dictionary.
+
+                .. code-block:: python
+
+                    speeds_in_mph = {'Car': 60, 'Bike': 20, 'Train': 80, 'Plane': 500}
+                    speeds_in_kph = {key: round(value * 1.60934) for key, value in speeds_in_mph.items()}
+                    print(speeds_in_kph)
+                    # {'Car': 97, 'Bike': 32, 'Train': 129, 'Plane': 805}
+
+            .. tab-item:: Q4
+
+                Use a dictionary comprehension starting with a dictionary of the parts of a name and their values in uppercase, ``{'first': 'SHERLOCK', 'middle': 'HAMISH', 'surname': 'HOLMES'}``, and converts them to title case. Print the dictionary.
+
+                .. code-block:: python
+
+                    names = {'first': 'SHERLOCK', 'middle': 'HAMISH', 'surname': 'HOLMES'}
+                    title_cased_names = {key.title(): value.title() for key, value in names.items()}
+                    print(title_cased_names)
+                    # {'First': 'Sherlock', 'Middle': 'Hamish', 'Surname': 'Holmes'}
 
 
 

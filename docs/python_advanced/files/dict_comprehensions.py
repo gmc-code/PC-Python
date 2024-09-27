@@ -59,7 +59,20 @@ print(land_vehicles)
 
 
 
+cities_in_F = {'Sydney': 86, 'Melbourne': 68, 'Brisbane': 95, 'Perth': 77}
+cities_in_C = {key: round((value-32)*(5/9)) for (key, value) in cities_in_F.items()}
+print(cities_in_C)
+# {'Sydney': 30, 'Melbourne': 20, 'Brisbane': 35, 'Perth': 25}
 
+
+names = {'first': 'SHERLOCK', 'middle': 'HAMISH', 'surname': 'HOLMES'}
+title_cased_names = {key.title(): value.title() for key, value in names.items()}
+print(title_cased_names)
+# {'First': 'Sherlock', 'Middle': 'Hamish', 'Surname': 'Holmes'}
+
+string = "Python"
+string_ascii = {char: ord(char) for char in string}
+print(string_ascii)
+# {'P': 80, 'y': 121, 't': 116, 'h': 104, 'o': 111, 'n': 110}
 
 #
-
