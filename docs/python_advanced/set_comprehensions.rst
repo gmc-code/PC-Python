@@ -11,7 +11,7 @@ Set comprehension without condition
 
 | Python sets are not ordered.
 | Duplicate items are automatically removed.
-| Set con only contain immutable objects like integers, floats, strings and tuples.
+| Sets can only contain immutable objects like integers, floats, strings and tuples.
 | Sets cannot contain lists, dictionaries or other sets.
 | Basic uses include membership testing, eliminating duplicate entries and mathematical operations like union, intersection, and difference.
 | To create an empty set use: ``set()``.
