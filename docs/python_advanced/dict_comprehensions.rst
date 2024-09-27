@@ -11,7 +11,7 @@ Dictionary comprehension
 ---------------------------
 
 | Dictionary comprehensions provide a concise way to create dictionaries. 
-| They are used to make new dictionaries where each key-value pair is the result of some operations applied to each member of another sequence or iterable. 
+| They are used to make new dictionaries where each key-value pair is the result of some operations applied to each member of another sequence (e.g. list, range function) or iterable (e.g. list, zip of 2 list-comprehensions).
 | They can also create a sub-sequence of those elements that satisfy a certain condition.
 
 ----
@@ -20,9 +20,7 @@ Syntax
 ------------
 
 .. py:function:: new_dictionary = {key_expression: value_expression for item in iterable}
-
 or 
-
 .. py:function:: new_dictionary = {key_expression: value_expression for key_expression, value_expression in iterable}
 
     :param key_expression: the key variable only or any expression such as one that uses the item variable (e.g. n).
