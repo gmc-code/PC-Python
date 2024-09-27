@@ -20,7 +20,6 @@ Syntax
 ------------
 
 .. py:function:: new_dictionary = {key: value for item in iterable}
-or 
 .. py:function:: new_dictionary = {key: value for key, value in iterable}
 
     :param key: the key variable only or any expression such as one that uses the item variable (e.g. n).
