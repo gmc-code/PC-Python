@@ -117,17 +117,19 @@ List installed packages
 
     pip list
 
-* To see if there are updates available, check the output from typing in the VSCode terminal:
+* To see if there are updates available, check the output from typing one of these in the VSCode terminal:
 
 .. code-block::
 
     pip list -o
 
-* To list updates and those packages that don't need updates, check the output from typing in the VSCode terminal:
-
 .. code-block::
 
     pip list --outdated
 
-
+| This lists all the outdated Python packages.
+| It will display a table with the following information:
+| Package Name: The name of the package.
+| Current Version: The version of the package currently installed.
+| Latest Version: The latest available version of the package
 
