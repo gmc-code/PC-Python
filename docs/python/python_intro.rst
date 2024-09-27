@@ -25,7 +25,7 @@ Code examples showing indentation:
 
 .. image:: images/indenting.png
     :scale: 50 %
-    :align: center
+    :align: left
     :alt: indenting
 
 .. code-block:: python
@@ -56,7 +56,7 @@ Blocks of code nested within other blocks of code need to be indented to the sam
 
 .. image:: images/nested_indenting.png
     :scale: 50 %
-    :align: center
+    :align: left
     :alt: nested_indenting
 
 .. code-block:: python
