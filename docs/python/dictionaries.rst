@@ -7,6 +7,10 @@ Dictionary structure
 
 | A Python dictionary is a collection of items.
 | Each item  is a ``key: value`` pair. 
+| Dictionary items are ordered, changeable, and do not allow duplicates.
+| All keys must be immutable (not able to be changed) such as integers, strings and tuples of integers or strings.
+| Values can be any  data types such as string, int, boolean, tuple, list, dictionary. 
+| Values in a dictionary are retrieved by using the key as an index. e.g print(dictionary_1[key_1])
 
 .. code-block:: python
 
@@ -18,10 +22,29 @@ Dictionary structure
         <key_n>: <value_n>
     }
 
-| Dictionary items are ordered, changeable, and do not allow duplicates.
-| All keys must be immutable (not able to be changed) such as integers, strings and tuples of integers or strings.
-| Values can be any  data types such as string, int, boolean, tuple, list, dictionary. 
-| Values in a dictionary are retrieved by using the key as an index. e.g print(dictionary_1[key_1])
+| An example of a dictionary of states and capitals is below. 
+
+.. code-block:: python
+
+    eastern_state_capitals = {
+                    'Victoria': 'Melbourne',
+                    'New South Wales': 'Sydney',
+                    'Queensland': 'Brisbane'
+                    }
+    print(eastern_state_capitals)
+
+| The capital of Victoria can be found by indexing the dictionary: ``eastern_state_capitals['Victoria']``.
+
+.. code-block:: python
+
+    eastern_state_capitals = {
+                    'Victoria': 'Melbourne',
+                    'New South Wales': 'Sydney',
+                    'Queensland': 'Brisbane'
+                    }
+    capital = eastern_state_capitals['Victoria']
+    print(capital)
+
 
 ----
 
@@ -61,6 +84,46 @@ Making a dictionary: curly brackets
                     } 
     print(state_capitals)
 
+
+.. admonition:: Tasks
+
+    #. Create a dictionary using curly brackets such that it maps the names of three countries, Japan, France and England, to their capitals: Tokyo, Paris and London. Print the dictionary.
+    #. Create a dictionary using curly brackets such that it maps the names of three fruits, Apple, Banana, and Grapes, to their colors: Red, Yellow, and Purple. Print the dictionary.
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Create a dictionary using curly brackets such that it maps the names of three countries, Japan, France and England, to their capitals: Tokyo, Paris and London. Print the dictionary.
+
+                .. code-block:: python
+
+                    country_capitals = {
+                        'Japan': 'Tokyo',
+                        'France': 'Paris',
+                        'England': 'London'
+                    }
+                    print(country_capitals)
+
+            .. tab-item:: Q2
+
+                Create a dictionary using curly brackets such that it maps the names of three fruits, Apple, Banana, and Grapes, to their colors: Red, Yellow, and Purple. Print the dictionary.
+
+                .. code-block:: python
+
+                    fruit_colors = {
+                        'Apple': 'Red',
+                        'Banana': 'Yellow',
+                        'Grapes': 'Purple'
+                    }
+                    print(fruit_colors)
+
+                   
 ----
 
 Making a dictionary from a list of lists
@@ -81,6 +144,46 @@ Making a dictionary from a list of lists
     print(state_capitals)
 
 
+.. admonition:: Tasks
+
+    #. Create a dictionary using the dict function and a list of lists such that it maps the names of three programming languages, Python, Java, and C++, to their creators: Guido van Rossum, James Gosling, and Bjarne Stroustrup. Print the dictionary.
+    #. Create a dictionary using the dict function and a list of lists such that it maps the names of three countries, China, India, and USA, to their populations in billions: 1.4, 1.4, and 0.3. Print the dictionary.
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Create a dictionary using the dict function and a list of lists such that it maps the names of three programming languages, Python, Java, and C++, to their creators: Guido van Rossum, James Gosling, and Bjarne Stroustrup. Print the dictionary.
+
+                .. code-block:: python
+
+                    languages = dict([
+                        ['Python', 'Guido van Rossum'],
+                        ['Java', 'James Gosling'],
+                        ['C++', 'Bjarne Stroustrup']
+                    ])
+                    print(languages)
+
+
+            .. tab-item:: Q2
+
+                Create a dictionary using the dict function and a list of lists such that it maps the names of three countries, China, India, and USA, to their populations in billions: 1.44, 1.39, and 0.33. Print the dictionary.
+
+                .. code-block:: python
+
+                    populations = dict([
+                        ['China', 1.44],
+                        ['India', 1.39],
+                        ['USA', 0.33]
+                    ])
+                    print(populations)
+
+
 ----
 
 Making a dictionary from a list of tuples
@@ -99,6 +202,44 @@ Making a dictionary from a list of tuples
     ])
     print(capitals)
 
+.. admonition:: Tasks
+
+    #. Create a dictionary using the dict function and a list of tuples such that it maps the names of three car brands, Toyota, BMW, and Ford, to their countries of origin: Japan, Germany, and USA. Print the dictionary.
+    #. Create a dictionary using the dict function and a list of tuples such that it maps the names of three planets, Mercury, Venus, and Earth, to their average distances from the sun in million kilometers: 57.9, 108.2, and 149.6. Print the dictionary.
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Create a dictionary using the dict function and a list of tuples such that it maps the names of three car brands, Toyota, BMW, and Ford, to their countries of origin: Japan, Germany, and USA. Print the dictionary.
+
+                .. code-block:: python
+
+                    car_brand_countries = dict([
+                        ('Toyota', 'Japan'),
+                        ('BMW', 'Germany'),
+                        ('Ford', 'USA')
+                    ])
+                    print(car_brand_countries)
+
+
+            .. tab-item:: Q2
+
+                Create a dictionary using the dict function and a list of tuples such that it maps the names of three planets, Mercury, Venus, and Earth, to their average distances from the sun in million kilometers: 57.9, 108.2, and 149.6. Print the dictionary.
+
+                .. code-block:: python
+
+                    planet_distances_to_sun = dict([
+                        ('Mercury', 57.9),
+                        ('Venus', 108.2),
+                        ('Earth', 149.6)
+                    ])
+                    print(planet_distances_to_sun)
 
 ----
 
@@ -118,6 +259,40 @@ Making a dictionary from 2 lists
     capitals = dict(zip(states, cities))
     print(capitals)
 
+.. admonition:: Tasks
+
+    #. Create a dictionary using the zip function and two lists such that it maps the names of three animals, Elephant, Dog, and Cat, to their average lifespans in years: 70, 13, and 15. Print the dictionary.
+    #. Create a dictionary using the zip function and two lists such that it maps the names of three cities, Tokyo, Delhi, and Shanghai, to their populations in millions: 37.4, 28.5, and 25.6. Print the dictionary.
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Create a dictionary using the zip function and two lists such that it maps the names of three animals, Elephant, Dog, and Cat, to their average lifespans in years: 70, 13, and 15. Print the dictionary.
+
+                .. code-block:: python
+
+                    animals = ['Elephant', 'Dog', 'Cat']
+                    lifespans = [70, 13, 15]
+                    animal_lifespans = dict(zip(animals, lifespans))
+                    print(animal_lifespans)
+
+            .. tab-item:: Q2
+
+                Create a dictionary using the zip function and two lists such that it maps the names of three cities, Tokyo, Delhi, and Shanghai, to their populations in millions: 37.4, 28.5, and 25.6. Print the dictionary.
+
+                .. code-block:: python
+
+                    cities = ['Tokyo', 'Delhi', 'Shanghai']
+                    populations = [37.4, 28.5, 25.6]
+                    city_populations = dict(zip(cities, populations))
+                    print(city_populations)
+
 
 ----
 
@@ -134,6 +309,41 @@ For each tuple, the state becomes the key and city becomes the value.
 
     capitals = {state: city for state, city in zip(states, cities)}
 
+
+.. admonition:: Tasks
+
+    #. Create a dictionary using dictionary comprehension and two lists such that it maps the names of three sports, Soccer, Basketball, and Baseball, to the number of players in each team: 11, 5, and 9. Print the dictionary.
+    #. Create a dictionary using dictionary comprehension and two lists such that it maps the names of three countries, USA, China, and Japan, to their GDPs in trillion USD: 21.43, 14.34, and 5.08. Print the dictionary.
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Create a dictionary using dictionary comprehension and two lists such that it maps the names of three sports, Soccer, Basketball, and Baseball, to the number of players in each team: 11, 5, and 9. Print the dictionary.
+
+                .. code-block:: python
+
+                    sports = ['Soccer', 'Basketball', 'Baseball']
+                    players = [11, 5, 9]
+                    sport_players = {sport: player for sport, player in zip(sports, players)}
+                    print(sport_players)
+
+            .. tab-item:: Q2
+
+                Create a dictionary using dictionary comprehension and two lists such that it maps the names of three countries, USA, China, and Japan, to their GDPs in trillion USD: 21.43, 14.34, and 5.08. Print the dictionary.
+
+                .. code-block:: python
+
+                    countries = ['USA', 'China', 'Japan']
+                    gdps = [21.43, 14.34, 5.08]
+                    country_gdps = {country: gdp for country, gdp in zip(countries, gdps)}
+                    print(country_gdps)
+
 ----
 
 Making a dictionary from key word arguments
@@ -149,11 +359,10 @@ Making a dictionary from key word arguments
 
 ----
 
-----
-
 .. admonition:: Tasks
 
-    #. Create a dictionary using curly brackets such that it maps the names of three countries, Japan, France and England, to their capitals. Print the dictionary.
+    #. Create a dictionary using keyword arguments such that it maps the names of three programming languages, Python, Java, and JavaScript, to their release years: 1991, 1995, and 1995. Print the dictionary.
+    #. Create a dictionary using keyword arguments such that it maps the names of three continents, Africa, Asia, and Europe, to their areas in million square kilometers: 30.37, 44.58, and 10.18. Print the dictionary.
 
     .. dropdown::
         :icon: codescan
@@ -164,19 +373,23 @@ Making a dictionary from key word arguments
 
             .. tab-item:: Q1
 
-                Create a dictionary using curly brackets such that it maps the names of three countries, Japan, France and England, to their capitals. Print the dictionary.
+                Create a dictionary using keyword arguments such that it maps the names of three programming languages, Python, Java, and JavaScript, to their release years: 1991, 1995, and 1995. Print the dictionary.
 
                 .. code-block:: python
 
-                    country_capitals = {
-                        'Japan': 'Tokyo',
-                        'France': 'Paris',
-                        'England': 'London'
-                    }
-                    print(country_capitals)
+                    languages_release_years = dict(Python=1991, Java=1995, JavaScript=1995)
+                    print(languages_release_years)
+
+            .. tab-item:: Q2
+
+                Create a dictionary using keyword arguments such that it maps the names of three continents, Africa, Asia, and Europe, to their areas in million square kilometers: 30.37, 44.58, and 10.18. Print the dictionary.
+
+                .. code-block:: python
+
+                    continents = dict(Africa=30.37, Asia=44.58, Europe=10.18)
+                    print(continents)   
 
 
-----
 
 ----
 

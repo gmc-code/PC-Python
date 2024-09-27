@@ -15,6 +15,8 @@ Some common built-in data types are:
     :widths: 200, 200
     :header-rows: 0
 
+    *   - Type:
+        - example
     *   - Text Type:
         - str
     *   - Numeric Types:

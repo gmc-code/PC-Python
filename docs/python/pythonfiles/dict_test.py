@@ -1,9 +1,11 @@
-state_capitals = {
-                'Victoria': "Melbourne",
-                'Tasmania': "Hobart",
-                'Queensland': "Brisbane"
+eastern_state_capitals = {
+                'Victoria': 'Melbourne',
+                'New South Wales': 'Sydney',
+                'Queensland': 'Brisbane'
                 }
-print(state_capitals)
+capital = eastern_state_capitals['Victoria']
+print(capital)
+
 # --------------------
 state_capitals = dict([
     ["New South Wales", "Sydney"],
