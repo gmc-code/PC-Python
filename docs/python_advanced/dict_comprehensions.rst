@@ -19,12 +19,12 @@ Dictionary comprehension
 Syntax
 ------------
 
-.. py:function:: new_dictionary = {key_expression: value_expression for item in iterable}
+.. py:function:: new_dictionary = {key: value for item in iterable}
 or 
-.. py:function:: new_dictionary = {key_expression: value_expression for key_expression, value_expression in iterable}
+.. py:function:: new_dictionary = {key: value for key, value in iterable}
 
-    :param key_expression: the key variable only or any expression such as one that uses the item variable (e.g. n).
-    :param value_expression: the value variable only or any expression such as one that uses the item variable (e.g. 2 * n).
+    :param key: the key variable only or any expression such as one that uses the item variable (e.g. n).
+    :param value: the value variable only or any expression such as one that uses the item variable (e.g. 2 * n).
     :param item:  a variable that gets each item in the iterable.
     :param iterable: iterable objects like strings, lists, dictionaries, range function and others.
 
@@ -118,14 +118,14 @@ Using a condition in a dictionary comprehension
 
 Syntax:
 
-.. py:function:: new_dictionary = {key_expression: value_expression for item in iterable if condition}
+.. py:function:: new_dictionary = {key: value for item in iterable if condition}
     
 or
     
-.. py:function:: high_scores = {key_expression: value_expression for key_expression, value_expression in iterable if condition}
+.. py:function:: high_scores = {key: value for key, value in iterable if condition}
 
-    :param key_expression: the key variable only or any expression such as one that uses the item variable (e.g. n).
-    :param value_expression: the value variable only or any expression such as one that uses the item variable (e.g. 2 * n).
+    :param key: the key variable only or any expression such as one that uses the item variable (e.g. n).
+    :param value: the value variable only or any expression such as one that uses the item variable (e.g. 2 * n).
     :param item:  a variable that gets each item in the iterable.
     :param iterable: iterable objects like strings, lists, dictionaries, range function and others.
     :param condition:  a condition that resolves to True or False.
