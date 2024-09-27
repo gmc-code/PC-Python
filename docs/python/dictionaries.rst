@@ -393,6 +393,24 @@ Making a dictionary from key word arguments
 
 ----
 
+.. code-block:: python
+    
+    names = ['Lockett', 'Coventry', 'Dunstall']
+    goals = [1360, 1299, 1254]
+    print(dict(zip(names, goals)))
+    # {'Lockett': 1360, 'Coventry': 1299, 'Dunstall': 1254}
+
+.. code-block:: python
+    
+    names = ['Lockett', 'Coventry', 'Dunstall']
+    goals = [1360, 1299, 1254]
+    my_dict = {}
+    for name, goal in zip(names, goals):
+        my_dict[name] = goal
+    print(my_dict)
+    # {'Lockett': 1360, 'Coventry': 1299, 'Dunstall': 1254}
+
+
 # Access elements
 game_register['dent']
 

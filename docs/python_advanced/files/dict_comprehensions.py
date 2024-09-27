@@ -34,3 +34,32 @@ scores = [85, 92, 78, 90]
 high_scores = {name: score for name, score in zip(names, scores) if score > 80}
 print(high_scores)
 # Output: {'Alex': 85, 'Brooke': 92, 'Dana': 90}
+
+students = ['Alice', 'Bob', 'Charlie', 'David']
+grades = [85, 72, 90, 65]
+# Dictionary comprehension with a condition
+student_grades = {student: grade for student, grade in zip(students, grades)}
+print(student_grades)
+
+numbers = range(1, 10)
+# Dictionary comprehension with a condition
+squared_evens = {num: num ** 2 for num in numbers}
+print(squared_evens)
+
+products = ['apple', 'banana', 'cherry', 'date']
+prices = [15, 25, 10, 30]
+# Dictionary comprehension with a condition
+expensive_products = {product: price for product, price in zip(products, prices)}
+print(expensive_products)
+
+vehicles = ['car', 'bike', 'boat', 'plane']
+types = ['land', 'land', 'water', 'air']
+land_vehicles = {vehicle: vehicle_type for vehicle, vehicle_type in zip(vehicles, types)}
+print(land_vehicles)
+
+
+
+
+
+#
+
