@@ -144,6 +144,7 @@ Dictionary comprehension of zipped lists
 ----------------------------------------------------------------------
 
 | Zipping 2 lists produces a zip object which is like a list of tuples.
+| The zipped object acts as an iterable for the dictionary comprehension. 
 
 | Syntax:
 
