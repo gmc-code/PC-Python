@@ -169,7 +169,7 @@ Practice Questions
 
 .. admonition:: Tasks
 
-    #. Create a dictionary comprehension that maps the names of students, Alice, Bob, Charlie, and David, to their grades: 85, 72, 90, and 65. Print the dictionary.
+    #. Create a dictionary comprehension that maps the names of students, Alice, Bob, Charlie, and David, to their test_scores: 85, 72, 90, and 65. Print the dictionary.
     #. Create a dictionary comprehension that maps the names of products, apple, banana, cherry, and date, to their prices: 15, 25, 10, and 30. Print the dictionary.
     #. Create a dictionary comprehension that maps the names of vehicles, 'car', 'bike', 'boat', and 'plane', to their types: 'land', 'land', 'water', and 'air'. Print the dictionary.
 
@@ -182,15 +182,15 @@ Practice Questions
 
             .. tab-item:: Q1
 
-                Create a dictionary comprehension that maps the names of students, Alice, Bob, Charlie, and David, to their grades: 85, 72, 90, and 65. Print the dictionary.
+                Create a dictionary comprehension that maps the names of students, Alice, Bob, Charlie, and David, to their test_scores: 85, 72, 90, and 65. Print the dictionary.
 
                 .. code-block:: python
 
                     students = ['Alice', 'Bob', 'Charlie', 'David']
-                    grades = [85, 72, 90, 65]
+                    test_scores = [85, 72, 90, 65]
                     # Dictionary comprehension with a condition
-                    student_grades = {student: grade for student, grade in zip(students, grades)}
-                    print(student_grades)
+                    student_test_scores = {student: grade for student, grade in zip(students, test_scores)}
+                    print(student_test_scores)
                     # Output: {'Alice': 85, 'Bob': 72, 'Charlie': 90, 'David': 65}
 
             .. tab-item:: Q2
@@ -250,7 +250,7 @@ Practice Questions
 
 .. admonition:: Tasks
 
-    #. Create a dictionary comprehension that maps the names of students, Alice, Bob, Charlie, and David, to their grades: 85, 72, 90, and 65, but only include students who scored above 75. Print the dictionary.
+    #. Create a dictionary comprehension that maps the names of students, Alice, Bob, Charlie, and David, to their test_scores: 85, 72, 90, and 65, but only include students who scored above 75. Print the dictionary.
     #. Create a dictionary comprehension that maps the names of products, apple, banana, cherry, and date, to their prices: 15, 25, 10, and 30, but only include products that cost more than $20. Print the dictionary.
     #. Create a dictionary comprehension that maps the names of vehicles, 'car', 'bike', 'boat', and 'plane', to their types: 'land', 'land', 'water', and 'air', but only include vehicles that operate on land. Print the dictionary.
     #. Create a dictionary comprehension that maps numbers from 0 to 9 to their squares, but only include even numbers. Print the dictionary.
@@ -264,14 +264,14 @@ Practice Questions
 
             .. tab-item:: Q1
 
-                Create a dictionary comprehension that maps the names of students, Alice, Bob, Charlie, and David, to their grades: 85, 72, 90, and 65, but only include students who scored above 75. Print the dictionary.
+                Create a dictionary comprehension that maps the names of students, Alice, Bob, Charlie, and David, to their test_scores: 85, 72, 90, and 65, but only include students who scored above 75. Print the dictionary.
 
                 .. code-block:: python
 
                     students = ['Alice', 'Bob', 'Charlie', 'David']
-                    grades = [85, 72, 90, 65]
+                    test_scores = [85, 72, 90, 65]
                     # Dictionary comprehension with a condition
-                    passed_students = {student: grade for student, grade in zip(students, grades) if grade > 75}
+                    passed_students = {student: grade for student, grade in zip(students, test_scores) if grade > 75}
                     print(passed_students)
                     # Output: {'Alice': 85, 'Charlie': 90}
 
