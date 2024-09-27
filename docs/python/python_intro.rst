@@ -6,9 +6,9 @@ Python can be used for: AI and machine learning, Data analytics, Data visualisat
 
 Python has syntax that allows developers to write programs with fewer lines than most other programming languages.
 
-Mu editor is useful for microbit programming, as well as python, but lacks file management.
-Thonny, PyCharm and VSCode are popular IDEs (Integrated Development Environment) used to manage files.
+VSCode is a popular IDE (Integrated Development Environment) used to edit and run python files.
 
+----
 
 Python Indentation
 ----------------------
@@ -22,6 +22,11 @@ Python Indentation
 
 
 Code examples showing indentation:
+
+.. image:: images/indenting.png
+    :scale: 100 %
+    :align: center
+    :alt: indenting
 
 .. code-block:: python
 
@@ -48,6 +53,11 @@ Code examples showing indentation:
 
 
 Blocks of code nested within other blocks of code need to be indented to the same level of nesting.
+
+.. image:: images/nested_indenting.png
+    :scale: 100 %
+    :align: center
+    :alt: nested_indenting
 
 .. code-block:: python
 
