@@ -20,17 +20,124 @@ Syntax
 ------------
 
 .. py:function:: new_dictionary = {key: value for item in iterable}
-.. py:function:: new_dictionary = {key: value for key, value in iterable}
 
     :param key: the key variable only or any expression such as one that uses the item variable (e.g. n).
     :param value: the value variable only or any expression such as one that uses the item variable (e.g. 2 * n).
     :param item:  a variable that gets each item in the iterable.
-    :param iterable: iterable objects like strings, lists, dictionaries, range function and others.
+    :param iterable: iterable objects like strings, lists, and range function.
 
 | A dictionary comprehension consists of braces containing an expression followed by a for clause. 
-| The result will be a new dictionary created by evaluating the expression in the context of the for and if clauses which follow it. 
-| e.g new_dict = {n: 2 * n for n in range(5)}
-| The dictionary produced is: {0: 0, 1: 2, 2: 4, 3: 6, 4: 8}
+| The result will be a new dictionary created by evaluating the expression in the context of the for clauses which follow it. 
+
+.. code-block:: python
+    
+    new_dict = {n: 2 * n for n in range(5)}
+    print(new_dict)
+    # output is {0: 0, 1: 2, 2: 4, 3: 6, 4: 8}
+
+
+Practice Questions
+--------------------
+
+.. admonition:: Tasks
+
+    #. Create a dictionary comprehension that maps numbers from 0 to 9 to their squares. Print the dictionary.
+    #. Create a dictionary comprehension that maps the names of fruits, 'apple', 'banana', 'cherry', and 'date', to their lengths. Print the dictionary.
+    #. Create a dictionary comprehension that maps the names of the days of the week, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', and 'Sunday', to their first three letters in uppercase. Print the dictionary.
+    #. Create a dictionary comprehension that maps the first three letters in uppercase of the days of the week to their full names. Print the dictionary.
+    #. Create a dictionary comprehension that maps the names of the months of the year, 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', and 'December', to their first three letters in uppercase. Print the dictionary.
+    #. Create a dictionary comprehension that maps the first three letters in uppercase of the months of the year to their full names. Print the dictionary.
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Create a dictionary comprehension that maps the even numbers from 2 to 8 to their squares. Print the dictionary.
+
+                .. code-block:: python
+
+                    numbers = range(2, 10, 2)
+                    # Dictionary comprehension with a condition
+                    squared_evens = {num: num ** 2 for num in numbers}
+                    print(squared_evens)
+                    # Output: {2: 4, 4: 16, 6: 36, 8: 64}
+
+            .. tab-item:: Q2
+
+                Create a dictionary comprehension that maps the names of fruits, 'apple', 'banana', 'cherry', and 'date', to their lengths. Print the dictionary.
+
+                .. code-block:: python
+
+                    fruits = ['apple', 'banana', 'cherry', 'date']
+                    fruit_lengths = {fruit: len(fruit) for fruit in fruits}
+                    print(fruit_lengths)
+                    # Output: {'apple': 5, 'banana': 6, 'cherry': 6, 'date': 4}
+
+            .. tab-item:: Q3
+
+                Create a dictionary comprehension that maps the names of the days of the week, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', and 'Sunday', to their first three letters in uppercase. Print the dictionary.
+
+                .. code-block:: python
+
+                    days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+                    abbreviated_days = {day: day[:3].upper() for day in days}
+                    print(abbreviated_days)
+                    # Output: {'Monday': 'MON', 'Tuesday': 'TUE', 'Wednesday': 'WED', 'Thursday': 'THU', 'Friday': 'FRI', 'Saturday': 'SAT', 'Sunday': 'SUN'}
+
+            .. tab-item:: Q4
+
+                Create a dictionary comprehension that maps the first three letters in uppercase of the days of the week to their full names. Print the dictionary.
+
+                .. code-block:: python
+
+                    days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+                    abbreviated_days = {day[:3].upper(): day for day in days}
+                    print(abbreviated_days)
+                    # Output: {'MON': 'Monday', 'TUE': 'Tuesday', 'WED': 'Wednesday', 'THU': 'Thursday', 'FRI': 'Friday', 'SAT': 'Saturday', 'SUN': 'Sunday'}
+
+            .. tab-item:: Q5
+
+                Create a dictionary comprehension that maps the names of the months of the year, 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', and 'December', to their first three letters in uppercase. Print the dictionary.
+
+                .. code-block:: python
+
+                    months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+                    abbreviated_months = {month: month[:3].upper() for month in months}
+                    print(abbreviated_months)
+                    # Output: {'January': 'JAN', 'February': 'FEB', 'March': 'MAR', 'April': 'APR', 'May': 'MAY', 'June': 'JUN', 'July': 'JUL', 'August': 'AUG', 'September': 'SEP', 'October': 'OCT', 'November': 'NOV', 'December': 'DEC'}
+
+
+            .. tab-item:: Q6
+
+                Create a dictionary comprehension that maps the first three letters in uppercase of the months of the year to their full names. Print the dictionary.
+
+                .. code-block:: python
+
+                    months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+                    abbreviated_months = {month[:3].upper(): month for month in months}
+                    print(abbreviated_months)
+                    # Output: {'JAN': 'January', 'FEB': 'February', 'MAR': 'March', 'APR': 'April', 'MAY': 'May', 'JUN': 'June', 'JUL': 'July', 'AUG': 'August', 'SEP': 'September', 'OCT': 'October', 'NOV': 'November', 'DEC': 'December'}
+
+
+
+
+
+----
+
+Syntax
+------------
+
+.. py:function:: new_dictionary = {key: value for key, value in iterable}
+
+    :param key: the key variable.
+    :param value: the value variable.
+    :param iterable: iterable objects like zip objects from 2 lists.
+
 
 .. code-block:: python
     
@@ -40,7 +147,6 @@ Syntax
     print(my_dict_comprehension)
     # {'Lockett': 1360, 'Coventry': 1299, 'Dunstall': 1254}
 
-
 ----
 
 Practice Questions
@@ -49,7 +155,6 @@ Practice Questions
 .. admonition:: Tasks
 
     #. Create a dictionary comprehension that maps the names of students, Alice, Bob, Charlie, and David, to their grades: 85, 72, 90, and 65. Print the dictionary.
-    #. Create a dictionary comprehension that maps numbers from 0 to 9 to their squares. Print the dictionary.
     #. Create a dictionary comprehension that maps the names of products, apple, banana, cherry, and date, to their prices: 15, 25, 10, and 30. Print the dictionary.
     #. Create a dictionary comprehension that maps the names of vehicles, 'car', 'bike', 'boat', and 'plane', to their types: 'land', 'land', 'water', and 'air'. Print the dictionary.
 
@@ -75,18 +180,6 @@ Practice Questions
 
             .. tab-item:: Q2
 
-                Create a dictionary comprehension that maps numbers from 1 to 9 to their squares. Print the dictionary.
-
-                .. code-block:: python
-
-                    numbers = range(1, 10)
-                    # Dictionary comprehension with a condition
-                    squared_evens = {num: num ** 2 for num in numbers}
-                    print(squared_evens)
-                    # Output: {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}
-                    
-            .. tab-item:: Q3
-
                 Create a dictionary comprehension that maps the names of products, apple, banana, cherry, and date, to their prices: 15, 25, 10, and 30 dollars. Print the dictionary.
 
                 .. code-block:: python
@@ -98,7 +191,7 @@ Practice Questions
                     print(expensive_products)
                     # Output: {'apple': 15, 'banana': 25, 'cherry': 10, 'date': 30}
 
-            .. tab-item:: Q4
+            .. tab-item:: Q3
 
                 Create a dictionary comprehension that maps the names of vehicles, 'car', 'bike', 'boat', and 'plane', to their types: 'land', 'land', 'water', and 'air'. Print the dictionary.
 
@@ -118,22 +211,18 @@ Using a condition in a dictionary comprehension
 Syntax:
 
 .. py:function:: new_dictionary = {key: value for item in iterable if condition}
-    
-or
-    
 .. py:function:: high_scores = {key: value for key, value in iterable if condition}
 
     :param key: the key variable only or any expression such as one that uses the item variable (e.g. n).
     :param value: the value variable only or any expression such as one that uses the item variable (e.g. 2 * n).
     :param item:  a variable that gets each item in the iterable.
     :param iterable: iterable objects like strings, lists, dictionaries, range function and others.
-    :param condition:  a condition that resolves to True or False.
+    :param condition: a condition that resolves to True or False.
 
 .. code-block:: python
 
     names = ['Alex', 'Brooke', 'Chris', 'Dana']
     scores = [85, 92, 78, 90]
-
     # Dictionary comprehension with a condition
     high_scores = {name: score for name, score in zip(names, scores) if score > 80}
     print(high_scores)
@@ -147,9 +236,9 @@ Practice Questions
 .. admonition:: Tasks
 
     #. Create a dictionary comprehension that maps the names of students, Alice, Bob, Charlie, and David, to their grades: 85, 72, 90, and 65, but only include students who scored above 75. Print the dictionary.
-    #. Create a dictionary comprehension that maps numbers from 0 to 9 to their squares, but only include even numbers. Print the dictionary.
     #. Create a dictionary comprehension that maps the names of products, apple, banana, cherry, and date, to their prices: 15, 25, 10, and 30, but only include products that cost more than $20. Print the dictionary.
     #. Create a dictionary comprehension that maps the names of vehicles, 'car', 'bike', 'boat', and 'plane', to their types: 'land', 'land', 'water', and 'air', but only include vehicles that operate on land. Print the dictionary.
+    #. Create a dictionary comprehension that maps numbers from 0 to 9 to their squares, but only include even numbers. Print the dictionary.
 
     .. dropdown::
         :icon: codescan
@@ -166,7 +255,6 @@ Practice Questions
 
                     students = ['Alice', 'Bob', 'Charlie', 'David']
                     grades = [85, 72, 90, 65]
-
                     # Dictionary comprehension with a condition
                     passed_students = {student: grade for student, grade in zip(students, grades) if grade > 75}
                     print(passed_students)
@@ -174,32 +262,18 @@ Practice Questions
 
             .. tab-item:: Q2
 
-                Create a dictionary comprehension that maps numbers from 1 to 9 to their squares, but only include even numbers. Print the dictionary.
-
-                .. code-block:: python
-
-                    numbers = range(1, 10)
-
-                    # Dictionary comprehension with a condition
-                    squared_evens = {num: num ** 2 for num in numbers if num % 2 == 0}
-                    print(squared_evens)
-                    # Output: {2: 4, 4: 16, 6: 36, 8: 64}
-                    
-            .. tab-item:: Q3
-
                 Create a dictionary comprehension that maps the names of products, apple, banana, cherry, and date, to their prices: 15, 25, 10, and 30 dollars, but only include products that cost more than $20. Print the dictionary.
 
                 .. code-block:: python
 
                     products = ['apple', 'banana', 'cherry', 'date']
                     prices = [15, 25, 10, 30]
-
                     # Dictionary comprehension with a condition
                     expensive_products = {product: price for product, price in zip(products, prices) if price > 20}
                     print(expensive_products)
                     # Output: {'banana': 25, 'date': 30}
 
-            .. tab-item:: Q4
+            .. tab-item:: Q3
 
                 Create a dictionary comprehension that maps the names of vehicles, 'car', 'bike', 'boat', and 'plane', to their types: 'land', 'land', 'water', and 'air', but only include vehicles that operate on land. Print the dictionary.
 
@@ -207,12 +281,21 @@ Practice Questions
 
                     vehicles = ['car', 'bike', 'boat', 'plane']
                     types = ['land', 'land', 'water', 'air']
-
                     land_vehicles = {vehicle: vehicle_type for vehicle, vehicle_type in zip(vehicles, types) if vehicle_type == 'land'}
                     print(land_vehicles)
                     # Output: {'car': 'land', 'bike': 'land'}
 
+            .. tab-item:: Q4
 
+                Create a dictionary comprehension that maps numbers from 1 to 9 to their squares, but only include even numbers. Print the dictionary.
+
+                .. code-block:: python
+
+                    numbers = range(1, 10)
+                    # Dictionary comprehension with a condition
+                    squared_evens = {num: num ** 2 for num in numbers if num % 2 == 0}
+                    print(squared_evens)
+                    # Output: {2: 4, 4: 16, 6: 36, 8: 64}
 
 
 
