@@ -226,7 +226,7 @@ Using a condition in a dictionary comprehension
 Syntax:
 
 .. py:function:: new_dictionary = {key: value for item in iterable if condition}
-.. py:function:: high_scores = {key: value for key, value in iterable if condition}
+.. py:function:: new_dictionary = {key: value for key, value in iterable if condition}
 
     :param key: the key variable only or any expression such as one that uses the item variable (e.g. n).
     :param value: the value variable only or any expression such as one that uses the item variable (e.g. 2 * n).
