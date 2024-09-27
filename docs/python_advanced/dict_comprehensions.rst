@@ -21,13 +21,15 @@ Dictionary comprehension of the range function, lists and strings
 
 .. py:function:: new_dictionary = {key: value for item in iterable}
 
-    :param key: the key variable only or any expression such as one that uses the item variable (e.g. n).
+    :param key: the key variable only, (e.g. n), or any expression such as one that uses the item variable.
     :param value: the value variable only or any expression such as one that uses the item variable (e.g. 2 * n).
     :param item:  a variable that gets each item in the iterable.
     :param iterable: iterable objects like strings, lists, and range function.
 
-| A dictionary comprehension consists of braces containing an expression followed by a for clause. 
-| The result will be a new dictionary created by evaluating the expression in the context of the for clauses which follow it. 
+| A dictionary comprehension consists of braces containing an expression followed by a for-clause. 
+| The result will be a new dictionary created by evaluating the expression in the context of the for-clauses which follow it. 
+
+| The code below uses n values of 0 to 4 to make a dictionary with values that are the keys doubled.
 
 .. code-block:: python
     
