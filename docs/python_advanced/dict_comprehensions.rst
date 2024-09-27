@@ -2,8 +2,8 @@
 Dictionary Comprehensions
 ==========================
 
-See docs at: https://docs.python.org/3/tutorial/datastructures.html#dictionaries
-See ref video at: https://youtu.be/3dt4OGnU5sM?feature=shared&t=738
+| See docs at: https://docs.python.org/3/tutorial/datastructures.html#dictionaries
+| See ref video at: https://youtu.be/3dt4OGnU5sM?feature=shared&t=738
 
 ----
 
@@ -11,8 +11,11 @@ Dictionary comprehension
 ---------------------------
 
 | Dictionary comprehensions provide a concise way to create dictionaries. 
-| They are used to make new dictionaries where each key-value pair is the result of some operations applied to each member of another sequence (e.g. list, range function) or iterable (e.g. list, zip of 2 list-comprehensions).
+| They are used to make new dictionaries where each key-value pair is the result of some operations applied to each member of another sequence (e.g. list, range function) or iterable (e.g. list, zip of 2 lists, dictionary).
 | They can also create a sub-sequence of those elements that satisfy a certain condition.
+
+| A dictionary comprehension consists of braces containing an expression followed by a for-clause. 
+| The result will be a new dictionary created by evaluating the expression in the context of the for-clauses which follow it. 
 
 ----
 
@@ -26,10 +29,7 @@ Dictionary comprehension of the range function, lists and strings
     :param item:  a variable that gets each item in the iterable.
     :param iterable: iterable objects like strings, lists, and range function.
 
-| A dictionary comprehension consists of braces containing an expression followed by a for-clause. 
-| The result will be a new dictionary created by evaluating the expression in the context of the for-clauses which follow it. 
-
-| The code below uses n values of 0 to 4 to make a dictionary with values that are the keys doubled.
+| The code below uses n with values of 0 to 4 to make a dictionary with values that are the keys doubled.
 
 .. code-block:: python
     
@@ -43,7 +43,7 @@ Practice Questions
 
 .. admonition:: Tasks
 
-    #. Create a dictionary comprehension that maps numbers from 0 to 9 to their squares. Print the dictionary.
+    #. Using a range function, create a dictionary comprehension that maps numbers from 0 to 9 to their squares. Print the dictionary.
     #. Create a dictionary comprehension that maps the names of fruits, 'apple', 'banana', 'cherry', and 'date', to their lengths. Print the dictionary.
     #. Create a dictionary comprehension that maps the names of the days of the week, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', and 'Sunday', to their first three letters in uppercase. Print the dictionary.
     #. Create a dictionary comprehension that maps the first three letters in uppercase of the days of the week to their full names. Print the dictionary.
@@ -60,7 +60,7 @@ Practice Questions
 
             .. tab-item:: Q1
 
-                Create a dictionary comprehension that maps the even numbers from 2 to 8 to their squares. Print the dictionary.
+                Using a range function, create a dictionary comprehension that maps the even numbers from 2 to 8 to their squares. Print the dictionary.
 
                 .. code-block:: python
 
@@ -160,7 +160,7 @@ Dictionary comprehension of zipped lists
     goals = [1360, 1299, 1254]
     my_dict_comprehension = {name: goal for (name, goal) in zip(names, goals)}
     print(my_dict_comprehension)
-    # {'Lockett': 1360, 'Coventry': 1299, 'Dunstall': 1254}
+    # Output is {'Lockett': 1360, 'Coventry': 1299, 'Dunstall': 1254}
 
 ----
 
@@ -189,7 +189,7 @@ Practice Questions
                     students = ['Alice', 'Bob', 'Charlie', 'David']
                     test_scores = [85, 72, 90, 65]
                     # Dictionary comprehension with a condition
-                    student_test_scores = {student: grade for student, grade in zip(students, test_scores)}
+                    student_test_scores = {student: score for student, score in zip(students, test_scores)}
                     print(student_test_scores)
                     # Output: {'Alice': 85, 'Bob': 72, 'Charlie': 90, 'David': 65}
 
@@ -271,7 +271,7 @@ Practice Questions
                     students = ['Alice', 'Bob', 'Charlie', 'David']
                     test_scores = [85, 72, 90, 65]
                     # Dictionary comprehension with a condition
-                    passed_students = {student: grade for student, grade in zip(students, test_scores) if grade > 75}
+                    passed_students = {student: score for student, score in zip(students, test_scores) if score > 75}
                     print(passed_students)
                     # Output: {'Alice': 85, 'Charlie': 90}
 
