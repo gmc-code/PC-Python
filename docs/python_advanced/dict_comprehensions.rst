@@ -223,6 +223,228 @@ Using a condition in a dictionary comprehension
 Syntax:
 
 .. py:function:: new_dictionary = {key: value for item in iterable if condition}
+    
+    :param key: the key variable only or any expression such as one that uses the item variable (e.g. n).
+    :param value: the value variable only or any expression such as one that uses the item variable (e.g. 2 * n).
+    :param item:  a variable that gets each item in the iterable.
+    :param iterable: iterable objects like strings, lists, dictionaries, range function and others.
+    :param condition: a condition that resolves to True or False.
+
+| Create a dictionary comprehension that maps numbers from 1 to 10 to their co-factor, but only include factors of 40.
+
+.. code-block:: python
+
+    numbers = range(1, 11)
+    factors_of_40 = {i: 40 // i for i in range(1, 11) if 40 % i == 0}
+    print(factors_of_40)
+    # Output: {1: 40, 2: 20, 4: 10, 5: 8, 8: 5, 10: 4}
+
+----
+
+Practice Questions
+--------------------
+
+.. admonition:: Tasks
+
+    #. Create a dictionary comprehension that maps numbers from 0 to 9 to their squares, but only include even numbers. Print the dictionary.
+    #. Create a dictionary comprehension that maps numbers from 0 to 9 to their squares, but only include even numbers. Print the dictionary.
+    #. Create a dictionary comprehension that maps numbers from 0 to 9 to their squares, but only include even numbers. Print the dictionary.
+    #. Create a dictionary comprehension that maps numbers from 0 to 9 to their squares, but only include even numbers. Print the dictionary.
+    #. Create a dictionary comprehension that maps numbers from 1 to 9 to their squares, but only include squares with 2 digits. Print the dictionary.
+    #. Create a dictionary comprehension that maps numbers from 1 to 31 to their squares, but only include squares with 3 digits. Print the dictionary.
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Create a dictionary comprehension that maps numbers from 1 to 9 to their squares, but only include even numbers. Print the dictionary.
+
+                .. code-block:: python
+
+                    numbers = range(1, 10)
+                    squared_evens = {num: num ** 2 for num in numbers if num % 2 == 0}
+                    print(squared_evens)
+                    # Output: {2: 4, 4: 16, 6: 36, 8: 64}
+
+            .. tab-item:: Q2
+
+                Create a dictionary comprehension that maps numbers from 0 to 10 to their binary representation. Print the dictionary.
+
+                .. code-block:: python
+
+                    numbers = range(0, 11)
+                    binary_representation = {i: bin(i) for i in numbers}
+                    print(binary_representation)
+                    # Output: {0: '0b0', 1: '0b1', 2: '0b10', 3: '0b11', 4: '0b100', 5: '0b101', 6: '0b110', 7: '0b111', 8: '0b1000', 9: '0b1001', 10: '0b1010'}
+
+
+            .. tab-item:: Q3
+
+                Create a dictionary comprehension that maps numbers from 0 to 10 to their binary representation without the '0b' prefix. Print the dictionary.
+
+                .. code-block:: python
+
+                    numbers = range(0, 11)
+                    binary_representation = {i: bin(i)[2:] for i in numbers}
+                    print(binary_representation)
+                    # Output: {0: '0', 1: '1', 2: '10', 3: '11', 4: '100', 5: '101', 6: '110', 7: '111', 8: '1000', 9: '1001', 10: '1010'}
+
+            .. tab-item:: Q4
+
+                Create a dictionary comprehension that maps numbers from 1 to 9 to their squares, but only include even numbers. Print the dictionary.
+
+                .. code-block:: python
+
+                    numbers = range(1, 10)
+                    squared_evens = {num: num ** 2 for num in numbers if num % 2 == 0}
+                    print(squared_evens)
+                    # Output: {2: 4, 4: 16, 6: 36, 8: 64}
+
+            .. tab-item:: Q5
+
+                Create a dictionary comprehension that maps numbers from 1 to 9 to their squares, but only include squares with 2 digits. Print the dictionary.
+
+                .. code-block:: python
+
+                    numbers = range(1, 10)
+                    squares_with_two_digits = {i: i**2 for i in numbers if 10 <= i**2 < 100}
+                    print(squares_with_two_digits)
+                    # Output: {4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}
+
+            .. tab-item:: Q6
+
+                Create a dictionary comprehension that maps numbers from 1 to 31 to their squares, but only include squares with 3 digits. Print the dictionary.
+
+                .. code-block:: python
+
+                    numbers = range(1, 32)
+                    squares_with_three_digits = {i: i**2 for i in numbers if 100 <= i**2 < 1000}
+                    print(squares_with_three_digits)
+                    # Output: {10: 100, 11: 121, 12: 144, 13: 169, 14: 196, 15: 225, 16: 256, 17: 289, 18: 324, 19: 361, 20: 400, 21: 441, 22: 484, 23: 529, 24: 576, 25: 625, 26: 676, 27: 729, 28: 784, 29: 841, 30: 900, 31: 961}
+
+----
+
+
+Using multiple conditions in a dictionary comprehension
+----------------------------------------------------------
+
+| Multiple conditions can be used, using the keywords ``and`` or ``or``.
+| Using ``and`` requires each condition to be True for the key: value pair to be included.
+| Using ``or`` requires only one condition to be True for the key: value pair to be included.
+
+Syntax:
+
+.. py:function:: new_dictionary = {key: value for item in iterable if condition_1 and condition_2}
+    
+    :param key: the key variable only or any expression such as one that uses the item variable (e.g. n).
+    :param value: the value variable only or any expression such as one that uses the item variable (e.g. 2 * n).
+    :param item:  a variable that gets each item in the iterable.
+    :param iterable: iterable objects like strings, lists, dictionaries, range function and others.
+    :param condition_1: a condition that resolves to True or False.
+    :param condition_2: a condition that resolves to True or False.
+
+| Create a dictionary comprehension that maps numbers from 1 to 31 to their squares, but only include squares with 3 digits and the sum of the digits is less than 10. Use a function to calculate the sum of the digits. Print the dictionary.
+
+.. code-block:: python
+
+    # Function to calculate the sum of the digits of a number
+    def sum_of_digits(n):
+        return sum(int(digit) for digit in str(n))
+
+    numbers = range(1, 32)
+    squares_with_three_digits_and_digit_sum_less_than_10 = {
+        i: i**2 for i in numbers if 100 <= i**2 < 1000 and sum_of_digits(i**2) < 10
+    }
+    print(squares_with_three_digits_and_digit_sum_less_than_10)
+    # Output is {10: 100, 11: 121, 12: 144, 15: 225, 18: 324, 20: 400, 21: 441, 30: 900}
+
+----
+
+Practice Questions
+--------------------
+
+.. admonition:: Tasks
+
+    #. Create a dictionary comprehension that maps numbers from 1 to 31 to their squares, but only include squares with 3 digits where all the digits are even. Use a function to check if all digits are even, using ``return all(int(digit) % 2 == 0 for digit in str(n))``. Print the dictionary.
+    #. Create a dictionary comprehension that maps the first 100 triangular numbers to their values, but only include those where the sum of the digits is less than 10. Use a function to calculate the sum of the digits. Use ``return n * (n + 1) // 2``, to get triangular numbers. Print the dictionary.
+    #. Create a dictionary comprehension that maps numbers from 1 to 100 to their squares, but only include those where the number is automorphic. Use ``str(n**2).endswith(str(n))``, to get automorphic numbers. Print the dictionary.
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Create a dictionary comprehension that maps numbers from 1 to 31 to their squares, but only include squares with 3 digits where all the digits are even. Use a function to check if all digits are even, using ``return all(int(digit) % 2 == 0 for digit in str(n))``. Print the dictionary.
+
+                .. code-block:: python
+
+                    # Function to check if all digits of a number are even
+                    # The all() function takes an iterable (in this case, the generator expression) and returns True if all elements of the iterable are True. If any element is False, all() returns False.
+                    def all_digits_even(n):
+                        return all(int(digit) % 2 == 0 for digit in str(n))
+
+                    numbers = range(1, 32)
+                    squares_with_three_digits_all_even = {
+                        i: i**2 for i in numbers if 100 <= i**2 < 1000 and all_digits_even(i**2)
+                    }
+                    print(squares_with_three_digits_all_even)
+                    # Output: {20: 400, 22: 484}
+
+            .. tab-item:: Q2
+
+                Create a dictionary comprehension that maps the first 100 triangular numbers to their values, but only include those where the sum of the digits is less than 10. Use a function to calculate the sum of the digits. Use ``return n * (n + 1) // 2``, to get triangular numbers. Print the dictionary.
+
+                .. code-block:: python
+
+                    # Function to calculate the sum of the digits of a number
+                    def sum_of_digits(n):
+                        return sum(int(digit) for digit in str(n))
+
+                    # Function to calculate the nth triangular number
+                    def triangular_number(n):
+                        return n * (n + 1) // 2
+
+                    numbers = range(1, 101)
+                    triangular_numbers_with_digit_sum_less_than_10 = {
+                        n: triangular_number(n) for n in numbers if sum_of_digits(triangular_number(n)) < 10
+                    }
+                    print(triangular_numbers_with_digit_sum_less_than_10)
+                    # Output: {1: 1, 2: 3, 3: 6, 4: 10, 5: 15, 6: 21, 8: 36, 9: 45, 14: 105, 15: 120, 17: 153, 18: 171, 20: 210, 21: 231, 24: 300, 26: 351, 35: 630, 45: 1035, 53: 1431, 63: 2016, 66: 2211, 77: 3003, 80: 3240, 81: 3321, 89: 4005}
+
+            .. tab-item:: Q3
+
+                Create a dictionary comprehension that maps numbers from 1 to 100 to their squares, but only include those where the number is automorphic. Use ``str(n**2).endswith(str(n))``, to get automorphic numbers. Print the dictionary.
+
+                .. code-block:: python
+
+                    # Function to check if a number is automorphic
+                    def is_automorphic(n):
+                        return str(n**2).endswith(str(n))
+
+                    numbers = range(1, 101)
+                    automorphic_numbers = {
+                        i: i**2 for i in numbers if is_automorphic(i)
+                    }
+                    print(automorphic_numbers)
+                    # Output: {1: 1, 5: 25, 6: 36, 25: 625, 76: 5776}
+
+
+----
+
+Using a condition in a dictionary comprehension with zipped lists
+--------------------------------------------------------------------
+
+Syntax:
+
 .. py:function:: new_dictionary = {key: value for key, value in iterable if condition}
 
     :param key: the key variable only or any expression such as one that uses the item variable (e.g. n).
@@ -250,7 +472,6 @@ Practice Questions
     #. Create a dictionary comprehension that maps the names of students, Alice, Bob, Charlie, and David, to their test_scores: 85, 72, 90, and 65, but only include students who scored above 75. Print the dictionary.
     #. Create a dictionary comprehension that maps the names of products, apple, banana, cherry, and date, to their prices: 15, 25, 10, and 30, but only include products that cost more than $20. Print the dictionary.
     #. Create a dictionary comprehension that maps the names of vehicles, 'car', 'bike', 'boat', and 'plane', to their types: 'land', 'land', 'water', and 'air', but only include vehicles that operate on land. Print the dictionary.
-    #. Create a dictionary comprehension that maps numbers from 0 to 9 to their squares, but only include even numbers. Print the dictionary.
 
     .. dropdown::
         :icon: codescan
@@ -294,17 +515,6 @@ Practice Questions
                     land_vehicles = {vehicle: vehicle_type for vehicle, vehicle_type in zip(vehicles, types) if vehicle_type == 'land'}
                     print(land_vehicles)
                     # Output: {'car': 'land', 'bike': 'land'}
-
-            .. tab-item:: Q4
-
-                Create a dictionary comprehension that maps numbers from 1 to 9 to their squares, but only include even numbers. Print the dictionary.
-
-                .. code-block:: python
-
-                    numbers = range(1, 10)
-                    squared_evens = {num: num ** 2 for num in numbers if num % 2 == 0}
-                    print(squared_evens)
-                    # Output: {2: 4, 4: 16, 6: 36, 8: 64}
 
 ----
 
