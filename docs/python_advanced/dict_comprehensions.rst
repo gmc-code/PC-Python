@@ -65,7 +65,6 @@ Practice Questions
                 .. code-block:: python
 
                     numbers = range(2, 10, 2)
-                    # Dictionary comprehension with a condition
                     squared_evens = {num: num ** 2 for num in numbers}
                     print(squared_evens)
                     # Output: {2: 4, 4: 16, 6: 36, 8: 64}
@@ -188,7 +187,6 @@ Practice Questions
 
                     students = ['Alice', 'Bob', 'Charlie', 'David']
                     test_scores = [85, 72, 90, 65]
-                    # Dictionary comprehension with a condition
                     student_test_scores = {student: score for student, score in zip(students, test_scores)}
                     print(student_test_scores)
                     # Output: {'Alice': 85, 'Bob': 72, 'Charlie': 90, 'David': 65}
@@ -201,7 +199,6 @@ Practice Questions
 
                     products = ['apple', 'banana', 'cherry', 'date']
                     prices = [15, 25, 10, 30]
-                    # Dictionary comprehension with a condition
                     expensive_products = {product: price for product, price in zip(products, prices)}
                     print(expensive_products)
                     # Output: {'apple': 15, 'banana': 25, 'cherry': 10, 'date': 30}
@@ -270,7 +267,6 @@ Practice Questions
 
                     students = ['Alice', 'Bob', 'Charlie', 'David']
                     test_scores = [85, 72, 90, 65]
-                    # Dictionary comprehension with a condition
                     passed_students = {student: score for student, score in zip(students, test_scores) if score > 75}
                     print(passed_students)
                     # Output: {'Alice': 85, 'Charlie': 90}
@@ -283,7 +279,6 @@ Practice Questions
 
                     products = ['apple', 'banana', 'cherry', 'date']
                     prices = [15, 25, 10, 30]
-                    # Dictionary comprehension with a condition
                     expensive_products = {product: price for product, price in zip(products, prices) if price > 20}
                     print(expensive_products)
                     # Output: {'banana': 25, 'date': 30}
@@ -307,7 +302,6 @@ Practice Questions
                 .. code-block:: python
 
                     numbers = range(1, 10)
-                    # Dictionary comprehension with a condition
                     squared_evens = {num: num ** 2 for num in numbers if num % 2 == 0}
                     print(squared_evens)
                     # Output: {2: 4, 4: 16, 6: 36, 8: 64}
