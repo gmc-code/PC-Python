@@ -11,8 +11,8 @@ Dictionary comprehension
 ---------------------------
 
 | Dictionary comprehensions provide a concise way to create dictionaries. 
-| They are used to make new dictionaries where each key-value pair is the result of some operations applied to each member of another sequence (e.g. list, range function) or iterable (e.g. list, zip of 2 lists, dictionary).
-| They can also create a sub-sequence of those elements that satisfy a certain condition.
+| They are used to make new dictionaries where each key-value pair is the result of some operations applied to each member of a string, list, tuple, sets, dictionary, and zip of 2 lists.
+| Conditions can be applied that restrict the formation of the dictionary.
 
 | A dictionary comprehension consists of braces containing an expression followed by a for-clause. 
 | The result will be a new dictionary created by evaluating the expression in the context of the for-clauses which follow it. 
