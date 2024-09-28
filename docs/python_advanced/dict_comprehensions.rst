@@ -606,6 +606,175 @@ Practice Questions
                     print(title_cased_names)
                     # {'First': 'Sherlock', 'Middle': 'Hamish', 'Surname': 'Holmes'}
 
+----
+
+Dictionary comprehension of dictionaries using if-else for value
+----------------------------------------------------------------------
+
+Syntax:
+
+.. py:function:: new_dictionary = {key: value_1 if condition  else value_2  for key, value in dictionary.items()}
+
+    :param key: the key variable.
+    :param value: the value variable.
+    :param condition: an expression based on the value variable.
+    :param value_1: an expression.
+    :param value_2: an expression.
+    :param dictionary: starting dictionary with keys and values ot be used.
+
+| This can be useful for doing numerical conversions on values in a dictionary.
+| The code below creates a new dictionary with categories rather than numerical data.
+
+.. code-block:: python
+    
+    cities_in_F = {'Sydney': 19, 'Melbourne': 15, 'Brisbane': 35, 'Perth': 25}
+    cities_in_C = {key: ("warm" if value > 20 else "cold") for (key, value) in cities_in_F.items()}
+    print(cities_in_C)
+    # Output is {'Sydney': 'cold', 'Melbourne': 'cold', 'Brisbane': 'warm', 'Perth': 'warm'}
 
 
+----
 
+Practice Questions
+--------------------
+
+.. admonition:: Tasks
+
+    #. Use a dictionary comprehension starting with a dictionary of animal names and their weights in kilograms, ``{'Koala': 10, 'Kangaroo': 90, 'Lion': 190, 'Zebra': 350, 'Giraffe': 1200, 'Elephant': 5400}``, and categorize them into three weight classes: "heavy" (more than 1000 kg), "medium" (between 100 and 1000 kg), and "light" (less than 100 kg). Print the dictionary.
+    #. Use a dictionary comprehension starting with a dictionary of car names and their top speeds in kilometers per hour, ``{'Hennessey Venom F5': 484, 'Koenigsegg Agera RS': 447, 'McLaren 720S': 341, 'Chevrolet Corvette C8': 312, 'Honda Civic': 201}``, and categorize them into three speed categories: "super fast", "fast", and "slow". Print the dictionary.
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Use a dictionary comprehension starting with a dictionary of animal names and their weights in kilograms, ``{'Koala': 10, 'Kangaroo': 90, 'Lion': 190, 'Zebra': 350, 'Giraffe': 1200, 'Elephant': 5400}``, and categorize them into three weight classes: "heavy" (more than 1000 kg), "medium" (between 100 and 1000 kg), and "light" (less than 100 kg). Print the dictionary.
+
+                .. code-block:: python
+
+                    animal_weights_kg = {'Koala': 10, 'Kangaroo': 90, 'Lion': 190, 'Zebra': 350, 'Giraffe': 1200, 'Elephant': 5400}
+                    weight_category = {key: ("heavy" if value > 1000 else "medium" if value > 100 else "light") for key, value in animal_weights_kg.items()}
+                    print(weight_category)
+                    # Output: {'Koala': 'light', 'Kangaroo': 'light', 'Lion': 'medium', 'Zebra': 'medium', 'Giraffe': 'heavy', 'Elephant': 'heavy'}
+
+            .. tab-item:: Q2
+
+                Use a dictionary comprehension starting with a dictionary of car names and their top speeds in kilometers per hour, ``{'Hennessey Venom F5': 484, 'Koenigsegg Agera RS': 447, 'McLaren 720S': 341, 'Chevrolet Corvette C8': 312, 'Honda Civic': 201}``, and categorize them into three speed categories: "super fast", "fast", and "slow". Print the dictionary.
+
+                .. code-block:: python
+
+                    car_speeds_kph = {'Hennessey Venom F5': 484, 'Koenigsegg Agera RS': 447, 'McLaren 720S': 341, 'Chevrolet Corvette C8': 312, 'Honda Civic': 201}
+
+                    speed_category = {key: ("super fast" if value > 350 else "fast" if value > 250 else "slow") for (key, value) in car_speeds_kph.items()}
+                    print(speed_category)
+                    # Output:  {'Hennessey Venom F5': 'super fast', 'Koenigsegg Agera RS': 'super fast', 'McLaren 720S': 'fast', 'Chevrolet Corvette C8': 'fast', 'Honda Civic': 'slow'}
+
+----
+
+Dictionary comprehension of dictionaries using a function for the value
+-------------------------------------------------------------------------------------
+
+Syntax:
+
+.. py:function:: new_dictionary = {key: function for key, value in dictionary.items()}
+
+    :param key: the key variable.
+    :param value: the value variable.
+    :param function: an expression based on value.
+    :param dictionary: starting dictionary with keys and values ot be used.
+
+| This can be useful for doing numerical conversions on values in a dictionary.
+| The code below creates a new dictionary with categories rather than numerical data.
+
+.. code-block:: python
+    
+    def categorise_temp(temp_C):
+        if temp_C > 30:
+            return "hot"
+        elif temp_C > 20:
+            return "warm"
+        elif temp_C > 10:
+            return "cold"
+        else:
+            return "freezing"
+                                        
+
+    cities_in_F = {'Sydney': 14, 'Melbourne': 6, 'Brisbane': 35, 'Perth': 25}
+    cities_in_C = {key: categorise_temp(value) for (key, value) in cities_in_F.items()}
+    print(cities_in_C)
+    # Output is {'Sydney': 'cold', 'Melbourne': 'freezing', 'Brisbane': 'hot', 'Perth': 'warm'}
+
+----
+
+Practice Questions
+--------------------
+
+.. admonition:: Tasks
+
+    #. Use a dictionary comprehension starting with a dictionary of animal names and their weights in kilograms, ``{'Koala': 10, 'Kangaroo': 90, 'Lion': 190, 'Zebra': 350, 'Giraffe': 1200, 'Elephant': 5400}``, and use a function to categorize them into three weight classes: "heavy" (more than 1000 kg), "medium" (between 100 and 1000 kg), and "light" (less than 100 kg). Print the dictionary.
+    #. Use a dictionary comprehension starting with a dictionary of car names and their top speeds in kilometers per hour, ``{'Hennessey Venom F5': 484, 'Koenigsegg Agera RS': 447, 'McLaren 720S': 341, 'Chevrolet Corvette C8': 312, 'Honda Civic': 201}``, and use a function to categorize them into three speed categories: "super fast", "fast", and "slow". Print the dictionary.
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Use a dictionary comprehension starting with a dictionary of animal names and their weights in kilograms, ``{'Koala': 10, 'Kangaroo': 90, 'Lion': 190, 'Zebra': 350, 'Giraffe': 1200, 'Elephant': 5400}``, and use a function to categorize them into three weight classes: "heavy" (more than 1000 kg), "medium" (between 100 and 1000 kg), and "light" (less than 100 kg). Print the dictionary.
+
+                .. code-block:: python
+
+                    def categorize_weight(weight):
+                        if weight > 1000:
+                            return "heavy"
+                        elif weight > 100:
+                            return "medium"
+                        else:
+                            return "light"
+
+                    animal_weights_kg = {
+                        'Koala': 10,
+                        'Kangaroo': 90,
+                        'Lion': 190,
+                        'Zebra': 350,
+                        'Giraffe': 1200,
+                        'Elephant': 5400
+                    }
+
+                    weight_category = {animal: categorize_weight(weight) for animal, weight in animal_weights_kg.items()}
+                    print(weight_category)
+                    # Output: {'Koala': 'light', 'Kangaroo': 'light', 'Lion': 'medium', 'Zebra': 'medium', 'Giraffe': 'heavy', 'Elephant': 'heavy'}
+
+            .. tab-item:: Q2
+
+                Use a dictionary comprehension starting with a dictionary of car names and their top speeds in kilometers per hour, ``{'Hennessey Venom F5': 484, 'Koenigsegg Agera RS': 447, 'McLaren 720S': 341, 'Chevrolet Corvette C8': 312, 'Honda Civic': 201}``, and use a function to categorize them into three speed categories: "super fast", "fast", and "slow". Print the dictionary.
+
+                .. code-block:: python
+
+                    def categorize_speed(speed):
+                        if speed > 350:
+                            return "super fast"
+                        elif speed > 250:
+                            return "fast"
+                        else:
+                            return "slow"
+
+                    car_speeds_kph = {
+                        'Hennessey Venom F5': 484,
+                        'Koenigsegg Agera RS': 447,
+                        'McLaren 720S': 341,
+                        'Chevrolet Corvette C8': 312,
+                        'Honda Civic': 201
+                    }
+
+                    speed_category = {car: categorize_speed(speed) for car, speed in car_speeds_kph.items()}
+                    print(speed_category)
+
+                    # Output:  {'Hennessey Venom F5': 'super fast', 'Koenigsegg Agera RS': 'super fast', 'McLaren 720S': 'fast', 'Chevrolet Corvette C8': 'fast', 'Honda Civic': 'slow'}

@@ -75,4 +75,43 @@ string_ascii = {char: ord(char) for char in string}
 print(string_ascii)
 # {'P': 80, 'y': 121, 't': 116, 'h': 104, 'o': 111, 'n': 110}
 
+cities_in_F = {'Sydney': 19, 'Melbourne': 15, 'Brisbane': 35, 'Perth': 25}
+cities_in_C = {key: "warm" if value > 20 else "cold" for (key, value) in cities_in_F.items()}
+print(cities_in_C)
+# Output is {'Sydney': 'cold', 'Melbourne': 'cold', 'Brisbane': 'warm', 'Perth': 'warm'}
+
+def categorise_temp(temp_C):
+    if temp_C > 30:
+        return "hot"
+    elif temp_C > 20:
+        return "warm"
+    elif temp_C > 10:
+        return "cold"
+    else:
+        return "freezing"
+
+
+cities_in_F = {'Sydney': 14, 'Melbourne': 6, 'Brisbane': 35, 'Perth': 25}
+cities_in_C = {key: categorise_temp(value) for (key, value) in cities_in_F.items()}
+print(cities_in_C)
+# Output is {'Sydney': 'cold', 'Melbourne': 'freezing', 'Brisbane': 'hot', 'Perth': 'warm'}
+
+
+
+car_speeds_kph = {'Hennessey Venom F5': 484, 'Koenigsegg Agera RS': 447, 'McLaren 720S': 341, 'Chevrolet Corvette C8': 312, 'Honda Civic': 201}
+
+speed_category = {key: ("super fast" if value > 350 else "fast" if value > 250 else "slow") for (key, value) in car_speeds_kph.items()}
+print(speed_category)
+# Output:  {'Hennessey Venom F5': 'super fast', 'Koenigsegg Agera RS': 'super fast', 'McLaren 720S': 'fast', 'Chevrolet Corvette C8': 'fast', 'Honda Civic': 'slow'}
+
+
+
+animal_weights_kg = {'Koala': 10, 'Kangaroo': 90, 'Lion': 190, 'Zebra': 350, 'Giraffe': 1200, 'Elephant': 5400}
+weight_category = {key: ("heavy" if value > 1000 else "medium" if value > 100 else "light") for key, value in animal_weights_kg.items()}
+print(weight_category)
+# Output: {'Koala': 'light', 'Kangaroo': 'light', 'Lion': 'medium', 'Zebra': 'medium', 'Giraffe': 'heavy', 'Elephant': 'heavy'}
+
+
+
+
 #
