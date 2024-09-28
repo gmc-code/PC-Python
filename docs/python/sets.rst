@@ -1,12 +1,11 @@
 ==========================
-Data Structures: Sets
+Sets
 ==========================
 
 Sets
 ---------
 
-Unlike lists and tuples, sets hold an **unordered** collection of elements with no duplicates. This makes them suitable for testing membership or removing 
-duplicate elements.
+Unlike lists and tuples, sets hold an **unordered** collection of elements with no duplicates. This makes them suitable for testing membership or removing duplicate elements.
 
 .. code-block:: python
 

@@ -1,11 +1,11 @@
 ==========================
-Data Structures: Tuples
+Tuples
 ==========================
 
 Tuples
 ----------
 
-Tuples are similar to lists in that they are used to store an ordered sequence of items, usually of varying datatype.
+Tuples are similar to lists in that they are used to store an **ordered** sequence of items, usually of varying datatype.
 
 .. code-block:: python
 

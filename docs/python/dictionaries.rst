@@ -1,5 +1,5 @@
 ===============================
-Data Structures: Dictionaries
+Dictionaries
 ===============================
 
 Dictionary structure
@@ -7,8 +7,8 @@ Dictionary structure
 
 | A Python dictionary is a collection of items.
 | Each item  is a ``key: value`` pair. 
-| Dictionary items are ordered, changeable, and do not allow duplicates.
-| All keys must be immutable (not able to be changed) such as integers, strings and tuples of integers or strings.
+| Dictionary items are **ordered**, **changeable**, and do not allow duplicates.
+| All keys must be **immutable** (not able to be changed) such as integers, strings and tuples of integers or strings.
 | Values can be any  data types such as string, int, boolean, tuple, list, dictionary. 
 | Values in a dictionary are retrieved by using the key as an index. e.g print(dictionary_1[key_1])
 
@@ -44,7 +44,6 @@ Dictionary structure
                     }
     capital = eastern_state_capitals['Victoria']
     print(capital)
-
 
 ----
 

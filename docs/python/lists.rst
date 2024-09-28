@@ -1,11 +1,12 @@
 ==========================
-Data Structures: Lists
+Lists
 ==========================
 
 Lists
 --------------
 
-List is a data structure used to store any data type in order. It's a data structure that you'll probably use most often. Let's say we want to store a player's scores. The pieces of data stored in a list are called `elements`. 
+| List is a data structure used to store any data type in **order**. 
+| The pieces of data stored in a list are called `elements`. 
 
 
 To create a list, you specify its contents enclosed within brackets and delimited by commas: 
