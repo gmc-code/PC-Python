@@ -140,7 +140,7 @@ Practice Questions
 ----
 
 Dictionary comprehension of zipped lists
-----------------------------------------------------------------------
+-----------------------------------------------
 
 | Zipping 2 lists produces a zip object which is like a list of tuples.
 | The zipped object acts as an iterable for the dictionary comprehension. 
@@ -217,7 +217,7 @@ Practice Questions
 
 ----
 
-Using a condition in a dictionary comprehension
+Conditions in a dictionary comprehension
 ----------------------------------------------------------
 
 Syntax:
@@ -329,9 +329,8 @@ Practice Questions
 
 ----
 
-
-Using multiple conditions in a dictionary comprehension
-----------------------------------------------------------
+Multiple conditions in a dictionary comprehension
+-----------------------------------------------------
 
 | Multiple conditions can be used, using the keywords ``and`` or ``or``.
 | Using ``and`` requires each condition to be True for the key: value pair to be included.
@@ -436,7 +435,6 @@ Practice Questions
                     }
                     print(automorphic_numbers)
                     # Output: {1: 1, 5: 25, 6: 36, 25: 625, 76: 5776}
-
 
 ----
 
