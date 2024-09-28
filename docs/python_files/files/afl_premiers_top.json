@@ -1,6 +1,10 @@
 {
     "premiers": [
         {
+            "Club": "Collingwood",
+            "Premierships Total": "16"
+        },
+        {
             "Club": "Essendon",
             "Premierships Total": "16"
         },
@@ -9,8 +13,16 @@
             "Premierships Total": "16"
         },
         {
-            "Club": "Collingwood",
-            "Premierships Total": "15"
+            "Club": "Richmond",
+            "Premierships Total": "13"
+        },
+        {
+            "Club": "Hawthorn",
+            "Premierships Total": "13"
+        },
+        {
+            "Club": "Melbourne",
+            "Premierships Total": "13"
         }
     ]
 }

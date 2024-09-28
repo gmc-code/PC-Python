@@ -22,6 +22,8 @@ def process_data(csv_path):
     # Return the output string
     return output
 
-csv_path = 'files/afl_premiers_2000s.csv'
-print(process_data(csv_path))
 
+# csv_path = 'files/afl_premiers_2000s.csv'
+
+csv_path = 'docs/python_files/files/afl_premiers_2000s.csv'
+print(process_data(csv_path))

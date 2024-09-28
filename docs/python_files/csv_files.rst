@@ -486,9 +486,9 @@ DictWriter with selected fieldnames
 | Download the csv file :download:`afl_premiers_2000s.csv <files/afl_premiers_2000s.csv>`
 
 | The code below uses DictReader to write to a new csv file.
-| Fieldnames need to be given to covert the dictionary rows to output for the writer.
+| Field names need to be given to covert the dictionary rows to output for the writer.
 
-| The fieldnames in the downlaoded file are: "Index,Year,Premiership team,Runner-up"
+| The field names in the downloaded file are: "Index,Year,Premiership team,Runner-up"
 | The code below uses dictionary comprehension, ``fieldnames_dict = {key: line[key] for key in fieldnames}``, on each row, to produce a new dictionary for writing to the new csv file.
 
 
@@ -513,6 +513,8 @@ DictWriter with selected fieldnames
 .. code-block:: 
 
     Year	Premiership team
+    2024	Brisbane Lions
+    2023	Collingwood
     2022	Geelong Cats
     2021	Melbourne
     ...

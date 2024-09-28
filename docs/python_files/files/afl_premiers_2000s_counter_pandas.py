@@ -13,6 +13,6 @@ def process_data(csv_path):
     return(team_counts)
 
 
-csv_path = 'files/afl_premiers_2000s.csv'
+# csv_path = 'files/afl_premiers_2000s.csv'
+csv_path = 'docs/python_files/files/afl_premiers_2000s.csv'
 print(process_data(csv_path))
-

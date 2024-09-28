@@ -512,7 +512,7 @@ dump json processed file data to a file
 ----------------------------------------
 
 | The code below loads a json file, processes it and dumps the json to a file.
-| ``data_list = []`` holds the dictionaries for each entry that meet the criteria: ``if int(entry["Premierships Total"]) >=15:``.
+| ``data_list = []`` holds the dictionaries for each entry that meet the criteria: ``if int(entry["Premierships Total"]) >=13:``.
 | ``keys_premiers = ["Club", "Premierships Total"]`` is used to store the dictionary keys that will be kept.
 | ``entry_dict = {key: entry[key] for key in keys_premiers}`` builds the dictionary using just the chosen keys in the list: keys_premiers.
 | ``data = {mainkey: data_list}`` makes the json data.
@@ -531,7 +531,7 @@ dump json processed file data to a file
         json_data = json.load(f)
         # append data 
         for entry in json_data[mainkey]:
-            if int(entry["Premierships Total"]) >=15:
+            if int(entry["Premierships Total"]) >=13:
                 entry_dict = {key: entry[key] for key in keys_to_keep}
                 data_list.append(entry_dict)
 
@@ -549,6 +549,10 @@ dump json processed file data to a file
     {
         "premiers": [
             {
+                "Club": "Collingwood",
+                "Premierships Total": "16"
+            },
+            {
                 "Club": "Essendon",
                 "Premierships Total": "16"
             },
@@ -557,10 +561,17 @@ dump json processed file data to a file
                 "Premierships Total": "16"
             },
             {
-                "Club": "Collingwood",
-                "Premierships Total": "15"
+                "Club": "Richmond",
+                "Premierships Total": "13"
+            },
+            {
+                "Club": "Hawthorn",
+                "Premierships Total": "13"
+            },
+            {
+                "Club": "Melbourne",
+                "Premierships Total": "13"
             }
         ]
     }
-
 

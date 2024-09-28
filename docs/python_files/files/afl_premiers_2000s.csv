@@ -1,24 +1,26 @@
 Index,Year,Premiership team,Runner-up
-0,2022,Geelong Cats,Sydney Swans
-1,2021,Melbourne,Western Bulldogs
-2,2020,Richmond,Geelong
-3,2019,Richmond,GWS Giants
-4,2018,West Coast,Collingwood
-5,2017,Richmond,Adelaide
-6,2016,Western Bulldogs,Sydney Swans
-7,2015,Hawthorn,West Coast
-8,2014,Hawthorn,Sydney Swans
-9,2013,Hawthorn,Fremantle Dockers
-10,2012,Sydney Swans,Hawthorn
+24,2024,Brisbane Lions,South Melbourne/Sydney
+23,2023,Collingwood,Brisbane Lions
+22,2022,Geelong,South Melbourne/Sydney
+21,2021,Melbourne,Footscray/Western Bulldogs
+20,2020,Richmond,Geelong
+19,2019,Richmond,Greater Western Sydney
+18,2018,West Coast,Collingwood
+17,2017,Richmond,Adelaide
+16,2016,Footscray/Western Bulldogs,South Melbourne/Sydney
+15,2015,Hawthorn,West Coast
+14,2014,Hawthorn,South Melbourne/Sydney
+13,2013,Hawthorn,Fremantle
+12,2012,South Melbourne/Sydney,Hawthorn
 11,2011,Geelong,Collingwood
-12,2010,Collingwood,St Kilda
-13,2009,Geelong,St Kilda
-14,2008,Hawthorn,Geelong
-15,2007,Geelong,Port Adelaide
-16,2006,West Coast,Sydney Swans
-17,2005,Sydney Swans,West Coast
-18,2004,Port Adelaide,Brisbane Lions
-19,2003,Brisbane Lions,Collingwood
-20,2002,Brisbane Lions,Collingwood
-21,2001,Brisbane Lions,Essendon
-22,2000,Essendon,Melbourne
+10,2010,Collingwood,St Kilda
+9,2009,Geelong,St Kilda
+8,2008,Hawthorn,Geelong
+7,2007,Geelong,Port Adelaide
+6,2006,West Coast,South Melbourne/Sydney
+5,2005,South Melbourne/Sydney,West Coast
+4,2004,Port Adelaide,Brisbane Lions
+3,2003,Brisbane Lions,Collingwood
+2,2002,Brisbane Lions,Collingwood
+1,2001,Brisbane Lions,Essendon
+0,2000,Essendon,Melbourne
