@@ -455,8 +455,8 @@ Syntax:
 
     names = ['Alex', 'Brooke', 'Chris', 'Dana']
     scores = [85, 92, 78, 90]
-    # Dictionary comprehension with a condition
-    high_scores = {name: score for name, score in zip(names, scores) if score > 80}
+    min_score = 80
+    high_scores = {name: score for name, score in zip(names, scores) if score >= min_score}
     print(high_scores)
     # Output: {'Alex': 85, 'Brooke': 92, 'Dana': 90}
 
@@ -486,7 +486,8 @@ Practice Questions
 
                     students = ['Alice', 'Bob', 'Charlie', 'David']
                     test_scores = [85, 72, 90, 65]
-                    passed_students = {student: score for student, score in zip(students, test_scores) if score > 75}
+                    min_score = 76
+                    passed_students = {student: score for student, score in zip(students, test_scores) if score >= min_score}
                     print(passed_students)
                     # Output: {'Alice': 85, 'Charlie': 90}
 
@@ -498,7 +499,8 @@ Practice Questions
 
                     products = ['apple', 'banana', 'cherry', 'date']
                     prices = [15, 25, 10, 30]
-                    expensive_products = {product: price for product, price in zip(products, prices) if price > 20}
+                    above_cost = 20
+                    expensive_products = {product: price for product, price in zip(products, prices) if price > above_cost}
                     print(expensive_products)
                     # Output: {'banana': 25, 'date': 30}
 
@@ -510,7 +512,8 @@ Practice Questions
 
                     vehicles = ['car', 'bike', 'boat', 'plane']
                     types = ['land', 'land', 'water', 'air']
-                    land_vehicles = {vehicle: vehicle_type for vehicle, vehicle_type in zip(vehicles, types) if vehicle_type == 'land'}
+                    type = 'land'
+                    land_vehicles = {vehicle: vehicle_type for vehicle, vehicle_type in zip(vehicles, types) if vehicle_type == type}
                     print(land_vehicles)
                     # Output: {'car': 'land', 'bike': 'land'}
 
