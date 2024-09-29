@@ -909,7 +909,8 @@ Practice Questions
             }
 
     #. Use a dictionary comprehension starting with a dictionary of the fitness_data and converts them to a dictionary of fitness categories with data for each person. Print the dictionary.
-        .. code-block:: python
+
+        ::
             
             fitness_data = {
                 "Alice": {"steps": [10000, 12000, 11000], "calories_burned": [500, 550, 520], "active_minutes": [60, 70, 65]},
