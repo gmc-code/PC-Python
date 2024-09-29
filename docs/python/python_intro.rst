@@ -17,14 +17,14 @@ Python Indentation
 | Indentation refers to the spaces at the beginning of a code line.
 | The number of spaces is flexible, but is usually 4 spaces for each indentation.
 | A tab press can be used instead of 4 spaces, with editors converting the tab to 4 spaces.
-| Errors results from not using the same number of spaces in the same block of code or for not applying indentation in blocks after a colon (:).
+| Errors result from not using the same number of spaces in the same block of code or for not applying indentation in blocks after a colon (:).
 | Indentation is required in any block of code where the header line starts with a keyword: (**if**, **elif**, **else**, **for**, **while**, **def**, class, try, except, finally, with) and ends with a colon (:).
 
 
 Code examples showing indentation:
 
 .. image:: images/indenting.png
-    :scale: 55 %
+    :scale: 52 %
     :align: left
     :alt: indenting
 
@@ -52,6 +52,7 @@ Code examples showing indentation:
 
 
 
+
 Blocks of code nested within other blocks of code need to be indented to the same level of nesting.
 
 .. image:: images/nested_indenting.png
@@ -69,7 +70,7 @@ Blocks of code nested within other blocks of code need to be indented to the sam
             print("Zero")
         else:
             print("Positive number")
-     
+
     for x in "ABC":
         for y in "123":
             print(x, y)
