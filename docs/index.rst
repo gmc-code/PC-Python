@@ -44,7 +44,9 @@ PC-Python
     python/lists.rst
     python/sets.rst
     python/tuples.rst
+
     python/dictionaries.rst
+    python/dictionary_methods.rst
 
     python/bytes.rst
     python/bytearrays.rst
