@@ -10,26 +10,25 @@ Accessing Items
 
 .. role:: blue
 
-- :blue:`**get()**`: Returns the value for a specified key if it exists, otherwise returns a default value.
-- :blue:`**items()**`: Returns a view object displaying a list of the dictionary's key-value pairs.
-- :blue:`**keys()**`: Returns a view object displaying a list of all the keys in the dictionary.
-- :blue:`**values()**`: Returns a view object displaying a list of all the values in the dictionary.
+- :blue:`get()`: Returns the value for a specified key if it exists, otherwise returns a default value.
+- :blue:`items()`: Returns a view object displaying a list of the dictionary's key-value pairs.
+- :blue:`keys()`: Returns a view object displaying a list of all the keys in the dictionary.
+- :blue:`values()`: Returns a view object displaying a list of all the values in the dictionary.
 
 Modifying Items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- **update()**: Updates the dictionary with elements from another dictionary or an iterable of key-value pairs.
-- **setdefault()**: Returns the value of a specified key, inserting it with a default value if it doesn't exist.
-- **pop()**: Removes the specified key and returns the corresponding value.
-- **popitem()**: Removes and returns a key-value pair from the dictionary in LIFO order.
+- :blue:`update()`: Updates the dictionary with elements from another dictionary or an iterable of key-value pairs.
+- :blue:`setdefault()`: Returns the value of a specified key, inserting it with a default value if it doesn't exist.
+- :blue:`pop()`: Removes the specified key and returns the corresponding value.
+- :blue:`popitem()`: Removes and returns a key-value pair from the dictionary in LIFO order.
 
 Dictionary Operations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- **copy()**: Returns a shallow copy of the dictionary.
-- **clear()**: Removes all items from the dictionary.
-- **fromkeys()**: Creates a new dictionary with keys from an iterable and values set to a specified value.
-
+- :blue:`copy()`: Returns a shallow copy of the dictionary.
+- :blue:`clear()`: Removes all items from the dictionary.
+- :blue:`fromkeys()`: Creates a new dictionary with keys from an iterable and values set to a specified value.
 
 ----
 
@@ -51,7 +50,7 @@ get()
 
 .. py:method:: dict.get(key, default=None)
 
-    **Description**: Returns the value for the specified key if the key is in the dictionary, otherwise returns the default value.
+    Returns the value for the specified key if the key is in the dictionary, otherwise returns the default value.
 
 .. code-block:: python
 
@@ -65,7 +64,7 @@ items()
 
 .. py:method:: dict.items()
 
-    **Description**: Returns a view object that displays a list of dictionary's key-value tuple pairs.
+    Returns a view object that displays a list of dictionary's key-value tuple pairs.
 
 .. code-block:: python
 
@@ -79,7 +78,7 @@ keys()
 
 .. py:method:: dict.keys()
 
-    **Description**: Returns a view object that displays a list of all the keys in the dictionary.
+    Returns a view object that displays a list of all the keys in the dictionary.
 
 .. code-block:: python
 
@@ -93,7 +92,7 @@ values()
 
 .. py:method:: dict.values()
 
-    **Description**: Returns a view object that displays a list of all the values in the dictionary.
+    Returns a view object that displays a list of all the values in the dictionary.
 
 .. code-block:: python
 
@@ -110,7 +109,7 @@ update()
 
 .. py:method:: dict.update([other])
 
-    **Description**: Updates the dictionary with elements from another dictionary object or from an iterable of key-value pairs.
+    Updates the dictionary with elements from another dictionary object or from an iterable of key-value pairs.
 
 .. code-block:: python
 
@@ -124,7 +123,7 @@ setdefault()
 
 .. py:method:: dict.setdefault(key, default=None)
 
-    **Description**: Returns the value of the specified key. If the key does not exist, inserts the key with the specified default value.
+    Returns the value of the specified key. If the key does not exist, inserts the key with the specified default value.
 
 .. code-block:: python
 
@@ -139,7 +138,7 @@ pop()
 
 .. py:method:: dict.pop(key, default=None)
 
-    **Description**: Removes the specified key and returns the corresponding value. If the key is not found, the default value is returned if provided, otherwise a KeyError is raised.
+    Removes the specified key and returns the corresponding value. If the key is not found, the default value is returned if provided, otherwise a KeyError is raised.
 
 .. code-block:: python
 
@@ -154,7 +153,7 @@ popitem()
 
 .. py:method:: dict.popitem()
 
-    **Description**: Removes and returns a key-value pair from the dictionary. Pairs are returned in LIFO (last-in, first-out) order.
+    Removes and returns a key-value pair from the dictionary. Pairs are returned in LIFO (last-in, first-out) order.
 
 .. code-block:: python
 
@@ -172,7 +171,7 @@ copy()
 
 .. py:method:: dict.copy()
 
-    **Description**: Returns a shallow copy of the dictionary.
+    Returns a shallow copy of the dictionary.
 
 .. code-block:: python
 
@@ -186,7 +185,7 @@ clear()
 
 .. py:method:: dict.clear()
 
-    **Description**: Removes all items from the dictionary.
+    Removes all items from the dictionary.
 
 .. code-block:: python
 
@@ -200,7 +199,7 @@ fromkeys()
 
 .. py:method:: dict.fromkeys(iterable, value=None)
 
-    **Description**: Creates a new dictionary with keys from the given iterable and values set to the specified value.
+    Creates a new dictionary with keys from the given iterable and values set to the specified value.
 
 .. code-block:: python
 
