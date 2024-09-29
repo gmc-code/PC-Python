@@ -58,7 +58,6 @@ land_vehicles = {vehicle: vehicle_type for vehicle, vehicle_type in zip(vehicles
 print(land_vehicles)
 
 
-
 cities_in_F = {'Sydney': 86, 'Melbourne': 68, 'Brisbane': 95, 'Perth': 77}
 cities_in_C = {key: round((value-32)*(5/9)) for (key, value) in cities_in_F.items()}
 print(cities_in_C)
@@ -97,13 +96,11 @@ print(cities_in_C)
 # Output is {'Sydney': 'cold', 'Melbourne': 'freezing', 'Brisbane': 'hot', 'Perth': 'warm'}
 
 
-
 car_speeds_kph = {'Hennessey Venom F5': 484, 'Koenigsegg Agera RS': 447, 'McLaren 720S': 341, 'Chevrolet Corvette C8': 312, 'Honda Civic': 201}
 
 speed_category = {key: ("super fast" if value > 350 else "fast" if value > 250 else "slow") for (key, value) in car_speeds_kph.items()}
 print(speed_category)
 # Output:  {'Hennessey Venom F5': 'super fast', 'Koenigsegg Agera RS': 'super fast', 'McLaren 720S': 'fast', 'Chevrolet Corvette C8': 'fast', 'Honda Civic': 'slow'}
-
 
 
 animal_weights_kg = {'Koala': 10, 'Kangaroo': 90, 'Lion': 190, 'Zebra': 350, 'Giraffe': 1200, 'Elephant': 5400}
@@ -160,8 +157,8 @@ def total_data_by_category(data):
     }
 
 print(total_data_by_category(fitness_data))
-# Output: {'total_steps': {'Alice': 33000, 'Bob': 25500, 'Charlie': 37500}, 
-#          'total_calories_burned': {'Alice': 1570, 'Bob': 1270, 'Charlie': 1870}, 
+# Output: {'total_steps': {'Alice': 33000, 'Bob': 25500, 'Charlie': 37500},
+#          'total_calories_burned': {'Alice': 1570, 'Bob': 1270, 'Charlie': 1870},
 #          'total_active_minutes': {'Alice': 195, 'Bob': 165, 'Charlie': 233}}
 
 
@@ -177,7 +174,6 @@ def average_growth(data):
 
 print(average_growth(trees))
 # Output: {'Oak': 2.6, 'Pine': 3.1, 'Maple': 2.9}
-
 
 
 elements = [
