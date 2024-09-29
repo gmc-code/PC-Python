@@ -1025,20 +1025,20 @@ Practice Questions
         ::
             
             trees = [
-            {'species': 'Oak', 'growth_rate': [2.5, 2.7, 2.6]},  # in cm per year
-            {'species': 'Pine', 'growth_rate': [3.0, 3.2, 3.1]},
-            {'species': 'Maple', 'growth_rate': [2.8, 2.9, 2.85]}
-        ]
+                {'species': 'Oak', 'growth_rate': [2.5, 2.7, 2.6]},  # in cm per year
+                {'species': 'Pine', 'growth_rate': [3.0, 3.2, 3.1]},
+                {'species': 'Maple', 'growth_rate': [2.8, 2.9, 2.85]}
+            ]
 
     #. Use a dictionary comprehension starting with a list of dictionaries of atomic properties and outputs a dictionary of electronegativities. Print the dictionary.
         
         ::
          
             elements = [
-            {'name': 'Hydrogen', 'atomic_number': 1, 'atomic_mass': 1.008, 'electronegativity': 2.20},
-            {'name': 'Oxygen', 'atomic_number': 8, 'atomic_mass': 15.999, 'electronegativity': 3.44},
-            {'name': 'Carbon', 'atomic_number': 6, 'atomic_mass': 12.011, 'electronegativity': 2.55}
-        ]
+                {'name': 'Hydrogen', 'atomic_number': 1, 'atomic_mass': 1.008, 'electronegativity': 2.20},
+                {'name': 'Oxygen', 'atomic_number': 8, 'atomic_mass': 15.999, 'electronegativity': 3.44},
+                {'name': 'Carbon', 'atomic_number': 6, 'atomic_mass': 12.011, 'electronegativity': 2.55}
+            ]
 
     .. dropdown::
         :icon: codescan
