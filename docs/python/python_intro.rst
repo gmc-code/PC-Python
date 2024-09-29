@@ -56,7 +56,7 @@ Code examples showing indentation:
 Blocks of code nested within other blocks of code need to be indented to the same level of nesting.
 
 .. image:: images/nested_indenting.png
-    :scale: 45 %
+    :scale: 40 %
     :align: left
     :alt: nested_indenting
 
