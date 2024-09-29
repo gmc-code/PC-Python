@@ -6,10 +6,10 @@ Dictionary structure
 ----------------------------
 
 | A Python dictionary is a collection of items.
-| Each item  is a ``key: value`` pair. 
+| Each item  is a ``key: value`` pair.
 | Dictionary items are **ordered**, **changeable**, and do not allow duplicates.
 | All keys must be **immutable** (not able to be changed) such as integers, strings and tuples of integers or strings.
-| Values can be any  data types such as string, int, boolean, tuple, list, dictionary. 
+| Values can be any  data types such as string, int, boolean, tuple, list, dictionary.
 | Values in a dictionary are retrieved by using the key as an index. e.g print(dictionary_1[key_1])
 
 .. code-block:: python
@@ -22,7 +22,7 @@ Dictionary structure
         <key_n>: <value_n>
     }
 
-| An example of a dictionary of states and capitals is below. 
+| An example of a dictionary of states and capitals is below.
 
 .. code-block:: python
 
@@ -59,7 +59,7 @@ Empty dictionary
 | An empty dictionary can be made using the **dict function**:
 
 .. code-block:: python
-    
+
     empty_dict = dict()
 
 ----
@@ -70,7 +70,7 @@ Making a dictionary
 Making a dictionary: curly brackets
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| Make a dictionary by enclosing a comma-separated sequence of key-value pairs in curly braces ``{}``. 
+| Make a dictionary by enclosing a comma-separated sequence of key-value pairs in curly braces ``{}``.
 | The dictionary below has 3 items, each separated by a comma.
 | Each item is a key: value pair separated by a colon.
 
@@ -80,7 +80,7 @@ Making a dictionary: curly brackets
                     'Victoria': "Melbourne",
                     'Tasmania': "Hobart",
                     'Queensland': "Brisbane"
-                    } 
+                    }
     print(state_capitals)
 
 
@@ -122,7 +122,7 @@ Making a dictionary: curly brackets
                     }
                     print(fruit_colors)
 
-                   
+
 ----
 
 Making a dictionary from a list of lists
@@ -246,7 +246,7 @@ Making a dictionary from 2 lists
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | 2 lists of keys and values can be combined and converted into a dictionary.
-| The zip() function pairs each element from the states list with the corresponding element from the cities list. 
+| The zip() function pairs each element from the states list with the corresponding element from the cities list.
 | The result is an iterator containing these tuples: ``('Queensland', 'Brisbane'), ('South Australia', 'Adelaide'), ('Western Australia', 'Perth')``
 | The dict function then converts the zip object into a dictionary.
 
@@ -298,7 +298,7 @@ Making a dictionary from 2 lists
 Making a dictionary by dictionary comprehension from 2 lists
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| The dictionary comprehension below creates a dictionary by iterating over the tuples produced by zip(). 
+| The dictionary comprehension below creates a dictionary by iterating over the tuples produced by zip().
 For each tuple, the state becomes the key and city becomes the value.
 
 .. code-block:: python
@@ -386,21 +386,21 @@ Making a dictionary from key word arguments
                 .. code-block:: python
 
                     continents = dict(Africa=30.37, Asia=44.58, Europe=10.18)
-                    print(continents)   
+                    print(continents)
 
 
 
 ----
 
 .. code-block:: python
-    
+
     names = ['Lockett', 'Coventry', 'Dunstall']
     goals = [1360, 1299, 1254]
     print(dict(zip(names, goals)))
     # {'Lockett': 1360, 'Coventry': 1299, 'Dunstall': 1254}
 
 .. code-block:: python
-    
+
     names = ['Lockett', 'Coventry', 'Dunstall']
     goals = [1360, 1299, 1254]
     my_dict = {}
@@ -409,41 +409,24 @@ Making a dictionary from key word arguments
     print(my_dict)
     # {'Lockett': 1360, 'Coventry': 1299, 'Dunstall': 1254}
 
+..
+    # Access elements
+    game_register['dent']
 
-# Access elements
-game_register['dent']
+    # Add or update and existing entry
+    game_register['pepper'] = 50
 
-# Add or update and existing entry
-game_register['pepper'] = 50
+    # Delete an entry
+    del game_register['pepper']
 
-# Delete an entry
-del game_register['pepper']    
+    # Delete all entries
+    game_register.clear()
 
-# Delete all entries
-game_register.clear()
+    # Delete the dictionary
+    del game_register
 
-# Delete the dictionary
-del game_register
-
-# Retrieve a value for the key or default if not in dicionary
-game_register.get('dent')        
-
-----
-
-Dictionary methods:
-----------------------
-
-| clear() Removes all the elements from the dictionary
-| copy() Returns a copy of the dictionary
-| fromkeys() Returns a dictionary with the specified keys and value
-| get() Returns the value of the specified key
-| items() Returns a list containing a tuple for each key value pair
-| keys() Returns a list containing the dictionary's keys
-| pop() Removes the element with the specified key
-| popitem() Removes the last inserted key-value pair
-| setdefault() Returns the value of the specified key. If the key does not exist: it inserts the key, with the specified value
-| update() Updates the dictionary with the specified key-value pairs
-| values() Returns a list of all the values in the dictionary
+    # Retrieve a value for the key or default if not in dicionary
+    game_register.get('dent')
 
 
 
