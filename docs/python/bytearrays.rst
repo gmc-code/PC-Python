@@ -13,219 +13,164 @@ bytearray Methods
 
 The `bytearray` type in Python provides a variety of methods for manipulating and interacting with byte data. Below are some commonly used methods:
 
-.. py:class:: bytearray
+----
 
-    .. py:method:: append(x)
-        :noindex:
+append
+----------------
 
-        Append a single byte to the end of the bytearray.
+.. py:method:: append(x)
 
-        Example:
-        .. code-block:: python
+    Append a single byte to the end of the bytearray.
 
-            my_ba = bytearray([65, 66, 67])
-            my_ba.append(68)
-            print(my_ba)  # Output: bytearray(b'ABCD')
+    Example:
+    .. code-block:: python
 
-    .. py:method:: extend(iterable)
-        :noindex:
+        my_ba = bytearray([65, 66, 67])
+        my_ba.append(68)
+        print(my_ba)  # Output: bytearray(b'ABCD')
 
-        Extend the bytearray by appending elements from the iterable.
+----
 
-        Example:
-        .. code-block:: python
+append
+----------------
 
-            my_ba = bytearray([65, 66, 67])
-            my_ba.extend([68, 69])
-            print(my_ba)  # Output: bytearray(b'ABCDE')
+.. py:method:: extend(iterable)
 
-    .. py:method:: insert(i, x)
-        :noindex:
+    Extend the bytearray by appending elements from the iterable.
 
-        Insert a single byte at a given position.
+    Example:
+    .. code-block:: python
 
-        Example:
-        .. code-block:: python
+        my_ba = bytearray([65, 66, 67])
+        my_ba.extend([68, 69])
+        print(my_ba)  # Output: bytearray(b'ABCDE')
 
-            my_ba = bytearray([65, 66, 67])
-            my_ba.insert(1, 68)
-            print(my_ba)  # Output: bytearray(b'ADBC')
+----
 
-    .. py:method:: remove(x)
-        :noindex:
+append
+----------------
 
-        Remove the first occurrence of a byte.
+.. py:method:: insert(i, x)
 
-        Example:
-        .. code-block:: python
+    Insert a single byte at a given position.
 
-            my_ba = bytearray([65, 66, 67, 66])
-            my_ba.remove(66)
-            print(my_ba)  # Output: bytearray(b'ACB')
+    Example:
+    .. code-block:: python
 
-    .. py:method:: pop([i])
-        :noindex:
+        my_ba = bytearray([65, 66, 67])
+        my_ba.insert(1, 68)
+        print(my_ba)  # Output: bytearray(b'ADBC')
 
-        Remove and return a byte at a given position. If no index is specified, removes and returns the last byte.
+----
 
-        Example:
-        .. code-block:: python
+append
+----------------
 
-            my_ba = bytearray([65, 66, 67])
-            byte = my_ba.pop(1)
-            print(byte)  # Output: 66
-            print(my_ba)  # Output: bytearray(b'AC')
+.. py:method:: remove(x)
 
-    .. py:method:: clear()
-        :noindex:
+    Remove the first occurrence of a byte.
 
-        Remove all bytes from the bytearray.
+    Example:
+    .. code-block:: python
 
-        Example:
-        .. code-block:: python
+        my_ba = bytearray([65, 66, 67, 66])
+        my_ba.remove(66)
+        print(my_ba)  # Output: bytearray(b'ACB')
 
-            my_ba = bytearray([65, 66, 67])
-            my_ba.clear()
-            print(my_ba)  # Output: bytearray(b'')
+----
 
-    .. py:method:: count(x)
-        :noindex:
+append
+----------------
 
-        Return the number of occurrences of a byte.
+.. py:method:: pop([i])
 
-        Example:
-        .. code-block:: python
+    Remove and return a byte at a given position. If no index is specified, removes and returns the last byte.
 
-            my_ba = bytearray([65, 66, 67, 66])
-            count = my_ba.count(66)
-            print(count)  # Output: 2
+    Example:
+    .. code-block:: python
 
-    .. py:method:: find(sub[, start[, end]])
-        :noindex:
+        my_ba = bytearray([65, 66, 67])
+        byte = my_ba.pop(1)
+        print(byte)  # Output: 66
+        print(my_ba)  # Output: bytearray(b'AC')
 
-        Return the lowest index where the subsequence is found.
+----
 
-        Example:
-        .. code-block:: python
+append
+----------------
 
-            my_ba = bytearray(b'Hello, World!')
-            index = my_ba.find(b'World')
-            print(index)  # Output: 7
+.. py:method:: clear()
 
-    .. py:method:: reverse()
-        :noindex:
+    Remove all bytes from the bytearray.
 
-        Reverse the bytes in place.
+    Example:
+    .. code-block:: python
 
-        Example:
-        .. code-block:: python
+        my_ba = bytearray([65, 66, 67])
+        my_ba.clear()
+        print(my_ba)  # Output: bytearray(b'')
 
-            my_ba = bytearray([65, 66, 67])
-            my_ba.reverse()
-            print(my_ba)  # Output: bytearray(b'CBA')
+----
 
-    .. py:method:: decode(encoding='utf-8', errors='strict')
-        :noindex:
+append
+----------------
 
-        Decode the bytearray to a string using the specified encoding.
+.. py:method:: count(x)
 
-        Example:
-        .. code-block:: python
+    Return the number of occurrences of a byte.
 
-            my_ba = bytearray(b'Hello, World!')
-            string = my_ba.decode('utf-8')
-            print(string)  # Output: Hello, World!
+    Example:
+    .. code-block:: python
 
+        my_ba = bytearray([65, 66, 67, 66])
+        count = my_ba.count(66)
+        print(count)  # Output: 2
 
+----
 
-1. **`append(x)`**: Appends a single byte to the end of the bytearray.
+append
+----------------
 
-   .. code-block:: python
+.. py:method:: find(sub[, start[, end]])
 
-      my_ba = bytearray([65, 66, 67])
-      my_ba.append(68)
-      print(my_ba)  # Output: bytearray(b'ABCD')
+    Return the lowest index where the subsequence is found.
 
+    Example:
+    .. code-block:: python
 
-2. **`extend(iterable)`**: Extends the bytearray by appending elements from the iterable.
+        my_ba = bytearray(b'Hello, World!')
+        index = my_ba.find(b'World')
+        print(index)  # Output: 7
 
-   .. code-block:: python
+----
 
-      my_ba = bytearray([65, 66, 67])
-      my_ba.extend([68, 69])
-      print(my_ba)  # Output: bytearray(b'ABCDE')
+append
+----------------
 
+.. py:method:: reverse()
 
-3. **`insert(i, x)`**: Inserts a single byte at a given position.
+    Reverse the bytes in place.
 
-   .. code-block:: python
+    Example:
+    .. code-block:: python
 
-   my_ba = bytearray([65, 66, 67])
-   my_ba.insert(1, 68)
-   print(my_ba)  # Output: bytearray(b'ADBC')
+        my_ba = bytearray([65, 66, 67])
+        my_ba.reverse()
+        print(my_ba)  # Output: bytearray(b'CBA')
 
+----
 
-4. **`remove(x)`**: Removes the first occurrence of a byte.
+append
+----------------
 
-   .. code-block:: python
+.. py:method:: decode(encoding='utf-8', errors='strict')
 
-   my_ba = bytearray([65, 66, 67, 66])
-   my_ba.remove(66)
-   print(my_ba)  # Output: bytearray(b'ACB')
+    Decode the bytearray to a string using the specified encoding.
 
+    Example:
+    .. code-block:: python
 
-5. **`pop([i])`**: Removes and returns a byte at a given position. If no index is specified, removes and returns the last byte.
-
-   .. code-block:: python
-
-   my_ba = bytearray([65, 66, 67])
-   byte = my_ba.pop(1)
-   print(byte)  # Output: 66
-   print(my_ba)  # Output: bytearray(b'AC')
-
-
-6. **`clear()`**: Removes all bytes from the bytearray.
-
-   .. code-block:: python
-
-   my_ba = bytearray([65, 66, 67])
-   my_ba.clear()
-   print(my_ba)  # Output: bytearray(b'')
-
-
-7. **`count(x)`**: Returns the number of occurrences of a byte.
-
-   .. code-block:: python
-
-   my_ba = bytearray([65, 66, 67, 66])
-   count = my_ba.count(66)
-   print(count)  # Output: 2
-
-
-8. **`find(sub[, start[, end]])`**: Returns the lowest index where the subsequence is found.
-
-   .. code-block:: python
-
-   my_ba = bytearray(b'Hello, World!')
-   index = my_ba.find(b'World')
-   print(index)  # Output: 7
-
-
-9. **`reverse()`**: Reverses the bytes in place.
-
-   .. code-block:: python
-
-   my_ba = bytearray([65, 66, 67])
-   my_ba.reverse()
-   print(my_ba)  # Output: bytearray(b'CBA')
-
-
-10. **`decode(encoding='utf-8', errors='strict')`**: Decodes the bytearray to a string using the specified encoding.
-
-   .. code-block:: python
-
-    my_ba = bytearray(b'Hello, World!')
-    string = my_ba.decode('utf-8')
-    print(string)  # Output: Hello, World!
-
+        my_ba = bytearray(b'Hello, World!')
+        string = my_ba.decode('utf-8')
+        print(string)  # Output: Hello, World!
 
