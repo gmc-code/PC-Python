@@ -32,16 +32,6 @@ Dictionary Operations
 
 ----
 
-Sample dictionary for examples
------------------------------------
-
-.. code-block:: python
-
-    # Creating a sample dictionary
-    sample_dict = {'a': 1, 'b': 2, 'c': 3}
-
------
-
 Accessing Items
 ---------------
 
@@ -54,6 +44,7 @@ get()
 
 .. code-block:: python
 
+    sample_dict = {'a': 1, 'b': 2, 'c': 3}
     value = sample_dict.get('a')
     # Output: 1
 
@@ -68,6 +59,7 @@ items()
 
 .. code-block:: python
 
+    sample_dict = {'a': 1, 'b': 2, 'c': 3}
     items = sample_dict.items()
     # Output: dict_items([('a', 1), ('b', 2), ('c', 3)])
 
@@ -82,6 +74,7 @@ keys()
 
 .. code-block:: python
 
+    sample_dict = {'a': 1, 'b': 2, 'c': 3}
     keys = sample_dict.keys()
     # Output: dict_keys(['a', 'b', 'c'])
 
@@ -96,8 +89,9 @@ values()
 
 .. code-block:: python
 
+    sample_dict = {'a': 1, 'b': 2, 'c': 3}
     values = sample_dict.values()
-    # Output: dict_values([1, 2, 3, 4, 5])
+    # Output: dict_values([1, 2, 3])
 
 ----
 
@@ -113,7 +107,8 @@ update()
 
 .. code-block:: python
 
-    sample_dict.update({'e': 5})
+    sample_dict = {'a': 1, 'b': 2, 'c': 3}
+    sample_dict.update({'d': 4, 'e': 5})
     # Output: {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
 
 ----
@@ -127,6 +122,7 @@ setdefault()
 
 .. code-block:: python
 
+    sample_dict = {'a': 1, 'b': 2, 'c': 3}
     value = sample_dict.setdefault('d', 4)
     # Output: 4
     # sample_dict is now {'a': 1, 'b': 2, 'c': 3, 'd': 4}
@@ -142,6 +138,7 @@ pop()
 
 .. code-block:: python
 
+    sample_dict = {'a': 1, 'b': 2, 'c': 3}
     value = sample_dict.pop('a')
     # Output: 1
     # sample_dict is now {'b': 2, 'c': 3}
@@ -157,6 +154,7 @@ popitem()
 
 .. code-block:: python
 
+    sample_dict = {'a': 1, 'b': 2, 'c': 3}
     item = sample_dict.popitem()
     # Output: ('c', 3)
     # sample_dict is now {'a': 1, 'b': 2}
@@ -175,6 +173,7 @@ copy()
 
 .. code-block:: python
 
+    sample_dict = {'a': 1, 'b': 2, 'c': 3}
     new_dict = sample_dict.copy()
     # Output: {'a': 1, 'b': 2, 'c': 3}
 
@@ -189,6 +188,7 @@ clear()
 
 .. code-block:: python
 
+    sample_dict = {'a': 1, 'b': 2, 'c': 3}
     sample_dict.clear()
     # Output: {}
 

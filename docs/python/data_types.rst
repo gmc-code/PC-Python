@@ -18,7 +18,7 @@ Data type examples
 --------------------------
 
 .. csv-table::
-    :file: files/modified_data_with_structure.csv
+    :file: files/data_type_examples.csv
     :widths: 350, 50, 300, 50, 50, 50
     :header-rows: 1
 
@@ -45,14 +45,30 @@ A string is a sequence of characters surrounded by either single quotation marks
 
 - **Triple Quotes for Documentation and Multi-line Strings**:
   - Triple quotes (either ``'''`` or ``"""``) are used for documentation strings (docstrings) and multi-line strings.
-    - Example of a docstring:
+    - Example of a docstring for a function:
+
       .. code-block:: python
-      '''n is an integer'''
-      ```
+
+        def square_number(n):
+            """
+            This function returns the square of a given number.
+
+            Parameters:
+            n (int or float): The number to be squared.
+
+            Returns:
+            int or float: The square of the input number.
+            """
+            return n ** 2
+
     - Example of a multi-line string:
+
       .. code-block:: python
-      """angle is a float from 0 to 90"""
-      ```
+
+        """This is a multiline string.
+        It can span multiple lines.
+        You can include line breaks."""
+
 
 ----
 
@@ -111,9 +127,17 @@ Type casting
 
 See: https://www.w3schools.com/python/python_casting.asp
 
-| Data types can't be mixed.
-| They need to be converted to the same type so that they can be used together.
 | The conversion of one type to another is called type casting.
+| Data types can't be mixed so type casting is needed to convert data to the same type so that they can be used together.
+
+Converting numbers to strings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+str() converts a number to a string with a number in it
+
+.. code-block:: python
+
+    j = str(3.01) # j will be "3.01"
 
 | An integer can be converted to a string using the str() function.
 | The premierships integer is converted to a string so it can be combined with the rest of the strings for printing.
@@ -123,6 +147,9 @@ See: https://www.w3schools.com/python/python_casting.asp
     team = 'Richmond'
     premierships = 11
     print(team + ' has won ' + str(premierships) + ' premierships.')
+
+Converting numbers as strings to numbers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 int() converts a string consisting of an integer to an integer number
 
@@ -136,11 +163,6 @@ float() converts a string consisting of a decimal to a decimal number
 
     g = float("4.23") # g will be 4.23
 
-str() converts a number to a string with a number in it
-
-.. code-block:: python
-
-    j = str(3.01) # j will be "3.01"
 
 ----
 

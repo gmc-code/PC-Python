@@ -278,7 +278,13 @@ div.highlight-default div.highlight {
 /* ========================================== */
 /**  GMC */
 /* ========================================== */
-/** to add inline text color */
+/**
+to add inline text color
+.. role:: blue
+
+:blue:`blue text here`
+*/
+
 .blue {
     color: blue;
 }

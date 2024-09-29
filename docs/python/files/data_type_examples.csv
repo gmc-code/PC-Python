@@ -1,16 +1,15 @@
-Example,Explanation,Type Category,Mutability,Ordered
-"text = ""Hello, World!""",immutable sequence of characters surrounded by either single or double quotation marks.,Text Type,Immutable,Ordered
-integer = 42,immutable integer,Numeric Type,Immutable,Unordered
-floating_point = 3.14,floating-point,Numeric Type,Immutable,Unordered
-complex_number = 1 + 2j,complex numbers.,Numeric Type,Immutable,Unordered
-"my_list = [1, 2, 3, 4]",list: ordered collections of items.,Sequence Type,Mutable,Ordered
-"my_tuple = (1, 2, 3, 4)",tuple: ordered collections of items.,Sequence Type,Immutable,Ordered
-"my_range = range(1, 10)",range: ordered collections of items.,Sequence Type,Immutable,Ordered
-"my_dict = {""name"": ""Anne"", ""age"": 28}",ordered collection of key-value pairs.,Mapping Type,Mutable,Ordered
-"my_set = {1, 2, 3, 4}",set: mutable unordered collection of unique items.,Set Type,Mutable,Unordered
-"my_frozenset = frozenset([1, 2, 3, 4])",frozenset: immutable unordered collection of unique items.,Set Type,Immutable,Unordered
-is_valid = True,Represents True or False.,Boolean Type,Immutable,Unordered
-"my_bytes = b""Hello""",immutable sequences of bytes.,Binary Type,Immutable,Unordered
-"my_ba = bytearray([65, 66, 67])",mutable sequences of bytes.,Binary Type,Mutable,Unordered
-"my_mv = memoryview(b""Hello"")",Immutable and mutable sequences of bytes.,Binary Type,Depends on the underlying object,Unordered
-nothing = None,Represents the absence of a value.,None Type,Immutable,Unordered
+Example,Data Type,Type Category,Mutability,Ordered,Structure
+"text = ""Hello, World!""",str,Text Type,Immutable,Ordered,"in single '' or double quotes """""
+integer = 42,int,Numeric Type,Immutable,Unordered,whole numbers
+floating_point = 3.14,float,Numeric Type,Immutable,Unordered,decimals
+complex_number = 1 + 2j,complex,Numeric Type,Immutable,Unordered,real + imaginary numbers
+"my_list = [1, 2, 3, 4]",list,Sequence Type,Mutable,Ordered,square brackets []
+"my_tuple = (1, 2, 3, 4)",tuple,Sequence Type,Immutable,Ordered,parentheses ()
+"my_range = range(1, 10)",range,Sequence Type,Immutable,Ordered,range function
+"my_set = {1, 2, 3, 4}",set,Set Type,Mutable,Unordered,{} with unique items
+"my_frozenset = frozenset([1, 2, 3, 4])",frozenset,Set Type,Immutable,Unordered,frozenset() with unique items
+"my_dict = {""name"": ""Anne"", ""age"": 28}",dict,Mapping Type,Mutable,Ordered,{} with key-value pairs
+is_valid = True,bool,Boolean Type,Immutable,Unordered,True or False
+nothing = None,NoneType,None Type,Immutable,Unordered,None
+"my_bytes = b""Hello""",bytes,Binary Type,Immutable,Unordered,"b"""" or b''"
+"my_ba = bytearray([65, 66, 67])",bytearray,Binary Type,Mutable,Unordered,bytearray()
