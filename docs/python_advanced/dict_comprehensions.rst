@@ -900,7 +900,7 @@ Practice Questions
 
     #. Use a dictionary comprehension starting with a dictionary of the employee_reviews and converts them to average ratings. Print the dictionary.
         
-        .. code-block:: python
+        ::
             
             employee_reviews = {
                 "John": {"communication": [4.5, 4.7, 4.8], "technical": [4.2, 4.3], "leadership": [4.8, 4.9]},
@@ -970,8 +970,6 @@ Practice Questions
                     #          'total_active_minutes': {'Alice': 195, 'Bob': 165, 'Charlie': 233}}
 
 
-
-
 ----
 
 Dictionary comprehension of a list of dictionaries
@@ -1023,13 +1021,20 @@ Practice Questions
 .. admonition:: Tasks
 
     #. Use a dictionary comprehension starting with a list of dictionaries of the tree growth and converts them to averages. Print the dictionary.
-        trees = [
+        
+        ::
+            
+            trees = [
             {'species': 'Oak', 'growth_rate': [2.5, 2.7, 2.6]},  # in cm per year
             {'species': 'Pine', 'growth_rate': [3.0, 3.2, 3.1]},
             {'species': 'Maple', 'growth_rate': [2.8, 2.9, 2.85]}
         ]
+
     #. Use a dictionary comprehension starting with a list of dictionaries of atomic properties and outputs a dictionary of electronegativities. Print the dictionary.
-        elements = [
+        
+        ::
+         
+            elements = [
             {'name': 'Hydrogen', 'atomic_number': 1, 'atomic_mass': 1.008, 'electronegativity': 2.20},
             {'name': 'Oxygen', 'atomic_number': 8, 'atomic_mass': 15.999, 'electronegativity': 3.44},
             {'name': 'Carbon', 'atomic_number': 6, 'atomic_mass': 12.011, 'electronegativity': 2.55}
@@ -1045,12 +1050,7 @@ Practice Questions
             .. tab-item:: Q1
 
                 Use a dictionary comprehension starting with a list of dictionaries of the tree growth and converts them to averages. Print the dictionary.
-                trees = [
-                    {'species': 'Oak', 'growth_rate': [2.5, 2.7, 2.6]},  # in cm per year
-                    {'species': 'Pine', 'growth_rate': [3.0, 3.2, 3.1]},
-                    {'species': 'Maple', 'growth_rate': [2.8, 2.9, 2.85]}
-                ]
-
+        
                 .. code-block:: python
 
                     trees = [
@@ -1069,12 +1069,7 @@ Practice Questions
             .. tab-item:: Q2
 
                 Use a dictionary comprehension starting with a list of dictionaries of atomic properties and outputs a dictionary of electronegativities. Print the dictionary.
-                elements = [
-                    {'name': 'Hydrogen', 'atomic_number': 1, 'atomic_mass': 1.008, 'electronegativity': 2.20},
-                    {'name': 'Oxygen', 'atomic_number': 8, 'atomic_mass': 15.999, 'electronegativity': 3.44},
-                    {'name': 'Carbon', 'atomic_number': 6, 'atomic_mass': 12.011, 'electronegativity': 2.55}
-                ]
-
+                
                 .. code-block:: python
 
                     elements = [
