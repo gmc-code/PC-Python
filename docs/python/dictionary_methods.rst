@@ -8,10 +8,12 @@ Summary of Dictionary Methods
 Accessing Items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- **get()**: Returns the value for a specified key if it exists, otherwise returns a default value.
-- **items()**: Returns a view object displaying a list of the dictionary's key-value pairs.
-- **keys()**: Returns a view object displaying a list of all the keys in the dictionary.
-- **values()**: Returns a view object displaying a list of all the values in the dictionary.
+.. role:: blue
+
+- :blue:`**get()**`: Returns the value for a specified key if it exists, otherwise returns a default value.
+- :blue:`**items()**`: Returns a view object displaying a list of the dictionary's key-value pairs.
+- :blue:`**keys()**`: Returns a view object displaying a list of all the keys in the dictionary.
+- :blue:`**values()**`: Returns a view object displaying a list of all the values in the dictionary.
 
 Modifying Items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
