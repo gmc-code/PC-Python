@@ -899,18 +899,18 @@ Practice Questions
 .. admonition:: Tasks
 
     #. Use a dictionary comprehension starting with a dictionary of the employee_reviews and converts them to average ratings. Print the dictionary.
-    employee_reviews = {
-        "John": {"communication": [4.5, 4.7, 4.8], "technical": [4.2, 4.3], "leadership": [4.8, 4.9]},
-        "Jane": {"communication": [4.8, 4.9], "technical": [4.6, 4.7, 4.8], "creativity": [4.9, 5.0]},
-        "Doe": {"technical": [4.1, 4.3], "leadership": [4.5, 4.6, 4.7], "teamwork": [4.8, 4.9]},
-    }
-    #. Use a dictionary comprehension starting with a dictionary of the fitness_data and converts them to a dictionary of fitness categories with data for each person. Print the dictionary.
-    fitness_data = {
-        "Alice": {"steps": [10000, 12000, 11000], "calories_burned": [500, 550, 520], "active_minutes": [60, 70, 65]},
-        "Bob": {"steps": [8000, 8500, 9000], "calories_burned": [400, 420, 450], "active_minutes": [50, 55, 60]},
-        "Charlie": {"steps": [12000, 13000, 12500], "calories_burned": [600, 650, 620], "active_minutes": [75, 80, 78]},
-    }
+        employee_reviews = {
+            "John": {"communication": [4.5, 4.7, 4.8], "technical": [4.2, 4.3], "leadership": [4.8, 4.9]},
+            "Jane": {"communication": [4.8, 4.9], "technical": [4.6, 4.7, 4.8], "creativity": [4.9, 5.0]},
+            "Doe": {"technical": [4.1, 4.3], "leadership": [4.5, 4.6, 4.7], "teamwork": [4.8, 4.9]},
+        }
 
+    #. Use a dictionary comprehension starting with a dictionary of the fitness_data and converts them to a dictionary of fitness categories with data for each person. Print the dictionary.
+        fitness_data = {
+            "Alice": {"steps": [10000, 12000, 11000], "calories_burned": [500, 550, 520], "active_minutes": [60, 70, 65]},
+            "Bob": {"steps": [8000, 8500, 9000], "calories_burned": [400, 420, 450], "active_minutes": [50, 55, 60]},
+            "Charlie": {"steps": [12000, 13000, 12500], "calories_burned": [600, 650, 620], "active_minutes": [75, 80, 78]},
+        }
 
     .. dropdown::
         :icon: codescan
