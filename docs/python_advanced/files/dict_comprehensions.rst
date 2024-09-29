@@ -781,61 +781,16 @@ Practice Questions
 
 ----
 
-Dictionary comprehension of dictionary of lists
+Dictionary comprehension of dictionaries of lists
 ------------------------------------------------------
 
-| Start with a dictionary of a list of scores for different subjects.
-| Use dictionary comprehension to calculate the average score for each subject.
-
-.. code-block:: python
-
-    students_scores = {"math": [85, 90, 88], "science": [92, 85, 87], "history": [78, 80]}
-    average_scores = {subject: round(sum(scores) / len(scores)) for subject, scores in students_scores.items()} 
-    print(average_scores)
-    # {'math': 88, 'science': 88, 'history': 79}
-
-----
-
-Dictionary comprehension of dictionary of dictionaries of lists
--------------------------------------------------------------------
-
-| Start with a dictionary of students, and each student has a list of scores for different subjects.
-| Use dictionary comprehension to calculate the average score for each student.
-
-.. code-block:: python
-
-    students_scores = {
-        "Alice": {"math": [85, 90, 88], "science": [92, 85, 87], "history": [78, 80]},
-        "Bob": {"math": [78, 82], "english": [88, 90, 85]},
-        "Charlie": {"science": [85, 89], "history": [90, 92, 88], "art": [95, 97]},
-    }
-
-    # Dictionary comprehension to calculate average scores for each student
-    average_scores = {
-                    student: {subject: round(sum(scores) / len(scores)) for subject, scores in subjects.items()} 
-                    for student, subjects in students_scores.items()
-                    }
-    print(average_scores)
-
-
-| The output is:
-
-.. code-block:: python
-
-    {
-    'Alice': {'math': 88, 'science': 88, 'history': 79}, 
-    'Bob': {'math': 80, 'english': 88}, 
-    'Charlie': {'science': 87, 'history': 90, 'art': 96}
-    }
-
-
-----
 
 Dictionary comprehension of a list of dictionaries
 -------------------------------------------------------
 
 | Below is an example of using dictionary comprehension to transform a list of dictionaries. 
 | Create a dictionary where the keys are the students' names and the values are their average scores.
+| Start with a list of dictionaries representing students and their scores in different subjects.
 
 .. code-block:: python
 
@@ -849,26 +804,4 @@ Dictionary comprehension of a list of dictionaries
     average_scores = {student['name']: (student['math'] + student['science']) / 2 for student in students}
     print(average_scores)
     # output is {'Alice': 88.5, 'Bob': 83.0, 'Charlie': 87.5}
-
-
-| Below is an example where each student is taking different subjects and a different number of subjects
-| Create a dictionary where the keys are the students' names and the values are their average scores.
-
-.. code-block:: python
-
-    students = [
-        {'name': 'Alice', 'math': 85, 'science': 92, 'history': 78},
-        {'name': 'Bob', 'math': 78, 'english': 88},
-        {'name': 'Charlie', 'science': 85, 'history': 90, 'art': 95}
-    ]
-
-    # Dictionary comprehension to calculate average scores
-    average_scores = {
-        student['name']: sum(score for subject, score in student.items() if subject != 'name') / (len(student) - 1)
-        for student in students
-    }
-
-    print(average_scores)
-    # Output is {'Alice': 85.0, 'Bob': 83.0, 'Charlie': 90.0}
-
 
