@@ -39,7 +39,7 @@ Dictionary comprehension of the range function, lists and strings
 
 
 Practice Questions
---------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Tasks
 
@@ -164,7 +164,7 @@ Dictionary comprehension of zipped lists
 ----
 
 Practice Questions
---------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Tasks
 
@@ -242,7 +242,7 @@ Syntax:
 ----
 
 Practice Questions
---------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Tasks
 
@@ -365,7 +365,7 @@ Syntax:
 ----
 
 Practice Questions
---------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Tasks
 
@@ -463,7 +463,7 @@ Syntax:
 ----
 
 Practice Questions
---------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Tasks
 
@@ -545,7 +545,7 @@ Syntax:
 ----
 
 Practice Questions
---------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Tasks
 
@@ -636,7 +636,7 @@ Syntax:
 ----
 
 Practice Questions
---------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Tasks
 
@@ -711,7 +711,7 @@ Syntax:
 ----
 
 Practice Questions
---------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Tasks
 
@@ -797,7 +797,7 @@ Dictionary comprehension of dictionary of lists
 ----
 
 Practice Questions
---------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Tasks
 
@@ -894,7 +894,7 @@ Dictionary comprehension of dictionary of dictionaries of lists
 ----
 
 Practice Questions
---------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Tasks
 
@@ -1022,7 +1022,7 @@ Dictionary comprehension of a list of dictionaries
 ----
 
 Practice Questions
---------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Tasks
 
