@@ -23,6 +23,7 @@ append
     Append a single byte to the end of the bytearray.
 
     Example:
+
     .. code-block:: python
 
         my_ba = bytearray([65, 66, 67])
@@ -39,6 +40,7 @@ append
     Extend the bytearray by appending elements from the iterable.
 
     Example:
+
     .. code-block:: python
 
         my_ba = bytearray([65, 66, 67])
@@ -55,6 +57,7 @@ append
     Insert a single byte at a given position.
 
     Example:
+
     .. code-block:: python
 
         my_ba = bytearray([65, 66, 67])
@@ -71,6 +74,7 @@ append
     Remove the first occurrence of a byte.
 
     Example:
+
     .. code-block:: python
 
         my_ba = bytearray([65, 66, 67, 66])
@@ -87,6 +91,7 @@ append
     Remove and return a byte at a given position. If no index is specified, removes and returns the last byte.
 
     Example:
+
     .. code-block:: python
 
         my_ba = bytearray([65, 66, 67])
@@ -104,6 +109,7 @@ append
     Remove all bytes from the bytearray.
 
     Example:
+
     .. code-block:: python
 
         my_ba = bytearray([65, 66, 67])
@@ -120,6 +126,7 @@ append
     Return the number of occurrences of a byte.
 
     Example:
+
     .. code-block:: python
 
         my_ba = bytearray([65, 66, 67, 66])
@@ -136,6 +143,7 @@ append
     Return the lowest index where the subsequence is found.
 
     Example:
+
     .. code-block:: python
 
         my_ba = bytearray(b'Hello, World!')
@@ -152,6 +160,7 @@ append
     Reverse the bytes in place.
 
     Example:
+
     .. code-block:: python
 
         my_ba = bytearray([65, 66, 67])
@@ -168,6 +177,7 @@ append
     Decode the bytearray to a string using the specified encoding.
 
     Example:
+
     .. code-block:: python
 
         my_ba = bytearray(b'Hello, World!')

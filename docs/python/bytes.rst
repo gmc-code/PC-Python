@@ -22,6 +22,7 @@ count
     Return the number of non-overlapping occurrences of the substring `sub`.
 
     Example:
+
     .. code-block:: python
 
         my_bytes = b"Hello, World!"
@@ -38,6 +39,7 @@ find
     Return the lowest index where the substring `sub` is found.
 
     Example:
+
     .. code-block:: python
 
         my_bytes = b"Hello, World!"
@@ -54,6 +56,7 @@ index
     Like `find()`, but raises a `ValueError` if the substring is not found.
 
     Example:
+
     .. code-block:: python
 
         my_bytes = b"Hello, World!"
@@ -70,6 +73,7 @@ split
     Split the bytes object into a list of byte objects, using `sep` as the delimiter.
 
     Example:
+
     .. code-block:: python
 
         my_bytes = b"Hello, World!"
@@ -86,6 +90,7 @@ join
     Concatenate any number of bytes objects, with the bytes object acting as a separator.
 
     Example:
+
     .. code-block:: python
 
         parts = [b'Hello', b'World!']
@@ -102,6 +107,7 @@ replace
     Return a copy of the bytes object with all occurrences of the substring `old` replaced by `new`.
 
     Example:
+
     .. code-block:: python
 
         my_bytes = b"Hello, World!"
@@ -118,6 +124,7 @@ strip
     Return a copy of the bytes object with leading and trailing whitespace removed.
 
     Example:
+
     .. code-block:: python
 
         my_bytes = b"  Hello, World!  "
@@ -134,6 +141,7 @@ startswith
     Return `True` if the bytes object starts with the specified prefix.
 
     Example:
+
     .. code-block:: python
 
         my_bytes = b"Hello, World!"
@@ -150,6 +158,7 @@ endswith
     Return `True` if the bytes object ends with the specified suffix.
 
     Example:
+
     .. code-block:: python
 
         my_bytes = b"Hello, World!"
@@ -166,6 +175,7 @@ decode
     Decode the bytes object to a string using the specified encoding.
 
     Example:
+
     .. code-block:: python
 
         my_bytes = b"Hello, World!"
