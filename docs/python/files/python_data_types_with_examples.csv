@@ -1,0 +1,16 @@
+Type Category,Explanation,Example
+Text Type,A sequence of characters surrounded by either single or double quotation marks.,"text = ""Hello, World!"""
+Numeric Types,"Integer","integer = 42
+Numeric Types,"floating-point",floating_point = 3.14
+Numeric Types,"complex numbers.",complex_number = 1 + 2j"
+Sequence Types,Ordered collections of items.,"my_list = [1, 2, 3, 4, 5]
+my_tuple = (1, 2, 3, 4, 5)
+my_range = range(1, 10)"
+Mapping Type,Unordered collection of key-value pairs.,"my_dict = {""name"": ""Alice"", ""age"": 30}"
+Set Types,Unordered collection of unique items.,"my_set = {1, 2, 3, 4, 5}
+Set Types,Unordered collection of unique items.,my_frozenset = frozenset([1, 2, 3, 4, 5])"
+Boolean Type,Represents True or False.,is_valid = True
+Binary Types,Immutable and mutable sequences of bytes.,"my_bytes = b""Hello""
+Binary Types,Immutable and mutable sequences of bytes.,my_bytearray = bytearray([65, 66, 67])
+Binary Types,Immutable and mutable sequences of bytes.,my_memoryview = memoryview(b""Hello"")"
+None Type,Represents the absence of a value.,nothing = None

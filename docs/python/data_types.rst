@@ -4,54 +4,55 @@ Data Types
 
 See: https://www.w3schools.com/python/python_datatypes.asp
 
+Data type categories
+--------------------------
+
 .. csv-table::
-    :file: Date_types.csv
-    :widths: 70, 120, 200
+    :file: files/data_type_categories.csv
+    :widths: 200, 400
     :header-rows: 1
 
-Some common built-in data types are:
+----
 
-.. list-table::
-    :widths: 200, 200
-    :header-rows: 0
+Data type examples
+--------------------------
 
-    *   - Type:
-        - example
-    *   - Text Type:
-        - str
-    *   - Numeric Types:
-        - int, float
-    *   - Sequence Types:
-        - list, tuple, range
-    *   - Mapping Type:
-        - dict
-    *   - Set Types:
-        - set, frozenset
-    *   - Boolean Type:
-        - bool
-    *   - None Type:
-       	- NoneType
+.. csv-table::
+    :file: files/modified_data_with_structure.csv
+    :widths: 350, 50, 300, 50, 50, 50
+    :header-rows: 1
 
 ----
 
 Strings
 --------------------------
 
-| A string is a sequence of characters surrounded by either single quotation marks (' '), or double quotation marks (" "). 
-| Text with quotes within it can use done using the other quote mark.
-| e.g. "it's"
-| e.g. 'Jim said "Go home", then left.'
+A string is a sequence of characters surrounded by either single quotation marks (``' '``) or double quotation marks (``" "``).
 
-| Text with both quotes within it can use done using triple quotes.
-| '''My favourite quote from Jim's essay was "Go home". Short and sharp.'''
+- **Using Quotes Within Strings**:
+  - If your text contains single quotes, you can use double quotes to enclose the string.
+    - Example: ``"It's a nice day."``
+  - If your text contains double quotes, you can use single quotes to enclose the string.
+    - Example: ``'Jane said "Go now", then left.'```
 
-| Escaping via \ can be used to force the quote to be used literally.
-| e.g. 'it\'s'
+- **Using Both Quotes Within Strings**:
+  - If your text contains both single and double quotes, you can use triple quotes to enclose the string.
+    - Example: ``'''My favourite quote from Jane's essay was "Go now". Short and sweet.'''``
 
-| Triple quotes are used for documentation strings. Triple single or triple double quotes can be used.
-| Triple quotes can also be used for multi line strings.
-| e.g. '''n is an integer'''
-| e.g. """angle is a float from 0 to 90"""
+- **Escaping Quotes**:
+  - You can use the backslash (`\`) to escape quotes within a string, forcing them to be used literally.
+    - Example: `'It\'s a nice day.'`
+
+- **Triple Quotes for Documentation and Multi-line Strings**:
+  - Triple quotes (either ``'''`` or ``"""``) are used for documentation strings (docstrings) and multi-line strings.
+    - Example of a docstring:
+      .. code-block:: python
+      '''n is an integer'''
+      ```
+    - Example of a multi-line string:
+      .. code-block:: python
+      """angle is a float from 0 to 90"""
+      ```
 
 ----
 
@@ -110,8 +111,8 @@ Type casting
 
 See: https://www.w3schools.com/python/python_casting.asp
 
-| Data types can't be mixed. 
-| They need to be converted to the same type so that they can be used together. 
+| Data types can't be mixed.
+| They need to be converted to the same type so that they can be used together.
 | The conversion of one type to another is called type casting.
 
 | An integer can be converted to a string using the str() function.

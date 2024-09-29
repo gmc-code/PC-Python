@@ -1,0 +1,9 @@
+﻿Type Category,Data Type
+TextType,str
+NumericTypes,"int, float, complex"
+SequenceTypes,"list, tuple, range"
+MappingType,dict
+SetTypes,"set, frozenset"
+BooleanType,bool
+BinaryTypes,"bytes, bytearray, memoryview"
+NoneType,NoneType

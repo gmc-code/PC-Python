@@ -31,20 +31,23 @@ PC-Python
     python/operators_arithmetic.rst
     python/operators_compound_assignment.rst
     python/operators_boolean.rst.
-    python/operators_comparison.rst   
-    python/operators_logical.rst  
+    python/operators_comparison.rst
+    python/operators_logical.rst
     python/operators_membership.rst
     python/operators_identity.rst
     python/variables.rst
     python/variables_scope.rst
-    
+
     python/selection.rst
     python/iteration.rst
-    
+
     python/lists.rst
     python/sets.rst
     python/tuples.rst
     python/dictionaries.rst
+
+    python/bytes.rst
+    python/bytearrays.rst
 
     python/multiple_assignment.rst
     python/unpacking_iterables.rst
@@ -57,7 +60,7 @@ PC-Python
     :maxdepth: 2
     :caption: Advanced Python
     :numbered:
-    
+
     python_advanced/list_comprehensions.rst
     python_advanced/dict_comprehensions.rst
     python_advanced/set_comprehensions.rst
@@ -90,15 +93,15 @@ PC-Python
     turtle/turtle_drawing.rst
     turtle/turtle_square_progressions.rst
     turtle/turtle_rectangle_progressions.rst
-    turtle/turtle_star_progressions.rst 
-    turtle/turtle_triangle_progressions.rst 
-    turtle/turtle_dots.rst     
+    turtle/turtle_star_progressions.rst
+    turtle/turtle_triangle_progressions.rst
+    turtle/turtle_dots.rst
     turtle/turtle_circles.rst
     turtle/turtle_regular_polygons.rst
     turtle/turtle_pie_slices.rst
     turtle/turtle_shapes_module.rst
     turtle/turtle_houses_module.rst
-    turtle/turtle_houses_designs.rst 
+    turtle/turtle_houses_designs.rst
 
 
 .. toctree::
