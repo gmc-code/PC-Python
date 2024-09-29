@@ -26,6 +26,8 @@ PC-Python
     :numbered:
 
     python/python_intro.rst
+    python/indentation.rst
+
     python/data_types.rst
     python/operators.rst
     python/operators_arithmetic.rst

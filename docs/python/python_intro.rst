@@ -2,75 +2,31 @@
 Python Intro
 ==========================
 
-Python can be used for: AI and machine learning, Data analytics, Data visualisation, Programming applications, Game development, Web development and system scripting.
+| VSCode is a popular IDE (Integrated Development Environment) used to edit and run python files.
 
-Python has syntax that allows developers to write programs with fewer lines than most other programming languages.
+| Python has syntax that allows developers to write programs with fewer lines than most other programming languages.
+| Python is a versatile programming language used in a wide range of applications.
 
-VSCode is a popular IDE (Integrated Development Environment) used to edit and run python files.
+Python Uses
+-----------------
 
-----
+#. **Education**
+   Python's simple syntax and readability make it an excellent language for teaching programming and computer science concepts.
 
-Python Indentation
-----------------------
+#. **Automation and Scripting**
+   Python is often used to automate repetitive tasks, such as file management, web scraping, and testing.
 
-| Python uses **indentation** to indicate a **block of code** for selection and iteration and definition.
-| Indentation refers to the spaces at the beginning of a code line.
-| The number of spaces is flexible, but is usually 4 spaces for each indentation.
-| A tab press can be used instead of 4 spaces, with editors converting the tab to 4 spaces.
-| Errors result from not using the same number of spaces in the same block of code or for not applying indentation in blocks after a colon (:).
-| Indentation is required in any block of code where the header line starts with a keyword: (**if**, **elif**, **else**, **for**, **while**, **def**, class, try, except, finally, with) and ends with a colon (:).
+#. **Software Development**
+   Python is used for developing desktop applications and software prototypes. Its extensive standard library and third-party modules make it a powerful tool for software development.
 
+#. **Game Development**
+   Python can be used to create simple games. Pygame provides functionalities to develop games and multimedia applications.
 
-Code examples showing indentation:
+#. **Data Analysis and Machine Learning**
+   Python is a favorite among data scientists for data analysis, visualization, and building machine learning models. Libraries like Pandas, NumPy, and Scikit-learn are widely used in these fields.
 
-.. image:: images/indenting.png
-    :scale: 52 %
-    :align: left
-    :alt: indenting
+#. **Web Development**
+   Python is used to build server-side web applications. Frameworks like Django and Flask make it easier to develop robust web applications quickly.
 
-.. code-block:: python
-
-    dice = "5"
-    if dice == "6":
-        print("Win")
-    elif dice == "1":
-        print("Loose")
-    else:
-        print("Roll again.")
-
-    for x in "banana":
-        print(x)
-
-    i = 10
-    while i > 0:
-        print(i)
-        i -= 1
-    print("Go.")
-
-    def my_function():
-        print("Hello from a function")
-
-
-
-
-Blocks of code nested within other blocks of code need to be indented to the same level of nesting.
-
-.. image:: images/nested_indenting.png
-    :scale: 40 %
-    :align: left
-    :alt: nested_indenting
-
-.. code-block:: python
-
-    num = 3
-    if num < 0:
-        print("Negative number")
-    else:
-        if num == 0:
-            print("Zero")
-        else:
-            print("Positive number")
-
-    for x in "ABC":
-        for y in "123":
-            print(x, y)
+#. **Artificial Intelligence**
+   Python is heavily used in AI research and development. Libraries like TensorFlow and Keras are popular for building neural networks and other AI models.
