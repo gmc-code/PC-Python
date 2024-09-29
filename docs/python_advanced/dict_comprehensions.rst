@@ -948,7 +948,6 @@ Practice Questions
 
                 Use a dictionary comprehension starting with a dictionary of the fitness_data and converts them to a dictionary of fitness categories with data for each person. Print the dictionary.
             
-
                 .. code-block:: python
 
                     fitness_data = {
