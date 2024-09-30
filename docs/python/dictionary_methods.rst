@@ -35,6 +35,7 @@ Dictionary Operations
 Accessing Items
 ---------------
 
+~~~~~~~~~~~~~
 get()
 ~~~~~~~~~~~~~
 
@@ -47,6 +48,65 @@ get()
     sample_dict = {'a': 1, 'b': 2, 'c': 3}
     value = sample_dict.get('a')
     # Output is 1
+
+----
+
+Practice Questions
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Tasks
+
+    #. Write code to find the value of 'y' in the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30}?
+    #. Write code to find the value of 'banana' in the dictionary fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}?
+    #. Write code to find the value of 'blue' in the dictionary colors_dict = {'red': 100, 'green': 200, 'blue': 300}?
+    #. Write code to find the value of 'dog' in the dictionary animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}?
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Write code to find the value of 'y' in the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30}?
+
+                .. code-block:: python
+
+                    coordinates_dict = {'x': 10, 'y': 20, 'z': 30}
+                    value = coordinates_dict.get('y')
+                    # Output is 20
+
+            .. tab-item:: Q2
+
+                Write code to find the value of 'banana' in the dictionary fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}?
+
+                .. code-block:: python
+
+                    fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}
+                    value = fruits_dict.get('banana')
+                    # Output is 10
+
+            .. tab-item:: Q3
+
+                Write code to find the value of 'blue' in the dictionary colors_dict = {'red': 100, 'green': 200, 'blue': 300}?
+
+                .. code-block:: python
+
+                    colors_dict = {'red': 100, 'green': 200, 'blue': 300}
+                    value = colors_dict.get('blue')
+                    # Output is 300
+
+            .. tab-item:: Q4
+
+                Write code to find the value of 'dog' in the dictionary animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}?
+
+                .. code-block:: python
+
+                    animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}
+                    value = animals_dict.get('dog')
+                    # Output is 2
 
 ----
 
