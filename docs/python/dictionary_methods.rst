@@ -109,7 +109,6 @@ Practice Questions
 
 ----
 
-~~~~~~~~~~~~~
 items()
 ~~~~~~~~~~~~~
 
