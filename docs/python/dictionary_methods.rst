@@ -35,7 +35,6 @@ Dictionary Operations
 Accessing Items
 ---------------
 
-~~~~~~~~~~~~~
 get()
 ~~~~~~~~~~~~~
 
@@ -52,7 +51,7 @@ get()
 ----
 
 Practice Questions
-~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Tasks
 
@@ -110,6 +109,7 @@ Practice Questions
 
 ----
 
+~~~~~~~~~~~~~
 items()
 ~~~~~~~~~~~~~
 
@@ -122,6 +122,65 @@ items()
     sample_dict = {'a': 1, 'b': 2, 'c': 3}
     items = sample_dict.items()
     # Output is dict_items([('a', 1), ('b', 2), ('c', 3)])
+
+----
+
+Practice Questions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Tasks
+
+    #. Write code to find the value of 'y' in the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30}?
+    #. Write code to find the value of 'banana' in the dictionary fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}?
+    #. Write code to find the value of 'blue' in the dictionary colors_dict = {'red': 100, 'green': 200, 'blue': 300}?
+    #. Write code to find the value of 'dog' in the dictionary animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}?
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Write code to find the value of 'y' in the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30}?
+
+                .. code-block:: python
+
+                    coordinates_dict = {'x': 10, 'y': 20, 'z': 30}
+                    value = coordinates_dict.get('y')
+                    # Output is 20
+
+            .. tab-item:: Q2
+
+                Write code to find the value of 'banana' in the dictionary fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}?
+
+                .. code-block:: python
+
+                    fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}
+                    value = fruits_dict.get('banana')
+                    # Output is 10
+
+            .. tab-item:: Q3
+
+                Write code to find the value of 'blue' in the dictionary colors_dict = {'red': 100, 'green': 200, 'blue': 300}?
+
+                .. code-block:: python
+
+                    colors_dict = {'red': 100, 'green': 200, 'blue': 300}
+                    value = colors_dict.get('blue')
+                    # Output is 300
+
+            .. tab-item:: Q4
+
+                Write code to find the value of 'dog' in the dictionary animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}?
+
+                .. code-block:: python
+
+                    animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}
+                    value = animals_dict.get('dog')
+                    # Output is 2
 
 ----
 
@@ -140,6 +199,65 @@ keys()
 
 ----
 
+Practice Questions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Tasks
+
+    #. Write code to find the value of 'y' in the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30}?
+    #. Write code to find the value of 'banana' in the dictionary fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}?
+    #. Write code to find the value of 'blue' in the dictionary colors_dict = {'red': 100, 'green': 200, 'blue': 300}?
+    #. Write code to find the value of 'dog' in the dictionary animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}?
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Write code to find the value of 'y' in the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30}?
+
+                .. code-block:: python
+
+                    coordinates_dict = {'x': 10, 'y': 20, 'z': 30}
+                    value = coordinates_dict.get('y')
+                    # Output is 20
+
+            .. tab-item:: Q2
+
+                Write code to find the value of 'banana' in the dictionary fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}?
+
+                .. code-block:: python
+
+                    fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}
+                    value = fruits_dict.get('banana')
+                    # Output is 10
+
+            .. tab-item:: Q3
+
+                Write code to find the value of 'blue' in the dictionary colors_dict = {'red': 100, 'green': 200, 'blue': 300}?
+
+                .. code-block:: python
+
+                    colors_dict = {'red': 100, 'green': 200, 'blue': 300}
+                    value = colors_dict.get('blue')
+                    # Output is 300
+
+            .. tab-item:: Q4
+
+                Write code to find the value of 'dog' in the dictionary animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}?
+
+                .. code-block:: python
+
+                    animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}
+                    value = animals_dict.get('dog')
+                    # Output is 2
+
+----
+
 values()
 ~~~~~~~~~~~~~
 
@@ -152,6 +270,65 @@ values()
     sample_dict = {'a': 1, 'b': 2, 'c': 3}
     values = sample_dict.values()
     # Output is dict_values([1, 2, 3])
+
+----
+
+Practice Questions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Tasks
+
+    #. Write code to find the value of 'y' in the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30}?
+    #. Write code to find the value of 'banana' in the dictionary fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}?
+    #. Write code to find the value of 'blue' in the dictionary colors_dict = {'red': 100, 'green': 200, 'blue': 300}?
+    #. Write code to find the value of 'dog' in the dictionary animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}?
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Write code to find the value of 'y' in the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30}?
+
+                .. code-block:: python
+
+                    coordinates_dict = {'x': 10, 'y': 20, 'z': 30}
+                    value = coordinates_dict.get('y')
+                    # Output is 20
+
+            .. tab-item:: Q2
+
+                Write code to find the value of 'banana' in the dictionary fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}?
+
+                .. code-block:: python
+
+                    fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}
+                    value = fruits_dict.get('banana')
+                    # Output is 10
+
+            .. tab-item:: Q3
+
+                Write code to find the value of 'blue' in the dictionary colors_dict = {'red': 100, 'green': 200, 'blue': 300}?
+
+                .. code-block:: python
+
+                    colors_dict = {'red': 100, 'green': 200, 'blue': 300}
+                    value = colors_dict.get('blue')
+                    # Output is 300
+
+            .. tab-item:: Q4
+
+                Write code to find the value of 'dog' in the dictionary animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}?
+
+                .. code-block:: python
+
+                    animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}
+                    value = animals_dict.get('dog')
+                    # Output is 2
 
 ----
 
@@ -173,6 +350,65 @@ update()
 
 ----
 
+Practice Questions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Tasks
+
+    #. Write code to find the value of 'y' in the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30}?
+    #. Write code to find the value of 'banana' in the dictionary fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}?
+    #. Write code to find the value of 'blue' in the dictionary colors_dict = {'red': 100, 'green': 200, 'blue': 300}?
+    #. Write code to find the value of 'dog' in the dictionary animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}?
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Write code to find the value of 'y' in the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30}?
+
+                .. code-block:: python
+
+                    coordinates_dict = {'x': 10, 'y': 20, 'z': 30}
+                    value = coordinates_dict.get('y')
+                    # Output is 20
+
+            .. tab-item:: Q2
+
+                Write code to find the value of 'banana' in the dictionary fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}?
+
+                .. code-block:: python
+
+                    fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}
+                    value = fruits_dict.get('banana')
+                    # Output is 10
+
+            .. tab-item:: Q3
+
+                Write code to find the value of 'blue' in the dictionary colors_dict = {'red': 100, 'green': 200, 'blue': 300}?
+
+                .. code-block:: python
+
+                    colors_dict = {'red': 100, 'green': 200, 'blue': 300}
+                    value = colors_dict.get('blue')
+                    # Output is 300
+
+            .. tab-item:: Q4
+
+                Write code to find the value of 'dog' in the dictionary animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}?
+
+                .. code-block:: python
+
+                    animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}
+                    value = animals_dict.get('dog')
+                    # Output is 2
+
+----
+
 setdefault()
 ~~~~~~~~~~~~~
 
@@ -186,6 +422,65 @@ setdefault()
     value = sample_dict.setdefault('d', 4)
     # Output is 4
     # sample_dict is now {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+
+----
+
+Practice Questions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Tasks
+
+    #. Write code to find the value of 'y' in the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30}?
+    #. Write code to find the value of 'banana' in the dictionary fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}?
+    #. Write code to find the value of 'blue' in the dictionary colors_dict = {'red': 100, 'green': 200, 'blue': 300}?
+    #. Write code to find the value of 'dog' in the dictionary animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}?
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Write code to find the value of 'y' in the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30}?
+
+                .. code-block:: python
+
+                    coordinates_dict = {'x': 10, 'y': 20, 'z': 30}
+                    value = coordinates_dict.get('y')
+                    # Output is 20
+
+            .. tab-item:: Q2
+
+                Write code to find the value of 'banana' in the dictionary fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}?
+
+                .. code-block:: python
+
+                    fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}
+                    value = fruits_dict.get('banana')
+                    # Output is 10
+
+            .. tab-item:: Q3
+
+                Write code to find the value of 'blue' in the dictionary colors_dict = {'red': 100, 'green': 200, 'blue': 300}?
+
+                .. code-block:: python
+
+                    colors_dict = {'red': 100, 'green': 200, 'blue': 300}
+                    value = colors_dict.get('blue')
+                    # Output is 300
+
+            .. tab-item:: Q4
+
+                Write code to find the value of 'dog' in the dictionary animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}?
+
+                .. code-block:: python
+
+                    animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}
+                    value = animals_dict.get('dog')
+                    # Output is 2
 
 ----
 
@@ -205,6 +500,65 @@ pop()
 
 ----
 
+Practice Questions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Tasks
+
+    #. Write code to find the value of 'y' in the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30}?
+    #. Write code to find the value of 'banana' in the dictionary fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}?
+    #. Write code to find the value of 'blue' in the dictionary colors_dict = {'red': 100, 'green': 200, 'blue': 300}?
+    #. Write code to find the value of 'dog' in the dictionary animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}?
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Write code to find the value of 'y' in the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30}?
+
+                .. code-block:: python
+
+                    coordinates_dict = {'x': 10, 'y': 20, 'z': 30}
+                    value = coordinates_dict.get('y')
+                    # Output is 20
+
+            .. tab-item:: Q2
+
+                Write code to find the value of 'banana' in the dictionary fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}?
+
+                .. code-block:: python
+
+                    fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}
+                    value = fruits_dict.get('banana')
+                    # Output is 10
+
+            .. tab-item:: Q3
+
+                Write code to find the value of 'blue' in the dictionary colors_dict = {'red': 100, 'green': 200, 'blue': 300}?
+
+                .. code-block:: python
+
+                    colors_dict = {'red': 100, 'green': 200, 'blue': 300}
+                    value = colors_dict.get('blue')
+                    # Output is 300
+
+            .. tab-item:: Q4
+
+                Write code to find the value of 'dog' in the dictionary animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}?
+
+                .. code-block:: python
+
+                    animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}
+                    value = animals_dict.get('dog')
+                    # Output is 2
+
+----
+
 popitem()
 ~~~~~~~~~~~~~
 
@@ -218,6 +572,65 @@ popitem()
     item = sample_dict.popitem()
     # Output is ('c', 3)
     # sample_dict is now {'a': 1, 'b': 2}
+
+----
+
+Practice Questions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Tasks
+
+    #. Write code to find the value of 'y' in the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30}?
+    #. Write code to find the value of 'banana' in the dictionary fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}?
+    #. Write code to find the value of 'blue' in the dictionary colors_dict = {'red': 100, 'green': 200, 'blue': 300}?
+    #. Write code to find the value of 'dog' in the dictionary animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}?
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Write code to find the value of 'y' in the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30}?
+
+                .. code-block:: python
+
+                    coordinates_dict = {'x': 10, 'y': 20, 'z': 30}
+                    value = coordinates_dict.get('y')
+                    # Output is 20
+
+            .. tab-item:: Q2
+
+                Write code to find the value of 'banana' in the dictionary fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}?
+
+                .. code-block:: python
+
+                    fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}
+                    value = fruits_dict.get('banana')
+                    # Output is 10
+
+            .. tab-item:: Q3
+
+                Write code to find the value of 'blue' in the dictionary colors_dict = {'red': 100, 'green': 200, 'blue': 300}?
+
+                .. code-block:: python
+
+                    colors_dict = {'red': 100, 'green': 200, 'blue': 300}
+                    value = colors_dict.get('blue')
+                    # Output is 300
+
+            .. tab-item:: Q4
+
+                Write code to find the value of 'dog' in the dictionary animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}?
+
+                .. code-block:: python
+
+                    animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}
+                    value = animals_dict.get('dog')
+                    # Output is 2
 
 ----
 
@@ -267,5 +680,64 @@ fromkeys()
     value = 0
     new_dict = dict.fromkeys(keys, value)
     # Output is {'a': 0, 'b': 0, 'c': 0}
+
+----
+
+Practice Questions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Tasks
+
+    #. Write code to find the value of 'y' in the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30}?
+    #. Write code to find the value of 'banana' in the dictionary fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}?
+    #. Write code to find the value of 'blue' in the dictionary colors_dict = {'red': 100, 'green': 200, 'blue': 300}?
+    #. Write code to find the value of 'dog' in the dictionary animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}?
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Write code to find the value of 'y' in the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30}?
+
+                .. code-block:: python
+
+                    coordinates_dict = {'x': 10, 'y': 20, 'z': 30}
+                    value = coordinates_dict.get('y')
+                    # Output is 20
+
+            .. tab-item:: Q2
+
+                Write code to find the value of 'banana' in the dictionary fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}?
+
+                .. code-block:: python
+
+                    fruits_dict = {'apple': 5, 'banana': 10, 'cherry': 15}
+                    value = fruits_dict.get('banana')
+                    # Output is 10
+
+            .. tab-item:: Q3
+
+                Write code to find the value of 'blue' in the dictionary colors_dict = {'red': 100, 'green': 200, 'blue': 300}?
+
+                .. code-block:: python
+
+                    colors_dict = {'red': 100, 'green': 200, 'blue': 300}
+                    value = colors_dict.get('blue')
+                    # Output is 300
+
+            .. tab-item:: Q4
+
+                Write code to find the value of 'dog' in the dictionary animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}?
+
+                .. code-block:: python
+
+                    animals_dict = {'cat': 1, 'dog': 2, 'bird': 3}
+                    value = animals_dict.get('dog')
+                    # Output is 2
 
 
