@@ -142,6 +142,7 @@ Making a dictionary from a list of lists
 
     print(state_capitals)
 
+| The output is ``{'New South Wales': 'Sydney', 'Victoria': 'Melbourne', 'Queensland': 'Brisbane'}``
 
 .. admonition:: Tasks
 
@@ -201,6 +202,8 @@ Making a dictionary from a list of tuples
     ])
     print(capitals)
 
+| The output is ``{'South Australia': 'Adelaide', 'Western Australia': 'Perth', 'Australian Capital Territory': 'Canberra'}``.
+
 .. admonition:: Tasks
 
     #. Create a dictionary using the dict function and a list of tuples such that it maps the names of three car brands, Toyota, BMW, and Ford, to their countries of origin: Japan, Germany, and USA. Print the dictionary.
@@ -245,7 +248,98 @@ Making a dictionary from a list of tuples
 Making a dictionary from 2 lists
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| 2 lists of keys and values can be combined and converted into a dictionary.
+| 2 lists of keys and values can be combined and converted into a dictionary using several methods.
+
+Making a dictionary from 2 lists --update
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| The update method is used to add each state key and city value.
+
+.. code-block:: python
+
+    states = ["Queensland", "South Australia", "Western Australia"]
+    cities = ["Brisbane", "Adelaide", "Perth"]
+
+    capitals = {}
+    for i in range(len(states)):
+        capitals.update({states[i]: cities[i]})
+
+    print(capitals)
+
+| The output is ``{'Queensland': 'Brisbane', 'South Australia': 'Adelaide', 'Western Australia': 'Perth'}``.
+
+
+.. admonition:: Tasks
+
+    #. Create a dictionary using the update method and two lists such that it maps the names of 'Lockett', 'Coventry', and 'Dunstall', to their goals kicked: 1360, 1299, and 1254. Print the dictionary.
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Create a dictionary using the update method and two lists such that it maps the names of 'Lockett', 'Coventry', and 'Dunstall', to their goals kicked: 1360, 1299, and 1254. Print the dictionary.
+
+                .. code-block:: python
+
+                    names = ['Lockett', 'Coventry', 'Dunstall']
+                    goals = [1360, 1299, 1254]
+                    goal_kickers = {}
+                    for i in range(len(names)):
+                        goal_kickers.update({names[i]: goals[i]})
+                    print(my_dict)
+
+
+Making a dictionary from 2 lists --set key value
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| Each state key gets its city value each time through the for loop.
+
+.. code-block:: python
+
+    states = ["Queensland", "South Australia", "Western Australia"]
+    cities = ["Brisbane", "Adelaide", "Perth"]
+
+    capitals = {}
+    for i in range(len(states)):
+        capitals[states[i]] = cities[i]
+    print(capitals)
+
+| The output is ``{'Queensland': 'Brisbane', 'South Australia': 'Adelaide', 'Western Australia': 'Perth'}``.
+
+
+.. admonition:: Tasks
+
+    #. Create a dictionary using the update method and two lists such that it maps the names of 'Lockett', 'Coventry', and 'Dunstall', to their goals kicked: 1360, 1299, and 1254. Print the dictionary.
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Create a dictionary using the update method and two lists such that it maps the names of 'Lockett', 'Coventry', and 'Dunstall', to their goals kicked: 1360, 1299, and 1254. Print the dictionary.
+
+                .. code-block:: python
+
+                    names = ['Lockett', 'Coventry', 'Dunstall']
+                    goals = [1360, 1299, 1254]
+                    goal_kickers = {}
+                    for i in range(len(names)):
+                        goal_kickers[names[i]] = goals[i]
+                    print(goal_kickers)
+
+
+Making a dictionary from 2 lists --dict and zip
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 | The zip() function pairs each element from the states list with the corresponding element from the cities list.
 | The result is an iterator containing these tuples: ``('Queensland', 'Brisbane'), ('South Australia', 'Adelaide'), ('Western Australia', 'Perth')``
 | The dict function then converts the zip object into a dictionary.
@@ -257,6 +351,8 @@ Making a dictionary from 2 lists
 
     capitals = dict(zip(states, cities))
     print(capitals)
+
+| The output is ``{'Queensland': 'Brisbane', 'South Australia': 'Adelaide', 'Western Australia': 'Perth'}``.
 
 .. admonition:: Tasks
 
@@ -298,8 +394,41 @@ Making a dictionary from 2 lists
 Making a dictionary by dictionary comprehension from 2 lists
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+| The dictionary comprehension below creates a dictionary by iterating over length of the states list and using the index, i, to set the state key and city value.
+
+.. code-block:: python
+
+    states = ["Western Australia", "Tasmania", "Northern Territory"]
+    cities = ["Perth", "Hobart", "Darwin"]
+
+    capitals = {states[i]: cities[i] for i in range(len(states))}
+    print(capitals)
+
+
+.. admonition:: Tasks
+
+    #. Create a dictionary using a dictionary comprehension via the indexes of two lists such that it maps the names of 'Lockett', 'Coventry', and 'Dunstall', to their goals kicked: 1360, 1299, and 1254. Print the dictionary.
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Create a dictionary using a dictionary comprehension via the indexes of two lists such that it maps the names of 'Lockett', 'Coventry', and 'Dunstall', to their goals kicked: 1360, 1299, and 1254. Print the dictionary.
+
+                .. code-block:: python
+
+                    names = ['Lockett', 'Coventry', 'Dunstall']
+                    goals = [1360, 1299, 1254]
+                    goal_kickers = {names[i]: goals[i] for i in range(len(names))}
+                    print(goal_kickers)
+
 | The dictionary comprehension below creates a dictionary by iterating over the tuples produced by zip().
-For each tuple, the state becomes the key and city becomes the value.
+| For each tuple, the state becomes the key and city becomes the value.
 
 .. code-block:: python
 
@@ -307,7 +436,7 @@ For each tuple, the state becomes the key and city becomes the value.
     cities = ["Perth", "Hobart", "Darwin"]
 
     capitals = {state: city for state, city in zip(states, cities)}
-
+    print(capitals)
 
 .. admonition:: Tasks
 
@@ -392,22 +521,6 @@ Making a dictionary from key word arguments
 
 ----
 
-.. code-block:: python
-
-    names = ['Lockett', 'Coventry', 'Dunstall']
-    goals = [1360, 1299, 1254]
-    print(dict(zip(names, goals)))
-    # {'Lockett': 1360, 'Coventry': 1299, 'Dunstall': 1254}
-
-.. code-block:: python
-
-    names = ['Lockett', 'Coventry', 'Dunstall']
-    goals = [1360, 1299, 1254]
-    my_dict = {}
-    for name, goal in zip(names, goals):
-        my_dict[name] = goal
-    print(my_dict)
-    # {'Lockett': 1360, 'Coventry': 1299, 'Dunstall': 1254}
 
 ..
     # Access elements
