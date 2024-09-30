@@ -11,7 +11,7 @@ Python Uses
 -----------------
 
 #. **Education**
-   Python's simple syntax and readability make it an excellent language for teaching programming and computer science concepts.
+   Python's simple syntax and readability make it an excellent language for learning programming and computer science concepts.
 
 #. **Automation and Scripting**
    Python is often used to automate repetitive tasks, such as file management, web scraping, and testing.
@@ -29,4 +29,4 @@ Python Uses
    Python is used to build server-side web applications. Frameworks like Django and Flask make it easier to develop robust web applications quickly.
 
 #. **Artificial Intelligence**
-   Python is heavily used in AI research and development. Libraries like TensorFlow and Keras are popular for building neural networks and other AI models.
+   Python is heavily used in AI research and development. TensorFlow and Keras are widely used for building neural networks and AI models, but other powerful libraries include PyTorch, known for its dynamic computation graph, and Hugging Face Transformers, which excels in natural language processing tasks. OpenCV is essential for computer vision applications, while XGBoost is favored for its performance in gradient boosting. Each of these libraries offers unique strengths, making them valuable tools in the AI and machine learning landscape.

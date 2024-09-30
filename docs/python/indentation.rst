@@ -99,7 +99,7 @@ The following sequence of code is supposed to check if a number is positive, neg
         print("Zero")
 
 
----
+----
 
 Practice Questions
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -258,7 +258,7 @@ The following code is supposed to print each character in the string "hello", bu
     for char in "hello":
         print(char)
 
----
+----
 
 Practice Questions
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -358,44 +358,12 @@ Practice Questions
                     for i in range(1, 4):
                         for j in range(1, 4):
                             print(i * j, end=" ")
-                        print()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                        print
 
 ----
 
-Problem 1: Function Definition
-==============================
+Indenting with Functions
+----------------------------
 
 **Question:**
 The following function is supposed to print a greeting message, but it has indentation errors. Fix the indentation.
@@ -406,7 +374,140 @@ The following function is supposed to print a greeting message, but it has inden
     print(f"Hello, {name}!")
 
 **Solution:**
+
 .. code-block:: python
 
     def greet(name):
         print(f"Hello, {name}!")
+
+
+----
+
+Practice Questions
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Tasks
+
+    #. The following function, which adds two numbers, has indentation errors. Fix the indentation.
+
+        ::
+
+            def add_numbers(a, b):
+            result = a + b
+            return result
+
+    #. The following function, which checks whether a number is even or not, has indentation errors. Fix the indentation.
+
+        ::
+
+            def check_even(number):
+            if number % 2 == 0:
+            return True
+            else:
+            return False
+
+    #. The following function, which sums a list of numbers, contains indentation errors. Fix the indentation.
+
+        ::
+
+            def sum_list(numbers):
+            total = 0
+            for num in numbers:
+            total += num
+            return total
+
+    #. The following function, which categorizes an age into one of three categories, has indentation errors. Fix the indentation.
+
+        ::
+
+            def categorize_age(age):
+            if age < 13:
+            category = 'Child'
+            elif age < 20:
+            category = 'Teenager'
+            else:
+            category = 'Adult'
+            return category
+
+    #. The following function, which returns the maximum number in a list, has indentation errors. Fix the indentation.
+
+        ::
+
+            def find_max(numbers):
+            max_num = numbers[0]
+            for num in numbers:
+            if num > max_num:
+            max_num = num
+            return max_num
+
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                The following function, which adds two numbers, has indentation errors. Fix the indentation.
+
+                .. code-block:: python
+
+                    def add_numbers(a, b):
+                        result = a + b
+                        return result
+
+            .. tab-item:: Q2
+
+                The following function, which checks whether a number is even or not, has indentation errors. Fix the indentation.
+
+                .. code-block:: python
+
+                    def check_even(number):
+                        if number % 2 == 0:
+                            return True
+                        else:
+                            return False
+
+            .. tab-item:: Q3
+
+                The following function, which sums a list of numbers, contains indentation errors. Fix the indentation.
+
+                .. code-block:: python
+
+                    def sum_list(numbers):
+                        total = 0
+                        for num in numbers:
+                            total += num
+                        return total
+
+            .. tab-item:: Q4
+
+                The following function, which categorizes an age into one of three categories, has indentation errors. Fix the indentation.
+
+                .. code-block:: python
+
+                    def categorize_age(age):
+                        if age < 13:
+                            category = 'Child'
+                        elif age < 20:
+                            category = 'Teenager'
+                        else:
+                            category = 'Adult'
+                        return category
+
+
+            .. tab-item:: Q5
+
+                The following function, which returns the maximum number in a list, has indentation errors. Fix the indentation.
+
+                .. code-block:: python
+
+                    def find_max(numbers):
+                        max_num = numbers[0]
+                        for num in numbers:
+                            if num > max_num:
+                                max_num = num
+                        return max_num
+
