@@ -117,12 +117,55 @@ Practice Questions
             if n > 0:
             print("Positive")
 
-    #. The following code is supposed to check if a number is positive, but it has indentation errors. Fix the indentation.
+    #. The following code is supposed to check if a number is even or odd, but it has indentation errors. Fix the indentation.
 
         ::
-            n = 5
+
+            n = 4
+            if n % 2 == 0:
+            print("Even")
+            else:
+            print("Odd")
+
+    #. The following code is supposed to check if a number is positive, negative, or zero, but it has indentation errors. Fix the indentation.
+
+        ::
+
+            n = 0
             if n > 0:
             print("Positive")
+            elif n < 0:
+            print("Negative")
+            else:
+            print("Zero")
+
+    #. The following code is supposed to check if a number is positive and even, but it has indentation errors. Fix the indentation.
+
+        ::
+
+            n = 6
+            if n > 0:
+            if n % 2 == 0:
+            print("Positive and even")
+
+    #. The following code is supposed to check if a number is positive, negative, or zero, and if it is even or odd, but it has indentation errors. Fix the indentation.
+
+        ::
+
+            n = -3
+            if n > 0:
+            if n % 2 == 0:
+            print("Positive and even")
+            else:
+            print("Positive and odd")
+            elif n < 0:
+            if n % 2 == 0:
+            print("Negative and even")
+            else:
+            print("Negative and odd")
+            else:
+            print("Zero")
+
 
     .. dropdown::
         :icon: codescan
@@ -143,26 +186,60 @@ Practice Questions
 
             .. tab-item:: Q2
 
-                The following code is supposed to check if a number is positive, but it has indentation errors. Fix the indentation.
+                The following code is supposed to check if a number is even or odd, but it has indentation errors. Fix the indentation.
 
                 .. code-block:: python
 
-                    n = 5
+                    n = 4
+                    if n % 2 == 0:
+                        print("Even")
+                    else:
+                        print("Odd")
+
+            .. tab-item:: Q3
+
+                The following code is supposed to check if a number is positive, negative, or zero, but it has indentation errors. Fix the indentation.
+
+                .. code-block:: python
+
+                    n = 0
                     if n > 0:
                         print("Positive")
+                    elif n < 0:
+                        print("Negative")
+                    else:
+                        print("Zero")
 
+            .. tab-item:: Q4
 
+                The following code is supposed to check if a number is positive and even, but it has indentation errors. Fix the indentation.
 
+                .. code-block:: python
 
+                        n = 6
+                        if n > 0:
+                            if n % 2 == 0:
+                                print("Positive and even")
 
+            .. tab-item:: Q5
 
+                The following code is supposed to check if a number is positive, negative, or zero, and if it is even or odd, but it has indentation errors. Fix the indentation.
 
+                .. code-block:: python
 
-
-
-
-
-
+                    n = -3
+                    if n > 0:
+                        if n % 2 == 0:
+                            print("Positive and even")
+                        else:
+                            print("Positive and odd")
+                    elif n < 0:
+                        if n % 2 == 0:
+                            print("Negative and even")
+                        else:
+                            print("Negative and odd")
+                    else:
+                        print("Zero")
 
 
 
