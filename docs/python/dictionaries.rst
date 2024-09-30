@@ -518,6 +518,7 @@ Making a dictionary from key word arguments
 
     simple_dict = dict(a=1, b=2, c=3, d=4)
     print(simple_dict)
+    # Output is {'a': 1, 'b': 2, 'c': 3, 'd': 4}
 
 ----
 
@@ -544,6 +545,7 @@ Practice Questions
 
                     languages_release_years = dict(Python=1991, Java=1995, JavaScript=1995)
                     print(languages_release_years)
+                    # Output is {'Python': 1991, 'Java': 1995, 'JavaScript': 1995}
 
             .. tab-item:: Q2
 
@@ -553,7 +555,7 @@ Practice Questions
 
                     continents = dict(Africa=30.37, Asia=44.58, Europe=10.18)
                     print(continents)
-
+                    # Output is {'Africa': 30.37, 'Asia': 44.58, 'Europe': 10.18}
 
 
 ----

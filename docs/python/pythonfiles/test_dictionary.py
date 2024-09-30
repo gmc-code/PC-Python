@@ -62,3 +62,15 @@ for i in range(len(states)):
     capitals[states[i]] = cities[i]
 print(capitals)
 # {'Queensland': 'Brisbane', 'South Australia': 'Adelaide', 'Western Australia': 'Perth'}
+
+simple_dict = dict(a=1, b=2, c=3, d=4)
+print(simple_dict)
+# {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+
+continents = dict(Africa=30.37, Asia=44.58, Europe=10.18)
+print(continents)
+# {'Africa': 30.37, 'Asia': 44.58, 'Europe': 10.18}
+
+languages_release_years = dict(Python=1991, Java=1995, JavaScript=1995)
+print(languages_release_years)
+# {'Python': 1991, 'Java': 1995, 'JavaScript': 1995}
