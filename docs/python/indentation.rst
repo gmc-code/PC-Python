@@ -70,9 +70,6 @@ Blocks of code nested within other blocks of code need to be indented to the sam
 
 ----
 
-
-
-
 Indenting with Conditionals
 ----------------------------------
 
@@ -241,6 +238,150 @@ Practice Questions
                     else:
                         print("Zero")
 
+----
+
+Indenting with Loops
+-----------------------
+
+**Question:**
+The following code is supposed to print each character in the string "hello", but it has indentation errors. Fix the indentation.
+
+.. code-block:: python
+
+    for char in "hello":
+    print(char)
+
+**Solution:**
+
+.. code-block:: python
+
+    for char in "hello":
+        print(char)
+
+---
+
+Practice Questions
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Tasks
+
+    #. The following code is supposed to print each character in the string "goodbye", but it has indentation errors. Fix the indentation.
+
+        ::
+
+            for char in "goodbye":
+            print(char)
+
+    #. The following code is supposed to print each item in the list ``[1, 2, 3, 4, 5]``, but it has indentation errors. Fix the indentation.
+
+        ::
+
+            numbers = [1, 2, 3, 4, 5]
+            for num in numbers:
+            print(num)
+
+    #. The following code is supposed to print numbers from 1 to 5 using the range function, but it has indentation errors. Fix the indentation.
+
+        ::
+
+            for i in range(1, 6):
+            print(i)
+
+    #.  The following code is supposed to print even numbers from 1 to 10, but it has indentation errors. Fix the indentation.
+
+        ::
+
+            for i in range(1, 11):
+            if i % 2 == 0:
+            print(i)
+
+    #. The following code is supposed to print a 3x3 grid of numbers, but it has indentation errors. Fix the indentation.
+
+        ::
+
+            for i in range(1, 4):
+            for j in range(1, 4):
+            print(i * j, end=" ")
+            print()
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                The following code is supposed to print each character in the string "goodbye", but it has indentation errors. Fix the indentation.
+
+                .. code-block:: python
+
+                    for char in "goodbye":
+                        print(char)
+
+            .. tab-item:: Q2
+
+                The following code is supposed to print each item in the list ``[1, 2, 3, 4, 5]``, but it has indentation errors. Fix the indentation.
+
+                .. code-block:: python
+
+                    numbers = [1, 2, 3, 4, 5]
+                    for num in numbers:
+                        print(num)
+
+            .. tab-item:: Q3
+
+                The following code is supposed to print numbers from 1 to 5 using the range function, but it has indentation errors. Fix the indentation.
+
+                .. code-block:: python
+
+                    for i in range(1, 6):
+                        print(i)
+
+            .. tab-item:: Q4
+
+                The following code is supposed to print even numbers from 1 to 10, but it has indentation errors. Fix the indentation
+
+                .. code-block:: python
+
+                    for i in range(1, 11):
+                        if i % 2 == 0:
+                            print(i)
+
+            .. tab-item:: Q5
+
+                The following code is supposed to print a 3x3 grid of numbers, but it has indentation errors. Fix the indentation.
+
+                .. code-block:: python
+
+                    for i in range(1, 4):
+                        for j in range(1, 4):
+                            print(i * j, end=" ")
+                        print()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -252,56 +393,6 @@ Practice Questions
 
 
 ----
-
-Problem 3: Loop with Conditional
-================================
-
-**Question:**
-The following function is supposed to print numbers from 1 to 5 and label them as even or odd, but it has indentation errors. Fix the indentation.
-
-.. code-block:: python
-
-    def print_numbers():
-    for i in range(1, 6):
-    if i % 2 == 0:
-    print(f"{i} is even.")
-    else:
-    print(f"{i} is odd.")
-
-**Solution:**
-.. code-block:: python
-
-    def print_numbers():
-        for i in range(1, 6):
-            if i % 2 == 0:
-                print(f"{i} is even.")
-            else:
-                print(f"{i} is odd.")
-
-
-Problem 4: Nested Loops
-=======================
-
-**Question:**
-The following function is supposed to print a 3x3 grid of numbers, but it has indentation errors. Fix the indentation.
-
-.. code-block:: python
-
-    def print_grid():
-    for i in range(1, 4):
-    for j in range(1, 4):
-    print(i * j, end=" ")
-    print()
-
-**Solution:**
-.. code-block:: python
-
-    def print_grid():
-        for i in range(1, 4):
-            for j in range(1, 4):
-                print(i * j, end=" ")
-            print()
-
 
 Problem 1: Function Definition
 ==============================
