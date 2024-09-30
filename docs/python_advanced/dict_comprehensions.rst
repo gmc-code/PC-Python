@@ -10,12 +10,12 @@ Dictionary Comprehensions
 Dictionary comprehension
 ---------------------------
 
-| Dictionary comprehensions provide a concise way to create dictionaries. 
+| Dictionary comprehensions provide a concise way to create dictionaries.
 | They are used to make new dictionaries where each key-value pair is the result of some operations applied to each member of a string, list, tuple, sets, dictionary, and zip of 2 lists.
 | Conditions can be applied that restrict the formation of the dictionary.
 
-| A dictionary comprehension consists of braces containing an expression followed by a for-clause. 
-| The result will be a new dictionary created by evaluating the expression in the context of the for-clauses which follow it. 
+| A dictionary comprehension consists of braces containing an expression followed by a for-clause.
+| The result will be a new dictionary created by evaluating the expression in the context of the for-clauses which follow it.
 
 ----
 
@@ -32,7 +32,7 @@ Dictionary comprehension of the range function, lists and strings
 | The code below uses n with values of 0 to 4 to make a dictionary with values that are the keys doubled.
 
 .. code-block:: python
-    
+
     new_dict = {n: 2 * n for n in range(5)}
     print(new_dict)
     # output is {0: 0, 1: 2, 2: 4, 3: 6, 4: 8}
@@ -67,7 +67,7 @@ Practice Questions
                     numbers = range(2, 10, 2)
                     squared_evens = {num: num ** 2 for num in numbers}
                     print(squared_evens)
-                    # Output: {2: 4, 4: 16, 6: 36, 8: 64}
+                    # Output is {2: 4, 4: 16, 6: 36, 8: 64}
 
             .. tab-item:: Q2
 
@@ -78,7 +78,7 @@ Practice Questions
                     fruits = ['apple', 'banana', 'cherry', 'date']
                     fruit_lengths = {fruit: len(fruit) for fruit in fruits}
                     print(fruit_lengths)
-                    # Output: {'apple': 5, 'banana': 6, 'cherry': 6, 'date': 4}
+                    # Output is {'apple': 5, 'banana': 6, 'cherry': 6, 'date': 4}
 
             .. tab-item:: Q3
 
@@ -89,7 +89,7 @@ Practice Questions
                     days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
                     abbreviated_days = {day: day[:3].upper() for day in days}
                     print(abbreviated_days)
-                    # Output: {'Monday': 'MON', 'Tuesday': 'TUE', 'Wednesday': 'WED', 'Thursday': 'THU', 'Friday': 'FRI', 'Saturday': 'SAT', 'Sunday': 'SUN'}
+                    # Output is {'Monday': 'MON', 'Tuesday': 'TUE', 'Wednesday': 'WED', 'Thursday': 'THU', 'Friday': 'FRI', 'Saturday': 'SAT', 'Sunday': 'SUN'}
 
             .. tab-item:: Q4
 
@@ -100,7 +100,7 @@ Practice Questions
                     days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
                     abbreviated_days = {day[:3].upper(): day for day in days}
                     print(abbreviated_days)
-                    # Output: {'MON': 'Monday', 'TUE': 'Tuesday', 'WED': 'Wednesday', 'THU': 'Thursday', 'FRI': 'Friday', 'SAT': 'Saturday', 'SUN': 'Sunday'}
+                    # Output is {'MON': 'Monday', 'TUE': 'Tuesday', 'WED': 'Wednesday', 'THU': 'Thursday', 'FRI': 'Friday', 'SAT': 'Saturday', 'SUN': 'Sunday'}
 
             .. tab-item:: Q5
 
@@ -111,7 +111,7 @@ Practice Questions
                     months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
                     abbreviated_months = {month: month[:3].upper() for month in months}
                     print(abbreviated_months)
-                    # Output: {'January': 'JAN', 'February': 'FEB', 'March': 'MAR', 'April': 'APR', 'May': 'MAY', 'June': 'JUN', 'July': 'JUL', 'August': 'AUG', 'September': 'SEP', 'October': 'OCT', 'November': 'NOV', 'December': 'DEC'}
+                    # Output is {'January': 'JAN', 'February': 'FEB', 'March': 'MAR', 'April': 'APR', 'May': 'MAY', 'June': 'JUN', 'July': 'JUL', 'August': 'AUG', 'September': 'SEP', 'October': 'OCT', 'November': 'NOV', 'December': 'DEC'}
 
 
             .. tab-item:: Q6
@@ -123,7 +123,7 @@ Practice Questions
                     months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
                     abbreviated_months = {month[:3].upper(): month for month in months}
                     print(abbreviated_months)
-                    # Output: {'JAN': 'January', 'FEB': 'February', 'MAR': 'March', 'APR': 'April', 'MAY': 'May', 'JUN': 'June', 'JUL': 'July', 'AUG': 'August', 'SEP': 'September', 'OCT': 'October', 'NOV': 'November', 'DEC': 'December'}
+                    # Output is {'JAN': 'January', 'FEB': 'February', 'MAR': 'March', 'APR': 'April', 'MAY': 'May', 'JUN': 'June', 'JUL': 'July', 'AUG': 'August', 'SEP': 'September', 'OCT': 'October', 'NOV': 'November', 'DEC': 'December'}
 
 
             .. tab-item:: Q7
@@ -143,7 +143,7 @@ Dictionary comprehension of zipped lists
 -----------------------------------------------
 
 | Zipping 2 lists produces a zip object which is like a list of tuples.
-| The zipped object acts as an iterable for the dictionary comprehension. 
+| The zipped object acts as an iterable for the dictionary comprehension.
 
 | Syntax:
 
@@ -154,7 +154,7 @@ Dictionary comprehension of zipped lists
     :param iterable: iterable objects like zip objects from 2 lists.
 
 .. code-block:: python
-    
+
     names = ['Lockett', 'Coventry', 'Dunstall']
     goals = [1360, 1299, 1254]
     my_dict_comprehension = {name: goal for (name, goal) in zip(names, goals)}
@@ -189,7 +189,7 @@ Practice Questions
                     test_scores = [85, 72, 90, 65]
                     student_test_scores = {student: score for student, score in zip(students, test_scores)}
                     print(student_test_scores)
-                    # Output: {'Alice': 85, 'Bob': 72, 'Charlie': 90, 'David': 65}
+                    # Output is {'Alice': 85, 'Bob': 72, 'Charlie': 90, 'David': 65}
 
             .. tab-item:: Q2
 
@@ -201,7 +201,7 @@ Practice Questions
                     prices = [15, 25, 10, 30]
                     expensive_products = {product: price for product, price in zip(products, prices)}
                     print(expensive_products)
-                    # Output: {'apple': 15, 'banana': 25, 'cherry': 10, 'date': 30}
+                    # Output is {'apple': 15, 'banana': 25, 'cherry': 10, 'date': 30}
 
             .. tab-item:: Q3
 
@@ -213,7 +213,7 @@ Practice Questions
                     types = ['land', 'land', 'water', 'air']
                     land_vehicles = {vehicle: vehicle_type for vehicle, vehicle_type in zip(vehicles, types)}
                     print(land_vehicles)
-                    # Output: {'car': 'land', 'bike': 'land', 'boat': 'water', 'plane': 'air'}
+                    # Output is {'car': 'land', 'bike': 'land', 'boat': 'water', 'plane': 'air'}
 
 ----
 
@@ -223,7 +223,7 @@ Conditions in a dictionary comprehension
 Syntax:
 
 .. py:function:: new_dictionary = {key: value for item in iterable if condition}
-    
+
     :param key: the key variable only or any expression such as one that uses the item variable (e.g. n).
     :param value: the value variable only or any expression such as one that uses the item variable (e.g. 2 * n).
     :param item:  a variable that gets each item in the iterable.
@@ -237,7 +237,7 @@ Syntax:
     numbers = range(1, 11)
     factors_of_40 = {i: 40 // i for i in range(1, 11) if 40 % i == 0}
     print(factors_of_40)
-    # Output: {1: 40, 2: 20, 4: 10, 5: 8, 8: 5, 10: 4}
+    # Output is {1: 40, 2: 20, 4: 10, 5: 8, 8: 5, 10: 4}
 
 ----
 
@@ -269,7 +269,7 @@ Practice Questions
                     numbers = range(1, 10)
                     squared_evens = {num: num ** 2 for num in numbers if num % 2 == 0}
                     print(squared_evens)
-                    # Output: {2: 4, 4: 16, 6: 36, 8: 64}
+                    # Output is {2: 4, 4: 16, 6: 36, 8: 64}
 
             .. tab-item:: Q2
 
@@ -280,7 +280,7 @@ Practice Questions
                     numbers = range(0, 11)
                     binary_representation = {i: bin(i) for i in numbers}
                     print(binary_representation)
-                    # Output: {0: '0b0', 1: '0b1', 2: '0b10', 3: '0b11', 4: '0b100', 5: '0b101', 6: '0b110', 7: '0b111', 8: '0b1000', 9: '0b1001', 10: '0b1010'}
+                    # Output is {0: '0b0', 1: '0b1', 2: '0b10', 3: '0b11', 4: '0b100', 5: '0b101', 6: '0b110', 7: '0b111', 8: '0b1000', 9: '0b1001', 10: '0b1010'}
 
 
             .. tab-item:: Q3
@@ -292,7 +292,7 @@ Practice Questions
                     numbers = range(0, 11)
                     binary_representation = {i: bin(i)[2:] for i in numbers}
                     print(binary_representation)
-                    # Output: {0: '0', 1: '1', 2: '10', 3: '11', 4: '100', 5: '101', 6: '110', 7: '111', 8: '1000', 9: '1001', 10: '1010'}
+                    # Output is {0: '0', 1: '1', 2: '10', 3: '11', 4: '100', 5: '101', 6: '110', 7: '111', 8: '1000', 9: '1001', 10: '1010'}
 
             .. tab-item:: Q4
 
@@ -303,7 +303,7 @@ Practice Questions
                     numbers = range(1, 10)
                     squared_evens = {num: num ** 2 for num in numbers if num % 2 == 0}
                     print(squared_evens)
-                    # Output: {2: 4, 4: 16, 6: 36, 8: 64}
+                    # Output is {2: 4, 4: 16, 6: 36, 8: 64}
 
             .. tab-item:: Q5
 
@@ -314,7 +314,7 @@ Practice Questions
                     numbers = range(1, 10)
                     squares_with_two_digits = {i: i**2 for i in numbers if 10 <= i**2 < 100}
                     print(squares_with_two_digits)
-                    # Output: {4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}
+                    # Output is {4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}
 
             .. tab-item:: Q6
 
@@ -325,7 +325,7 @@ Practice Questions
                     numbers = range(1, 32)
                     squares_with_three_digits = {i: i**2 for i in numbers if 100 <= i**2 < 1000}
                     print(squares_with_three_digits)
-                    # Output: {10: 100, 11: 121, 12: 144, 13: 169, 14: 196, 15: 225, 16: 256, 17: 289, 18: 324, 19: 361, 20: 400, 21: 441, 22: 484, 23: 529, 24: 576, 25: 625, 26: 676, 27: 729, 28: 784, 29: 841, 30: 900, 31: 961}
+                    # Output is {10: 100, 11: 121, 12: 144, 13: 169, 14: 196, 15: 225, 16: 256, 17: 289, 18: 324, 19: 361, 20: 400, 21: 441, 22: 484, 23: 529, 24: 576, 25: 625, 26: 676, 27: 729, 28: 784, 29: 841, 30: 900, 31: 961}
 
 ----
 
@@ -339,7 +339,7 @@ Multiple conditions in a dictionary comprehension
 Syntax:
 
 .. py:function:: new_dictionary = {key: value for item in iterable if condition_1 and condition_2}
-    
+
     :param key: the key variable only or any expression such as one that uses the item variable (e.g. n).
     :param value: the value variable only or any expression such as one that uses the item variable (e.g. 2 * n).
     :param item:  a variable that gets each item in the iterable.
@@ -396,7 +396,7 @@ Practice Questions
                         i: i**2 for i in numbers if 100 <= i**2 < 1000 and all_digits_even(i**2)
                     }
                     print(squares_with_three_digits_all_even)
-                    # Output: {20: 400, 22: 484}
+                    # Output is {20: 400, 22: 484}
 
             .. tab-item:: Q2
 
@@ -417,7 +417,7 @@ Practice Questions
                         n: triangular_number(n) for n in numbers if sum_of_digits(triangular_number(n)) < 10
                     }
                     print(triangular_numbers_with_digit_sum_less_than_10)
-                    # Output: {1: 1, 2: 3, 3: 6, 4: 10, 5: 15, 6: 21, 8: 36, 9: 45, 14: 105, 15: 120, 17: 153, 18: 171, 20: 210, 21: 231, 24: 300, 26: 351, 35: 630, 45: 1035, 53: 1431, 63: 2016, 66: 2211, 77: 3003, 80: 3240, 81: 3321, 89: 4005}
+                    # Output is {1: 1, 2: 3, 3: 6, 4: 10, 5: 15, 6: 21, 8: 36, 9: 45, 14: 105, 15: 120, 17: 153, 18: 171, 20: 210, 21: 231, 24: 300, 26: 351, 35: 630, 45: 1035, 53: 1431, 63: 2016, 66: 2211, 77: 3003, 80: 3240, 81: 3321, 89: 4005}
 
             .. tab-item:: Q3
 
@@ -434,7 +434,7 @@ Practice Questions
                         i: i**2 for i in numbers if is_automorphic(i)
                     }
                     print(automorphic_numbers)
-                    # Output: {1: 1, 5: 25, 6: 36, 25: 625, 76: 5776}
+                    # Output is {1: 1, 5: 25, 6: 36, 25: 625, 76: 5776}
 
 ----
 
@@ -458,7 +458,7 @@ Syntax:
     min_score = 80
     high_scores = {name: score for name, score in zip(names, scores) if score >= min_score}
     print(high_scores)
-    # Output: {'Alex': 85, 'Brooke': 92, 'Dana': 90}
+    # Output is {'Alex': 85, 'Brooke': 92, 'Dana': 90}
 
 ----
 
@@ -489,7 +489,7 @@ Practice Questions
                     min_score = 76
                     passed_students = {student: score for student, score in zip(students, test_scores) if score >= min_score}
                     print(passed_students)
-                    # Output: {'Alice': 85, 'Charlie': 90}
+                    # Output is {'Alice': 85, 'Charlie': 90}
 
             .. tab-item:: Q2
 
@@ -502,7 +502,7 @@ Practice Questions
                     above_cost = 20
                     expensive_products = {product: price for product, price in zip(products, prices) if price > above_cost}
                     print(expensive_products)
-                    # Output: {'banana': 25, 'date': 30}
+                    # Output is {'banana': 25, 'date': 30}
 
             .. tab-item:: Q3
 
@@ -515,7 +515,7 @@ Practice Questions
                     type = 'land'
                     land_vehicles = {vehicle: vehicle_type for vehicle, vehicle_type in zip(vehicles, types) if vehicle_type == type}
                     print(land_vehicles)
-                    # Output: {'car': 'land', 'bike': 'land'}
+                    # Output is {'car': 'land', 'bike': 'land'}
 
 ----
 
@@ -535,12 +535,11 @@ Syntax:
 | The code below creates a new dictionary with temperatures in Celsius instead of Fahrenheit.
 
 .. code-block:: python
-    
+
     cities_in_F = {'Sydney': 86, 'Melbourne': 68, 'Brisbane': 95, 'Perth': 77}
     cities_in_C = {key: round((value-32)*(5/9)) for (key, value) in cities_in_F.items()}
     print(cities_in_C)
-    # {'Sydney': 30, 'Melbourne': 20, 'Brisbane': 35, 'Perth': 25}
-
+    # Ouput is {'Sydney': 30, 'Melbourne': 20, 'Brisbane': 35, 'Perth': 25}
 
 ----
 
@@ -626,7 +625,7 @@ Syntax:
 | The code below creates a new dictionary with categories rather than numerical data.
 
 .. code-block:: python
-    
+
     cities_in_F = {'Sydney': 19, 'Melbourne': 15, 'Brisbane': 35, 'Perth': 25}
     cities_in_C = {key: ("warm" if value > 20 else "cold") for (key, value) in cities_in_F.items()}
     print(cities_in_C)
@@ -659,7 +658,7 @@ Practice Questions
                     animal_weights_kg = {'Koala': 10, 'Kangaroo': 90, 'Lion': 190, 'Zebra': 350, 'Giraffe': 1200, 'Elephant': 5400}
                     weight_category = {key: ("heavy" if value > 1000 else "medium" if value > 100 else "light") for key, value in animal_weights_kg.items()}
                     print(weight_category)
-                    # Output: {'Koala': 'light', 'Kangaroo': 'light', 'Lion': 'medium', 'Zebra': 'medium', 'Giraffe': 'heavy', 'Elephant': 'heavy'}
+                    # Output is {'Koala': 'light', 'Kangaroo': 'light', 'Lion': 'medium', 'Zebra': 'medium', 'Giraffe': 'heavy', 'Elephant': 'heavy'}
 
             .. tab-item:: Q2
 
@@ -671,7 +670,7 @@ Practice Questions
 
                     speed_category = {key: ("super fast" if value > 350 else "fast" if value > 250 else "slow") for (key, value) in car_speeds_kph.items()}
                     print(speed_category)
-                    # Output:  {'Hennessey Venom F5': 'super fast', 'Koenigsegg Agera RS': 'super fast', 'McLaren 720S': 'fast', 'Chevrolet Corvette C8': 'fast', 'Honda Civic': 'slow'}
+                    # Output is {'Hennessey Venom F5': 'super fast', 'Koenigsegg Agera RS': 'super fast', 'McLaren 720S': 'fast', 'Chevrolet Corvette C8': 'fast', 'Honda Civic': 'slow'}
 
 ----
 
@@ -691,7 +690,7 @@ Syntax:
 | The code below creates a new dictionary with categories rather than numerical data.
 
 .. code-block:: python
-    
+
     def categorise_temp(temp_C):
         if temp_C > 30:
             return "hot"
@@ -701,7 +700,7 @@ Syntax:
             return "cold"
         else:
             return "freezing"
-                                        
+
 
     cities_in_F = {'Sydney': 14, 'Melbourne': 6, 'Brisbane': 35, 'Perth': 25}
     cities_in_C = {key: categorise_temp(value) for (key, value) in cities_in_F.items()}
@@ -750,7 +749,7 @@ Practice Questions
 
                     weight_category = {animal: categorize_weight(weight) for animal, weight in animal_weights_kg.items()}
                     print(weight_category)
-                    # Output: {'Koala': 'light', 'Kangaroo': 'light', 'Lion': 'medium', 'Zebra': 'medium', 'Giraffe': 'heavy', 'Elephant': 'heavy'}
+                    # Output is {'Koala': 'light', 'Kangaroo': 'light', 'Lion': 'medium', 'Zebra': 'medium', 'Giraffe': 'heavy', 'Elephant': 'heavy'}
 
             .. tab-item:: Q2
 
@@ -777,7 +776,7 @@ Practice Questions
                     speed_category = {car: categorize_speed(speed) for car, speed in car_speeds_kph.items()}
                     print(speed_category)
 
-                    # Output:  {'Hennessey Venom F5': 'super fast', 'Koenigsegg Agera RS': 'super fast', 'McLaren 720S': 'fast', 'Chevrolet Corvette C8': 'fast', 'Honda Civic': 'slow'}
+                    # Output is {'Hennessey Venom F5': 'super fast', 'Koenigsegg Agera RS': 'super fast', 'McLaren 720S': 'fast', 'Chevrolet Corvette C8': 'fast', 'Honda Civic': 'slow'}
 
 ----
 
@@ -790,9 +789,9 @@ Dictionary comprehension of dictionary of lists
 .. code-block:: python
 
     students_scores = {"math": [85, 90, 88], "science": [92, 85, 87], "history": [78, 80]}
-    average_scores = {subject: round(sum(scores) / len(scores)) for subject, scores in students_scores.items()} 
+    average_scores = {subject: round(sum(scores) / len(scores)) for subject, scores in students_scores.items()}
     print(average_scores)
-    # {'math': 88, 'science': 88, 'history': 79}
+    # Output is {'math': 88, 'science': 88, 'history': 79}
 
 ----
 
@@ -833,7 +832,7 @@ Practice Questions
                     city_temperatures = {"Sydney": [25, 27, 26], "Melbourne": [20, 22, 21], "Brisbane": [28, 30, 29]}
                     average_temperatures = {city: (min(temps), max(temps)) for city, temps in city_temperatures.items()}
                     print(average_temperatures)
-                    # {'Sydney': (25, 27), 'Melbourne': (20, 22), 'Brisbane': (28, 30)} 
+                    # {'Sydney': (25, 27), 'Melbourne': (20, 22), 'Brisbane': (28, 30)}
 
             .. tab-item:: Q3
 
@@ -875,7 +874,7 @@ Dictionary comprehension of dictionary of dictionaries of lists
 
     # Dictionary comprehension to calculate average scores for each student
     average_scores = {
-                    student: {subject: round(sum(scores) / len(scores)) for subject, scores in subjects.items()} 
+                    student: {subject: round(sum(scores) / len(scores)) for subject, scores in subjects.items()}
                     for student, subjects in students_scores.items()
                     }
     print(average_scores)
@@ -886,8 +885,8 @@ Dictionary comprehension of dictionary of dictionaries of lists
 .. code-block:: python
 
     {
-    'Alice': {'math': 88, 'science': 88, 'history': 79}, 
-    'Bob': {'math': 80, 'english': 88}, 
+    'Alice': {'math': 88, 'science': 88, 'history': 79},
+    'Bob': {'math': 80, 'english': 88},
     'Charlie': {'science': 87, 'history': 90, 'art': 96}
     }
 
@@ -899,9 +898,9 @@ Practice Questions
 .. admonition:: Tasks
 
     #. Use a dictionary comprehension starting with a dictionary of the employee_reviews and converts them to average ratings. Print the dictionary.
-        
+
         ::
-            
+
             employee_reviews = {
                 "John": {"communication": [4.5, 4.7, 4.8], "technical": [4.2, 4.3], "leadership": [4.8, 4.9]},
                 "Jane": {"communication": [4.8, 4.9], "technical": [4.6, 4.7, 4.8], "creativity": [4.9, 5.0]},
@@ -911,7 +910,7 @@ Practice Questions
     #. Use a dictionary comprehension starting with a dictionary of the fitness_data and converts them to a dictionary of fitness categories with data for each person. Print the dictionary.
 
         ::
-            
+
             fitness_data = {
                 "Alice": {"steps": [10000, 12000, 11000], "calories_burned": [500, 550, 520], "active_minutes": [60, 70, 65]},
                 "Bob": {"steps": [8000, 8500, 9000], "calories_burned": [400, 420, 450], "active_minutes": [50, 55, 60]},
@@ -947,7 +946,7 @@ Practice Questions
             .. tab-item:: Q2
 
                 Use a dictionary comprehension starting with a dictionary of the fitness_data and converts them to a dictionary of fitness categories with data for each person. Print the dictionary.
-            
+
                 .. code-block:: python
 
                     fitness_data = {
@@ -965,8 +964,8 @@ Practice Questions
                         }
 
                     print(total_data_by_category(fitness_data))
-                    # Output: {'total_steps': {'Alice': 33000, 'Bob': 25500, 'Charlie': 37500}, 
-                    #          'total_calories_burned': {'Alice': 1570, 'Bob': 1270, 'Charlie': 1870}, 
+                    # Output is {'total_steps': {'Alice': 33000, 'Bob': 25500, 'Charlie': 37500},
+                    #          'total_calories_burned': {'Alice': 1570, 'Bob': 1270, 'Charlie': 1870},
                     #          'total_active_minutes': {'Alice': 195, 'Bob': 165, 'Charlie': 233}}
 
 
@@ -975,7 +974,7 @@ Practice Questions
 Dictionary comprehension of a list of dictionaries
 -------------------------------------------------------
 
-| Below is an example of using dictionary comprehension to transform a list of dictionaries. 
+| Below is an example of using dictionary comprehension to transform a list of dictionaries.
 | Create a dictionary where the keys are the students' names and the values are their average scores.
 
 .. code-block:: python
@@ -1021,9 +1020,9 @@ Practice Questions
 .. admonition:: Tasks
 
     #. Use a dictionary comprehension starting with a list of dictionaries of the tree growth and converts them to averages. Print the dictionary.
-        
+
         ::
-            
+
             trees = [
                 {'species': 'Oak', 'growth_rate': [2.5, 2.7, 2.6]},  # in cm per year
                 {'species': 'Pine', 'growth_rate': [3.0, 3.2, 3.1]},
@@ -1031,9 +1030,9 @@ Practice Questions
             ]
 
     #. Use a dictionary comprehension starting with a list of dictionaries of atomic properties and outputs a dictionary of electronegativities. Print the dictionary.
-        
+
         ::
-         
+
             elements = [
                 {'name': 'Hydrogen', 'atomic_number': 1, 'atomic_mass': 1.008, 'electronegativity': 2.20},
                 {'name': 'Oxygen', 'atomic_number': 8, 'atomic_mass': 15.999, 'electronegativity': 3.44},
@@ -1050,7 +1049,7 @@ Practice Questions
             .. tab-item:: Q1
 
                 Use a dictionary comprehension starting with a list of dictionaries of the tree growth and converts them to averages. Print the dictionary.
-        
+
                 .. code-block:: python
 
                     trees = [
@@ -1064,12 +1063,12 @@ Practice Questions
                         return {tree['species']: round(sum(tree['growth_rate']) / len(tree['growth_rate']), 1) for tree in data}
 
                     print(average_growth(trees))
-                    # Output: {'Oak': 2.6, 'Pine': 3.1, 'Maple': 2.9}
+                    # Output is {'Oak': 2.6, 'Pine': 3.1, 'Maple': 2.9}
 
             .. tab-item:: Q2
 
                 Use a dictionary comprehension starting with a list of dictionaries of atomic properties and outputs a dictionary of electronegativities. Print the dictionary.
-                
+
                 .. code-block:: python
 
                     elements = [
@@ -1082,6 +1081,6 @@ Practice Questions
                     element_electronegativities = {element['name']: element['electronegativity'] for element in elements}
 
                     print(element_electronegativities)
-                    # Output: {'Hydrogen': 2.20, 'Oxygen': 3.44, 'Carbon': 2.55}
+                    # Output is {'Hydrogen': 2.20, 'Oxygen': 3.44, 'Carbon': 2.55}
 
 

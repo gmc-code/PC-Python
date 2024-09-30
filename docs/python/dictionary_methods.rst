@@ -46,7 +46,7 @@ get()
 
     sample_dict = {'a': 1, 'b': 2, 'c': 3}
     value = sample_dict.get('a')
-    # Output: 1
+    # Output is 1
 
 ----
 
@@ -61,7 +61,7 @@ items()
 
     sample_dict = {'a': 1, 'b': 2, 'c': 3}
     items = sample_dict.items()
-    # Output: dict_items([('a', 1), ('b', 2), ('c', 3)])
+    # Output is dict_items([('a', 1), ('b', 2), ('c', 3)])
 
 ----
 
@@ -76,7 +76,7 @@ keys()
 
     sample_dict = {'a': 1, 'b': 2, 'c': 3}
     keys = sample_dict.keys()
-    # Output: dict_keys(['a', 'b', 'c'])
+    # Output is dict_keys(['a', 'b', 'c'])
 
 ----
 
@@ -91,7 +91,7 @@ values()
 
     sample_dict = {'a': 1, 'b': 2, 'c': 3}
     values = sample_dict.values()
-    # Output: dict_values([1, 2, 3])
+    # Output is dict_values([1, 2, 3])
 
 ----
 
@@ -109,7 +109,7 @@ update()
 
     sample_dict = {'a': 1, 'b': 2, 'c': 3}
     sample_dict.update({'d': 4, 'e': 5})
-    # Output: {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+    # Output is {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
 
 ----
 
@@ -124,7 +124,7 @@ setdefault()
 
     sample_dict = {'a': 1, 'b': 2, 'c': 3}
     value = sample_dict.setdefault('d', 4)
-    # Output: 4
+    # Output is 4
     # sample_dict is now {'a': 1, 'b': 2, 'c': 3, 'd': 4}
 
 ----
@@ -140,7 +140,7 @@ pop()
 
     sample_dict = {'a': 1, 'b': 2, 'c': 3}
     value = sample_dict.pop('a')
-    # Output: 1
+    # Output is 1
     # sample_dict is now {'b': 2, 'c': 3}
 
 ----
@@ -156,7 +156,7 @@ popitem()
 
     sample_dict = {'a': 1, 'b': 2, 'c': 3}
     item = sample_dict.popitem()
-    # Output: ('c', 3)
+    # Output is ('c', 3)
     # sample_dict is now {'a': 1, 'b': 2}
 
 ----
@@ -175,7 +175,7 @@ copy()
 
     sample_dict = {'a': 1, 'b': 2, 'c': 3}
     new_dict = sample_dict.copy()
-    # Output: {'a': 1, 'b': 2, 'c': 3}
+    # Output is {'a': 1, 'b': 2, 'c': 3}
 
 ----
 
@@ -190,7 +190,7 @@ clear()
 
     sample_dict = {'a': 1, 'b': 2, 'c': 3}
     sample_dict.clear()
-    # Output: {}
+    # Output is {}
 
 ----
 
@@ -206,6 +206,6 @@ fromkeys()
     keys = ('a', 'b', 'c')
     value = 0
     new_dict = dict.fromkeys(keys, value)
-    # Output: {'a': 0, 'b': 0, 'c': 0}
+    # Output is {'a': 0, 'b': 0, 'c': 0}
 
 

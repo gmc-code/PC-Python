@@ -28,7 +28,8 @@ append
 
         my_ba = bytearray([65, 66, 67])
         my_ba.append(68)
-        print(my_ba)  # Output: bytearray(b'ABCD')
+        print(my_ba)
+        # Output is bytearray(b'ABCD')
 
 ----
 
@@ -45,7 +46,8 @@ append
 
         my_ba = bytearray([65, 66, 67])
         my_ba.extend([68, 69])
-        print(my_ba)  # Output: bytearray(b'ABCDE')
+        print(my_ba)
+        # Output is bytearray(b'ABCDE')
 
 ----
 
@@ -62,7 +64,8 @@ append
 
         my_ba = bytearray([65, 66, 67])
         my_ba.insert(1, 68)
-        print(my_ba)  # Output: bytearray(b'ADBC')
+        print(my_ba)
+        # Output is bytearray(b'ADBC')
 
 ----
 
@@ -79,7 +82,8 @@ append
 
         my_ba = bytearray([65, 66, 67, 66])
         my_ba.remove(66)
-        print(my_ba)  # Output: bytearray(b'ACB')
+        print(my_ba)
+        # Output is bytearray(b'ACB')
 
 ----
 
@@ -96,8 +100,10 @@ append
 
         my_ba = bytearray([65, 66, 67])
         byte = my_ba.pop(1)
-        print(byte)  # Output: 66
-        print(my_ba)  # Output: bytearray(b'AC')
+        print(byte)
+        # Output is 66
+        print(my_ba)
+        # Output is bytearray(b'AC')
 
 ----
 
@@ -114,7 +120,8 @@ append
 
         my_ba = bytearray([65, 66, 67])
         my_ba.clear()
-        print(my_ba)  # Output: bytearray(b'')
+        print(my_ba)
+        # Output is bytearray(b'')
 
 ----
 
@@ -131,7 +138,8 @@ append
 
         my_ba = bytearray([65, 66, 67, 66])
         count = my_ba.count(66)
-        print(count)  # Output: 2
+        print(count)
+        # Output is 2
 
 ----
 
@@ -148,7 +156,8 @@ append
 
         my_ba = bytearray(b'Hello, World!')
         index = my_ba.find(b'World')
-        print(index)  # Output: 7
+        print(index)
+        # Output is 7
 
 ----
 
@@ -165,7 +174,8 @@ append
 
         my_ba = bytearray([65, 66, 67])
         my_ba.reverse()
-        print(my_ba)  # Output: bytearray(b'CBA')
+        print(my_ba)
+        # Output is bytearray(b'CBA')
 
 ----
 
@@ -182,5 +192,6 @@ append
 
         my_ba = bytearray(b'Hello, World!')
         string = my_ba.decode('utf-8')
-        print(string)  # Output: Hello, World!
+        print(string)
+        # Output is Hello, World!
 
