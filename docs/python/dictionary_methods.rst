@@ -584,10 +584,10 @@ Practice Questions
 
 .. admonition:: Tasks
 
-    #. Write code to find the value of 'y' in the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30}.
-    #. Write code to find the value of 'banana' in the dictionary fruits_dict = {'apple': 'green', 'banana': 'yellow', 'cherry': 'red'}.
-    #. Write code to find the value of 'blue' in the dictionary colors_dict = {'red': '#FF0000', 'green': '#00FF00', 'blue': '#0000FF'}.
-    #. Write code to find the value of 'dog' in the dictionary animals_dict = {'cat': 'meow', 'dog': 'woof', 'bird': 'tweet'}.
+    #. Remove the value of 'x' (first position) from the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30, 'a': 40} and print its value and print the dictionary.
+    #. Remove the value of 'banana' from the dictionary fruits_dict = {'apple': 'green', 'banana': 'yellow', 'cherry': 'red', 'date': 'brown'} and print its value and print the dictionary.
+    #. Remove the value of 'blue' from the dictionary colors_dict = {'red': '#FF0000', 'green': '#00FF00', 'blue': '#0000FF', 'yellow': '#FFFF00'} and print its value and print the dictionary.
+    #. Remove the value of 'hamster' from the dictionary animals_dict = {'cat': 'meow', 'dog': 'woof', 'bird': 'tweet', 'hamster': 'squeak'} and print its value and print the dictionary.
 
     .. dropdown::
         :icon: codescan
@@ -598,43 +598,56 @@ Practice Questions
 
             .. tab-item:: Q1
 
-                Write code to find the value of 'y' in the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30}.
+                Remove the value of 'x' (first position) from the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30, 'a': 40} and print its value and print the dictionary.
 
                 .. code-block:: python
 
-                    coordinates_dict = {'x': 10, 'y': 20, 'z': 30}
-                    value = coordinates_dict.get('y')
-                    # Output is 20
+                    coordinates_dict = {'x': 10, 'y': 20, 'z': 30, 'a': 40}
+                    value = coordinates_dict.pop('x')
+                    print(value)
+                    # Output is 10
+                    print(coordinates_dict)
+                    # coordinates_dict is now {'y': 20, 'z': 30, 'a': 40}
 
             .. tab-item:: Q2
 
-                Write code to find the value of 'banana' in the dictionary fruits_dict = {'apple': 'green', 'banana': 'yellow', 'cherry': 'red'}.
+                Remove the value of 'banana' from the dictionary fruits_dict = {'apple': 'green', 'banana': 'yellow', 'cherry': 'red', 'date': 'brown'} and print its value and print the dictionary.
 
                 .. code-block:: python
 
-                    fruits_dict = {'apple': 'green', 'banana': 'yellow', 'cherry': 'red'}
-                    value = fruits_dict.get('banana')
-                    # Output is 10
+                    fruits_dict = {'apple': 'green', 'banana': 'yellow', 'cherry': 'red', 'date': 'brown'}
+                    value = fruits_dict.pop('banana')
+                    print(value)
+                    # Output is 'yellow'
+                    print(fruits_dict)
+                    # fruits_dict is now {'apple': 'green', 'cherry': 'red', 'date': 'brown'}
 
             .. tab-item:: Q3
 
-                Write code to find the value of 'blue' in the dictionary colors_dict = {'red': '#FF0000', 'green': '#00FF00', 'blue': '#0000FF'}.
+                Remove the value of 'blue' from the dictionary colors_dict = {'red': '#FF0000', 'green': '#00FF00', 'blue': '#0000FF', 'yellow': '#FFFF00'} and print its value and print the dictionary.
 
                 .. code-block:: python
 
-                    colors_dict = {'red': '#FF0000', 'green': '#00FF00', 'blue': '#0000FF'}
-                    value = colors_dict.get('blue')
-                    # Output is 300
+                    colors_dict = {'red': '#FF0000', 'green': '#00FF00', 'blue': '#0000FF', 'yellow': '#FFFF00'}
+                    value = colors_dict.pop('blue')
+                    print(value)
+                    # Output is '#0000FF'
+                    print(colors_dict)
+                    # colors_dict is now {'red': '#FF0000', 'green': '#00FF00', 'yellow': '#FFFF00'}
 
             .. tab-item:: Q4
 
-                Write code to find the value of 'dog' in the dictionary animals_dict = {'cat': 'meow', 'dog': 'woof', 'bird': 'tweet'}.
+                Remove the value of 'hamster' from the dictionary animals_dict = {'cat': 'meow', 'dog': 'woof', 'bird': 'tweet', 'hamster': 'squeak'} and print its value and print the dictionary.
 
                 .. code-block:: python
 
-                    animals_dict = {'cat': 'meow', 'dog': 'woof', 'bird': 'tweet'}
-                    value = animals_dict.get('dog')
-                    # Output is 2
+                    animals_dict = {'cat': 'meow', 'dog': 'woof', 'bird': 'tweet', 'hamster': 'squeak'}
+                    value = animals_dict.pop('hamster')
+                    print(value)
+                    # Output is 'squeak'
+                    print(animals_dict)
+                    # animals_dict is now {'cat': 'meow', 'dog': 'woof', 'bird': 'tweet'}
+
 
 ----
 
@@ -649,7 +662,9 @@ popitem()
 
     sample_dict = {'a': 1, 'b': 2, 'c': 3}
     item = sample_dict.popitem()
+    print(item)
     # Output is ('c', 3)
+    print(animals_dict)
     # sample_dict is now {'a': 1, 'b': 2}
 
 ----
@@ -659,10 +674,10 @@ Practice Questions
 
 .. admonition:: Tasks
 
-    #. Write code to find the value of 'y' in the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30}.
-    #. Write code to find the value of 'banana' in the dictionary fruits_dict = {'apple': 'green', 'banana': 'yellow', 'cherry': 'red'}.
-    #. Write code to find the value of 'blue' in the dictionary colors_dict = {'red': '#FF0000', 'green': '#00FF00', 'blue': '#0000FF'}.
-    #. Write code to find the value of 'dog' in the dictionary animals_dict = {'cat': 'meow', 'dog': 'woof', 'bird': 'tweet'}.
+    #. Remove the last item from the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30} and print it and print the dictionary.
+    #. Remove the last item from the dictionary fruits_dict = {'apple': 'green', 'banana': 'yellow', 'cherry': 'red'} and print it and print the dictionary.
+    #. Remove the last item from the dictionary colors_dict = {'red': '#FF0000', 'green': '#00FF00', 'blue': '#0000FF'} and print it and print the dictionary.
+    #. Remove the last item from the dictionary animals_dict = {'cat': 'meow', 'dog': 'woof', 'bird': 'tweet'} and print it and print the dictionary.
 
     .. dropdown::
         :icon: codescan
@@ -673,43 +688,55 @@ Practice Questions
 
             .. tab-item:: Q1
 
-                Write code to find the value of 'y' in the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30}.
+                Remove the last item from the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30} and print it and print the dictionary.
 
                 .. code-block:: python
 
                     coordinates_dict = {'x': 10, 'y': 20, 'z': 30}
-                    value = coordinates_dict.get('y')
-                    # Output is 20
+                    item = coordinates_dict.popitem()
+                    print(item)
+                    # Output is ('z', 30)
+                    print(coordinates_dict)
+                    # coordinates_dict is now {'x': 10, 'y': 20}
 
             .. tab-item:: Q2
 
-                Write code to find the value of 'banana' in the dictionary fruits_dict = {'apple': 'green', 'banana': 'yellow', 'cherry': 'red'}.
+                Remove the last item from the dictionary fruits_dict = {'apple': 'green', 'banana': 'yellow', 'cherry': 'red'} and print it and print the dictionary.
 
                 .. code-block:: python
 
                     fruits_dict = {'apple': 'green', 'banana': 'yellow', 'cherry': 'red'}
-                    value = fruits_dict.get('banana')
-                    # Output is 10
+                    item = fruits_dict.popitem()
+                    print(item)
+                    # Output is ('cherry', 'red')
+                    print(fruits_dict)
+                    # fruits_dict is now {'apple': 'green', 'banana': 'yellow'}
 
             .. tab-item:: Q3
 
-                Write code to find the value of 'blue' in the dictionary colors_dict = {'red': '#FF0000', 'green': '#00FF00', 'blue': '#0000FF'}.
+                Remove the last item from the dictionary colors_dict = {'red': '#FF0000', 'green': '#00FF00', 'blue': '#0000FF'} and print it and print the dictionary.
 
                 .. code-block:: python
 
                     colors_dict = {'red': '#FF0000', 'green': '#00FF00', 'blue': '#0000FF'}
-                    value = colors_dict.get('blue')
-                    # Output is 300
+                    item = colors_dict.popitem()
+                    print(item)
+                    # Output is ('blue', '#0000FF')
+                    print(colors_dict)
+                    # colors_dict is now {'red': '#FF0000', 'green': '#00FF00'}
 
             .. tab-item:: Q4
 
-                Write code to find the value of 'dog' in the dictionary animals_dict = {'cat': 'meow', 'dog': 'woof', 'bird': 'tweet'}.
+                Remove the last item from the dictionary animals_dict = {'cat': 'meow', 'dog': 'woof', 'bird': 'tweet'} and print it and print the dictionary.
 
                 .. code-block:: python
 
                     animals_dict = {'cat': 'meow', 'dog': 'woof', 'bird': 'tweet'}
-                    value = animals_dict.get('dog')
-                    # Output is 2
+                    item = animals_dict.popitem()
+                    print(item)
+                    # Output is ('bird', 'tweet')
+                    print(animals_dict)
+                    # animals_dict is now {'cat': 'meow', 'dog': 'woof'}
 
 ----
 
@@ -719,15 +746,80 @@ Dictionary Operations
 copy()
 ~~~~~~~~~~~~~
 
+| The copy method is fine to use when the values in the dictionary are immutable. i.e. strings, integers, floats, tuples.
+
 .. py:method:: dict.copy()
 
-    Returns a shallow copy of the dictionary.
+    | Returns a shallow copy of the dictionary.
+    | Mutable objects (lists, dictionaries) will change in the original dictionary if altered in the new dictionary.
 
 .. code-block:: python
 
-    sample_dict = {'a': 1, 'b': 2, 'c': 3}
-    new_dict = sample_dict.copy()
-    # Output is {'a': 1, 'b': 2, 'c': 3}
+    # Original dictionary with various types of values
+    original_dict = {
+        'a': 'string',          # String
+        'b': 42,                # Integer
+        'c': (1, 2, 3),         # Tuple
+        'd': [4, 5, 6],         # List
+        'e': {'key': 'value'}   # Dictionary
+    }
+
+    # Create a shallow copy
+    shallow_copy = original_dict.copy()
+
+    # the mutable objects will not change in the original
+    shallow_copy['a'] = 'new_string'
+    shallow_copy['b'] = 100
+    shallow_copy['c'] = (7, 8, 9)
+    # the mutable objects will change in the original
+    shallow_copy['d'].append(7)
+    shallow_copy['e']['key'] = 'new_value'
+
+    print("Original Dictionary:", original_dict)
+    # Output: {'a': 'string', 'b': 42, 'c': (1, 2, 3), 'd': [4, 5, 6, 7], 'e': {'key': 'new_value'}}
+    print("Shallow Copy:", shallow_copy)
+    # Output: {'a': 'new_string', 'b': 100, 'c': (7, 8, 9), 'd': [4, 5, 6, 7], 'e': {'key': 'new_value'}}
+
+
+copy.deepcopy()
+~~~~~~~~~~~~~
+
+| Deepcopy is part of the copy module.
+| The deepcopy function is best to use when the values in the dictionary are mutable, i.e. lists, dictionaries, and an independent copy is wanted.
+
+.. py:method:: copy.deepcopy(dict)
+
+    | Returns a deep copy of the dictionary.
+    | All objects are independent of those in the original dictionary
+    | Changing any key: value will not result in changes in the original dictionary.
+
+.. code-block:: python
+
+    import copy
+
+    # Original dictionary with various types of values
+    original_dict = {
+        'a': 'string',          # String
+        'b': 42,                # Integer
+        'c': (1, 2, 3),         # Tuple
+        'd': [4, 5, 6],         # List
+        'e': {'key': 'value'}   # Dictionary
+    }
+
+    # Create a deep copy
+    deep_copy = copy.deepcopy(original_dict)
+
+    # Modify the values in the deep copy
+    deep_copy['a'] = 'new_string'
+    deep_copy['b'] = 100
+    deep_copy['c'] = (7, 8, 9)
+    deep_copy['d'].append(7)
+    deep_copy['e']['key'] = 'new_value'
+
+    print("Original Dictionary:", original_dict)
+    # Output: {'a': 'string', 'b': 42, 'c': (1, 2, 3), 'd': [4, 5, 6], 'e': {'key': 'value'}}
+    print("Deep Copy:", deep_copy)
+    # Output: {'a': 'new_string', 'b': 100, 'c': (7, 8, 9), 'd': [4, 5, 6, 7], 'e': {'key': 'new_value'}}
 
 ----
 
@@ -742,6 +834,7 @@ clear()
 
     sample_dict = {'a': 1, 'b': 2, 'c': 3}
     sample_dict.clear()
+    print(sample_dict)
     # Output is {}
 
 ----
@@ -758,6 +851,7 @@ fromkeys()
     keys = ('a', 'b', 'c')
     value = 0
     new_dict = dict.fromkeys(keys, value)
+    print(new_dict)
     # Output is {'a': 0, 'b': 0, 'c': 0}
 
 ----
@@ -767,10 +861,10 @@ Practice Questions
 
 .. admonition:: Tasks
 
-    #. Write code to find the value of 'y' in the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30}.
-    #. Write code to find the value of 'banana' in the dictionary fruits_dict = {'apple': 'green', 'banana': 'yellow', 'cherry': 'red'}.
-    #. Write code to find the value of 'blue' in the dictionary colors_dict = {'red': '#FF0000', 'green': '#00FF00', 'blue': '#0000FF'}.
-    #. Write code to find the value of 'dog' in the dictionary animals_dict = {'cat': 'meow', 'dog': 'woof', 'bird': 'tweet'}.
+    #. Create a dictionary named coordinates_dict with the keys 'x', 'y', and 'z', each having the default value 0. Use the dict.fromkeys() method to achieve this and print the resulting dictionary.
+    #. Create a dictionary named fruits_dict with the keys 'apple', 'banana', and 'cherry', each having the default value 'unknown'. Use the dict.fromkeys() method to achieve this and print the resulting dictionary.
+    #. Create a dictionary named colors_dict with the keys 'red', 'green', and 'blue', each having the default value '#FFFFFF'. Use the dict.fromkeys() method to achieve this and print the resulting dictionary.
+    #. Create a dictionary named animals_dict with the keys 'cat', 'dog', and 'bird', each having the default value 'sound'. Use the dict.fromkeys() method to achieve this and print the resulting dictionary.
 
     .. dropdown::
         :icon: codescan
@@ -781,42 +875,52 @@ Practice Questions
 
             .. tab-item:: Q1
 
-                Write code to find the value of 'y' in the dictionary coordinates_dict = {'x': 10, 'y': 20, 'z': 30}.
+                Create a dictionary named coordinates_dict with the keys 'x', 'y', and 'z', each having the default value 0. Use the dict.fromkeys() method to achieve this and print the resulting dictionary.
 
                 .. code-block:: python
 
-                    coordinates_dict = {'x': 10, 'y': 20, 'z': 30}
-                    value = coordinates_dict.get('y')
-                    # Output is 20
+                    keys = ('x', 'y', 'z')
+                    value = 0
+                    coordinates_dict = dict.fromkeys(keys, value)
+                    print(coordinates_dict)
+                    # Output is {'x': 0, 'y': 0, 'z': 0}
 
             .. tab-item:: Q2
 
-                Write code to find the value of 'banana' in the dictionary fruits_dict = {'apple': 'green', 'banana': 'yellow', 'cherry': 'red'}.
+                Create a dictionary named fruits_dict with the keys 'apple', 'banana', and 'cherry', each having the default value 'unknown'. Use the dict.fromkeys() method to achieve this and print the resulting dictionary.
 
                 .. code-block:: python
 
-                    fruits_dict = {'apple': 'green', 'banana': 'yellow', 'cherry': 'red'}
-                    value = fruits_dict.get('banana')
-                    # Output is 10
+                    keys = ('apple', 'banana', 'cherry')
+                    value = 'white'
+                    fruits_dict = dict.fromkeys(keys, value)
+                    print(fruits_dict)
+                    # Output is {'apple': 'white', 'banana': 'white', 'cherry': 'white'}
 
             .. tab-item:: Q3
 
-                Write code to find the value of 'blue' in the dictionary colors_dict = {'red': '#FF0000', 'green': '#00FF00', 'blue': '#0000FF'}.
+                Create a dictionary named colors_dict with the keys 'red', 'green', and 'blue', each having the default value '#FFFFFF'. Use the dict.fromkeys() method to achieve this and print the resulting dictionary.
 
                 .. code-block:: python
 
-                    colors_dict = {'red': '#FF0000', 'green': '#00FF00', 'blue': '#0000FF'}
-                    value = colors_dict.get('blue')
-                    # Output is 300
+                    keys = ('red', 'green', 'blue')
+                    value = '#FFFFFF'
+                    colors_dict = dict.fromkeys(keys, value)
+                    print(colors_dict)
+                    # Output is {'red': '#FFFFFF', 'green': '#FFFFFF', 'blue': '#FFFFFF'}
 
             .. tab-item:: Q4
 
-                Write code to find the value of 'dog' in the dictionary animals_dict = {'cat': 'meow', 'dog': 'woof', 'bird': 'tweet'}.
+                Create a dictionary named animals_dict with the keys 'cat', 'dog', and 'bird', each having the default value 'sound'. Use the dict.fromkeys() method to achieve this and print the resulting dictionary.
 
                 .. code-block:: python
 
-                    animals_dict = {'cat': 'meow', 'dog': 'woof', 'bird': 'tweet'}
-                    value = animals_dict.get('dog')
-                    # Output is 2
+                    keys = ('cat', 'dog', 'bird')
+                    value = 'sound'
+                    animals_dict = dict.fromkeys(keys, value)
+                    print(animals_dict)
+                    # Output is {'cat': 'sound', 'dog': 'sound', 'bird': 'sound'}
+
+
 
 
