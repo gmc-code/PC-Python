@@ -32,6 +32,11 @@ Dictionary structure
                     }
     print(eastern_state_capitals)
 
+----
+
+Getting a value from a dictionary
+-----------------------------------
+
 | Values in a dictionary are retrieved by using the key as an index.
 
 .. py:method:: value_1 = dict_var[key1]
@@ -49,6 +54,26 @@ Dictionary structure
                     }
     capital = eastern_state_capitals['Victoria']
     print(capital)
+    # Output is 'Melbourne'
+
+----
+
+Case sensitive keys
+-----------------------------------
+
+| Keys in a dictionary are are case sensitive.
+| The keys 'Vic'and 'VIC' are different keys.
+
+.. code-block:: python
+
+    eastern_state_capitals = {
+                    'Vic': 'Melbourne',
+                    'VIC': 'MELB',
+                    }
+    print(eastern_state_capitals['Vic'])
+    # Output is 'Melbourne'
+    print(eastern_state_capitals['VIC'])
+    # Output is 'MELB'
 
 ----
 

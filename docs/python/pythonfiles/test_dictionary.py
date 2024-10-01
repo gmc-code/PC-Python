@@ -6,6 +6,14 @@ eastern_state_capitals = {
 capital = eastern_state_capitals['Victoria']
 print(capital)
 
+eastern_state_capitals = {
+                'Vic': 'Melbourne',
+                'VIC': 'MELB',
+                }
+print(eastern_state_capitals['Vic'])
+print(eastern_state_capitals['VIC'])
+
+# ===============================================
 sample_dict = {'a': 1, 'b': 2, 'c': 3}
 value = sample_dict.get('a')
 print(value)
