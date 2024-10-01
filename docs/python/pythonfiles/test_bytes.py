@@ -13,10 +13,7 @@ Sure! Here's a summary of some commonly used byte methods in Python:
 
 These methods are useful for various operations when working with binary data in Python¹².
 
-If you have any specific questions about these methods or need examples, feel free to ask!
 
-Source: Conversation with Copilot, 01/10/2024
-(1) Python Bytes: Everything you need to know!. https://embeddedinventor.com/python-bytes-everything-you-need-to-know/.
 (2) Python bytes() method - GeeksforGeeks. https://www.geeksforgeeks.org/python-bytes-method/.
 (3) Python Byte Arrays: A Comprehensive Guide - OpenGenus IQ. https://iq.opengenus.org/python-byte-arrays/.
 (4) Python bytes (). https://www.programiz.com/python-programming/methods/built-in/bytes.
