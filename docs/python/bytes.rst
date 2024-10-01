@@ -1,5 +1,5 @@
 ==========================
-bytes
+Bytes
 ==========================
 
 | `bytes` objects in Python are immutable, so they don't have methods that modify the object in place like `bytearray` does.

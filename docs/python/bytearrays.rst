@@ -1,5 +1,5 @@
 ==========================
-bytearrays
+Bytearrays
 ==========================
 
 | `bytearray` objects in Python come with a variety of methods that allow you to manipulate and interact with the byte data. Here are some of the most commonly used methods:
