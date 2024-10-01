@@ -28,14 +28,17 @@ hr {
 /* ========================================== */
 /* Custom heading colors */
 h1 {
-    font-size: 200%;
-    color: red;
+    font-size: 250%;
+    color: #8a2be2;
 }
 
+h2 {
+    font-size: 200%;
+}
 
 h3 {
-    font-size: 120%;
-    color: rgb(63, 63, 245);
+    font-size: 150%;
+    color: rgb(62 22 137);
 }
 
 
