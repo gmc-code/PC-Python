@@ -26,6 +26,20 @@ hr {
 }
 
 /* ========================================== */
+/* Custom heading colors */
+h1 {
+    font-size: 200%;
+    color: red;
+}
+
+
+h3 {
+    font-size: 120%;
+    color: rgb(63, 63, 245);
+}
+
+
+/* ========================================== */
 /* Custom admonition */
 
 div.admonition-answer,
