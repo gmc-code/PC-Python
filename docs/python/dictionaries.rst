@@ -43,7 +43,8 @@ Getting a value from a dictionary
 
     Returns a value in a dictionary with the specified key, key1.
 
-| The capital of Victoria can be found by indexing the dictionary: ``eastern_state_capitals['Victoria']``.
+| In the dictionary below, the capital of Victoria can be found by indexing the dictionary: ``eastern_state_capitals['Victoria']``.
+| THe key is 'Victoria'. The value is 'Melbourne'.
 
 .. code-block:: python
 
@@ -61,7 +62,7 @@ Getting a value from a dictionary
 Case sensitive keys
 -----------------------------------
 
-| Keys in a dictionary are are case sensitive.
+| Keys in a dictionary are case sensitive.
 | The keys 'Vic'and 'VIC' are different keys.
 
 .. code-block:: python
@@ -79,6 +80,8 @@ Case sensitive keys
 
 Empty dictionary
 -------------------
+
+| An empty dictionary is needed as a starting point when a dictionary is built as the program runs.
 
 | An empty dictionary can be made using **curly brackets**:
 

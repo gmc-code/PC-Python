@@ -31,7 +31,7 @@ Create a python Virtual environment
 .. code-block::
 
     python -m venv venv_rtd
-    
+
 | If there are different versions of python installed, use the full path to the version required to create the virtual environment.
 | <username> used in the paths below will be different for each user.
 | e.g. ``C:\Users\username\AppData\Local\Programs\Python\Python311\python.exe``
@@ -51,7 +51,7 @@ Activate a python Virtual environment
 | Activate the virtual environment:
 
 .. code-block::
-    
+
     "C:\Users\username\venv_rtd\Scripts\activate.bat"
 
 ----
@@ -62,7 +62,7 @@ Using the python Virtual environment in VSCode
 | VSCode allows the use of different python environments.
 | To use the python python Virtual environment in VSCode:
 
-    #. Choose **View: Command Palette**. 
+    #. Choose **View: Command Palette**.
     #. Into the drop down search field, type: **Python : Select Interpreter**
     #. Choose the one listed that refers to the newly created **venv_rtd**.
 
@@ -103,7 +103,7 @@ Updating packages
 * To update installed packages, such as pillow, to the latest version, run pip install with the --upgrade or -U option.
 
 .. code-block::
-    
+
     pip install --upgrade pillow
 
 ----
