@@ -2,6 +2,12 @@
 Dictionaries
 ===============================
 
+| Suggested refs:
+| https://www.programiz.com/python-programming/dictionary
+| https://realpython.com/python-dicts/
+
+----
+
 Dictionary structure
 ----------------------------
 
@@ -9,18 +15,11 @@ Dictionary structure
 | Each item  is a ``key: value`` pair.
 | Dictionary items are **ordered**, **changeable**, and do not allow duplicates.
 | All keys must be **immutable** (not able to be changed) such as integers, strings and tuples of integers or strings.
-| Values can be any  data types such as string, int, boolean, tuple, list, dictionary.
-| Values in a dictionary are retrieved by using the key as an index. e.g print(dictionary_1[key_1])
+| Values can be any data types such as string, int, float, boolean, tuple, list, dictionary.
 
-.. code-block:: python
+.. py:method:: dict_var = {key1 : value1, key2 : value2, …..}
 
-    dictionary_1 = {
-        <key_1>: <value_1>,
-        <key_2>: <value_2>,
-        .
-        .
-        <key_n>: <value_n>
-    }
+    Returns a dictionary with the specified key: value pairs.
 
 | An example of a dictionary of states and capitals is below.
 
@@ -32,6 +31,12 @@ Dictionary structure
                     'Queensland': 'Brisbane'
                     }
     print(eastern_state_capitals)
+
+| Values in a dictionary are retrieved by using the key as an index.
+
+.. py:method:: value_1 = dict_var[key1]
+
+    Returns a value in a dictionary with the specified key, key1.
 
 | The capital of Victoria can be found by indexing the dictionary: ``eastern_state_capitals['Victoria']``.
 
