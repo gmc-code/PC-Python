@@ -776,9 +776,9 @@ copy()
     shallow_copy['e']['key'] = 'new_value'
 
     print("Original Dictionary:", original_dict)
-    # Output: {'a': 'string', 'b': 42, 'c': (1, 2, 3), 'd': [4, 5, 6, 7], 'e': {'key': 'new_value'}}
+    # Output is Original Dictionary: {'a': 'string', 'b': 42, 'c': (1, 2, 3), 'd': [4, 5, 6, 7], 'e': {'key': 'new_value'}}
     print("Shallow Copy:", shallow_copy)
-    # Output: {'a': 'new_string', 'b': 100, 'c': (7, 8, 9), 'd': [4, 5, 6, 7], 'e': {'key': 'new_value'}}
+    # Output is Shallow Copy:  {'a': 'new_string', 'b': 100, 'c': (7, 8, 9), 'd': [4, 5, 6, 7], 'e': {'key': 'new_value'}}
 
 
 copy.deepcopy()
@@ -817,9 +817,9 @@ copy.deepcopy()
     deep_copy['e']['key'] = 'new_value'
 
     print("Original Dictionary:", original_dict)
-    # Output: {'a': 'string', 'b': 42, 'c': (1, 2, 3), 'd': [4, 5, 6], 'e': {'key': 'value'}}
+    # Output is Original Dictionary: {'a': 'string', 'b': 42, 'c': (1, 2, 3), 'd': [4, 5, 6], 'e': {'key': 'value'}}
     print("Deep Copy:", deep_copy)
-    # Output: {'a': 'new_string', 'b': 100, 'c': (7, 8, 9), 'd': [4, 5, 6, 7], 'e': {'key': 'new_value'}}
+    # Output is Deep Copy: {'a': 'new_string', 'b': 100, 'c': (7, 8, 9), 'd': [4, 5, 6, 7], 'e': {'key': 'new_value'}}
 
 ----
 
