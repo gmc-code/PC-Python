@@ -29,7 +29,7 @@ hr {
 /* Custom heading colors */
 h1 {
     font-size: 250%;
-    color: #8a2be2;
+    text-decoration: underline;
 }
 
 h2 {
@@ -38,7 +38,6 @@ h2 {
 
 h3 {
     font-size: 150%;
-    color: rgb(62 22 137);
 }
 
 
