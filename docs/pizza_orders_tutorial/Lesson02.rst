@@ -6,22 +6,14 @@ Lesson 2: Adding Labels and Entry Widgets
 -----------------------------------------
 - **Objective**: Add labels and entry widgets for customer name input.
 - **Content**:
--
+
   - Adding labels.
   - Adding entry widgets.
   - Positioning widgets using grid layout.
 
-Lesson 2: Adding Labels and Entry Widgets
-=========================================
 
-Objective
----------
-Add labels and entry widgets for customer name input.
-
-Content
--------
-
-1. Adding Labels
+Adding Labels
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
 
@@ -30,7 +22,8 @@ Content
 - ``tk.Label(root, text="Customer Name:")``: Creates a label widget with the text "Customer Name:".
 - ``.grid(row=0, column=0, padx=10, pady=5)``: Positions the label in the grid layout at row 0, column 0, with padding of 10 pixels horizontally and 5 pixels vertically.
 
-1. Adding Entry Widgets
+Adding Entry Widgets
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
 
@@ -40,13 +33,15 @@ Content
 - ``customer_entry = tk.Entry(root)``: Creates an entry widget for text input.
 - ``.grid(row=0, column=1, padx=10, pady=5)``: Positions the entry widget in the grid layout at row 0, column 1, with padding.
 
-1. Positioning Widgets Using Grid Layout
+Positioning Widgets Using Grid Layout
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
    - The ``grid`` method is used to position widgets in a table-like structure.
    - ``row`` and ``column`` specify the position of the widget.
    - ``padx`` and ``pady`` add padding around the widget.
 
-2. Additional Examples
+Additional Examples
+~~~~~~~~~~~~~~~~~~~~~~~~
 
    - Adding multiple labels and entry widgets:
 

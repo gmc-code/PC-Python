@@ -11,21 +11,14 @@ Lesson 1: Introduction to Tkinter
   - Creating a basic window.
   - Adding a title and configuring the window size.
 
-Lesson 1: Introduction to Tkinter
-=================================
+Introduction to Tkinter
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Objective
----------
-Set up the basic Tkinter window.
-
-Content
--------
-
-1. Introduction to Tkinter
    - Tkinter is a standard GUI (Graphical User Interface) library for Python.
    - It provides tools to create desktop applications with windows, buttons, text fields, and more.
 
-2. Creating a Basic Window
+Creating a Basic Window
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
 
@@ -45,7 +38,9 @@ Content
 - ``root.geometry("400x300")``: Sets the size of the window to 400 pixels wide and 300 pixels tall.
 - ``root.mainloop()``: Starts the Tkinter event loop, which waits for user interactions.
 
-1. Additional Examples
+Additional Examples
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
    - Setting a minimum and maximum window size:
 
 .. code-block:: python
