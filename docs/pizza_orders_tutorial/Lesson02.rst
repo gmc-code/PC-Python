@@ -15,6 +15,7 @@ Adding Labels
 
 .. code-block:: python
 
+    # Customer name
     tk.Label(root, text="Customer Name:").grid(row=0, column=0, padx=10, pady=5)
 
 - ``tk.Label(root, text="Customer Name:")``: Creates a label widget with the text "Customer Name:".

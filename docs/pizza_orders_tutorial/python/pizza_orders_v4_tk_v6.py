@@ -12,21 +12,16 @@ prices = {
 
 orders = []
 
-def update_cost_display(*args):
-    pizza = pizza_var.get()
-    size = size_var.get()
-    if pizza and size:
-        cost = prices[pizza][size]
-        cost_display_var.set(f"Cost per pizza: ${cost}")
-        update_total_cost()
-
-def update_total_cost(*args):
+def update_costs(*args):
     pizza = pizza_var.get()
     size = size_var.get()
     quantity = int(quantity_var.get())
     if pizza and size:
-        total_cost = prices[pizza][size] * quantity
+        cost = prices[pizza][size]
+        total_cost = cost * quantity
+        cost_display_var.set(f"Cost per pizza: ${cost}")
         total_cost_var.set(f"Total cost: ${total_cost}")
+
 
 def add_order():
     customer = customer_entry.get()
@@ -134,7 +129,7 @@ customer_entry.grid(row=0, column=1, padx=10, pady=5)
 tk.Label(root, text="Pizza Type:", font=label_font, bg="#f0f0f0").grid(row=1, column=0, padx=10, pady=5, sticky="e")
 pizza_var = tk.StringVar(root)
 pizza_var.set("Margherita")
-pizza_var.trace("w", update_cost_display)
+pizza_var.trace_add("write", update_costs)
 pizza_frame = tk.Frame(root, bg="#f0f0f0")
 pizza_frame.grid(row=1, column=1, padx=10, pady=5, sticky="w")
 for pizza in prices.keys():
@@ -144,7 +139,7 @@ for pizza in prices.keys():
 tk.Label(root, text="Pizza Size:", font=label_font, bg="#f0f0f0").grid(row=2, column=0, padx=10, pady=5, sticky="e")
 size_var = tk.StringVar(root)
 size_var.set("Small")
-size_var.trace("w", update_cost_display)
+size_var.trace_add("write", update_costs)
 size_frame = tk.Frame(root, bg="#f0f0f0")
 size_frame.grid(row=2, column=1, padx=10, pady=5, sticky="w")
 for size in ["Small", "Medium", "Large"]:
@@ -154,9 +149,11 @@ for size in ["Small", "Medium", "Large"]:
 tk.Label(root, text="Quantity:", font=label_font, bg="#f0f0f0").grid(row=3, column=0, padx=10, pady=5, sticky="e")
 quantity_var = tk.StringVar(root)
 quantity_var.set("1")
-quantity_menu = tk.OptionMenu(root, quantity_var, *[str(i) for i in range(1, 31)])
+quantity_var.trace_add("write", update_costs)
+quantity_menu = tk.OptionMenu(root, quantity_var, "1", "2", "3", "4", "5")
+# quantity_menu = tk.OptionMenu(root, quantity_var, *[str(i) for i in range(1, 10)])
 quantity_menu.grid(row=3, column=1, padx=10, pady=5, sticky="w")
-quantity_var.trace("w", update_total_cost)
+
 
 # Cost display
 cost_display_var = tk.StringVar(root)

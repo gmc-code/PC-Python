@@ -25,7 +25,7 @@ Creating a Basic Window
     # Create the main window
     root = tk.Tk()
     root.title("Pizza Order System")
-    root.geometry("400x300")
+    root.geometry("500x500")
 
     # Run the application
     root.mainloop()
@@ -33,7 +33,7 @@ Creating a Basic Window
 - ``import tkinter as tk``: Imports the Tkinter library and assigns it the alias ``tk``.
 - ``root = tk.Tk()``: Creates the main application window.
 - ``root.title("Pizza Order System")``: Sets the title of the window.
-- ``root.geometry("400x300")``: Sets the size of the window to 400 pixels wide and 300 pixels tall.
+- ``root.geometry("500x500")``: Sets the size of the window to 400 pixels wide and 300 pixels tall.
 - ``root.mainloop()``: Starts the Tkinter event loop, which waits for user interactions.
 
 Additional Examples

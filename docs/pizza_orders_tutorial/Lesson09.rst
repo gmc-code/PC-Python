@@ -1,74 +1,51 @@
-================================================
-Pizza orders Lesson 9: Deleting Orders
-================================================
+==================================================
+Pizza orders Lesson 9: Final Touches and Styling
+==================================================
 
-Lesson 9: Deleting Orders
--------------------------
-- **Objective**: Add functionality to delete orders.
+- **Objective**: Add final touches and improve the GUI styling.
 - **Content**:
-  - Creating a delete order section.
-  - Writing the `delete_order` function.
-  - Updating the customer menu dynamically.
 
+  - Adding styles to widgets.
+  - Improving the layout and appearance.
+  - Final review and testing.
 
-Lesson 9: Deleting Orders
-=========================
-
-Objective
----------
-Add functionality to delete orders.
-
-Content
--------
-
-1. Creating a Delete Order Section
+Adding Styles to Widgets
+--------------------------------
 
 .. code-block:: python
 
-   tk.Label(root, text="Delete Order for Customer:", font=label_font, bg="#f0f0f0").grid(row=8, column=0, padx=10, pady=5, sticky="e")
-   delete_customer_var = tk.StringVar(root)
-   delete_customer_menu = tk.OptionMenu(root, delete_customer_var, "")
-   delete_customer_menu.grid(row=8, column=1, padx=10, pady=5, sticky="w")
-   delete_button = tk.Button(root, text="Delete Order", command=delete_order, bg=delete_button_bg, fg=button_fg)
-   delete_button.grid(row=9, column=0, columnspan=2, padx=10, pady=10)
+    label_font = ("Helvetica", 12)
+    entry_font = ("Helvetica", 14)
+    entry_bg = "#ffffff"
+    button_bg = "#4CAF50"
+    button_fg = "#ffffff"
+    highlight_bg = "#ffcccc"
+    delete_button_bg = "#ff6666"
 
-   - ``tk.Label(root, text="Delete Order for Customer:", font=label_font, bg="#f0f0f0")``: Creates a label for the delete order section.
-   - ``delete_customer_var = tk.StringVar(root)``: Creates a StringVar to hold the selected customer for deletion.
-   - ``delete_customer_menu = tk.OptionMenu(root, delete_customer_var, "")``: Creates an OptionMenu for selecting the customer to delete.
-   - ``delete_button = tk.Button(root, text="Delete Order", command=delete_order, bg=delete_button_bg, fg=button_fg)``: Creates a button to delete the selected order.
+- ``label_font = ("Helvetica", 12)``: Sets the font for labels.
+- ``entry_font = ("Helvetica", 14)``: Sets the font for entry widgets.
+- ``entry_bg = "#ffffff"``: Sets the background color for entry widgets.
+- ``button_bg = "#4CAF50"``: Sets the background color for buttons.
+- ``button_fg = "#ffffff"``: Sets the foreground color for buttons.
+- ``highlight_bg = "#ffcccc"``: Sets the background color for highlighting errors.
+- ``delete_button_bg = "#ff6666"``: Sets the background color for the delete button.
 
-2. Writing the ``delete_order`` Function
+Improving the Layout and Appearance
+-----------------------------------------------------
 
-.. code-block:: python
-
-   def delete_order():
-       customer = delete_customer_var.get()
-       if not customer:
-           messagebox.showerror("Input Error", "Please select a customer to delete.")
-           return
-
-       global orders
-       orders = [order for order in orders if order != customer]
-       update_order_list()
-       update_customer_menu()
-
-   - ``delete_order``: Function to delete an order from the list.
-   - ``customer = delete_customer_var.get()``: Retrieves the selected customer from the OptionMenu.
-   - ``orders = [order for order in orders if order != customer]``: Removes the selected customer's orders from the list.
-   - ``update_order_list()``: Updates the order list display.
-   - ``update_customer_menu()``: Updates the customer menu for deleting orders.
-
-3. Updating the Customer Menu Dynamically
+- Adjust the padding, alignment, and size of widgets to create a more polished look.
 
 .. code-block:: python
 
-   def update_customer_menu():
-       customers = list(set(order for order in orders))
-       delete_customer_menu['menu'].delete(0, 'end')
-       for customer in customers:
-           delete_customer_menu['menu'].add_command(label=customer, command=tk._setit(delete_customer_var, customer))
+    tk.Label(root, text="Customer Name:", font=label_font, bg="#f0f0f0").grid(row=0, column=0, padx=10, pady=5, sticky="e")
+    customer_entry = tk.Entry(root, bg=entry_bg, font=entry_font, width=30)
+    customer_entry.grid(row=0, column=1, padx=10, pady=5)
 
-   - ``update_customer_menu``: Function to update the customer menu.
-   - ``customers = list(set(order for order in orders))``: Creates a list of unique customers from the orders.
-   - ``delete_customer_menu['menu'].delete(0, 'end')``: Clears the current menu options.
-   - ``delete_customer_menu['menu'].add_command(label=customer, command=tk._setit(delete_customer_var, customer))``: Adds each customer to the menu.
+- ``sticky="e"``: Aligns the label to the right (east).
+- ``width=30``: Sets the width of the entry widget.
+
+Final Review and Testing
+-----------------------------------------
+
+- Test the application to ensure all features work as expected.
+- Make any necessary adjustments to improve functionality and user experience.

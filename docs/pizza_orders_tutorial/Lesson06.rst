@@ -1,57 +1,60 @@
 ================================================
-Pizza orders Lesson 6: Displaying Costs
+Pizza orders Lesson 6: Adding Orders
 ================================================
 
-Lesson 6: Displaying Costs
---------------------------
-- **Objective**: Display the cost per pizza and total cost.
+- **Objective**: Add functionality to add orders.
 - **Content**:
-  - Using StringVar to display costs.
-  - Updating costs dynamically based on selections.
+-
+  - Creating an add order button.
+  - Writing the `add_order` function.
+  - Validating input and updating the order list.
 
-Lesson 6: Displaying Costs
-==========================
-
-Objective
----------
-Display the cost per pizza and total cost.
-
-Content
--------
-
-1. Using StringVar to Display Costs
+Creating an Add Order Button
+------------------------------------
 
 .. code-block:: python
 
-   cost_display_var = tk.StringVar(root)
-   cost_display_var.set("Cost per pizza: $0")
-   tk.Label(root, textvariable=cost_display_var).grid(row=4, column=0, columnspan=2, padx=10, pady=5)
+    # Add order button
+    add_button = tk.Button(root, text="Add Order", command=add_order, bg=button_bg, fg=button_fg)
+    add_button.grid(row=6, column=0, columnspan=2, padx=10, pady=10)
 
-   total_cost_var = tk.StringVar(root)
-   total_cost_var.set("Total cost: $0")
-   tk.Label(root, textvariable=total_cost_var).grid(row=5, column=0, columnspan=2, padx=10, pady=5)
+- ``tk.Button(root, text="Add Order", command=add_order, bg=button_bg, fg=button_fg)``: Creates a button with the text "Add Order" and assigns the ``add_order`` function to be called when the button is clicked.
+- ``.grid(row=6, column=0, columnspan=2, padx=10, pady=10)``: Positions the button in the grid layout.
 
-   - ``cost_display_var = tk.StringVar(root)``: Creates a StringVar to hold the cost per pizza.
-   - ``cost_display_var.set("Cost per pizza: $0")``: Sets the initial value of the cost display.
-   - ``tk.Label(root, textvariable=cost_display_var)``: Creates a label that displays the cost per pizza.
-   - ``total_cost_var = tk.StringVar(root)``: Creates a StringVar to hold the total cost.
-   - ``total_cost_var.set("Total cost: $0")``: Sets the initial value of the total cost display.
-   - ``tk.Label(root, textvariable=total_cost_var)``: Creates a label that displays the total cost.
-
-2. Updating Costs Dynamically Based on Selections
-   - Use the ``trace`` method of ``StringVar`` to update the costs whenever the pizza type, size, or quantity changes.
+Writing the ``add_order`` Function
+---------------------------------------
 
 .. code-block:: python
 
-   pizza_var.trace("w", update_cost_display)
-   size_var.trace("w", update_cost_display)
-   quantity_var.trace("w", update_total_cost)
+    def add_order():
+        customer = customer_entry.get()
+        pizza = pizza_var.get()
+        size = size_var.get()
+        quantity = int(quantity_var.get())
 
-3. Additional Examples
-   - Displaying the cost of drinks:
+        if not customer:
+            messagebox.showerror("Input Error", "Please enter the customer name.")
+            customer_entry.config(bg="red")
+            return
+        else:
+            customer_entry.config(bg="white")
 
-.. code-block:: python
+        orders.append((customer, pizza, size, quantity))
+        update_order_list()
+        update_customer_menu()
+        customer_entry.delete(0, tk.END)
+        quantity_var.set("1")
+        total_cost_var.set("Total cost: $0")
 
-   drink_cost_var = tk.StringVar(root)
-   drink_cost_var.set("Cost per drink: $0")
-   tk.Label(root, textvariable=drink_cost_var).grid(row=6, column=0, columnspan=2, padx=10, pady=5)
+- ``add_order``: Function to add an order to the list.
+- ``customer = customer_entry.get()``: Retrieves the customer name from the entry widget.
+- ``pizza = pizza_var.get()``: Retrieves the selected pizza type.
+- ``size = size_var.get()``: Retrieves the selected pizza size.
+- ``quantity = int(quantity_var.get())``: Retrieves the selected quantity and converts it to an integer.
+- ``messagebox.showerror("Input Error", "Please enter the customer name.")``: Displays an error message if the customer name is not entered.
+- ``orders.append((customer, pizza, size, quantity))``: Adds the order to the list of orders.
+- ``update_order_list()``: Updates the order list display.
+- ``update_customer_menu()``: Updates the customer menu for deleting orders.
+- ``customer_entry.delete(0, tk.END)``: Clears the customer name entry widget.
+- ``quantity_var.set("1")``: Resets the quantity to 1.
+-
