@@ -12,8 +12,8 @@ Pizza orders Lesson 1: Introduction to Tkinter
 Introduction to Tkinter
 --------------------------------
 
-   - Tkinter is a standard GUI (Graphical User Interface) library for Python.
-   - It provides tools to create desktop applications with windows, buttons, text fields, and more.
+- Tkinter is a standard GUI (Graphical User Interface) library for Python.
+- It provides tools to create desktop applications with windows, buttons, text fields, and more.
 
 Creating a Basic Window
 --------------------------------
@@ -39,9 +39,9 @@ Creating a Basic Window
 Additional Examples
 --------------------------------
 
-   - Setting a minimum and maximum window size:
+- Setting a minimum and maximum window size:
 
 .. code-block:: python
 
-   root.minsize(300, 200)
-   root.maxsize(600, 400)
+    root.minsize(300, 200)
+    root.maxsize(600, 400)
