@@ -6,6 +6,7 @@ Lesson 2: Adding Labels and Entry Widgets
 -----------------------------------------
 - **Objective**: Add labels and entry widgets for customer name input.
 - **Content**:
+-
   - Adding labels.
   - Adding entry widgets.
   - Positioning widgets using grid layout.

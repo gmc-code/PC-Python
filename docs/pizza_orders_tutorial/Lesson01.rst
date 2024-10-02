@@ -6,6 +6,7 @@ Lesson 1: Introduction to Tkinter
 ---------------------------------
 - **Objective**: Set up the basic Tkinter window.
 - **Content**:
+
   - Introduction to Tkinter.
   - Creating a basic window.
   - Adding a title and configuring the window size.
