@@ -10,20 +10,14 @@ Lesson 3: Adding Radio Buttons for Pizza Types
   - Creating and positioning radio buttons.
   - Using StringVar to manage radio button values.
 
-Lesson 3: Adding Radio Buttons for Pizza Types
-==============================================
-
-Objective
----------
-Add radio buttons for selecting pizza types.
-
-Content
--------
 
 1. Introduction to Radio Buttons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
    - Radio buttons allow users to select one option from a set of mutually exclusive options.
 
 2. Creating and Positioning Radio Buttons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
 
@@ -42,10 +36,14 @@ Content
    - ``tk.Radiobutton(pizza_frame, text=pizza, variable=pizza_var, value=pizza)``: Creates a radio button with the specified text and value, and associates it with the StringVar.
 
 3. Using StringVar to Manage Radio Button Values
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
    - ``StringVar`` is a Tkinter variable class that holds a string value.
    - It is used to manage the value of a group of radio buttons.
 
 4. Additional Examples
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
    - Creating radio buttons for drink options:
 
 .. code-block:: python

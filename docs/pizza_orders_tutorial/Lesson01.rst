@@ -2,8 +2,6 @@
 Pizza orders Lesson 1: Introduction to Tkinter
 ================================================
 
-Lesson 1: Introduction to Tkinter
----------------------------------
 - **Objective**: Set up the basic Tkinter window.
 - **Content**:
 
@@ -12,13 +10,13 @@ Lesson 1: Introduction to Tkinter
   - Adding a title and configuring the window size.
 
 Introduction to Tkinter
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
    - Tkinter is a standard GUI (Graphical User Interface) library for Python.
    - It provides tools to create desktop applications with windows, buttons, text fields, and more.
 
 Creating a Basic Window
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
 .. code-block:: python
 
@@ -39,7 +37,7 @@ Creating a Basic Window
 - ``root.mainloop()``: Starts the Tkinter event loop, which waits for user interactions.
 
 Additional Examples
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
    - Setting a minimum and maximum window size:
 
