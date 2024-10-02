@@ -68,10 +68,6 @@ get()
     print(value)
     # Output is Error message KeyError: 'd'
 
-----
-
-Practice Questions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Tasks
 
@@ -148,10 +144,6 @@ items()
     print(items)
     # Output is dict_items([('a', 1), ('b', 2), ('c', 3)])
 
-----
-
-Practice Questions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Tasks
 
@@ -229,10 +221,6 @@ keys()
     print(keys)
     # Output is dict_keys(['a', 'b', 'c'])
 
-----
-
-Practice Questions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Tasks
 
@@ -308,10 +296,6 @@ values()
     print(values)
     # Output is dict_values([1, 2, 3])
 
-----
-
-Practice Questions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Tasks
 
@@ -403,10 +387,6 @@ update()
     print(sample_dict)
     # Output is {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
 
-----
-
-Practice Questions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Tasks
 
@@ -488,10 +468,6 @@ setdefault()
     print(sample_dict)
     # sample_dict is now {'a': 1, 'b': 2, 'c': 3, 'd': 4}
 
-----
-
-Practice Questions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Tasks
 
@@ -577,10 +553,6 @@ pop()
     print(sample_dict)
     # sample_dict is now {'b': 2, 'c': 3}
 
-----
-
-Practice Questions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Tasks
 
@@ -667,10 +639,6 @@ popitem()
     print(animals_dict)
     # sample_dict is now {'a': 1, 'b': 2}
 
-----
-
-Practice Questions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Tasks
 
@@ -854,10 +822,6 @@ fromkeys()
     print(new_dict)
     # Output is {'a': 0, 'b': 0, 'c': 0}
 
-----
-
-Practice Questions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Tasks
 

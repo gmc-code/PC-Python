@@ -22,6 +22,8 @@ Dictionary comprehension
 Dictionary comprehension of the range function, lists and strings
 ----------------------------------------------------------------------
 
+| Syntax:
+
 .. py:function:: new_dictionary = {key: value for item in iterable}
 
     :param key: the key variable only, (e.g. n), or any expression such as one that uses the item variable.

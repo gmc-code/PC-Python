@@ -116,11 +116,6 @@ Making a dictionary: curly brackets
                     }
     print(state_capitals)
 
-----
-
-Practice Questions
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. admonition:: Tasks
 
     #. Create a dictionary using curly brackets such that it maps the names of three countries, Japan, France and England, to their capitals: Tokyo, Paris and London. Print the dictionary.
@@ -180,11 +175,6 @@ Making a dictionary from a list of lists
     print(state_capitals)
     # Output is {'New South Wales': 'Sydney', 'Victoria': 'Melbourne', 'Queensland': 'Brisbane'}
 
-----
-
-Practice Questions
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. admonition:: Tasks
 
     #. Create a dictionary using the dict function and a list of lists such that it maps the names of three programming languages, Python, Java, and C++, to their creators: Guido van Rossum, James Gosling, and Bjarne Stroustrup. Print the dictionary.
@@ -243,11 +233,6 @@ Making a dictionary from a list of tuples
     ])
     print(capitals)
     # Output is {'South Australia': 'Adelaide', 'Western Australia': 'Perth', 'Australian Capital Territory': 'Canberra'}
-
-----
-
-Practice Questions
-~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Tasks
 
@@ -313,11 +298,6 @@ Making a dictionary from 2 lists --update
     # Output is {'Queensland': 'Brisbane', 'South Australia': 'Adelaide', 'Western Australia': 'Perth'}
 
 
-----
-
-Practice Questions
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. admonition:: Tasks
 
     #. Create a dictionary using the update method and two lists such that it maps the names of 'Lockett', 'Coventry', and 'Dunstall', to their goals kicked: 1360, 1299, and 1254. Print the dictionary.
@@ -360,11 +340,6 @@ Making a dictionary from 2 lists --set key value
     # Output is {'Queensland': 'Brisbane', 'South Australia': 'Adelaide', 'Western Australia': 'Perth'}
 
 
-----
-
-Practice Questions
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. admonition:: Tasks
 
     #. Create a dictionary using the update method and two lists such that it maps the names of 'Lockett', 'Coventry', and 'Dunstall', to their goals kicked: 1360, 1299, and 1254. Print the dictionary.
@@ -405,11 +380,6 @@ Making a dictionary from 2 lists --dict and zip
     capitals = dict(zip(states, cities))
     print(capitals)
     # Output is {'Queensland': 'Brisbane', 'South Australia': 'Adelaide', 'Western Australia': 'Perth'}
-
-----
-
-Practice Questions
-~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Tasks
 
@@ -462,11 +432,6 @@ Making a dictionary by dictionary comprehension from 2 lists
     print(capitals)
 
 
-----
-
-Practice Questions
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. admonition:: Tasks
 
     #. Create a dictionary using a dictionary comprehension via the indexes of two lists such that it maps the names of 'Lockett', 'Coventry', and 'Dunstall', to their goals kicked: 1360, 1299, and 1254. Print the dictionary.
@@ -499,11 +464,6 @@ Practice Questions
 
     capitals = {state: city for state, city in zip(states, cities)}
     print(capitals)
-
-----
-
-Practice Questions
-~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Tasks
 
@@ -552,11 +512,6 @@ Making a dictionary from key word arguments
     simple_dict = dict(a=1, b=2, c=3, d=4)
     print(simple_dict)
     # Output is {'a': 1, 'b': 2, 'c': 3, 'd': 4}
-
-----
-
-Practice Questions
-~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Tasks
 
