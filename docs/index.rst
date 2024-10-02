@@ -110,6 +110,23 @@ PC-Python
 
 .. toctree::
     :maxdepth: 2
+    :caption: Pizza_Orders_Tutorial
+    :numbered:
+
+    pizza_orders_tutorial/Lesson01.rst
+    pizza_orders_tutorial/Lesson02.rst
+    pizza_orders_tutorial/Lesson03.rst
+    pizza_orders_tutorial/Lesson04.rst
+    pizza_orders_tutorial/Lesson05.rst
+    pizza_orders_tutorial/Lesson06.rst
+    pizza_orders_tutorial/Lesson07rst
+    pizza_orders_tutorial/Lesson08.rst
+    pizza_orders_tutorial/Lesson09.rst
+    pizza_orders_tutorial/Lesson10.rst
+
+
+.. toctree::
+    :maxdepth: 2
     :caption: Classes
     :numbered:
 

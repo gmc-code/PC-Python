@@ -1,0 +1,60 @@
+=============================================================
+Pizza orders Lesson 3: Adding Radio Buttons for Pizza Types
+=============================================================
+
+Lesson 3: Adding Radio Buttons for Pizza Types
+----------------------------------------------
+- **Objective**: Add radio buttons for selecting pizza types.
+- **Content**:
+  - Introduction to radio buttons.
+  - Creating and positioning radio buttons.
+  - Using StringVar to manage radio button values.
+
+Lesson 3: Adding Radio Buttons for Pizza Types
+==============================================
+
+Objective
+---------
+Add radio buttons for selecting pizza types.
+
+Content
+-------
+
+1. Introduction to Radio Buttons
+   - Radio buttons allow users to select one option from a set of mutually exclusive options.
+
+2. Creating and Positioning Radio Buttons
+
+.. code-block:: python
+
+   pizza_var = tk.StringVar(root)
+   pizza_var.set("Margherita")
+   pizza_frame = tk.Frame(root)
+   pizza_frame.grid(row=1, column=1, padx=10, pady=5, sticky="w")
+
+   for pizza in ["Margherita", "Pepperoni", "Hawaiian", "Veggie", "BBQ Chicken"]:
+       tk.Radiobutton(pizza_frame, text=pizza, variable=pizza_var, value=pizza).pack(anchor="w")
+
+   - ``pizza_var = tk.StringVar(root)``: Creates a StringVar to hold the value of the selected radio button.
+   - ``pizza_var.set("Margherita")``: Sets the default value of the radio button group.
+   - ``pizza_frame = tk.Frame(root)``: Creates a frame to contain the radio buttons.
+   - ``.grid(row=1, column=1, padx=10, pady=5, sticky="w")``: Positions the frame in the grid layout.
+   - ``tk.Radiobutton(pizza_frame, text=pizza, variable=pizza_var, value=pizza)``: Creates a radio button with the specified text and value, and associates it with the StringVar.
+
+3. Using StringVar to Manage Radio Button Values
+   - ``StringVar`` is a Tkinter variable class that holds a string value.
+   - It is used to manage the value of a group of radio buttons.
+
+4. Additional Examples
+   - Creating radio buttons for drink options:
+
+.. code-block:: python
+
+   drink_var = tk.StringVar(root)
+   drink_var.set("Coke")
+   drink_frame = tk.Frame(root)
+   drink_frame.grid(row=2, column=1, padx=10, pady=5, sticky="w")
+
+   for drink in ["Coke", "Pepsi", "Water"]:
+       tk.Radiobutton(drink_frame, text=drink, variable=drink_var, value=drink).pack(anchor="w")
+
