@@ -28,11 +28,11 @@ Creating and Positioning Radio Buttons
    for pizza in ["Margherita", "Pepperoni", "Hawaiian", "Veggie", "BBQ Chicken"]:
        tk.Radiobutton(pizza_frame, text=pizza, variable=pizza_var, value=pizza).pack(anchor="w")
 
-   - ``pizza_var = tk.StringVar(root)``: Creates a StringVar to hold the value of the selected radio button.
-   - ``pizza_var.set("Margherita")``: Sets the default value of the radio button group.
-   - ``pizza_frame = tk.Frame(root)``: Creates a frame to contain the radio buttons.
-   - ``.grid(row=1, column=1, padx=10, pady=5, sticky="w")``: Positions the frame in the grid layout.
-   - ``tk.Radiobutton(pizza_frame, text=pizza, variable=pizza_var, value=pizza)``: Creates a radio button with the specified text and value, and associates it with the StringVar.
+ - ``pizza_var = tk.StringVar(root)``: Creates a StringVar to hold the value of the selected radio button.
+ - ``pizza_var.set("Margherita")``: Sets the default value of the radio button group.
+ - ``pizza_frame = tk.Frame(root)``: Creates a frame to contain the radio buttons.
+ - ``.grid(row=1, column=1, padx=10, pady=5, sticky="w")``: Positions the frame in the grid layout.
+ - ``tk.Radiobutton(pizza_frame, text=pizza, variable=pizza_var, value=pizza)``: Creates a radio button with the specified text and value, and associates it with the StringVar.
 
 Using StringVar to Manage Radio Button Values
 ----------------------------------------------------------------
