@@ -11,6 +11,7 @@ Syntax:
 .. py:method:: bytes_var = bytes(x, encoding, error)
 
     Returns a bytes object. It can create empty bytes object of the specified size or convert objects into bytes objects.
+
     :param x: If x is an integer, an empty bytes object of the specified size will be created.
     :param x: If x is a String, the encoding is required.
     :param x: If x is an iterable, such as a list, it must be of integers from 0 to 255.

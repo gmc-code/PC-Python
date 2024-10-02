@@ -10,6 +10,7 @@ Syntax:
 .. py:method:: bytearray = bytearray(x, encoding, error)
 
     Returns a bytearray object. It can create empty bytearray object of the specified size or convert objects into bytearray objects.
+
     :param x: If x is an integer, an empty bytearray object of the specified size will be created.
     :param x: If x is a String, the encoding is required.
     :param x: If x is an iterable, such as a list, it must be of integers from 0 to 255.
