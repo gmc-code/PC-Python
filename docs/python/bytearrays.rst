@@ -9,7 +9,7 @@ Bytearrays
 
 
 bytearray Methods
-=================
+-----------------------
 
 The `bytearray` type in Python provides a variety of methods for manipulating and interacting with byte data. Below are some commonly used methods:
 

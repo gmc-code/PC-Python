@@ -15,7 +15,7 @@ The `bytes` type in Python provides a variety of methods for interacting with an
 ----
 
 count
-~~~~~~~~~~~~~~
+----------------------------
 
 .. py:method:: count(sub[, start[, end]])
 
@@ -32,7 +32,7 @@ count
 ----
 
 find
-~~~~~~~~~~~~~~
+----------------------------
 
 .. py:method:: find(sub[, start[, end]])
 
@@ -49,7 +49,7 @@ find
 ----
 
 index
-~~~~~~~~~~~~~~
+----------------------------
 
 .. py:method:: index(sub[, start[, end]])
 
@@ -66,7 +66,7 @@ index
 ----
 
 split
-~~~~~~~~~~~~~~
+----------------------------
 
 .. py:method:: split(sep=None, maxsplit=-1)
 
@@ -83,7 +83,7 @@ split
 ----
 
 join
-~~~~~~~~~~~~~~
+----------------------------
 
 .. py:method:: join(iterable)
 
@@ -100,7 +100,7 @@ join
 ----
 
 replace
-~~~~~~~~~~~~~~
+----------------------------
 
 .. py:method:: replace(old, new[, count])
 
@@ -117,7 +117,7 @@ replace
 ----
 
 strip
-~~~~~~~~~~~~~~
+----------------------------
 
 .. py:method:: strip([chars])
 
@@ -134,7 +134,7 @@ strip
 ----
 
 startswith
-~~~~~~~~~~~~~~
+----------------------------
 
 .. py:method:: startswith(prefix[, start[, end]])
 
@@ -151,7 +151,7 @@ startswith
 ----
 
 endswith
-~~~~~~~~~~~~~~
+----------------------------
 
 .. py:method:: endswith(suffix[, start[, end]])
 
@@ -168,7 +168,7 @@ endswith
 ----
 
 decode
-~~~~~~~~~~~~~~
+----------------------------
 
 .. py:method:: decode(encoding='utf-8', errors='strict')
 

@@ -39,10 +39,6 @@ Dictionary comprehension of the range function, lists and strings
     print(new_dict)
     # output is {0: 0, 1: 2, 2: 4, 3: 6, 4: 8}
 
-
-Practice Questions
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. admonition:: Tasks
 
     #. Using a range function, create a dictionary comprehension that maps numbers from 0 to 9 to their squares. Print the dictionary.
@@ -164,10 +160,6 @@ Dictionary comprehension of zipped lists
     # Output is {'Lockett': 1360, 'Coventry': 1299, 'Dunstall': 1254}
 
 ----
-
-Practice Questions
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. admonition:: Tasks
 
     #. Create a dictionary comprehension that maps the names of students, 'Alice', 'Bob', 'Charlie', and 'David', to their test scores: 85, 72, 90, and 65. Print the dictionary.
@@ -242,10 +234,6 @@ Syntax:
     # Output is {1: 40, 2: 20, 4: 10, 5: 8, 8: 5, 10: 4}
 
 ----
-
-Practice Questions
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. admonition:: Tasks
 
     #. Create a dictionary comprehension that maps numbers from 0 to 9 to their squares, but only include even numbers. Print the dictionary.
@@ -365,10 +353,6 @@ Syntax:
     # Output is {10: 100, 11: 121, 12: 144, 15: 225, 18: 324, 20: 400, 21: 441, 30: 900}
 
 ----
-
-Practice Questions
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. admonition:: Tasks
 
     #. Create a dictionary comprehension that maps numbers from 1 to 31 to their squares, but only include squares with 3 digits where all the digits are even. Use a function to check if all digits are even, using ``return all(int(digit) % 2 == 0 for digit in str(n))``. Print the dictionary.
@@ -463,10 +447,6 @@ Syntax:
     # Output is {'Alex': 85, 'Brooke': 92, 'Dana': 90}
 
 ----
-
-Practice Questions
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. admonition:: Tasks
 
     #. Create a dictionary comprehension that maps the names of students, Alice, Bob, Charlie, and David, to their test_scores: 85, 72, 90, and 65, but only include students who scored above 75. Print the dictionary.
@@ -544,10 +524,6 @@ Syntax:
     # Ouput is {'Sydney': 30, 'Melbourne': 20, 'Brisbane': 35, 'Perth': 25}
 
 ----
-
-Practice Questions
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. admonition:: Tasks
 
     #. Use a dictionary comprehension starting with a dictionary of the animal names and their weights in pounds, ``{'Elephant': 12000, 'Tiger': 500, 'Kangaroo': 200, 'Panda': 300}``, and converts them to kilograms. Print the dictionary.
@@ -635,10 +611,6 @@ Syntax:
 
 
 ----
-
-Practice Questions
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. admonition:: Tasks
 
     #. Use a dictionary comprehension starting with a dictionary of animal names and their weights in kilograms, ``{'Koala': 10, 'Kangaroo': 90, 'Lion': 190, 'Zebra': 350, 'Giraffe': 1200, 'Elephant': 5400}``, and categorize them into three weight classes: "heavy" (more than 1000 kg), "medium" (between 100 and 1000 kg), and "light" (less than 100 kg). Print the dictionary.
@@ -710,10 +682,6 @@ Syntax:
     # Output is {'Sydney': 'cold', 'Melbourne': 'freezing', 'Brisbane': 'hot', 'Perth': 'warm'}
 
 ----
-
-Practice Questions
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. admonition:: Tasks
 
     #. Use a dictionary comprehension starting with a dictionary of animal names and their weights in kilograms, ``{'Koala': 10, 'Kangaroo': 90, 'Lion': 190, 'Zebra': 350, 'Giraffe': 1200, 'Elephant': 5400}``, and use a function to categorize them into three weight classes: "heavy" (more than 1000 kg), "medium" (between 100 and 1000 kg), and "light" (less than 100 kg). Print the dictionary.
@@ -796,10 +764,6 @@ Dictionary comprehension of dictionary of lists
     # Output is {'math': 88, 'science': 88, 'history': 79}
 
 ----
-
-Practice Questions
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. admonition:: Tasks
 
     #. Use a dictionary comprehension to output a dictionary of mean ratings from, ``{"laptop": [4.5, 4.7, 4.6], "phone": [4.8, 4.9, 4.7], "tablet": [4.2, 4.3]}``. Print the dictionary.
@@ -893,10 +857,6 @@ Dictionary comprehension of dictionary of dictionaries of lists
     }
 
 ----
-
-Practice Questions
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. admonition:: Tasks
 
     #. Use a dictionary comprehension starting with a dictionary of the employee_reviews and converts them to average ratings. Print the dictionary.
@@ -1015,10 +975,6 @@ Dictionary comprehension of a list of dictionaries
 
 
 ----
-
-Practice Questions
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. admonition:: Tasks
 
     #. Use a dictionary comprehension starting with a list of dictionaries of the tree growth and converts them to averages. Print the dictionary.
