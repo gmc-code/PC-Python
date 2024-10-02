@@ -41,11 +41,13 @@ Content
 - ``.grid(row=0, column=1, padx=10, pady=5)``: Positions the entry widget in the grid layout at row 0, column 1, with padding.
 
 1. Positioning Widgets Using Grid Layout
+
    - The ``grid`` method is used to position widgets in a table-like structure.
    - ``row`` and ``column`` specify the position of the widget.
    - ``padx`` and ``pady`` add padding around the widget.
 
 2. Additional Examples
+
    - Adding multiple labels and entry widgets:
 
 .. code-block:: python
