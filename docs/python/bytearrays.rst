@@ -2,11 +2,35 @@
 Bytearrays
 ==========================
 
-| `bytearray` objects in Python come with a variety of methods that allow you to manipulate and interact with the byte data. Here are some of the most commonly used methods:
-| These methods provide a lot of flexibility for working with bytearrays, allowing you to manipulate the data in various ways.
+| `bytearray` objects in Python can be modified.
+| The difference between bytes() and bytearray() is that bytes() returns an object that cannot be modified, and bytearray() returns an object that can be modified.
 
-### Common Methods for `bytearray`
+Syntax:
 
+.. py:method:: bytearray = bytearray(x, encoding, error)
+
+    Returns a bytearray object. It can create empty bytearray object of the specified size or convert objects into bytearray objects.
+    :param x: If x is an integer, an empty bytearray object of the specified size will be created.
+    :param x: If x is a String, the encoding is required.
+    :param x: If x is an iterable, such as a list, it must be of integers from 0 to 255.
+    :param encoding:  The encoding of the string such as 'utf-8'
+    :param error: Specifies what to do if the encoding fails.
+
+| An example is below.
+
+.. code-block:: python
+
+    x = bytearray(4)
+    print(x)
+    # Output is bytearray(b'\x00\x00\x00\x00')
+
+.. code-block:: python
+
+    x = bytearray("abc123", "utf-8")
+    print(x)
+    # Output is bytearray(b'abc123')
+
+----
 
 bytearray Methods
 -----------------------
