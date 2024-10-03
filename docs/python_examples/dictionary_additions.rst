@@ -50,7 +50,7 @@ Explanation
 
 1. **Initialize Dictionary**:
 
-- The `premiers` dictionary is initialized with team abbreviations as keys and their respective premiership counts as values.
+| The `premiers` dictionary is initialized with team abbreviations as keys and their respective premiership counts as values.
 
     .. code-block:: python
 
@@ -59,25 +59,25 @@ Explanation
 
 1. **Start Infinite Loop**:
 
- - The `while True:` loop begins, allowing the program to repeatedly prompt the user for input until explicitly broken.
+| The `while True:` loop begins, allowing the program to repeatedly prompt the user for input until explicitly broken.
 
 .. code-block:: python
 
     while True:
 
 
-3. **Get User Input**:
+1. **Get User Input**:
 
- - The user is prompted to enter a team's short name, which is then converted to uppercase and stripped of any leading or trailing whitespace.
+| The user is prompted to enter a team's short name, which is then converted to uppercase and stripped of any leading or trailing whitespace.
 
 .. code-block:: python
 
     user_team = input("What team (short name)? ").upper().strip()
 
 
-4. **Validate User Input**:
+1. **Validate User Input**:
 
-- The code checks if the input is valid (i.e., not empty and consists only of letters). If the input is invalid, it prints an error message and continues to the next iteration of the loop.
+| The code checks if the input is valid (i.e., not empty and consists only of letters). If the input is invalid, it prints an error message and continues to the next iteration of the loop.
 
 .. code-block:: python
 
@@ -88,7 +88,7 @@ Explanation
 
 5. **Check Team in Dictionary**:
 
-- The code attempts to retrieve the number of premierships for the entered team from the `premiers` dictionary.
+| The code attempts to retrieve the number of premierships for the entered team from the `premiers` dictionary.
 
 .. code-block:: python
 
@@ -97,7 +97,7 @@ Explanation
 
 6. **Handle Team Not Found**:
 
-- If the team is not found in the dictionary (`team_premierships` is `None`), the code informs the user and prompts for the number of premierships the team has won. It then adds this new entry to the dictionary.
+| If the team is not found in the dictionary (`team_premierships` is `None`), the code informs the user and prompts for the number of premierships the team has won. It then adds this new entry to the dictionary.
 
 .. code-block:: python
 
@@ -115,7 +115,7 @@ Explanation
 
 7. **Handle Team Found**:
 
-- If the team is found in the dictionary, the code prints the number of premierships the team has won.
+| If the team is found in the dictionary, the code prints the number of premierships the team has won.
 
 .. code-block:: python
 
@@ -125,7 +125,7 @@ Explanation
 
 8. **Prompt to Continue or Exit**:
 
-- The user is prompted to press Enter to continue or any other key to exit. If the user chooses to exit, the loop breaks.
+| The user is prompted to press Enter to continue or any other key to exit. If the user chooses to exit, the loop breaks.
 
 .. code-block:: python
 
@@ -137,7 +137,7 @@ Explanation
 
 9. **Print Final Dictionary**:
 
-- After the loop ends, the final state of the `premiers` dictionary is printed.
+| After the loop ends, the final state of the `premiers` dictionary is printed.
 
 .. code-block:: python
 
