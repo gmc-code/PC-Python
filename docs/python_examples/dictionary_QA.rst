@@ -138,7 +138,7 @@ Dictionary Question and Answer
 
 - This dictionary stores AFL teams as keys and their respective number of premierships as values.
 
-1. **Displaying the List of Premiers**:
+**Displaying the List of Premiers**:
 -----------------------------------------------------------------------
 
 .. code-block:: python
