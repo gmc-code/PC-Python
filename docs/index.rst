@@ -49,8 +49,6 @@ PC-Python
 
     python/dictionaries.rst
     python/dictionary_methods.rst
-    python_examples/dictionary_with_functions.rst
-    python_examples/dictionary_additions.rst
 
     python/bytes.rst
     python/bytearrays.rst
@@ -60,6 +58,16 @@ PC-Python
 
     python/functions.rst
     python/function_packing and_unpacking.rst
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Python examples
+    :numbered:
+
+    python_examples/dictionary_with_functions.rst
+    python_examples/dictionary_additions.rst
+
 
 
 .. toctree::
