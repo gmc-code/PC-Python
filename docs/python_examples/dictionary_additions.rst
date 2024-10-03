@@ -42,13 +42,10 @@ User additions to dictionary
 
     print(premiers)
 
+----
 
-
-Explanation
---------------------
-
-
-1. **Initialize Dictionary**:
+**Initialize Dictionary**:
+-----------------------------------------------------------------------
 
 | The `premiers` dictionary is initialized with team abbreviations as keys and their respective premiership counts as values.
 
@@ -57,7 +54,8 @@ Explanation
     premiers = {"ESS": 16, "COLL": 16, "CARL": 16, "MELB": 13, "RICH": 13, "HAW": 13, "GEE": 10}
 
 
-1. **Start Infinite Loop**:
+**Start Infinite Loop**:
+-----------------------------------------------------------------------
 
 | The `while True:` loop begins, allowing the program to repeatedly prompt the user for input.
 
@@ -66,7 +64,8 @@ Explanation
     while True:
 
 
-1. **Get User Input**:
+**Get User Input**:
+-----------------------------------------------------------------------
 
 | The user is prompted to enter a team's short name, which is then converted to uppercase and stripped of any leading or trailing whitespace.
 
@@ -75,7 +74,8 @@ Explanation
     user_team = input("What team (short name)? ").upper().strip()
 
 
-1. **Validate User Input**:
+**Validate User Input**:
+-----------------------------------------------------------------------
 
 | The code checks if the input is valid (i.e., not empty and consists only of letters). If the input is invalid, it prints an error message and continues to the next iteration of the loop.
 
@@ -86,7 +86,8 @@ Explanation
         continue
 
 
-5. **Check Team in Dictionary**:
+**Check Team in Dictionary**:
+-----------------------------------------------------------------------
 
 | The code attempts to retrieve the number of premierships for the entered team from the `premiers` dictionary.
 
@@ -95,7 +96,8 @@ Explanation
     team_premierships = premiers.get(user_team)
 
 
-6. **Handle Team Not Found**:
+**Handle Team Not Found**:
+-----------------------------------------------------------------------
 
 | If the team is not found in the dictionary (`team_premierships` is `None`), the code informs the user and prompts for the number of premierships the team has won. It then adds this new entry to the dictionary.
 
@@ -113,7 +115,8 @@ Explanation
         print(f"{user_team} has won {new_team_premierships} premierships.")
 
 
-7. **Handle Team Found**:
+**Handle Team Found**:
+-----------------------------------------------------------------------
 
 | If the team is found in the dictionary, the code prints the number of premierships the team has won.
 
@@ -123,7 +126,8 @@ Explanation
         print(f"{user_team} has won {team_premierships} premierships.")
 
 
-8. **Prompt to Continue or Exit**:
+**Prompt to Continue or Exit**:
+-----------------------------------------------------------------------
 
 | The user is prompted to press Enter to continue or any other key to exit. If the user chooses to exit, the loop breaks.
 
@@ -135,7 +139,8 @@ Explanation
         break
 
 
-9. **Print Final Dictionary**:
+**Print Final Dictionary**:
+-----------------------------------------------------------------------
 
 | After the loop ends, the final state of the `premiers` dictionary is printed.
 
