@@ -67,7 +67,7 @@ PC-Python
 
     python_examples/dictionary_with_functions.rst
     python_examples/dictionary_additions.rst
-
+    python_examples/dictionary_QA.rst
 
 
 .. toctree::
