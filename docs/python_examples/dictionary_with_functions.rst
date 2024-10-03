@@ -5,8 +5,8 @@ Dictionary with functions
 Dictionaries
 -------------------
 
-| A dictionary is a collection of ``key: value`` pairs. 
-| All keys are unique; duplicate keys are not possible. 
+| A dictionary is a collection of ``key: value`` pairs.
+| All keys are unique; duplicate keys are not possible.
 | Keys can be an integer, float, string, Boolean (True or False) and even a tuple.
 | A key can be used to retrieve a value from a dictionary.
 | See: https://v2.scrimba.com/learn-python-c03/~014
@@ -61,10 +61,9 @@ Example:
 Looking up dictionary values by the get method
 ----------------------------------------------------
 
-.. py:function:: value = dictionary.get(key)
+.. py:method:: dict.get(key, default=None)
 
-    | Get the value of a specific key in a dictionary.
-    | Returns **None** if the key does not exist.
+    Returns the value for the specified key if the key is in the dictionary, otherwise returns the default value.
 
 Example:
 
@@ -75,14 +74,17 @@ Example:
     # without default
     value = car_dictionary.get("brand")
     print(value)
+    # output is "Ford"
 
     # without default; returns None
     value = car_dictionary.get("brands")
     print(value)
+    # output is None
 
     # with default
     value = car_dictionary.get("brands", "not a valid key")
     print(value)
+    # output is "not a valid key"
 
 ----
 
@@ -123,7 +125,7 @@ Create a dictionary
 | green is #008000
 | blue is #0000FF
 | indigo is #4B0082
-| violet is #EE82EE 
+| violet is #EE82EE
 
 .. admonition:: Tasks
 
@@ -233,7 +235,7 @@ Final code
 
 .. admonition:: Exercise
 
-    Create a python file that gets user input and prints the hex colour for the color name the user inputs.
+    Create a python script that gets user input and prints the hex colour for the color name the user inputs.
     Example output: ``The hexadecimal value for green is #008000.``
 
     .. dropdown::
@@ -245,7 +247,7 @@ Final code
 
             .. tab-item:: Q1
 
-                Create a python file that gets user input and prints the hex colour for the color name the user inputs.
+                Create a python script that gets user input and prints the hex colour for the color name the user inputs.
                 Example output: ``The hexadecimal value for green is #008000.``
 
                 .. code-block:: python

@@ -50,6 +50,7 @@ PC-Python
     python/dictionaries.rst
     python/dictionary_methods.rst
     python_examples/dictionary_with_functions.rst
+    python_examples/dictionary_additions.rst
 
     python/bytes.rst
     python/bytearrays.rst
