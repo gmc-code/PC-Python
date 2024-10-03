@@ -52,14 +52,14 @@ Explanation
 
 | The `premiers` dictionary is initialized with team abbreviations as keys and their respective premiership counts as values.
 
-    .. code-block:: python
+.. code-block:: python
 
-        premiers = {"ESS": 16, "COLL": 16, "CARL": 16, "MELB": 13, "RICH": 13, "HAW": 13, "GEE": 10}
+    premiers = {"ESS": 16, "COLL": 16, "CARL": 16, "MELB": 13, "RICH": 13, "HAW": 13, "GEE": 10}
 
 
 1. **Start Infinite Loop**:
 
-| The `while True:` loop begins, allowing the program to repeatedly prompt the user for input until explicitly broken.
+| The `while True:` loop begins, allowing the program to repeatedly prompt the user for input.
 
 .. code-block:: python
 
