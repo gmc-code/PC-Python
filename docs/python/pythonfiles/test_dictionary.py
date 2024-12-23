@@ -29,8 +29,8 @@ sample_dict = {'a': 1, 'b': 2, 'c': 3}
 value = sample_dict['a']
 print(value)
 # Output is 1
-value = sample_dict['d']
-print(value)
+# value = sample_dict['d']
+# print(value)
 # Output is Error message KeyError: 'd'
 
 

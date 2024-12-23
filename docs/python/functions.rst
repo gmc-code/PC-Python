@@ -5,7 +5,7 @@ Functions
 | See: https://www.w3schools.com/python/python_functions.asp
 
 
-| Functions are blocks of code that can be used many times in a program. 
+| Functions are blocks of code that can be used many times in a program.
 | They avoid code repetition.
 | Functions can do something or return values.
 | Functions are defined using the ``def`` keyword.
@@ -40,14 +40,14 @@ Functions without parameters
 .. admonition:: Tasks
 
     #. Write a function called ``print_name`` that prints your name.
-    #. Write a function called ``countdown`` that counts down from 5 to 1, printing each number. 
+    #. Write a function called ``countdown`` that counts down from 5 to 1, printing each number.
 
 ----
 
 Functions with parameters
 -----------------------------
 
-| Functions can be more powerful by using `parameters`. 
+| Functions can be more powerful by using `parameters`.
 | A parameter is the variable in the parentheses of the function which allows information to be passed to the function.
 | An argument is the value in the parentheses that is sent to the function when it is called.
 | In the code below, ``name`` is the parameter, and ``"beginner"`` and ``"user"`` are the arguments.
@@ -65,7 +65,7 @@ Functions with parameters
 Functions with default parameters
 -----------------------------------------------
 
-| 
+|
 
 .. code-block:: python
 
@@ -89,8 +89,8 @@ Functions with default parameters
 Functions returning information
 ----------------------------------------
 
-| Functions can be more powerful by `returning values`. 
-| The return value is what the function passes back to the code that called it. 
+| Functions can be more powerful by `returning values`.
+| The return value is what the function passes back to the code that called it.
 | Below is an example of a function that takes one parameter, the number of inches, and returns the number of centimetres.
 
 .. code-block:: python
@@ -119,7 +119,7 @@ Functions returning information
 .. code-block:: python
 
     def name_age_greeting(name, age):
-        return "Hello " + name + ", you are " + str(age) + " years old."   
+        return "Hello " + name + ", you are " + str(age) + " years old."
 
     print(name_age_greeting("Peter", 21))
     print(name_age_greeting("Paul", 24))
@@ -143,9 +143,9 @@ Functions returning information
 | ``*args`` allow a function to take any number of positional arguments (non keyword arguments).
 
 | ``*num`` allows a variable number of arguments to be passed in to be added in the ``multi_add`` function.
-| In the function, ``num`` is a tuple of the arguments.
-| For ``multi_add(2,5)``, num is the tuple`` (2, 5)``.
-| For ``multi_add(1, 3, 5, 7, 9)``, num is the tuple ``(1, 3, 5, 7, 9)``.
+| In the function, ``num`` are multiple arguments.
+| For ``multi_add(2,5)``, there are 2 arguments `2, 5`.
+| For ``multi_add(1, 3, 5, 7, 9)``, there are 5 arguments `1, 3, 5, 7, 9`.
 
 .. code-block:: python
 
@@ -157,3 +157,4 @@ Functions returning information
 
     print(multi_add(2, 5))
     print(multi_add(1, 3, 5, 7, 9))
+

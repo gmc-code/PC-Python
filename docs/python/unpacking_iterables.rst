@@ -2,6 +2,7 @@
 Unpacking iterables
 ==========================
 
+Tuple unpacking in Python is a powerful feature that allows you to assign the elements of a tuple to multiple variables in a single statement.
 
 Unpacking to merge tuples
 ------------------------------
