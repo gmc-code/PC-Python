@@ -65,6 +65,7 @@ PC-Python
     :caption: Python examples
     :numbered:
 
+    python_examples/guess_the_number.rst
     python_examples/dictionary_with_functions.rst
     python_examples/dictionary_additions.rst
     python_examples/dictionary_QA.rst
