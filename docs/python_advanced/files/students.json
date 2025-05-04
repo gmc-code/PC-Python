@@ -1,0 +1,32 @@
+[
+  {
+    "id": 2,
+    "name": "Bob",
+    "surname": "Smith",
+    "student_number": 23456,
+    "science_marks": 90.0,
+    "maths_marks": 95.0,
+    "english_marks": 80.0,
+    "subject": "Maths"
+  },
+  {
+    "id": 4,
+    "name": "David",
+    "surname": "Lee",
+    "student_number": 34567,
+    "science_marks": 85.0,
+    "maths_marks": 88.0,
+    "english_marks": 75.0,
+    "subject": "Maths"
+  },
+  {
+    "id": 5,
+    "name": "Eva",
+    "surname": "Davis",
+    "student_number": 45679,
+    "science_marks": 72.0,
+    "maths_marks": 79.0,
+    "english_marks": 82.0,
+    "subject": "English"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+      "name": "Alice",
+      "surname": "Johnson",
+      "student_number": 34,
+      "science_marks": 70,
+      "maths_marks": 65,
+      "english_marks": 68
+  },
+  {
+      "name": "Bob",
+      "surname": "Smith",
+      "student_number": 23456,
+      "science_marks": 90,
+      "maths_marks": 95,
+      "english_marks": 80
+  },
+  {
+      "name": "Charlie",
+      "surname": "Brown",
+      "student_number": 45678,
+      "science_marks": 50,
+      "maths_marks": 55,
+      "english_marks": 58
+  },
+  {
+      "name": "David",
+      "surname": "Lee",
+      "student_number": 34567,
+      "science_marks": 85,
+      "maths_marks": 88,
+      "english_marks": 75
+  },
+  {
+      "name": "Eva",
+      "surname": "Davis",
+      "student_number": 45679,
+      "science_marks": 72,
+      "maths_marks": 79,
+      "english_marks": 82
+  }
+]
