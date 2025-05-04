@@ -76,13 +76,13 @@ PC-Python
     :caption: Advanced Python
     :numbered:
 
-    python_advanced/validation.rst
     python_advanced/list_comprehensions.rst
     python_advanced/dict_comprehensions.rst
     python_advanced/set_comprehensions.rst
     python_advanced/generators
     python_advanced/enumerate
     python_advanced/match_case.rst
+    python_advanced/validation.rst
 
 
 .. toctree::
