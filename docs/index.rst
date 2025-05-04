@@ -76,6 +76,7 @@ PC-Python
     :caption: Advanced Python
     :numbered:
 
+    python_advanced/validation.rst
     python_advanced/list_comprehensions.rst
     python_advanced/dict_comprehensions.rst
     python_advanced/set_comprehensions.rst
