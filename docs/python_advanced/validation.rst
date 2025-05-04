@@ -14,7 +14,7 @@ Age validation
 | The code gets user input for an age.
 | Then it tests for existence by first removing whitespace characters at the start and the end of the input string.
 | Then is does a type check for integers.
-| Then it does a range checl to make sure the integer is between 0 and 120 inclusive.
+| Then it does a range check to make sure the integer is between 0 and 120 inclusive.
 
 Syntax:
 
@@ -22,8 +22,6 @@ Syntax:
 
     | chars (optional): A string specifying the set of characters to remove from both the beginning and the end of the original string.
     | If chars is not provided, it returns the string with spaces, tabs, newlines, etc. removed from the ends.
-
-Syntax:
 
 .. py:function:: string.isdigit()
 
@@ -59,14 +57,12 @@ Syntax:
 
 .. py:function:: def function_name(arg1: Type1, arg2: Type2) -> ReturnType:
 
-| Part            | Meaning                                                                                                                            |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `def`           | Declares a function in Python.                                                                                                     |
-| `function_name` | The name you give to your function.                                                                                                |
-| `arg1: Type1`   | `arg1` is the **name of the first parameter**, and `Type1` is the **expected type** of that parameter (e.g. `int`, `str`, `list`). |
-| `arg2: Type2`   | `arg2` is the second parameter, expected to be of type `Type2`.                                                                    |
-| `-> ReturnType` | Tells you (and the interpreter/tools) that the function **returns** a value of type `ReturnType` (e.g. `str`, `bool`, `None`).     |
-| `:`             | Marks the start of the function body.                                                                                              |
+    | `def` declares a function in Python.
+    | `function_name` is the name you give to your function.
+    | `arg1` is the **name of the first parameter**, and `Type1` is the **expected type** of that parameter (e.g. `int`, `str`, `list`).
+    | `arg2` is the second parameter, expected to be of type `Type2`.
+    | `-> ReturnType` tells you (and the interpreter/tools) that the function **returns** a value of type `ReturnType` (e.g. `str`, `bool`, `None`).
+    | `:` marks the start of the function body.
 
 
 .. code-block:: python
