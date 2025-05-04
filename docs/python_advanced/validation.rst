@@ -291,13 +291,13 @@ Pydantic
         # Convert dataclass-like User objects to plain dicts
         with open(filepath, 'w') as f:
             json.dump([user.model_dump() for user in users], f, indent=2)
-        print(f"\n📁 Saved {len(users)} valid user(s) to {filepath}")
+        print(f"\n Saved {len(users)} valid user(s) to {filepath}")
 
     # Main
     if __name__ == "__main__":
         users = load_users_from_json("user_data_2.json", "user_data_2_log.txt")
 
-        print(f"\n✅ Successfully loaded {len(users)} valid user(s):")
+        print(f"\n Successfully loaded {len(users)} valid user(s):")
         for user in users:
             print(user)
 
