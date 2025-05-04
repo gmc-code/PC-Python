@@ -1,0 +1,28 @@
+
+Validation error in record 1:
+[
+  {
+    "type": "value_error",
+    "loc": [
+      "name"
+    ],
+    "msg": "Value error, Name cannot be blank",
+    "input": "  ",
+    "ctx": {
+      "error": "Name cannot be blank"
+    },
+    "url": "https://errors.pydantic.dev/2.11/v/value_error"
+  },
+  {
+    "type": "less_than_equal",
+    "loc": [
+      "age"
+    ],
+    "msg": "Input should be less than or equal to 120",
+    "input": 130,
+    "ctx": {
+      "le": 120
+    },
+    "url": "https://errors.pydantic.dev/2.11/v/less_than_equal"
+  }
+]

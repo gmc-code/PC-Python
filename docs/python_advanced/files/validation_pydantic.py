@@ -26,7 +26,9 @@ if __name__ == "__main__":
     except ValidationError as e:
         print("❌ Validation errors:")
         print(e.json(indent=2))
-'''
+
+
+
 
 ❌ Validation errors:
 [
