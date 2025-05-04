@@ -305,3 +305,12 @@ Pydantic
             save_users_to_json(users, "user_data_2_clean.json")
         else:
             print("No valid users to save. See 'user_data_2_log.txt' for details.")
+
+----
+
+Pydantic tutorial
+------------------
+
+See: https://www.bugbytes.io/posts/introduction-to-pydantic/
+
+See video at: https://www.youtube.com/watch?v=i4jespFbA1c
