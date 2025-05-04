@@ -129,6 +129,7 @@ You can write this:
         name: str
         age: int
 
+| Example using a dataclass:
 
 .. code-block:: python
 
