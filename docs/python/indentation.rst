@@ -513,10 +513,10 @@ Practice Questions
 
 ----
 
-.. mchoice::
-   :answer1: Belgrade
-   :answer2: Paris
-   :answer3: Madrid
-   :correct: 2
+.. .. mchoice::
+..    :answer1: Belgrade
+..    :answer2: Paris
+..    :answer3: Madrid
+..    :correct: 2
 
-   What is the capital of France?
+..    What is the capital of France?
