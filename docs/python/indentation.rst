@@ -511,3 +511,12 @@ Practice Questions
                                 max_num = num
                         return max_num
 
+----
+
+.. mchoice::
+   :answer1: Belgrade
+   :answer2: Paris
+   :answer3: Madrid
+   :correct: 2
+
+   What is the capital of France?
