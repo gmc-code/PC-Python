@@ -26,9 +26,6 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx_togglebutton',
     'sphinx_design',
-    'plct_sphinx_components.extensions.multiple_choice',
-    'plct_sphinx_components.extensions.fill_in_the_blank',
-    'plct_sphinx_components.extensions.py_code',
     ]
 # 'sphinx_thebe',
 # 'nbsphinx',
