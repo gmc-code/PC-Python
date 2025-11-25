@@ -28,7 +28,7 @@ extensions = [
     'sphinx_design',
     'plct-sphinx-components.extensions.multiple_choice',
     'plct-sphinx-components.extensions.fill_in_the_blank',
-    'plct-sphinx-components.extensions.py_code,
+    'plct-sphinx-components.extensions.py_code',
     ]
 # 'sphinx_thebe',
 # 'nbsphinx',
