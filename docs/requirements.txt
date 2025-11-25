@@ -1,4 +1,4 @@
-sphinx
+# sphinx
 sphinx_rtd_theme
 sphinx-copybutton
 sphinx-design
@@ -7,5 +7,9 @@ sphinx-togglebutton
 # nbsphinx
 # sphinxcontrib.jupyter
 # plct-sphinx-components==0.0.5
+
+sphinx==6.2.1
+docutils==0.17.1
+
 plct-sphinx-components
 urllib3 < 2.0.0
