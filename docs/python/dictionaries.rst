@@ -44,7 +44,7 @@ Getting a value from a dictionary
     Returns a value in a dictionary with the specified key, key1.
 
 | In the dictionary below, the capital of Victoria can be found by indexing the dictionary: ``eastern_state_capitals['Victoria']``.
-| THe key is 'Victoria'. The value is 'Melbourne'.
+| The key is 'Victoria'. The value is 'Melbourne'.
 
 .. code-block:: python
 

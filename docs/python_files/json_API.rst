@@ -2,7 +2,7 @@
 json API
 ==========================
 
-| API stands for Application Programming Interface. 
+| API stands for Application Programming Interface.
 | The API defines how two applications communicate with each other using requests and responses.
 
 | Corey Schafer video See: https://www.youtube.com/watch?v=9N6a-VLBa2I&list=RDCMUCCezIgC97PvUuR4_gbFUs5g&start_radio=1&rv=9N6a-VLBa2I&t=1
@@ -23,22 +23,22 @@ Getting free weather data from the web
 | Enter Melbourne as the city and use the daily checkboxes to generate the url below.
 | The url below is for Melbourne daily max and min temperatures for the next 7 days.
 | The built-in python library, urllib, is used to get the web data from the url.
-| THe syntax for urlopen and read is below.
+| The syntax for urlopen and read is below.
 
 .. code-block:: python
-    
+
     from urllib.request import urlopen
 
     url = "https://api.open-meteo.com/v1/forecast?latitude=-37.81&longitude=144.96&daily=temperature_2m_max,temperature_2m_min&timezone=Australia%2FSydney"
     with urlopen(url) as response:
-        source = response.read() 
+        source = response.read()
     print(source)
 
 
 | The data returned from the url above is for "2023-01-17" to "2023-01-23".
 | The response is a byte string indicated by "b'".
 
-.. code-block:: 
+.. code-block::
 
     b'{"latitude":-37.75,"longitude":145.0,"generationtime_ms":0.2799034118652344,"utc_offset_seconds":39600,"timezone":"Australia/Sydney","timezone_Abbriation":"AEDT","elevation":98.0,"daily_units":{"time":"iso8601","temperature_2m_max":"\xc2\xb0C","temperature_2m_min":"\xc2\xb0C"},"daily":{"time":["2023-01-17","2023-01-18","2023-01-19","2023-01-20","2023-01-21","2023-01-22","2023-01-23"],"temperature_2m_max":[36.6,26.4,19.0,22.9,26.4,28.0,27.2],"temperature_2m_min":[19.0,14.6,13.3,12.8,14.1,16.1,17.0]}}'
 
@@ -81,7 +81,7 @@ Reading weather json
 | Then the data is dumped to view the keys so that the dates and temperatures can be indexed.
 
 .. code-block:: python
-    
+
     import json
     from urllib.request import urlopen
 
@@ -133,7 +133,7 @@ Reading weather json
 | The weather data is printed out below.
 
 .. code-block:: python
-    
+
     import json
     from urllib.request import urlopen
 
@@ -150,7 +150,7 @@ Reading weather json
 
 
 .. code-block::
- 
+
     2023-01-17 19.0 36.7
     2023-01-18 14.6 24.7
     2023-01-19 13.5 19.0
@@ -165,7 +165,7 @@ Reading weather json
 | A list comprehension, ``padded_header = [h.ljust(p) for h, p in zip(header,paddings)]``, is used to build the list of padded strings.
 
 .. code-block:: python
-    
+
     header = ["day", "min", "max"]
     paddings = [11, 5, 5]
     padded_header = [h.ljust(p) for h, p in zip(header,paddings)]
@@ -177,7 +177,7 @@ Reading weather json
 | The full code is below
 
 .. code-block:: python
-    
+
     import json
     from urllib.request import urlopen
 
@@ -202,7 +202,7 @@ Reading weather json
 
 .. code-block::
 
-    day        min  max  
+    day        min  max
     2023-01-17 19.0 36.7
     2023-01-18 14.6 24.7
     2023-01-19 13.5 19.0

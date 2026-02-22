@@ -2,12 +2,16 @@
 # see https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 # -- Project information -----------------------------------------------------
-# import os
-# import sys
+import os
+import sys
 import sphinx_rtd_theme
+
 project = 'PC-Python'
-copyright = '2021-25, GMC'
+copyright = '2021-26, GMC'
 author = 'GMC'
+
+
+# sys.path.append(os.path.abspath('_ext'))
 
 # sys.path.insert(0, os.path.abspath('../../'))
 # package_path = os.path.abspath('../..')
@@ -18,6 +22,11 @@ author = 'GMC'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 # https://pypi.org/project/plct-sphinx-components/#description
+
+
+
+
+
 
 extensions = [
     'sphinx_rtd_theme',
@@ -30,6 +39,9 @@ extensions = [
 # 'sphinx_thebe',
 # 'nbsphinx',
 # 'sphinxcontrib.jupyter',
+
+# https://github.com/js-parsons/js-parsons
+
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -74,13 +86,22 @@ html_theme = 'sphinx_rtd_theme'
 #html_title = None
 html_title = "PC-Python"
 
-# Use custom css
-html_css_files = ["css/custom.css"]
+
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+# Use custom css
+html_css_files = ["css/custom.css",
+    "parsons/css/parsons.css",
+]
+
+html_js_files = [
+    "parsons/js/parsons.js",
+]
+
 
 # html_static_path = ['../_static/'] # for jupyter
 

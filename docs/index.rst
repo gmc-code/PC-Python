@@ -10,6 +10,7 @@ PC-Python
     :numbered:
 
     introduction/introduction.rst
+    introduction/parsons_test.rst
 
 
 .. toctree::

@@ -22,7 +22,7 @@ Structure
 | json uses key:value pairs in {} brackets.
 | The simple json below looks like a python dictionary.
 
-.. code:: 
+.. code::
 
     {"firstName":"Anna","lastName":"Smith"}
 
@@ -36,7 +36,7 @@ Structure
 | In the code below, the key of "employees" has a value consisting of a dictionary with 2 keys: "office_worker" and "writer".
 | The "office_worker" key has a value that is an array of 2 objects, each in {}.
 
-.. code:: 
+.. code::
 
     {
         "employees": {
@@ -77,7 +77,7 @@ json to dict
 
 
 .. code-block:: python
-    
+
     import json
 
     emp_str = """
@@ -97,10 +97,10 @@ json to dict
     for emp in json_dict["employees"]["office_worker"]:
         print(f'{emp["firstName"]} {emp["lastName"]}')
     # writer
-    emp = json_dict["employees"]["writer"]   
+    emp = json_dict["employees"]["writer"]
     print(f'{emp["firstName"]} {emp["lastName"]}')
 
-.. code-block:: 
+.. code-block::
 
     John Doe
     Peter Jones
@@ -138,7 +138,7 @@ Printing specific keys from json objects
 | The code below deletes the gender keys then converts the json to a string, then prints it.
 
 .. code-block:: python
-    
+
     import json
 
     emp_str = """
@@ -167,9 +167,9 @@ Printing specific keys from json objects
     print(data_str)
 
 
-.. code-block:: 
+.. code-block::
 
-    {"employees": {"office_worker": [{"firstName": "John", "lastName": "Doe"}, {"firstName": "Peter", "lastName": "Jones"}], 
+    {"employees": {"office_worker": [{"firstName": "John", "lastName": "Doe"}, {"firstName": "Peter", "lastName": "Jones"}],
     "writer": {"firstName": "Anna", "lastName": "Smith"}}}
 
 ----
@@ -180,7 +180,7 @@ Printing specific keys from json objects with indenting
 | To print with indenting, in the code above, change the line ``data_str = json.dumps(json_dict)`` to ``data_str = json.dumps(json_dict, indent=4)``.
 | The indented output is below.
 
-.. code-block:: 
+.. code-block::
 
     {
         "employees": {
@@ -210,7 +210,7 @@ Convert a dict to json
 | The cricket dictionary below, with just key value pairs, can be dumped to a json string, then loaded as json.
 
 .. code-block:: python
-    
+
     import json
 
     cricket_dict = {
@@ -224,7 +224,7 @@ Convert a dict to json
 
 | Each value is accessed using keys. e.g. ``cricket_json["player"]`` returns "Sobers".
 
-.. code-block:: 
+.. code-block::
 
     Sobers averaged 57.8
 
@@ -236,7 +236,7 @@ Convert a nested dict to json
 | The sportsman dictionary below, with 4 sport nested dictionaries, can be dumped to a json string, then loaded as json.
 
 .. code-block:: python
-    
+
     import json
 
     spt_dict = {'cricket':{'player':'Sobers','average':'57.8 runs per innings'},
@@ -251,7 +251,7 @@ Convert a nested dict to json
 
 | Each value is accessed using nested keys. e.g. ``spt_json[sport]["player"]`` returns "Sobers" when sport is "cricket".
 
-.. code-block:: 
+.. code-block::
 
     Sobers averaged 57.8 runs per innings
     Locket averaged 4.84 goals per game
@@ -267,7 +267,7 @@ Convert a nested dict to json file
 | The json, j_json, can then be dumped to a json file.
 
 .. code-block:: python
-    
+
     import json
 
     emp_dict = {
@@ -288,9 +288,9 @@ Convert a nested dict to json file
         json.dump(j_json, f, indent=4)
 
 | The contents of the json file are below.
-| THe json string in the file looks just like the python dictionary.
+| The json string in the file looks just like the python dictionary.
 
-.. code-block:: 
+.. code-block::
 
     {
         "employees": {
@@ -382,7 +382,7 @@ Loading a json file
 | The code below loads the json file and prints it.
 
 .. code-block:: python
-    
+
     import json
 
     json_path = "files/afl_premiers_counts.json"
@@ -390,7 +390,7 @@ Loading a json file
         json_data = json.load(f)
         print(json_data)
 
-.. code-block:: 
+.. code-block::
 
     {'premiers': [{'Index': '0', 'Club': 'Essendon', 'Years': '1897-present', 'Premierships Total': '16', 'Premierships Season(s)': '1897, 1901, 1911, 1912, 1923, 1924, 1942, 1946, 1949, 1950, 1962, 1965, 1984, 1985, 1993, 2000', 'Runners-up Total': '14', 'Runners-up Season(s)': '1898, 1902, 1908, 1941, 1943, 1947, 1948, 1951, 1957, 1959, 1968, 1983, 1990, 2001'},...]}
 
@@ -400,13 +400,13 @@ Printing specific keys
 ------------------------
 
 | The code below loads the json file and prints specific keys.
-| The main key to the json file is "premiers". 
+| The main key to the json file is "premiers".
 | This could be obtained using ``j_key = list(json_data.keys())[0]``.
 | The code below prints the names of clubs with 15 or more premierships (up to 2022)
 | Note that the json values are strings and numbers as strings need to be converted to ints as in: ``if int(entry["Premierships Total"]) > 9:``
 
 .. code-block:: python
-    
+
     import json
 
     json_path = "files/afl_premiers_counts.json"
@@ -417,7 +417,7 @@ Printing specific keys
             if int(entry["Premierships Total"]) >= 15:
                 print(f'{entry["Club"]} {entry["Premierships Total"]}')
 
-.. code-block:: 
+.. code-block::
 
     Essendon 16
     Carlton 16
@@ -455,7 +455,7 @@ dump json data to a file
 | The code below does the same processing as a previous example, but dumps the json to a file.
 
 .. code-block:: python
-    
+
     import json
 
     emp_str = """
@@ -485,7 +485,7 @@ dump json data to a file
 
 | The file, employees2.json, contents are shown below.
 
-.. code-block:: 
+.. code-block::
 
     {
         "employees": {
@@ -518,24 +518,24 @@ dump json processed file data to a file
 | ``data = {mainkey: data_list}`` makes the json data.
 
 .. code-block:: python
-    
+
     import json
 
     json_path = "files/afl_premiers_counts.json"
     json_path2 = "files/afl_premiers_top.json"
-    
+
     data_list = []
     keys_to_keep = ["Club", "Premierships Total"]
     mainkey = "premiers"
     with open(json_path, encoding='utf-8') as f:
         json_data = json.load(f)
-        # append data 
+        # append data
         for entry in json_data[mainkey]:
             if int(entry["Premierships Total"]) >=13:
                 entry_dict = {key: entry[key] for key in keys_to_keep}
                 data_list.append(entry_dict)
 
-    data = {mainkey: data_list}      
+    data = {mainkey: data_list}
     # Open a json writer, and use the json.dumps() function to dump data
     with open(json_path2, 'w', encoding='utf-8') as f2:
         json.dump(data, f2, indent=4)
@@ -544,7 +544,7 @@ dump json processed file data to a file
 
 | The file, afl_premiers_top.json, contents are shown below.
 
-.. code-block:: 
+.. code-block::
 
     {
         "premiers": [
