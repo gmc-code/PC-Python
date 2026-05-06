@@ -10,7 +10,7 @@ PC-Python
     :numbered:
 
     introduction/introduction.rst
-
+    introduction/using_IDLE.rst
 
 
 .. toctree::
