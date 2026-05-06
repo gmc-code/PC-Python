@@ -24,11 +24,11 @@ The Editor (Writing Scripts)
 The Shell is great for testing, but it does not save your work. To write
 reusable programs, use the **Editor**.
 
-1. **Open Editor**: Go to ``File > New File``.
+1. **Open Editor**: Go to ``File > New File``. ``Ctrl + N``.
 2. **Write Code**: Enter your Python logic in this window.
-3. **Save**: Go to ``File > Save`` (ensure the file ends in ``.py``).
-4. **Run**: Press ``F5`` or select ``Run > Run Module``. The output will
-    appear in the Shell window.
+3. **Save**: Go to ``File > Save`` (ensure the file ends in ``.py``). ``Ctrl + S``.
+4. **Run**: Press ``F5`` or select ``Run > Run Module``.
+    The output will appear in the Shell window.
 
 Key Features
 ------------
@@ -55,17 +55,17 @@ and press ``Tab`` to see a list of suggestions.
 Common Shortcuts
 ----------------
 
-+-------------------+----------------------------+
-| Action            | Shortcut                   |
-+===================+============================+
-| Run Module        | F5                         |
-+-------------------+----------------------------+
-| New File          | Ctrl + N (Cmd + N on Mac)  |
-+-------------------+----------------------------+
-| Save File         | Ctrl + S (Cmd + S on Mac)  |
-+-------------------+----------------------------+
-| Interrupt Program | Ctrl + C                   |
-+-------------------+----------------------------+
++-------------------+----------------+
+| Action            | Shortcut       |
++===================+================+
+| Run Module        | F5             |
++-------------------+----------------+
+| New File          | Ctrl + N       |
++-------------------+----------------+
+| Save File         | Ctrl + S       |
++-------------------+----------------+
+| Interrupt Program | Ctrl + C       |
++-------------------+----------------+
 
 Using the Debugger
 ------------------
@@ -76,5 +76,77 @@ To find errors in your logic:
 
 .. note::
     IDLE is perfect for beginners, but as your projects grow, you may eventually
-    want to explore larger IDEs like VS Code or PyCharm.
+    want to explore larger IDEs like VS Code.
+
+
+Configuring Options in Python IDLE
+==========================================
+
+IDLE allows you to customize the interface to make your coding environment
+more comfortable. All major settings are found under the configuration menu.
+
+Accessing the Settings
+----------------------
+To open the configuration window:
+
+* **Windows**: Go to ``Options > Configure IDLE``.
+
+Setting Font Face and Size
+--------------------------
+Under the **Fonts/Tabs** tab, you can adjust how your code appears:
+
+* **Font Face**: Choose a "Monospaced" font (like Courier, Consolas, or
+    Menlo). These ensure that every character is the same width, which is
+    essential for keeping Python indentation aligned.
+* **Font Size**: Use the slider or the dropdown menu to increase the
+    point size. This is particularly helpful for high-resolution screens.
+* **Bold**: You can toggle the **Bold** checkbox if you prefer thicker
+    text for better visibility.
+
+Key Configuration Options
+-------------------------
+
+Indentation Width
+~~~~~~~~~~~~~~~~~
+Also found in the **Fonts/Tabs** tab, the "Python Standard" is 4 spaces.
+You can change this value, but it is highly recommended to keep it at 4
+to remain compatible with most Python style guides (PEP 8).
+
+Color Themes
+~~~~~~~~~~~~
+In the **Highlights** tab, you can change the color scheme:
+
+* **Built-in Themes**: You can switch between "IDLE Classic", "IDLE New",
+    and "IDLE Dark".
+* **Custom Themes**: You can click on specific elements (like "Strings"
+    or "Comments") and choose custom colors to build your own dark mode
+    or high-contrast theme.
+
+Startup Preferences
+~~~~~~~~~~~~~~~~~~~
+In the **General** tab, look for the "At Startup" section:
+
+* **Open Edit Window**: Set IDLE to open a blank script file immediately
+    instead of the Interactive Shell.
+* **Open Shell Window**: The default setting; opens the interactive
+    prompt first.
+
+Key Bindings (Shortcuts)
+-----------------------
+Under the **Keys** tab, you can see a list of every shortcut IDLE uses.
+If you are used to shortcuts from other editors, you can
+select a different "Built-in Key Set" or create your own custom
+mappings for actions like "Save" or "Find".
+
+Saving Your Changes
+-------------------
+1. Click **Apply** to see the changes immediately without closing the
+    window.
+2. Click **OK** to save your settings and return to coding.
+
+.. tip::
+    If you use a high-DPI monitor and the icons or text still look tiny
+    after changing the font size, you may need to adjust your OS-level
+    scaling settings, as IDLE is a bit older and sometimes struggles
+    with modern 4K displays.
 
