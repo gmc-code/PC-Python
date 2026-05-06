@@ -40,8 +40,6 @@ extensions = [
 # 'nbsphinx',
 # 'sphinxcontrib.jupyter',
 
-# https://github.com/js-parsons/js-parsons
-
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -95,12 +93,8 @@ html_static_path = ['_static']
 
 # Use custom css
 html_css_files = ["css/custom.css",
-    "parsons/css/parsons.css",
 ]
 
-html_js_files = [
-    "parsons/js/parsons.js",
-]
 
 
 # html_static_path = ['../_static/'] # for jupyter
