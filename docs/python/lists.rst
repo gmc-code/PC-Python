@@ -92,7 +92,7 @@ Multiple Choice Questions
     :show-instant-feedback:
     :enable-instant-feedback:
     :shuffle_questions:
-    :num_questions: 10
+    :num_questions: 5
 
 
     .. multichoice::
@@ -272,7 +272,7 @@ Multiple Choice Questions
     :show-instant-feedback:
     :enable-instant-feedback:
     :shuffle_questions:
-    :num_questions: 10
+    :num_questions: 5
 
 
     .. multichoice::
@@ -454,7 +454,7 @@ Multiple Choice Questions
     :show-instant-feedback:
     :enable-instant-feedback:
     :shuffle_questions:
-    :num_questions: 10
+    :num_questions: 5
 
 
     .. multichoice::
@@ -627,7 +627,7 @@ Multiple Choice Questions
     :show-instant-feedback:
     :enable-instant-feedback:
     :shuffle_questions:
-    :num_questions: 10
+    :num_questions: 5
 
 
     .. multichoice::
