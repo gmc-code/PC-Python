@@ -199,11 +199,12 @@ Multiple Choice Questions
 Deleting Items from a List
 ==========================
 
-Python provides several ways to remove items depending on whether you know the item's **value** or its **position**:
+Python provides several ways to remove items depending on whether you know the item's **value**, its **position**, or if you want to wipe the list completely:
 
 * ``.remove(item)``: Deletes the **first matching item** by value.
 * ``.pop(index)``: Removes and returns the item at a specific index. If no index is given, it removes the **last item**.
 * ``del list[index]``: Deletes an item at a specific index using the ``del`` statement.
+* ``.clear()``: Removes **all items** from the list, leaving it completely empty ``[]``.
 
 .. code-block:: python
 
@@ -217,6 +218,10 @@ Python provides several ways to remove items depending on whether you know the i
 
     # Deletes the item at index 1 ("cat")
     del pets[1]         # Result: ["fish"]
+
+    # Wipes all remaining items from the list
+    pets.clear()        # Result: []
+
 
 Quiz: Deleting Items
 --------------------
@@ -379,26 +384,33 @@ Multiple Choice Questions
 Sorting and Reversing Lists
 ===========================
 
-You can reorder the items inside a list using these simple methods:
+You can reorder the items inside a list using methods that modify the list in place, or use functions that create a new sorted list:
 
-* ``.sort()``: Sorts the list in **ascending order** (alphabetical for text, smallest-to-largest for numbers).
-* ``.sort(reverse=True)``: Sorts the list in **descending order**.
-* ``.reverse()``: Reverses the current order of elements **without** alphabetizing or numerical sorting.
+* ``.sort()``: Sorts the list in **ascending order** in place (alphabetical for text, smallest-to-largest for numbers).
+* ``.sort(reverse=True)``: Sorts the list in **descending order** in place.
+* ``sorted(iterable)``: Returns a **new** sorted list without modifying the original list. Can also take ``reverse=True``.
+* ``.reverse()``: Reverses the current order of elements in place **without** alphabetizing or numerical sorting.
 
 .. code-block:: python
 
     scores = [45, 12, 89, 33]
 
-    # Sort in ascending order
+    # Sort in ascending order (modifies original list)
     scores.sort()             # Result: [12, 33, 45, 89]
 
     # Sort in descending order
     scores.sort(reverse=True) # Result: [89, 45, 33, 12]
 
+    # Using sorted() to get a new list (original stays unchanged)
+    numbers = [5, 2, 8, 1]
+    sorted_numbers = sorted(numbers) # Result: [1, 2, 5, 8]
+    # numbers is still [5, 2, 8, 1]
+
     colors = ["red", "blue", "green"]
 
-    # Simply flip the list order
+    # Simply flip the list order in place
     colors.reverse()          # Result: ["green", "blue", "red"]
+
 
 Quiz: Sorting and Reversing
 ---------------------------
@@ -569,7 +581,8 @@ Iterating means going through items in a list one by one. We use a **for loop** 
 
     # Loop through each item in the list
     for player in team:
-        print("Welcome to the team, " + player + "!")
+        print(f"Welcome to the team, {player}!")
+
 
 Quiz: Iterating Through Lists
 -----------------------------
@@ -618,6 +631,7 @@ Code Ordering Examples
     for name in names:
         if name == "Alice":
             print("Hello Alice!")
+
 
 Multiple Choice Questions
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -699,34 +713,5 @@ Multiple Choice Questions
         [ ] ["a", "b"] | Incorrect. The loop prints elements individually.
         [ ] a b | Incorrect. No space separator was specified.
 
-
-    .. multichoice::
-
-        What does the ``break`` statement do inside a ``for`` loop?
-
-        [ ] Skips the current item and moves to the next item | Incorrect. Skipping the current item is done by continue.
-        [x] Immediately terminates the loop | Correct! break stops execution and exits the loop immediately.
-        [ ] Restarts the loop from the first item | Incorrect. break exits the loop.
-        [ ] Pauses the loop for 1 second | Incorrect. time.sleep() pauses execution.
-
-
-    .. multichoice::
-
-        What does the ``continue`` statement do inside a ``for`` loop?
-
-        [ ] Exits the loop entirely | Incorrect. Exiting the loop is done by break.
-        [x] Skips the rest of the current iteration and jumps to the next item | Correct! continue stops current step execution and advances to the next loop item.
-        [ ] Prints the current item | Incorrect. continue affects control flow.
-        [ ] Deletes the current item from the list | Incorrect. It does not alter list contents.
-
-
-    .. multichoice::
-
-        What will ``scores = [5, 10]; total = 0; for s in scores: total += s; print(total)`` output?
-
-        [ ] 5 | Incorrect. Both numbers are added.
-        [ ] 10 | Incorrect. 5 + 10 = 15.
-        [x] 15 | Correct! 0 + 5 = 5, then 5 + 10 = 15.
-        [ ] 510 | Incorrect. Integers are added numerically, not concatenated.
 
 
