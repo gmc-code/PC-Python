@@ -1,5 +1,5 @@
 ===========================
-Lists
+Python Lists Guide (Year 7)
 ===========================
 
 A **list** in Python is used to store multiple items in a single variable. Lists are ordered, changeable, and created using square brackets ``[]``.
@@ -11,13 +11,14 @@ A **list** in Python is used to store multiple items in a single variable. Lists
 
 --------------------------------------------------
 
-1. Adding Items to a List
-=========================
+Adding Items to a List
+======================
 
-To add new items to an existing list, Python gives us two primary methods:
+To add new items to an existing list, Python gives us three primary methods:
 
 * ``.append(item)``: Adds a single item to the **very end** of the list.
 * ``.insert(index, item)``: Adds an item at a **specific position (index)**. Remember that Python counts starting from ``0``.
+* ``.extend(iterable)``: Appends **multiple items** from another list (or iterable) to the end of the current list.
 
 .. code-block:: python
 
@@ -29,28 +30,177 @@ To add new items to an existing list, Python gives us two primary methods:
     # Inserts "map" at index 1 (second position)
     inventory.insert(1, "map")   # Result: ["sword", "map", "shield", "potion"]
 
+    # Adds multiple items from another list to the end
+    more_items = ["bow", "arrow"]
+    inventory.extend(more_items) # Result: ["sword", "map", "shield", "potion", "bow", "arrow"]
+
 Quiz: Adding Items
 ------------------
+
+Fill-in-the-Blanks (Cloze)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. cloze::
     :instructions: Complete the following sentences by filling in the blanks.
 
-    1. To add an item to the end of a list, you use the @@.append()@@ method.
-    2. The @@.insert()@@ method allows you to place an item at a specific position by index.
-    3. Python list indices always start counting from the number @@0@@.
-    4. Lists in Python are created using square @@brackets@@.
-    5. Using ``.append("dragon")`` puts the new item at the very @@end@@ of your list.
+    1. To add a single new item to the very end of a list, use the @@.append()@@ method.
+    2. To place an item at a specific position in a list, use the @@.insert()@@ method.
+    3. To add all items from another list to the end of your current list, use the @@.extend()@@ method.
+    4. Python list indices always start counting from the number @@0@@.
+    5. Lists in Python are defined using square @@brackets@@.
+
+Code Ordering Examples
+~~~~~~~~~~~~~~~~~~~~~~
+
+**Example 1:** Create an inventory list, add a shield to the end, and print the result.
+
+.. ordering::
+
+    inventory = ["sword"]
+    inventory.append("shield")
+    print(inventory)
+
+----
+
+**Example 2:** Create a fruit list, insert a mango at the front (index 0), and print the list.
+
+.. ordering::
+
+    fruits = ["apple", "banana"]
+    fruits.insert(0, "mango")
+    print(fruits)
+
+----
+
+**Example 3:** Create a list of primary colors, extend it with secondary colors, and print the total list.
+
+.. ordering::
+
+    primary = ["red", "blue"]
+    secondary = ["green", "yellow"]
+    primary.extend(secondary)
+    print(primary)
+
+Multiple Choice Questions
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. mcqgroup::
+    :nav_position: both
+    :show-instant-feedback:
+    :enable-instant-feedback:
+    :shuffle_questions:
+    :num_questions: 10
+
+
+    .. multichoice::
+
+        Which method adds a single item to the very end of a Python list?
+
+        [x] .append() | Correct! .append() adds one element to the end.
+        [ ] .insert() | Incorrect. .insert() requires a specific index position.
+        [ ] .extend() | Incorrect. .extend() is used to combine another list into the current list.
+        [ ] .add() | Incorrect. Python lists do not have an .add() method.
+
+
+    .. multichoice::
+
+        Where does ``inventory.insert(0, "map")`` place the string ``"map"``?
+
+        [x] At index 0 (the very start of the list) | Correct! Index 0 is the first position.
+        [ ] At index 1 (the second position) | Incorrect. Index 0 refers to the first position.
+        [ ] At the end of the list | Incorrect. To add to the end, use .append().
+        [ ] It replaces whatever was at index 0 | Incorrect. .insert() shifts existing items right without overwriting them.
+
+
+    .. multichoice::
+
+        What happens if you use ``.extend(["a", "b"])`` on a list named ``letters``?
+
+        [ ] Only "a" is added to the list | Incorrect. .extend() adds all items from the passed list.
+        [ ] A list containing ["a", "b"] is inserted as a single nested element | Incorrect. That would happen if you used .append(["a", "b"]).
+        [x] "a" and "b" are added individually to the end of ``letters`` | Correct! .extend() unwraps the list and adds each element.
+        [ ] An error is raised | Incorrect. .extend() takes an iterable like a list as its argument.
+
+
+    .. multichoice::
+
+        Which code block correctly adds ``"dragon"`` as the second item in a list named ``monsters``?
+
+        [ ] monsters.append("dragon") | Incorrect. .append() places items at the end.
+        [x] monsters.insert(1, "dragon") | Correct! Index 1 represents the second position in a list.
+        [ ] monsters.extend("dragon") | Incorrect. .extend() with a string will unpack every character ('d', 'r', 'a'...) separately.
+        [ ] monsters.insert(2, "dragon") | Incorrect. Index 2 represents the third position.
+
+
+    .. multichoice::
+
+        What is the difference between ``.append()`` and ``.extend()`` when passed a list ``[1, 2]``?
+
+        [x] .append() adds the list as 1 single element, while .extend() adds 1 and 2 as separate elements | Correct! .append() keeps nested structures while .extend() flattens them.
+        [ ] .append() adds elements to the start, while .extend() adds to the end | Incorrect. Both add to the end of the list.
+        [ ] .append() works only on numbers, while .extend() works only on strings | Incorrect. Both work with any data type.
+        [ ] There is no difference between them | Incorrect. They handle list arguments differently.
+
+
+    .. multichoice::
+
+        What will ``items = ["book"]; items.extend(["pen", "ruler"]); print(len(items))`` output?
+
+        [ ] 1 | Incorrect. Two new items were added.
+        [ ] 2 | Incorrect. The original item "book" remains in the list.
+        [x] 3 | Correct! "book", "pen", and "ruler" make 3 items in total.
+        [ ] 4 | Incorrect. Exactly 2 items were added to 1 existing item.
+
+
+    .. multichoice::
+
+        How do you add multiple items from ``new_scores`` into an existing list ``all_scores``?
+
+        [ ] all_scores.add(new_scores) | Incorrect. .add() is not a list method.
+        [ ] all_scores.insert(new_scores) | Incorrect. .insert() requires an index argument.
+        [x] all_scores.extend(new_scores) | Correct! .extend() combines elements from new_scores into all_scores.
+        [ ] all_scores.push(new_scores) | Incorrect. .push() is used in JavaScript, not Python.
+
+
+    .. multichoice::
+
+        What bracket symbol must be used when creating a new list?
+
+        [ ] Curly braces {} | Incorrect. {} creates dictionaries or sets.
+        [ ] Parentheses () | Incorrect. () creates tuples or surrounds function arguments.
+        [x] Square brackets [] | Correct! Lists use square brackets [].
+        [ ] Angle brackets <> | Incorrect. <> are comparison operators in Python.
+
+
+    .. multichoice::
+
+        Given ``nums = [10, 30]``, which command makes the list ``[10, 20, 30]``?
+
+        [ ] nums.append(20) | Incorrect. .append(20) makes [10, 30, 20].
+        [x] nums.insert(1, 20) | Correct! Index 1 places 20 between 10 and 30.
+        [ ] nums.extend(20) | Incorrect. Integers are not iterable in .extend().
+        [ ] nums.insert(20, 1) | Incorrect. The first argument of .insert() must be the index (1), not the value (20).
+
+
+    .. multichoice::
+
+        What happens if you run ``data = [1, 2]; data.extend("34")``?
+
+        [x] ``data`` becomes ``[1, 2, '3', '4']`` | Correct! Strings are iterable, so .extend() adds each character as an item.
+        [ ] ``data`` becomes ``[1, 2, '34']`` | Incorrect. .extend() iterates through the string characters.
+        [ ] Raises a TypeError | Incorrect. Strings are valid iterables for .extend().
+        [ ] ``data`` becomes ``[1, 2, 34]`` | Incorrect. The items added are strings ('3', '4'), not integers.
 
 --------------------------------------------------
 
-2. Deleting Items from a List
-=============================
+Deleting Items from a List
+==========================
 
 Python provides several ways to remove items depending on whether you know the item's **value** or its **position**:
 
 * ``.remove(item)``: Deletes the **first matching item** by value.
 * ``.pop(index)``: Removes and returns the item at a specific index. If no index is given, it removes the **last item**.
-* ``del list[index]``: Deletes an item at a specific index using the ``del`` keyword.
+* ``del list[index]``: Deletes an item at a specific index using the ``del`` statement.
 
 .. code-block:: python
 
@@ -68,19 +218,163 @@ Python provides several ways to remove items depending on whether you know the i
 Quiz: Deleting Items
 --------------------
 
+Fill-in-the-Blanks (Cloze)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. cloze::
     :instructions: Complete the following sentences by filling in the blanks.
 
-    1. The @@.remove()@@ method removes an item by its value, not its index position.
-    2. If you don't specify an index inside ``.pop()``, it automatically removes the @@last@@ item in the list.
-    3. To delete an item using its index position, you can use ``.pop()`` or the @@del@@ keyword.
-    4. The ``.remove()`` method looks for the item's @@value@@ rather than its index number.
-    5. Trying to ``.remove()`` an item that does not exist in the list will cause Python to raise an @@IndexError@@.
+    1. To delete an item by value rather than position, use the @@.remove()@@ method.
+    2. To delete and return an item by index, use the @@.pop()@@ method.
+    3. If no argument is passed to ``.pop()``, it automatically removes the @@last@@ item.
+    4. You can use the @@del@@ keyword followed by ``list[index]`` to delete an item at a specific position.
+    5. Attempting to ``.remove()`` an item that does not exist in the list raises a @@ValueError@@.
+
+Code Ordering Examples
+~~~~~~~~~~~~~~~~~~~~~~
+
+**Example 1:** Create a list of animals, remove `"dog"` by value, and print the remaining list.
+
+.. ordering::
+
+    animals = ["cat", "dog", "bird"]
+    animals.remove("dog")
+    print(animals)
+
+----
+
+**Example 2:** Create a scores list, pop the first score (index 0), and print the popped score.
+
+.. ordering::
+
+    scores = [100, 85, 90]
+    removed_score = scores.pop(0)
+    print(removed_score)
+
+----
+
+**Example 3:** Create a list of colors, delete the middle color using `del`, and print the list.
+
+.. ordering::
+
+    colors = ["red", "green", "blue"]
+    del colors[1]
+    print(colors)
+
+Multiple Choice Questions
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. mcqgroup::
+    :nav_position: both
+    :show-instant-feedback:
+    :enable-instant-feedback:
+    :shuffle_questions:
+    :num_questions: 10
+
+
+    .. multichoice::
+
+        Which method removes an item by its value rather than its index?
+
+        [x] .remove() | Correct! .remove() searches for a matching value and deletes it.
+        [ ] .pop() | Incorrect. .pop() uses index numbers.
+        [ ] del | Incorrect. del uses index brackets.
+        [ ] .clear() | Incorrect. .clear() deletes all items in a list.
+
+
+    .. multichoice::
+
+        What happens when you execute ``nums = [10, 20, 30]; nums.pop()``?
+
+        [ ] 10 is removed | Incorrect. Without an argument, .pop() targets the last item.
+        [ ] 20 is removed | Incorrect. Index 1 (20) is only removed if you pass .pop(1).
+        [x] 30 is removed | Correct! Calling .pop() with no parameters removes the last item.
+        [ ] An error occurs | Incorrect. .pop() works without parameters on non-empty lists.
+
+
+    .. multichoice::
+
+        If ``items = ["apple", "banana", "apple"]``, what does ``items.remove("apple")`` do?
+
+        [ ] Removes all occurrences of "apple" | Incorrect. .remove() only deletes the first match it finds.
+        [x] Removes only the first "apple" at index 0 | Correct! .remove() stops scanning after finding and deleting the first match.
+        [ ] Removes the last "apple" at index 2 | Incorrect. It searches left-to-right and deletes the first match.
+        [ ] Raises a ValueError | Incorrect. "apple" exists in the list.
+
+
+    .. multichoice::
+
+        How do you delete the item at index 2 using the ``del`` keyword?
+
+        [x] del items[2] | Correct! Proper syntax is del list_name[index].
+        [ ] del(items, 2) | Incorrect. del is a statement, not a function structured like this.
+        [ ] items.del[2] | Incorrect. del is not a method attached to list objects.
+        [ ] del items(2) | Incorrect. List indices must use square brackets [].
+
+
+    .. multichoice::
+
+        What error occurs if you run ``colors = ["red"]; colors.remove("blue")``?
+
+        [ ] IndexError | Incorrect. IndexError occurs when an index is out of bounds.
+        [x] ValueError | Correct! Searching for a non-existent item in .remove() raises a ValueError.
+        [ ] TypeError | Incorrect. Passing a string to .remove() is valid syntax.
+        [ ] NameError | Incorrect. NameError occurs when a variable name is not defined.
+
+
+    .. multichoice::
+
+        Given ``letters = ["a", "b", "c"]``, what does ``popped = letters.pop(1)`` store in ``popped``?
+
+        [ ] "a" | Incorrect. "a" is at index 0.
+        [x] "b" | Correct! .pop(1) removes and returns "b" at index 1.
+        [ ] "c" | Incorrect. "c" is at index 2.
+        [ ] None | Incorrect. .pop() returns the removed value.
+
+
+    .. multichoice::
+
+        Which statement about ``.pop()`` vs ``del`` is true?
+
+        [x] .pop() returns the removed item, whereas del does not | Correct! .pop() can be assigned to a variable to save the removed item.
+        [ ] del can take no arguments, whereas .pop() requires an index | Incorrect. .pop() can take no arguments; del requires a target.
+        [ ] Both remove items exclusively by value | Incorrect. Both remove items by index.
+        [ ] .pop() works on dictionaries only, while del works on lists | Incorrect. Both work on lists.
+
+
+    .. multichoice::
+
+        What will be the value of ``pets`` after ``pets = ["cat", "dog"]; del pets[0]``?
+
+        [ ] ["cat", "dog"] | Incorrect. Index 0 was deleted.
+        [x] ["dog"] | Correct! "cat" at index 0 is removed, leaving ["dog"].
+        [ ] ["cat"] | Incorrect. "cat" was at index 0.
+        [ ] [] | Incorrect. Only index 0 was deleted, not the whole list.
+
+
+    .. multichoice::
+
+        What does ``items = [1, 2, 3]; items.pop(-1)`` remove?
+
+        [ ] The first item (1) | Incorrect. Index -1 refers to the last element.
+        [ ] The second item (2) | Incorrect. Index -1 targets the last position.
+        [x] The last item (3) | Correct! Negative indices count from the end; -1 is the last item.
+        [ ] Raises an IndexError | Incorrect. Negative indexing is valid in Python.
+
+
+    .. multichoice::
+
+        How do you remove ALL items from a list named ``data`` so it becomes ``[]``?
+
+        [ ] data.remove() | Incorrect. .remove() requires an argument.
+        [ ] data.pop(all) | Incorrect. Invalid syntax for .pop().
+        [x] data.clear() | Correct! .clear() removes all elements from a list.
+        [ ] del data | Incorrect. del data deletes the variable entirely, not just its contents.
 
 --------------------------------------------------
 
-3. Sorting and Reversing Lists
-==============================
+Sorting and Reversing Lists
+===========================
 
 You can reorder the items inside a list using these simple methods:
 
@@ -106,19 +400,163 @@ You can reorder the items inside a list using these simple methods:
 Quiz: Sorting and Reversing
 ---------------------------
 
+Fill-in-the-Blanks (Cloze)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. cloze::
     :instructions: Complete the following sentences by filling in the blanks.
 
-    1. Calling ``.sort()`` on a list of words arranges them in @@alphabetical@@ order.
-    2. To sort numbers from highest to lowest, set the parameter inside sort to ``reverse=`` @@True@@.
-    3. The @@.reverse()@@ method flips the order of items without sorting them alphabetically or numerically.
-    4. By default, ``.sort()`` arranges numbers in @@ascending@@ order.
-    5. The method used to rearrange list elements in order is @@.sort()@@.
+    1. To arrange items in ascending or alphabetical order, call the @@.sort()@@ method.
+    2. To sort a list in descending order, pass @@reverse=True@@ into the ``.sort()`` method.
+    3. To flip the order of items without sorting them numerically or alphabetically, use the @@.reverse()@@ method.
+    4. By default, calling ``.sort()`` on numbers orders them from @@smallest@@ to largest.
+    5. Both ``.sort()`` and ``.reverse()`` modify the original list in @@place@@ rather than returning a new list.
+
+Code Ordering Examples
+~~~~~~~~~~~~~~~~~~~~~~
+
+**Example 1:** Create a list of unsorted numbers, sort them in ascending order, and print the result.
+
+.. ordering::
+
+    numbers = [42, 11, 88, 23]
+    numbers.sort()
+    print(numbers)
+
+----
+
+**Example 2:** Create a list of names, sort them in reverse alphabetical order, and print them.
+
+.. ordering::
+
+    names = ["Charlie", "Alice", "Bob"]
+    names.sort(reverse=True)
+    print(names)
+
+----
+
+**Example 3:** Create a list of steps, reverse their order, and print the reversed steps.
+
+.. ordering::
+
+    steps = ["Step 1", "Step 2", "Step 3"]
+    steps.reverse()
+    print(steps)
+
+Multiple Choice Questions
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. mcqgroup::
+    :nav_position: both
+    :show-instant-feedback:
+    :enable-instant-feedback:
+    :shuffle_questions:
+    :num_questions: 10
+
+
+    .. multichoice::
+
+        What does calling ``.sort()`` on a list of strings do by default?
+
+        [x] Sorts them in alphabetical order (A to Z) | Correct! Default sorting for strings is alphabetical.
+        [ ] Sorts them in reverse alphabetical order (Z to A) | Incorrect. Reverse sorting requires reverse=True.
+        [ ] Sorts them by word length | Incorrect. Default sort handles lexicographical order.
+        [ ] Flips the list upside down without sorting | Incorrect. Flipping without sorting is done by .reverse().
+
+
+    .. multichoice::
+
+        What is the result of ``nums = [3, 1, 4]; nums.sort()``?
+
+        [ ] [3, 1, 4] | Incorrect. .sort() modifies the list.
+        [x] [1, 3, 4] | Correct! .sort() orders numbers from smallest to largest.
+        [ ] [4, 3, 1] | Incorrect. Smallest to largest is default.
+        [ ] [1, 4, 3] | Incorrect. Numbers are ordered sequentially.
+
+
+    .. multichoice::
+
+        How do you sort a list of numbers from highest to lowest?
+
+        [ ] numbers.sort(descending=True) | Incorrect. The parameter name is reverse, not descending.
+        [x] numbers.sort(reverse=True) | Correct! Setting reverse=True sorts in descending order.
+        [ ] numbers.reverse(sort=True) | Incorrect. .reverse() does not take a sort argument.
+        [ ] numbers.sort_desc() | Incorrect. No such method exists in Python.
+
+
+    .. multichoice::
+
+        Given ``items = ["a", "c", "b"]``, what does ``items.reverse()`` produce?
+
+        [ ] ["a", "b", "c"] | Incorrect. .reverse() does not sort alphabetically.
+        [x] ["b", "c", "a"] | Correct! It flips the current list order directly.
+        [ ] ["c", "b", "a"] | Incorrect. That would be alphabetical reverse sort.
+        [ ] ["c", "a", "b"] | Incorrect. It flips end-to-end.
+
+
+    .. multichoice::
+
+        What value is returned when you assign ``x = my_list.sort()``?
+
+        [ ] The sorted list | Incorrect. .sort() modifies in place and returns None.
+        [x] None | Correct! Methods that modify lists in place return None.
+        [ ] True | Incorrect. It returns None.
+        [ ] An integer count | Incorrect. It returns None.
+
+
+    .. multichoice::
+
+        What happens if you try to run ``.sort()`` on a list containing both numbers and strings like ``[1, "apple", 2]``?
+
+        [ ] Numbers come first, then strings | Incorrect. Python 3 cannot compare strings and integers directly.
+        [ ] Strings come first, then numbers | Incorrect. Mixed type sorting is not supported automatically.
+        [x] Python raises a TypeError | Correct! Comparing str and int raises a TypeError during sorting.
+        [ ] The list remains unchanged | Incorrect. An exception is thrown.
+
+
+    .. multichoice::
+
+        Which method flips a list's elements end-to-end without comparing their values?
+
+        [ ] .sort() | Incorrect. .sort() compares values.
+        [ ] .extend() | Incorrect. .extend() adds elements.
+        [x] .reverse() | Correct! .reverse() simply reverses index order.
+        [ ] .pop() | Incorrect. .pop() deletes elements.
+
+
+    .. multichoice::
+
+        What will ``vals = [10, 5, 20]; vals.sort(); vals.reverse(); print(vals)`` output?
+
+        [ ] [5, 10, 20] | Incorrect. Sorting then reversing gives descending order.
+        [x] [20, 10, 5] | Correct! Sorting gives [5, 10, 20], and reversing gives [20, 10, 5].
+        [ ] [10, 5, 20] | Incorrect. The methods alter the list.
+        [ ] [5, 20, 10] | Incorrect. Reversing [5, 10, 20] gives [20, 10, 5].
+
+
+    .. multichoice::
+
+        If ``words = ["banana", "apple", "cherry"]``, what is ``words`` after ``words.sort()``?
+
+        [x] ["apple", "banana", "cherry"] | Correct! Alphabetical order.
+        [ ] ["cherry", "banana", "apple"] | Incorrect. Reverse alphabetical.
+        [ ] ["banana", "apple", "cherry"] | Incorrect. List is modified.
+        [ ] ["apple", "cherry", "banana"] | Incorrect. Incorrect alphabetical order.
+
+
+    .. multichoice::
+
+        How does built-in function ``sorted(my_list)`` differ from method ``my_list.sort()``?
+
+        [x] sorted() returns a new sorted list, while .sort() modifies the original list | Correct! sorted() leaves the original list untouched.
+        [ ] sorted() works only on strings, while .sort() works on numbers | Incorrect. Both work on both types.
+        [ ] .sort() returns a new list, while sorted() modifies in place | Incorrect. It is the opposite.
+        [ ] There is no difference | Incorrect. Their return values and side effects differ.
 
 --------------------------------------------------
 
-4. Iterating Through a List
-===========================
+Iterating Through a List
+========================
 
 Iterating means going through items in a list one by one. We use a **for loop** to do this efficiently.
 
@@ -133,54 +571,53 @@ Iterating means going through items in a list one by one. We use a **for loop** 
 Quiz: Iterating Through Lists
 -----------------------------
 
+Fill-in-the-Blanks (Cloze)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. cloze::
     :instructions: Complete the following sentences by filling in the blanks.
 
-    1. We use a @@for@@ loop to visit each item in a list one after another.
-    2. The word following ``for`` in a loop acts as a temporary @@variable@@ to hold the current item.
-    3. A ``for`` loop header in Python must end with a @@colon@@.
-    4. Code inside the loop block must use correct @@indentation@@ to run properly.
-    5. Iteration allows Python to step through every item in a @@sequence@@ like a list.
+    1. To step through each item in a list one by one, use a @@for@@ loop.
+    2. The word following ``for`` in a loop serves as a loop @@variable@@ holding the current item.
+    3. The header line of a ``for`` loop must end with a @@colon@@.
+    4. Code inside the loop block must use four spaces of @@indentation@@ to run properly.
+    5. The built-in function @@len()@@ can be used to find the total number of iterations a loop over a list will make.
 
---------------------------------------------------
+Code Ordering Examples
+~~~~~~~~~~~~~~~~~~~~~~
 
-5. Code Ordering Examples
-=========================
-
-**Example 1:** Create an empty inventory list, add a shield to the end, and print the inventory.
+**Example 1:** Create a list of fruits and use a `for` loop to print each fruit.
 
 .. ordering::
 
-    inventory = []
-    inventory.append("Shield")
-    print(inventory)
+    fruits = ["apple", "banana", "cherry"]
+    for fruit in fruits:
+        print(fruit)
 
 ----
 
-**Example 2:** Create a list of student names, sort them alphabetically, and print the sorted list.
+**Example 2:** Create a list of numbers, calculate their double in a loop, and print each doubled value.
 
 .. ordering::
 
-    names = ["Charlie", "Alice", "Bob"]
-    names.sort()
-    print(names)
+    numbers = [1, 2, 3]
+    for n in numbers:
+        double_val = n * 2
+        print(double_val)
 
 ----
 
-**Example 3:** Build a score list, remove the last score with pop, sort the rest, and print each score.
+**Example 3:** Create a list of names, check if each name is `"Alice"`, and print a greeting when matched.
 
 .. ordering::
 
-    scores = [40, 10, 30, 20]
-    scores.pop()
-    scores.sort()
-    for s in scores:
-        print(s)
+    names = ["Alice", "Bob"]
+    for name in names:
+        if name == "Alice":
+            print("Hello Alice!")
 
---------------------------------------------------
-
-6. Multiple Choice Questions
-============================
+Multiple Choice Questions
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. mcqgroup::
     :nav_position: both
@@ -192,100 +629,101 @@ Quiz: Iterating Through Lists
 
     .. multichoice::
 
-        Which symbol is used to create a list in Python?
+        Which keyword starts a loop that iterates over items in a list?
 
-        [ ] {} | Incorrect. Curly braces {} are used for dictionaries and sets.
-        [ ] () | Incorrect. Parentheses () are used for tuples and function calls.
-        [x] [] | Correct! Square brackets [] define a list in Python.
-        [ ] <> | Incorrect. Angle brackets <> are not list syntax in Python.
-
-
-    .. multichoice::
-
-        What is the index of the first item in a Python list?
-
-        [ ] 1 | Incorrect. Counting in Python starts at 0, not 1.
-        [x] 0 | Correct! Python uses 0-based indexing for lists.
-        [ ] -1 | Incorrect. Index -1 targets the last item in a list.
-        [ ] "first" | Incorrect. List indices must be integers.
+        [x] for | Correct! Python uses for loops to iterate over sequences.
+        [ ] loop | Incorrect. loop is not a Python keyword.
+        [ ] foreach | Incorrect. foreach is used in languages like PHP or C#.
+        [ ] repeat | Incorrect. repeat is not a Python keyword.
 
 
     .. multichoice::
 
-        What does ``items.append("gold")`` do?
+        How many times will the print statement execute in ``for x in [10, 20, 30, 40]: print(x)``?
 
-        [ ] Replaces the first item with "gold" | Incorrect. .append() does not overwrite existing items.
-        [ ] Adds "gold" to the beginning of the list | Incorrect. To add at the start, use .insert(0, "gold").
-        [x] Adds "gold" to the end of the list | Correct! .append() always adds items to the very end.
-        [ ] Deletes "gold" from the list | Incorrect. To delete items, use .remove() or .pop().
-
-
-    .. multichoice::
-
-        Given ``colors = ["red", "green", "blue"]``, what does ``colors.pop(1)`` remove?
-
-        [ ] "red" | Incorrect. "red" is at index 0.
-        [x] "green" | Correct! Index 1 corresponds to "green".
-        [ ] "blue" | Incorrect. "blue" is at index 2.
-        [ ] Nothing, it causes an error | Incorrect. Index 1 exists, so .pop(1) succeeds.
+        [ ] 3 times | Incorrect. There are 4 items in the list.
+        [x] 4 times | Correct! The loop runs once for each item in the list.
+        [ ] 5 times | Incorrect. The loop visits only items in the list.
+        [ ] 1 time | Incorrect. The loop iterates over all items.
 
 
     .. multichoice::
 
-        How do you remove the item ``"apple"`` from ``fruits = ["apple", "banana"]`` if you don't know its index?
+        What character MUST end the first line of a ``for`` loop statement?
 
-        [x] fruits.remove("apple") | Correct! .remove() finds and deletes an item by its value.
-        [ ] fruits.pop("apple") | Incorrect. .pop() expects an integer index, not a string value.
-        [ ] del fruits("apple") | Incorrect. del uses bracket syntax with an index (e.g., del fruits[0]).
-        [ ] fruits.delete("apple") | Incorrect. Python lists do not have a .delete() method.
-
-
-    .. multichoice::
-
-        What will be the value of ``numbers`` after running ``numbers = [3, 1, 4]`` and ``numbers.sort()``?
-
-        [ ] [4, 3, 1] | Incorrect. .sort() defaults to ascending order (smallest to largest).
-        [x] [1, 3, 4] | Correct! .sort() reorders elements from lowest to highest.
-        [ ] [3, 1, 4] | Incorrect. .sort() modifies the list in place.
-        [ ] [1, 4, 3] | Incorrect. All numbers are sorted, so 3 comes before 4.
+        [ ] Semicolon ; | Incorrect. Python uses colons for block headers.
+        [x] Colon : | Correct! Compound statements in Python end header lines with a colon.
+        [ ] Period . | Incorrect. Python does not use periods for headers.
+        [ ] Comma , | Incorrect. Commas separate items, not header blocks.
 
 
     .. multichoice::
 
-        How do you sort a list named ``scores`` from highest to lowest?
+        In ``for item in inventory:``, what does ``item`` represent?
 
-        [ ] scores.sort(descending=True) | Incorrect. The parameter name is reverse, not descending.
-        [ ] scores.reverse(sort=True) | Incorrect. reverse() takes no sort argument.
-        [x] scores.sort(reverse=True) | Correct! Setting reverse=True sorts in descending order.
-        [ ] scores.sort_down() | Incorrect. There is no .sort_down() method in Python.
-
-
-    .. multichoice::
-
-        What does ``animals.reverse()`` do to ``animals = ["cat", "dog"]``?
-
-        [ ] Sorts them alphabetically to ["cat", "dog"] | Incorrect. .reverse() flips current order without sorting.
-        [x] Changes the list to ["dog", "cat"] | Correct! It reverses the order of items in place.
-        [ ] Deletes all items in the list | Incorrect. To delete all items, use .clear().
-        [ ] Prints the items backwards without changing the list | Incorrect. .reverse() mutates the list directly.
+        [ ] The entire list ``inventory`` | Incorrect. ``item`` represents one element at a time.
+        [x] A variable that holds the current item during each iteration | Correct! It temporarily stores the active element during that loop step.
+        [ ] An integer index number starting from 0 | Incorrect. It holds the actual value, not the index.
+        [ ] A function name | Incorrect. It is an iteration variable.
 
 
     .. multichoice::
 
-        Which code correctly prints each item in ``tools = ["hammer", "saw"]``?
+        What error occurs if you forget to indent code inside a ``for`` loop body?
 
-        [x] for t in tools: print(t) | Correct! A standard for loop iterates over each element in a list.
-        [ ] loop tools as t: print(t) | Incorrect. "loop" is not a Python keyword for iteration.
-        [ ] foreach (tools as t) { print(t); } | Incorrect. foreach syntax belongs to PHP/C#, not Python.
-        [ ] print(tools.loop()) | Incorrect. Lists do not have a .loop() method.
+        [x] IndentationError | Correct! Python requires indented blocks after colons.
+        [ ] SyntaxError | Incorrect. Specifically, Python raises IndentationError.
+        [ ] NameError | Incorrect. Missing indentation causes an IndentationError.
+        [ ] TypeError | Incorrect. Indentation governs block structures.
 
 
     .. multichoice::
 
-        What happens if you run ``nums = [10, 20]`` followed by ``print(nums[2])``?
+        Which function can be combined with ``range()`` to loop using index numbers?
 
-        [ ] Prints 20 | Incorrect. 20 is at index 1.
-        [ ] Prints None | Incorrect. Accessing an out-of-range index raises an error.
-        [x] Raises an IndexError | Correct! Indices are 0 and 1, so index 2 is out of range.
-        [ ] Prints 0 | Incorrect. Python does not return 0 for out-of-bounds indices.
+        [ ] count() | Incorrect.
+        [x] len() | Correct! range(len(my_list)) generates index positions 0 to len-1.
+        [ ] total() | Incorrect.
+        [ ] size() | Incorrect.
+
+
+    .. multichoice::
+
+        What will ``for c in ["a", "b"]: print(c, end="")`` print?
+
+        [ ] a\nb | Incorrect. end="" prevents newlines.
+        [x] ab | Correct! It prints "a" and "b" continuously on one line.
+        [ ] ["a", "b"] | Incorrect. The loop prints elements individually.
+        [ ] a b | Incorrect. No space separator was specified.
+
+
+    .. multichoice::
+
+        What does the ``break`` statement do inside a ``for`` loop?
+
+        [ ] Skips the current item and moves to the next item | Incorrect. Skipping the current item is done by continue.
+        [x] Immediately terminates the loop | Correct! break stops execution and exits the loop immediately.
+        [ ] Restarts the loop from the first item | Incorrect. break exits the loop.
+        [ ] Pauses the loop for 1 second | Incorrect. time.sleep() pauses execution.
+
+
+    .. multichoice::
+
+        What does the ``continue`` statement do inside a ``for`` loop?
+
+        [ ] Exits the loop entirely | Incorrect. Exiting the loop is done by break.
+        [x] Skips the rest of the current iteration and jumps to the next item | Correct! continue stops current step execution and advances to the next loop item.
+        [ ] Prints the current item | Incorrect. continue affects control flow.
+        [ ] Deletes the current item from the list | Incorrect. It does not alter list contents.
+
+
+    .. multichoice::
+
+        What will ``scores = [5, 10]; total = 0; for s in scores: total += s; print(total)`` output?
+
+        [ ] 5 | Incorrect. Both numbers are added.
+        [ ] 10 | Incorrect. 5 + 10 = 15.
+        [x] 15 | Correct! 0 + 5 = 5, then 5 + 10 = 15.
+        [ ] 510 | Incorrect. Integers are added numerically, not concatenated.
+
 
