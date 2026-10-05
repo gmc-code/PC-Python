@@ -1,0 +1,673 @@
+/* ==========================================================================
+   0. Control Panel, Score Output & High-Visibility Palette UI
+   ========================================================================== */
+
+.textselect-global-panel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.textselect-btn-score,
+.textselect-btn-reset {
+  padding: 0.4rem 0.8rem;
+  font-size: 1.0rem;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  border: 1px solid transparent;
+}
+
+.textselect-btn-score {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.textselect-btn-score:hover {
+  background-color: #1d4ed8;
+}
+
+.textselect-btn-score:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: grayscale(100%);
+}
+
+.textselect-btn-reset {
+  background-color: #ffffff;
+  color: #475569;
+  border-color: #cbd5e1;
+}
+
+.textselect-btn-reset:hover {
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+.textselect-output {
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.35rem 0.65rem;
+  border-radius: 6px;
+  margin-left: auto;
+  background-color: #ffffff;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+}
+
+/* Score Accuracy Badges */
+.textselect-output.high { background-color: #dcfce7; color: #15803d; border-color: #bbf7d0; }
+.textselect-output.medium { background-color: #fef9c3; color: #a16207; border-color: #fef08a; }
+.textselect-output.low { background-color: #fee2e2; color: #b91c1c; border-color: #fca5a5; }
+
+/* Color Palette Toolbar in Multi Mode */
+.textselect-palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 0.85rem;
+}
+
+.ts-palette-btn {
+  padding: 0.35rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  border: 2px solid #cbd5e1;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #334155;
+  transition: all 0.15s ease;
+  opacity: 0.85;
+}
+
+.ts-palette-btn:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.ts-palette-btn.active {
+  opacity: 1;
+  transform: scale(1.05);
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #0f172a, 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-color: transparent !important;
+}
+
+/* Palette Button Role Map */
+.ts-palette-btn.ts-color-p, .ts-palette-btn.ts-color-pb, .ts-palette-btn.ts-color-participant, .ts-palette-btn.ts-color-participantb, .ts-palette-btn.ts-color-participantp { color: var(--hsl-participant); border-color: var(--hsl-participant); }
+.ts-palette-btn.ts-color-p.active, .ts-palette-btn.ts-color-pb.active, .ts-palette-btn.ts-color-participant.active, .ts-palette-btn.ts-color-participantb.active, .ts-palette-btn.ts-color-participantp.active { background-color: var(--hsl-participant) !important; color: #ffffff !important; }
+
+.ts-palette-btn.ts-color-r, .ts-palette-btn.ts-color-rb, .ts-palette-btn.ts-color-process, .ts-palette-btn.ts-color-processb, .ts-palette-btn.ts-color-processp { color: var(--hsl-process); border-color: var(--hsl-process); }
+.ts-palette-btn.ts-color-r.active, .ts-palette-btn.ts-color-rb.active, .ts-palette-btn.ts-color-process.active, .ts-palette-btn.ts-color-processb.active, .ts-palette-btn.ts-color-processp.active { background-color: var(--hsl-process) !important; color: #ffffff !important; }
+
+.ts-palette-btn.ts-color-o, .ts-palette-btn.ts-color-ob, .ts-palette-btn.ts-color-circumstance, .ts-palette-btn.ts-color-circumstanceb, .ts-palette-btn.ts-color-circumstancep { color: var(--hsl-circumstance); border-color: var(--hsl-circumstance); }
+.ts-palette-btn.ts-color-o.active, .ts-palette-btn.ts-color-ob.active, .ts-palette-btn.ts-color-circumstance.active, .ts-palette-btn.ts-color-circumstanceb.active, .ts-palette-btn.ts-color-circumstancep.active { background-color: var(--hsl-circumstance) !important; color: #ffffff !important; }
+
+.ts-palette-btn.ts-color-conjunction, .ts-palette-btn.ts-color-conjunctionb, .ts-palette-btn.ts-color-conjunctionp, .ts-palette-btn.ts-color-text_connective, .ts-palette-btn.ts-color-text_connectiveb, .ts-palette-btn.ts-color-text_connectivep, .ts-palette-btn.ts-color-part, .ts-palette-btn.ts-color-partb, .ts-palette-btn.ts-color-partp { color: var(--hsl-conjunction); border-color: var(--hsl-conjunction); }
+.ts-palette-btn.ts-color-conjunction.active, .ts-palette-btn.ts-color-conjunctionb.active, .ts-palette-btn.ts-color-conjunctionp.active, .ts-palette-btn.ts-color-text_connective.active, .ts-palette-btn.ts-color-text_connectiveb.active, .ts-palette-btn.ts-color-text_connectivep.active, .ts-palette-btn.ts-color-part.active, .ts-palette-btn.ts-color-partb.active, .ts-palette-btn.ts-color-partp.active { background-color: var(--hsl-conjunction) !important; color: #ffffff !important; }
+
+.ts-palette-btn.ts-color-theme, .ts-palette-btn.ts-color-themeb, .ts-palette-btn.ts-color-themep { color: var(--hsl-theme); border-color: var(--hsl-theme); }
+.ts-palette-btn.ts-color-theme.active, .ts-palette-btn.ts-color-themeb.active, .ts-palette-btn.ts-color-themep.active { background-color: var(--hsl-theme) !important; color: #ffffff !important; }
+
+.ts-palette-btn.ts-color-rheme, .ts-palette-btn.ts-color-rhemeb, .ts-palette-btn.ts-color-rhemep { color: var(--hsl-rheme); border-color: var(--hsl-rheme); }
+.ts-palette-btn.ts-color-rheme.active, .ts-palette-btn.ts-color-rhemeb.active, .ts-palette-btn.ts-color-rhemep.active { background-color: var(--hsl-rheme) !important; color: #ffffff !important; }
+
+.ts-palette-btn.ts-color-independent, .ts-palette-btn.ts-color-independentb, .ts-palette-btn.ts-color-independentp { color: var(--hsl-independent); border-color: var(--hsl-independent); }
+.ts-palette-btn.ts-color-independent.active, .ts-palette-btn.ts-color-independentb.active, .ts-palette-btn.ts-color-independentp.active { background-color: var(--hsl-independent) !important; color: #ffffff !important; }
+
+.ts-palette-btn.ts-color-dependent, .ts-palette-btn.ts-color-dependentb, .ts-palette-btn.ts-color-dependentp { color: var(--hsl-dependent); border-color: var(--hsl-dependent); }
+.ts-palette-btn.ts-color-dependent.active, .ts-palette-btn.ts-color-dependentb.active, .ts-palette-btn.ts-color-dependentp.active { background-color: var(--hsl-dependent) !important; color: #ffffff !important; }
+
+.ts-palette-btn.ts-color-embedded, .ts-palette-btn.ts-color-embeddedb, .ts-palette-btn.ts-color-embeddedp { color: var(--hsl-embedded); border-color: var(--hsl-embedded); }
+.ts-palette-btn.ts-color-embedded.active, .ts-palette-btn.ts-color-embeddedb.active, .ts-palette-btn.ts-color-embeddedp.active { background-color: var(--hsl-embedded) !important; color: #ffffff !important; }
+
+.ts-palette-btn.ts-color-relative, .ts-palette-btn.ts-color-relativeb, .ts-palette-btn.ts-color-relativep { color: var(--hsl-relative); border-color: var(--hsl-relative); }
+.ts-palette-btn.ts-color-relative.active, .ts-palette-btn.ts-color-relativeb.active, .ts-palette-btn.ts-color-relativep.active { background-color: var(--hsl-relative) !important; color: #ffffff !important; }
+
+.ts-palette-btn.ts-color-projected, .ts-palette-btn.ts-color-projectedb, .ts-palette-btn.ts-color-projectedp { color: var(--hsl-projected); border-color: var(--hsl-projected); }
+.ts-palette-btn.ts-color-projected.active, .ts-palette-btn.ts-color-projectedb.active, .ts-palette-btn.ts-color-projectedp.active { background-color: var(--hsl-projected) !important; color: #ffffff !important; }
+
+.ts-palette-btn.ts-color-premodifier, .ts-palette-btn.ts-color-premodifierb, .ts-palette-btn.ts-color-premodifierp { color: var(--hsl-premodifier); border-color: var(--hsl-premodifier); }
+.ts-palette-btn.ts-color-premodifier.active, .ts-palette-btn.ts-color-premodifierb.active, .ts-palette-btn.ts-color-premodifierp.active { background-color: var(--hsl-premodifier) !important; color: #ffffff !important; }
+
+.ts-palette-btn.ts-color-postmodifier, .ts-palette-btn.ts-color-postmodifierb, .ts-palette-btn.ts-color-postmodifierp { color: var(--hsl-postmodifier); border-color: var(--hsl-postmodifier); }
+.ts-palette-btn.ts-color-postmodifier.active, .ts-palette-btn.ts-color-postmodifierb.active, .ts-palette-btn.ts-color-postmodifierp.active { background-color: var(--hsl-postmodifier) !important; color: #ffffff !important; }
+
+.ts-palette-btn.ts-color-pointer, .ts-palette-btn.ts-color-pointerb, .ts-palette-btn.ts-color-pointerp { color: var(--hsl-pointer); border-color: var(--hsl-pointer); }
+.ts-palette-btn.ts-color-pointer.active, .ts-palette-btn.ts-color-pointerb.active, .ts-palette-btn.ts-color-pointerp.active { background-color: var(--hsl-pointer) !important; color: #ffffff !important; }
+
+.ts-palette-btn.ts-color-numerative, .ts-palette-btn.ts-color-numerativeb, .ts-palette-btn.ts-color-numerativep { color: var(--hsl-numerative); border-color: var(--hsl-numerative); }
+.ts-palette-btn.ts-color-numerative.active, .ts-palette-btn.ts-color-numerativeb.active, .ts-palette-btn.ts-color-numerativep.active { background-color: var(--hsl-numerative) !important; color: #ffffff !important; }
+
+.ts-palette-btn.ts-color-describer, .ts-palette-btn.ts-color-describerb, .ts-palette-btn.ts-color-describerp { color: var(--hsl-describer); border-color: var(--hsl-describer); }
+.ts-palette-btn.ts-color-describer.active, .ts-palette-btn.ts-color-describerb.active, .ts-palette-btn.ts-color-describerp.active { background-color: var(--hsl-describer) !important; color: #ffffff !important; }
+
+.ts-palette-btn.ts-color-classifier, .ts-palette-btn.ts-color-classifierb, .ts-palette-btn.ts-color-classifierp { color: var(--hsl-classifier); border-color: var(--hsl-classifier); }
+.ts-palette-btn.ts-color-classifier.active, .ts-palette-btn.ts-color-classifierb.active, .ts-palette-btn.ts-color-classifierp.active { background-color: var(--hsl-classifier) !important; color: #ffffff !important; }
+
+.ts-palette-btn.ts-color-thing, .ts-palette-btn.ts-color-thingb, .ts-palette-btn.ts-color-thingp { color: var(--hsl-thing); border-color: var(--hsl-thing); }
+.ts-palette-btn.ts-color-thing.active, .ts-palette-btn.ts-color-thingb.active, .ts-palette-btn.ts-color-thingp.active { background-color: var(--hsl-thing) !important; color: #ffffff !important; }
+
+.ts-palette-btn.ts-color-qualifier, .ts-palette-btn.ts-color-qualifierb, .ts-palette-btn.ts-color-qualifierp { color: var(--hsl-qualifier); border-color: var(--hsl-qualifier); }
+.ts-palette-btn.ts-color-qualifier.active, .ts-palette-btn.ts-color-qualifierb.active, .ts-palette-btn.ts-color-qualifierp.active { background-color: var(--hsl-qualifier) !important; color: #ffffff !important; }
+
+.ts-palette-btn.ts-color-iv, .ts-palette-btn.ts-color-ivb { color: var(--hsl-participant); border-color: var(--hsl-participant); }
+.ts-palette-btn.ts-color-iv.active, .ts-palette-btn.ts-color-ivb.active { background-color: var(--hsl-participant) !important; color: #ffffff !important; }
+
+.ts-palette-btn.ts-color-dv, .ts-palette-btn.ts-color-dvb { color: var(--hsl-process); border-color: var(--hsl-process); }
+.ts-palette-btn.ts-color-dv.active, .ts-palette-btn.ts-color-dvb.active { background-color: var(--hsl-process) !important; color: #ffffff !important; }
+
+.ts-palette-btn.ts-color-cv, .ts-palette-btn.ts-color-cvb { color: var(--hsl-circumstance); border-color: var(--hsl-circumstance); }
+.ts-palette-btn.ts-color-cv.active, .ts-palette-btn.ts-color-cvb.active { background-color: var(--hsl-circumstance) !important; color: #ffffff !important; }
+
+
+/* ==========================================================================
+   1. Base Component Layout & Structure
+   ========================================================================== */
+
+.textselect-block {
+  padding: 0.8rem;
+  margin-bottom: 0.8rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
+}
+
+.textselect-instructions {
+  font-weight: 600;
+  margin-bottom: 0.8em;
+  font-size: 1.15em;
+  color: #334155;
+}
+
+.textselect-content {
+  font-family: "Consolas", "Courier New", Courier, monospace;
+  font-size: 1.05em;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+  color: #0f172a;
+}
+
+/* Ensure clean line breaks while allowing soft text wrapping within lines */
+.textselect-content .ts-line {
+  display: block;
+  margin: 0;
+  padding: 0;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+
+/* ==========================================================================
+   2. Instruction Text & Static Role Colors
+   ========================================================================== */
+
+.ts-static-role {
+  padding: 0.1em 0.3em;
+  border-radius: 0.25em;
+  font-weight: 500;
+  display: inline;
+  vertical-align: baseline;
+  border: 1px solid currentColor;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+.textselect-block.ts-color-p .textselect-instructions,
+.textselect-block.ts-color-pb .textselect-instructions,
+.textselect-block.ts-color-participant .textselect-instructions,
+.textselect-block.ts-color-participantb .textselect-instructions,
+.textselect-block.ts-color-participantp .textselect-instructions,
+.textselect-block.ts-color-red .textselect-instructions,
+.ts-static-role.ts-role-p,
+.ts-static-role.ts-role-pb,
+.ts-static-role.ts-role-participant,
+.ts-static-role.ts-role-participantb,
+.ts-static-role.ts-role-participantp,
+.ts-static-role.ts-role-red {
+  color: var(--hsl-participant);
+  background-color: color-mix(in srgb, var(--hsl-participant) 15%, transparent);
+}
+
+.textselect-block.ts-color-r .textselect-instructions,
+.textselect-block.ts-color-rb .textselect-instructions,
+.textselect-block.ts-color-process .textselect-instructions,
+.textselect-block.ts-color-processb .textselect-instructions,
+.textselect-block.ts-color-processp .textselect-instructions,
+.textselect-block.ts-color-green .textselect-instructions,
+.ts-static-role.ts-role-r,
+.ts-static-role.ts-role-rb,
+.ts-static-role.ts-role-process,
+.ts-static-role.ts-role-processb,
+.ts-static-role.ts-role-processp,
+.ts-static-role.ts-role-green {
+  color: var(--hsl-process);
+  background-color: color-mix(in srgb, var(--hsl-process) 15%, transparent);
+}
+
+.textselect-block.ts-color-o .textselect-instructions,
+.textselect-block.ts-color-ob .textselect-instructions,
+.textselect-block.ts-color-circumstance .textselect-instructions,
+.textselect-block.ts-color-circumstanceb .textselect-instructions,
+.textselect-block.ts-color-circumstancep .textselect-instructions,
+.textselect-block.ts-color-blue .textselect-instructions,
+.ts-static-role.ts-role-o,
+.ts-static-role.ts-role-ob,
+.ts-static-role.ts-role-circumstance,
+.ts-static-role.ts-role-circumstanceb,
+.ts-static-role.ts-role-circumstancep,
+.ts-static-role.ts-role-blue {
+  color: var(--hsl-circumstance);
+  background-color: color-mix(in srgb, var(--hsl-circumstance) 15%, transparent);
+}
+
+.textselect-block.ts-color-conjunction .textselect-instructions,
+.textselect-block.ts-color-conjunctionb .textselect-instructions,
+.textselect-block.ts-color-conjunctionp .textselect-instructions,
+.textselect-block.ts-color-text_connective .textselect-instructions,
+.textselect-block.ts-color-text_connectiveb .textselect-instructions,
+.textselect-block.ts-color-text_connectivep .textselect-instructions,
+.textselect-block.ts-color-part .textselect-instructions,
+.textselect-block.ts-color-partb .textselect-instructions,
+.textselect-block.ts-color-partp .textselect-instructions,
+.ts-static-role.ts-role-conjunction,
+.ts-static-role.ts-role-conjunctionb,
+.ts-static-role.ts-role-conjunctionp,
+.ts-static-role.ts-role-text_connective,
+.ts-static-role.ts-role-text_connectiveb,
+.ts-static-role.ts-role-text_connectivep,
+.ts-static-role.ts-role-part,
+.ts-static-role.ts-role-partb,
+.ts-static-role.ts-role-partp {
+  color: var(--hsl-conjunction);
+  background-color: color-mix(in srgb, var(--hsl-conjunction) 15%, transparent);
+}
+
+.textselect-block.ts-color-theme .textselect-instructions,
+.textselect-block.ts-color-themeb .textselect-instructions,
+.textselect-block.ts-color-themep .textselect-instructions,
+.ts-static-role.ts-role-theme,
+.ts-static-role.ts-role-themeb,
+.ts-static-role.ts-role-themep {
+  color: var(--hsl-theme);
+  background-color: color-mix(in srgb, var(--hsl-theme) 15%, transparent);
+}
+
+.textselect-block.ts-color-rheme .textselect-instructions,
+.textselect-block.ts-color-rhemeb .textselect-instructions,
+.textselect-block.ts-color-rhemep .textselect-instructions,
+.ts-static-role.ts-role-rheme,
+.ts-static-role.ts-role-rhemeb,
+.ts-static-role.ts-role-rhemep {
+  color: var(--hsl-rheme);
+  background-color: color-mix(in srgb, var(--hsl-rheme) 15%, transparent);
+}
+
+.textselect-block.ts-color-independent .textselect-instructions,
+.textselect-block.ts-color-independentb .textselect-instructions,
+.textselect-block.ts-color-independentp .textselect-instructions,
+.ts-static-role.ts-role-independent,
+.ts-static-role.ts-role-independentb,
+.ts-static-role.ts-role-independentp {
+  color: var(--hsl-independent);
+  background-color: color-mix(in srgb, var(--hsl-independent) 15%, transparent);
+}
+
+.textselect-block.ts-color-dependent .textselect-instructions,
+.textselect-block.ts-color-dependentb .textselect-instructions,
+.textselect-block.ts-color-dependentp .textselect-instructions,
+.ts-static-role.ts-role-dependent,
+.ts-static-role.ts-role-dependentb,
+.ts-static-role.ts-role-dependentp {
+  color: var(--hsl-dependent);
+  background-color: color-mix(in srgb, var(--hsl-dependent) 15%, transparent);
+}
+
+.textselect-block.ts-color-embedded .textselect-instructions,
+.textselect-block.ts-color-embeddedb .textselect-instructions,
+.textselect-block.ts-color-embeddedp .textselect-instructions,
+.ts-static-role.ts-role-embedded,
+.ts-static-role.ts-role-embeddedb,
+.ts-static-role.ts-role-embeddedp {
+  color: var(--hsl-embedded);
+  background-color: color-mix(in srgb, var(--hsl-embedded) 15%, transparent);
+}
+
+.textselect-block.ts-color-relative .textselect-instructions,
+.textselect-block.ts-color-relativeb .textselect-instructions,
+.textselect-block.ts-color-relativep .textselect-instructions,
+.ts-static-role.ts-role-relative,
+.ts-static-role.ts-role-relativeb,
+.ts-static-role.ts-role-relativep {
+  color: var(--hsl-relative);
+  background-color: color-mix(in srgb, var(--hsl-relative) 15%, transparent);
+}
+
+.textselect-block.ts-color-projected .textselect-instructions,
+.textselect-block.ts-color-projectedb .textselect-instructions,
+.textselect-block.ts-color-projectedp .textselect-instructions,
+.ts-static-role.ts-role-projected,
+.ts-static-role.ts-role-projectedb,
+.ts-static-role.ts-role-projectedp {
+  color: var(--hsl-projected);
+  background-color: color-mix(in srgb, var(--hsl-projected) 15%, transparent);
+}
+
+.textselect-block.ts-color-premodifier .textselect-instructions,
+.textselect-block.ts-color-premodifierb .textselect-instructions,
+.textselect-block.ts-color-premodifierp .textselect-instructions,
+.ts-static-role.ts-role-premodifier,
+.ts-static-role.ts-role-premodifierb,
+.ts-static-role.ts-role-premodifierp {
+  color: var(--hsl-premodifier);
+  background-color: color-mix(in srgb, var(--hsl-premodifier) 15%, transparent);
+}
+
+.textselect-block.ts-color-postmodifier .textselect-instructions,
+.textselect-block.ts-color-postmodifierb .textselect-instructions,
+.textselect-block.ts-color-postmodifierp .textselect-instructions,
+.ts-static-role.ts-role-postmodifier,
+.ts-static-role.ts-role-postmodifierb,
+.ts-static-role.ts-role-postmodifierp {
+  color: var(--hsl-postmodifier);
+  background-color: color-mix(in srgb, var(--hsl-postmodifier) 15%, transparent);
+}
+
+.textselect-block.ts-color-pointer .textselect-instructions,
+.textselect-block.ts-color-pointerb .textselect-instructions,
+.textselect-block.ts-color-pointerp .textselect-instructions,
+.ts-static-role.ts-role-pointer,
+.ts-static-role.ts-role-pointerb,
+.ts-static-role.ts-role-pointerp {
+  color: var(--hsl-pointer);
+  background-color: color-mix(in srgb, var(--hsl-pointer) 15%, transparent);
+}
+
+.textselect-block.ts-color-numerative .textselect-instructions,
+.textselect-block.ts-color-numerativeb .textselect-instructions,
+.textselect-block.ts-color-numerativep .textselect-instructions,
+.ts-static-role.ts-role-numerative,
+.ts-static-role.ts-role-numerativeb,
+.ts-static-role.ts-role-numerativep {
+  color: var(--hsl-numerative);
+  background-color: color-mix(in srgb, var(--hsl-numerative) 15%, transparent);
+}
+
+.textselect-block.ts-color-describer .textselect-instructions,
+.textselect-block.ts-color-describerb .textselect-instructions,
+.textselect-block.ts-color-describerp .textselect-instructions,
+.ts-static-role.ts-role-describer,
+.ts-static-role.ts-role-describerb,
+.ts-static-role.ts-role-describerp {
+  color: var(--hsl-describer);
+  background-color: color-mix(in srgb, var(--hsl-describer) 15%, transparent);
+}
+
+.textselect-block.ts-color-classifier .textselect-instructions,
+.textselect-block.ts-color-classifierb .textselect-instructions,
+.textselect-block.ts-color-classifierp .textselect-instructions,
+.ts-static-role.ts-role-classifier,
+.ts-static-role.ts-role-classifierb,
+.ts-static-role.ts-role-classifierp {
+  color: var(--hsl-classifier);
+  background-color: color-mix(in srgb, var(--hsl-classifier) 15%, transparent);
+}
+
+.textselect-block.ts-color-thing .textselect-instructions,
+.textselect-block.ts-color-thingb .textselect-instructions,
+.textselect-block.ts-color-thingp .textselect-instructions,
+.ts-static-role.ts-role-thing,
+.ts-static-role.ts-role-thingb,
+.ts-static-role.ts-role-thingp {
+  color: var(--hsl-thing);
+  background-color: color-mix(in srgb, var(--hsl-thing) 15%, transparent);
+}
+
+.textselect-block.ts-color-qualifier .textselect-instructions,
+.textselect-block.ts-color-qualifierb .textselect-instructions,
+.textselect-block.ts-color-qualifierp .textselect-instructions,
+.ts-static-role.ts-role-qualifier,
+.ts-static-role.ts-role-qualifierb,
+.ts-static-role.ts-role-qualifierp {
+  color: var(--hsl-qualifier);
+  background-color: color-mix(in srgb, var(--hsl-qualifier) 15%, transparent);
+}
+
+
+/* ==========================================================================
+   3. Themes & Style Options
+   ========================================================================== */
+
+.textselect-block.theme-white {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+
+.textselect-block.theme-light {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
+.textselect-block.ts-style-filled {
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.textselect-block.ts-style-border {
+  background-color: #ffffff !important;
+  border: 2px solid #cbd5e1;
+  box-shadow: none;
+}
+
+.textselect-block.ts-style-plain {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+/* ==========================================================================
+   4. Word & Space Interactive Styles
+   ========================================================================== */
+
+.ts-word {
+  cursor: pointer;
+  padding: 0.1em 0.2em;
+  margin: 0;
+  border-radius: 0.2em;
+  user-select: none;
+  display: inline-block;
+  vertical-align: baseline;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: normal;
+  transition: background-color 0.15s ease;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.ts-static-word {
+  display: inline-block;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: normal;
+  padding: 0;
+  margin: 0;
+}
+
+.ts-static-space {
+  display: inline;
+  white-space: pre-wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.textselect-block:not([data-disabled="true"]) .ts-word:not(.selected):hover {
+  background-color: rgba(148, 163, 184, 0.25);
+}
+
+.ts-space {
+  display: inline;
+  user-select: none;
+  pointer-events: none;
+  white-space: pre-wrap;
+}
+
+
+/* ==========================================================================
+   5. Active Selection Highlights (Single & Multi-Select Modes)
+   ========================================================================== */
+
+.ts-word.ts-sel-p, .ts-word.ts-sel-pb, .ts-word.ts-sel-participant, .ts-word.ts-sel-participantb, .ts-word.ts-sel-participantp, .ts-word.ts-sel-red, .ts-word.ts-sel-iv, .ts-word.ts-sel-ivb { background-color: color-mix(in srgb, var(--hsl-participant) 25%, transparent) !important; color: var(--hsl-participant) !important; }
+
+.ts-word.ts-sel-r, .ts-word.ts-sel-rb, .ts-word.ts-sel-process, .ts-word.ts-sel-processb, .ts-word.ts-sel-processp, .ts-word.ts-sel-green, .ts-word.ts-sel-dv, .ts-word.ts-sel-dvb { background-color: color-mix(in srgb, var(--hsl-process) 25%, transparent) !important; color: var(--hsl-process) !important; }
+
+.ts-word.ts-sel-o, .ts-word.ts-sel-ob, .ts-word.ts-sel-circumstance, .ts-word.ts-sel-circumstanceb, .ts-word.ts-sel-circumstancep, .ts-word.ts-sel-blue, .ts-word.ts-sel-cv, .ts-word.ts-sel-cvb { background-color: color-mix(in srgb, var(--hsl-circumstance) 25%, transparent) !important; color: var(--hsl-circumstance) !important; }
+
+.ts-word.ts-sel-conjunction, .ts-word.ts-sel-conjunctionb, .ts-word.ts-sel-conjunctionp, .ts-word.ts-sel-text_connective, .ts-word.ts-sel-text_connectiveb, .ts-word.ts-sel-text_connectivep, .ts-word.ts-sel-part, .ts-word.ts-sel-partb, .ts-word.ts-sel-partp { background-color: color-mix(in srgb, var(--hsl-conjunction) 25%, transparent) !important; color: var(--hsl-conjunction) !important; font-style: italic; }
+
+.ts-word.ts-sel-theme, .ts-word.ts-sel-themeb, .ts-word.ts-sel-themep { background-color: color-mix(in srgb, var(--hsl-theme) 25%, transparent) !important; color: var(--hsl-theme) !important; font-weight: 600; }
+.ts-word.ts-sel-rheme, .ts-word.ts-sel-rhemeb, .ts-word.ts-sel-rhemep { background-color: color-mix(in srgb, var(--hsl-rheme) 25%, transparent) !important; color: var(--hsl-rheme) !important; }
+
+.ts-word.ts-sel-independent, .ts-word.ts-sel-independentb, .ts-word.ts-sel-independentp { background-color: color-mix(in srgb, var(--hsl-independent) 25%, transparent) !important; color: var(--hsl-independent) !important; }
+.ts-word.ts-sel-dependent, .ts-word.ts-sel-dependentb, .ts-word.ts-sel-dependentp { background-color: color-mix(in srgb, var(--hsl-dependent) 25%, transparent) !important; color: var(--hsl-dependent) !important; }
+.ts-word.ts-sel-embedded, .ts-word.ts-sel-embeddedb, .ts-word.ts-sel-embeddedp { background-color: color-mix(in srgb, var(--hsl-embedded) 25%, transparent) !important; color: var(--hsl-embedded) !important; }
+.ts-word.ts-sel-relative, .ts-word.ts-sel-relativeb, .ts-word.ts-sel-relativep { background-color: color-mix(in srgb, var(--hsl-relative) 25%, transparent) !important; color: var(--hsl-relative) !important; }
+.ts-word.ts-sel-projected, .ts-word.ts-sel-projectedb, .ts-word.ts-sel-projectedp { background-color: color-mix(in srgb, var(--hsl-projected) 25%, transparent) !important; color: var(--hsl-projected) !important; }
+
+.ts-word.ts-sel-premodifier, .ts-word.ts-sel-premodifierb, .ts-word.ts-sel-premodifierp { background-color: color-mix(in srgb, var(--hsl-premodifier) 25%, transparent) !important; color: var(--hsl-premodifier) !important; }
+.ts-word.ts-sel-postmodifier, .ts-word.ts-sel-postmodifierb, .ts-word.ts-sel-postmodifierp { background-color: color-mix(in srgb, var(--hsl-postmodifier) 25%, transparent) !important; color: var(--hsl-postmodifier) !important; }
+
+.ts-word.ts-sel-pointer, .ts-word.ts-sel-pointerb, .ts-word.ts-sel-pointerp { background-color: color-mix(in srgb, var(--hsl-pointer) 25%, transparent) !important; color: var(--hsl-pointer) !important; }
+.ts-word.ts-sel-numerative, .ts-word.ts-sel-numerativeb, .ts-word.ts-sel-numerativep { background-color: color-mix(in srgb, var(--hsl-numerative) 25%, transparent) !important; color: var(--hsl-numerative) !important; }
+.ts-word.ts-sel-describer, .ts-word.ts-sel-describerb, .ts-word.ts-sel-describerp { background-color: color-mix(in srgb, var(--hsl-describer) 25%, transparent) !important; color: var(--hsl-describer) !important; }
+.ts-word.ts-sel-classifier, .ts-word.ts-sel-classifierb, .ts-word.ts-sel-classifierp { background-color: color-mix(in srgb, var(--hsl-classifier) 25%, transparent) !important; color: var(--hsl-classifier) !important; }
+.ts-word.ts-sel-thing, .ts-word.ts-sel-thingb, .ts-word.ts-sel-thingp { background-color: color-mix(in srgb, var(--hsl-thing) 25%, transparent) !important; color: var(--hsl-thing) !important; font-weight: 600; }
+.ts-word.ts-sel-qualifier, .ts-word.ts-sel-qualifierb, .ts-word.ts-sel-qualifierp { background-color: color-mix(in srgb, var(--hsl-qualifier) 25%, transparent) !important; color: var(--hsl-qualifier) !important; }
+
+/* Single Mode Active Highlights Fallback */
+.ts-color-p .ts-word.selected, .ts-color-pb .ts-word.selected, .ts-color-participant .ts-word.selected, .ts-color-participantb .ts-word.selected, .ts-color-participantp .ts-word.selected, .ts-color-red .ts-word.selected, .ts-color-iv .ts-word.selected, .ts-color-ivb .ts-word.selected { background-color: color-mix(in srgb, var(--hsl-participant) 25%, transparent) !important; color: var(--hsl-participant) !important; }
+
+.ts-color-r .ts-word.selected, .ts-color-rb .ts-word.selected, .ts-color-process .ts-word.selected, .ts-color-processb .ts-word.selected, .ts-color-processp .ts-word.selected, .ts-color-green .ts-word.selected, .ts-color-dv .ts-word.selected, .ts-color-dvb .ts-word.selected { background-color: color-mix(in srgb, var(--hsl-process) 25%, transparent) !important; color: var(--hsl-process) !important; }
+
+.ts-color-o .ts-word.selected, .ts-color-ob .ts-word.selected, .ts-color-circumstance .ts-word.selected, .ts-color-circumstanceb .ts-word.selected, .ts-color-circumstancep .ts-word.selected, .ts-color-blue .ts-word.selected, .ts-color-cv .ts-word.selected, .ts-color-cvb .ts-word.selected { background-color: color-mix(in srgb, var(--hsl-circumstance) 25%, transparent) !important; color: var(--hsl-circumstance) !important; }
+
+.ts-color-conjunction .ts-word.selected, .ts-color-conjunctionb .ts-word.selected, .ts-color-conjunctionp .ts-word.selected, .ts-color-text_connective .ts-word.selected, .ts-color-text_connectiveb .textselect-block .ts-word.selected, .ts-color-part .ts-word.selected { background-color: color-mix(in srgb, var(--hsl-conjunction) 25%, transparent) !important; color: var(--hsl-conjunction) !important; font-style: italic; }
+
+.ts-color-theme .ts-word.selected, .ts-color-themeb .ts-word.selected, .ts-color-themep .ts-word.selected { background-color: color-mix(in srgb, var(--hsl-theme) 25%, transparent) !important; color: var(--hsl-theme) !important; font-weight: 600; }
+.ts-color-rheme .ts-word.selected, .ts-color-rhemeb .ts-word.selected, .ts-color-rhemep .ts-word.selected { background-color: color-mix(in srgb, var(--hsl-rheme) 25%, transparent) !important; color: var(--hsl-rheme) !important; }
+
+.ts-color-independent .ts-word.selected, .ts-color-independentb .ts-word.selected, .ts-color-independentp .ts-word.selected { background-color: color-mix(in srgb, var(--hsl-independent) 25%, transparent) !important; color: var(--hsl-independent) !important; }
+.ts-color-dependent .ts-word.selected, .ts-color-dependentb .ts-word.selected, .ts-color-dependentp .ts-word.selected { background-color: color-mix(in srgb, var(--hsl-dependent) 25%, transparent) !important; color: var(--hsl-dependent) !important; }
+.ts-color-embedded .ts-word.selected, .ts-color-embeddedb .ts-word.selected, .ts-color-embeddedp .ts-word.selected { background-color: color-mix(in srgb, var(--hsl-embedded) 25%, transparent) !important; color: var(--hsl-embedded) !important; }
+.ts-color-relative .ts-word.selected, .ts-color-relativeb .ts-word.selected, .ts-color-relativep .ts-word.selected { background-color: color-mix(in srgb, var(--hsl-relative) 25%, transparent) !important; color: var(--hsl-relative) !important; }
+.ts-color-projected .ts-word.selected, .ts-color-projectedb .ts-word.selected, .ts-color-projectedp .ts-word.selected { background-color: color-mix(in srgb, var(--hsl-projected) 25%, transparent) !important; color: var(--hsl-projected) !important; }
+
+.ts-color-premodifier .ts-word.selected, .ts-color-premodifierb .ts-word.selected, .ts-color-premodifierp .ts-word.selected { background-color: color-mix(in srgb, var(--hsl-premodifier) 25%, transparent) !important; color: var(--hsl-premodifier) !important; }
+.ts-color-postmodifier .ts-word.selected, .ts-color-postmodifierb .ts-word.selected, .ts-color-postmodifierp .ts-word.selected { background-color: color-mix(in srgb, var(--hsl-postmodifier) 25%, transparent) !important; color: var(--hsl-postmodifier) !important; }
+
+.ts-color-pointer .ts-word.selected, .ts-color-pointerb .ts-word.selected, .ts-color-pointerp .ts-word.selected { background-color: color-mix(in srgb, var(--hsl-pointer) 25%, transparent) !important; color: var(--hsl-pointer) !important; }
+.ts-color-numerative .ts-word.selected, .ts-color-numerativeb .ts-word.selected, .ts-color-numerativep .ts-word.selected { background-color: color-mix(in srgb, var(--hsl-numerative) 25%, transparent) !important; color: var(--hsl-numerative) !important; }
+.ts-color-describer .ts-word.selected, .ts-color-describerb .ts-word.selected, .ts-color-describerp .ts-word.selected { background-color: color-mix(in srgb, var(--hsl-describer) 25%, transparent) !important; color: var(--hsl-describer) !important; }
+.ts-color-classifier .ts-word.selected, .ts-color-classifierb .ts-word.selected, .ts-color-classifierp .ts-word.selected { background-color: color-mix(in srgb, var(--hsl-classifier) 25%, transparent) !important; color: var(--hsl-classifier) !important; }
+.ts-color-thing .ts-word.selected, .ts-color-thingb .ts-word.selected, .ts-color-thingp .ts-word.selected { background-color: color-mix(in srgb, var(--hsl-thing) 25%, transparent) !important; color: var(--hsl-thing) !important; font-weight: 600; }
+.ts-color-qualifier .ts-word.selected, .ts-color-qualifierb .ts-word.selected, .ts-color-qualifierp .ts-word.selected { background-color: color-mix(in srgb, var(--hsl-qualifier) 25%, transparent) !important; color: var(--hsl-qualifier) !important; }
+
+
+/* ==========================================================================
+   6. Revealed Answer Bounding Wrappers
+   ========================================================================== */
+
+.ts-correct-phrase,
+.ts-incorrect-phrase,
+.ts-missed-phrase {
+  display: inline;
+  vertical-align: baseline;
+  padding: 0.18em 0.3em;
+  border-radius: 0.25em;
+  line-height: 1.2;
+  box-sizing: border-box;
+  background-color: transparent !important;
+  background: none !important;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+.ts-correct-phrase {
+  border-style: solid;
+  border-width: 1px;
+}
+
+.ts-incorrect-phrase {
+  border: 1px dashed #a83c9f !important;
+  color: #a83c9f !important;
+  text-decoration: line-through;
+  text-decoration-color: #a83c9f;
+  text-decoration-thickness: 2px;
+}
+
+.ts-missed-phrase {
+  border: 1px dashed currentColor !important;
+}
+
+/* Border & Text Colors via Role Classes */
+.ts-keep-p, .ts-keep-pb, .ts-keep-participant, .ts-keep-participantb, .ts-keep-participantp, .ts-keep-red, .ts-keep-iv, .ts-keep-ivb { color: var(--hsl-participant) !important; border-color: var(--hsl-participant) !important; }
+
+.ts-keep-r, .ts-keep-rb, .ts-keep-process, .ts-keep-processb, .ts-keep-processp, .ts-keep-green, .ts-keep-dv, .ts-keep-dvb { color: var(--hsl-process) !important; border-color: var(--hsl-process) !important; }
+
+.ts-keep-o, .ts-keep-ob, .ts-keep-circumstance, .ts-keep-circumstanceb, .ts-keep-circumstancep, .ts-keep-blue, .ts-keep-cv, .ts-keep-cvb { color: var(--hsl-circumstance) !important; border-color: var(--hsl-circumstance) !important; }
+
+.ts-keep-conjunction, .ts-keep-conjunctionb, .ts-keep-conjunctionp, .ts-keep-text_connective, .ts-keep-text_connectiveb, .ts-keep-text_connectivep, .ts-keep-part, .ts-keep-partb, .ts-keep-partp { color: var(--hsl-conjunction) !important; border-color: var(--hsl-conjunction) !important; font-style: italic; }
+
+.ts-keep-theme, .ts-keep-themeb, .ts-keep-themep { color: var(--hsl-theme) !important; border-color: var(--hsl-theme) !important; font-weight: 600; }
+.ts-keep-rheme, .ts-keep-rhemeb, .ts-keep-rhemep { color: var(--hsl-rheme) !important; border-color: var(--hsl-rheme) !important; }
+
+.ts-keep-independent, .ts-keep-independentb, .ts-keep-independentp { color: var(--hsl-independent) !important; border-color: var(--hsl-independent) !important; }
+.ts-keep-dependent, .ts-keep-dependentb, .ts-keep-dependentp { color: var(--hsl-dependent) !important; border-color: var(--hsl-dependent) !important; }
+.ts-keep-embedded, .ts-keep-embeddedb, .ts-keep-embeddedp { color: var(--hsl-embedded) !important; border-color: var(--hsl-embedded) !important; }
+.ts-keep-relative, .ts-keep-relativeb, .ts-keep-relativep { color: var(--hsl-relative) !important; border-color: var(--hsl-relative) !important; }
+.ts-keep-projected, .ts-keep-projectedb, .ts-keep-projectedp { color: var(--hsl-projected) !important; border-color: var(--hsl-projected) !important; }
+
+.ts-keep-premodifier, .ts-keep-premodifierb, .ts-keep-premodifierp { color: var(--hsl-premodifier) !important; border-color: var(--hsl-premodifier) !important; }
+.ts-keep-postmodifier, .ts-keep-postmodifierb, .ts-keep-postmodifierp { color: var(--hsl-postmodifier) !important; border-color: var(--hsl-postmodifier) !important; }
+
+.ts-keep-pointer, .ts-keep-pointerb, .ts-keep-pointerp { color: var(--hsl-pointer) !important; border-color: var(--hsl-pointer) !important; }
+.ts-keep-numerative, .ts-keep-numerativeb, .ts-keep-numerativep { color: var(--hsl-numerative) !important; border-color: var(--hsl-numerative) !important; }
+.ts-keep-describer, .ts-keep-describerb, .ts-keep-describerp { color: var(--hsl-describer) !important; border-color: var(--hsl-describer) !important; }
+.ts-keep-classifier, .ts-keep-classifierb, .ts-keep-classifierp { color: var(--hsl-classifier) !important; border-color: var(--hsl-classifier) !important; }
+.ts-keep-thing, .ts-keep-thingb, .ts-keep-thingp { color: var(--hsl-thing) !important; border-color: var(--hsl-thing) !important; font-weight: 600; }
+.ts-keep-qualifier, .ts-keep-qualifierb, .ts-keep-qualifierp { color: var(--hsl-qualifier) !important; border-color: var(--hsl-qualifier) !important; }
+
+/* Token Overrides Inside Phrase Wrappers */
+.ts-correct-phrase .ts-word,
+.ts-correct-phrase .ts-space,
+.ts-incorrect-phrase .ts-word,
+.ts-incorrect-phrase .ts-space,
+.ts-missed-phrase .ts-word,
+.ts-missed-phrase .ts-space {
+  border: none !important;
+  background-color: transparent !important;
+  background: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  color: inherit !important;
+  text-decoration: inherit;
+}

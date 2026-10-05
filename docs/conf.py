@@ -11,7 +11,7 @@ copyright = '2021-26, GMC'
 author = 'GMC'
 
 
-# sys.path.append(os.path.abspath('_ext'))
+sys.path.append(os.path.abspath('_ext'))
 
 # sys.path.insert(0, os.path.abspath('../../'))
 # package_path = os.path.abspath('../..')
@@ -24,10 +24,6 @@ author = 'GMC'
 # https://pypi.org/project/plct-sphinx-components/#description
 
 
-
-
-
-
 extensions = [
     'sphinx_rtd_theme',
     'sphinx_copybutton',
@@ -35,7 +31,21 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx_togglebutton',
     'sphinx_design',
-    ]
+    "mcqgroup.mcqgroup",  # custom directive
+    "clozegroup.clozegroup",  # custom directive
+    "quizgroup",  # custom directive
+    "multichoice.multichoice",  # custom directive
+    "cloze.cloze",  # custom directive
+    "gapfill.gapfill",  # custom directive
+    "classifying.classifying",  # custom directive
+    "fillin.fillin",  # custom directive
+    "ordering.ordering",  # custom directive
+    "wordordering.wordordering",  # custom directive
+    "textselect.textselect",  # custom directive
+    "wordjumble.wordjumble",  # custom directive
+    "labels.labels",  # custom directive
+    "structuredquestion.structuredquestion",  # custom directive
+]
 # 'sphinx_thebe',
 # 'nbsphinx',
 # 'sphinxcontrib.jupyter',

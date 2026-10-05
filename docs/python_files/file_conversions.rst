@@ -24,7 +24,7 @@ json file to csv file
 | The months json follows that structrue.
 | Each object in the array will become a row in csv.
 
-.. code:: json
+.. code::
 
     {"months":
     [{"Month":"January","Abbr":"Jan","Numeric":"1"},
@@ -34,7 +34,7 @@ json file to csv file
 
 | csv file contents
 
-.. code:: 
+.. code::
 
     Month,Abbr,Numeric
     January,Jan,1
@@ -244,7 +244,7 @@ xml file to json file
 json file to xml file
 -----------------------
 
-| xmltodict needs to construct the JSON with the very first key as the root XML tag. 
+| xmltodict needs to construct the JSON with the very first key as the root XML tag.
 | This means that there should only be a single JSON key at the root level of data.
 
 | The function ``json_to_xml_file(json_file_path, xml_file_path)`` takes a path to a json file and a path to an xml file.

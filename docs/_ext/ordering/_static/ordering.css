@@ -1,0 +1,355 @@
+/* ==========================================================================
+   1. Design Token System & Global Variables
+   ========================================================================== */
+:root {
+  /* Common Core Tokens */
+  --or-radius-lg: 8px;
+  --or-radius-md: 6px;
+  --or-radius-sm: 4px;
+  --or-transition: all 0.2s ease;
+
+  /* DEFAULT: Pure White Theme Palette */
+  --or-default-bg: #ffffff;         /* Pure White Base Canvas */
+  --or-default-border: #e2e8f0;     /* Slate 200 Outer Rim */
+  --or-default-text: #334155;       /* Slate 700 Text */
+  --or-default-runway: #ffffff;     /* Pure White Inner Runway */
+  --or-default-row-bg: #ffffff;     /* Pure White Draggable Items */
+  --or-default-row-border: #cbd5e1; /* Item Border Rim */
+  --or-default-code: #0f172a;       /* Slate 900 Code Typography */
+
+  /* OPTIONAL: Soft Light Theme Palette (.light or .theme-light) */
+  --or-light-bg: #f8fafc;          /* Slate 50 Canvas Background */
+  --or-light-border: #cbd5e1;      /* Slate 300 Rim */
+  --or-light-runway: #f1f5f9;      /* Slate 100 Inner Runway */
+  --or-light-row-bg: #ffffff;      /* Pure White Draggable Row */
+
+  /* Validation Feedback System Tokens */
+  --or-correct-bg: #dcfce7;
+  --or-correct-border: #22c55e;
+  --or-correct-text: #14532d;
+
+  --or-incorrect-bg: #fee2e2;
+  --or-incorrect-border: #ef4444;
+  --or-incorrect-text: #7f1d1d;
+
+  --or-tier-mid-bg: #fef08a;
+  --or-tier-mid-border: #eab308;
+  --or-tier-mid-text: #713f12;
+}
+
+/* ==========================================================================
+   2. Component Base Structural Architecture (Default: White Theme)
+   ========================================================================== */
+.ordering-block {
+  background-color: var(--or-default-bg);
+  border: 1px solid var(--or-default-border);
+  border-radius: var(--or-radius-lg);
+  padding: 0.8rem;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: var(--or-transition);
+}
+
+.ordering-instructions {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--or-default-text);
+  transition: var(--or-transition);
+}
+
+.ordering-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.6rem;
+  border-radius: var(--or-radius-md);
+  min-height: 100px;
+  background-color: var(--or-default-runway);
+  border: 1px solid #cbd5e1;
+  transition: var(--or-transition);
+}
+
+.ordering-line {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0.6rem;
+  background-color: var(--or-default-row-bg);
+  border: 1px solid var(--or-default-row-border);
+  border-radius: var(--or-radius-md);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  cursor: grab;
+  user-select: none;
+  transition: all 0.15s ease;
+  padding-left: calc(0.95rem + (var(--indent-level) * 32px));
+}
+
+.ordering-line:active {
+  cursor: grabbing;
+}
+
+.ordering-line:hover {
+  border-color: #94a3b8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.ordering-handle {
+  color: #94a3b8;
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+.rst-content .ordering-block .ordering-code,
+.ordering-container .ordering-code {
+  font-family: "Consolas", "Courier New", Courier, monospace;
+  font-size: 1.1rem;
+  flex-grow: 1;
+  white-space: pre;
+  color: var(--or-default-code);
+}
+
+.ordering-indent-controls {
+  display: flex;
+  gap: 0.25rem;
+  margin-left: 1rem;
+}
+
+.indent-btn {
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--or-radius-sm);
+  padding: 0.25rem 0.6rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.1s ease;
+}
+
+.indent-btn:hover {
+  background-color: #e2e8f0;
+  color: #0f172a;
+}
+
+.ordering-line.dragging {
+  opacity: 0.5;
+  border: 2px dashed #3b82f6;
+  background-color: #eff6ff;
+  box-shadow: none;
+}
+
+/* ==========================================================================
+   3. Soft Light Theme Layout Overrides (.light or .theme-light)
+   ========================================================================== */
+.ordering-block.light,
+.ordering-block.theme-light,
+.ordering-block:has(.theme-light) {
+  background-color: var(--or-light-bg) !important;
+  border-color: var(--or-light-border) !important;
+}
+
+.ordering-block.light .ordering-container,
+.ordering-block.theme-light .ordering-container,
+.ordering-block .ordering-container.theme-light {
+  background-color: var(--or-light-runway) !important;
+  border-color: var(--or-light-border) !important;
+}
+
+/* ==========================================================================
+   4. Control Interface Action Triggers & Buttons
+   ========================================================================== */
+/* Multi-line Paragraph Styling Adjustments */
+.ordering-line.ordering-paragraph {
+  align-items: flex-start;
+  padding: 0.8rem 1rem;
+}
+
+.ordering-line.ordering-paragraph .ordering-handle {
+  margin-top: 0.2rem;
+}
+
+.ordering-line.ordering-paragraph .ordering-code {
+  white-space: pre-wrap;
+  font-family: inherit; /* Uses textbook font for prose */
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.ordering-line.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.ordering-line.disabled .indent-btn {
+  display: none;
+}
+
+.ordering-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 1.0rem;
+  width: 100%;
+  flex-wrap: nowrap !important;
+  overflow-x: auto;
+  min-height: 2.5rem;
+}
+
+.ordering-controls button,
+.ordering-feedback-badge {
+  box-sizing: border-box;
+  height: 2.3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.ordering-controls button {
+  padding: 0.4rem 0.8rem;
+  font-weight: 500;
+  border-radius: var(--or-radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 1.0rem;
+  transition: background-color 0.1s ease, transform 0.05s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.ordering-controls button:active {
+  transform: scale(0.98);
+}
+
+/* Disabled State Rules - Forces cursor: not-allowed over disabled buttons */
+.ordering-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed !important;
+  pointer-events: auto !important;
+  filter: grayscale(100%);
+}
+
+.ordering-block[data-disabled="true"] .ordering-controls button:disabled {
+  pointer-events: auto !important;
+  cursor: not-allowed !important;
+}
+
+/* Primary Action: Check Button */
+.ordering-btn-score {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+.ordering-btn-score:hover {
+  background-color: #1d4ed8;
+}
+
+/* Secondary Action: Reset Button Layout Rules */
+.ordering-btn-reset {
+  background-color: #ffffff;
+  color: #475569;
+  border: 1px solid #cbd5e1 !important;
+}
+.ordering-btn-reset:hover {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+/* Tertiary Action: Solution View Button Styling */
+.ordering-btn-solution {
+  background-color: #0d9488;
+  color: #ffffff !important;
+}
+.ordering-btn-solution:hover {
+  background-color: #0f766e;
+}
+
+/* ==========================================================================
+   5. Interactive Evaluation Logic States
+   ========================================================================== */
+.ordering-container .ordering-line.correct-line {
+  border-color: var(--or-correct-border) !important;
+  background-color: var(--or-correct-bg) !important;
+}
+.ordering-container .ordering-line.correct-line .ordering-code {
+  color: var(--or-correct-text) !important;
+}
+
+.ordering-container .ordering-line.incorrect-line {
+  border-color: var(--or-incorrect-border) !important;
+  background-color: var(--or-incorrect-bg) !important;
+}
+.ordering-container .ordering-line.incorrect-line .ordering-code {
+  color: var(--or-incorrect-text) !important;
+}
+
+/* ==========================================================================
+   6. Dynamic Score Tier Badges
+   ========================================================================== */
+.ordering-feedback-badge {
+  font-weight: 700;
+  padding: 0 0.75rem;
+  border-radius: var(--or-radius-md);
+  font-size: 0.85rem;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  margin-left: auto;
+  white-space: nowrap;
+  flex-shrink: 1;
+  height: 2.3rem;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding-top: 2px;
+}
+
+.ordering-feedback-badge.high {
+  background-color: var(--or-correct-bg);
+  border-color: var(--or-correct-border);
+  color: var(--or-correct-text);
+}
+
+.ordering-feedback-badge.medium {
+  background-color: var(--or-tier-mid-bg);
+  border-color: var(--or-tier-mid-border);
+  color: var(--or-tier-mid-text);
+}
+
+.ordering-feedback-badge.low {
+  background-color: var(--or-incorrect-bg);
+  border-color: var(--or-incorrect-border);
+  color: var(--or-incorrect-text);
+}
+
+/* ==========================================================================
+   7. Blank Formatting Line Structural Placeholders
+   ========================================================================== */
+.ordering-line.blank-line-placeholder {
+  min-height: 2.8rem;
+}
+
+.ordering-line.blank-line-placeholder .ordering-code::before {
+  content: "• (blank formatting line) •";
+  font-size: 0.95rem;
+  font-style: italic;
+  opacity: 0.4;
+}
+
+/* ==========================================================================
+   8. Feature Additions & Completed Code Section
+   ========================================================================== */
+.ordering-block.ordering-no-padding .ordering-line {
+  padding-top: 0.08rem !important;
+  padding-bottom: 0.05rem !important;
+}
+
+.ordering-block.ordering-no-padding .ordering-line.blank-line-placeholder {
+  min-height: 1.5rem;
+}
+
+.ordering-completed-code {
+  display: none;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  transition: opacity 0.2s ease-in-out;
+}

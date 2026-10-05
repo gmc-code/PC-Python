@@ -1,0 +1,319 @@
+/* ==========================================================================
+   1. Design Token System & Global Variables
+   ========================================================================== */
+:root {
+  /* Common Core Tokens */
+  --cf-radius-lg: 8px;
+  --cf-radius-md: 6px;
+  --cf-radius-sm: 4px;
+  --cf-transition: all 0.2s ease;
+
+  /* Standard Light Theme Palette */
+  --cf-light-bg: #f8fafc;         /* Slate 50 Base Canvas */
+  --cf-light-border: #e2e8f0;     /* Slate 200 Outer Rim */
+  --cf-light-text: #475569;       /* Slate 600 Instructions Text */
+  --cf-light-runway: #f1f5f9;     /* Slate 100 Inner Container */
+  --cf-light-row-bg: #ffffff;     /* Pure White Active Items */
+  --cf-light-row-border: #cbd5e1; /* Slate 300 Item Border */
+  --cf-light-code: #0f172a;       /* Slate 900 Text Clarity */
+
+  /* Pure White Theme Palette */
+  --cf-white-bg: #ffffff;        /* Pure White Canvas Background */
+  --cf-white-border: #cbd5e1;    /* Crisp Slate 300 Outer Rim */
+  --cf-white-runway: #f8fafc;    /* Soft Slate 50 Inner Runway */
+
+  /* Validation Feedback System Tokens */
+  --cf-correct-bg: #dcfce7;       /* Green 100 */
+  --cf-correct-border: #22c55e;   /* Green 500 */
+  --cf-correct-text: #14532d;     /* Green 900 */
+
+  --cf-incorrect-bg: #fee2e2;     /* Red 100 */
+  --cf-incorrect-border: #ef4444; /* Red 500 */
+  --cf-incorrect-text: #7f1d1d;   /* Red 900 */
+
+  --cf-tier-mid-bg: #fef08a;      /* Yellow 100 */
+  --cf-tier-mid-border: #eab308;  /* Yellow 500 */
+  --cf-tier-mid-text: #713f12;    /* Yellow 900 */
+}
+
+/* ==========================================================================
+   2. Component Base Structural Architecture
+   ========================================================================== */
+.classifying-block {
+  background-color: var(--cf-light-bg);
+  border: 1px solid var(--cf-light-border);
+  border-radius: var(--cf-radius-lg);
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: var(--cf-transition);
+}
+
+.classifying-instructions {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--cf-light-text);
+  transition: var(--cf-transition);
+}
+
+.classifying-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.6rem;
+  border-radius: var(--cf-radius-md);
+  min-height: 100px;
+  background-color: var(--cf-light-runway);
+  border: 1px solid var(--cf-light-border);
+  transition: var(--cf-transition);
+}
+
+.classifying-line {
+  display: flex;
+  align-items: center;
+  padding: 0.4rem;
+  background-color: var(--cf-light-row-bg);
+  border: 1px solid var(--cf-light-row-border);
+  border-radius: var(--cf-radius-md);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+  transition: var(--cf-transition);
+}
+
+.classifying-code {
+  font-family: "Consolas", "Courier New", Courier, monospace;
+  font-size: 1.0rem;
+  font-weight: 500;
+  color: var(--cf-light-code) !important;
+}
+
+.classifying-indent-controls {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Select Dropdown styling */
+.sorting-select {
+  padding: 0.35rem 0.5rem;
+  border-radius: var(--cf-radius-sm);
+  border: 1px solid var(--cf-light-row-border) !important;
+  background-color: var(--cf-light-row-bg);
+  color: var(--cf-light-code);
+  font-size: 0.95rem;
+  outline: none;
+  cursor: pointer;
+  transition: var(--cf-transition);
+}
+
+.sorting-select:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15);
+}
+
+.sorting-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* ==========================================================================
+   3. Pure White Theme Layout (.white or .theme-white)
+   ========================================================================== */
+.classifying-block.white,
+.classifying-block.theme-white,
+.classifying-block:has(.theme-white) {
+  background-color: var(--cf-white-bg) !important;
+  border-color: var(--cf-white-border) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.classifying-block.white .classifying-container,
+.classifying-block.theme-white .classifying-container,
+.classifying-block .classifying-container.theme-white {
+  background-color: var(--cf-white-runway) !important;
+  border-color: var(--cf-white-border) !important;
+}
+
+/* ==========================================================================
+   4. Control Interface Action Triggers & Buttons
+   ========================================================================== */
+.classifying-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+/* Shared control panel button layout */
+.classifying-btn-score,
+.classifying-btn-solution,
+.classifying-btn-reset {
+  font-family: inherit;
+  font-size: 1.0rem;
+  font-weight: 500;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--cf-radius-md);
+  cursor: pointer;
+  transition: var(--cf-transition);
+}
+
+/* Primary Action: Check Button */
+.classifying-btn-score {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: 1px solid #2563eb;
+}
+
+.classifying-btn-score:hover {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.classifying-btn-score:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: grayscale(100%);
+}
+
+/* Solution Button: Teal Palette */
+.classifying-btn-solution {
+  background-color: #0d9488;
+  color: #ffffff !important;
+  border: 1px solid #0d9488;
+}
+
+.classifying-btn-solution:hover {
+  background-color: #0f766e;
+  border-color: #0f766e;
+}
+
+.classifying-btn-solution:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Secondary Action: Reset Button */
+.classifying-btn-reset {
+  background-color: #ffffff;
+  color: #475569;
+  border: 1px solid var(--cf-light-row-border);
+}
+
+.classifying-btn-reset:hover {
+  background-color: #f8fafc;
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+
+/* ==========================================================================
+   5. Interactive Evaluation Logic States (Inline Verification Icons)
+   ========================================================================== */
+.classifying-line.correct-line {
+  background-color: var(--cf-correct-bg) !important;
+  border-color: var(--cf-correct-border) !important;
+}
+
+.classifying-line.incorrect-line {
+  background-color: var(--cf-incorrect-bg) !important;
+  border-color: var(--cf-incorrect-border) !important;
+}
+
+/* Inline Checkmark and Cross Feedback Indicators */
+.classifying-line .classifying-code::after {
+  font-weight: bold;
+  margin-left: 0.75rem;
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.classifying-line.correct-line .classifying-code {
+  color: var(--cf-correct-text) !important;
+}
+
+.classifying-line.correct-line .classifying-code::after {
+  content: " ✓";
+  color: var(--cf-correct-border);
+}
+
+.classifying-line.incorrect-line .classifying-code {
+  color: var(--cf-incorrect-text) !important;
+}
+
+.classifying-line.incorrect-line .classifying-code::after {
+  content: " ✗";
+  color: var(--cf-incorrect-border);
+  transform: scale(1.1);
+}
+
+/* ==========================================================================
+   6. Dynamic Score Tier Badges (Right Aligned Container)
+   ========================================================================== */
+.classifying-feedback-badge {
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: var(--cf-radius-md);
+  display: none;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  margin-left: auto;
+  text-align: right;
+}
+
+.classifying-feedback-badge.high {
+  background-color: var(--cf-correct-bg);
+  border-color: var(--cf-correct-border);
+  color: var(--cf-correct-text);
+}
+
+.classifying-feedback-badge.medium {
+  background-color: var(--cf-tier-mid-bg);
+  border-color: var(--cf-tier-mid-border);
+  color: var(--cf-tier-mid-text);
+}
+
+.classifying-feedback-badge.low {
+  background-color: var(--cf-incorrect-bg);
+  border-color: var(--cf-incorrect-border);
+  color: var(--cf-incorrect-text);
+}
+
+/* ==========================================================================
+   7. * Custom rST Role Styling in Classifying Directive *
+   ========================================================================== */
+
+
+/* Outer role badge wrapper */
+.rst-role,
+span[class^="rst-role-"],
+span[class*=" rst-role-"] {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin: 0 2px;
+    background-color: transparent !important;
+    border: 1px solid currentColor !important;
+    vertical-align: baseline;
+}
+
+/* Hide the literal role name prefix */
+.rst-role-name {
+    display: none !important;
+}
+
+/* Inner text styling */
+.rst-role-content,
+.rst-role *,
+span[class^="rst-role-"] *,
+span[class*=" rst-role-"] * {
+    font-family: inherit !important;
+    font-size: 1em !important;
+    line-height: inherit !important;
+    font-weight: 600 !important;
+    color: inherit !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+}
