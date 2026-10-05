@@ -243,8 +243,9 @@ Code Ordering Examples
     for fruit in fruits:
         print(fruit.upper())
 
+----
 
- **Example 2:** Find all even numbers, square them, and print results
+**Example 2:** Find all even numbers, square them, and print results
 
 .. ordering::
 
@@ -253,6 +254,8 @@ Code Ordering Examples
     squared_evens = [n ** 2 for n in evens]
     for val in squared_evens:
         print(val)
+
+----
 
 **Example 3:** Build a shopping cart by extending and removing an out-of-stock item
 
@@ -263,6 +266,7 @@ Code Ordering Examples
     cart.remove("bananas")
     print(f"Items to buy: {len(cart)}")
 
+----
 
 **Example 4:** Extract middle elements using slicing and reverse them
 
@@ -272,6 +276,8 @@ Code Ordering Examples
     middle_three = values[1:4]
     reversed_middle = middle_three[::-1]
     print(reversed_middle)
+
+----
 
 **Example 5:** Number a ranked list of top scores using enumerate
 
