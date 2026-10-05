@@ -194,7 +194,7 @@ Multiple Choice Questions
         [ ] Raises a TypeError | Incorrect. Strings are valid iterables for .extend().
         [ ] ``data`` becomes ``[1, 2, 34]`` | Incorrect. The items added are strings ('3', '4'), not integers.
 
---------------------------------------------------
+----
 
 Deleting Items from a List
 ==========================
@@ -374,7 +374,7 @@ Multiple Choice Questions
         [x] data.clear() | Correct! .clear() removes all elements from a list.
         [ ] del data | Incorrect. del data deletes the variable entirely, not just its contents.
 
---------------------------------------------------
+----
 
 Sorting and Reversing Lists
 ===========================
@@ -556,7 +556,7 @@ Multiple Choice Questions
         [ ] .sort() returns a new list, while sorted() modifies in place | Incorrect. It is the opposite.
         [ ] There is no difference | Incorrect. Their return values and side effects differ.
 
---------------------------------------------------
+----
 
 Iterating Through a List
 ========================
