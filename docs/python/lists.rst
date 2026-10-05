@@ -2,14 +2,17 @@
 Lists
 ===========================
 
-A **list** in Python is used to store multiple items in a single variable. Lists are ordered, changeable, and created using square brackets ``[]``.
+| A **list** in Python is used to store multiple items in a single variable.
+| Lists are ordered, changeable, and created using square brackets ``[]``.
+| Each item in a list is separated by a comma.
+| Lists can contain items of different data types, including strings, integers, floats, and even other lists.
 
 .. code-block:: python
 
     # Creating a simple list of fruits
     fruits = ["apple", "banana", "cherry"]
 
---------------------------------------------------
+----
 
 Adding Items to a List
 ======================
@@ -76,8 +79,8 @@ Code Ordering Examples
 
 .. ordering::
 
-    primary = ["red", "blue"]
-    secondary = ["green", "yellow"]
+    primary = ["red", "blue", "green"]
+    secondary = ["yellow", "magenta", "cyan"]
     primary.extend(secondary)
     print(primary)
 
