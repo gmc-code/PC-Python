@@ -1,5 +1,5 @@
 ===========================
-Python Lists Guide (Year 7)
+Lists
 ===========================
 
 A **list** in Python is used to store multiple items in a single variable. Lists are ordered, changeable, and created using square brackets ``[]``.
