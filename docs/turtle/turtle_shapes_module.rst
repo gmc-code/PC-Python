@@ -45,7 +45,7 @@ Shape module functions
 | The syntax of the basic shapes in the shapes module is below.
 
 | When using this, there is no need to include all the parameters that have default values, since this makes them optional.
-| e.g. ``square(t, length=100, start_pos=(10, 20), fillc="light green")`` can be used 
+| e.g. ``square(t, length=100, start_pos=(10, 20), fillc="light green")`` can be used
 | rather than the full ``square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)``.
 
 ----
@@ -95,6 +95,7 @@ Square
             fillc (str, optional): fill color. Defaults to "red".
 
         """
+
 ----
 
 Rectangle
@@ -104,6 +105,7 @@ Rectangle
 
 
 .. py:function:: rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)
+    :no-index:
 
     | **t** - the turtle object to draw the rectangle
     | **length** - side length; default 40
@@ -125,7 +127,7 @@ Rectangle
 
             .. code-block:: python
 
-                def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, 
+                def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0,
                                 penw=1, penc="black", fillc=None):
                     """Draw a rectangle
 
@@ -146,7 +148,7 @@ Rectangle
 
             .. code-block:: python
 
-                def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0, 
+                def rectangle(t, length=40, width=30, start_pos=(0, 0), start_h=0,
                                 penw=1, penc="black", fillc=None):
                     """Draw a rectangle
 
@@ -160,6 +162,7 @@ Rectangle
                         penc (str, optional): pen color. Defaults to "black".
                         fillc (str, optional): fill color. Defaults to None.
                     """
+
 ----
 
 Scalene
@@ -190,7 +193,7 @@ Scalene
 
             .. code-block:: python
 
-                def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, 
+                def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0,
                             penw=1, penc="black", fillc=None):
                     """_summary_
 
@@ -212,7 +215,7 @@ Scalene
 
             .. code-block:: python
 
-                def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0, 
+                def scalene(t, side_a, angle_C, side_b, start_pos=(0, 0), start_h=0,
                             penw=1, penc="black", fillc=None):
                     """Draw a scalene triangle given SAS (side angle side).
 
@@ -257,7 +260,7 @@ Isosceles
 
             .. code-block:: python
 
-                def isosceles(t, base, height, start_pos=(0, 0), start_h=0, 
+                def isosceles(t, base, height, start_pos=(0, 0), start_h=0,
                                 penw=1, penc="black", fillc=None):
                     """_summary_
 
@@ -278,7 +281,7 @@ Isosceles
 
             .. code-block:: python
 
-                def isosceles(t, base, height, start_pos=(0, 0), start_h=0, 
+                def isosceles(t, base, height, start_pos=(0, 0), start_h=0,
                                 penw=1, penc="black", fillc=None):
                     """Draw an isosceles triangle given base and height.
 
@@ -296,7 +299,7 @@ Isosceles
 ----
 
 Equilateral
-----------
+-------------
 
 | Syntax for the equilateral function.
 
@@ -322,7 +325,7 @@ Equilateral
 
             .. code-block:: python
 
-                def equilateral(t, side, start_pos=(0, 0), start_h=0, 
+                def equilateral(t, side, start_pos=(0, 0), start_h=0,
                                 penw=1, penc="black", fillc=None):
                     """_summary_
 
@@ -342,7 +345,7 @@ Equilateral
 
             .. code-block:: python
 
-                def equilateral(t, side, start_pos=(0, 0), start_h=0, 
+                def equilateral(t, side, start_pos=(0, 0), start_h=0,
                                 penw=1, penc="black", fillc=None):
                     """Draw an equilateral triangle
 
@@ -354,4 +357,4 @@ Equilateral
                         penw (int, optional): pen size. Defaults to 1.
                         penc (str, optional): pen color. Defaults to "black".
                         fillc (str, optional): fill color. Defaults to None.
-                    """               
+                    """

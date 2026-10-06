@@ -22,7 +22,7 @@ Sequencing: steps to draw a square
 | The code below uses sequencing only.
 | The code below draws a square of side length 50 at coordinates (20, 30).
 | The start direction, eastwards, is set by: ``t.seth(0)``
-| The start position, at (20, 30), is set by: ``t.goto(20, 30)``. 
+| The start position, at (20, 30), is set by: ``t.goto(20, 30)``.
 | Penup, ``t.pu()``, and pendown, ``t.pd()``, are used either side of ``t.goto(20, 30)`` to avoid line drawing when repositioning the turtle.
 | A line is drawn forwards, in the direction the turtle is heading, by: ``t.fd(50)``.
 | The turtle then turns to the left by: ``t.lt(90)``.
@@ -75,7 +75,7 @@ Sequencing: steps to draw a square
 
             .. tab-item:: Q1
 
-                From the code above, list the lines that do the actual drawing. 
+                From the code above, list the lines that do the actual drawing.
 
                 .. code-block:: python
 
@@ -87,7 +87,7 @@ Sequencing: steps to draw a square
                     t.lt(90)
                     t.fd(50)
                     t.lt(90)
-                    
+
             .. tab-item:: Q2
 
                 From the 8 lines, list the simplest amount of code that is repeated.
@@ -132,7 +132,7 @@ Sequencing: steps to draw a square
 
 ----
 
-Iteration: using a for-loop to draw a square 
+Iteration: using a for-loop to draw a square
 ----------------------------------------------
 
 | The code below uses iteration to reduce code duplication that was present when only sequencing was used.
@@ -167,7 +167,7 @@ Iteration: using a for-loop to draw a square
 
 .. admonition:: Tasks
 
-    1. Identify the lines of code that replaced the 8 steps: 
+    1. Identify the lines of code that replaced the 8 steps:
     t.fd(50); t.lt(90); t.fd(50); t.lt(90); t.fd(50); t.lt(90); t.fd(50); t.lt(90)
 
     .. dropdown::
@@ -179,14 +179,14 @@ Iteration: using a for-loop to draw a square
 
             .. tab-item:: Q1
 
-                Identify the lines of code that replaced the 8 steps. 
+                Identify the lines of code that replaced the 8 steps.
 
                 .. code-block:: python
 
                     for _ in range(4):
                         t.fd(50)
                         t.lt(90)
-                    
+
 ----
 
 Definitions: using a def block to draw a square
@@ -199,17 +199,18 @@ Definitions: using a def block to draw a square
 | The initial heading defaults to 0, which is acrosss to the right.
 
 .. py:function:: square(t, length=50, start_pos=(0, 0), start_h=0)
+    :no-index:
 
     | **t** - the turtle object to draw the square
     | **length** - side length; default 50
     | **start_pos** - start position; default (0, 0)
     | **start_h** - start heading; default 0
-    
+
 | In the code below, ``square(t)`` draws a default square.
 | The square function's parameters that have default values don't need to be passed as arguments when the the function is called.
 | ``square(t, length=50, start_pos=(20, 30))`` draws a square of length 50 at (x=20, y=30).
 | ``square(t, length=250, start_pos=(-300, -200), start_h=20)`` draws a square of length 250 at (x=-300, y=-200) angled 20 degrees.
-    
+
 .. code-block:: python
 
     import turtle
@@ -283,6 +284,7 @@ Adding pen colour and fill colour parameters
 | The syntax below adds parameters for pen and fill colours and pen size.
 
 .. py:function:: square(t, length=50, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)
+    :no-index:
 
     | **t** - the turtle object to draw the square
     | **length** - side length; default 50
@@ -292,7 +294,7 @@ Adding pen colour and fill colour parameters
     | **penc** - pencolor; default "black"
     | **fillc** - fillcolor; default None
 
-   
+
 | In the code below, ``square(t, length=250, start_pos=(-100, -150), start_h=0, penw=2, penc="black", fillc="light green")`` draws a square of length 250 at (x=-100, y=-150) with a black pencolor, a light green fillcolor, with a pensize of 2.
 | The code needs to check the **fillc** argument since setting a fillcolor to **None** will throw an error.
 
@@ -325,7 +327,7 @@ Adding pen colour and fill colour parameters
         for _ in range(4):
             t.fd(length)
             t.lt(90)
-            
+
         if fillc is not None:
             t.end_fill()
 
@@ -335,7 +337,7 @@ Adding pen colour and fill colour parameters
     s.exitonclick()
 
 
-    
+
 ----
 
 .. admonition:: Tasks

@@ -1,572 +1,737 @@
-===============================
+===========================
 Dictionaries
-===============================
+===========================
 
-| Suggested refs:
-| https://www.programiz.com/python-programming/dictionary
-| https://realpython.com/python-dicts/
+| A **dictionary** in Python is used to store data in **key-value pairs**.
+| Dictionaries are ordered, changeable, and created using curly braces ``{}``.
+| Each key is separated from its value by a colon ``:``, and key-value pairs are separated by commas.
+| Dictionaries allow you to look up values quickly using unique keys instead of index numbers.
+
+.. code-block:: python
+
+    # Creating a simple dictionary of a student profile
+    student = {
+        "name": "Alex",
+        "age": 13,
+        "grade": 8
+    }
 
 ----
 
-Dictionary structure
-----------------------------
+Adding and Modifying Items in a Dictionary
+===========================================
 
-| A Python dictionary is a collection of items.
-| Each item  is a ``key: value`` pair.
-| Dictionary items are **ordered**, **changeable**, and do not allow duplicates.
-| All keys must be **immutable** (not able to be changed) such as integers, strings and tuples of integers or strings.
-| Values can be any data types such as string, int, float, boolean, tuple, list, dictionary.
+To add a new key-value pair or change an existing value, you access the key using square brackets ``[]`` and assign a value to it:
 
-.. py:method:: dict_var = {key1 : value1, key2 : value2, …..}
-
-    Returns a dictionary with the specified key: value pairs.
-
-| An example of a dictionary of states and capitals is below.
+- ``dict[key] = value``: If the key **does not exist**, it adds the new key-value pair to the dictionary.
+- ``dict[key] = new_value``: If the key **already exists**, it overwrites and updates the existing value.
+- ``.update(other_dict)``: Adds or updates **multiple key-value pairs** at once from another dictionary.
 
 .. code-block:: python
 
-    eastern_state_capitals = {
-                    'Victoria': 'Melbourne',
-                    'New South Wales': 'Sydney',
-                    'Queensland': 'Brisbane'
-                    }
-    print(eastern_state_capitals)
+    inventory = {"apples": 5, "bananas": 2}
+
+    # Adds a new key "oranges" with a value of 10
+    inventory["oranges"] = 10
+    # Result: {"apples": 5, "bananas": 2, "oranges": 10}
+    print(inventory)
+
+    # Updates the existing key "apples" with a new value
+    inventory["apples"] = 8
+    # Result: {"apples": 8, "bananas": 2, "oranges": 10}
+    print(inventory)
+
+    # Adds multiple items from another dictionary
+    more_items = {"grapes": 4, "peaches": 6}
+    inventory.update(more_items)
+    # Result: {"apples": 8, "bananas": 2, "oranges": 10, "grapes": 4, "peaches": 6}
+    print(inventory)
+
+    some_more_items = {"grapes": 5, "figs": 6}
+    inventory.update(some_more_items)
+    # Result: {"apples": 8, "bananas": 2, "oranges": 10, "grapes": 4, "peaches": 6}
+    print(inventory)
+
+
+Quiz: Adding and Modifying Items
+--------------------------------
+
+Fill-in-the-Blanks (Cloze)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. cloze::
+    :instructions: Complete the following sentences by filling in the blanks.
+
+    1. Dictionaries store information using key-value @@pairs@@.
+    2. To assign or access a value using a key, you place the key inside square @@brackets@@.
+    3. Assigning a value to an existing key will @@overwrite@@ its previous value.
+    4. To add multiple key-value pairs from another dictionary at once, use the @@.update()@@ method.
+    5. Dictionaries in Python are defined using curly @@braces@@.
+
+Code Ordering Examples
+~~~~~~~~~~~~~~~~~~~~~~
+
+**Example 1:** Create a player dictionary, add a score key, and print the result.
+
+.. ordering::
+
+    player = {"name": "Sam"}
+    player["score"] = 100
+    print(player)
 
 ----
 
-Getting a value from a dictionary
------------------------------------
+**Example 2:** Create a fruit count dictionary, update the quantity of apples, and print the dictionary.
 
-| Values in a dictionary are retrieved by using the key as an index.
+.. ordering::
 
-.. py:method:: value_1 = dict_var[key1]
-
-    Returns a value in a dictionary with the specified key, key1.
-
-| In the dictionary below, the capital of Victoria can be found by indexing the dictionary: ``eastern_state_capitals['Victoria']``.
-| The key is 'Victoria'. The value is 'Melbourne'.
-
-.. code-block:: python
-
-    eastern_state_capitals = {
-                    'Victoria': 'Melbourne',
-                    'New South Wales': 'Sydney',
-                    'Queensland': 'Brisbane'
-                    }
-    capital = eastern_state_capitals['Victoria']
-    print(capital)
-    # Output is 'Melbourne'
+    counts = {"apples": 3, "peaches": 5}
+    counts["apples"] = 10
+    print(counts)
 
 ----
 
-Case sensitive keys
------------------------------------
+**Example 3:** Create a dictionary of primary inventory, update it with bonus inventory, and print the dictionary.
 
-| Keys in a dictionary are case sensitive.
-| The keys 'Vic'and 'VIC' are different keys.
+.. ordering::
 
-.. code-block:: python
+    items = {"coins": 50}
+    bonus = {"gems": 5, "potions": 2}
+    items.update(bonus)
+    print(items)
 
-    eastern_state_capitals = {
-                    'Vic': 'Melbourne',
-                    'VIC': 'MELB',
-                    }
-    print(eastern_state_capitals['Vic'])
-    # Output is 'Melbourne'
-    print(eastern_state_capitals['VIC'])
-    # Output is 'MELB'
+Multiple Choice Questions
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-----
-
-Empty dictionary
--------------------
-
-| An empty dictionary is needed as a starting point when a dictionary is built as the program runs.
-
-| An empty dictionary can be made using **curly brackets**:
-
-.. code-block:: python
-
-    empty_dict = {}
-
-| An empty dictionary can be made using the **dict function**:
-
-.. code-block:: python
-
-    empty_dict = dict()
-
-----
-
-Making a dictionary
-----------------------
-
-Making a dictionary: curly brackets
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-| Make a dictionary by enclosing a comma-separated sequence of key-value pairs in curly braces ``{}``.
-| The dictionary below has 3 items, each separated by a comma.
-| Each item is a key: value pair separated by a colon.
-
-.. code-block:: python
-
-    state_capitals = {
-                    'Victoria': "Melbourne",
-                    'Tasmania': "Hobart",
-                    'Queensland': "Brisbane"
-                    }
-    print(state_capitals)
-
-.. admonition:: Tasks
-
-    #. Create a dictionary using curly brackets such that it maps the names of three countries, Japan, France and England, to their capitals: Tokyo, Paris and London. Print the dictionary.
-    #. Create a dictionary using curly brackets such that it maps the names of three fruits, Apple, Banana, and Grapes, to their colors: Red, Yellow, and Purple. Print the dictionary.
-
-    .. dropdown::
-        :icon: codescan
-        :color: primary
-        :class-container: sd-dropdown-container
-
-        .. tab-set::
-
-            .. tab-item:: Q1
-
-                Create a dictionary using curly brackets such that it maps the names of three countries, Japan, France and England, to their capitals: Tokyo, Paris and London. Print the dictionary.
-
-                .. code-block:: python
-
-                    country_capitals = {
-                        'Japan': 'Tokyo',
-                        'France': 'Paris',
-                        'England': 'London'
-                    }
-                    print(country_capitals)
-
-            .. tab-item:: Q2
-
-                Create a dictionary using curly brackets such that it maps the names of three fruits, Apple, Banana, and Grapes, to their colors: Red, Yellow, and Purple. Print the dictionary.
-
-                .. code-block:: python
-
-                    fruit_colors = {
-                        'Apple': 'Red',
-                        'Banana': 'Yellow',
-                        'Grapes': 'Purple'
-                    }
-                    print(fruit_colors)
+.. mcqgroup::
+    :nav_position: both
+    :show-instant-feedback:
+    :enable-instant-feedback:
+    :shuffle_questions:
+    :num_questions: 10
 
 
-----
+    .. multichoice::
 
-Making a dictionary from a list of lists
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Which symbol is used to create a new dictionary in Python?
 
-| Make a dictionary using the dict function.
-| Pass in a list of lists, with each list made up 2 elements, e.g ``["New South Wales", "Sydney"]``
-| The first element becomes the key and the second element becomes the value. e.g ``"New South Wales": "Sydney"``
-
-.. code-block:: python
-
-    state_capitals = dict([
-        ["New South Wales", "Sydney"],
-        ["Victoria", "Melbourne"],
-        ["Queensland", "Brisbane"]
-    ])
-
-    print(state_capitals)
-    # Output is {'New South Wales': 'Sydney', 'Victoria': 'Melbourne', 'Queensland': 'Brisbane'}
-
-.. admonition:: Tasks
-
-    #. Create a dictionary using the dict function and a list of lists such that it maps the names of three programming languages, Python, Java, and C++, to their creators: Guido van Rossum, James Gosling, and Bjarne Stroustrup. Print the dictionary.
-    #. Create a dictionary using the dict function and a list of lists such that it maps the names of three countries, China, India, and USA, to their populations in billions: 1.4, 1.4, and 0.3. Print the dictionary.
-
-    .. dropdown::
-        :icon: codescan
-        :color: primary
-        :class-container: sd-dropdown-container
-
-        .. tab-set::
-
-            .. tab-item:: Q1
-
-                Create a dictionary using the dict function and a list of lists such that it maps the names of three programming languages, Python, Java, and C++, to their creators: Guido van Rossum, James Gosling, and Bjarne Stroustrup. Print the dictionary.
-
-                .. code-block:: python
-
-                    languages = dict([
-                        ['Python', 'Guido van Rossum'],
-                        ['Java', 'James Gosling'],
-                        ['C++', 'Bjarne Stroustrup']
-                    ])
-                    print(languages)
+        [x] Curly braces {} | Correct! Dictionaries are defined using curly braces.
+        [ ] Square brackets [] | Incorrect. Square brackets are used for lists.
+        [ ] Parentheses () | Incorrect. Parentheses are used for tuples and functions.
+        [ ] Angle brackets <> | Incorrect. Angle brackets are used for comparison operators.
 
 
-            .. tab-item:: Q2
+    .. multichoice::
 
-                Create a dictionary using the dict function and a list of lists such that it maps the names of three countries, China, India, and USA, to their populations in billions: 1.44, 1.39, and 0.33. Print the dictionary.
+        How do you add a new key ``"score"`` with a value of ``50`` to a dictionary named ``player``?
 
-                .. code-block:: python
+        [x] player["score"] = 50 | Correct! Using square brackets with a key assigns a new value.
+        [ ] player.append("score", 50) | Incorrect. Dictionaries do not have an .append() method.
+        [ ] player.add("score" = 50) | Incorrect. .add() is not used for dictionaries.
+        [ ] player{"score"} = 50 | Incorrect. Bracket notation [] must be used to access keys.
 
-                    populations = dict([
-                        ['China', 1.44],
-                        ['India', 1.39],
-                        ['USA', 0.33]
-                    ])
-                    print(populations)
 
+    .. multichoice::
+
+        What happens if you run ``scores["Alex"] = 95`` on a dictionary that ALREADY has a key ``"Alex"`` with a value of ``80``?
+
+        [ ] A duplicate key is added to the dictionary | Incorrect. Keys in a dictionary must be unique.
+        [ ] An error is raised | Incorrect. Updating existing keys is valid Python syntax.
+        [x] The value for "Alex" changes from 80 to 95 | Correct! Assigning to an existing key updates its value.
+        [ ] Nothing changes | Incorrect. The value is overwritten.
+
+
+    .. multichoice::
+
+        Which character separates each key from its corresponding value in a dictionary?
+
+        [ ] Comma , | Incorrect. Commas separate individual key-value pairs from each other.
+        [x] Colon : | Correct! Colons separate a key from its value (key: value).
+        [ ] Equals sign = | Incorrect. Equals signs are used for variable assignment.
+        [ ] Dash - | Incorrect. Dashes are not used in dictionary syntax.
+
+
+    .. multichoice::
+
+        What method allows you to add multiple key-value pairs from another dictionary?
+
+        [x] .update() | Correct! .update() combines key-value pairs from one dictionary into another.
+        [ ] .extend() | Incorrect. .extend() is a list method.
+        [ ] .append() | Incorrect. .append() is a list method.
+        [ ] .concat() | Incorrect. .concat() is not a standard dictionary method in Python.
+
+
+    .. multichoice::
+
+        Given ``hero = {"hp": 100}``, what is the output of ``hero["hp"] = hero["hp"] + 20; print(hero["hp"])``?
+
+        [ ] 100 | Incorrect. The value was increased by 20.
+        [x] 120 | Correct! 100 + 20 updates "hp" to 120.
+        [ ] 20 | Incorrect. The original value was added to 20.
+        [ ] Error | Incorrect. Reassigning values based on existing keys is valid.
+
+
+    .. multichoice::
+
+        What happens if you execute ``data = {"a": 1}; data.update({"b": 2, "c": 3})``?
+
+        [ ] Only "b" is added | Incorrect. .update() adds all key-value pairs in the dictionary.
+        [x] "b": 2 and "c": 3 are both added to ``data`` | Correct! .update() adds all entries from the passed dictionary.
+        [ ] ``data`` is overwritten so it only contains {"b": 2, "c": 3} | Incorrect. .update() merges new entries into the existing dictionary.
+        [ ] A TypeError is raised | Incorrect. Passing a dictionary to .update() is correct.
+
+
+    .. multichoice::
+
+        Which of the following is a valid Python dictionary definition?
+
+        [x] student = {"name": "Maya", "age": 12} | Correct! Uses curly braces with key: value pairs separated by commas.
+        [ ] student = ["name": "Maya", "age": 12] | Incorrect. Square brackets are for lists.
+        [ ] student = ("name" -> "Maya", "age" -> 12) | Incorrect. Incorrect syntax for dictionaries.
+        [ ] student = {"name" = "Maya", "age" = 12} | Incorrect. Keys and values must be separated by colons, not equals signs.
+
+
+    .. multichoice::
+
+        Why are keys in a dictionary required to be unique?
+
+        [x] So Python knows exactly which value to look up for that key | Correct! Unique keys ensure unambiguous value lookups.
+        [ ] Keys do not have to be unique | Incorrect. Duplicate keys are not allowed; later entries overwrite earlier ones.
+        [ ] Because Python can only store numbers as keys | Incorrect. Strings, integers, and other immutable types can be keys.
+        [ ] To keep the dictionary sorted | Incorrect. Key uniqueness is about lookups, not sorting.
+
+
+    .. multichoice::
+
+        What will ``item = {}; item["type"] = "sword"; print(len(item))`` output?
+
+        [ ] 0 | Incorrect. A key-value pair was added.
+        [x] 1 | Correct! There is 1 key-value pair in the dictionary.
+        [ ] 2 | Incorrect. A key-value pair counts as 1 single entry in len().
+        [ ] 5 | Incorrect. len() counts pairs, not characters in string values.
 
 ----
 
-Making a dictionary from a list of tuples
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Deleting Items from a Dictionary
+================================
 
-| Make a dictionary using the dict function.
-| Pass in a list of tuples, with each tuple made up 2 elements, e.g ``("New South Wales", "Sydney")``
-| The first element becomes the key and the second element becomes the value. e.g ``"New South Wales": "Sydney"``
+Python provides several ways to remove key-value pairs from a dictionary depending on whether you want to save the removed value, use the key name, or clear everything:
+
+- ``.pop(key)``: Removes the key-value pair and **returns the value**.
+- ``del dict[key]``: Deletes a key-value pair using the ``del`` statement.
+- ``.popitem()``: Removes and returns the **last inserted** key-value pair as a tuple.
+- ``.clear()``: Removes **all items** from the dictionary, leaving it completely empty ``{}``.
 
 .. code-block:: python
 
-    capitals = dict([
-        ("South Australia", "Adelaide"),
-        ("Western Australia", "Perth"),
-        ("Australian Capital Territory", "Canberra")
-    ])
-    print(capitals)
-    # Output is {'South Australia': 'Adelaide', 'Western Australia': 'Perth', 'Australian Capital Territory': 'Canberra'}
+    pet = {"type": "dog", "name": "Buddy", "age": 3, "color": "brown"}
 
-.. admonition:: Tasks
+    # Removes "age" and stores its value (3) in a variable
+    removed_age = pet.pop("age")  # Result: {"type": "dog", "name": "Buddy", "color": "brown"}
+    print(removed_age)
+    print(pet)
 
-    #. Create a dictionary using the dict function and a list of tuples such that it maps the names of three car brands, Toyota, BMW, and Ford, to their countries of origin: Japan, Germany, and USA. Print the dictionary.
-    #. Create a dictionary using the dict function and a list of tuples such that it maps the names of three planets, Mercury, Venus, and Earth, to their average distances from the sun in million kilometers: 57.9, 108.2, and 149.6. Print the dictionary.
+    # Deletes the key "color" and its value
+    del pet["color"]              # Result: {"type": "dog", "name": "Buddy"}
+    print(pet)
 
-    .. dropdown::
-        :icon: codescan
-        :color: primary
-        :class-container: sd-dropdown-container
+    # Removes the last inserted item ("name": "Buddy")
+    last_removed = pet.popitem()     # Result: {"type": "dog"}
+    print(last_removed)
+    print(pet)
 
-        .. tab-set::
-
-            .. tab-item:: Q1
-
-                Create a dictionary using the dict function and a list of tuples such that it maps the names of three car brands, Toyota, BMW, and Ford, to their countries of origin: Japan, Germany, and USA. Print the dictionary.
-
-                .. code-block:: python
-
-                    car_brand_countries = dict([
-                        ('Toyota', 'Japan'),
-                        ('BMW', 'Germany'),
-                        ('Ford', 'USA')
-                    ])
-                    print(car_brand_countries)
+    # Wipes all key-value pairs from the dictionary
+    pet.clear()                   # Result: {}
+    print(pet)
 
 
-            .. tab-item:: Q2
 
-                Create a dictionary using the dict function and a list of tuples such that it maps the names of three planets, Mercury, Venus, and Earth, to their average distances from the sun in million kilometers: 57.9, 108.2, and 149.6. Print the dictionary.
+Quiz: Deleting Items
+--------------------
 
-                .. code-block:: python
+Fill-in-the-Blanks (Cloze)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-                    planet_distances_to_sun = dict([
-                        ('Mercury', 57.9),
-                        ('Venus', 108.2),
-                        ('Earth', 149.6)
-                    ])
-                    print(planet_distances_to_sun)
+.. cloze::
+    :instructions: Complete the following sentences by filling in the blanks.
+
+    1. To delete a key-value pair and get its value returned, use the @@.pop()@@ method.
+    2. You can delete a key-value pair without returning its value using the @@del@@ keyword followed by ``dict[key]``.
+    3. The @@.popitem()@@ method removes the last inserted key-value pair and and returns its value.
+    4. Attempting to delete a key that does not exist in a dictionary raises a @@KeyError@@.
+    5. To wipe all key-value pairs from a dictionary, call the @@.clear()@@ method.
+
+Code Ordering Examples
+~~~~~~~~~~~~~~~~~~~~~~
+
+**Example 1:** Create a profile dictionary, delete the `"city"` key using `del`, and print the dictionary.
+
+.. ordering::
+
+    user = {"name": "Liam", "city": "Sydney"}
+    del user["city"]
+    print(user)
 
 ----
 
-Making a dictionary from 2 lists
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Example 2:** Create a game stats dictionary, pop the `"lives"` key into a variable, and print the popped value.
 
-| 2 lists of keys and values can be combined and converted into a dictionary using several methods.
+.. ordering::
 
-Making a dictionary from 2 lists --update
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-| The update method is used to add each state key and city value.
-
-.. code-block:: python
-
-    states = ["Queensland", "South Australia", "Western Australia"]
-    cities = ["Brisbane", "Adelaide", "Perth"]
-
-    capitals = {}
-    for i in range(len(states)):
-        capitals.update({states[i]: cities[i]})
-
-    print(capitals)
-    # Output is {'Queensland': 'Brisbane', 'South Australia': 'Adelaide', 'Western Australia': 'Perth'}
-
-
-.. admonition:: Tasks
-
-    #. Create a dictionary using the update method and two lists such that it maps the names of 'Lockett', 'Coventry', and 'Dunstall', to their goals kicked: 1360, 1299, and 1254. Print the dictionary.
-
-    .. dropdown::
-        :icon: codescan
-        :color: primary
-        :class-container: sd-dropdown-container
-
-        .. tab-set::
-
-            .. tab-item:: Q1
-
-                Create a dictionary using the update method and two lists such that it maps the names of 'Lockett', 'Coventry', and 'Dunstall', to their goals kicked: 1360, 1299, and 1254. Print the dictionary.
-
-                .. code-block:: python
-
-                    names = ['Lockett', 'Coventry', 'Dunstall']
-                    goals = [1360, 1299, 1254]
-                    goal_kickers = {}
-                    for i in range(len(names)):
-                        goal_kickers.update({names[i]: goals[i]})
-                    print(my_dict)
-
-
-Making a dictionary from 2 lists --set key value
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-| Each state key gets its city value each time through the for loop.
-
-.. code-block:: python
-
-    states = ["Queensland", "South Australia", "Western Australia"]
-    cities = ["Brisbane", "Adelaide", "Perth"]
-
-    capitals = {}
-    for i in range(len(states)):
-        capitals[states[i]] = cities[i]
-    print(capitals)
-    # Output is {'Queensland': 'Brisbane', 'South Australia': 'Adelaide', 'Western Australia': 'Perth'}
-
-
-.. admonition:: Tasks
-
-    #. Create a dictionary using the update method and two lists such that it maps the names of 'Lockett', 'Coventry', and 'Dunstall', to their goals kicked: 1360, 1299, and 1254. Print the dictionary.
-
-    .. dropdown::
-        :icon: codescan
-        :color: primary
-        :class-container: sd-dropdown-container
-
-        .. tab-set::
-
-            .. tab-item:: Q1
-
-                Create a dictionary using the update method and two lists such that it maps the names of 'Lockett', 'Coventry', and 'Dunstall', to their goals kicked: 1360, 1299, and 1254. Print the dictionary.
-
-                .. code-block:: python
-
-                    names = ['Lockett', 'Coventry', 'Dunstall']
-                    goals = [1360, 1299, 1254]
-                    goal_kickers = {}
-                    for i in range(len(names)):
-                        goal_kickers[names[i]] = goals[i]
-                    print(goal_kickers)
-
-
-Making a dictionary from 2 lists --dict and zip
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-| The zip() function pairs each element from the states list with the corresponding element from the cities list.
-| The result is an iterator containing these tuples: ``('Queensland', 'Brisbane'), ('South Australia', 'Adelaide'), ('Western Australia', 'Perth')``
-| The dict function then converts the zip object into a dictionary.
-
-.. code-block:: python
-
-    states = ["Queensland", "South Australia", "Western Australia"]
-    cities = ["Brisbane", "Adelaide", "Perth"]
-
-    capitals = dict(zip(states, cities))
-    print(capitals)
-    # Output is {'Queensland': 'Brisbane', 'South Australia': 'Adelaide', 'Western Australia': 'Perth'}
-
-.. admonition:: Tasks
-
-    #. Create a dictionary using the zip function and two lists such that it maps the names of three animals, Elephant, Dog, and Cat, to their average lifespans in years: 70, 13, and 15. Print the dictionary.
-    #. Create a dictionary using the zip function and two lists such that it maps the names of three cities, Tokyo, Delhi, and Shanghai, to their populations in millions: 37.4, 28.5, and 25.6. Print the dictionary.
-
-    .. dropdown::
-        :icon: codescan
-        :color: primary
-        :class-container: sd-dropdown-container
-
-        .. tab-set::
-
-            .. tab-item:: Q1
-
-                Create a dictionary using the zip function and two lists such that it maps the names of three animals, Elephant, Dog, and Cat, to their average lifespans in years: 70, 13, and 15. Print the dictionary.
-
-                .. code-block:: python
-
-                    animals = ['Elephant', 'Dog', 'Cat']
-                    lifespans = [70, 13, 15]
-                    animal_lifespans = dict(zip(animals, lifespans))
-                    print(animal_lifespans)
-
-            .. tab-item:: Q2
-
-                Create a dictionary using the zip function and two lists such that it maps the names of three cities, Tokyo, Delhi, and Shanghai, to their populations in millions: 37.4, 28.5, and 25.6. Print the dictionary.
-
-                .. code-block:: python
-
-                    cities = ['Tokyo', 'Delhi', 'Shanghai']
-                    populations = [37.4, 28.5, 25.6]
-                    city_populations = dict(zip(cities, populations))
-                    print(city_populations)
-
+    stats = {"score": 250, "lives": 3}
+    lost_lives = stats.pop("lives")
+    print(lost_lives)
 
 ----
 
-Making a dictionary by dictionary comprehension from 2 lists
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Example 3:** Create a dictionary, clear all its contents, and print the empty dictionary.
 
-| The dictionary comprehension below creates a dictionary by iterating over length of the states list and using the index, i, to set the state key and city value.
+.. ordering::
 
-.. code-block:: python
+    data = {"a": 1, "b": 2}
+    data.clear()
+    print(data)
 
-    states = ["Western Australia", "Tasmania", "Northern Territory"]
-    cities = ["Perth", "Hobart", "Darwin"]
+Multiple Choice Questions
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    capitals = {states[i]: cities[i] for i in range(len(states))}
-    print(capitals)
+.. mcqgroup::
+    :nav_position: both
+    :show-instant-feedback:
+    :enable-instant-feedback:
+    :shuffle_questions:
+    :num_questions: 5
 
 
-.. admonition:: Tasks
+    .. multichoice::
 
-    #. Create a dictionary using a dictionary comprehension via the indexes of two lists such that it maps the names of 'Lockett', 'Coventry', and 'Dunstall', to their goals kicked: 1360, 1299, and 1254. Print the dictionary.
+        Which method deletes a key and returns its associated value?
 
-    .. dropdown::
-        :icon: codescan
-        :color: primary
-        :class-container: sd-dropdown-container
+        [x] .pop() | Correct! .pop(key) removes the key and returns its value.
+        [ ] del | Incorrect. del deletes the entry but does not return a value.
+        [ ] .remove() | Incorrect. Dictionaries do not have a .remove() method.
+        [ ] .clear() | Incorrect. .clear() deletes all key-value pairs.
 
-        .. tab-set::
 
-            .. tab-item:: Q1
+    .. multichoice::
 
-                Create a dictionary using a dictionary comprehension via the indexes of two lists such that it maps the names of 'Lockett', 'Coventry', and 'Dunstall', to their goals kicked: 1360, 1299, and 1254. Print the dictionary.
+        What happens if you try to delete a key that does NOT exist using ``del student["grade"]``?
 
-                .. code-block:: python
+        [ ] The command is ignored | Incorrect. Python will raise an exception.
+        [x] Python raises a KeyError | Correct! Accessing or deleting a non-existent key raises a KeyError.
+        [ ] Python raises an IndexError | Incorrect. IndexErrors occur with sequence position numbers, not dictionary keys.
+        [ ] The dictionary is set to None | Incorrect. An exception is raised.
 
-                    names = ['Lockett', 'Coventry', 'Dunstall']
-                    goals = [1360, 1299, 1254]
-                    goal_kickers = {names[i]: goals[i] for i in range(len(names))}
-                    print(goal_kickers)
 
-| The dictionary comprehension below creates a dictionary by iterating over the tuples produced by zip().
-| For each tuple, the state becomes the key and city becomes the value.
+    .. multichoice::
 
-.. code-block:: python
+        If ``person = {"name": "Ana", "age": 14}``, what does ``person.pop("age")`` return?
 
-    states = ["Western Australia", "Tasmania", "Northern Territory"]
-    cities = ["Perth", "Hobart", "Darwin"]
+        [ ] "name" | Incorrect. "age" was specified as the key to pop.
+        [ ] "age" | Incorrect. .pop() returns the value, not the key name.
+        [x] 14 | Correct! .pop("age") returns the value associated with the key "age".
+        [ ] {"age": 14} | Incorrect. .pop() returns just the value, not a dictionary.
 
-    capitals = {state: city for state, city in zip(states, cities)}
-    print(capitals)
 
-.. admonition:: Tasks
+    .. multichoice::
 
-    #. Create a dictionary using dictionary comprehension and two lists such that it maps the names of three sports, Soccer, Basketball, and Baseball, to the number of players in each team: 11, 5, and 9. Print the dictionary.
-    #. Create a dictionary using dictionary comprehension and two lists such that it maps the names of three countries, USA, China, and Japan, to their GDPs in trillion USD: 21.43, 14.34, and 5.08. Print the dictionary.
+        How do you delete the key ``"level"`` from a dictionary named ``game`` using the ``del`` statement?
 
-    .. dropdown::
-        :icon: codescan
-        :color: primary
-        :class-container: sd-dropdown-container
+        [x] del game["level"] | Correct! Proper syntax is del dict_name[key].
+        [ ] del(game, "level") | Incorrect. del is a statement, not a function.
+        [ ] game.del["level"] | Incorrect. del is not a method attached to dictionaries.
+        [ ] del game("level") | Incorrect. Keys must be specified inside square brackets [].
 
-        .. tab-set::
 
-            .. tab-item:: Q1
+    .. multichoice::
 
-                Create a dictionary using dictionary comprehension and two lists such that it maps the names of three sports, Soccer, Basketball, and Baseball, to the number of players in each team: 11, 5, and 9. Print the dictionary.
+        What is the difference between ``.pop("key")`` and ``del dict["key"]``?
 
-                .. code-block:: python
+        [x] .pop() returns the removed value, whereas del does not | Correct! You can store the output of .pop() in a variable.
+        [ ] del removes keys, while .pop() removes values only | Incorrect. Both remove the entire key-value pair.
+        [ ] .pop() works on lists only, while del works on dictionaries | Incorrect. Both work on dictionaries.
+        [ ] There is no difference | Incorrect. Their return values differ.
 
-                    sports = ['Soccer', 'Basketball', 'Baseball']
-                    players = [11, 5, 9]
-                    sport_players = {sport: player for sport, player in zip(sports, players)}
-                    print(sport_players)
 
-            .. tab-item:: Q2
+    .. multichoice::
 
-                Create a dictionary using dictionary comprehension and two lists such that it maps the names of three countries, USA, China, and Japan, to their GDPs in trillion USD: 21.43, 14.34, and 5.08. Print the dictionary.
+        What does calling ``.popitem()`` on a dictionary do?
 
-                .. code-block:: python
+        [x] Removes and returns the last inserted key-value pair | Correct! .popitem() target the most recently added entry.
+        [ ] Removes a random item | Incorrect. In modern Python (3.7+), it consistently removes the last inserted item.
+        [ ] Removes the first key-value pair | Incorrect. It targeted the last inserted pair.
+        [ ] Clears all items | Incorrect. .clear() clears all items.
 
-                    countries = ['USA', 'China', 'Japan']
-                    gdps = [21.43, 14.34, 5.08]
-                    country_gdps = {country: gdp for country, gdp in zip(countries, gdps)}
-                    print(country_gdps)
 
-----
+    .. multichoice::
 
-Making a dictionary from key word arguments
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        What will be the content of ``inventory`` after running ``inventory = {"wood": 10}; inventory.clear()``?
 
-| Make a dictionary using the dict function and key word arguments.
-| ``a=1`` will become the key value pair ``'a': 1``
+        [ ] {"wood": 10} | Incorrect. .clear() removes all contents.
+        [x] {} | Correct! .clear() leaves an empty dictionary.
+        [ ] None | Incorrect. The dictionary variable still exists as an empty dict {}.
+        [ ] Error | Incorrect. .clear() is a valid dictionary method.
 
-.. code-block:: python
 
-    simple_dict = dict(a=1, b=2, c=3, d=4)
-    print(simple_dict)
-    # Output is {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+    .. multichoice::
 
-.. admonition:: Tasks
+        Given ``book = {"title": "Python", "pages": 200}``, what happens after ``del book["pages"]``?
 
-    #. Create a dictionary using keyword arguments such that it maps the names of three programming languages, Python, Java, and JavaScript, to their release years: 1991, 1995, and 1995. Print the dictionary.
-    #. Create a dictionary using keyword arguments such that it maps the names of three continents, Africa, Asia, and Europe, to their areas in million square kilometers: 30.37, 44.58, and 10.18. Print the dictionary.
+        [ ] ``book`` becomes ``{"pages": 200}`` | Incorrect. "pages" key was deleted.
+        [x] ``book`` becomes ``{"title": "Python"}`` | Correct! The key "pages" and its value 200 are removed.
+        [ ] ``book`` becomes ``{}`` | Incorrect. Only "pages" was deleted.
+        [ ] A KeyError is raised | Incorrect. "pages" exists in the dictionary.
 
-    .. dropdown::
-        :icon: codescan
-        :color: primary
-        :class-container: sd-dropdown-container
 
-        .. tab-set::
+    .. multichoice::
 
-            .. tab-item:: Q1
+        What happens if you run ``.pop()`` on a key with a default fallback value specified, like ``info.pop("phone", "N/A")``, when ``"phone"`` is NOT in ``info``?
 
-                Create a dictionary using keyword arguments such that it maps the names of three programming languages, Python, Java, and JavaScript, to their release years: 1991, 1995, and 1995. Print the dictionary.
+        [ ] Raises a KeyError | Incorrect. Providing a default value prevents a KeyError.
+        [x] Returns "N/A" without raising an error | Correct! The second argument acts as a safe fallback if the key is missing.
+        [ ] Returns None | Incorrect. It returns the specified default "N/A".
+        [ ] Creates the key "phone" with value "N/A" | Incorrect. .pop() does not add items.
 
-                .. code-block:: python
 
-                    languages_release_years = dict(Python=1991, Java=1995, JavaScript=1995)
-                    print(languages_release_years)
-                    # Output is {'Python': 1991, 'Java': 1995, 'JavaScript': 1995}
+    .. multichoice::
 
-            .. tab-item:: Q2
+        How do you remove ALL key-value pairs from a dictionary named ``scores``?
 
-                Create a dictionary using keyword arguments such that it maps the names of three continents, Africa, Asia, and Europe, to their areas in million square kilometers: 30.37, 44.58, and 10.18. Print the dictionary.
-
-                .. code-block:: python
-
-                    continents = dict(Africa=30.37, Asia=44.58, Europe=10.18)
-                    print(continents)
-                    # Output is {'Africa': 30.37, 'Asia': 44.58, 'Europe': 10.18}
-
+        [ ] scores.remove_all() | Incorrect. No such method exists in Python.
+        [ ] del scores | Incorrect. del scores deletes the variable itself, not just its entries.
+        [x] scores.clear() | Correct! .clear() removes all key-value pairs inside the dictionary.
+        [ ] scores.pop() | Incorrect. .pop() requires a key argument.
 
 ----
 
+Inspecting Keys, Values, and Items
+===================================
 
-..
-    # Access elements
-    game_register['dent']
+Python provides special methods to view the keys, the values, or both together without changing the dictionary:
 
-    # Add or update and existing entry
-    game_register['pepper'] = 50
+- ``.keys()``: Returns a view of all **keys** in the dictionary.
+- ``.values()``: Returns a view of all **values** in the dictionary.
+- ``.items()``: Returns a view of all **key-value pairs** as tuples ``(key, value)``.
+- ``key in dict``: Checks if a specific key **exists** in the dictionary (returns ``True`` or ``False``).
 
-    # Delete an entry
-    del game_register['pepper']
+.. code-block:: python
 
-    # Delete all entries
-    game_register.clear()
+    prices = {"apple": 1.5, "banana": 0.8, "orange": 1.2}
 
-    # Delete the dictionary
-    del game_register
+    # Get all keys
+    all_keys = prices.keys()      # Result: dict_keys(['apple', 'banana', 'orange'])
 
-    # Retrieve a value for the key or default if not in dicionary
-    game_register.get('dent')
+    # Get all values
+    all_values = prices.values()  # Result: dict_values([1.5, 0.8, 1.2])
+
+    # Get key-value pairs
+    all_items = prices.items()    # Result: dict_items([('apple', 1.5), ('banana', 0.8), ('orange', 1.2)])
+
+    # Check if a key exists
+    has_apple = "apple" in prices # Result: True
+    has_grape = "grape" in prices # Result: False
 
 
+Quiz: Inspecting Keys, Values, and Items
+----------------------------------------
+
+Fill-in-the-Blanks (Cloze)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. cloze::
+    :instructions: Complete the following sentences by filling in the blanks.
+
+    1. To get a list-like view of all key names in a dictionary, call the @@.keys()@@ method.
+    2. To get a view of all stored values without their keys, call the @@.values()@@ method.
+    3. To get both keys and values paired together as tuples, use the @@.items()@@ method.
+    4. To test if a key exists in a dictionary, use the @@in@@ keyword.
+    5. The expression ``"age" in {"name": "Sam"}`` evaluates to the boolean value @@False@@.
+
+Code Ordering Examples
+~~~~~~~~~~~~~~~~~~~~~~
+
+**Example 1:** Create a dictionary, retrieve all keys, and print them.
+
+.. ordering::
+
+    student = {"name": "Ella", "grade": 7}
+    keys_list = student.keys()
+    print(keys_list)
+
+----
+
+**Example 2:** Create a menu price dictionary, get all values, and print them.
+
+.. ordering::
+
+    menu = {"pizza": 12, "burger": 10}
+    price_values = menu.values()
+    print(price_values)
+
+----
+
+**Example 3:** Check if `"cat"` is a key in a pets dictionary and print the result.
+
+.. ordering::
+
+    pets = {"dog": 2, "fish": 5}
+    is_present = "cat" in pets
+    print(is_present)
+
+Multiple Choice Questions
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. mcqgroup::
+    :nav_position: both
+    :show-instant-feedback:
+    :enable-instant-feedback:
+    :shuffle_questions:
+    :num_questions: 5
+
+
+    .. multichoice::
+
+        What does calling ``.keys()`` on a dictionary return?
+
+        [x] A view of all key names in the dictionary | Correct! .keys() retrieves all dictionary keys.
+        [ ] A view of all values in the dictionary | Incorrect. Values are retrieved using .values().
+        [ ] A count of how many items exist | Incorrect. Counting items is done using len().
+        [ ] A new sorted list of keys and values | Incorrect. It returns a dict_keys view object.
+
+
+    .. multichoice::
+
+        Given ``scores = {"Alice": 90, "Bob": 85}``, what is the output of ``"Alice" in scores``?
+
+        [x] True | Correct! "Alice" is a key present in the dictionary.
+        [ ] False | Incorrect. "Alice" exists as a key.
+        [ ] 90 | Incorrect. The in operator returns a boolean (True/False), not the value.
+        [ ] KeyError | Incorrect. Checking existence with in does not raise errors for missing items.
+
+
+    .. multichoice::
+
+        How do you check if a VALUE (e.g. ``90``) exists in a dictionary named ``scores``?
+
+        [ ] 90 in scores | Incorrect. The in operator checks keys by default, not values.
+        [x] 90 in scores.values() | Correct! Checking against .values() tests for values instead of keys.
+        [ ] 90 in scores.keys() | Incorrect. .keys() only checks key names.
+        [ ] scores.has_value(90) | Incorrect. .has_value() is not a Python method.
+
+
+    .. multichoice::
+
+        What type of data structures are returned inside ``.items()``?
+
+        [ ] Lists | Incorrect. Individual key-value pairs are stored as tuples.
+        [ ] Integers | Incorrect. Pairs contain keys and values of any data type.
+        [x] Tuples containing (key, value) pairs | Correct! .items() returns pairs in (key, value) format.
+        [ ] Dictionaries | Incorrect. They are returned as key-value tuples inside a dict_items view.
+
+
+    .. multichoice::
+
+        What will ``info = {"a": 1, "b": 2}; print(len(info.keys()))`` output?
+
+        [ ] 1 | Incorrect. There are 2 keys ("a" and "b").
+        [x] 2 | Correct! len() counts the 2 keys returned by .keys().
+        [ ] 4 | Incorrect. len() counts the keys, not keys + values combined.
+        [ ] Error | Incorrect. len() works on dict_keys view objects.
+
+
+    .. multichoice::
+
+        Which expression tests whether ``"gold"`` is NOT a key in ``inventory``?
+
+        [ ] "gold" not inventory | Incorrect. Incorrect keyword syntax.
+        [x] "gold" not in inventory | Correct! not in tests if a key is absent from the dictionary.
+        [ ] "gold" != inventory.keys() | Incorrect. Comparing a string to a view object does not test membership properly.
+        [ ] inventory.missing("gold") | Incorrect. No such method exists.
+
+
+    .. multichoice::
+
+        Given ``hero = {"hp": 100, "mp": 50}``, what is the result of ``list(hero.values())``?
+
+        [ ] ["hp", "mp"] | Incorrect. Those are the keys.
+        [x] [100, 50] | Correct! .values() returns 100 and 50, converted to a list.
+        [ ] [("hp", 100), ("mp", 50)] | Incorrect. That is the output of .items().
+        [ ] [150] | Incorrect. It returns individual values, not their sum.
+
+
+    .. multichoice::
+
+        What does ``"100" in {"score": 100}`` evaluate to?
+
+        [ ] True | Incorrect. "100" is a string value, whereas the key is "score". The in operator checks keys by default.
+        [x] False | Correct! "100" is not a KEY in the dictionary.
+        [ ] KeyError | Incorrect. The in operator returns False, not an error.
+        [ ] None | Incorrect. The in operator returns a boolean.
+
+
+    .. multichoice::
+
+        If ``data = {"x": 10, "y": 20}``, what does ``for entry in data.items():`` yield in ``entry`` on each step?
+
+        [ ] Just the key string ("x", then "y") | Incorrect. That would happen with for entry in data:.
+        [ ] Just the integer value (10, then 20) | Incorrect. That would happen with for entry in data.values():.
+        [x] A tuple containing key and value like ("x", 10) | Correct! .items() yields (key, value) tuples.
+        [ ] A sub-dictionary | Incorrect. .items() yields tuples.
+
+
+    .. multichoice::
+
+        Which statement about dictionary keys is TRUE?
+
+        [x] Keys must be unique, but values can be duplicated | Correct! Multiple keys can share the same value (e.g., {"a": 1, "b": 1}).
+        [ ] Keys can be duplicated, but values must be unique | Incorrect. Keys must be unique.
+        [ ] Both keys and values must always be unique | Incorrect. Values can repeat.
+        [ ] Neither keys nor values need to be unique | Incorrect. Keys must be unique.
+
+----
+
+Iterating Through a Dictionary
+==============================
+
+Iterating means stepping through entries in a dictionary one by one using a **for loop**. You can iterate over keys, values, or both together.
+
+.. code-block:: python
+
+    scores = {"Alex": 88, "Sam": 92, "Jordan": 79}
+
+    # Loop through keys (default behavior)
+    for name in scores:
+        print(name)
+
+    # Loop through key and value together using .items()
+    for name, score in scores.items():
+        print(f"{name} scored {score} points!")
+
+
+Quiz: Iterating Through Dictionaries
+------------------------------------
+
+Fill-in-the-Blanks (Cloze)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. cloze::
+    :instructions: Complete the following sentences by filling in the blanks.
+
+    1. By default, iterating directly over a dictionary with a ``for`` loop steps through its @@keys@@.
+    2. To loop through both keys and values at the same time, call the @@.items()@@ method.
+    3. To loop through only the values of a dictionary, use the @@.values()@@ method.
+    4. When looping with ``for k, v in dict.items():``, the variable ``k`` holds the @@key@@.
+    5. The header line of a dictionary ``for`` loop must end with a @@colon@@.
+
+Code Ordering Examples
+~~~~~~~~~~~~~~~~~~~~~~
+
+**Example 1:** Create a dictionary and loop through its keys to print each key name.
+
+.. ordering::
+
+    fruit_colors = {"apple": "red", "banana": "yellow"}
+    for fruit in fruit_colors:
+        print(fruit)
+
+----
+
+**Example 2:** Loop through values of a price dictionary and print each price.
+
+.. ordering::
+
+    prices = {"bread": 2.5, "milk": 1.5}
+    for price in prices.values():
+        print(price)
+
+----
+
+**Example 3:** Loop through keys and values together using `.items()` and print formatted sentences.
+
+.. ordering::
+
+    inventory = {"swords": 1, "potions": 5}
+    for item, qty in inventory.items():
+        print(f"You have {qty} {item}")
+
+
+Multiple Choice Questions
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. mcqgroup::
+    :nav_position: both
+    :show-instant-feedback:
+    :enable-instant-feedback:
+    :shuffle_questions:
+    :num_questions: 5
+
+
+    .. multichoice::
+
+        When you write ``for x in my_dict:``, what does ``x`` represent during each iteration?
+
+        [x] The current key name | Correct! Direct iteration over a dictionary yields its keys.
+        [ ] The current value | Incorrect. To loop over values, use my_dict.values().
+        [ ] A tuple of (key, value) | Incorrect. To loop over tuples, use my_dict.items().
+        [ ] The entire dictionary | Incorrect. It loops through individual keys one by one.
+
+
+    .. multichoice::
+
+        Which loop head allows you to unpack both key and value into separate variables ``k`` and ``v``?
+
+        [ ] for k, v in my_dict: | Incorrect. Direct iteration yields keys only, which cannot be unpacked into two variables.
+        [ ] for k, v in my_dict.keys(): | Incorrect. .keys() yields single key names only.
+        [x] for k, v in my_dict.items(): | Correct! .items() yields (key, value) pairs that unpack cleanly into k and v.
+        [ ] for k, v in my_dict.values(): | Incorrect. .values() yields single values only.
+
+
+    .. multichoice::
+
+        How many times will a ``for`` loop execute when iterating over a dictionary with 4 key-value pairs?
+
+        [ ] 2 times | Incorrect. The loop visits every entry.
+        [x] 4 times | Correct! The loop runs once for each key-value pair in the dictionary.
+        [ ] 8 times | Incorrect. Key and value pairs count as 1 iteration per entry.
+        [ ] 1 time | Incorrect. It iterates through all entries.
+
+
+    .. multichoice::
+
+        What happens if you try to unpack two variables in a loop without using ``.items()``, like ``for k, v in {"a": 1}:``?
+
+        [ ] It automatically uses values for v | Incorrect. Python will attempt to unpack the key string "a".
+        [x] Python raises a ValueError | Correct! A single key string cannot be unpacked into two variables (k and v).
+        [ ] It skips the loop | Incorrect. An exception is raised.
+        [ ] It prints None for v | Incorrect. An exception is raised.
+
+
+    .. multichoice::
+
+        Which function can be used to count how many key-value pairs a loop will iterate over?
+
+        [ ] count() | Incorrect. count() is a string/list method.
+        [x] len() | Correct! len(my_dict) returns the total number of entries in the dictionary.
+        [ ] size() | Incorrect. size() is not a built-in Python function.
+        [ ] sum() | Incorrect. sum() calculates numeric totals.
+
+
+    .. multichoice::
+
+        What will ``for v in {"x": 10, "y": 20}.values(): print(v, end=" ")`` output?
+
+        [ ] x y | Incorrect. .values() iterates over values, not keys.
+        [x] 10 20 | Correct! .values() yields 10 and 20.
+        [ ] ("x", 10) ("y", 20) | Incorrect. That would require .items().
+        [ ] 30 | Incorrect. The loop prints each value separately.
+
+
+    .. multichoice::
+
+        What error occurs if you forget to indent the body of a ``for`` loop over a dictionary?
+
+        [x] IndentationError | Correct! Python requires indented blocks after compound headers.
+        [ ] KeyError | Incorrect. KeyError happens when accessing missing keys.
+        [ ] TypeError | Incorrect. Missing block formatting raises IndentationError.
+        [ ] NameError | Incorrect. NameError occurs when referencing undefined variables.
 

@@ -19,11 +19,11 @@ Sequencing: steps to draw a star
     :scale: 75 %
     :align: center
     :alt: star_steps
-    
+
 | The code below uses sequencing only.
 | The code below draws a star with diagonals of 120, at coordinates (20, 30).
 | The start direction, eastwards, is set by: ``t.seth(0)``
-| The start position, at (20, 30), is set by: ``t.goto(20, 30)``. 
+| The start position, at (20, 30), is set by: ``t.goto(20, 30)``.
 | ``t.pu()`` and ``t.pd()`` are used either side of it to avoid line drawing when repositioning the turtle.
 | A line is drawn forwards by: ``t.fd(120)``.
 | The turtle then turns to the left by: ``t.lt(144)``.
@@ -120,7 +120,7 @@ Sequencing: steps to draw a star
 
             .. tab-item:: Q1
 
-                From the code above, list the lines that do the actual drawing. 
+                From the code above, list the lines that do the actual drawing.
 
                 .. code-block:: python
 
@@ -147,7 +147,7 @@ Sequencing: steps to draw a star
 
 ----
 
-Iteration: using a for-loop to draw a star 
+Iteration: using a for-loop to draw a star
 ------------------------------------------------
 
 | The code below uses iteration to reduce code duplication that was present when only sequencing was used.
@@ -183,7 +183,7 @@ Iteration: using a for-loop to draw a star
                 for _ in range(XXX):
                     t.fd(XXX)
                     t.lt(XXX)
-                                    
+
                 s.exitonclick()
 
         .. tab-item:: Ans
@@ -210,7 +210,7 @@ Iteration: using a for-loop to draw a star
                 for _ in range(5):
                     t.fd(120)
                     t.lt(144)
-                    
+
                 s.exitonclick()
 
 ----
@@ -275,7 +275,7 @@ Definitions: using a def block to draw a star
 | The formula to calculate the turning angle of the turtle is (360 * ((points-1)/2))/points.
 | e.g for 5 points the angle is (360 * (5-1)/2)/5 which is 720/5 which is 144.
 
-| The code to draw a star with an odd number of points from 5 upwards is below. 
+| The code to draw a star with an odd number of points from 5 upwards is below.
 
 .. admonition:: Code Completion: star definition
 
@@ -284,7 +284,7 @@ Definitions: using a def block to draw a star
         .. tab-item:: Q
 
             Complete the ``star`` definition by replacing the "XXX"s.
-    
+
             .. code-block:: python
 
 
@@ -302,7 +302,7 @@ Definitions: using a def block to draw a star
         .. tab-item:: Ans
 
             Completed ``star`` definition.
-    
+
             .. code-block:: python
 
 
@@ -375,6 +375,7 @@ Adding pen colour and fill colour parameters
 | The syntax below adds parameters for pen and fill colours.
 
 .. py:function:: star(t, length=50, points=5, start_pos=(0, 0), start_h=0, penw=1, penc="black", fillc=None)
+    :no-index:
 
     | **t** - the turtle object to draw the star
     | **length** - diagonal length; default 50
@@ -385,7 +386,7 @@ Adding pen colour and fill colour parameters
     | **penc** - pencolor; ; default "black"
     | **fillc** - fillcolor; default None
 
- 
+
 .. image:: images/star_coloured.png
     :scale: 75 %
     :align: center
@@ -402,7 +403,7 @@ Adding pen colour and fill colour parameters
         .. tab-item:: Q
 
             Complete the code to draw a 9 pointed star at (x=-100, y=0) with a grey90 pencolor, a yellow fillcolor, using a pensize of 3, by replacing the XXXs.
-                        
+
             .. code-block:: python
 
                 import turtle
@@ -425,7 +426,7 @@ Adding pen colour and fill colour parameters
                     for _ in range(points):
                         t.fd(length)
                         t.lt(ang)
-                        
+
                     if fillc is not None:
                         t.end_fill()
 
@@ -448,7 +449,7 @@ Adding pen colour and fill colour parameters
         .. tab-item:: Ans
 
             Completed code to draw a 9 pointed star at (x=-100, y=0) with a grey90 pencolor, a yellow fillcolor, using a pensize of 3.
-                        
+
             .. code-block:: python
 
                 import turtle
@@ -471,7 +472,7 @@ Adding pen colour and fill colour parameters
                     for _ in range(points):
                         t.fd(length)
                         t.lt(ang)
-                        
+
                     if fillc is not None:
                         t.end_fill()
 
@@ -502,4 +503,4 @@ Practice Questions
     2. Draw a 7 pointed star with a red pen and gold2 fill colour.
     3. Draw a random number, between 10 and 20, of 5 pointed stars, of random size, between 10 and 100, at random positions.
 
-    
+

@@ -5,12 +5,12 @@ Function packing and unpacking
 Packing arguments of a function
 ----------------------------------
 
-| When a function has a parameter preceded by an asterisk \*, it can accept a variable number of arguments. 
+| When a function has a parameter preceded by an asterisk \*, it can accept a variable number of arguments.
 | Pass zero, one, or more arguments to the \*args parameter.
 | The arguments are packed into a tuple.
 
 .. code-block:: python
- 
+
     def polygon_perimeter(*args):
         return sum(args)
 
@@ -79,7 +79,7 @@ Built in functions: Unpacking with more than one value
     for x in range(*vals):
         print(x, end=", ")
 
-| The code prints out: 0, 1, 2, 3, 4, 
+| The code prints out: 0, 1, 2, 3, 4,
 
 
 | The code below runs as if the arguments to the range function were 0, 5 and 2.
@@ -90,13 +90,13 @@ Built in functions: Unpacking with more than one value
     for x in range(*vals):
         print(x, end=", ")
 
-| The code prints out: 0, 2, 4, 
+| The code prints out: 0, 2, 4,
 
 ----
 
 Built in functions: Unpacking with just one value
 ---------------------------------------------------
- 
+
 | For tuples with just one value, a trailing comma is required. e.g (5,)
 | The range function expects a tuple for unpacking via (\*vals), so (5,) is needed.
 
@@ -106,5 +106,5 @@ Built in functions: Unpacking with just one value
     for x in range(*vals):
         print(x, end=", ")
 
-| The code prints out: 0, 1, 2, 3, 4, 
+| The code prints out: 0, 1, 2, 3, 4,
 

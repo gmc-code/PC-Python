@@ -30,7 +30,12 @@ PC-Python
     python/indentation.rst
 
     python/data_types.rst
+    python/strings.rst
+    python/numbers.rst
+    python/booleans.rst
+    python/variables.rst
     python/operators.rst
+
     python/operators_arithmetic.rst
     python/operators_compound_assignment.rst
     python/operators_boolean.rst.
@@ -38,8 +43,6 @@ PC-Python
     python/operators_logical.rst
     python/operators_membership.rst
     python/operators_identity.rst
-    python/variables.rst
-    python/variables_scope.rst
 
     python/selection.rst
     python/iteration.rst
@@ -52,13 +55,18 @@ PC-Python
     python/dictionary_methods.rst
 
     python/bytes.rst
-    python/bytearrays.rst
 
     python/multiple_assignment.rst
     python/unpacking_iterables.rst
 
     python/functions.rst
     python/function_packing and_unpacking.rst
+
+    python/range_function.rst
+    python/f_strings.rst
+
+    python/classes.rst
+
 
 
 .. toctree::
