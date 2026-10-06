@@ -23,19 +23,45 @@ To add new items to an existing list, Python gives us three primary methods:
 * ``.insert(index, item)``: Adds an item at a **specific position (index)**. Remember that Python counts starting from ``0``.
 * ``.extend(iterable)``: Appends **multiple items** from another list (or iterable) to the end of the current list.
 
+The .append() Method
+--------------------
+
+The ``.append(item)`` method adds a single item to the **very end** of the list.
+
 .. code-block:: python
 
     inventory = ["sword", "shield"]
 
     # Adds "potion" to the end
-    inventory.append("potion")  # Result: ["sword", "shield", "potion"]
+    inventory.append("potion")
+    print(inventory)  # Output: ["sword", "shield", "potion"]
+
+The .insert() Method
+--------------------
+
+The ``.insert(index, item)`` method adds an item at a **specific position (index)**. Remember that Python uses zero-based indexing, so ``0`` is the first position.
+
+.. code-block:: python
+
+    inventory = ["sword", "shield", "potion"]
 
     # Inserts "map" at index 1 (second position)
-    inventory.insert(1, "map")   # Result: ["sword", "map", "shield", "potion"]
+    inventory.insert(1, "map")
+    print(inventory)  # Output: ["sword", "map", "shield", "potion"]
+
+The .extend() Method
+--------------------
+
+The ``.extend(iterable)`` method appends **multiple items** from another list (or iterable) to the end of the current list.
+
+.. code-block:: python
+
+    inventory = ["sword", "map", "shield", "potion"]
+    more_items = ["bow", "arrow"]
 
     # Adds multiple items from another list to the end
-    more_items = ["bow", "arrow"]
-    inventory.extend(more_items) # Result: ["sword", "map", "shield", "potion", "bow", "arrow"]
+    inventory.extend(more_items)
+    print(inventory)  # Output: ["sword", "map", "shield", "potion", "bow", "arrow"]
 
 Quiz: Adding Items
 ------------------
@@ -199,28 +225,66 @@ Multiple Choice Questions
 Deleting Items from a List
 ==========================
 
-Python provides several ways to remove items depending on whether you know the item's **value**, its **position**, or if you want to wipe the list completely:
+Python provides several ways to remove items depending on whether you know the item's **value**, its **position (index)**, or if you want to wipe the list completely.
 
 * ``.remove(item)``: Deletes the **first matching item** by value.
 * ``.pop(index)``: Removes and returns the item at a specific index. If no index is given, it removes the **last item**.
 * ``del list[index]``: Deletes an item at a specific index using the ``del`` statement.
 * ``.clear()``: Removes **all items** from the list, leaving it completely empty ``[]``.
 
+
+The .remove() Method
+--------------------
+
+The ``.remove(item)`` method searches for an item by its value and deletes the **first matching occurrence** from the list.
+
 .. code-block:: python
 
     pets = ["dog", "cat", "fish", "cat"]
 
     # Removes the first occurrence of "cat"
-    pets.remove("cat")  # Result: ["dog", "fish", "cat"]
+    pets.remove("cat")
+    print(pets)  # Output: ["dog", "fish", "cat"]
 
-    # Removes the item at index 0 ("dog")
-    pets.pop(0)         # Result: ["fish", "cat"]
+The .pop() Method
+-----------------
+
+The ``.pop(index)`` method removes and returns the item at a specific index. If no index argument is provided, it automatically removes and returns the **very last item**.
+
+.. code-block:: python
+
+    pets = ["dog", "fish", "cat"]
+
+    # Removes and returns the item at index 0 ("dog")
+    removed_pet = pets.pop(0)
+    print(removed_pet)  # Output: "dog"
+    print(pets)         # Output: ["fish", "cat"]
+
+The del Statement
+-----------------
+
+The ``del`` statement deletes an item at a specific index without returning its value. It can also be used to delete slices or entire variables.
+
+.. code-block:: python
+
+    pets = ["fish", "cat"]
 
     # Deletes the item at index 1 ("cat")
-    del pets[1]         # Result: ["fish"]
+    del pets[1]
+    print(pets)  # Output: ["fish"]
+
+The .clear() Method
+-------------------
+
+The ``.clear()`` method removes **all items** from the list at once, leaving behind a completely empty list ``[]``.
+
+.. code-block:: python
+
+    pets = ["fish"]
 
     # Wipes all remaining items from the list
-    pets.clear()        # Result: []
+    pets.clear()
+    print(pets)  # Output: []
 
 
 Quiz: Deleting Items
@@ -391,25 +455,59 @@ You can reorder the items inside a list using methods that modify the list in pl
 * ``sorted(iterable)``: Returns a **new** sorted list without modifying the original list. Can also take ``reverse=True``.
 * ``.reverse()``: Reverses the current order of elements in place **without** alphabetizing or numerical sorting.
 
+
+The .sort() Method
+------------------
+
+The ``.sort()`` method reorders items in **ascending order** directly inside the original list (alphabetically for text, or smallest-to-largest for numbers).
+
 .. code-block:: python
 
     scores = [45, 12, 89, 33]
 
-    # Sort in ascending order (modifies original list)
-    scores.sort()             # Result: [12, 33, 45, 89]
+    # Sorts the original list in ascending order
+    scores.sort()
+    print(scores)  # Output: [12, 33, 45, 89]
 
-    # Sort in descending order
-    scores.sort(reverse=True) # Result: [89, 45, 33, 12]
+Sorting in Descending Order (.sort(reverse=True))
+-------------------------------------------------
 
-    # Using sorted() to get a new list (original stays unchanged)
+Passing the parameter ``reverse=True`` into the ``.sort()`` method reorders the list in **descending order** (largest-to-smallest or reverse alphabetical).
+
+.. code-block:: python
+
+    scores = [12, 33, 45, 89]
+
+    # Sorts the original list in descending order
+    scores.sort(reverse=True)
+    print(scores)  # Output: [89, 45, 33, 12]
+
+The sorted() Function
+---------------------
+
+The ``sorted(iterable)`` built-in function returns a **brand new** sorted list while leaving the original list completely unchanged. It also accepts ``reverse=True``.
+
+.. code-block:: python
+
     numbers = [5, 2, 8, 1]
-    sorted_numbers = sorted(numbers) # Result: [1, 2, 5, 8]
-    # numbers is still [5, 2, 8, 1]
+
+    # Creates a new sorted list without modifying the original
+    sorted_numbers = sorted(numbers)
+    print(sorted_numbers)  # Output: [1, 2, 5, 8]
+    print(numbers)         # Output: [5, 2, 8, 1]
+
+The .reverse() Method
+---------------------
+
+The ``.reverse()`` method simply flips the current order of elements in place **without** performing any alphabetical or numerical sorting.
+
+.. code-block:: python
 
     colors = ["red", "blue", "green"]
 
-    # Simply flip the list order in place
-    colors.reverse()          # Result: ["green", "blue", "red"]
+    # Reverses the element positions in place
+    colors.reverse()
+    print(colors)  # Output: ["green", "blue", "red"]
 
 
 Quiz: Sorting and Reversing
