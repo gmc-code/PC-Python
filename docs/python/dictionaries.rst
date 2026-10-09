@@ -6,6 +6,7 @@ Dictionaries
 | Dictionaries are ordered, changeable, and created using curly braces ``{}``.
 | Each key is separated from its value by a colon ``:``, and key-value pairs are separated by commas.
 | Dictionaries allow you to look up values quickly using unique keys instead of index numbers.
+| e.g. student["name"] returns "Alex".
 
 .. code-block:: python
 
@@ -27,6 +28,10 @@ To add a new key-value pair or change an existing value, you access the key usin
 - ``dict[key] = new_value``: If the key **already exists**, it overwrites and updates the existing value.
 - ``.update(other_dict)``: Adds or updates **multiple key-value pairs** at once from another dictionary.
 
+
+**Setting value**
+------------------
+
 .. code-block:: python
 
     inventory = {"apples": 5, "bananas": 2}
@@ -36,22 +41,34 @@ To add a new key-value pair or change an existing value, you access the key usin
     # Result: {"apples": 5, "bananas": 2, "oranges": 10}
     print(inventory)
 
+**Replace value**
+------------------
+
+.. code-block:: python
+
+    inventory = {"apples": 5, "bananas": 2}
+
     # Updates the existing key "apples" with a new value
     inventory["apples"] = 8
-    # Result: {"apples": 8, "bananas": 2, "oranges": 10}
+    # Result: {"apples": 8, "bananas": 2}
     print(inventory)
+
+
+**Update method**
+------------------
+
+.. code-block:: python
+
+    inventory = {"apples": 5, "bananas": 2}
 
     # Adds multiple items from another dictionary
     more_items = {"grapes": 4, "peaches": 6}
     inventory.update(more_items)
-    # Result: {"apples": 8, "bananas": 2, "oranges": 10, "grapes": 4, "peaches": 6}
+    # Result: {"apples": 58, "bananas": 2, "grapes": 4, "peaches": 6}
     print(inventory)
 
-    some_more_items = {"grapes": 5, "figs": 6}
-    inventory.update(some_more_items)
-    # Result: {"apples": 8, "bananas": 2, "oranges": 10, "grapes": 4, "peaches": 6}
-    print(inventory)
 
+----
 
 Quiz: Adding and Modifying Items
 --------------------------------
@@ -231,20 +248,33 @@ Python provides several ways to remove key-value pairs from a dictionary dependi
     print(removed_age)
     print(pet)
 
+.. code-block:: python
+
+    pet = {"type": "dog", "name": "Buddy", "color": "brown"}
+
     # Deletes the key "color" and its value
     del pet["color"]              # Result: {"type": "dog", "name": "Buddy"}
     print(pet)
+
+.. code-block:: python
+
+    pet = {"type": "dog", "name": "Buddy"}
 
     # Removes the last inserted item ("name": "Buddy")
     last_removed = pet.popitem()     # Result: {"type": "dog"}
     print(last_removed)
     print(pet)
 
+.. code-block:: python
+
+    pet = {"type": "dog"}
+
     # Wipes all key-value pairs from the dictionary
     pet.clear()                   # Result: {}
     print(pet)
 
 
+----
 
 Quiz: Deleting Items
 --------------------

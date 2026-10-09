@@ -2,6 +2,7 @@
 Operators
 ==========================
 
+| **Arithmetic Operators**: Perform standard mathematical calculations.
 | **Assignment** operators are used to assign values to variables.
 | The **compound assignment** operators consist of two operators as a shorthand.
 | **Comparison** operators are used to compare two values.
@@ -12,16 +13,6 @@ Operators
 
 | The **None** keyword is used to define a null value, or no value at all. None is not the same as 0, False, or an empty string. None is a data type of its own and only None can be None.
 
-===========================
-Python Operators
-===========================
-
-| In Python, **operators** are special symbols used to perform operations on variables and values.
-| Python groups operators into several categories based on their function:
-| 1. **Arithmetic Operators**: Perform standard mathematical calculations.
-| 2. **Comparison (Relational) Operators**: Compare two values and return a Boolean result (``True`` or ``False``).
-| 3. **Logical Operators**: Combine multiple Boolean expressions or conditions.
-| 4. **Assignment Operators**: Assign and update variable values efficiently.
 
 .. code-block:: python
 

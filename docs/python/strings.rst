@@ -142,10 +142,10 @@ Multiple Choice Questions
 
         What operator is used to concatenate strings in Python?
 
-        [x] + | Correct! The + operator joins strings end-to-end.
-        [ ] * | Incorrect. The * operator repeats strings.
-        [ ] & | Incorrect. & is a bitwise operator.
-        [ ] . | Incorrect. Dot operator is used for methods/attributes.
+        [x] "+" | Correct! The + operator joins strings end-to-end.
+        [ ] "*" | Incorrect. The * operator repeats strings.
+        [ ] "&"| Incorrect. & is a bitwise operator.
+        [ ] "." | Incorrect. Dot operator is used for methods/attributes.
 
 
     .. multichoice::
