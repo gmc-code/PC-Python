@@ -25,14 +25,10 @@ Boolean Values and Comparison Operators
 
 Boolean values are most frequently produced when comparing values using comparison operators:
 
--
-**Comparison Operators**: ``==`` (equal to), ``!=`` (not equal to), ``>`` (greater than), ``<`` (less than), ``>=`` (greater than or equal to), and ``<=`` (less than or equal to).
--
-**Conditionals**: Expressions using comparison operators evaluate directly to either ``True`` or ``False``.
--
-**Case Sensitivity**: Python requires capitalized ``True`` and ``False``; using lowercase ``true`` or ``false`` results in a ``NameError``.
--
-**The bool() Function**: Evaluates any value to determine its Boolean equivalent (truthiness or falsiness).
+- **Comparison Operators**: ``==`` (equal to), ``!=`` (not equal to), ``>`` (greater than), ``<`` (less than), ``>=`` (greater than or equal to), and ``<=`` (less than or equal to).
+- **Conditionals**: Expressions using comparison operators evaluate directly to either ``True`` or ``False``.
+- **Case Sensitivity**: Python requires capitalized ``True`` and ``False``; using lowercase ``true`` or ``false`` results in a ``NameError``.
+- **The bool() Function**: Evaluates any value to determine its Boolean equivalent (truthiness or falsiness).
 
 .. code-block:: python
 
@@ -212,14 +208,10 @@ Logical Operators and Truthiness (and, or, not)
 
 Logical operators combine or modify Boolean values to evaluate complex logic:
 
--
-**The and Operator**: Returns ``True`` only if **both** conditions on either side are ``True``.
--
-**The or Operator**: Returns ``True`` if **at least one** of the conditions is ``True``.
--
-**The not Operator**: Inverts the Boolean value (turns ``True`` to ``False``, and ``False`` to ``True``).
--
-**Truthiness and Falsiness**: In Python, values like ``0``, ``None``, ``""`` (empty string), ``[]`` (empty list), and ``{}`` (empty dictionary) are considered **falsy**. Almost all other values are **truthy**.
+- **The and Operator**: Returns ``True`` only if **both** conditions on either side are ``True``.
+- **The or Operator**: Returns ``True`` if **at least one** of the conditions is ``True``.
+- **The not Operator**: Inverts the Boolean value (turns ``True`` to ``False``, and ``False`` to ``True``).
+- **Truthiness and Falsiness**: In Python, values like ``0``, ``None``, ``""`` (empty string), ``[]`` (empty list), and ``{}`` (empty dictionary) are considered **falsy**. Almost all other values are **truthy**.
 
 .. code-block:: python
 

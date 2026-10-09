@@ -25,16 +25,11 @@ Basic String Operations and Indexing (concatenation, len, indexing, slicing)
 
 Python provides built-in tools and syntax for measuring, combining, and extracting parts of strings:
 
--
-**String Length (len)**: The ``len()`` function returns the total count of characters in a string, including spaces and punctuation.
--
-**Concatenation (+)**: The ``+`` operator joins two or more strings together into a single string.
--
-**String Indexing ([ ])**: Individual characters are accessed using zero-based index numbers in square brackets (e.g., ``text[0]`` gets the first character).
--
-**String Slicing ([start:stop])**: Extracts a substring from the ``start`` index up to, but **not including**, the ``stop`` index.
--
-**Negative Indexing**: Using negative numbers accesses characters counting from the right end of the string (e.g., ``text[-1]`` gets the last character).
+- **String Length (len)**: The ``len()`` function returns the total count of characters in a string, including spaces and punctuation.
+- **Concatenation (+)**: The ``+`` operator joins two or more strings together into a single string.
+- **String Indexing ([ ])**: Individual characters are accessed using zero-based index numbers in square brackets (e.g., ``text[0]`` gets the first character).
+- **String Slicing ([start:stop])**: Extracts a substring from the ``start`` index up to, but **not including**, the ``stop`` index.
+- **Negative Indexing**: Using negative numbers accesses characters counting from the right end of the string (e.g., ``text[-1]`` gets the last character).
 
 .. code-block:: python
 
@@ -219,14 +214,10 @@ String Methods and Formatting (upper, lower, strip, replace, f-strings)
 
 Python includes powerful built-in methods to transform text and format dynamic variables:
 
--
-**Case Conversion**: Methods ``.upper()`` and ``.lower()`` convert text entirely to uppercase or lowercase.
--
-**Trimming Whitespace**: The ``.strip()`` method removes leading and trailing spaces from a string.
--
-**Replacing Substrings**: The ``.replace(old, new)`` method substitutes occurrences of a substring with new text.
--
-**Formatted String Literals (f-strings)**: Prefixing a string with ``f"..."`` allows inserting variables directly inside curly braces ``{variable}``.
+- **Case Conversion**: Methods ``.upper()`` and ``.lower()`` convert text entirely to uppercase or lowercase.
+- **Trimming Whitespace**: The ``.strip()`` method removes leading and trailing spaces from a string.
+- **Replacing Substrings**: The ``.replace(old, new)`` method substitutes occurrences of a substring with new text.
+- **Formatted String Literals (f-strings)**: Prefixing a string with ``f"..."`` allows inserting variables directly inside curly braces ``{variable}``.
 
 .. code-block:: python
 

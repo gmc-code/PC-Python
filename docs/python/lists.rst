@@ -681,6 +681,11 @@ Iterating means going through items in a list one by one. We use a **for loop** 
     for player in team:
         print(f"Welcome to the team, {player}!")
 
+    # Output:
+    # Welcome to the team, Alex!
+    # Welcome to the team, Sam!
+    # Welcome to the team, Jordan!
+
 
 Quiz: Iterating Through Lists
 -----------------------------

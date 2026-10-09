@@ -26,14 +26,10 @@ Understanding Arguments (stop, start, step)
 
 The ``range()`` function can take up to three arguments to control how the number sequence is generated:
 
--
-**Single Argument ``range(stop)``**: Generates numbers starting from ``0`` up to, but **not including**, the ``stop`` number.
--
-**Two Arguments ``range(start, stop)``**: Generates numbers starting from ``start`` up to, but **not including**, the ``stop`` number.
--
-**Three Arguments ``range(start, stop, step)``**: Generates numbers from ``start`` up to ``stop``, incrementing by ``step`` each time.
--
-**Negative Step (Counting Down)**: Using a negative ``step`` value allows you to count backwards from a higher number to a lower number.
+- **Single Argument ``range(stop)``**: Generates numbers starting from ``0`` up to, but **not including**, the ``stop`` number.
+- **Two Arguments ``range(start, stop)``**: Generates numbers starting from ``start`` up to, but **not including**, the ``stop`` number.
+- **Three Arguments ``range(start, stop, step)``**: Generates numbers from ``start`` up to ``stop``, incrementing by ``step`` each time.
+- **Negative Step (Counting Down)**: Using a negative ``step`` value allows you to count backwards from a higher number to a lower number.
 
 .. code-block:: python
 
@@ -209,14 +205,10 @@ Practical Applications (len, indexing, list conversion)
 
 Combining ``range()`` with other Python functions unlocks powerful loop patterns:
 
--
-**Using ``len()`` with ``range()``**: Use ``range(len(sequence))`` to iterate through list indexes by position integer.
--
-**Converting to List**: Passing ``range()`` into ``list()`` converts the range generator object into an explicit Python list.
--
-**Memory Efficiency**: ``range()`` generates sequence numbers on the fly rather than creating huge lists in memory at once.
--
-**Indexing Lists**: Allows reading or modifying elements at specific positions inside a collection.
+- **Using ``len()`` with ``range()``**: Use ``range(len(sequence))`` to iterate through list indexes by position integer.
+- **Converting to List**: Passing ``range()`` into ``list()`` converts the range generator object into an explicit Python list.
+- **Memory Efficiency**: ``range()`` generates sequence numbers on the fly rather than creating huge lists in memory at once.
+- **Indexing Lists**: Allows reading or modifying elements at specific positions inside a collection.
 
 .. code-block:: python
 

@@ -24,14 +24,10 @@ Numeric Types and Arithmetic Operators (+, -, *, /, //, %, **)
 
 Python supports various numeric data types and arithmetic operators for mathematical calculations:
 
--
-**Integers (int)**: Positive or negative whole numbers without decimals (e.g., ``42``, ``-7``).
--
-**Floats (float)**: Real numbers containing decimal points or scientific notation (e.g., ``3.14``, ``-0.001``).
--
-**Standard Operators**: Basic arithmetic includes addition (``+``), subtraction (``-``), multiplication (``*``), and division (``/``). Standard division always returns a float.
--
-**Specialized Operators**: Floor division (``//``) rounds down to the nearest integer, modulus (``%``) returns the division remainder, and exponentiation (``**``) raises a power.
+- **Integers (int)**: Positive or negative whole numbers without decimals (e.g., ``42``, ``-7``).
+- **Floats (float)**: Real numbers containing decimal points or scientific notation (e.g., ``3.14``, ``-0.001``).
+- **Standard Operators**: Basic arithmetic includes addition (``+``), subtraction (``-``), multiplication (``*``), and division (``/``). Standard division always returns a float.
+- **Specialized Operators**: Floor division (``//``) rounds down to the nearest integer, modulus (``%``) returns the division remainder, and exponentiation (``**``) raises a power.
 
 .. code-block:: python
 
@@ -212,14 +208,10 @@ Type Conversion and Rounding (int, float, round, math)
 
 Converting between numeric types and formatting numeric output is essential when working with calculations:
 
--
-**Converting to Integer (int)**: ``int()`` converts numeric strings or floats to integers by truncating decimal places towards zero.
--
-**Converting to Float (float)**: ``float()`` converts integers or valid numeric strings into floating-point numbers.
--
-**Rounding Numbers (round)**: ``round(number, ndigits)`` rounds a number to a specified number of decimal places.
--
-**The math Module**: Importing ``math`` provides access to functions like ``math.ceil()`` (round up), ``math.floor()`` (round down), and ``math.sqrt()`` (square root).
+- **Converting to Integer (int)**: ``int()`` converts numeric strings or floats to integers by truncating decimal places towards zero.
+- **Converting to Float (float)**: ``float()`` converts integers or valid numeric strings into floating-point numbers.
+- **Rounding Numbers (round)**: ``round(number, ndigits)`` rounds a number to a specified number of decimal places.
+- **The math Module**: Importing ``math`` provides access to functions like ``math.ceil()`` (round up), ``math.floor()`` (round down), and ``math.sqrt()`` (square root).
 
 .. code-block:: python
 
