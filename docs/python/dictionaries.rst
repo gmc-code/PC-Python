@@ -765,3 +765,243 @@ Multiple Choice Questions
         [ ] TypeError | Incorrect. Missing block formatting raises IndentationError.
         [ ] NameError | Incorrect. NameError occurs when referencing undefined variables.
 
+----
+
+Getting Values from a Python Dictionary
+=========================================
+
+Direct Key Access (Square Brackets)
+--------------------------------------
+
+Accessing a dictionary value using square brackets ``dict[key]``.
+
+.. code-block:: python
+
+   person = {"name": "Alice", "age": 30}
+
+   # Accessing an existing key
+   name = person["name"]
+   print(name)  # Output: Alice
+
+   # Accessing a non-existent key raises a KeyError
+   # city = person["city"]  # KeyError: 'city'
+
+
+Safe Retrieval with ``get()``
+--------------------------------
+
+The ``get()`` method avoids raising errors when a key is missing. It returns ``None`` or a custom default value instead.
+
+.. code-block:: python
+
+   person = {"name": "Alice", "age": 30}
+
+   # Returns value if key exists
+   age = person.get("age")
+   print(age)  # Output: 30
+
+   # Returns None if key does not exist
+   city = person.get("city")
+   print(city)  # Output: None
+
+   # Returns custom default value if key does not exist
+   country = person.get("country", "Unknown")
+   print(country)  # Output: Unknown
+
+
+Retrieve and Remove with ``pop()``
+------------------------------------
+
+The ``pop()`` method removes the key from the dictionary and returns its value.
+
+.. code-block:: python
+
+   inventory = {"apples": 5, "bananas": 12}
+
+   # Removes "apples" and returns 5
+   apple_count = inventory.pop("apples")
+   print(apple_count)  # Output: 5
+
+   # Returns default value if key is missing
+   orange_count = inventory.pop("oranges", 0)
+   print(orange_count)  # Output: 0
+
+
+Retrieve and Set Default with ``setdefault()``
+------------------------------------------------
+Returns the value if the key is in the dictionary. If not, inserts the key with a specified default value and returns it.
+
+.. code-block:: python
+
+   user_settings = {"theme": "dark"}
+
+   # Key exists: returns existing value
+   theme = user_settings.setdefault("theme", "light")
+   print(theme)  # Output: dark
+
+   # Key missing: sets "language": "en" and returns "en"
+   language = user_settings.setdefault("language", "en")
+   print(language)  # Output: en
+
+----
+
+Quiz: Getting Values from Dictionaries
+--------------------------------------
+
+Fill-in-the-Blanks (Cloze)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. cloze::
+    :instructions: Complete the following sentences by filling in the blanks.
+
+    1. Accessing a missing key directly using square brackets raises a @@KeyError@@.
+    2. To safely retrieve a value without raising an exception when the key is missing, use the @@.get()@@ method.
+    3. The default value returned by ``dict.get("missing_key")`` when no default parameter is specified is @@None@@.
+    4. To retrieve a value and simultaneously delete its key-value pair from the dictionary, use the @@.pop()@@ method.
+    5. The @@.setdefault()@@ method retrieves the value if the key exists, or inserts the key with a specified default value if it does not.
+
+
+Code Ordering Examples
+~~~~~~~~~~~~~~~~~~~~~~
+
+**Example 1:** Retrieve a person's age safely using ``.get()`` with a fallback default value.
+
+.. ordering::
+
+    person = {"name": "Alice", "role": "Developer"}
+    user_age = person.get("age", 25)
+    print(f"Age: {user_age}")
+
+----
+
+**Example 2:** Remove and retrieve a setting using ``.pop()``, printing both the popped value and updated dictionary.
+
+.. ordering::
+
+    config = {"theme": "dark", "notifications": True}
+    active_theme = config.pop("theme", "light")
+    print(f"Removed theme: {active_theme}")
+    print(config)
+
+----
+
+**Example 3:** Ensure a missing preference key exists with a default value using ``.setdefault()``.
+
+.. ordering::
+
+    user_prefs = {"language": "English"}
+    autosave = user_prefs.setdefault("autosave", True)
+    print(f"Autosave status: {autosave}")
+    print(user_prefs)
+
+
+Multiple Choice Questions
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. mcqgroup::
+    :nav_position: both
+    :show-instant-feedback:
+    :enable-instant-feedback:
+    :shuffle_questions:
+    :num_questions: 5
+
+
+    .. multichoice::
+
+        What happens when you execute ``data["city"]`` if ``"city"`` is not a key in ``data``?
+
+        [ ] It returns ``None``. | Incorrect. Direct access via brackets does not return None on missing keys.
+        [ ] It automatically adds ``"city": None`` to the dictionary. | Incorrect. Square bracket lookup does not mutate the dictionary.
+        [x] Python raises a ``KeyError``. | Correct! Direct key lookup with square brackets raises a KeyError if the key is missing.
+        [ ] Python raises an ``IndexError``. | Incorrect. IndexError is raised for out-of-range list or tuple indices.
+
+
+    .. multichoice::
+
+        Which of the following lines safely returns ``"Unknown"`` when ``"status"`` is missing from ``user_info``?
+
+        [ ] ``user_info["status", "Unknown"]`` | Incorrect. SyntaxError or invalid dictionary indexing syntax.
+        [x] ``user_info.get("status", "Unknown")`` | Correct! The second argument to .get() is the default value returned if the key isn't found.
+        [ ] ``user_info.pop("status")`` | Incorrect. Without a second argument, .pop() will raise a KeyError if the key is missing.
+        [ ] ``user_info.find("status", "Unknown")`` | Incorrect. Dictionaries do not have a .find() method.
+
+
+    .. multichoice::
+
+        Given ``d = {"a": 10, "b": 20}``, what is returned by ``d.get("a", 100)``?
+
+        [x] ``10`` | Correct! Because the key "a" exists, .get() returns its actual value (10) and ignores the default argument.
+        [ ] ``100`` | Incorrect. The default value is only returned when the key is missing.
+        [ ] ``None`` | Incorrect. The key exists in the dictionary.
+        [ ] ``[10, 100]`` | Incorrect. .get() returns a single value.
+
+
+    .. multichoice::
+
+        What does the ``.pop(key)`` method do when called on a dictionary?
+
+        [ ] Removes the key and returns ``True``. | Incorrect. It returns the value associated with the key, not a boolean.
+        [x] Removes the key and returns its value. | Correct! .pop() extracts the value and deletes the key-value pair.
+        [ ] Removes the last added key-value pair. | Incorrect. That is the behavior of .popitem().
+        [ ] Returns the value without modifying the dictionary. | Incorrect. .pop() mutates the dictionary by removing the entry.
+
+
+    .. multichoice::
+
+        What happens if you execute ``d.pop("missing_key")`` without providing a default value?
+
+        [ ] It returns ``None``. | Incorrect. .pop() requires a default argument to prevent an error on missing keys.
+        [ ] It returns ``False``. | Incorrect. It raises an exception.
+        [x] Python raises a ``KeyError``. | Correct! Calling .pop() on a non-existent key without a second default parameter raises a KeyError.
+        [ ] The dictionary is cleared. | Incorrect. Nothing is cleared; an exception is raised immediately.
+
+
+    .. multichoice::
+
+        What is the primary difference between ``.get("key", default)`` and ``.setdefault("key", default)``?
+
+        [ ] ``.get()`` modifies the dictionary, while ``.setdefault()`` does not. | Incorrect. The reverse is true.
+        [x] ``.setdefault()`` adds the key with the default value to the dictionary if missing, while ``.get()`` does not. | Correct! .setdefault() mutates the dictionary when keys are missing, whereas .get() leaves it untouched.
+        [ ] ``.get()`` raises a KeyError if the key is missing. | Incorrect. Neither method raises a KeyError when provided with default parameters.
+        [ ] There is no difference; they are aliases for each other. | Incorrect. They behave differently when keys are missing.
+
+
+    .. multichoice::
+
+        Given ``scores = {"math": 90}``, what will ``scores.setdefault("math", 0)`` evaluate to?
+
+        [ ] ``0`` | Incorrect. Since "math" already exists, its existing value is returned.
+        [x] ``90`` | Correct! Since "math" is already present, .setdefault() returns 90 without changing its value.
+        [ ] ``None`` | Incorrect. The key exists and has the value 90.
+        [ ] ``{"math": 90}`` | Incorrect. It returns the value, not the entire dictionary.
+
+
+    .. multichoice::
+
+        Which expression can be used to check if a key exists in a dictionary ``my_dict`` before retrieving it?
+
+        [ ] ``if my_dict.has_key("target"):`` | Incorrect. has_key() was removed in Python 3.
+        [x] ``if "target" in my_dict:`` | Correct! The 'in' keyword checks for key membership in a dictionary efficiently.
+        [ ] ``if "target" exists my_dict:`` | Incorrect. 'exists' is not valid Python syntax.
+        [ ] ``if my_dict.contains("target"):`` | Incorrect. Use the 'in' operator instead.
+
+
+    .. multichoice::
+
+        Suppose ``inventory = {"apple": 5}``. What is the value of ``inventory`` after running ``val = inventory.get("banana", 0)``?
+
+        [ ] ``{"apple": 5, "banana": 0}`` | Incorrect. .get() never mutates the dictionary.
+        [x] ``{"apple": 5}`` | Correct! .get() is a read-only operation and leaves the dictionary unchanged.
+        [ ] ``{}`` | Incorrect. The dictionary is not modified.
+        [ ] ``{"banana": 0}`` | Incorrect. Existing keys are not removed.
+
+
+    .. multichoice::
+
+        What value does ``person.get("email")`` return if ``person = {"name": "Bob"}``?
+
+        [ ] ``""`` (empty string) | Incorrect. The default return value is None, not an empty string.
+        [ ] ``0`` | Incorrect. The default return value is None.
+        [x] ``None`` | Correct! Calling .get() with a missing key and no explicit default returns None.
+        [ ] Raises a ``KeyError`` | Incorrect. .get() handles missing keys gracefully by returning None.
+
