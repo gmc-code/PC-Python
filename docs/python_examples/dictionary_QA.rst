@@ -31,8 +31,8 @@ Dictionary Question and Answer
         "Richmond": 13,
         "Hawthorn": 13,
         "Geelong": 10,
+        "Brisbane Lions": 6,  # Linked to Fitzroy
         "Sydney Swans": 5,  # Linked to South Melbourne
-        "Brisbane Lions": 4,  # Linked to Fitzroy
         "West Coast Eagles": 4,
         "North Melbourne": 4,
         "Western Bulldogs": 2,
